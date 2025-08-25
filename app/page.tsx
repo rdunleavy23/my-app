@@ -1,391 +1,303 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from "@/components/ui/navigation-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Separator } from "@/components/ui/separator"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/components/ui/carousel";
 
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormControl,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Menu } from "lucide-react"
-
-const formSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Valid email required"),
-  company: z.string().optional(),
-  note: z.string().optional(),
-})
-
-export default function Home() {
-  const [openDemo, setOpenDemo] = useState(false)
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: { name: "", email: "", company: "", note: "" },
-  })
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // For now, just log; later you can POST to an API route or Formspree.
-    console.log("Contact form:", values)
-    alert("Thanks! We’ll reach out shortly.")
-    form.reset()
-  }
-
+export default function HomePage() {
   return (
-    <TooltipProvider>
-      <main className="flex min-h-screen flex-col">
-        {/* Top bar */}
-        <header className="sticky top-0 z-40 w-full border-b bg-white/70 backdrop-blur">
-          <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
-              Pattern Growth
-            </Link>
+    <main className="min-h-screen bg-white text-slate-900">
+      <header className="sticky top-0 z-30 border-b bg-white/80 backdrop-blur">
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+          <Link href="/" className="font-semibold tracking-tight">
+            Pattern <span className="text-slate-500">Growth</span>
+          </Link>
+          <div className="hidden gap-3 sm:flex">
+            <Link href="#sprint" className="text-sm text-slate-600 hover:text-slate-900">Sprint</Link>
+            <Link href="#who" className="text-sm text-slate-600 hover:text-slate-900">Who</Link>
+            <Link href="#compare" className="text-sm text-slate-600 hover:text-slate-900">Why Us</Link>
+            <Link href="#proof" className="text-sm text-slate-600 hover:text-slate-900">Proof</Link>
+            <Link href="#faq" className="text-sm text-slate-600 hover:text-slate-900">FAQ</Link>
+          </div>
+          <Button asChild size="sm">
+            <Link href="#cta">Book a Call</Link>
+          </Button>
+        </div>
+      </header>
 
-            <div className="hidden md:block">
-              <NavigationMenu>
-                <NavigationMenuList className="items-center gap-2">
-                  <NavigationMenuItem>
-                    <Link href="#sprint" legacyBehavior passHref>
-                      <NavigationMenuLink className="px-3 py-2 text-sm">
-                        Sprint
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#who" legacyBehavior passHref>
-                      <NavigationMenuLink className="px-3 py-2 text-sm">
-                        Who
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#compare" legacyBehavior passHref>
-                      <NavigationMenuLink className="px-3 py-2 text-sm">
-                        Why Us
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#proof" legacyBehavior passHref>
-                      <NavigationMenuLink className="px-3 py-2 text-sm">
-                        Proof
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#contact" legacyBehavior passHref>
-                      <NavigationMenuLink className="px-3 py-2 text-sm">
-                        Contact
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Button size="sm">Book a Call</Button>
-                      </TooltipTrigger>
-                      <TooltipContent>Connect to Calendly later</TooltipContent>
-                    </Tooltip>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+      <section className="relative border-b">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-16 lg:grid-cols-2 lg:py-24">
+          <div className="flex flex-col justify-center">
+            <Badge variant="secondary" className="w-fit">Alternative to Fractional CMO</Badge>
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+              Skip the Fractional CMO. <span className="text-slate-500">Get Strategy That Ships.</span>
+            </h1>
+            <p className="mt-4 max-w-xl text-slate-600">
+              Turn executive vision into measurable growth—in weeks, not months.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button asChild>
+                <Link href="#cta">Book Your Strategy Call</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link href="#proof">See Live Dashboard Examples</Link>
+              </Button>
+            </div>
+          </div>
+
+          <Card className="border-slate-200">
+            <CardHeader>
+              <CardTitle>The Pattern Growth Sprint</CardTitle>
+              <p className="text-sm text-slate-500">4–8 weeks from vision to visibility</p>
+            </CardHeader>
+            <CardContent className="grid gap-4">
+              <div className="rounded-lg border p-4">
+                <div className="text-xs font-medium text-slate-500">Week 1–2</div>
+                <div className="mt-1 font-medium">Strategic Foundation</div>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+                  <li>Executive alignment sessions</li>
+                  <li>Market positioning and messaging framework</li>
+                  <li>Customer journey mapping and funnel optimization</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border p-4">
+                <div className="text-xs font-medium text-slate-500">Week 3–4</div>
+                <div className="mt-1 font-medium">Execution Design</div>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+                  <li>Channel strategy and campaign architecture</li>
+                  <li>KPI framework and measurement plan</li>
+                  <li>Team playbooks and decision frameworks</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border p-4">
+                <div className="text-xs font-medium text-slate-500">Week 5–8</div>
+                <div className="mt-1 font-medium">Live Instrumentation</div>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+                  <li>Custom dashboard deployment</li>
+                  <li>Real-time tracking across all channels</li>
+                  <li>Performance optimization and team enablement</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-4">
+                <div className="font-medium">Result</div>
+                <p className="mt-1 text-sm text-emerald-800">
+                  A complete growth engine you can see, measure, and scale.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="sprint" className="border-b">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">One Focus. Maximum Impact.</h2>
+          <p className="mt-2 max-w-2xl text-slate-600">
+            The Pattern Growth Sprint compresses strategy and execution into a tight 4–8 week engagement.
+          </p>
+
+          <div className="mt-8">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="w12">
+                <AccordionTrigger className="text-left">Week 1–2: Strategic Foundation</AccordionTrigger>
+                <AccordionContent className="pt-2">
+                  <ul className="list-disc space-y-1 pl-5 text-slate-700">
+                    <li>Executive alignment sessions</li>
+                    <li>Market positioning and messaging framework</li>
+                    <li>Customer journey mapping and funnel optimization</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="w34">
+                <AccordionTrigger className="text-left">Week 3–4: Execution Design</AccordionTrigger>
+                <AccordionContent className="pt-2">
+                  <ul className="list-disc space-y-1 pl-5 text-slate-700">
+                    <li>Channel strategy and campaign architecture</li>
+                    <li>KPI framework and measurement plan</li>
+                    <li>Team playbooks and decision frameworks</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="w58">
+                <AccordionTrigger className="text-left">Week 5–8: Live Instrumentation</AccordionTrigger>
+                <AccordionContent className="pt-2">
+                  <ul className="list-disc space-y-1 pl-5 text-slate-700">
+                    <li>Custom dashboard deployment</li>
+                    <li>Real-time tracking across all channels</li>
+                    <li>Performance optimization and team enablement</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      <section id="who" className="border-b">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Who This Is For</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Card>
+              <CardHeader>
+                <CardTitle>Series A–B Companies</CardTitle>
+                <p className="text-sm text-slate-500">$1M–$20M ARR</p>
+              </CardHeader>
+              <CardContent className="text-slate-600">
+                Need strategy fast but can’t justify a full-time CMO.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Venture-Backed Startups</CardTitle>
+                <p className="text-sm text-slate-500">Board pressure to show ROI</p>
+              </CardHeader>
+              <CardContent className="text-slate-600">
+                Senior strategy without adding permanent headcount.
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Growing Companies</CardTitle>
+                <p className="text-sm text-slate-500">Ads/content without clarity</p>
+              </CardHeader>
+              <CardContent className="text-slate-600">
+                Align teams and measurement around business outcomes.
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="compare" className="border-b">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+            Why This Beats Your Other Options
+          </h2>
+
+          <Tabs defaultValue="fractional" className="mt-8">
+            <div className="relative -mx-4 px-4">
+              <TabsList className="flex w-full justify-start overflow-x-auto whitespace-nowrap rounded-xl bg-slate-100 p-1 snap-x snap-mandatory">
+                <TabsTrigger value="fractional" className="shrink-0 snap-start">vs. Fractional CMO</TabsTrigger>
+                <TabsTrigger value="agencies" className="shrink-0 snap-start">vs. Marketing Agencies</TabsTrigger>
+                <TabsTrigger value="fulltime" className="shrink-0 snap-start">vs. Full-Time CMO Hire</TabsTrigger>
+              </TabsList>
             </div>
 
-            {/* Mobile menu */}
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden">
-                  <Menu className="h-4 w-4" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-72">
-                <nav className="mt-8 grid gap-4">
-                  <a href="#sprint">Sprint</a>
-                  <a href="#who">Who</a>
-                  <a href="#compare">Why Us</a>
-                  <a href="#proof">Proof</a>
-                  <a href="#faq">FAQ</a>
-                  <a href="#contact">Contact</a>
-                  <Button className="mt-2">Book a Call</Button>
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </header>
-
-        {/* Hero */}
-        <section className="mx-auto max-w-4xl px-4 py-20 text-center space-y-6">
-          <Badge className="mx-auto w-fit">Growth Strategy Sprints</Badge>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Skip the Fractional CMO. Get Strategy That Ships.
-          </h1>
-          <p className="text-lg text-neutral-600">
-            Turn executive vision into measurable growth—in weeks, not months.
-          </p>
-          <p className="text-neutral-600 max-w-2xl mx-auto">
-            Most companies get stuck between big strategy and daily tactics. Pattern Growth bridges that gap with
-            focused 4–8 week sprints that deliver strategic clarity and the dashboards to track what actually moves the
-            needle.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">Book Your Strategy Call</Button>
-            <Dialog open={openDemo} onOpenChange={setOpenDemo}>
-              <DialogTrigger asChild>
-                <Button size="lg" variant="outline">
-                  See Live Dashboard Examples
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>Sample Dashboard (placeholder)</DialogTitle>
-                </DialogHeader>
-                <div className="rounded-md border p-6 text-sm text-neutral-600">
-                  Drop an image or Loom embed later. Use this dialog as a lightweight demo.
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-        </section>
-
-        <Separator />
-
-        {/* Sprint breakdown using Tabs */}
-        <section id="sprint" className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-semibold text-center mb-8">The Pattern Growth Sprint</h2>
-
-          <Tabs defaultValue="foundation" className="mx-auto max-w-5xl">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="foundation">Week 1–2: Foundation</TabsTrigger>
-              <TabsTrigger value="design">Week 3–4: Execution Design</TabsTrigger>
-              <TabsTrigger value="instrument">Week 5–8: Instrumentation</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="foundation">
-              <div className="mt-6 grid gap-6 md:grid-cols-3">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Executive Alignment</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Goals, constraints, and success metrics clarified with leadership.
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Positioning & Messaging</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Narrative, value props, and ICP reality check.
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Journey Mapping</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Funnel friction and opportunity analysis.
-                  </CardContent>
-                </Card>
+            <TabsContent value="fractional" className="mt-6">
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                <Feature title="Timeline">4–8 weeks vs. 3–6 months</Feature>
+                <Feature title="Engagement">Fixed sprint vs. $8K–$15K/mo retainer</Feature>
+                <Feature title="Deliverables">Specific artifacts vs. ongoing mgmt</Feature>
+                <Feature title="Output">Working dashboards vs. strategy docs</Feature>
               </div>
             </TabsContent>
 
-            <TabsContent value="design">
-              <div className="mt-6 grid gap-6 md:grid-cols-3">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Channel Strategy</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Paid, content, lifecycle, and partner motions prioritized.
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>KPI Framework</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Measurable outcomes mapped to business metrics.
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Playbooks</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Decision cadences, experiment logs, enablement.
-                  </CardContent>
-                </Card>
+            <TabsContent value="agencies" className="mt-6">
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                <Feature title="Focus">C-suite vision translation vs. campaign execution</Feature>
+                <Feature title="Metrics">Business metrics vs. vanity metrics</Feature>
+                <Feature title="Scope">Defined sprint vs. open-ended</Feature>
+                <Feature title="Ownership">You own systems vs. agency dependency</Feature>
               </div>
             </TabsContent>
 
-            <TabsContent value="instrument">
-              <div className="mt-6 grid gap-6 md:grid-cols-3">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Dashboards</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Live KPIs across paid, owned, and pipeline.
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Tracking</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Source mapping, unified attribution, alerting.
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Optimization</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-sm text-neutral-600">
-                    Weekly reviews drive spend reallocation and wins.
-                  </CardContent>
-                </Card>
+            <TabsContent value="fulltime" className="mt-6">
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                <Feature title="Speed">Weeks vs. 3–6 month search</Feature>
+                <Feature title="Cost">$25K–$50K sprint vs. $200K+ salary + equity</Feature>
+                <Feature title="Risk">Try-before-hire vs. permanent commitment</Feature>
+                <Feature title="Method">Sprint methodology vs. general hire</Feature>
               </div>
             </TabsContent>
           </Tabs>
-        </section>
+        </div>
+      </section>
 
-        {/* Who this is for */}
-        <section id="who" className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-semibold text-center mb-10">Who This Is For</h2>
-          <div className="grid gap-6 md:grid-cols-3 text-neutral-700">
+      <section className="border-b">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Investment &amp; Timeline</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             <Card>
-              <CardContent className="p-6">
-                Series A–B companies ($1M–$20M ARR) needing senior strategy fast without a full-time CMO or long
-                fractional retainer.
+              <CardHeader>
+                <CardTitle>Sprint Investment</CardTitle>
+                <p className="text-sm text-slate-500">$25K–$50K</p>
+              </CardHeader>
+              <CardContent className="text-slate-600">
+                50% start, 50% at delivery. Includes 30 days post-sprint support.
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="p-6">
-                Venture-backed startups with board pressure to show ROI and limited bandwidth to hire and onboard.
+              <CardHeader>
+                <CardTitle>Timeline Guarantee</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600">
+                Discovery starts within 1 week. Dashboards live in 6 weeks max. Full handoff with playbooks.
               </CardContent>
             </Card>
-            <Card>
-              <CardContent className="p-6">
-                Growing companies with scattered tactics—ads, content, campaigns—without measurement or alignment.
+            <Card className="border-emerald-200">
+              <CardHeader>
+                <CardTitle>Satisfaction Clause</CardTitle>
+              </CardHeader>
+              <CardContent className="text-slate-600">
+                If clarity/dashboards aren’t met at week 6, we continue at no cost until specs are delivered.
               </CardContent>
             </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Why us (comparison) */}
-        <section id="compare" className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-semibold text-center mb-10">Why This Beats Other Options</h2>
-          <div className="grid gap-6 md:grid-cols-3 text-sm text-neutral-700">
-            <Card>
-              <CardHeader>
-                <CardTitle>vs. Fractional CMO</CardTitle>
-              </CardHeader>
-              <CardContent>4–8 weeks vs. 3–6 months • Fixed sprint cost vs. $8K–15K/mo • Working dashboards, not just decks</CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>vs. Agencies</CardTitle>
-              </CardHeader>
-              <CardContent>C‑suite vision translation • Business metrics over vanity metrics • Time‑boxed sprints</CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>vs. Full‑Time Hire</CardTitle>
-              </CardHeader>
-              <CardContent>Available in weeks • $25K–50K vs. $200K+ • Specialized sprint methodology</CardContent>
-            </Card>
-          </div>
-        </section>
+      <section id="proof" className="border-b">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Proof Points</h2>
+          <p className="mt-2 max-w-2xl text-slate-600">
+            Real results, real systems. Dashboards your team actually uses.
+          </p>
 
-        {/* Proof points carousel */}
-        <section id="proof" className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-semibold text-center mb-6">Proof Points</h2>
-          <p className="text-center text-neutral-600 mb-8">Recent outcomes from Pattern Growth sprints</p>
-
-          <div className="relative mx-auto max-w-4xl">
+          <div className="mt-8">
             <Carousel className="w-full">
               <CarouselContent>
-                <CarouselItem>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Series A SaaS</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-neutral-700 space-y-1">
-                      <p><strong>+40%</strong> lead→customer conversion in 90 days</p>
-                      <p>Messaging overhaul, lifecycle KPIs, unified attribution</p>
-                    </CardContent>
-                  </Card>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CaseCard
+                    title="SaaS company"
+                    result="+40% conversion in 90 days"
+                    detail="Positioning + funnel optimization"
+                  />
                 </CarouselItem>
-                <CarouselItem>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>B2B Startup</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-neutral-700 space-y-1">
-                      <p><strong>–25%</strong> CAC via channel focus</p>
-                      <p>Experiment logs, spend reallocation, dashboard alerts</p>
-                    </CardContent>
-                  </Card>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CaseCard
+                    title="B2B startup"
+                    result="-25% CAC"
+                    detail="Channel mix + measurement discipline"
+                  />
                 </CarouselItem>
-                <CarouselItem>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>FinTech Scale‑up</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-neutral-700 space-y-1">
-                      <p>5 tracking systems → 1 executive dashboard</p>
-                      <p>Source mapping, KPI design, weekly exec review</p>
-                    </CardContent>
-                  </Card>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <CaseCard
+                    title="FinTech"
+                    result="Unified 5 systems → 1 dashboard"
+                    detail="RevOps + data integration"
+                  />
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />
@@ -393,161 +305,115 @@ export default function Home() {
             </Carousel>
           </div>
 
-          {/* Testimonial with Avatar */}
-          <div className="mx-auto mt-10 max-w-3xl">
-            <Card>
-              <CardContent className="flex items-start gap-4 p-6">
-                <Avatar>
-                  <AvatarFallback>HC</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-lg leading-relaxed">
-                    “They turned our complicated product into a simple story the whole org can tell. Sales ramped faster
-                    and our site finally converts.”
-                  </p>
-                  <p className="mt-2 text-sm text-neutral-500">— Happy Client, VP of Marketing</p>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="mt-8 text-sm text-slate-500">
+            Clients: VC-backed startups (a16z, Sequoia, First Round) • SaaS $2M–$15M ARR • FinTech • HealthTech • Enterprise software
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Investment */}
-        <section id="investment" className="mx-auto max-w-4xl px-4 py-16 text-center space-y-6">
-          <h2 className="text-2xl font-semibold">Investment & Timeline</h2>
-          <p className="text-neutral-600">
-            Sprint Investment: <strong>$25K–$50K</strong> depending on scope. 50% at start, 50% at dashboard delivery.
-            Includes 30 days post‑sprint support.
-          </p>
-          <p className="text-neutral-600">
-            Timeline: Discovery starts within 1 week. Dashboard live in ≤6 weeks. Full team handoff with documented
-            playbooks.
-          </p>
-        </section>
-
-        {/* FAQ with Accordion */}
-        <section id="faq" className="mx-auto max-w-4xl px-4 py-16">
-          <h2 className="text-2xl font-semibold text-center mb-8">Common Questions</h2>
-          <Accordion type="single" collapsible className="mx-auto max-w-3xl">
-            <AccordionItem value="q1">
-              <AccordionTrigger>How do I know you understand our business?</AccordionTrigger>
-              <AccordionContent>
-                First week includes deep‑dive interviews, competitive analysis, and an existing data audit. No generic
-                templates—everything is custom.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="q2">
-              <AccordionTrigger>What if our data is messy?</AccordionTrigger>
-              <AccordionContent>
-                We handle data cleanup and integration (HubSpot, Salesforce, GA, etc.) to produce unified reporting.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="q3">
-              <AccordionTrigger>Who actually does the work?</AccordionTrigger>
-              <AccordionContent>
-                Sprint team = strategic lead (ex‑CMO level) + specialists in analytics, dashboards, and growth ops. No
-                juniors on strategy.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="q4">
-              <AccordionTrigger>What happens after the sprint?</AccordionTrigger>
-              <AccordionContent>
-                You own dashboards, frameworks, and docs. Continue with us for implementation—or use outputs to hire
-                internally with clear direction.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </section>
-
-        {/* Contact form */}
-        <section id="contact" className="mx-auto max-w-3xl px-4 pb-20">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-center">Ready to See Your Growth Patterns?</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Your name" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email</FormLabel>
-                          <FormControl>
-                            <Input type="email" placeholder="you@company.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Company</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Company name (optional)" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="note"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>What are you trying to solve?</FormLabel>
-                        <FormControl>
-                          <Textarea placeholder="A sentence or two is great." rows={4} {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <div className="flex items-center justify-center gap-4">
-                    <Button type="submit" size="lg">Book Your Strategy Call</Button>
-                    <Button type="button" size="lg" variant="outline" onClick={() => setOpenDemo(true)}>
-                      Request Dashboard Access
-                    </Button>
-                  </div>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Footer */}
-        <footer className="border-t">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm text-neutral-500">
-            <span>© {new Date().getFullYear()} Pattern Growth.</span>
-            <div className="flex gap-4">
-              <a href="#">Privacy</a>
-              <a href="#">Terms</a>
-            </div>
+      <section id="faq" className="border-b">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Common Questions</h2>
+          <div className="mt-8">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="q1">
+                <AccordionTrigger>How do I know you understand our business?</AccordionTrigger>
+                <AccordionContent>
+                  First week includes interviews, competitive analysis, and data audit. All custom.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q2">
+                <AccordionTrigger>What if our data is messy?</AccordionTrigger>
+                <AccordionContent>
+                  We clean and integrate data across HubSpot, Salesforce, GA, and more.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q3">
+                <AccordionTrigger>Who actually does the work?</AccordionTrigger>
+                <AccordionContent>
+                  Strategic lead plus specialists. No junior staff on strategy.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q4">
+                <AccordionTrigger>What happens after the sprint?</AccordionTrigger>
+                <AccordionContent>
+                  You own dashboards, frameworks, and docs. We hand off fully.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="q5">
+                <AccordionTrigger>How is this different from consulting?</AccordionTrigger>
+                <AccordionContent>
+                  Consulting = PowerPoints. Sprints = working systems.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
-        </footer>
-      </main>
-    </TooltipProvider>
-  )
+        </div>
+      </section>
+
+      <section id="cta" className="bg-slate-50">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-16 lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Ready to See Your Growth Patterns?
+            </h2>
+            <p className="mt-2 max-w-2xl text-slate-600">
+              In your call: current challenges and gaps, dashboard walkthrough, sprint scope and timeline, clear next steps.
+            </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <Button asChild className="w-full lg:w-auto">
+              <Link href="https://cal.com" target="_blank" rel="noreferrer">
+                Book Your Strategy Call — This Week
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="w-full lg:w-auto">
+              <Link href="#proof">Request Sample Dashboard Access</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-8 text-sm text-slate-500">
+          <div>© {new Date().getFullYear()} Pattern Growth</div>
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:text-slate-900">Privacy</Link>
+            <Link href="/terms" className="hover:text-slate-900">Terms</Link>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function Feature({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-base">{title}</CardTitle>
+      </CardHeader>
+      <CardContent className="text-slate-600">{children}</CardContent>
+    </Card>
+  );
+}
+
+function CaseCard({
+  title,
+  result,
+  detail,
+}: {
+  title: string;
+  result: string;
+  detail: string;
+}) {
+  return (
+    <Card className="h-full">
+      <CardHeader>
+        <CardTitle>{title}</CardTitle>
+        <p className="text-sm text-emerald-600">{result}</p>
+      </CardHeader>
+      <CardContent className="text-sm text-slate-600">{detail}</CardContent>
+    </Card>
+  );
 }
