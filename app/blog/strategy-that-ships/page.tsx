@@ -6,8 +6,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Strategy That Ships: The 6-Week Growth Sprint",
     description: "Turn executive vision into a measurable growth engine—fast.",
-    type: "article"
-  }
+    type: "article",
+    url: "https://patterngrowth.com/blog/strategy-that-ships"
+  },
+  robots: { index: true, follow: true }
 };
 
 export default function BlogPost() {
@@ -35,25 +37,34 @@ export default function BlogPost() {
     <article className="prose prose-zinc dark:prose-invert max-w-none">
       <script
         type="application/ld+json"
-        // @ts-expect-error: using JSON string in script dangerouslySetInnerHTML
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <header>
         <p className="text-sm text-muted-foreground">{published}</p>
         <h1>Strategy That Ships: The 6-Week Growth Sprint</h1>
         <p className="lead">
-          Most teams over-plan and under-ship. Here’s how to compress strategy and execution into a 6-week sprint you can see, measure, and scale.
+          Most teams over-plan and under-ship. Here’s how to compress strategy and execution into a
+          6-week sprint you can see, measure, and scale.
         </p>
       </header>
 
       <h2>Why sprints beat retainers</h2>
-      <p>Retainers drag; sprints force clarity. In 6 weeks you can align leadership, codify positioning, and instrument KPIs.</p>
+      <p>
+        Retainers drag; sprints force clarity. In 6 weeks you can align leadership, codify
+        positioning, and instrument KPIs.
+      </p>
 
       <h2>The 6-week outline</h2>
       <ol>
-        <li><strong>Weeks 1–2:</strong> Alignment, positioning, messaging, journey map.</li>
-        <li><strong>Weeks 3–4:</strong> Channel plan, KPI framework, decision playbooks.</li>
-        <li><strong>Weeks 5–6:</strong> Live dashboards, enablement, optimization.</li>
+        <li>
+          <strong>Weeks 1–2:</strong> Alignment, positioning, messaging, journey map.
+        </li>
+        <li>
+          <strong>Weeks 3–4:</strong> Channel plan, KPI framework, decision playbooks.
+        </li>
+        <li>
+          <strong>Weeks 5–6:</strong> Live dashboards, enablement, optimization.
+        </li>
       </ol>
 
       <h2>What “done” looks like</h2>
@@ -64,7 +75,9 @@ export default function BlogPost() {
       </ul>
 
       <h2>Next step</h2>
-      <p>Want the sprint outline tailored to your stage and stack? Book a strategy call.</p>
+      <p>
+        Want the sprint outline tailored to your stage and stack? Book a strategy call.
+      </p>
     </article>
   );
 }
