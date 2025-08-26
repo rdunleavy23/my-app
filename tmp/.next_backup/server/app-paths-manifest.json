@@ -1,0 +1,12 @@
+{
+  "/api/health/route": "app/api/health/route.js",
+  "/api/git-content/route": "app/api/git-content/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/page": "app/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/blog/strategy-that-ships/page": "app/blog/strategy-that-ships/page.js"
+}
