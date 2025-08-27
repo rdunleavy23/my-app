@@ -1,9 +1,8 @@
 "use client"
 
-import * as React from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu } from "lucide-react"
+import { useState } from "react"
+import { Menu, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -12,71 +11,67 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 
-export function Navbar() {
-  const pathname = usePathname()
-  const [open, setOpen] = React.useState(false)
-
-  const navItems = [
-    { href: "#process", label: "Process" },
-    { href: "#deliverables", label: "What You Get" },
-    { href: "#investment", label: "Investment" },
-    { href: "/about", label: "About" },
-  ]
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-semibold text-lg">
-          Pattern Growth
-        </Link>
-
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm">
-          {navItems.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`transition-colors hover:text-foreground ${pathname === href ? "text-foreground" : "text-muted-foreground"}`}
-            >
-              {label}
-            </Link>
-          ))}
-          <Link
-            href="https://cal.com/pattern-growth"
-            className="text-sm font-medium text-primary hover:underline"
-          >
-            Book a Preview
+    <header className="sticky top-0 z-50 border-b bg-background">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+        <div className="flex h-14 items-center justify-between">
+          <Link href="/" className="text-lg font-bold">
+            Pattern Growth
           </Link>
-        </nav>
 
-        {/* Mobile Menu */}
-        <div className="md:hidden">
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <span className="sr-only">Toggle Menu</span>
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
+          {/* Desktop Nav */}
+          <nav className="hidden gap-6 text-sm md:flex">
+            <Link href="#process" className="text-muted-foreground hover:text-foreground">Process</Link>
+            <Link href="#deliverables" className="text-muted-foreground hover:text-foreground">What You Get</Link>
+            <Link href="#investment" className="text-muted-foreground hover:text-foreground">Investment</Link>
+            <Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link>
+            <Button asChild>
+              <Link href="https://cal.com/pattern-growth">Book</Link>
+            </Button>
+          </nav>
 
-            <SheetContent side="right">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <div className="flex flex-col gap-4 py-6">
-                {navItems.map(({ href, label }) => (
-                  <Link key={href} href={href} onClick={() => setOpen(false)}>
-                    <Button variant="ghost" className="w-full justify-start text-left">
-                      {label}
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-muted-foreground">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+
+              <SheetContent side="right" className="w-64 sm:w-72">
+                <SheetTitle className="sr-only">Navigation</SheetTitle>
+                <div className="flex flex-col gap-3 pt-6">
+                  {[
+                    { href: "#process", label: "Process" },
+                    { href: "#deliverables", label: "What You Get" },
+                    { href: "#investment", label: "Investment" },
+                    { href: "/about", label: "About" },
+                    { href: "https://cal.com/pattern-growth", label: "Book a Preview", primary: true },
+                  ].map(({ href, label, primary }) => (
+                    <Button
+                      key={href}
+                      asChild
+                      variant={primary ? "default" : "ghost"}
+                      className="justify-between text-base"
+                      onClick={() => setOpen(false)}
+                    >
+                      <Link href={href}>
+                        <div className="flex items-center justify-between w-full">
+                          {label}
+                          <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
+                        </div>
+                      </Link>
                     </Button>
-                  </Link>
-                ))}
-                <Link href="https://cal.com/pattern-growth" onClick={() => setOpen(false)}>
-                  <Button variant="ghost" className="w-full justify-start text-left text-primary">
-                    Book a Preview
-                  </Button>
-                </Link>
-              </div>
-            </SheetContent>
-          </Sheet>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
