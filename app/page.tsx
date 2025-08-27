@@ -4,12 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Header */}
       <header className="border-b">
         <div className="container flex h-16 items-center justify-between">
           <div className="font-semibold">Pattern Growth</div>
@@ -24,7 +22,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
       <section className="container py-20">
         <div className="max-w-3xl">
           <Badge variant="secondary" className="mb-4">Growth Strategy Sprints</Badge>
@@ -32,8 +29,7 @@ export default function Home() {
             Your Growth Vision Needs a Dashboard, Not Just a Strategy Doc
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            For $1–5MM companies who need expert marketing strategy that actually gets implemented —
-            without the $200K CMO commitment.
+            For $1–5MM companies who need expert marketing strategy that actually gets implemented — without the $200K CMO commitment.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -48,7 +44,6 @@ export default function Home() {
 
       <Separator />
 
-      {/* Philosophy */}
       <section className="container py-14">
         <Card>
           <CardHeader>
@@ -62,7 +57,6 @@ export default function Home() {
         </Card>
       </section>
 
-      {/* Process */}
       <section id="process" className="container py-14">
         <h2 className="mb-2 text-3xl font-semibold tracking-tight">From scattered metrics to strategic clarity — in 4–8 weeks</h2>
         <p className="text-muted-foreground mb-6">We don’t just deliver slides. We build systems your team can run.</p>
@@ -75,37 +69,47 @@ export default function Home() {
           </TabsList>
 
           <TabsContent value="wk1-2" className="mt-6">
-            <Card><CardContent className="pt-6 space-y-2 text-muted-foreground">
-              <p>• Extract your growth vision and translate it into measurable objectives</p>
-              <p>• Map customer journeys to surface high-impact opportunities</p>
-              <p>• Benchmark competitors to sharpen positioning</p>
-            </CardContent></Card>
+            <Card>
+              <CardContent className="pt-6 space-y-2 text-muted-foreground">
+                <p>• Extract your growth vision and translate it into measurable objectives</p>
+                <p>• Map customer journeys to surface high-impact opportunities</p>
+                <p>• Benchmark competitors to sharpen positioning</p>
+              </CardContent>
+            </Card>
           </TabsContent>
 
           <TabsContent value="wk3-4" className="mt-6">
-            <Card><CardContent className="pt-6 space-y-2 text-muted-foreground">
-              <p>• Channel roadmap tied directly to business outcomes</p>
-              <p>• Decision frameworks that enable speed without chaos</p>
-              <p>• Campaign templates and process docs for repeatable execution</p>
-            </CardContent></Card>
+            <Card>
+              <CardContent className="pt-6 space-y-2 text-muted-foreground">
+                <p>• Channel roadmap tied directly to business outcomes</p>
+                <p>• Decision frameworks that enable speed without chaos</p>
+                <p>• Campaign templates and process docs for repeatable execution</p>
+              </CardContent>
+            </Card>
           </TabsContent>
 
           <TabsContent value="wk5-8" className="mt-6">
-            <Card><CardContent className="pt-6 space-y-2 text-muted-foreground">
-              <p>• Consolidate data into a single executive dashboard</p>
-              <p>• Train your team for confident, independent execution</p>
-              <p>• Deliver a complete growth playbook for sustainable scale</p>
-            </CardContent></Card>
+            <Card>
+              <CardContent className="pt-6 space-y-2 text-muted-foreground">
+                <p>• Consolidate data into a single executive dashboard</p>
+                <p>• Train your team for confident, independent execution</p>
+                <p>• Deliver a complete growth playbook for sustainable scale</p>
+              </CardContent>
+            </Card>
           </TabsContent>
         </Tabs>
       </section>
 
-      {/* When to Engage */}
       <section className="container py-14">
-        <Alert>
-          <AlertTitle>When strategy is the bottleneck</AlertTitle>
-          <AlertDescription className="mt-2">You don’t need a CMO on payroll — you need clarity, fast.</AlertDescription>
-        </Alert>
+        <Card>
+          <CardHeader className="pb-2">
+            <Badge variant="secondary" className="w-fit">Who This Is For</Badge>
+            <CardTitle className="text-xl">When strategy is the bottleneck</CardTitle>
+          </CardHeader>
+          <CardContent className="text-muted-foreground">
+            You don’t need a CMO on payroll — you need clarity, fast.
+          </CardContent>
+        </Card>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           <Card><CardContent className="pt-6">• Revenue is climbing, but systems lag</CardContent></Card>
           <Card><CardContent className="pt-6">• The board demands clarity your dashboards can’t provide</CardContent></Card>
@@ -114,7 +118,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Alternatives */}
       <section className="container py-14">
         <h2 className="mb-2 text-3xl font-semibold tracking-tight">Why the usual options fall short</h2>
         <Tabs defaultValue="cmo" className="w-full mt-4">
@@ -135,7 +138,6 @@ export default function Home() {
         </Tabs>
       </section>
 
-      {/* Deliverables */}
       <section id="deliverables" className="container py-14">
         <h2 className="mb-2 text-3xl font-semibold tracking-tight">What You Walk Away With</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -171,7 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Investment */}
       <section id="investment" className="container py-14">
         <h2 className="mb-4 text-3xl font-semibold tracking-tight">Investment & Guarantee</h2>
         <Accordion type="single" collapsible className="w-full">
@@ -194,7 +195,6 @@ export default function Home() {
         <Badge variant="secondary" className="mt-4">Only 2–3 sprints per quarter</Badge>
       </section>
 
-      {/* Closing CTA */}
       <section className="container py-20">
         <Card className="border-primary/20">
           <CardContent className="py-10">
@@ -216,7 +216,6 @@ export default function Home() {
         </Card>
       </section>
 
-      {/* Footer */}
       <footer className="border-t">
         <div className="container py-8 text-sm text-muted-foreground flex flex-col md:flex-row gap-2 md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} Pattern Growth</div>
