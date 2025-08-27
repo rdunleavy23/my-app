@@ -1,7 +1,6 @@
-import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Navbar } from "@/components/Navbar" // ✅ FIXED: Proper named import
+import Navbar from "@/components/Navbar" // ✅ Fixed: default import
 
 const inter = Inter({ subsets: ["latin"] })
 
