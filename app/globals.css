@@ -1,1 +1,43 @@
-<ENTIRE FILE SAME AS ABOVE>
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --radius: 0.625rem;
+
+  /* Pattern Growth Theme – Light */
+  --bg: #FFFFFF;
+  --fg: #0F1A26;
+  --muted: #66737F;
+  --border: #E7ECF2;
+  --panel: #F7F9FC;
+
+  --accent: #2E6BE6;
+  --accent-foreground: #FFFFFF;
+
+  --sky: #58A6FF;
+  --good: #1BA37A;
+  --warn: #E6A52E;
+  --bad: #E05252;
+  --slate-grid: #DDE6F0;
+}
+
+.dark {
+  --bg: #0B0D10;
+  --fg: #E6EDF3;
+  --muted: #9FB0C0;
+  --border: #1E2935;
+  --panel: #11161C;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  background: #f6f7f8;
+}
