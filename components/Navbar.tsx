@@ -1,43 +1,82 @@
 "use client"
 
+import * as React from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet"
 
-export default function Navbar() {
+export function Navbar() {
+  const pathname = usePathname()
+  const [open, setOpen] = React.useState(false)
+
+  const navItems = [
+    { href: "#process", label: "Process" },
+    { href: "#deliverables", label: "What You Get" },
+    { href: "#investment", label: "Investment" },
+    { href: "/about", label: "About" },
+  ]
+
   return (
-    <header className="border-b">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="flex h-14 items-center justify-between">
-          <div className="font-semibold">Pattern Growth</div>
-          <nav className="hidden gap-6 text-sm md:flex">
-            <Link href="#process" className="text-muted-foreground hover:text-foreground">Process</Link>
-            <Link href="#deliverables" className="text-muted-foreground hover:text-foreground">What You Get</Link>
-            <Link href="#investment" className="text-muted-foreground hover:text-foreground">Investment</Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link>
-            <Button asChild>
-              <Link href="https://cal.com/pattern-growth">Book a Preview</Link>
-            </Button>
-          </nav>
-          <div className="md:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-muted-foreground">
-                  <Menu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <div className="grid gap-4 text-sm pt-6">
-                  <Link href="#process">Process</Link>
-                  <Link href="#deliverables">What You Get</Link>
-                  <Link href="#investment">Investment</Link>
-                  <Link href="/about">About</Link>
-                  <Link href="https://cal.com/pattern-growth" className="text-primary font-medium">Book a Preview</Link>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="font-semibold text-lg">
+          Pattern Growth
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center space-x-6 text-sm">
+          {navItems.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`transition-colors hover:text-foreground ${pathname === href ? "text-foreground" : "text-muted-foreground"}`}
+            >
+              {label}
+            </Link>
+          ))}
+          <Link
+            href="https://cal.com/pattern-growth"
+            className="text-sm font-medium text-primary hover:underline"
+          >
+            Book a Preview
+          </Link>
+        </nav>
+
+        {/* Mobile Menu */}
+        <div className="md:hidden">
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <span className="sr-only">Toggle Menu</span>
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+
+            <SheetContent side="right">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <div className="flex flex-col gap-4 py-6">
+                {navItems.map(({ href, label }) => (
+                  <Link key={href} href={href} onClick={() => setOpen(false)}>
+                    <Button variant="ghost" className="w-full justify-start text-left">
+                      {label}
+                    </Button>
+                  </Link>
+                ))}
+                <Link href="https://cal.com/pattern-growth" onClick={() => setOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start text-left text-primary">
+                    Book a Preview
+                  </Button>
+                </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
