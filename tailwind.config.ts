@@ -2,26 +2,12 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./lib/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx,js,jsx,mdx}",
+    "./components/**/*.{ts,tsx,js,jsx,mdx}",
+    "./lib/**/*.{ts,tsx,js,jsx,mdx}",
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--bg)",
-        foreground: "var(--fg)",
-        muted: "var(--muted)",
-        border: "var(--border)",
-        panel: "var(--panel)",
-        accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-        sky: "var(--sky)",
-        good: "var(--good)",
-        warn: "var(--warn)",
-        bad: "var(--bad)",
-        slategrid: "var(--slate-grid)",
-      },
       borderRadius: {
         md: "8px",
       },
@@ -33,7 +19,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 
 export default config;
