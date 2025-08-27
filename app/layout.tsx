@@ -13,13 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          fontFamily:
-            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-        }}
-        className="antialiased"
-      >
+      <body className="bg-background text-foreground antialiased font-sans">
         {children}
       </body>
     </html>
