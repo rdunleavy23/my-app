@@ -1,9 +1,13 @@
 import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import Navbar from "@/components/Navbar"
 
-export const metadata = {
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
   title: "Pattern Growth",
-  description:
-    "Instead of hiring a fractional CMO, companies work with Pattern Growth in focused sprints. We translate executive vision into data-driven strategy, then build custom dashboards so leaders can actually see what's working.",
+  description: "Growth strategy your team can actually run",
 }
 
 export default function RootLayout({
@@ -13,7 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-background text-foreground antialiased font-sans">
+      <body className={inter.className}>
+        <Navbar />
         {children}
       </body>
     </html>

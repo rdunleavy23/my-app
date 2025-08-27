@@ -30,17 +30,19 @@ export default function AboutPage() {
         <CardHeader>
           <CardTitle className="text-xl">Our Philosophy</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-muted-foreground">
-          <p>Strategy should be usable. If it doesn’t fit into your team’s daily work, it won’t matter.</p>
-          <p>Growth should outlive consultants. Success means your team can keep moving without us.</p>
-          <p>Clarity beats noise. The right decisions come from seeing the whole picture, not chasing every signal.</p>
+        <CardContent className="text-muted-foreground">
+          <ol className="list-decimal pl-5 space-y-2">
+            <li>Strategy should be usable. If it doesn’t fit into your team’s daily work, it won’t matter.</li>
+            <li>Growth should outlive consultants. Success means your team can keep moving without us.</li>
+            <li>Clarity beats noise. The right decisions come from seeing the whole picture, not chasing every signal.</li>
+          </ol>
         </CardContent>
       </Card>
 
       <Separator />
 
       <section className="space-y-8">
-        <h2 className="text-xl font-semibold text-foreground">The Partners</h2>
+        <h2 className="text-xl font-semibold text-foreground">Our Team</h2>
 
         <Card>
           <CardContent className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
