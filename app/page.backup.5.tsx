@@ -26,7 +26,7 @@ export default function Home() {
         <div className="max-w-[46rem] text-center mx-auto">
           <Badge variant="secondary" className="mb-4 inline-block">Growth Strategy Sprints</Badge>
           <h1 className="text-4xl font-bold tracking-tight leading-tight sm:text-5xl text-center">
-            Build Your Growth System in 8 Weeks — Then Run It Without Us
+            Build Your Growth System in 8 Weeks <br className="hidden sm:inline" />— Then Run It Without Us
           </h1>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
             For $1–5MM companies who need expert marketing strategy that actually gets implemented—

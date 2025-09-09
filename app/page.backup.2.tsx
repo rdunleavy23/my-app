@@ -23,7 +23,7 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero */}
       <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-        <div className="max-w-[46rem] text-center mx-auto">
+        <div className="max-w-[46rem] text-center">
           <Badge variant="secondary" className="mb-4 inline-block">Growth Strategy Sprints</Badge>
           <h1 className="text-4xl font-bold tracking-tight leading-tight sm:text-5xl text-center">
             Build Your Growth System in 8 Weeks — Then Run It Without Us
