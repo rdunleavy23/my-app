@@ -23,12 +23,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden gap-6 text-sm md:flex">
-            <Link href="#process" className="text-muted-foreground hover:text-foreground">Process</Link>
-            <Link href="#deliverables" className="text-muted-foreground hover:text-foreground">What You Get</Link>
-            <Link href="#investment" className="text-muted-foreground hover:text-foreground">Investment</Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link>
-            <Button asChild>
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link
+              href="/about"
+              className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
+            >
+              About
+            </Link>
+            <Button asChild className="h-9">
               <Link href="https://cal.com/pattern-growth">Book</Link>
             </Button>
           </nav>
@@ -42,32 +44,35 @@ export default function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-
               <SheetContent side="right" className="w-64 sm:w-72">
                 <SheetTitle className="sr-only">Navigation</SheetTitle>
                 <div className="flex flex-col gap-3 pt-6">
-                  {[
-                    { href: "#process", label: "Process" },
-                    { href: "#deliverables", label: "What You Get" },
-                    { href: "#investment", label: "Investment" },
-                    { href: "/about", label: "About" },
-                    { href: "https://cal.com/pattern-growth", label: "Book a Preview", primary: true },
-                  ].map(({ href, label, primary }) => (
-                    <Button
-                      key={href}
-                      asChild
-                      variant={primary ? "default" : "ghost"}
-                      className="justify-between text-base"
-                      onClick={() => setOpen(false)}
-                    >
-                      <Link href={href}>
-                        <div className="flex items-center justify-between w-full">
-                          {label}
-                          <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
-                        </div>
-                      </Link>
-                    </Button>
-                  ))}
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="justify-between text-base"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Link href="/about">
+                      <div className="flex items-center justify-between w-full">
+                        About
+                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
+                      </div>
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="default"
+                    className="justify-between text-base"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Link href="https://cal.com/pattern-growth">
+                      <div className="flex items-center justify-between w-full">
+                        Book
+                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
+                      </div>
+                    </Link>
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

@@ -4,65 +4,62 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import { Icons } from "@/components/icons"
+import { MobileNav } from "@/components/mobile-nav"
 
 export function SiteHeader() {
-  const [open, setOpen] = React.useState(false)
   const pathname = usePathname()
 
   return (
-    <header className="border-b">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="flex h-14 items-center justify-between">
-          <Link href="/" className="font-semibold hover:underline">
-            Pattern Growth
+    <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
+      <div className="container flex h-14 items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
+            <Icons.logo className="h-6 w-6" />
+            <span className="hidden font-bold sm:inline-block">
+              {siteConfig.name}
+            </span>
           </Link>
 
-          <nav className="hidden gap-6 text-sm md:flex">
-            <a href="#process" className="text-muted-foreground hover:text-foreground">Process</a>
-            <a href="#deliverables" className="text-muted-foreground hover:text-foreground">What You Get</a>
-            <a href="#investment" className="text-muted-foreground hover:text-foreground">Investment</a>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground">About</Link>
+          <nav className="hidden gap-6 text-sm font-medium md:flex">
             <Link
-              href="https://cal.com/pattern-growth"
-              className={cn(buttonVariants({ size: "sm" }))}
+              href="/about"
+              className={cn(
+                "transition-colors hover:text-foreground/80",
+                pathname === "/about" ? "text-foreground" : "text-foreground/60"
+              )}
             >
-              Book a Preview
+              About
+            </Link>
+            <Link
+              href="/book"
+              className={cn(
+                "transition-colors hover:text-foreground/80",
+                pathname === "/book" ? "text-foreground" : "text-foreground/60"
+              )}
+            >
+              Book
+            </Link>
+          </nav>
+        </div>
+
+        <div className="flex items-center space-x-4">
+          <nav className="flex items-center">
+            <Link
+              href="/book"
+              className={cn(
+                buttonVariants({ variant: "secondary", size: "sm" }),
+                "px-4 py-1.5"
+              )}
+            >
+              Learn more
             </Link>
           </nav>
 
-          {/* Mobile Menu */}
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <button className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <div className="flex flex-col space-y-4 py-6 text-sm">
-                <a onClick={() => setOpen(false)} href="#process">Process</a>
-                <a onClick={() => setOpen(false)} href="#deliverables">What You Get</a>
-                <a onClick={() => setOpen(false)} href="#investment">Investment</a>
-                <Link onClick={() => setOpen(false)} href="/about">About</Link>
-                <Link
-                  onClick={() => setOpen(false)}
-                  href="https://cal.com/pattern-growth"
-                  className="text-primary"
-                >
-                  Book a Preview
-                </Link>
-              </div>
-            </SheetContent>
-          </Sheet>
+          {/* Mobile nav */}
+          <MobileNav />
         </div>
       </div>
     </header>

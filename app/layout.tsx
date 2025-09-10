@@ -2,6 +2,7 @@ import "./globals.css"
 
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import Navbar from "@/components/Navbar"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -19,17 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQD43BSF5Q"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-DQD43BSF5Q');
-            `,
-          }}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DQD43BSF5Q"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="/gtag-init.js"
+          strategy="afterInteractive"
         />
       </head>
       <body className={inter.className}>

@@ -1,4 +1,3 @@
-// app/api/git-content/route.ts
 import { NextResponse } from "next/server";
 
 const OWNER  = process.env.GITHUB_OWNER  ?? "rdunleavy23";
@@ -7,11 +6,33 @@ const BRANCH = process.env.GITHUB_BRANCH ?? "main";
 const TOKEN  = process.env.GITHUB_TOKEN;
 
 const OK_PREFIX = "app/";
+const ADDITIONAL_PREFIXES = [
+  "lib/",
+  "components/",
+];
 const OK_EXTS = [".ts", ".tsx", ".css"];
-const MAX_BYTES = 512 * 1024; // 512 KB
+const MAX_BYTES = 512 * 1024;
 
-const badPath = (p: string) =>
-  !p.startsWith(OK_PREFIX) || !OK_EXTS.some((ext) => p.endsWith(ext));
+const ALLOWED_CONFIG_FILES = [
+  "tailwind.config.ts",
+  "tailwind.config.js",
+  "next.config.js",
+  "next.config.mjs",
+  "package.json",
+  "components.json",
+  "tsconfig.json",
+  "postcss.config.js"
+];
+
+const badPath = (p: string) => {
+  if (ALLOWED_CONFIG_FILES.includes(p)) return false;
+  
+  if (ADDITIONAL_PREFIXES.some(prefix => p.startsWith(prefix))) {
+    return !OK_EXTS.some(ext => p.endsWith(ext));
+  }
+  
+  return !p.startsWith(OK_PREFIX) || !OK_EXTS.some((ext) => p.endsWith(ext));
+};
 
 export async function GET(req: Request) {
   try {
