@@ -31,7 +31,7 @@ export default function Navbar() {
               About
             </Link>
             <Button asChild className="h-9">
-              <Link href="https://cal.com/pattern-growth">Book</Link>
+              <Link href="https://cal.com/pattern-growth">Schedule a Call</Link>
             </Button>
           </nav>
 
@@ -68,7 +68,7 @@ export default function Navbar() {
                   >
                     <Link href="https://cal.com/pattern-growth">
                       <div className="flex items-center justify-between w-full">
-                        Book
+                        Schedule a Call
                         <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
                       </div>
                     </Link>

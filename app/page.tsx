@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -11,14 +12,35 @@ export default function HomePage() {
         <p className="mt-4 text-lg text-muted-foreground">
           A two-month sprint to turn your vision into a high-leverage operating system.
         </p>
-        <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-center">
+        
+        {/* Updated main CTA */}
+        <div className="mt-8 flex justify-center">
           <Button asChild className="text-base px-6 py-3">
-            <Link href="/about">Learn more</Link>
-          </Button>
-          <Button asChild variant="outline" className="text-base px-6 py-3">
-            <Link href="/book">Book intro call</Link>
+            <Link href="https://cal.com/pattern-growth">
+              Book 15 Minutes. See If We Can Help
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="ml-2"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
           </Button>
         </div>
+        
+        {/* Subtitle text */}
+        <p className="mt-4 text-sm text-muted-foreground">
+          15 minutes • founder-direct • zero pitch
+        </p>
       </section>
 
       <section className="mt-16 max-w-2xl w-full text-left">
@@ -26,7 +48,7 @@ export default function HomePage() {
           What we do in 8 weeks
         </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          We don’t just design strategy. We operationalize it into systems your team can actually run.
+          We don't just design strategy. We operationalize it into systems your team can actually run.
         </p>
         <div className="mt-6 w-full bg-muted rounded-lg overflow-hidden text-sm">
           <div className="grid grid-cols-3 text-center font-semibold text-white bg-gray-800">
