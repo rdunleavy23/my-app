@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -12,7 +11,7 @@ export default function HomePage() {
         <p className="mt-4 text-lg text-muted-foreground">
           A two-month sprint to turn your vision into a high-leverage operating system.
         </p>
-        
+
         {/* Updated main CTA */}
         <div className="mt-8 flex justify-center">
           <Button asChild className="text-base px-6 py-3">
@@ -36,7 +35,7 @@ export default function HomePage() {
             </Link>
           </Button>
         </div>
-        
+
         {/* Subtitle text */}
         <p className="mt-4 text-sm text-muted-foreground">
           15 minutes • founder-direct • zero pitch
@@ -48,7 +47,7 @@ export default function HomePage() {
           What we do in 8 weeks
         </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          We don't just design strategy. We operationalize it into systems your team can actually run.
+          We don&rsquo;t just design strategy. We operationalize it into systems your team can actually run.
         </p>
         <div className="mt-6 w-full bg-muted rounded-lg overflow-hidden text-sm">
           <div className="grid grid-cols-3 text-center font-semibold text-white bg-gray-800">
