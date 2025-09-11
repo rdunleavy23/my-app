@@ -1,95 +1,144 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-
-export const metadata = {
-  title: "About — Pattern Growth",
-  description: "Who we are and why we exist",
-}
-
 export default function AboutPage() {
   return (
-    <main className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-12 sm:py-16 space-y-10">
-      <section className="text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-          We exist to turn growth vision into systems that last.
-        </h1>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            Our Team
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Meet the partners behind Pattern Growth
+          </p>
+        </div>
       </section>
 
-      <section className="space-y-4 text-muted-foreground text-base leading-relaxed">
-        <h2 className="text-xl font-semibold text-foreground">Why Pattern Growth Exists</h2>
-        <p>
-          Every growth-stage company reaches a point where ambition outpaces systems.
-          Leaders set bold goals. Teams hustle to execute. Somewhere in between, momentum breaks.
-        </p>
-        <p>
-          Pattern Growth was created to close that gap. We don’t just design strategy.
-          We build frameworks, dashboards, and processes your team can own long after we’ve stepped out.
-        </p>
-      </section>
+      {/* Team Section */}
+      <section className="container mx-auto px-4 pb-24">
+        <div className="max-w-6xl mx-auto">
+          {/* Team Grid */}
+          <div className="grid gap-8 md:gap-12 lg:gap-16">
+            
+            {/* William Card */}
+            <div className="group">
+              <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                {/* Avatar */}
+                <div className="flex-shrink-0">
+                  <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-secondary border-2 border-border flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <svg 
+                      className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 text-foreground"
+                      viewBox="0 0 100 100" 
+                      fill="none" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="50" cy="30" r="15" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M35 30 Q50 40 65 30" stroke="currentColor" strokeWidth="2" fill="none"/>
+                      <circle cx="40" cy="28" r="2" fill="currentColor"/>
+                      <circle cx="60" cy="28" r="2" fill="currentColor"/>
+                      <path d="M30 60 Q50 80 70 60" stroke="currentColor" strokeWidth="2" fill="none"/>
+                      <rect x="44" y="35" width="3" height="3" fill="currentColor"/>
+                      <rect x="48" y="35" width="3" height="3" fill="currentColor"/>
+                      <rect x="52" y="35" width="3" height="3" fill="currentColor"/>
+                      <rect x="44" y="39" width="3" height="3" fill="currentColor"/>
+                      <rect x="48" y="39" width="3" height="3" fill="currentColor"/>
+                      <rect x="52" y="39" width="3" height="3" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                      William
+                    </h2>
+                    <p className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
+                      Partner
+                    </p>
+                  </div>
+                  
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+                      William has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.
+                    </p>
+                    <p className="text-base md:text-lg leading-relaxed text-muted-foreground mt-4">
+                      Clients know him for turning ambitious goals into frameworks that actually make sense.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <Separator />
+            {/* Divider */}
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                <div className="w-full border-t border-border"></div>
+              </div>
+            </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl">Our Philosophy</CardTitle>
-        </CardHeader>
-        <CardContent className="text-muted-foreground">
-          <ol className="list-decimal pl-5 space-y-2">
-            <li>Strategy should be usable. If it doesn’t fit into your team’s daily work, it won’t matter.</li>
-            <li>Growth should outlive consultants. Success means your team can keep moving without us.</li>
-            <li>Clarity beats noise. The right decisions come from seeing the whole picture, not chasing every signal.</li>
-          </ol>
-        </CardContent>
-      </Card>
+            {/* Ryan Card */}
+            <div className="group">
+              <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                {/* Avatar */}
+                <div className="flex-shrink-0">
+                  <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-secondary border-2 border-border flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <svg 
+                      className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 text-foreground"
+                      viewBox="0 0 100 100" 
+                      fill="none" 
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="50" cy="30" r="15" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M35 25 Q50 15 65 25" stroke="currentColor" strokeWidth="2" fill="currentColor"/>
+                      <circle cx="40" cy="28" r="2" fill="currentColor"/>
+                      <circle cx="60" cy="28" r="2" fill="currentColor"/>
+                      <circle cx="40" cy="28" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
+                      <circle cx="60" cy="28" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
+                      <path d="M30 60 Q50 80 70 60" stroke="currentColor" strokeWidth="2" fill="none"/>
+                      <rect x="44" y="35" width="3" height="3" fill="currentColor"/>
+                      <rect x="48" y="35" width="3" height="3" fill="currentColor"/>
+                      <rect x="52" y="35" width="3" height="3" fill="currentColor"/>
+                      <rect x="44" y="39" width="3" height="3" fill="currentColor"/>
+                      <rect x="48" y="39" width="3" height="3" fill="currentColor"/>
+                      <rect x="52" y="39" width="3" height="3" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                      Ryan
+                    </h2>
+                    <p className="text-sm md:text-base font-medium text-primary uppercase tracking-wider">
+                      Partner
+                    </p>
+                  </div>
+                  
+                  <div className="prose prose-lg max-w-none">
+                    <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+                      Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think. His focus is on translating complex marketing challenges into clear next steps, and he has a reputation for calling out when "more campaigns" isn't really the answer.
+                    </p>
+                    <p className="text-base md:text-lg leading-relaxed text-muted-foreground mt-4">
+                      His goal is always the same: clarity that teams can run with.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <Separator />
-
-      <section className="space-y-8">
-        <h2 className="text-xl font-semibold text-foreground">Our Team</h2>
-
-        <Card>
-          <CardContent className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
-            <img
-              src="/team/william.png"
-              alt="William"
-              className="aspect-square w-24 sm:w-28 rounded-full border"
-            />
-            <div className="space-y-2 text-muted-foreground">
-              <h3 className="text-lg font-semibold text-foreground">William — Partner</h3>
-              <p>
-                William has spent his career helping growth-stage teams find structure in the chaos of growth.
-                He believes strategy should be practical and usable, and he measures success by how confident
-                teams feel once they own the plan. Clients know him for turning ambitious goals into frameworks
-                that actually make sense.
+          {/* Bottom Section */}
+          <div className="mt-16 md:mt-24 pt-16 border-t border-border">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl leading-relaxed text-muted-foreground text-center">
+                Together, William and Ryan built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill: a project-based partner for leaders who want growth strategy their teams can actually run.
               </p>
             </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
-            <img
-              src="/team/ryan.png"
-              alt="Ryan"
-              className="aspect-square w-24 sm:w-28 rounded-full border"
-            />
-            <div className="space-y-2 text-muted-foreground">
-              <h3 className="text-lg font-semibold text-foreground">Ryan — Partner</h3>
-              <p>
-                Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think.
-                His focus is on translating complex marketing challenges into clear next steps, and he has a reputation
-                for calling out when “more campaigns” isn’t really the answer. His goal is always the same:
-                clarity that teams can run with.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        <p className="text-muted-foreground mt-4">
-          Together, William and Ryan built Pattern Growth as the alternative to the CMO-for-hire model
-          and the agency treadmill: a project-based partner for leaders who want growth strategy their teams can actually run.
-        </p>
+          </div>
+        </div>
       </section>
-    </main>
-  )
+    </div>
+  );
 }
