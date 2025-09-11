@@ -37,7 +37,7 @@ export default function HomePage() {
           </h1>
           
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            We diagnose what's blocking revenue, then build the systems your team needs to execute—without hiring a full-time CMO.
+            We diagnose what'apos;s blocking revenue, then build the systems your team needs to execute—without hiring a full-time CMO.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -368,7 +368,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  We don't prescribe solutions until we understand your specific growth blockers. 
+                  We don'apos;t prescribe solutions until we understand your specific growth blockers. 
                   Our diagnostic reveals what others miss.
                 </p>
               </CardContent>
@@ -438,17 +438,17 @@ export default function HomePage() {
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>What if we're not ready for an 8-week commitment?</AccordionTrigger>
+              <AccordionTrigger>What if we'apos;re not ready for an 8-week commitment?</AccordionTrigger>
               <AccordionContent>
-                Start with a 15-minute fit call. We'll be direct about whether our approach matches your 
-                needs. If we're not the right fit, we'll tell you and often can recommend alternatives.
+                Start with a 15-minute fit call. We'apos;ll be direct about whether our approach matches your 
+                needs. If we'apos;re not the right fit, we'apos;ll tell you and often can recommend alternatives.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
               <AccordionTrigger>Do you work with our existing team?</AccordionTrigger>
               <AccordionContent>
-                Yes, that's the entire point. We work alongside your team, building their capabilities 
+                Yes, that'apos;s the entire point. We work alongside your team, building their capabilities 
                 while designing systems. The final two weeks focus entirely on knowledge transfer and 
                 ensuring they can operate independently.
               </AccordionContent>
@@ -477,7 +477,7 @@ export default function HomePage() {
                 Ready to diagnose your growth gaps?
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                Schedule a 15-minute fit call. We'll discuss your situation and be direct about 
+                Schedule a 15-minute fit call. We'apos;ll discuss your situation and be direct about 
                 whether our approach makes sense for you. No pitch, just clarity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
