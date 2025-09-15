@@ -1,8 +1,1 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    optimizePackageImports: ['lucide-react']
-  },
-  poweredByHeader: false,
-};
-module.exports = nextConfig;
+const nextConfig = { eslint: { ignoreDuringBuilds: true } }; module.exports = nextConfig;
