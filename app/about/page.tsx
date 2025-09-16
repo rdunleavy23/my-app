@@ -34,7 +34,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
             Our Team
           </h1>
           <div className="w-16 h-px bg-foreground mx-auto mb-6"></div>
