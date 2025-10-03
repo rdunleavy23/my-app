@@ -1,52 +1,61 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-
-export const metadata = { robots: 'noindex, nofollow' };
+import { useEffect, useState } from 'react';
 
 export default function PublishPage() {
-  const [password, setPassword] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [author, setAuthor] = useState("Ryan");
-  const [content, setContent] = useState("");
+  const [password, setPassword] = useState('');
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [author, setAuthor] = useState('Ryan');
+  const [content, setContent] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
-  const [publishedUrl, setPublishedUrl] = useState("");
-  const router = useRouter();
+  const [error, setError] = useState('');
+  const [publishedUrl, setPublishedUrl] = useState('');
+  const [isLive, setIsLive] = useState(false);
 
-  const handleSubmit = async () => {
+  // Poll until new page is live
+  useEffect(() => {
+    if (!publishedUrl) return;
+    const interval = setInterval(async () => {
+      try {
+        const res = await fetch(publishedUrl, { method: 'GET', cache: 'no-store' });
+        if (res.ok) {
+          setIsLive(true);
+          clearInterval(interval);
+        }
+      } catch {}
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [publishedUrl]);
+
+  const handleSubmit = async (e?: React.FormEvent) => {
+    e?.preventDefault();
+    setError('');
     if (!password || !title || !description || !content) {
-      setError("All fields are required");
+      setError('All fields are required.');
       return;
     }
-
     setIsSubmitting(true);
-    setError("");
-
     try {
-      const res = await fetch("/api/publish-post", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/publish-post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password, title, description, author, content }),
       });
-
       const data = await res.json();
-
-      if (!res.ok) {
-        setError(data.error || "Failed to publish");
-        setIsSubmitting(false);
-        return;
-      }
-
-      setPublishedUrl(data.url);
-      router.refresh();
-    } catch (err) {
-      setError("Network error");
       setIsSubmitting(false);
+      if (!res.ok) { setError(data.error || 'Failed to publish.'); return; }
+      if (data.url) setPublishedUrl(data.url);
+    } catch {
+      setIsSubmitting(false);
+      setError('Network error.');
     }
+  };
+
+  const resetForm = () => {
+    setPassword(''); setTitle(''); setDescription('');
+    setAuthor('Ryan'); setContent('');
+    setError(''); setPublishedUrl(''); setIsLive(false);
   };
 
   if (publishedUrl) {
@@ -54,14 +63,34 @@ export default function PublishPage() {
       <div className="min-h-screen bg-background flex items-center justify-center px-4">
         <div className="max-w-md w-full text-center space-y-6">
           <div className="text-6xl">✅</div>
-          <h2 className="text-2xl font-bold text-foreground">Blog Published!</h2>
-          <p className="text-muted-foreground">Your post is live and will appear after deployment.</p>
-          <div className="flex gap-4 justify-center">
-            <Link href={publishedUrl} className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90">
-              View Post
-            </Link>
-            <button onClick={() => { setPublishedUrl(""); setTitle(""); setDescription(""); setContent(""); setPassword(""); }} 
-              className="px-6 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90">
+          <h2 className="text-2xl font-bold text-foreground">Post Published</h2>
+          <p className="text-muted-foreground">
+            We’re deploying your site. Usually under a minute.
+          </p>
+          <div className="flex flex-col gap-3 items-center">
+            <button
+              onClick={() => isLive && window.open(publishedUrl, '_blank')}
+              disabled={!isLive}
+              className={`w-full px-6 py-3 rounded-md font-medium ${
+                isLive
+                  ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                  : 'bg-muted text-muted-foreground cursor-not-allowed'
+              }`}
+            >
+              {isLive ? 'View Post' : 'Waiting for site to update…'}
+            </button>
+            <button
+              onClick={async () => {
+                try { await navigator.clipboard.writeText(`${window.location.origin}${publishedUrl}`); } catch {}
+              }}
+              className="w-full px-6 py-3 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90"
+            >
+              Copy Link
+            </button>
+            <button
+              onClick={resetForm}
+              className="w-full px-6 py-3 border border-border rounded-md hover:bg-muted"
+            >
               Write Another
             </button>
           </div>
@@ -77,49 +106,30 @@ export default function PublishPage() {
           <h1 className="text-4xl font-bold text-foreground mb-2">Publish Blog Post</h1>
           <p className="text-muted-foreground">Write and publish directly to your site</p>
         </div>
-
-        <div className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">Password</label>
-            <input type="password" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" 
-              placeholder="Enter publish password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" placeholder="Enter publish password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">Title</label>
-            <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" 
-              placeholder="Blog post title" value={title} onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" placeholder="Blog post title" value={title} onChange={(e) => setTitle(e.target.value)} />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">Description</label>
-            <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" 
-              placeholder="Short description for SEO" value={description} onChange={(e) => setDescription(e.target.value)} />
+            <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" placeholder="Short description for SEO" value={description} onChange={(e) => setDescription(e.target.value)} />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">Author</label>
-            <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" 
-              placeholder="Author name" value={author} onChange={(e) => setAuthor(e.target.value)} />
+            <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary" placeholder="Author name" value={author} onChange={(e) => setAuthor(e.target.value)} />
           </div>
-
           <div>
             <label className="block text-sm font-medium text-foreground mb-2">Content (Markdown)</label>
-            <textarea className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary font-mono text-sm" 
-              placeholder="Write your markdown content here..." rows={16} value={content} onChange={(e) => setContent(e.target.value)} />
+            <textarea className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:ring-2 focus:ring-primary font-mono text-sm" rows={16} placeholder="Write your markdown content here..." value={content} onChange={(e) => setContent(e.target.value)} />
           </div>
-
-          {error && (
-            <div className="p-4 bg-destructive/10 border border-destructive rounded-md">
-              <p className="text-destructive text-sm">{error}</p>
-            </div>
-          )}
-
-          <button onClick={handleSubmit} disabled={isSubmitting} 
-            className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 disabled:opacity-50">
-            {isSubmitting ? "Publishing..." : "Publish Post"}
-          </button>
-        </div>
+          {error && <div className="p-4 bg-destructive/10 border border-destructive rounded-md"><p className="text-destructive text-sm">{error}</p></div>}
+          <button type="submit" disabled={isSubmitting} className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 disabled:opacity-50">{isSubmitting ? 'Publishing…' : 'Publish Post'}</button>
+        </form>
       </div>
     </div>
   );
