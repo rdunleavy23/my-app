@@ -43,7 +43,8 @@ seo:
 ${content}
 `
 
-    const WRITE_API_KEY = process.env.WRITE_API_KEY
+    // ✅ Use GitHub token for git-content
+    const WRITE_API_KEY = process.env.GITHUB_TOKEN_WRITE
     if (!WRITE_API_KEY) return NextResponse.json({ error: 'Write key not configured' }, { status: 500 })
 
     const gitResponse = await fetch('https://patterngrowth.com/api/git-content', {
