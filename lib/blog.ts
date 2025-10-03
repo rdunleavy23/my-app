@@ -21,13 +21,21 @@ export function getAllPosts(): BlogPost[] {
 
       return {
         slug,
-        title: data.title,
-        description: data.description,
-        publishedAt: data.publishedAt,
+        title: data.title ?? 'Untitled',
+        description: data.description ?? '',
+        publishedAt: data.publishedAt ?? '',
         readingTime: calculateReadingTime(content),
         content,
-        author: data.author,
-        seo: data.seo
+        author: {
+          name: data?.author?.name ?? 'Unknown',
+          title: data?.author?.title ?? '',
+          image: data?.author?.image ?? '',
+        },
+        seo: {
+          title: data?.seo?.title ?? (data.title ?? 'Untitled'),
+          description: data?.seo?.description ?? (data.description ?? ''),
+          keywords: data?.seo?.keywords ?? [],
+        },
       } as BlogPost
     })
 
@@ -42,13 +50,21 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
     return {
       slug,
-      title: data.title,
-      description: data.description,
-      publishedAt: data.publishedAt,
+      title: data.title ?? 'Untitled',
+      description: data.description ?? '',
+      publishedAt: data.publishedAt ?? '',
       readingTime: calculateReadingTime(content),
       content,
-      author: data.author,
-      seo: data.seo
+      author: {
+        name: data?.author?.name ?? 'Unknown',
+        title: data?.author?.title ?? '',
+        image: data?.author?.image ?? '',
+      },
+      seo: {
+        title: data?.seo?.title ?? (data.title ?? 'Untitled'),
+        description: data?.seo?.description ?? (data.description ?? ''),
+        keywords: data?.seo?.keywords ?? [],
+      },
     }
   } catch {
     return null
