@@ -1,0 +1,144 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Growth Strategy That Actually Works
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            We're the strategic alternative to traditional CMO hiring for growth-stage businesses. 
+            Get CMO-level thinking delivered through focused 4-8 week sprints.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-lg px-8">
+              Start Your Sprint
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-8">
+              Learn More
+            </Button>
+          </div>
+        </div>
+
+        {/* Value Proposition */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <Card>
+            <CardHeader>
+              <CardTitle>Speed to Value</CardTitle>
+              <CardDescription>
+                Dashboard live in 6 weeks maximum
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                No months of onboarding or ramp-up time. We deliver working systems fast.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Ownership Model</CardTitle>
+              <CardDescription>
+                You own all deliverables and systems
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Complete independence from consulting relationships. Your growth infrastructure belongs to you.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Team Empowerment</CardTitle>
+              <CardDescription>
+                Training ensures independent execution
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                We don't create dependency - we build your team's capability to execute independently.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* How It Works */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+            Growth Strategy Sprints
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
+                  1
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">Strategic Foundation</h3>
+                  <p className="text-muted-foreground">
+                    Vision extraction, competitive analysis, customer journey mapping
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
+                  2
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">Tactical Framework</h3>
+                  <p className="text-muted-foreground">
+                    Channel priorities, KPI systems, campaign templates
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
+                  3
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">Dashboard Creation</h3>
+                  <p className="text-muted-foreground">
+                    Custom dashboards connecting all your data sources
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-semibold">
+                  4
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-2">Team Handoff</h3>
+                  <p className="text-muted-foreground">
+                    Complete documentation and training for independent execution
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Investment */}
+        <div className="text-center bg-muted p-8 rounded-lg">
+          <h2 className="text-2xl font-bold mb-4 text-foreground">
+            $25K-50K Investment
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Includes full year of dashboard access and 30-day post-sprint support
+          </p>
+          <Button size="lg">
+            Schedule Strategy Call
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
