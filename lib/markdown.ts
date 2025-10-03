@@ -7,16 +7,16 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 export async function markdownToHtml(markdown: string): Promise<string> {
   const result = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeSlug)
-    .use(rehypeAutolinkHeadings, {
+    .use(remarkParse)              // ✅ Parse Markdown to AST
+    .use(remarkRehype)             // ✅ Convert to HTML AST
+    .use(rehypeSlug)               // ✅ Adds id="..." to headings
+    .use(rehypeAutolinkHeadings, { // ✅ Wraps headings with anchor links
       behavior: 'wrap',
       properties: {
         className: ['anchor-link']
       }
     })
-    .use(rehypeStringify)
+    .use(rehypeStringify)          // ✅ Output to final HTML
     .process(markdown)
 
   return result.toString()
