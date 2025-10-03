@@ -68,6 +68,9 @@ ${content}
       return NextResponse.json({ error: "Write key not configured" }, { status: 500 });
     }
 
+    // 🔍 Debug log
+    console.log("DEBUG WRITE_API_KEY:", WRITE_API_KEY?.slice(0, 8));
+
     // Commit content via your git-content endpoint
     const gitResponse = await fetch("https://patterngrowth.com/api/git-content", {
       method: "POST",
