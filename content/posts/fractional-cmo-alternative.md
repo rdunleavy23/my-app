@@ -1,19 +1,16 @@
 ---
 
----
 title: "Why We Don't Offer Fractional CMO Services (And What We Built Instead)"
 description: "Fractional CMOs solve the wrong problem for growth-stage companies. Here's why—and what actually works when you need strategic clarity without the commitment."
 publishedAt: "2025-10-02"
 author:
   name: "Ryan"
-  role: "Founder"
+  title: "Founder"
   image: "/images/ryan.jpg"
 seo:
   title: "Fractional CMO Alternative | Why Strategy Sprints Work Better"
   description: "Most growth-stage companies don't need ongoing CMO leadership—they need architecture. See why 2-month strategy sprints outperform traditional fractional models."
   keywords: ["fractional cmo alternative", "growth strategy sprint", "marketing strategy consulting"]
----
-
 ---------------------------------------------------------------------------------------------------
 
 # Why We Don't Offer Fractional CMO Services
