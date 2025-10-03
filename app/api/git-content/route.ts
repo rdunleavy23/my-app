@@ -10,7 +10,7 @@ const ADDITIONAL_PREFIXES = [
   "lib/",
   "components/",
 ];
-const OK_EXTS = [".ts", ".tsx", ".css"];
+const OK_EXTS = [".ts", ".tsx", ".css", ".md" ];
 const MAX_BYTES = 512 * 1024;
 
 const ALLOWED_CONFIG_FILES = [
