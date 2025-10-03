@@ -72,7 +72,7 @@ ${content}
     console.log("DEBUG WRITE_API_KEY:", WRITE_API_KEY?.slice(0, 8));
 
     // Commit content via your git-content endpoint
-    const gitResponse = await fetch("https://patterngrowth.com/api/git-content", {
+    const gitResponse = await fetch("https://www.patterngrowth.com/api/git-content", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
