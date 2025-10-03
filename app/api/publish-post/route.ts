@@ -36,7 +36,7 @@ author:
 seo:
   title: "${title}"
   description: "${description}"
-  keywords: [${keywords.map(k => \`"\${k}"\`).join(', ')}]
+  keywords: [${keywords.map(k => `"${k}"`).join(', ')}]
 ---
 # ${title}
 
