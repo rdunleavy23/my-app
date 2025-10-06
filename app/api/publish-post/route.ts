@@ -68,20 +68,40 @@ ${content}
       return NextResponse.json({ error: "Write key not configured" }, { status: 500 });
     }
 
-    // 🔍 Debug log
-    console.log("DEBUG WRITE_API_KEY:", WRITE_API_KEY?.slice(0, 8));
+    const targetPath = `content/posts/${slug}.md`;
 
-    // Commit content via your git-content endpoint
-    const gitResponse = await fetch("https://www.patterngrowth.com/api/git-content", {
+    // 🔍 Step 1: Try to fetch existing file to get its SHA
+    let sha: string | undefined;
+    try {
+      const checkRes = await fetch(`https://patterngrowth.com/api/git-content?path=${encodeURIComponent(targetPath)}`, {
+        method: "GET",
+        headers: {
+          "Authorization": `Bearer ${WRITE_API_KEY}`,
+        },
+      });
+
+      if (checkRes.ok) {
+        const checkText = await checkRes.text();
+        // the raw response is the file content, but SHA is in the header
+        const shaHeader = checkRes.headers.get("X-File-SHA");
+        if (shaHeader) sha = shaHeader;
+      }
+    } catch {
+      // ignore, file may not exist yet
+    }
+
+    // 🔍 Step 2: Commit content via your git-content endpoint (include sha if present)
+    const gitResponse = await fetch("https://patterngrowth.com/api/git-content", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${WRITE_API_KEY}`,
       },
       body: JSON.stringify({
-        path: `content/posts/${slug}.md`,
+        path: targetPath,
         message: `Publish blog post: ${title}`,
         content: markdown,
+        ...(sha ? { sha } : {}),
       }),
     });
 
