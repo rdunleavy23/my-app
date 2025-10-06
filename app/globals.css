@@ -586,3 +586,6 @@ body { background: #f6f7f8; }
   margin-bottom: 0.6666667em;
   line-height: 1.5;
 }
+/* PG patch: scope light tint to light, restore dark background */
+html:not(.dark) body { background: #f6f7f8; }
+.dark body { background: hsl(var(--background)); }
