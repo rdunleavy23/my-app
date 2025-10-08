@@ -30,7 +30,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
@@ -50,7 +50,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             
             {/* William's Card - Takes 2 columns on lg+ */}
-            <Card className="md:col-span-1 lg:col-span-2 p-6 md:p-8 border border-border/50 hover:border-border transition-all duration-300 bg-white">
+            <Card className="md:col-span-1 lg:col-span-2 p-6 md:p-8 border border-border/50 hover:border-border transition-all duration-300 bg-background">
               <CardHeader className="flex flex-col items-center space-y-4 text-center">
                 <Avatar className="size-24 md:size-28 bg-muted/20 overflow-hidden transition duration-300">
                   <AvatarImage src={team[0].photo} alt={`${team[0].name} headshot`} />
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </Card>
 
             {/* Ryan's Card - Takes 2 columns on lg+ */}
-            <Card className="md:col-span-1 lg:col-span-2 p-6 md:p-8 border border-border/50 hover:border-border transition-all duration-300 bg-white">
+            <Card className="md:col-span-1 lg:col-span-2 p-6 md:p-8 border border-border/50 hover:border-border transition-all duration-300 bg-background">
               <CardHeader className="flex flex-col items-center space-y-4 text-center">
                 <Avatar className="size-24 md:size-28 bg-muted/20 overflow-hidden transition duration-300">
                   <AvatarImage src={team[1].photo} alt={`${team[1].name} headshot`} />
@@ -97,7 +97,7 @@ export default function AboutPage() {
 
             {/* Bottom Section - Full width */}
             <div className="col-span-1 md:col-span-2 lg:col-span-4 mt-8">
-              <Card className="p-8 md:p-12 border border-border/50 bg-white">
+              <Card className="p-8 md:p-12 border border-border/50 bg-background">
                 <div className="text-center">
                   <div className="w-16 h-px bg-foreground mx-auto mb-8"></div>
                   <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl mx-auto">
