@@ -28,7 +28,7 @@ export const metadata = {
 
 export default function ProcessPage() {
   return (
-    <main className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-12 sm:py-16">
+    <main className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-12 sm:py-16 bg-background">
       {/* Hero */}
       <header className="text-center space-y-6">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
