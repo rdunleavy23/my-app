@@ -1,416 +1,496 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle2, Clock, Target, TrendingUp, Users, Zap } from "lucide-react"
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Separator } from '@/components/ui/separator'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+
+export const metadata: Metadata = {
+  title: 'Pattern Growth | 8-Week Alternative to a Fractional CMO',
+  description: 'Tailored marketing strategy your team can run. Fixed scope, clear KPIs, 8-week delivery. Built by Ryan & William.',
+  openGraph: {
+    title: 'Pattern Growth | 8-Week Alternative to a Fractional CMO',
+    description: 'Tailored marketing strategy your team can run. Fixed scope, clear KPIs, 8-week delivery.',
+  }
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this a fractional CMO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It's the strategy you'd hire one for—delivered in 8 weeks—with playbooks and training, then a clean handoff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I don't have a team yet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We design the plan either way. If you need a small bridge to start, we'll outline options and owners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you stick around?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you need us, we're available for a few check-ins after handoff. No ongoing retainer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What exactly do I get?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strategy package, campaign playbooks, KPI model, and live training—with all files delivered to you."
+      }
+    }
+  ]
+}
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Schema Markup */}
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            name: "Pattern Growth",
-            description:
-              "Growth strategy sprints and fractional CMO alternative for growth-stage companies. CMO-level thinking delivered through focused 2-month project-based engagements.",
-            url: "https://patterngrowth.com",
-            serviceType: [
-              "Growth Strategy Consulting",
-              "Marketing Strategy Sprint",
-              "Fractional CMO Alternative",
-              "Marketing Dashboard Development",
-            ],
-            areaServed: {
-              "@type": "Country",
-              name: "United States",
-            },
-            offers: {
-              "@type": "Offer",
-              name: "Growth Strategy Sprint",
-              description:
-                "2-month focused engagement delivering growth strategy, marketing dashboards, and team training",
-            },
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      
+      <div className="bg-background">
+        {/* Hero Section */}
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <div className="flex flex-wrap gap-2 mb-6">
+              <Badge variant="secondary">Fixed scope</Badge>
+              <Badge variant="secondary">Clear KPIs, not fluff</Badge>
+              <Badge variant="secondary">Built by Ryan & William</Badge>
+            </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What is a growth strategy sprint?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "A growth strategy sprint is a focused 2-month engagement that delivers complete growth strategy systems including custom dashboards, campaign playbooks, and team training. Unlike fractional CMOs or agencies, you own everything we build with no ongoing consulting dependency.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How is this different from hiring a fractional CMO?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Growth strategy sprints are project-based (2 months) versus ongoing retainer relationships. You receive complete deliverables including strategy documents, marketing dashboards, and playbooks that you own. Fractional CMOs typically work on monthly retainers with ongoing consulting relationships.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How quickly can we start?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "We start growth strategy sprints within 1 week of agreement. Your marketing dashboard goes live within 6 weeks maximum, and the complete sprint finishes in 2 months total.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            The Fractional CMO Alternative for Growth-Stage Companies
-          </h1>
-          
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Get CMO-level growth strategy through 2-month sprints—without hiring overhead or consulting dependency
-          </h2>
-
-          <div className="prose prose-lg mx-auto mb-8 text-foreground">
-            <p className="text-lg leading-relaxed">
-              Instead of months of CMO onboarding or endless fractional CMO engagements, 
-              get a complete growth strategy system in 2 months. You own everything: 
-              the strategy documents, the marketing dashboards, the campaign playbooks.
-            </p>
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 leading-tight">
+              An 8-week alternative to a fractional CMO—tailored strategy your team can run
+            </h1>
             
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Perfect for growth-stage companies ($1-5M revenue) who need strategic marketing 
-              leadership but aren't ready for full-time CMO economics or long-term consulting 
-              relationships.
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl">
+              We follow a designed week-by-week sequence to ask the right questions, read the right data, and make decisions your team can stand behind. No templates. No retainers. Just a plan, playbooks, and a clean handoff.
             </p>
-          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg">
-              Start Your Sprint
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg">
-              Learn How It Works
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Benefits */}
-      <section className="container mx-auto px-4 py-16 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                <Zap className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Start Within 1 Week</h3>
-              <p className="text-muted-foreground">
-                No months of onboarding or ramp-up time. We deliver working systems fast.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                <Target className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">You Own Everything</h3>
-              <p className="text-muted-foreground">
-                Complete independence from consulting relationships. Your growth infrastructure belongs to you.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Team Capability Building</h3>
-              <p className="text-muted-foreground">
-                We don't create dependency—we build your team's capability to execute independently.
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg">
+                <Link href="/contact">
+                  Book a fit call
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/process">
+                  See the 8-week plan
+                </Link>
+              </Button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* What You Get Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            What You Get in Your Growth Strategy Sprint
-          </h2>
+        <Separator />
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <h3 className="text-xl font-semibold mb-4">Strategic Foundation (Week 1-2)</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Executive vision extraction and alignment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Competitive analysis and market positioning</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Customer journey mapping and persona development</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <h3 className="text-xl font-semibold mb-4">Tactical Framework (Week 3-4)</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Channel prioritization and budget allocation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>KPI systems and measurement framework</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Campaign templates and messaging guides</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <h3 className="text-xl font-semibold mb-4">Dashboard & Handoff (Week 5-8)</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Custom marketing dashboard connecting all your data sources</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Complete process documentation and team training</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Campaign playbooks for independent execution</span>
-                </li>
-              </ul>
-            </div>
+        {/* Why This Works */}
+        <section className="py-16">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl">It's not eight random weeks.</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Our 8-week sequence mirrors our 7-stage process—Aim → Assess → Target → Build → Reach → Measure → Enable—so we pull out the right insights and turn them into decisions you can run.
+                </p>
+                <Link href="/process" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
+                  See the 7-stage plan
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </CardContent>
+            </Card>
           </div>
+        </section>
 
-          <div className="mt-8 text-center p-6 bg-primary/5 rounded-lg border border-primary/20">
-            <p className="text-lg font-semibold">
-              Included: Full Year of Dashboard Access + 30-Day Post-Sprint Support
+        {/* Who This Is For */}
+        <section className="py-16 bg-muted/30">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Who This Is For
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              If you're growing and marketing feels busy but unsynchronized, this is for you.
             </p>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-foreground">
+                    You want <strong>decisions, not decks</strong>—clear priorities tied to pipeline.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-foreground">
+                    You care about <strong>actionable data</strong>, not marketing fluff.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-foreground">
+                    You may have a team or need a light execution bridge to start; either way, you want to <strong>own the strategy</strong>.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-foreground">
+                    You like partners who <strong>ask sharp questions</strong> and act like they're on your team.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="outline">Am I a fit?</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Quick Fit Check</DialogTitle>
+                  <DialogDescription>
+                    If most of these are true, we should talk.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4 py-4">
+                  <div className="flex items-start space-x-3">
+                    <Checkbox id="fit1" />
+                    <label htmlFor="fit1" className="text-sm leading-relaxed">
+                      You're past product-market fit and have revenue ($1M+)
+                    </label>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Checkbox id="fit2" />
+                    <label htmlFor="fit2" className="text-sm leading-relaxed">
+                      You need strategic clarity, not more tactical execution
+                    </label>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Checkbox id="fit3" />
+                    <label htmlFor="fit3" className="text-sm leading-relaxed">
+                      You want to own the plan, not rent ongoing consulting
+                    </label>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Checkbox id="fit4" />
+                    <label htmlFor="fit4" className="text-sm leading-relaxed">
+                      You value clear KPIs and board-ready reporting
+                    </label>
+                  </div>
+                </div>
+                <Button asChild className="w-full">
+                  <Link href="/contact">Book a fit call</Link>
+                </Button>
+              </DialogContent>
+            </Dialog>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* How It Works */}
-      <section className="container mx-auto px-4 py-16 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            How Growth Strategy Sprints Work
-          </h2>
+        {/* Deliverables */}
+        <section className="py-16">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-8">
+              What You Get
+            </h2>
 
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
-                1
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Start Within 1 Week</h3>
-                <p className="text-muted-foreground">
-                  No lengthy RFPs or multi-month searches. We begin your growth strategy sprint within 1 week of agreement.
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Strategy Package</CardTitle>
+                  <CardDescription>
+                    Positioning, channel priorities, KPI model.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Clear strategic framework tailored to your market position and team capabilities.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Campaign Playbooks</CardTitle>
+                  <CardDescription>
+                    Runbooks, cadences, owners, scorecard.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Step-by-step execution guides your team can follow independently.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Training & Handoff</CardTitle>
+                  <CardDescription>
+                    Live sessions, recordings, reference hub.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    Complete knowledge transfer so your team owns and runs the strategy.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="outline">Preview a sample</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Get a Sample Deliverable</DialogTitle>
+                  <DialogDescription>
+                    We'll send you an example strategy document so you can see what you're getting.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4 py-4">
+                  <div>
+                    <label htmlFor="email" className="text-sm font-medium">Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="you@company.com"
+                      className="w-full mt-1 px-3 py-2 border border-input rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="text-sm font-medium">Company</label>
+                    <input
+                      id="company"
+                      type="text"
+                      placeholder="Your company"
+                      className="w-full mt-1 px-3 py-2 border border-input rounded-md"
+                    />
+                  </div>
+                </div>
+                <Button className="w-full">Send me a sample</Button>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section className="py-16 bg-muted/30">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">
+              Fractional CMO, full-time CMO, agency—or us?
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+              Most growth-stage companies consider these options. Here's how they compare.
+            </p>
+
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-[200px]">Factor</TableHead>
+                    <TableHead>Pattern Growth</TableHead>
+                    <TableHead>Fractional CMO</TableHead>
+                    <TableHead>Full-Time CMO</TableHead>
+                    <TableHead>Agency</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Speed to clarity</TableCell>
+                    <TableCell className="font-semibold text-primary">8 weeks</TableCell>
+                    <TableCell className="text-muted-foreground">6–12+ months</TableCell>
+                    <TableCell className="text-muted-foreground">4–8 month search + ramp</TableCell>
+                    <TableCell className="text-muted-foreground">Varies</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Ownership</TableCell>
+                    <TableCell className="font-semibold text-primary">You own the plan & playbooks</TableCell>
+                    <TableCell className="text-muted-foreground">Consultant-dependent</TableCell>
+                    <TableCell className="text-muted-foreground">Employee deliverables</TableCell>
+                    <TableCell className="text-muted-foreground">Limited strategy ownership</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Who runs day-to-day</TableCell>
+                    <TableCell className="font-semibold text-primary">Your team (or light bridge if needed)</TableCell>
+                    <TableCell className="text-muted-foreground">Consultant guidance</TableCell>
+                    <TableCell className="text-muted-foreground">Employee (costly)</TableCell>
+                    <TableCell className="text-muted-foreground">Agency execution</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Cost structure</TableCell>
+                    <TableCell className="font-semibold text-primary">$25–50K one-time</TableCell>
+                    <TableCell className="text-muted-foreground">$60–180K/yr</TableCell>
+                    <TableCell className="text-muted-foreground">$200K+ salary + time</TableCell>
+                    <TableCell className="text-muted-foreground">Retainer/project</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Aftercare</TableCell>
+                    <TableCell className="font-semibold text-primary">Available for check-ins. No retainer.</TableCell>
+                    <TableCell className="text-muted-foreground">Ongoing retainer</TableCell>
+                    <TableCell className="text-muted-foreground">Ongoing employment</TableCell>
+                    <TableCell className="text-muted-foreground">Retainer</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Risk</TableCell>
+                    <TableCell className="font-semibold text-primary">Fixed scope, fast learning</TableCell>
+                    <TableCell className="text-muted-foreground">Drift + dependency</TableCell>
+                    <TableCell className="text-muted-foreground">High cost, slow hire</TableCell>
+                    <TableCell className="text-muted-foreground">Misaligned incentives</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Best when…</TableCell>
+                    <TableCell className="font-semibold text-primary">You want senior strategy fast—and to own it</TableCell>
+                    <TableCell className="text-muted-foreground">You want ongoing leadership</TableCell>
+                    <TableCell className="text-muted-foreground">You need a permanent exec</TableCell>
+                    <TableCell className="text-muted-foreground">You need hands-on campaign ops</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section className="py-16">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl">Pricing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold text-foreground mb-2">$25–50K one-time</p>
+                <p className="text-muted-foreground mb-4">50/50 payment</p>
+                
+                <Separator className="my-6" />
+                
+                <div className="space-y-3 mb-6">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Includes:</strong> Discovery, Strategy, Playbooks, Training, Handoff, and a detailed SOW with milestones.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Fixed scope; we protect the 8-week cadence so it stays focused.
+                  </p>
+                </div>
+
+                <Alert>
+                  <AlertDescription>
+                    You'll get a detailed SOW with milestones, deliverables, and example artifacts up front, so you know exactly what's coming and when.
+                  </AlertDescription>
+                </Alert>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Founders' Note */}
+        <section className="py-16 bg-muted/30">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl">From Ryan & William</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  We started Pattern Growth because smart teams were working hard without shared priorities. We're operators at heart. We ask the right questions, follow the data, and ship decisions you can run. In eight weeks, you'll have a plan your team (or a light bridge) can execute—and you'll own it.
                 </p>
-              </div>
-            </div>
+                <Separator className="my-4" />
+                <p className="text-sm text-muted-foreground italic">— Ryan & William</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">2-Month Sprint Delivery</h3>
-                <p className="text-muted-foreground">
-                  Focused engagement delivering strategic frameworks, tactical playbooks, and custom dashboards. Your marketing dashboard goes live within 6 weeks maximum.
-                </p>
-              </div>
-            </div>
+        {/* FAQ */}
+        <section className="py-16">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-8">
+              Questions People Usually Ask
+            </h2>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Complete Team Handoff</h3>
-                <p className="text-muted-foreground">
-                  Full documentation and training ensures your marketing team can execute independently. No ongoing consulting dependency required.
-                </p>
-              </div>
-            </div>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Is this a fractional CMO?</AccordionTrigger>
+                <AccordionContent>
+                  No. It's the strategy you'd hire one for—delivered in 8 weeks—with playbooks and training, then a clean handoff.
+                </AccordionContent>
+              </AccordionItem>
 
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
-                4
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">You Own Everything</h3>
-                <p className="text-muted-foreground">
-                  All strategy documents, campaign templates, and dashboards belong to you. Includes full year of dashboard access and 30-day support.
-                </p>
-              </div>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>What if I don't have a team yet?</AccordionTrigger>
+                <AccordionContent>
+                  We design the plan either way. If you need a small bridge to start, we'll outline options and owners.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Do you stick around?</AccordionTrigger>
+                <AccordionContent>
+                  If you need us, we're available for a few check-ins after handoff. No ongoing retainer.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger>What exactly do I get?</AccordionTrigger>
+                <AccordionContent>
+                  Strategy package, campaign playbooks, KPI model, and live training—with all files delivered to you.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Start?
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
+              If we're not your best move right now, we'll say so.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/contact">
+                  Book a fit call
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                <Link href="/process">
+                  See the 8-week plan
+                </Link>
+              </Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Perfect For Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Perfect for Growth-Stage Companies ($1-5M Revenue)
-          </h2>
-          <p className="text-center text-muted-foreground text-lg mb-12">
-            Growth strategy sprints work best for companies who are:
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <div className="flex items-start gap-3 mb-3">
-                <TrendingUp className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <h3 className="text-xl font-semibold">Post-Startup, Pre-Enterprise</h3>
-              </div>
-              <p className="text-muted-foreground">
-                You've proven product-market fit but need to systematize your growth marketing approach. You're beyond founder-led chaos but not ready for enterprise infrastructure.
-              </p>
-            </div>
-
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <div className="flex items-start gap-3 mb-3">
-                <Target className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <h3 className="text-xl font-semibold">Facing Data Overload</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Your marketing data is scattered across multiple platforms (CRM, ads, analytics, email). You need a unified marketing dashboard to make better decisions.
-              </p>
-            </div>
-
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <div className="flex items-start gap-3 mb-3">
-                <Users className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <h3 className="text-xl font-semibold">Need Strategic Leadership</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Your marketing team executes well tactically but lacks strategic direction. You need CMO-level thinking without full-time CMO economics.
-              </p>
-            </div>
-
-            <div className="border border-border rounded-lg p-6 bg-card">
-              <div className="flex items-start gap-3 mb-3">
-                <Clock className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <h3 className="text-xl font-semibold">Under Investor Pressure</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Board members or investors are asking for measurable growth. You need a proven marketing strategy framework and clear KPI reporting.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Table */}
-      <section className="container mx-auto px-4 py-16 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Growth Strategy Sprints vs. Traditional Marketing Leadership
-          </h2>
-
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-card rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-primary/5">
-                  <th className="text-left p-4 font-semibold border-b border-border">Factor</th>
-                  <th className="text-left p-4 font-semibold border-b border-border bg-primary/10">Pattern Growth Sprints</th>
-                  <th className="text-left p-4 font-semibold border-b border-border">Fractional CMO</th>
-                  <th className="text-left p-4 font-semibold border-b border-border">Full-Time CMO</th>
-                  <th className="text-left p-4 font-semibold border-b border-border">Marketing Agency</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-4 font-medium border-b border-border">Engagement Model</td>
-                  <td className="p-4 border-b border-border bg-primary/5">Project-based sprint</td>
-                  <td className="p-4 border-b border-border">Ongoing retainer</td>
-                  <td className="p-4 border-b border-border">Full-time hire</td>
-                  <td className="p-4 border-b border-border">Retainer or project</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium border-b border-border">Timeline</td>
-                  <td className="p-4 border-b border-border bg-primary/5">2 months</td>
-                  <td className="p-4 border-b border-border">6-12+ months</td>
-                  <td className="p-4 border-b border-border">Ongoing (plus 4-8 month search)</td>
-                  <td className="p-4 border-b border-border">Varies</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium border-b border-border">Ownership</td>
-                  <td className="p-4 border-b border-border bg-primary/5">You own everything</td>
-                  <td className="p-4 border-b border-border">Consultant-dependent</td>
-                  <td className="p-4 border-b border-border">Employee deliverables</td>
-                  <td className="p-4 border-b border-border">Limited ownership</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium border-b border-border">Deliverables</td>
-                  <td className="p-4 border-b border-border bg-primary/5">Strategy + dashboard + playbooks</td>
-                  <td className="p-4 border-b border-border">Strategic guidance</td>
-                  <td className="p-4 border-b border-border">Leadership + execution</td>
-                  <td className="p-4 border-b border-border">Campaign execution</td>
-                </tr>
-                <tr>
-                  <td className="p-4 font-medium">Start Time</td>
-                  <td className="p-4 bg-primary/5">Within 1 week</td>
-                  <td className="p-4">2-4 weeks</td>
-                  <td className="p-4">4-8 months</td>
-                  <td className="p-4">2-6 weeks</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="mt-8 text-center">
-            <Button variant="outline" size="lg">
-              Read Complete Fractional CMO Alternative Guide
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Build Your Growth Strategy System?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Get CMO-level strategy delivered in 2 months. Start within 1 week.
-          </p>
-          <Button size="lg" className="text-lg">
-            Start Your Growth Strategy Sprint
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   )
 }
