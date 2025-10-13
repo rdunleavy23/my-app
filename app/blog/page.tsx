@@ -16,57 +16,29 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  const posts = getAllPosts()
+  // 🧩 Filter out test/debug/sha posts safely
+  const posts = getAllPosts().filter(post => {
+    const TEST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i];
+    return post.published !== false && !TEST_PATTERNS.some(p => p.test(post.slug));
+  });
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Growth Insights
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Strategic insights on scaling revenue and building operational capability for growth-stage companies.
-          </p>
-        </div>
-
-        <div className="space-y-12">
-          {posts.map((post) => (
-            <article key={post.slug} className="group">
-              <Link href={`/blog/${post.slug}`} className="block">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span>{formatDate(post.publishedAt)}</span>
-                    <span>•</span>
-                    <span>{post.readingTime} min read</span>
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {post.description}
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                      <span className="text-accent-foreground font-medium text-sm">
-                        {post.author.name.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-foreground">
-                        {post.author.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {post.author.title}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
+    <section className="mx-auto max-w-3xl py-12">
+      <h1 className="text-3xl font-bold mb-8">Growth Insights</h1>
+      <ul className="space-y-8">
+        {posts.map(post => (
+          <li key={post.slug}>
+            <Link href={`/blog/${post.slug}`}>
+              <h2 className="text-xl font-semibold hover:underline">{post.title}</h2>
+            </Link>
+            <p className="text-muted-foreground text-sm mb-2">{formatDate(post.date)}</p>
+            <p className="text-muted-foreground">{post.excerpt}</p>
+          </li>
+        ))}
+        {posts.length === 0 && (
+          <li className="text-muted-foreground">No published posts available.</li>
+        )}
+      </ul>
+    </section>
   )
 }
