@@ -39,7 +39,13 @@ export function getAllPosts(): BlogPost[] {
       } as BlogPost
     })
 
-  return allPostsData.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
+  // 🧩 Filter out test/debug/sha posts globally
+  const TEST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i]
+  const filteredPosts = allPostsData.filter(
+    post => !TEST_PATTERNS.some(rx => rx.test(post.slug))
+  )
+
+  return filteredPosts.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
