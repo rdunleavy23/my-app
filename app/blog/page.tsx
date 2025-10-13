@@ -19,7 +19,7 @@ export default function BlogPage() {
   // 🧩 Filter out test/debug/sha posts safely
   const posts = getAllPosts().filter(post => {
     const TEST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i];
-    return post.published !== false && !TEST_PATTERNS.some(p => p.test(post.slug));
+    return post.publishedAt !== false && !TEST_PATTERNS.some(p => p.test(post.slug));
   });
 
   return (
