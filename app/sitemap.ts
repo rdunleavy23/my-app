@@ -1,63 +1,54 @@
-import { MetadataRoute } from 'next';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
-// Force dynamic rendering - prevents static caching
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// 🔧 Force runtime generation & disable all caching
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
-const SITE_URL = 'https://patterngrowth.com';
+const SITE_URL = 'https://patterngrowth.com'
 
-// Test post patterns to exclude from sitemap
-const TEST_POST_PATTERNS = [
-  /^test/i,
-  /^debug/i,
-  /^sha-/i,
-  /hello-from-api/i,
-];
+// Exclude test/debug/sha posts
+const TEST_POST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i]
 
 function isTestPost(slug: string): boolean {
-  return TEST_POST_PATTERNS.some(pattern => pattern.test(slug));
+  return TEST_POST_PATTERNS.some((pattern) => pattern.test(slug))
 }
 
 function getBlogPosts() {
-  const postsDirectory = path.join(process.cwd(), 'content/posts');
-  
-  if (!fs.existsSync(postsDirectory)) {
-    return [];
-  }
+  const postsDirectory = path.join(process.cwd(), 'content/posts')
+  if (!fs.existsSync(postsDirectory)) return []
 
-  const fileNames = fs.readdirSync(postsDirectory);
-  
-  const posts = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
-      const slug = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data } = matter(fileContents);
-      const stats = fs.statSync(fullPath);
-      
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((fileName) => fileName.endsWith('.md'))
+    .map((fileName) => {
+      const slug = fileName.replace(/\.md$/, '')
+      const fullPath = path.join(postsDirectory, fileName)
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const { data } = matter(fileContents)
+      const stats = fs.statSync(fullPath)
+
       return {
         slug,
-        publishDate: data.publishDate || data.date || stats.mtime.toISOString(),
+        publishDate:
+          data.publishDate || data.date || stats.mtime.toISOString(),
         modifiedDate: stats.mtime.toISOString(),
-        published: data.published !== false, // default to true unless explicitly false
-      };
+        published: data.published !== false,
+      }
     })
-    // Filter out test posts and unpublished posts
-    .filter(post => post.published && !isTestPost(post.slug))
-    // Sort by date descending (newest first)
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
-
-  return posts;
+    .filter((post) => post.published && !isTestPost(post.slug))
+    .sort(
+      (a, b) =>
+        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    )
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getBlogPosts();
+export async function GET() {
+  const posts = getBlogPosts()
 
-  // Static pages
+  // Static routes
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
@@ -83,15 +74,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-  ];
+  ]
 
-  // Blog post pages
-  const blogPages: MetadataRoute.Sitemap = posts.map(post => ({
+  // Blog routes
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: post.modifiedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
-  }));
+  }))
 
-  return [...staticPages, ...blogPages];
+  const sitemapEntries = [...staticPages, ...blogPages]
+
+  // 🧩 Return XML manually with cache-busting headers
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    sitemapEntries
+      .map(
+        (page) => `
+  <url>
+    <loc>${page.url}</loc>
+    <lastmod>${page.lastModified}</lastmod>
+    <changefreq>${page.changeFrequency}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`
+      )
+      .join('\n') +
+    '\n</urlset>'
+
+  return new Response(xml, {
+    headers: {
+      'Content-Type': 'application/xml',
+      'Cache-Control':
+        'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+    },
+  })
 }
