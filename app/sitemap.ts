@@ -1,70 +1,97 @@
-import { MetadataRoute } from 'next'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+// Force dynamic rendering - prevents static caching
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+const SITE_URL = 'https://patterngrowth.com';
+
+// Test post patterns to exclude from sitemap
+const TEST_POST_PATTERNS = [
+  /^test/i,
+  /^debug/i,
+  /^sha-/i,
+  /hello-from-api/i,
+];
+
+function isTestPost(slug: string): boolean {
+  return TEST_POST_PATTERNS.some(pattern => pattern.test(slug));
+}
+
+function getBlogPosts() {
+  const postsDirectory = path.join(process.cwd(), 'content/posts');
+  
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
+
+  const fileNames = fs.readdirSync(postsDirectory);
+  
+  const posts = fileNames
+    .filter(fileName => fileName.endsWith('.md'))
+    .map(fileName => {
+      const slug = fileName.replace(/\.md$/, '');
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const { data } = matter(fileContents);
+      const stats = fs.statSync(fullPath);
+      
+      return {
+        slug,
+        publishDate: data.publishDate || data.date || stats.mtime.toISOString(),
+        modifiedDate: stats.mtime.toISOString(),
+        published: data.published !== false, // default to true unless explicitly false
+      };
+    })
+    // Filter out test posts and unpublished posts
+    .filter(post => post.published && !isTestPost(post.slug))
+    // Sort by date descending (newest first)
+    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+
+  return posts;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://patterngrowth.com'
-  
+  const posts = getBlogPosts();
+
   // Static pages
-  const routes: MetadataRoute.Sitemap = [
+  const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: SITE_URL,
+      lastModified: new Date().toISOString(),
       changeFrequency: 'daily',
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/about`,
+      lastModified: new Date().toISOString(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/blog`,
+      lastModified: posts[0]?.modifiedDate || new Date().toISOString(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/privacy`,
+      lastModified: new Date().toISOString(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-    {
-      url: `${baseUrl}/styleguide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.2,
-    },
-  ]
+  ];
 
-  // Dynamic blog posts
-  const postsDirectory = path.join(process.cwd(), 'content/posts')
-  
-  try {
-    const postFiles = fs.readdirSync(postsDirectory)
-    
-    const blogPosts = postFiles
-      .filter(file => file.endsWith('.md'))
-      .map(file => {
-        const filePath = path.join(postsDirectory, file)
-        const fileContents = fs.readFileSync(filePath, 'utf8')
-        const { data } = matter(fileContents)
-        const slug = file.replace('.md', '')
-        
-        return {
-          url: `${baseUrl}/blog/${slug}`,
-          lastModified: data.date ? new Date(data.date) : new Date(),
-          changeFrequency: 'monthly' as const,
-          priority: 0.7,
-        }
-      })
-    
-    return [...routes, ...blogPosts]
-  } catch (error) {
-    console.error('Error reading blog posts for sitemap:', error)
-    return routes
-  }
+  // Blog post pages
+  const blogPages: MetadataRoute.Sitemap = posts.map(post => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: post.modifiedDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...blogPages];
 }
