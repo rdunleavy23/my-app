@@ -18,8 +18,11 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  // posts are already filtered in lib/blog.ts
-  const posts = getAllPosts()
+  // ✅ Optional: keep this if you want belt-and-suspenders filtering
+  const TEST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i];
+  const posts = getAllPosts().filter(
+    (post) => !TEST_PATTERNS.some((p) => p.test(post.slug))
+  );
 
   return (
     <section className="mx-auto max-w-3xl py-12">
