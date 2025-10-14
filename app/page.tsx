@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
@@ -12,11 +13,26 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Alert, AlertDescription } from '@/components/ui/alert'
 
 export const metadata: Metadata = {
-  title: 'Pattern Growth | 8-Week Alternative to a Fractional CMO',
-  description: 'Tailored marketing strategy your team can run. Fixed scope, clear KPIs, 8-week delivery. Built by Ryan & William.',
+  title: 'Pattern Growth | Growth Strategy Sprints for $1-5M Companies',
+  description: 'CMO-level growth strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks. Start within 1 week.',
   openGraph: {
-    title: 'Pattern Growth | 8-Week Alternative to a Fractional CMO',
-    description: 'Tailored marketing strategy your team can run. Fixed scope, clear KPIs, 8-week delivery.',
+    type: 'website',
+    url: 'https://www.patterngrowth.com',
+    title: 'Pattern Growth | Growth Strategy Sprints for $1-5M Companies',
+    description: 'CMO-level growth strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks. Start within 1 week.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pattern Growth | Growth Strategy Sprints for $1-5M Companies',
+    description: 'CMO-level growth strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks. Start within 1 week.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com'
+  },
+  robots: {
+    index: true,
+    follow: true
   }
 }
 

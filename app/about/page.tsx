@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 'use client'
 
 import { useState } from "react"
@@ -8,6 +9,30 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import {
+
+export const metadata: Metadata = {
+  title: 'Our Team: Two Growth Strategists | Pattern Growth',
+  description: 'Meet Ryan & William: two experienced growth strategists who've built their careers scaling companies. We translate C-suite vision into executable strategy.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.patterngrowth.com/about',
+    title: 'Our Team: Two Growth Strategists | Pattern Growth',
+    description: 'Meet Ryan & William: two experienced growth strategists who've built their careers scaling companies. We translate C-suite vision into executable strategy.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Team: Two Growth Strategists | Pattern Growth',
+    description: 'Meet Ryan & William: two experienced growth strategists who've built their careers scaling companies. We translate C-suite vision into executable strategy.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/about'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+}
   Avatar,
   AvatarImage,
   AvatarFallback,

@@ -1,20 +1,31 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/blog'
 import { formatDate } from '@/lib/utils'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Growth Insights | Pattern Growth',
-  description:
-    'Strategic insights on scaling revenue and building operational capability for growth-stage companies.',
+  title: 'Growth Strategy Insights | Pattern Growth',
+  description: 'Strategic insights on scaling revenue and building operational capability for growth-stage companies. Real frameworks from experienced strategists.',
   openGraph: {
-    title: 'Growth Insights | Pattern Growth',
-    description:
-      'Strategic insights on scaling revenue and building operational capability for growth-stage companies.',
-    url: 'https://patterngrowth.com/blog',
-    siteName: 'Pattern Growth',
     type: 'website',
+    url: 'https://www.patterngrowth.com/blog',
+    title: 'Growth Strategy Insights | Pattern Growth',
+    description: 'Strategic insights on scaling revenue and building operational capability for growth-stage companies. Real frameworks from experienced strategists.',
+    siteName: 'Pattern Growth'
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Growth Strategy Insights | Pattern Growth',
+    description: 'Strategic insights on scaling revenue and building operational capability for growth-stage companies. Real frameworks from experienced strategists.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/blog'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function BlogPage() {

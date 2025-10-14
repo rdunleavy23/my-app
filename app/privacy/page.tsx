@@ -1,15 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Pattern Growth",
-  description: "How Pattern Growth collects, uses, and protects your information.",
-  robots: { index: true, follow: true },
+  title: 'Privacy Policy | Pattern Growth',
+  description: 'How Pattern Growth collects, uses, and protects your information. Our commitment to data privacy and security for growth strategy consulting clients.',
   openGraph: {
-    title: "Privacy Policy | Pattern Growth",
-    description: "How Pattern Growth collects, uses, and protects your information.",
-    type: "article",
-    url: "https://patterngrowth.com/privacy"
+    type: 'website',
+    url: 'https://www.patterngrowth.com/privacy',
+    title: 'Privacy Policy | Pattern Growth',
+    description: 'How Pattern Growth collects, uses, and protects your information. Our commitment to data privacy and security for growth strategy consulting clients.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Pattern Growth',
+    description: 'How Pattern Growth collects, uses, and protects your information. Our commitment to data privacy and security for growth strategy consulting clients.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/privacy'
+  },
+  robots: {
+    index: true,
+    follow: true
   }
+}
 };
 
 export default function PrivacyPage() {

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -8,22 +9,28 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-export const metadata = {
-  title: "Growth Strategy Process — Pattern Growth",
-  description: "The Momentum System: Our 7-stage framework for building executable marketing strategy. From strategic foundation to implementation in 8 weeks.",
+export const metadata: Metadata = {
+  title: 'Growth Strategy Sprint Process | 8-Week Delivery',
+  description: 'Our 8-week growth strategy sprint: Week 1-2 strategic foundation, Week 3-4 tactical framework, Week 5-8 dashboard creation and team handoff with full docs.',
   openGraph: {
-    title: "Our Growth Strategy Process — Pattern Growth",
-    description: "CMO-level strategy delivered through a systematic 8-week sprint. No retainers, no dependencies.",
-    type: "website",
+    type: 'website',
+    url: 'https://www.patterngrowth.com/process',
+    title: 'Growth Strategy Sprint Process | 8-Week Delivery',
+    description: 'Our 8-week growth strategy sprint: Week 1-2 strategic foundation, Week 3-4 tactical framework, Week 5-8 dashboard creation and team handoff with full docs.',
+    siteName: 'Pattern Growth'
   },
-  keywords: [
-    "growth strategy",
-    "marketing strategy framework", 
-    "CMO alternative",
-    "business growth process",
-    "momentum system",
-    "executable marketing strategy"
-  ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Growth Strategy Sprint Process | 8-Week Delivery',
+    description: 'Our 8-week growth strategy sprint: Week 1-2 strategic foundation, Week 3-4 tactical framework, Week 5-8 dashboard creation and team handoff with full docs.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/process'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function ProcessPage() {
