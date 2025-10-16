@@ -61,17 +61,13 @@ export default function AboutPage() {
       name: "William",
       role: "Partner",
       bio: "William has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.",
-      highlight: "Turning ambitious goals into frameworks that actually make sense",
       photo: "/team/william.png",
-      expertise: ["Strategic Planning", "Team Alignment", "Operational Systems"],
     },
     {
       name: "Ryan",
       role: "Partner", 
       bio: 'Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think. His focus is on translating complex marketing challenges into clear next steps.',
-      highlight: 'Calling out when "more campaigns" isn\'t really the answer',
       photo: "/team/ryan.png",
-      expertise: ["Marketing Strategy", "Data Analysis", "Growth Systems"],
     },
   ]
 
@@ -132,12 +128,6 @@ export default function AboutPage() {
           <Breadcrumbs items={[{ label: 'About' }]} />
           
           <div className="text-center space-y-6">
-            <div className="flex flex-wrap justify-center gap-2 mb-4">
-              <Badge variant="secondary" className="text-xs">Two Partners</Badge>
-              <Badge variant="secondary" className="text-xs">Growth Strategists</Badge>
-              <Badge variant="secondary" className="text-xs">8-Week Sprints</Badge>
-            </div>
-            
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-tight">
               Meet the team behind Pattern Growth
             </h1>
@@ -185,31 +175,10 @@ export default function AboutPage() {
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
-                  <div className="space-y-4">
-                    <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                      {member.bio}
-                    </p>
-                    
-                    <div className="bg-muted/30 rounded-lg p-4 border-l-4 border-primary">
-                      <p className="text-sm font-medium text-foreground italic">
-                        "{member.highlight}"
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
-                      Expertise
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {member.expertise.map((skill) => (
-                        <Badge key={skill} variant="outline" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
+                <CardContent>
+                  <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-center">
+                    {member.bio}
+                  </p>
                 </CardContent>
               </Card>
             ))}
