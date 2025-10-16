@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, ChevronRight } from "lucide-react"
+import { Menu, ChevronRight, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -31,6 +31,12 @@ export default function Navbar() {
             >
               About
             </Link>
+            <Link
+              href="/process"
+              className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
+            >
+              Our Process
+            </Link>
             <Button asChild className="h-9">
               <Link href="https://cal.com/pattern-growth">Schedule a Call</Link>
             </Button>
@@ -46,41 +52,66 @@ export default function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80 sm:w-96">
-                <SheetTitle className="sr-only">Navigation</SheetTitle>
-                <div className="flex flex-col gap-3 pt-6">
+              <SheetContent side="left" className="w-80 sm:w-96 p-0">
+                {/* Header with logo and close button */}
+                <div className="flex items-center justify-between p-6 border-b">
+                  <Link href="/" className="text-lg font-bold">
+                    Pattern Growth
+                  </Link>
+                  <SheetTrigger asChild>
+                    <button className="p-2 hover:bg-muted rounded-md" onClick={() => setOpen(false)}>
+                      <X className="h-5 w-5" />
+                      <span className="sr-only">Close menu</span>
+                    </button>
+                  </SheetTrigger>
+                </div>
+
+                <div className="flex flex-col px-6 py-4 space-y-3">
                   <Button
                     asChild
                     variant="ghost"
-                    className="justify-between text-base"
+                    className="justify-start p-4 h-auto text-left"
                     onClick={() => setOpen(false)}
                   >
                     <Link href="/about">
-                      <div className="flex items-center justify-between w-full">
-                        About
-                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
+                      <div>
+                        <div className="font-semibold text-lg">About</div>
+                        <div className="text-sm text-muted-foreground mt-1">
+                          Meet the team behind Pattern Growth
+                        </div>
+                      </div>
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="justify-start p-4 h-auto text-left"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Link href="/process">
+                      <div>
+                        <div className="font-semibold text-lg">Our Process</div>
+                        <div className="text-sm text-muted-foreground mt-1">
+                          How we build scalable marketing operations
+                        </div>
                       </div>
                     </Link>
                   </Button>
                   <Button
                     asChild
                     variant="default"
-                    className="justify-between text-base"
+                    className="justify-start p-4 h-auto text-left"
                     onClick={() => setOpen(false)}
                   >
                     <Link href="https://cal.com/pattern-growth">
-                      <div className="flex items-center justify-between w-full">
-                        Schedule a Call
-                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
+                      <div>
+                        <div className="font-semibold text-lg">Schedule a Call</div>
+                        <div className="text-sm text-muted-foreground mt-1">
+                          Free strategy consultation
+                        </div>
                       </div>
                     </Link>
                   </Button>
-                  <div className="pt-4 border-t">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Theme</span>
-                      <ThemeToggle />
-                    </div>
-                  </div>
                 </div>
               </SheetContent>
             </Sheet>
