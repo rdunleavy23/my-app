@@ -16,3 +16,9 @@ export interface BlogPost {
     keywords: string[]
   }
 }
+
+export interface NavItem {
+  title: string
+  href: string
+  description?: string
+}

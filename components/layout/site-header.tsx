@@ -34,13 +34,13 @@ export function SiteHeader() {
               About
             </Link>
             <Link
-              href="/book"
+              href="/process"
               className={cn(
                 "transition-colors hover:text-foreground/80",
-                pathname === "/book" ? "text-foreground" : "text-foreground/60"
+                pathname === "/process" ? "text-foreground" : "text-foreground/60"
               )}
             >
-              Book
+              Our Process
             </Link>
           </nav>
         </div>
@@ -54,7 +54,7 @@ export function SiteHeader() {
                 "px-4 py-1.5"
               )}
             >
-              Learn more
+              Schedule a Call
             </Link>
           </nav>
 

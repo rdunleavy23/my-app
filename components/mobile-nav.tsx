@@ -2,13 +2,14 @@
 
 import * as React from "react"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { Menu } from "lucide-react"
+import { Menu, X, ChevronRight } from "lucide-react"
 
 export function MobileNav() {
   const pathname = usePathname()
@@ -18,27 +19,47 @@ export function MobileNav() {
       <SheetTrigger className="md:hidden">
         <Menu className="h-6 w-6" />
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0">
-        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-3">
-            {siteConfig.mainNav?.length ? (
-              siteConfig.mainNav.map((item, index) =>
-                item.href ? (
-                  <a
-                    key={index}
-                    href={item.href}
-                    className={cn(
-                      buttonVariants({ variant: "ghost" }),
-                      pathname === item.href
-                        ? "text-foreground"
-                        : "text-muted-foreground"
+      <SheetContent side="left" className="w-80 sm:w-96 p-0">
+        {/* Header with logo and close button */}
+        <div className="flex items-center justify-between p-6 border-b">
+          <Link href="/" className="flex items-center space-x-2">
+            <Icons.logo className="h-6 w-6" />
+            <span className="font-bold text-lg">{siteConfig.name}</span>
+          </Link>
+          <SheetTrigger asChild>
+            <button className="p-2 hover:bg-muted rounded-md">
+              <X className="h-5 w-5" />
+              <span className="sr-only">Close menu</span>
+            </button>
+          </SheetTrigger>
+        </div>
+
+        <ScrollArea className="flex-1 px-6 py-4">
+          <div className="space-y-3">
+            {siteConfig.mainNav?.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                className={cn(
+                  "block p-4 rounded-lg transition-colors hover:bg-muted",
+                  pathname === item.href
+                    ? "bg-muted text-foreground"
+                    : "text-foreground"
+                )}
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold text-lg">{item.title}</div>
+                    {item.description && (
+                      <div className="text-sm text-muted-foreground mt-1">
+                        {item.description}
+                      </div>
                     )}
-                  >
-                    {item.title}
-                  </a>
-                ) : null
-              )
-            ) : null}
+                  </div>
+                  <ChevronRight className="h-5 w-5 opacity-60" />
+                </div>
+              </Link>
+            ))}
           </div>
         </ScrollArea>
       </SheetContent>

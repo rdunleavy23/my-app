@@ -1,19 +1,28 @@
+import { NavItem } from "@/lib/types"
+
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
   name: "PatternGrowth",
   url: "https://www.patterngrowth.com",
   description:
-    "We don’t just design strategy. We operationalize it into systems your team can actually run.",
+    "We don't just design strategy. We operationalize it into systems your team can actually run.",
   mainNav: [
     {
       title: "About",
       href: "/about",
+      description: "Meet the team behind Pattern Growth"
     },
     {
-      title: "Book",
-      href: "/book",
+      title: "Our Process",
+      href: "/process",
+      description: "How we build scalable marketing operations"
     },
+    {
+      title: "Schedule a Call",
+      href: "/book",
+      description: "Free strategy consultation"
+    }
   ],
   links: {
     twitter: "https://twitter.com/patterngrowth",
