@@ -10,6 +10,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -33,6 +34,7 @@ export default function Navbar() {
             <Button asChild className="h-9">
               <Link href="https://cal.com/pattern-growth">Schedule a Call</Link>
             </Button>
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu */}
@@ -44,7 +46,7 @@ export default function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-64 sm:w-72">
+              <SheetContent side="right" className="w-80 sm:w-96">
                 <SheetTitle className="sr-only">Navigation</SheetTitle>
                 <div className="flex flex-col gap-3 pt-6">
                   <Button
@@ -73,6 +75,12 @@ export default function Navbar() {
                       </div>
                     </Link>
                   </Button>
+                  <div className="pt-4 border-t">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">Theme</span>
+                      <ThemeToggle />
+                    </div>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

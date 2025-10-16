@@ -54,7 +54,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${inter.className} min-h-dvh bg-background text-foreground antialiased`}>
+      <body className={`${inter.className} min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">

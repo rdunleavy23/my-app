@@ -139,12 +139,6 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <Badge variant="secondary">Fixed scope</Badge>
-              <Badge variant="secondary">Clear KPIs, not fluff</Badge>
-              <Badge variant="secondary">Built by Ryan &amp; William</Badge>
-            </div>
-
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 leading-tight">
               An 8-week alternative to a fractional CMO—tailored strategy your team can run
             </h1>
@@ -156,18 +150,22 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 h-auto">
                 <a
                   href="https://cal.com/pattern-growth/30min?overlayCalendar=true&utm_source=site&utm_medium=hero_cta&utm_campaign=home"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center gap-2"
                 >
-                  Schedule a call
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Schedule a 30-minute call
+                  <ArrowRight className="h-5 w-5" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/process">See the 8-week plan</Link>
+              <Button asChild variant="outline" size="lg" className="font-semibold px-8 py-3 h-auto">
+                <Link href="/process" className="flex items-center gap-2">
+                  See our 8-week process
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -281,8 +279,11 @@ export default function HomePage() {
                     </label>
                   </div>
                 </div>
-                <Button asChild className="w-full">
-                  <Link href="/contact">Book a fit call</Link>
+                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                  <Link href="https://cal.com/pattern-growth/30min?overlayCalendar=true&utm_source=site&utm_medium=fit_check_cta&utm_campaign=home" className="flex items-center justify-center gap-2">
+                    Schedule a fit call
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </Button>
               </DialogContent>
             </Dialog>

@@ -149,8 +149,8 @@
   body { @apply bg-background text-foreground; }
 }
 
-/* Light page tint */
-body { background: #f6f7f8; }
+/* Light page tint - only apply to light mode */
+html:not(.dark) body { background: #f6f7f8; }
 
 @layer base {
   :root {
@@ -586,6 +586,5 @@ body { background: #f6f7f8; }
   margin-bottom: 0.6666667em;
   line-height: 1.5;
 }
-/* PG patch: scope light tint to light, restore dark background */
-html:not(.dark) body { background: #f6f7f8; }
+/* Dark mode background */
 .dark body { background: hsl(var(--background)); }
