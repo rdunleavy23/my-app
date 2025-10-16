@@ -31,6 +31,17 @@ export const metadata: Metadata = {
     description: "Growth strategy your team can actually run",
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/patterngrowth-android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/patterngrowth-android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/patterngrowth-apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/patterngrowth-site.webmanifest",
 }
 
 export default function RootLayout({

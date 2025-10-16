@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
+import Logo from "@/components/Logo"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -54,9 +55,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="flex h-14 items-center justify-between">
-          <Link href="/" className="text-lg font-bold">
-            Pattern Growth
-          </Link>
+          <Logo />
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
