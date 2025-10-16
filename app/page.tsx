@@ -320,15 +320,78 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* What Our Growth Strategy Sprint Includes - Bento Box */}
+        {/* What Our Growth Strategy Sprint Includes */}
         <section className="py-16">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold tracking-tight mb-8">
               What Our Growth Strategy Sprint Includes
             </h2>
 
-            {/* Bento Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Mobile: Clean List Layout */}
+            <div className="md:hidden space-y-8">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <Zap className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Quick Wins in 30 Days</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We start executing in week one, not month three. While we're building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <Building2 className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Growth Infrastructure You Own</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We build custom systems tailored to how your business actually operates—then transfer complete ownership to you. Everything we create becomes yours: the frameworks, the documentation, the tools, the insights.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <TrendingUp className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Revenue-Connected Strategy</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Most marketing roadmaps prioritize busy work over business impact. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <Target className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Brand Positioning That Sells</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We clarify who you serve, why you're different, and how to say it consistently across every channel. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <LinkIcon className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Marketing & Revenue Alignment</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Whether you have a dedicated sales team or growth happens through product-led motion, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or metrics that don't predict growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: Bento Grid Layout */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Quick Wins - Spans 2 columns on large screens */}
               <Card className="lg:col-span-2 transition-all hover:-translate-y-1 hover:shadow-lg group">
                 <CardHeader>
@@ -412,7 +475,71 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">How We Work Differently</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Mobile: Simplified List */}
+            <div className="md:hidden space-y-6">
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
+                  <UserCog className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Limited Capacity by Design</h3>
+                  <p className="text-muted-foreground text-sm">
+                    We take 2-3 clients per quarter, not 10. This ensures you get direct founder involvement instead of a junior team executing a playbook.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
+                  <Puzzle className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Strategy Built From Your Context</h3>
+                  <p className="text-muted-foreground text-sm">
+                    We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics—then design a strategy that fits your reality.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
+                  <Database className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Data Before Assumptions</h3>
+                  <p className="text-muted-foreground text-sm">
+                    If your data infrastructure is fragmented or missing, we build it first. We can't create reliable strategy from guesswork.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
+                  <Gift className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Built to Transfer, Not Retain</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Our success metric isn't a long-term consulting relationship—it's your team executing independently. We train as we build so knowledge transfers naturally.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <div className="flex-shrink-0">
+                  <Handshake className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold mb-1">Handoff Shaped for Your Team</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Whether you're running lean, working with an agency, or building an internal team, we design the handoff for your specific situation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: Card Grid */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6">
               <Card className="transition-all hover:shadow-md">
                 <CardHeader>
                   <div className="mb-3">
