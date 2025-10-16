@@ -94,37 +94,20 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-screen sm:w-96 h-screen rounded-none border-0 p-0"
+                className="w-screen sm:w-80 h-screen rounded-none border-0 p-0"
                 id="mobile-menu"
               >
                 <div className="flex flex-col h-full">
-                  {/* Header with close button */}
-                  <div 
-                    className="flex items-center justify-between px-4 sm:px-5 py-4 border-b"
-                    style={{ paddingTop: `max(1rem, env(safe-area-inset-top))` }}
-                  >
-                    <span className="text-lg font-semibold">Menu</span>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={closeMenu}
-                      className="h-11 w-11"
-                      aria-label="Close menu"
-                    >
-                      <X className="h-5 w-5" />
-                    </Button>
-                  </div>
-
                   {/* Navigation items */}
-                  <div className="flex-1 px-4 sm:px-5 py-4">
-                    <nav className="space-y-1">
+                  <div className="flex-1 px-6 py-8">
+                    <nav className="space-y-2">
                       <Link
                         href="/about"
                         onClick={closeMenu}
-                        className={`flex items-center h-14 px-4 rounded-lg transition-colors ${
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                           pathname === '/about'
-                            ? 'bg-primary text-primary-foreground font-semibold'
-                            : 'hover:bg-muted'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'text-foreground hover:bg-muted'
                         }`}
                       >
                         About
@@ -132,10 +115,10 @@ export default function Navbar() {
                       <Link
                         href="/process"
                         onClick={closeMenu}
-                        className={`flex items-center h-14 px-4 rounded-lg transition-colors ${
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                           pathname === '/process'
-                            ? 'bg-primary text-primary-foreground font-semibold'
-                            : 'hover:bg-muted'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'text-foreground hover:bg-muted'
                         }`}
                       >
                         Our Process
@@ -144,13 +127,10 @@ export default function Navbar() {
                   </div>
 
                   {/* Bottom CTA */}
-                  <div 
-                    className="px-4 sm:px-5 py-4 border-t"
-                    style={{ paddingBottom: `max(1rem, env(safe-area-inset-bottom))` }}
-                  >
+                  <div className="px-6 py-6 border-t">
                     <Button
                       asChild
-                      className="w-full h-14 text-base font-semibold"
+                      className="w-full h-12 text-base font-semibold"
                       onClick={closeMenu}
                     >
                       <Link href="https://cal.com/pattern-growth">

@@ -1,7 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Mail, Calendar } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/config/site"
+import { ArrowRight } from "lucide-react"
 
 export default function SiteFooter() {
   return (
@@ -9,7 +7,7 @@ export default function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="py-16">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Company Info */}
             <div className="space-y-6">
               <div>
@@ -19,19 +17,6 @@ export default function SiteFooter() {
                 </p>
               </div>
               
-              {/* Primary CTA */}
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-                <a
-                  href="https://cal.com/pattern-growth/30min?overlayCalendar=true&utm_source=site&utm_medium=footer_cta&utm_campaign=home"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Calendar className="h-4 w-4" />
-                  Schedule a Call
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </Button>
             </div>
 
             {/* Essential Links */}
@@ -67,31 +52,6 @@ export default function SiteFooter() {
                 </li>
               </ul>
             </div>
-
-            {/* Contact & Legal */}
-            <div className="space-y-6">
-              <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">Connect</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a 
-                    href="mailto:hello@patterngrowth.com"
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
-                  >
-                    <Mail className="h-3 w-3" />
-                    hello@patterngrowth.com
-                  </a>
-                </li>
-                <li>
-                  <Link 
-                    href="/privacy" 
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-              </ul>
-              
-            </div>
           </div>
 
           {/* Bottom Bar */}
@@ -100,6 +60,12 @@ export default function SiteFooter() {
               <p className="text-sm text-muted-foreground">
                 © {new Date().getFullYear()} Pattern Growth. All rights reserved.
               </p>
+              <Link 
+                href="/privacy" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>

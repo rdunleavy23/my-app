@@ -16,15 +16,6 @@ export function HomePage() {
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
             For $1–5MM companies who need expert marketing strategy that actually gets implemented— without the $200K CMO commitment.
           </p>
-          <div className="mt-6 grid gap-3 sm:flex sm:justify-center">
-            <a
-              data-slot="button"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 w-full sm:w-auto"
-              href="https://cal.com/pattern-growth"
-            >
-              Schedule Your Growth Planning Call
-            </a>
-          </div>
         </div>
         <div className="bg-border h-px w-full mt-12 sm:mt-16" />
       </section>

@@ -49,18 +49,6 @@ export default function ProcessPage() {
             We fix that in eight weeks. Seven stages, each building on the last. When we're done, you own everything—the strategy, the systems, the playbooks. No ongoing dependency.
           </p>
         </div>
-        <Button asChild size="lg" className="mt-4">
-          <Link
-            href="https://cal.com/pattern-growth/30min?overlayCalendar=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Schedule an Explore Call on Cal.com (opens in a new tab)"
-            className="flex items-center gap-2"
-          >
-            Schedule Explore Call
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
       </header>
 
       <Separator className="my-8 sm:my-10" />
@@ -73,7 +61,7 @@ export default function ProcessPage() {
           <AccordionItem value="aim">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <Target className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 1: Aim</span>
+              <span className="text-base sm:text-lg">Stage 1: Aim</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Define what growth actually means for your business</h4>
@@ -89,7 +77,7 @@ export default function ProcessPage() {
           <AccordionItem value="assess">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <Search className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 2: Assess</span>
+              <span className="text-base sm:text-lg">Stage 2: Assess</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Map the reality you're working with</h4>
@@ -105,7 +93,7 @@ export default function ProcessPage() {
           <AccordionItem value="target">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <Users className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 3: Target</span>
+              <span className="text-base sm:text-lg">Stage 3: Target</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Clarify who you serve and why they'd choose you</h4>
@@ -121,7 +109,7 @@ export default function ProcessPage() {
           <AccordionItem value="build">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <Wrench className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 4: Build</span>
+              <span className="text-base sm:text-lg">Stage 4: Build</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Turn positioning into an offer that converts</h4>
@@ -137,7 +125,7 @@ export default function ProcessPage() {
           <AccordionItem value="reach">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <Megaphone className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 5: Reach</span>
+              <span className="text-base sm:text-lg">Stage 5: Reach</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Figure out where buyers are and how to reach them profitably</h4>
@@ -153,7 +141,7 @@ export default function ProcessPage() {
           <AccordionItem value="measure">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <BarChart3 className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 6: Measure</span>
+              <span className="text-base sm:text-lg">Stage 6: Measure</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Connect the data so you can see what's working</h4>
@@ -169,7 +157,7 @@ export default function ProcessPage() {
           <AccordionItem value="enable">
             <AccordionTrigger className="text-left flex items-center gap-3">
               <Settings className="h-5 w-5 text-primary flex-shrink-0" />
-              <span>Stage 7: Enable</span>
+              <span className="text-base sm:text-lg">Stage 7: Enable</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
               <h4 className="text-sm sm:text-base font-semibold text-foreground">Transfer everything so your team runs it independently</h4>
@@ -184,32 +172,6 @@ export default function ProcessPage() {
         </Accordion>
       </section>
 
-      <Separator className="my-8 sm:my-10" />
-
-      {/* After Your Sprint */}
-      <section className="space-y-4 sm:space-y-6">
-        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">After Your Sprint</h2>
-        <div className="space-y-4 text-muted-foreground leading-relaxed">
-          <p className="text-sm sm:text-base">
-            We stay engaged: check-ins at Week 4 and Week 8 during execution, plus a
-            90-day retrospective. We're available between check-ins by phone or email.
-          </p>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <footer className="mt-8 sm:mt-10 flex justify-center">
-        <Button asChild size="lg" className="flex items-center gap-2">
-          <Link
-            href="https://cal.com/pattern-growth/30min?overlayCalendar=true"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Schedule Explore Call
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
-      </footer>
     </main>
   )
 }

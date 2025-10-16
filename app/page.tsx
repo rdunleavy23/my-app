@@ -158,30 +158,14 @@ export default function HomePage() {
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight mb-6">
-              Your Marketing Strategy, Built From Scratch in 8 Weeks
+              Your Marketing Strategy,<br className="hidden sm:block" />
+              Built From Scratch in 8 Weeks
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl">
               We dive into your business data, build strategy tailored to your specific market position, and deliver a complete roadmap with fixed scope and executive-level direction—all in two months.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-4">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 h-auto">
-                <a
-                  href="https://cal.com/pattern-growth/30min?overlayCalendar=true&utm_source=site&utm_medium=hero_cta&utm_campaign=home"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
-                >
-                  Schedule a 30-minute call
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </Button>
-            </div>
-            
-            <p className="text-sm text-muted-foreground italic">
-              No sales pitch. Just a conversation about your growth challenges.
-            </p>
           </div>
         </section>
 
@@ -612,7 +596,7 @@ export default function HomePage() {
 
         {/* FAQ */}
         <section className="py-16">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold tracking-tight mb-2">
                 Frequently Asked Questions
@@ -622,61 +606,184 @@ export default function HomePage() {
               </p>
             </div>
 
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left">
-                  What happens if my team can't execute what you build?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run.
-                </AccordionContent>
-              </AccordionItem>
+            {/* Desktop: 2 cards in row */}
+            <div className="hidden md:grid md:grid-cols-2 gap-6">
+              <Card className="transition-all hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">What happens if my team can't execute what you build?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left">
-                  Do you need to work in our industry to help us?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical.
-                </AccordionContent>
-              </AccordionItem>
+              <Card className="transition-all hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">Do you need to work in our industry to help us?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <AccordionItem value="item-3">
-                <AccordionTrigger className="text-left">
-                  What if the strategy doesn't work?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us.
-                </AccordionContent>
-              </AccordionItem>
+              <Card className="transition-all hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">What if the strategy doesn't work?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <AccordionItem value="item-4">
-                <AccordionTrigger className="text-left">
-                  How involved do we need to be during the sprint?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers.
-                </AccordionContent>
-              </AccordionItem>
+              <Card className="transition-all hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">How involved do we need to be during the sprint?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <AccordionItem value="item-5">
-                <AccordionTrigger className="text-left">
-                  What makes you different from a fractional CMO?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us.
-                </AccordionContent>
-              </AccordionItem>
+              <Card className="transition-all hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">What makes you different from a fractional CMO?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <AccordionItem value="item-6">
-                <AccordionTrigger className="text-left">
-                  Can we start right away?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+              <Card className="transition-all hover:shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-lg">Can we start right away?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Mobile: Swipeable Carousel */}
+            <div className="md:hidden">
+              <Carousel
+                setApi={setApi}
+                className="w-full"
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  <CarouselItem>
+                    <Card className="border-2">
+                      <CardHeader>
+                        <CardTitle className="text-lg">What happens if my team can't execute what you build?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">
+                          We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem>
+                    <Card className="border-2">
+                      <CardHeader>
+                        <CardTitle className="text-lg">Do you need to work in our industry to help us?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">
+                          Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem>
+                    <Card className="border-2">
+                      <CardHeader>
+                        <CardTitle className="text-lg">What if the strategy doesn't work?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">
+                          Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem>
+                    <Card className="border-2">
+                      <CardHeader>
+                        <CardTitle className="text-lg">How involved do we need to be during the sprint?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">
+                          Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem>
+                    <Card className="border-2">
+                      <CardHeader>
+                        <CardTitle className="text-lg">What makes you different from a fractional CMO?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">
+                          We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+
+                  <CarouselItem>
+                    <Card className="border-2">
+                      <CardHeader>
+                        <CardTitle className="text-lg">Can we start right away?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">
+                          If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
+              
+              {/* Progress dots */}
+              <div className="flex justify-center gap-2 mt-4">
+                {Array.from({ length: 6 }).map((_, index) => (
+                  <button
+                    key={index}
+                    className={`h-2 rounded-full transition-all ${
+                      index === current - 1 ? "w-8 bg-primary" : "w-2 bg-muted-foreground/30"
+                    }`}
+                    onClick={() => api?.scrollTo(index)}
+                    aria-label={`Go to FAQ ${index + 1}`}
+                  />
+                ))}
+              </div>
+              
+              <p className="text-center text-sm text-muted-foreground mt-4">
+                Swipe to explore more questions
+              </p>
+            </div>
           </div>
         </section>
 

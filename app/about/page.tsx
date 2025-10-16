@@ -263,32 +263,6 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 h-auto">
-              <Link 
-                href="https://cal.com/pattern-growth/30min?overlayCalendar=true&utm_source=site&utm_medium=about_cta&utm_campaign=about"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                Schedule a 30-minute call
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
-            
-            <Button asChild variant="outline" size="lg" className="font-semibold px-8 py-3 h-auto">
-              <Link href="/process" className="flex items-center gap-2">
-                See our 8-week process
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          
-          <div className="pt-4">
-            <p className="text-sm text-muted-foreground">
-              No sales pitch. Just a conversation about your growth challenges.
-            </p>
-          </div>
         </div>
       </section>
       </div>
