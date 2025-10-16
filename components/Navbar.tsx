@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
-import { Menu, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -11,9 +11,44 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  // Body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [open])
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && open) {
+        setOpen(false)
+      }
+    }
+    
+    if (open) {
+      document.addEventListener('keydown', handleEscape)
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [open])
+
+  const closeMenu = () => setOpen(false)
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
@@ -47,53 +82,83 @@ export default function Navbar() {
           <div className="md:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-muted-foreground">
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-muted-foreground"
+                  aria-label="Open menu"
+                  aria-expanded={open}
+                  aria-controls="mobile-menu"
+                >
                   <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-80 sm:w-96">
-                <SheetTitle className="sr-only">Navigation</SheetTitle>
-                <div className="flex flex-col gap-3 pt-6">
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="justify-between text-base h-12"
-                    onClick={() => setOpen(false)}
+              <SheetContent 
+                side="right" 
+                className="w-screen sm:w-96 h-screen rounded-none border-0 p-0"
+                id="mobile-menu"
+              >
+                <div className="flex flex-col h-full">
+                  {/* Header with close button */}
+                  <div 
+                    className="flex items-center justify-between px-4 sm:px-5 py-4 border-b"
+                    style={{ paddingTop: `max(1rem, env(safe-area-inset-top))` }}
                   >
-                    <Link href="/about">
-                      <div className="flex items-center justify-between w-full">
+                    <span className="text-lg font-semibold">Menu</span>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={closeMenu}
+                      className="h-11 w-11"
+                      aria-label="Close menu"
+                    >
+                      <X className="h-5 w-5" />
+                    </Button>
+                  </div>
+
+                  {/* Navigation items */}
+                  <div className="flex-1 px-4 sm:px-5 py-4">
+                    <nav className="space-y-1">
+                      <Link
+                        href="/about"
+                        onClick={closeMenu}
+                        className={`flex items-center h-14 px-4 rounded-lg transition-colors ${
+                          pathname === '/about'
+                            ? 'bg-primary text-primary-foreground font-semibold'
+                            : 'hover:bg-muted'
+                        }`}
+                      >
                         About
-                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
-                      </div>
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="justify-between text-base h-12"
-                    onClick={() => setOpen(false)}
-                  >
-                    <Link href="/process">
-                      <div className="flex items-center justify-between w-full">
+                      </Link>
+                      <Link
+                        href="/process"
+                        onClick={closeMenu}
+                        className={`flex items-center h-14 px-4 rounded-lg transition-colors ${
+                          pathname === '/process'
+                            ? 'bg-primary text-primary-foreground font-semibold'
+                            : 'hover:bg-muted'
+                        }`}
+                      >
                         Our Process
-                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
-                      </div>
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="default"
-                    className="justify-between text-base h-12"
-                    onClick={() => setOpen(false)}
+                      </Link>
+                    </nav>
+                  </div>
+
+                  {/* Bottom CTA */}
+                  <div 
+                    className="px-4 sm:px-5 py-4 border-t"
+                    style={{ paddingBottom: `max(1rem, env(safe-area-inset-bottom))` }}
                   >
-                    <Link href="https://cal.com/pattern-growth">
-                      <div className="flex items-center justify-between w-full">
+                    <Button
+                      asChild
+                      className="w-full h-14 text-base font-semibold"
+                      onClick={closeMenu}
+                    >
+                      <Link href="https://cal.com/pattern-growth">
                         Schedule a Call
-                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
-                      </div>
-                    </Link>
-                  </Button>
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>
