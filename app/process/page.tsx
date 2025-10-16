@@ -41,10 +41,14 @@ export default function ProcessPage() {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
           Our Process
         </h1>
-        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          The Momentum System delivers CMO-level strategy through a focused 8-week
-          sprint—without the six-figure salary or long-term dependencies.
-        </p>
+        <div className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-4">
+          <p>
+            Most growth-stage companies have tactics but not the framework connecting them. Data lives in six places. Teams execute without knowing what's working. Budget decisions happen on intuition because no one can see the full picture.
+          </p>
+          <p>
+            We fix that in eight weeks. Seven stages, each building on the last. When we're done, you own everything—the strategy, the systems, the playbooks. No ongoing dependency.
+          </p>
+        </div>
         <Button asChild size="lg" className="mt-4">
           <Link
             href="https://cal.com/pattern-growth/30min?overlayCalendar=true"
@@ -61,29 +65,6 @@ export default function ProcessPage() {
 
       <Separator className="my-8 sm:my-10" />
 
-      {/* Explore Pattern Growth */}
-      <section className="space-y-4 sm:space-y-6">
-        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Explore Pattern Growth</h2>
-        <div className="space-y-4 text-muted-foreground leading-relaxed">
-          <p className="text-sm sm:text-base">
-            Before you commit to a sprint, schedule an Explore Call with our team. We'll
-            learn about your business, what you're working toward, and whether we're the
-            right fit for each other.
-          </p>
-          <p className="text-sm sm:text-base">
-            If we determine it could work well, we'll match you with the team and begin your 8-week sprint. 
-            If we're not aligned, we'll point you toward someone who is.
-          </p>
-          <p className="text-sm sm:text-base">
-            We limit concurrent engagements to four active sprints at most. This ensures
-            focused attention and strategy built specifically for your business—not a
-            templated playbook pulled from a drawer.
-          </p>
-        </div>
-      </section>
-
-      <Separator className="my-8 sm:my-10" />
-
       {/* The Momentum System */}
       <section className="space-y-4 sm:space-y-6">
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">The Momentum System</h2>
@@ -95,14 +76,13 @@ export default function ProcessPage() {
               <span>Stage 1: Aim</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Define what growth actually means for your business</h4>
               <p className="text-sm sm:text-base">
-                Clarify your big-picture goal and who you're building for. We analyze competitors and category dynamics to understand your market position.
+                We start with the math. What's your revenue target? How long can an acquisition dollar take to pay back? At what cost does your model break?
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Define your core value proposition</li>
-                <li>• Map competitive landscape</li>
-                <li>• Identify target customer segments</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                If you have these numbers, we validate them. If they're fuzzy, we build them from your data. You get a one-page doc that defines what you're optimizing for—and what you're not chasing. This becomes the filter for every decision after.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
@@ -112,14 +92,13 @@ export default function ProcessPage() {
               <span>Stage 2: Assess</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Map the reality you're working with</h4>
               <p className="text-sm sm:text-base">
-                Gather facts: customers, strengths, partners, competitors, context. Map what's working vs. money pits; establish a true baseline.
+                Before we recommend anything, we map the landscape. Who are customers choosing between—you, a competitor, or doing nothing? Where's your pricing power real versus hopeful? What category forces help you and which ones work against you?
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Audit current marketing performance</li>
-                <li>• Analyze customer data and feedback</li>
-                <li>• Identify strengths and gaps</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                You'll see what supports your plan and what creates drag. We rank risks by what could actually kill growth—not every possible worry. If you've done research, we build on it. If not, we fill the gaps fast.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
@@ -129,14 +108,13 @@ export default function ProcessPage() {
               <span>Stage 3: Target</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Clarify who you serve and why they'd choose you</h4>
               <p className="text-sm sm:text-base">
-                Define segments and positioning; align on who to pursue. Choices here shape every dollar that follows.
+                Now we can define focus. Which segment can you actually win? What specific problem do you solve for them? Why would they pick you over what they're using today?
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Refine target customer profiles</li>
-                <li>• Develop positioning strategy</li>
-                <li>• Prioritize market segments</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                If your positioning exists, we test if it holds. If it doesn't, we rebuild it. You'll get a framework that explicitly says who you're for—and who you're not. You can't allocate resources when you're trying to be everything. Saying no is strategic. This forces clarity.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
@@ -146,14 +124,13 @@ export default function ProcessPage() {
               <span>Stage 4: Build</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Turn positioning into an offer that converts</h4>
               <p className="text-sm sm:text-base">
-                Outline what you're creating, specs, pricing, and adjustments. Pressure-test ideas and model scenarios before committing.
+                Positioning becomes an offer. How should your product be packaged? Does pricing reflect what buyers actually value? What objections kill deals?
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Design marketing campaigns</li>
-                <li>• Create content frameworks</li>
-                <li>• Test pricing and positioning</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                If your offer works, we document why. If it creates friction, we fix how it's structured and presented. You get messaging guidelines and a list of what to stop saying. This is where vague descriptions become language that converts.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
@@ -163,14 +140,13 @@ export default function ProcessPage() {
               <span>Stage 5: Reach</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Figure out where buyers are and how to reach them profitably</h4>
               <p className="text-sm sm:text-base">
-                Plan distribution and comms with capacity + budget reality in mind. Recommendations must be executable with your actual resources.
+                With everything else locked, we build the channel plan. Which two or three plays have the best shot at hitting your targets? Where should budget go—and where shouldn't it?
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Choose marketing channels</li>
-                <li>• Allocate budget effectively</li>
-                <li>• Plan launch sequence</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                If you're running campaigns, we assess what's worth scaling and what's wasting money. If you're starting fresh, we prioritize the highest-probability bets. You get a roadmap with specific campaigns, realistic timelines, and clear success criteria. No testing ten things at once. Just focused plays with gates for when to scale and when to stop.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
@@ -180,14 +156,13 @@ export default function ProcessPage() {
               <span>Stage 6: Measure</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Connect the data so you can see what's working</h4>
               <p className="text-sm sm:text-base">
-                Define success metrics and tracking to learn quickly. Spot winners in weeks, not months; avoid vanity metrics.
+                This is where we solve the infrastructure problem. Your data is scattered, making it impossible to see the full picture. We connect your tools—whatever you're using—into one view that shows what actually matters.
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Set up tracking systems</li>
-                <li>• Define key performance indicators</li>
-                <li>• Create reporting dashboards</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                You get a system that tracks the five numbers you need to check weekly. We set clear gates for every campaign: this number means keep going, this number means stop. Decisions get made on data, not opinions.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
@@ -197,14 +172,13 @@ export default function ProcessPage() {
               <span>Stage 7: Enable</span>
             </AccordionTrigger>
             <AccordionContent className="space-y-3 text-muted-foreground leading-relaxed pl-8">
+              <h4 className="text-sm sm:text-base font-semibold text-foreground">Transfer everything so your team runs it independently</h4>
               <p className="text-sm sm:text-base">
-                Put execution systems in place: roles, budget, partners, timeline. Who does what by when — so the plan actually ships.
+                We don't hand off docs and disappear. We document who owns what, set up the weekly rhythm your team will follow, and call out where you need outside help.
               </p>
-              <ul className="text-sm sm:text-base space-y-1 ml-4">
-                <li>• Assign team responsibilities</li>
-                <li>• Create execution timeline</li>
-                <li>• Establish success metrics</li>
-              </ul>
+              <p className="text-sm sm:text-base">
+                Whether you're running lean, working with an agency, or building internal—we shape the handoff for your situation. You get the full operating system: how to run campaigns, who makes what decisions, when reviews happen. We don't complete handoff until you've run through it once and can operate without us. Then 30 days of support while you find your rhythm.
+              </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
