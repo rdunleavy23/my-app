@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, ChevronRight, X } from "lucide-react"
+import { Menu, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -52,63 +52,45 @@ export default function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-80 sm:w-96 p-0">
-                {/* Header with logo and close button */}
-                <div className="flex items-center justify-between p-6 border-b">
-                  <Link href="/" className="text-lg font-bold">
-                    Pattern Growth
-                  </Link>
-                  <SheetTrigger asChild>
-                    <button className="p-2 hover:bg-muted rounded-md" onClick={() => setOpen(false)}>
-                      <X className="h-5 w-5" />
-                      <span className="sr-only">Close menu</span>
-                    </button>
-                  </SheetTrigger>
-                </div>
-
-                <div className="flex flex-col px-6 py-4 space-y-3">
+              <SheetContent side="right" className="w-80 sm:w-96">
+                <SheetTitle className="sr-only">Navigation</SheetTitle>
+                <div className="flex flex-col gap-3 pt-6">
                   <Button
                     asChild
-                    variant="ghost"
-                    className="justify-start p-4 h-auto text-left"
+                    variant="outline"
+                    className="justify-between text-base h-12"
                     onClick={() => setOpen(false)}
                   >
                     <Link href="/about">
-                      <div>
-                        <div className="font-semibold text-lg">About</div>
-                        <div className="text-sm text-muted-foreground mt-1">
-                          Meet the team behind Pattern Growth
-                        </div>
+                      <div className="flex items-center justify-between w-full">
+                        About
+                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
                       </div>
                     </Link>
                   </Button>
                   <Button
                     asChild
-                    variant="ghost"
-                    className="justify-start p-4 h-auto text-left"
+                    variant="outline"
+                    className="justify-between text-base h-12"
                     onClick={() => setOpen(false)}
                   >
                     <Link href="/process">
-                      <div>
-                        <div className="font-semibold text-lg">Our Process</div>
-                        <div className="text-sm text-muted-foreground mt-1">
-                          How we build scalable marketing operations
-                        </div>
+                      <div className="flex items-center justify-between w-full">
+                        Our Process
+                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
                       </div>
                     </Link>
                   </Button>
                   <Button
                     asChild
                     variant="default"
-                    className="justify-start p-4 h-auto text-left"
+                    className="justify-between text-base h-12"
                     onClick={() => setOpen(false)}
                   >
                     <Link href="https://cal.com/pattern-growth">
-                      <div>
-                        <div className="font-semibold text-lg">Schedule a Call</div>
-                        <div className="text-sm text-muted-foreground mt-1">
-                          Free strategy consultation
-                        </div>
+                      <div className="flex items-center justify-between w-full">
+                        Schedule a Call
+                        <ChevronRight className="ml-2 h-4 w-4 opacity-60" />
                       </div>
                     </Link>
                   </Button>
