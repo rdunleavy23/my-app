@@ -318,7 +318,7 @@ export default function WhatIsFractionalCMO() {
                     ['Ownership', 'You own everything', 'Consultant-dependent'],
                     ['Deliverables', 'Strategy + dashboard + playbooks', 'Ongoing strategic guidance'],
                     ['Independence', 'Team executes independently', 'Requires continued relationship'],
-                    ['Start Time', 'Within 1 week', '2-4 weeks']
+                    ['Start Time', 'Quick start', '2-4 weeks']
                   ].map(([factor, sprint, cmo], idx) => (
                     <tr key={idx} className="border-t border-border">
                       <td className="px-4 py-3 text-sm font-medium text-foreground">{factor}</td>

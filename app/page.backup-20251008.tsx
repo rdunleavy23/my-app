@@ -63,7 +63,7 @@ export default function HomePage() {
                 name: "How quickly can we start?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "We start growth strategy sprints within 1 week of agreement. Your marketing dashboard goes live within 6 weeks maximum, and the complete sprint finishes in 2 months total.",
+                  text: "We start growth strategy sprints quickly after agreement. Your marketing dashboard goes live within 6 weeks maximum, and the complete sprint finishes in 2 months total.",
                 },
               },
             ],
@@ -116,7 +116,7 @@ export default function HomePage() {
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Start Within 1 Week</h3>
+              <h3 className="text-xl font-semibold mb-2">Quick Start</h3>
               <p className="text-muted-foreground">
                 No months of onboarding or ramp-up time. We deliver working systems fast.
               </p>
@@ -229,7 +229,7 @@ export default function HomePage() {
                 1
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">Start Within 1 Week</h3>
+                <h3 className="text-xl font-semibold mb-2">Quick Start</h3>
                 <p className="text-muted-foreground">
                   No lengthy RFPs or multi-month searches. We begin your growth strategy sprint within 1 week of agreement.
                 </p>
@@ -378,7 +378,7 @@ export default function HomePage() {
                 </tr>
                 <tr>
                   <td className="p-4 font-medium">Start Time</td>
-                  <td className="p-4 bg-primary/5">Within 1 week</td>
+                  <td className="p-4 bg-primary/5">Quick start</td>
                   <td className="p-4">2-4 weeks</td>
                   <td className="p-4">4-8 months</td>
                   <td className="p-4">2-6 weeks</td>
@@ -403,8 +403,7 @@ export default function HomePage() {
             Ready to Build Your Growth Strategy System?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Get CMO-level strategy delivered in 2 months. Start within 1 week.
-          </p>
+            Get CMO-level strategy delivered in 2 months.           </p>
           <Button size="lg" className="text-lg">
             Start Your Growth Strategy Sprint
             <ArrowRight className="ml-2 h-5 w-5" />

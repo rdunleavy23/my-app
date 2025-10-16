@@ -3,18 +3,18 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
-  description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Start within 1 week.',
+  description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency.',
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/benefits-of-fractional-cmo',
     title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
-    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Start within 1 week.',
+    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
-    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Start within 1 week.'
+    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. '
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/benefits-of-fractional-cmo'

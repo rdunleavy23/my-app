@@ -59,7 +59,7 @@ That's not a 12-month engagement. That's a 2-month sprint.
 | **What you own**    | Nothing (leaves with them)   | Everything (dashboard, playbooks, systems) |
 | **Dependency**      | High (they're your strategy) | Zero (you run it)                          |
 | **Dashboard**       | Maybe, eventually            | Live week 6, yours forever                 |
-| **Start time**      | 2–4 weeks                    | 1 week                                     |
+| **Start time**      | 2–4 weeks                    | Quick start                                |
 | **When they leave** | Back to square one           | You have the system                        |
 
 > The sprint model isn't "fractional CMO lite." It's a different philosophy: you need architecture, not advisory.
