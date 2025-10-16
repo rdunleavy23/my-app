@@ -1,63 +1,155 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { getAllPosts } from '@/lib/blog'
-import { formatDate } from '@/lib/utils'
-import { Metadata } from 'next'
+// app/blog/page.tsx
+import type { Metadata } from "next"
+import Link from "next/link"
+import { getAllPosts } from "@/lib/blog"
+import { formatDate } from "@/lib/utils"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Clock, Calendar } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: 'Growth Strategy Insights | Pattern Growth',
-  description: 'Strategic insights on scaling revenue and building operational capability for growth-stage companies. Real frameworks from experienced strategists.',
+  title: "Growth Strategy Insights | Pattern Growth",
+  description:
+    "Strategic insights on scaling revenue and building operational capability for growth-stage companies.",
+  alternates: { canonical: "/blog" },
   openGraph: {
-    type: 'website',
-    url: 'https://www.patterngrowth.com/blog',
-    title: 'Growth Strategy Insights | Pattern Growth',
-    description: 'Strategic insights on scaling revenue and building operational capability for growth-stage companies. Real frameworks from experienced strategists.',
-    siteName: 'Pattern Growth'
+    type: "website",
+    url: "https://www.patterngrowth.com/blog",
+    title: "Growth Strategy Insights | Pattern Growth",
+    description:
+      "Strategic insights on scaling revenue and building operational capability for growth-stage companies.",
+    siteName: "Pattern Growth",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Growth Strategy Insights | Pattern Growth',
-    description: 'Strategic insights on scaling revenue and building operational capability for growth-stage companies. Real frameworks from experienced strategists.'
+    card: "summary_large_image",
+    title: "Growth Strategy Insights | Pattern Growth",
+    description:
+      "Strategic insights on scaling revenue and building operational capability for growth-stage companies.",
   },
-  alternates: {
-    canonical: 'https://www.patterngrowth.com/blog'
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
+  robots: { index: true, follow: true },
 }
 
 export default function BlogPage() {
-  // ✅ Optional: keep this if you want belt-and-suspenders filtering
-  const TEST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i];
-  const posts = getAllPosts().filter(
-    (post) => !TEST_PATTERNS.some((p) => p.test(post.slug))
-  );
+  const posts = getAllPosts()
 
   return (
-    <section className="mx-auto max-w-3xl py-12">
-      <h1 className="text-3xl font-bold mb-8">Growth Insights</h1>
-      <ul className="space-y-8">
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
-              <h2 className="text-xl font-semibold hover:underline">
-                {post.title}
-              </h2>
-            </Link>
-            <p className="text-muted-foreground text-sm mb-2">
-              {formatDate(post.publishedAt)}
-            </p>
-            <p className="text-muted-foreground">{post.description}</p>
-          </li>
-        ))}
-        {posts.length === 0 && (
-          <li className="text-muted-foreground">
-            No published posts available.
-          </li>
-        )}
-      </ul>
-    </section>
+    <main className="container mx-auto max-w-4xl px-4 py-16">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Strategic insights on scaling revenue and building operational capability for growth-stage companies.
+        </p>
+      </div>
+
+      {/* Featured Post */}
+      {posts.length > 0 && (
+        <div className="mb-12">
+          <h2 className="text-2xl font-semibold mb-6">Latest Insights</h2>
+          <Card className="border-2">
+            <CardHeader>
+              <div className="flex items-center gap-2 mb-2">
+                <Badge variant="secondary">Latest</Badge>
+                <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <Calendar className="h-4 w-4" />
+                  {formatDate(posts[0].publishedAt)}
+                </div>
+                <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <Clock className="h-4 w-4" />
+                  {posts[0].readingTime} min read
+                </div>
+              </div>
+              <CardTitle className="text-2xl">
+                <Link 
+                  href={`/blog/${posts[0].slug}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  {posts[0].title}
+                </Link>
+              </CardTitle>
+              <CardDescription className="text-base">
+                {posts[0].description}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Link 
+                href={`/blog/${posts[0].slug}`}
+                className="inline-flex items-center text-primary hover:underline font-medium"
+              >
+                Read more →
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {/* All Posts */}
+      {posts.length > 1 && (
+        <div>
+          <h2 className="text-2xl font-semibold mb-6">All Articles</h2>
+          <div className="grid gap-6">
+            {posts.slice(1).map((post) => (
+              <Card key={post.slug} className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4" />
+                      {formatDate(post.publishedAt)}
+                    </div>
+                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                      <Clock className="h-4 w-4" />
+                      {post.readingTime} min read
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl">
+                    <Link 
+                      href={`/blog/${post.slug}`}
+                      className="hover:text-primary transition-colors"
+                    >
+                      {post.title}
+                    </Link>
+                  </CardTitle>
+                  <CardDescription>
+                    {post.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link 
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-primary hover:underline font-medium"
+                  >
+                    Read more →
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* CTA Section */}
+      <div className="mt-16 text-center bg-muted/50 rounded-lg p-8">
+        <h3 className="text-2xl font-semibold mb-4">Ready to Scale Your Growth Strategy?</h3>
+        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="https://cal.com/pattern-growth/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Schedule a Call
+          </Link>
+          <Link 
+            href="/process"
+            className="inline-flex items-center justify-center border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors"
+          >
+            See Our Process
+          </Link>
+        </div>
+      </div>
+    </main>
   )
 }

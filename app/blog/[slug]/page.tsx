@@ -5,6 +5,7 @@ import { formatDate } from '@/lib/utils'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/ui/breadcrumbs'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()

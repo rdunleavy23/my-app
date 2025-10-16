@@ -2,9 +2,27 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Hourly Rate & Cost Guide (2025 Pricing)',
-  description: 'Fractional CMO hourly rates range from $125-400/hour ($5K-20K/month). Learn pricing factors, hidden costs, and whether hourly or project-based models deliver better value.',
-  keywords: 'fractional cmo hourly rate, fractional cmo cost, fractional cmo pricing, fractional cmo salary, how much does fractional cmo cost',
+  title: 'Fractional CMO Cost: Rates vs. Project Pricing',
+  description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $25K-50K for complete 8-week delivery.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate',
+    title: 'Fractional CMO Cost: Rates vs. Project Pricing',
+    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $25K-50K for complete 8-week delivery.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional CMO Cost: Rates vs. Project Pricing',
+    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $25K-50K for complete 8-week delivery.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function FractionalCMOHourlyRatePage() {

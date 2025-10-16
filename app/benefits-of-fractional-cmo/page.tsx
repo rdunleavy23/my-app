@@ -2,9 +2,27 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Benefits of Fractional CMO: Pros, Cons & Better Alternatives',
-  description: 'Fractional CMO benefits include executive expertise without full-time costs. But do you need ongoing advisory or strategic architecture you own? Compare models.',
-  keywords: 'benefits of fractional cmo, why hire fractional cmo, fractional cmo pros and cons, fractional cmo advantages',
+  title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
+  description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Start within 1 week.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.patterngrowth.com/benefits-of-fractional-cmo',
+    title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
+    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Start within 1 week.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
+    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Start within 1 week.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/benefits-of-fractional-cmo'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function BenefitsOfFractionalCMOPage() {

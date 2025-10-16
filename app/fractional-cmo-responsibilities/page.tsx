@@ -2,9 +2,27 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Responsibilities: What They Do (And Don\'t Do)',
-  description: 'Fractional CMO responsibilities include strategy development, team leadership, and measurement systems—but not tactical execution. Learn scope, deliverables, and alternatives.',
-  keywords: 'fractional cmo responsibilities, fractional cmo job description, fractional cmo duties, what does a fractional cmo do',
+  title: 'Fractional CMO Responsibilities & Deliverables',
+  description: 'What does a fractional CMO do? Compare traditional fractional CMO responsibilities with Pattern Growth\'s focused sprint deliverables and complete system ownership.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.patterngrowth.com/fractional-cmo-responsibilities',
+    title: 'Fractional CMO Responsibilities & Deliverables',
+    description: 'What does a fractional CMO do? Compare traditional fractional CMO responsibilities with Pattern Growth\'s focused sprint deliverables and complete system ownership.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional CMO Responsibilities & Deliverables',
+    description: 'What does a fractional CMO do? Compare traditional fractional CMO responsibilities with Pattern Growth\'s focused sprint deliverables and complete system ownership.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/fractional-cmo-responsibilities'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function FractionalCMOResponsibilitiesPage() {

@@ -2,11 +2,12 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { siteConfig } from '@/config/site'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-const SITE_URL = 'https://patterngrowth.com'
+const SITE_URL = siteConfig.url
 const TEST_POST_PATTERNS = [/^test/i, /^debug/i, /^sha-/i, /hello-from-api/i]
 
 function isTestPost(slug: string): boolean {
@@ -37,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getBlogPosts()
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: new Date().toISOString(), changeFrequency: 'daily', priority: 1 },
+    { url: `${SITE_URL}/`, lastModified: new Date().toISOString(), changeFrequency: 'daily', priority: 1 },
     { url: `${SITE_URL}/about`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog`, lastModified: new Date().toISOString(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/privacy`, lastModified: new Date().toISOString(), changeFrequency: 'yearly', priority: 0.3 },

@@ -1,9 +1,11 @@
 // app/robots.ts
 import type { MetadataRoute } from "next";
+import { siteConfig } from '@/config/site'
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: "https://patterngrowth.com/sitemap.xml",
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+    host: siteConfig.url,
   };
 }

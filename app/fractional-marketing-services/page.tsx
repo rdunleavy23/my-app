@@ -2,9 +2,27 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Fractional Marketing Services: Full-Service Marketing Leadership',
-  description: 'Fractional marketing services combine strategic direction with tactical execution. Learn costs, scope, and when project-based models deliver better value than ongoing retainers.',
-  keywords: 'fractional marketing services, fractional marketing director, fractional cmo services, fractional chief marketing officer',
+  title: 'Fractional Marketing Services & Growth Strategy Sprints',
+  description: 'Fractional marketing services provide part-time expertise on retainer. Pattern Growth delivers complete strategy systems in 8 weeks with full ownership and no dependency.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.patterngrowth.com/fractional-marketing-services',
+    title: 'Fractional Marketing Services & Growth Strategy Sprints',
+    description: 'Fractional marketing services provide part-time expertise on retainer. Pattern Growth delivers complete strategy systems in 8 weeks with full ownership and no dependency.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fractional Marketing Services & Growth Strategy Sprints',
+    description: 'Fractional marketing services provide part-time expertise on retainer. Pattern Growth delivers complete strategy systems in 8 weeks with full ownership and no dependency.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/fractional-marketing-services'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
 }
 
 export default function FractionalMarketingServicesPage() {

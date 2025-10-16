@@ -3,11 +3,26 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2, XCircle, TrendingUp, Clock, DollarSign, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'What is a Fractional CMO? Definition, Benefits & Better Alternatives | Pattern Growth',
-  description: 'Understand what a fractional CMO does, typical costs, and why growth strategy sprints might be a better alternative for growth-stage companies.',
+  title: 'What is a Fractional CMO? Definition & Alternatives',
+  description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.',
   openGraph: {
-    title: 'What is a Fractional CMO? Complete Guide & Alternatives',
-    description: 'Everything you need to know about fractional CMOs, including costs, benefits, and whether a growth strategy sprint is a better fit.',
+    type: 'website',
+    url: 'https://www.patterngrowth.com/what-is-fractional-cmo',
+    title: 'What is a Fractional CMO? Definition & Alternatives',
+    description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.',
+    siteName: 'Pattern Growth'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What is a Fractional CMO? Definition & Alternatives',
+    description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.'
+  },
+  alternates: {
+    canonical: 'https://www.patterngrowth.com/what-is-fractional-cmo'
+  },
+  robots: {
+    index: true,
+    follow: true
   }
 }
 

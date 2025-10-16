@@ -1,42 +1,31 @@
-import type { Metadata } from 'next'
-'use client'
-
-import { useState } from "react"
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardTitle,
-} from "@/components/ui/card"
-import {
+// app/about/page.tsx
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import Breadcrumbs from "@/components/ui/breadcrumbs"
 
 export const metadata: Metadata = {
-  title: 'Our Team: Two Growth Strategists | Pattern Growth',
-  description: 'Meet Ryan & William: two experienced growth strategists who've built their careers scaling companies. We translate C-suite vision into executable strategy.',
+  title: "Our Team: Two Growth Strategists | Pattern Growth",
+  description:
+    "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
+  alternates: { canonical: "/about" },
   openGraph: {
-    type: 'website',
-    url: 'https://www.patterngrowth.com/about',
-    title: 'Our Team: Two Growth Strategists | Pattern Growth',
-    description: 'Meet Ryan & William: two experienced growth strategists who've built their careers scaling companies. We translate C-suite vision into executable strategy.',
-    siteName: 'Pattern Growth'
+    type: "website",
+    url: "https://www.patterngrowth.com/about",
+    title: "Our Team: Two Growth Strategists | Pattern Growth",
+    description:
+      "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
+    siteName: "Pattern Growth",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Our Team: Two Growth Strategists | Pattern Growth',
-    description: 'Meet Ryan & William: two experienced growth strategists who've built their careers scaling companies. We translate C-suite vision into executable strategy.'
+    card: "summary_large_image",
+    title: "Our Team: Two Growth Strategists | Pattern Growth",
+    description:
+      "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
   },
-  alternates: {
-    canonical: 'https://www.patterngrowth.com/about'
-  },
-  robots: {
-    index: true,
-    follow: true
-  }
+  robots: { index: true, follow: true },
 }
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
-} from "@/components/ui/avatar"
 
 export default function AboutPage() {
   const team = [
@@ -49,32 +38,31 @@ export default function AboutPage() {
     {
       name: "Ryan",
       role: "Partner",
-      bio: "Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think. His focus is on translating complex marketing challenges into clear next steps, and he has a reputation for calling out when \"more campaigns\" isn't really the answer. His goal is always the same: clarity that teams can run with.",
+      bio: 'Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think. His focus is on translating complex marketing challenges into clear next steps, and he has a reputation for calling out when "more campaigns" isn\'t really the answer. His goal is always the same: clarity that teams can run with.',
       photo: "/team/ryan.png",
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-            Our Team
-          </h1>
-          <div className="w-16 h-px bg-foreground mx-auto mb-6"></div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Meet the partners behind Pattern Growth
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <Breadcrumbs items={[{ label: 'About' }]} />
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+              Our Team
+            </h1>
+            <div className="w-16 h-px bg-foreground mx-auto mb-6" />
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Meet the partners behind Pattern Growth
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Bento Grid Team Section */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            {/* William's Card - Takes 2 columns on lg+ */}
             <Card className="md:col-span-1 lg:col-span-2 p-6 md:p-8 border border-border/50 hover:border-border transition-all duration-300 bg-background">
               <CardHeader className="flex flex-col items-center space-y-4 text-center">
                 <Avatar className="size-24 md:size-28 bg-muted/20 overflow-hidden transition duration-300">
@@ -97,7 +85,6 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            {/* Ryan's Card - Takes 2 columns on lg+ */}
             <Card className="md:col-span-1 lg:col-span-2 p-6 md:p-8 border border-border/50 hover:border-border transition-all duration-300 bg-background">
               <CardHeader className="flex flex-col items-center space-y-4 text-center">
                 <Avatar className="size-24 md:size-28 bg-muted/20 overflow-hidden transition duration-300">
@@ -120,11 +107,10 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            {/* Bottom Section - Full width */}
             <div className="col-span-1 md:col-span-2 lg:col-span-4 mt-8">
               <Card className="p-8 md:p-12 border border-border/50 bg-background">
                 <div className="text-center">
-                  <div className="w-16 h-px bg-foreground mx-auto mb-8"></div>
+                  <div className="w-16 h-px bg-foreground mx-auto mb-8" />
                   <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-4xl mx-auto">
                     Together, William and Ryan built Pattern Growth as the alternative to the
                     CMO-for-hire model and the agency treadmill: a project-based partner for
@@ -133,7 +119,6 @@ export default function AboutPage() {
                 </div>
               </Card>
             </div>
-            
           </div>
         </div>
       </section>

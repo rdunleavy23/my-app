@@ -57,6 +57,29 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Pattern Growth",
+  description: "Growth strategy sprints and fractional CMO alternative for growth-stage companies. CMO-level thinking delivered through focused 2-month project-based engagements.",
+  url: "https://www.patterngrowth.com",
+  serviceType: [
+    "Growth Strategy Consulting",
+    "Marketing Strategy Sprint", 
+    "Fractional CMO Alternative",
+    "Marketing Dashboard Development",
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Growth Strategy Sprint",
+    description: "2-month focused engagement delivering growth strategy, marketing dashboards, and team training",
+  },
+}
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -103,6 +126,10 @@ const faqSchema = {
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -336,6 +363,112 @@ export default function HomePage() {
                     we align your marketing to how revenue actually happens in your business. No more
                     disconnected campaigns or metrics that don't predict growth. Just marketing that
                     supports the way you win customers and drive results.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-16 bg-muted/30">
+          <div className="mx-auto max-w-5xl px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                Learn More About Our Approach
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explore our methodology and understand how we deliver CMO-level strategy without the ongoing commitment.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">
+                    <Link href="/what-is-fractional-cmo" className="hover:text-primary transition-colors">
+                      What is a Fractional CMO?
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    Understand the fractional CMO model and why we built something different for growth-stage companies.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">
+                    <Link href="/fractional-cmo-alternative" className="hover:text-primary transition-colors">
+                      Our Alternative Approach
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    See why 2-month strategy sprints outperform traditional fractional CMO relationships.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">
+                    <Link href="/benefits-of-fractional-cmo" className="hover:text-primary transition-colors">
+                      Benefits of Fractional CMO
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    Learn about the advantages and considerations of fractional CMO services.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">
+                    <Link href="/fractional-cmo-hourly-rate" className="hover:text-primary transition-colors">
+                      Fractional CMO Pricing
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    Understand typical fractional CMO rates and how our sprint model compares.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">
+                    <Link href="/fractional-cmo-responsibilities" className="hover:text-primary transition-colors">
+                      CMO Responsibilities
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    Explore what fractional CMOs typically handle and how we approach these areas.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg">
+                    <Link href="/process" className="hover:text-primary transition-colors">
+                      Our 8-Week Process
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    See exactly how we deliver comprehensive growth strategy in just 8 weeks.
                   </p>
                 </CardContent>
               </Card>
