@@ -157,12 +157,9 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
-            <div className="flex items-start gap-3 mb-6">
-              <Compass className="h-8 w-8 sm:h-10 sm:w-10 text-primary mt-1 flex-shrink-0" />
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight">
-                Your Marketing Strategy, Built From Scratch in 8 Weeks
-              </h1>
-            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight mb-6">
+              Your Marketing Strategy, Built From Scratch in 8 Weeks
+            </h1>
 
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl">
               We dive into your business data, build strategy tailored to your specific market position, and deliver a complete roadmap with fixed scope and executive-level direction—all in two months.
@@ -683,34 +680,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Closing CTA */}
-        <section className="py-20 bg-muted/30">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold tracking-tight mb-6">
-              Ready to connect?
-            </h2>
-            
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Let's talk about where your business is now and what marketing clarity would unlock for your growth. If we're not the right fit, we'll point you to someone who is.
-            </p>
-
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-4 h-auto text-lg mb-4">
-              <a
-                href="https://cal.com/pattern-growth/30min?overlayCalendar=true&utm_source=site&utm_medium=closing_cta&utm_campaign=home"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                Schedule a 30-minute call
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </Button>
-
-            <p className="text-sm text-muted-foreground italic">
-              No sales pitch. Just a conversation about your growth challenges.
-            </p>
-          </div>
-        </section>
       </div>
     </>
   )

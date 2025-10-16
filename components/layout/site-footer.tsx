@@ -91,38 +91,14 @@ export default function SiteFooter() {
                 </li>
               </ul>
               
-              {/* Social Links */}
-              <div className="flex space-x-4 pt-2">
-                <a 
-                  href={siteConfig.links.twitter} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Follow us on Twitter"
-                >
-                  Twitter
-                </a>
-                <a 
-                  href={siteConfig.links.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="View our GitHub"
-                >
-                  GitHub
-                </a>
-              </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
           <div className="mt-12 pt-8 border-t">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <p className="text-sm text-muted-foreground">
                 © {new Date().getFullYear()} Pattern Growth. All rights reserved.
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Built for growth-stage companies who need strategy, not retainers.
               </p>
             </div>
           </div>
