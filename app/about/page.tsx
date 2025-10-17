@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator"
 import { ArrowRight, Users, Target, Zap } from "lucide-react"
 import Breadcrumbs from "@/components/ui/breadcrumbs"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { createPersonSchema, createOrganizationSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
   title: "Our Team: Two Growth Strategists | Pattern Growth",
@@ -56,6 +57,27 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
+  const ryanSchema = createPersonSchema({
+    name: "Ryan Dunleavy",
+    jobTitle: "Growth Strategist & Partner",
+    description: "Ryan has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.",
+    image: "https://www.patterngrowth.com/team/ryan.png"
+  });
+
+  const williamSchema = createPersonSchema({
+    name: "William",
+    jobTitle: "Growth Strategist & Partner", 
+    description: "William has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.",
+    image: "https://www.patterngrowth.com/team/william.png"
+  });
+
+  const organizationSchema = createOrganizationSchema({
+    name: "Pattern Growth",
+    description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
+    url: "https://www.patterngrowth.com",
+    sameAs: ["https://www.patterngrowth.com"]
+  });
+
   const team = [
     {
       name: "William",
@@ -119,7 +141,15 @@ export default function AboutPage() {
     <ErrorBoundary>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ryanSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(williamSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <div className="min-h-screen bg-background">
       {/* Hero Section */}

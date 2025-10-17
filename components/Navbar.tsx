@@ -123,6 +123,17 @@ export default function Navbar() {
                       >
                         Our Process
                       </Link>
+                      <Link
+                        href="/book"
+                        onClick={closeMenu}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                          pathname === '/book'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'text-foreground hover:bg-muted'
+                        }`}
+                      >
+                        Schedule a Call
+                      </Link>
                     </nav>
                   </div>
 

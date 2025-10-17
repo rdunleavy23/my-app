@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { createServiceSchema, createWebPageSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
   title: "Growth Strategy Sprint Process | 8-Week Delivery",
@@ -34,8 +35,30 @@ export const metadata: Metadata = {
 }
 
 export default function ProcessPage() {
+  const serviceSchema = createServiceSchema({
+    name: "Growth Strategy Sprint",
+    description: "8-week focused engagement delivering growth strategy, marketing infrastructure, and team training with complete ownership transfer",
+    url: "https://www.patterngrowth.com/process",
+    provider: "Pattern Growth"
+  });
+
+  const webPageSchema = createWebPageSchema(
+    "Growth Strategy Sprint Process | 8-Week Delivery",
+    "Our 8-week growth strategy sprint: Week 1–2 strategic foundation, Week 3–4 tactical framework, Week 5–8 dashboard creation and team handoff with full docs.",
+    "https://www.patterngrowth.com/process"
+  );
+
   return (
-    <main id="main" className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-8 sm:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <main id="main" className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-8 sm:py-16">
       {/* Hero */}
       <header className="text-center space-y-4 sm:space-y-6">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
@@ -173,5 +196,6 @@ export default function ProcessPage() {
       </section>
 
     </main>
+    </>
   )
 }

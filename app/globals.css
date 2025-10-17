@@ -588,3 +588,8 @@ html:not(.dark) body { background: #f6f7f8; }
 }
 /* Dark mode background */
 .dark body { background: hsl(var(--background)); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.hyphens-auto { hyphens: auto; }
