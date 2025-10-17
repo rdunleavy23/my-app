@@ -68,9 +68,8 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight mb-6">
-              Your Marketing Strategy,<br className="hidden sm:block" />
-              Built From Scratch in 8 Weeks
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight mb-6 text-balance">
+              Your Marketing Strategy, Built From Scratch in 8 Weeks
             </h1>
 
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl">
@@ -109,67 +108,77 @@ export default function HomePage() {
               What Our Growth Strategy Sprint Includes
             </h2>
 
-            {/* Mobile: Clean List Layout */}
-            <div className="md:hidden space-y-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <Zap className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Quick Wins in 30 Days</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+            {/* Mobile: Card Layout */}
+            <div className="md:hidden space-y-4">
+              <Card className="transition-all hover:shadow-md">
+                <CardHeader>
+                  <div className="mb-3">
+                    <Zap className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Quick Wins in 30 Days</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">
+                  <p className="text-sm leading-relaxed">
                     We start executing in week one, not month three. While we're building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends.
                   </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <Building2 className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Growth Infrastructure You Own</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+              <Card className="transition-all hover:shadow-md">
+                <CardHeader>
+                  <div className="mb-3">
+                    <Building2 className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Growth Infrastructure You Own</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">
+                  <p className="text-sm leading-relaxed">
                     We build custom systems tailored to how your business actually operates—then transfer complete ownership to you. Everything we create becomes yours: the frameworks, the documentation, the tools, the insights.
                   </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <TrendingUp className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Revenue-Connected Strategy</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+              <Card className="transition-all hover:shadow-md">
+                <CardHeader>
+                  <div className="mb-3">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Revenue-Connected Strategy</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">
+                  <p className="text-sm leading-relaxed">
                     Most marketing roadmaps prioritize busy work over business impact. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure.
                   </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <Target className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Brand Positioning That Sells</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+              <Card className="transition-all hover:shadow-md">
+                <CardHeader>
+                  <div className="mb-3">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Brand Positioning That Sells</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">
+                  <p className="text-sm leading-relaxed">
                     We clarify who you serve, why you're different, and how to say it consistently across every channel. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
                   </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <LinkIcon className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Marketing & Revenue Alignment</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+              <Card className="transition-all hover:shadow-md">
+                <CardHeader>
+                  <div className="mb-3">
+                    <LinkIcon className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Marketing & Revenue Alignment</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">
+                  <p className="text-sm leading-relaxed">
                     Whether you have a dedicated sales team or growth happens through product-led motion, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or metrics that don't predict growth.
                   </p>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Desktop: Bento Grid Layout */}
