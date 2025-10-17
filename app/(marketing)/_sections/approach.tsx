@@ -57,13 +57,14 @@ export function Approach() {
   }
 
   return (
-    <section className="container py-16" aria-labelledby="approach-heading">
-      <p className="text-xs uppercase tracking-wide text-muted-foreground">{LABELS.eyebrow}</p>
-      <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">
-        {LABELS.heading}
-      </h2>
+    <section className="py-16" aria-labelledby="approach-heading">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <p className="text-xs uppercase tracking-wide text-muted-foreground">{LABELS.eyebrow}</p>
+        <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">
+          {LABELS.heading}
+        </h2>
 
-      <Tabs value={value} onValueChange={onChange} className="grid gap-6">
+        <Tabs value={value} onValueChange={onChange} className="grid gap-6">
         {/* Mobile: horizontal scroll; Desktop: 3-up grid */}
         <TabsList
           aria-label="Approach pillars"
@@ -96,99 +97,85 @@ export function Approach() {
             id={`panel-${it.key}`}
             aria-labelledby={`tab-${it.key}`}
           >
-            <div className="grid gap-6 md:grid-cols-3">
-              {/* LEFT: your existing copy, verbatim */}
-              <div className="md:col-span-2 space-y-4">
-                <h3 className="text-lg font-medium">{it.title}</h3>
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium">{it.title}</h3>
 
-                {/* Render every paragraph exactly as provided */}
-                {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
+              {/* Render every paragraph exactly as provided */}
+              {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
 
-                {/* Optional detail buckets — render only if you provided them */}
-                <div className="flex flex-wrap items-center gap-3">
-                  {it.how && it.how.length > 0 && (
-                    <>
-                      {isMobile ? (
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => trackApproachHowOpen(it.title)}
-                              aria-label={`${LABELS.how}: ${it.title}`}
-                            >
-                              {LABELS.how}
-                            </Button>
-                          </DialogTrigger>
-                          <DialogContent>
-                            <DialogHeader><DialogTitle>{LABELS.how}</DialogTitle></DialogHeader>
-                            <div className="space-y-2 text-sm leading-relaxed">
-                              {it.how.map((h, i) => renderParagraph(h, i))}
-                            </div>
-                          </DialogContent>
-                        </Dialog>
-                      ) : (
-                        <Popover>
-                          <PopoverTrigger asChild>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => trackApproachHowOpen(it.title)}
-                              aria-haspopup="dialog"
-                              aria-label={`${LABELS.how}: ${it.title}`}
-                            >
-                              {LABELS.how}
-                            </Button>
-                          </PopoverTrigger>
-                          <PopoverContent className="max-w-md text-sm leading-relaxed" align="start">
-                            <VisuallyHidden><h4>{LABELS.how} — {it.title}</h4></VisuallyHidden>
-                            <div className="space-y-2">
-                              {it.how.map((h, i) => renderParagraph(h, i))}
-                            </div>
-                          </PopoverContent>
-                        </Popover>
-                      )}
-                    </>
-                  )}
+              {/* Optional detail buckets — render only if you provided them */}
+              <div className="flex flex-wrap items-center gap-3">
+                {it.how && it.how.length > 0 && (
+                  <>
+                    {isMobile ? (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => trackApproachHowOpen(it.title)}
+                            aria-label={`${LABELS.how}: ${it.title}`}
+                          >
+                            {LABELS.how}
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent>
+                          <DialogHeader><DialogTitle>{LABELS.how}</DialogTitle></DialogHeader>
+                          <div className="space-y-2 text-sm leading-relaxed">
+                            {it.how.map((h, i) => renderParagraph(h, i))}
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    ) : (
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => trackApproachHowOpen(it.title)}
+                            aria-haspopup="dialog"
+                            aria-label={`${LABELS.how}: ${it.title}`}
+                          >
+                            {LABELS.how}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="max-w-md text-sm leading-relaxed" align="start">
+                          <VisuallyHidden><h4>{LABELS.how} — {it.title}</h4></VisuallyHidden>
+                          <div className="space-y-2">
+                            {it.how.map((h, i) => renderParagraph(h, i))}
+                          </div>
+                        </PopoverContent>
+                      </Popover>
+                    )}
+                  </>
+                )}
 
-                  {it.deliverables && it.deliverables.length > 0 && (
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => trackApproachDeliverablesOpen(it.title)}
-                          aria-label={`${LABELS.deliverables}: ${it.title}`}
-                        >
-                          {LABELS.deliverables}
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent>
-                        <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
-                        <ul className="list-disc pl-5 space-y-1 text-sm">
-                          {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
-                        </ul>
-                      </DialogContent>
-                    </Dialog>
-                  )}
-                </div>
+                {it.deliverables && it.deliverables.length > 0 && (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => trackApproachDeliverablesOpen(it.title)}
+                        aria-label={`${LABELS.deliverables}: ${it.title}`}
+                      >
+                        {LABELS.deliverables}
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
+                      <ul className="list-disc pl-5 space-y-1 text-sm">
+                        {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
+                      </ul>
+                    </DialogContent>
+                  </Dialog>
+                )}
               </div>
-
-              {/* RIGHT: visual variety card (UI-only values; feel free to customize or remove) */}
-              <aside className="rounded-lg border bg-muted/30 p-4">
-                <div className="text-sm text-muted-foreground">{LABELS.snapshot}</div>
-                <Separator className="my-3" />
-                <dl className="grid grid-cols-2 gap-3 text-sm">
-                  <div><dt className="text-muted-foreground">{LABELS.timebox}</dt><dd>8 weeks</dd></div>
-                  <div><dt className="text-muted-foreground">{LABELS.ownership}</dt><dd>100%</dd></div>
-                  <div><dt className="text-muted-foreground">{LABELS.kpi}</dt><dd>Pipeline lift</dd></div>
-                  <div><dt className="text-muted-foreground">{LABELS.artifacts}</dt><dd>Docs + Dashboards</dd></div>
-                </dl>
-              </aside>
             </div>
           </TabsContent>
         ))}
       </Tabs>
+      </div>
     </section>
   )
 }

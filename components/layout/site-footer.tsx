@@ -7,9 +7,9 @@ export default function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="py-16">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* Company Info */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center lg:text-left">
               <div>
                 <h3 className="text-xl font-semibold mb-3">Pattern Growth</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -20,13 +20,13 @@ export default function SiteFooter() {
             </div>
 
             {/* Essential Links */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center lg:text-left">
               <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">Learn More</h4>
               <ul className="space-y-3">
                 <li>
                   <Link 
                     href="/process" 
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center lg:justify-start"
                   >
                     <ArrowRight className="h-3 w-3" />
                     Our 8-Week Process
@@ -35,7 +35,7 @@ export default function SiteFooter() {
                 <li>
                   <Link 
                     href="/about" 
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center lg:justify-start"
                   >
                     <ArrowRight className="h-3 w-3" />
                     About Our Approach
@@ -44,7 +44,7 @@ export default function SiteFooter() {
                 <li>
                   <Link 
                     href="/blog" 
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center lg:justify-start"
                   >
                     <ArrowRight className="h-3 w-3" />
                     Growth Insights
