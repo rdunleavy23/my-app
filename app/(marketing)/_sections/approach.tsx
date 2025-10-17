@@ -57,7 +57,7 @@ export function Approach() {
   }
 
   return (
-    <section className="py-16" aria-labelledby="approach-heading">
+    <section className="py-12 sm:py-16 bg-muted/30" aria-labelledby="approach-heading">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <p className="text-xs uppercase tracking-wide text-muted-foreground">{LABELS.eyebrow}</p>
         <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">

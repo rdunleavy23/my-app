@@ -66,7 +66,7 @@ export default function HomePage() {
 
       <div className="bg-background">
         {/* Hero Section */}
-        <section className="py-16 sm:py-24">
+        <section className="py-12 sm:py-20">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight mb-6">
               Your Marketing Strategy,<br className="hidden sm:block" />
@@ -77,6 +77,24 @@ export default function HomePage() {
               We dive into your business data, build strategy tailored to your specific market position, and deliver a complete roadmap with fixed scope and executive-level direction—all in two months.
             </p>
 
+            {/* Hero CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <Button asChild size="lg" className="font-semibold">
+                <a
+                  href="https://cal.com/pattern-growth/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Schedule a Call
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+              <p className="text-sm text-muted-foreground">
+                30-minute intro call · No pressure
+              </p>
+            </div>
+
           </div>
         </section>
 
@@ -85,7 +103,7 @@ export default function HomePage() {
         </Suspense>
 
         {/* What Our Growth Strategy Sprint Includes */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold tracking-tight mb-8">
               What Our Growth Strategy Sprint Includes
@@ -235,7 +253,7 @@ export default function HomePage() {
         </section>
 
         {/* How We Work Differently */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-12 sm:py-16 bg-muted/30 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">How We Work Differently</h2>
             
@@ -378,7 +396,7 @@ export default function HomePage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold tracking-tight mb-2">
@@ -445,6 +463,29 @@ export default function HomePage() {
               ]}
               className="max-w-4xl mx-auto"
             />
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-12 sm:py-16 bg-muted/30">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              Let's talk about your growth strategy
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Book a 30-minute call to discuss where you are and where you want to be. We'll share how we approach it—no pitch, just a conversation.
+            </p>
+            <Button asChild size="lg" className="font-semibold">
+              <a
+                href="https://cal.com/pattern-growth/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 mx-auto w-fit"
+              >
+                Schedule a 30-Minute Call
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </section>
 
