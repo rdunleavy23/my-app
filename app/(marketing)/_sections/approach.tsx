@@ -65,14 +65,113 @@ export function Approach() {
         </h2>
 
         <Tabs value={value} onValueChange={onChange} className="grid gap-6">
-        {/* Mobile: horizontal scroll; Desktop: 3-up grid */}
+        {/* Mobile: Vertical Stepper; Desktop: Horizontal tabs */}
+        <div className="md:hidden">
+          {/* Mobile Stepper */}
+          <div className="space-y-8">
+            {APPROACH_ITEMS.map((it, index) => (
+              <div key={it.key} className="relative">
+                {/* Step indicator and connecting line */}
+                <div className="flex items-start gap-4">
+                  <div className="relative flex flex-col items-center">
+                    {/* Step circle */}
+                    <button
+                      onClick={() => onChange(it.key)}
+                      className={clsx(
+                        "w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all",
+                        value === it.key
+                          ? "bg-background border-primary"
+                          : "bg-muted border-muted-foreground"
+                      )}
+                    >
+                      <div className={clsx(
+                        "w-3 h-3 rounded-full",
+                        value === it.key ? "bg-primary" : "bg-muted-foreground"
+                      )} />
+                    </button>
+                    
+                    {/* Connecting line (except for last item) */}
+                    {index < APPROACH_ITEMS.length - 1 && (
+                      <div className="w-0.5 h-8 bg-muted mt-2" />
+                    )}
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1 pt-1">
+                    <button
+                      onClick={() => onChange(it.key)}
+                      className="text-left w-full"
+                    >
+                      <h3 className={clsx(
+                        "text-lg font-medium mb-2 transition-colors",
+                        value === it.key ? "text-foreground" : "text-muted-foreground"
+                      )}>
+                        {it.title}
+                      </h3>
+                    </button>
+                    
+                    {/* Show content for active tab */}
+                    {value === it.key && (
+                      <div className="space-y-4">
+                        {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
+                        
+                        {/* Optional detail buckets */}
+                        <div className="flex flex-wrap items-center gap-3">
+                          {it.how && it.how.length > 0 && (
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() => trackApproachHowOpen(it.title)}
+                                  aria-label={`${LABELS.how}: ${it.title}`}
+                                >
+                                  {LABELS.how}
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent>
+                                <DialogHeader><DialogTitle>{LABELS.how}</DialogTitle></DialogHeader>
+                                <div className="space-y-2 text-sm leading-relaxed">
+                                  {it.how.map((h, i) => renderParagraph(h, i))}
+                                </div>
+                              </DialogContent>
+                            </Dialog>
+                          )}
+
+                          {it.deliverables && it.deliverables.length > 0 && (
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => trackApproachDeliverablesOpen(it.title)}
+                                  aria-label={`${LABELS.deliverables}: ${it.title}`}
+                                >
+                                  {LABELS.deliverables}
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent>
+                                <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
+                                <ul className="list-disc pl-5 space-y-1 text-sm">
+                                  {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
+                                </ul>
+                              </DialogContent>
+                            </Dialog>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: Horizontal tabs */}
         <TabsList
           aria-label="Approach pillars"
-          className={clsx(
-            "w-full",
-            "md:grid md:grid-cols-3 md:gap-2",
-            "overflow-x-auto no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 flex md:block gap-2"
-          )}
+          className="hidden md:grid md:grid-cols-3 md:gap-2"
         >
           {APPROACH_ITEMS.map((it) => (
             <TabsTrigger
@@ -90,90 +189,70 @@ export function Approach() {
           ))}
         </TabsList>
 
-        {APPROACH_ITEMS.map((it) => (
-          <TabsContent
-            key={it.key}
-            value={it.key}
-            id={`panel-${it.key}`}
-            aria-labelledby={`tab-${it.key}`}
-          >
-            <div className="space-y-4">
-              <h3 className="text-lg font-medium">{it.title}</h3>
+        {/* Desktop: Tab content */}
+        <div className="hidden md:block">
+          {APPROACH_ITEMS.map((it) => (
+            <TabsContent
+              key={it.key}
+              value={it.key}
+              id={`panel-${it.key}`}
+              aria-labelledby={`tab-${it.key}`}
+            >
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium">{it.title}</h3>
 
-              {/* Render every paragraph exactly as provided */}
-              {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
+                {/* Render every paragraph exactly as provided */}
+                {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
 
-              {/* Optional detail buckets — render only if you provided them */}
-              <div className="flex flex-wrap items-center gap-3">
-                {it.how && it.how.length > 0 && (
-                  <>
-                    {isMobile ? (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => trackApproachHowOpen(it.title)}
-                            aria-label={`${LABELS.how}: ${it.title}`}
-                          >
-                            {LABELS.how}
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent>
-                          <DialogHeader><DialogTitle>{LABELS.how}</DialogTitle></DialogHeader>
-                          <div className="space-y-2 text-sm leading-relaxed">
-                            {it.how.map((h, i) => renderParagraph(h, i))}
-                          </div>
-                        </DialogContent>
-                      </Dialog>
-                    ) : (
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => trackApproachHowOpen(it.title)}
-                            aria-haspopup="dialog"
-                            aria-label={`${LABELS.how}: ${it.title}`}
-                          >
-                            {LABELS.how}
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="max-w-md text-sm leading-relaxed" align="start">
-                          <VisuallyHidden><h4>{LABELS.how} — {it.title}</h4></VisuallyHidden>
-                          <div className="space-y-2">
-                            {it.how.map((h, i) => renderParagraph(h, i))}
-                          </div>
-                        </PopoverContent>
-                      </Popover>
-                    )}
-                  </>
-                )}
+                {/* Optional detail buckets — render only if you provided them */}
+                <div className="flex flex-wrap items-center gap-3">
+                  {it.how && it.how.length > 0 && (
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => trackApproachHowOpen(it.title)}
+                          aria-haspopup="dialog"
+                          aria-label={`${LABELS.how}: ${it.title}`}
+                        >
+                          {LABELS.how}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="max-w-md text-sm leading-relaxed" align="start">
+                        <VisuallyHidden><h4>{LABELS.how} — {it.title}</h4></VisuallyHidden>
+                        <div className="space-y-2">
+                          {it.how.map((h, i) => renderParagraph(h, i))}
+                        </div>
+                      </PopoverContent>
+                    </Popover>
+                  )}
 
-                {it.deliverables && it.deliverables.length > 0 && (
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => trackApproachDeliverablesOpen(it.title)}
-                        aria-label={`${LABELS.deliverables}: ${it.title}`}
-                      >
-                        {LABELS.deliverables}
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
-                      <ul className="list-disc pl-5 space-y-1 text-sm">
-                        {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
-                      </ul>
-                    </DialogContent>
-                  </Dialog>
-                )}
+                  {it.deliverables && it.deliverables.length > 0 && (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => trackApproachDeliverablesOpen(it.title)}
+                          aria-label={`${LABELS.deliverables}: ${it.title}`}
+                        >
+                          {LABELS.deliverables}
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
+                        <ul className="list-disc pl-5 space-y-1 text-sm">
+                          {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
+                        </ul>
+                      </DialogContent>
+                    </Dialog>
+                  )}
+                </div>
               </div>
-            </div>
-          </TabsContent>
-        ))}
+            </TabsContent>
+          ))}
+        </div>
       </Tabs>
       </div>
     </section>
