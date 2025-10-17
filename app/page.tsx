@@ -19,8 +19,8 @@ import {
   Gift,
   Handshake
 } from "lucide-react"
-import { useEffect, useState } from "react"
 
+import { FAQCollapsible } from "@/components/ui/faq-collapsible"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -28,20 +28,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 
 // Note: Metadata export needs to be in a separate server component or root layout
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
@@ -125,22 +111,6 @@ const faqSchema = {
 }
 
 export default function HomePage() {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    if (!api) {
-      return
-    }
-
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
 
   return (
     <>
@@ -217,86 +187,6 @@ export default function HomePage() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* Mobile: Swipeable Carousel */}
-            <div className="md:hidden">
-              <Carousel
-                setApi={setApi}
-                className="w-full"
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-              >
-                <CarouselContent>
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <div className="mb-4">
-                          <Compass className="h-10 w-10 text-primary" />
-                        </div>
-                        <CardTitle className="text-xl">Shaped by Your Reality</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          We start by understanding your specific situation—market position, team capacity, actual constraints. The strategy we build fits your business as it exists today, not some idealized version that ignores what you're working with.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <div className="mb-4">
-                          <Rocket className="h-10 w-10 text-primary" />
-                        </div>
-                        <CardTitle className="text-xl">Built for Your Future</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          We design a roadmap for your specific goals, accounting for your timeline and resources. You'll know exactly what to prioritize, what success looks like for your business, and when to scale or adjust based on what's actually working.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <div className="mb-4">
-                          <Users className="h-10 w-10 text-primary" />
-                        </div>
-                        <CardTitle className="text-xl">Owned by Your Team</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          Your team gets trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just capability that stays with you long after we're gone.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                </CarouselContent>
-              </Carousel>
-              
-              {/* Progress dots */}
-              <div className="flex justify-center gap-2 mt-4">
-                {Array.from({ length: count }).map((_, index) => (
-                  <button
-                    key={index}
-                    className={`h-2 rounded-full transition-all ${
-                      index === current - 1 ? "w-8 bg-primary" : "w-2 bg-muted-foreground/30"
-                    }`}
-                    onClick={() => api?.scrollTo(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-              
-              <p className="text-center text-sm text-muted-foreground mt-4">
-                Swipe to explore our approach
-              </p>
             </div>
           </div>
         </section>
@@ -606,184 +496,35 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Desktop: 2 cards in row */}
-            <div className="hidden md:grid md:grid-cols-2 gap-6">
-              <Card className="transition-all hover:shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">What happens if my team can't execute what you build?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="transition-all hover:shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">Do you need to work in our industry to help us?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="transition-all hover:shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">What if the strategy doesn't work?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="transition-all hover:shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">How involved do we need to be during the sprint?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="transition-all hover:shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">What makes you different from a fractional CMO?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="transition-all hover:shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-lg">Can we start right away?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Mobile: Swipeable Carousel */}
-            <div className="md:hidden">
-              <Carousel
-                setApi={setApi}
-                className="w-full"
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-              >
-                <CarouselContent>
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <CardTitle className="text-lg">What happens if my team can't execute what you build?</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <CardTitle className="text-lg">Do you need to work in our industry to help us?</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <CardTitle className="text-lg">What if the strategy doesn't work?</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <CardTitle className="text-lg">How involved do we need to be during the sprint?</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <CardTitle className="text-lg">What makes you different from a fractional CMO?</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-
-                  <CarouselItem>
-                    <Card className="border-2">
-                      <CardHeader>
-                        <CardTitle className="text-lg">Can we start right away?</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots.
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                </CarouselContent>
-              </Carousel>
-              
-              {/* Progress dots */}
-              <div className="flex justify-center gap-2 mt-4">
-                {Array.from({ length: 6 }).map((_, index) => (
-                  <button
-                    key={index}
-                    className={`h-2 rounded-full transition-all ${
-                      index === current - 1 ? "w-8 bg-primary" : "w-2 bg-muted-foreground/30"
-                    }`}
-                    onClick={() => api?.scrollTo(index)}
-                    aria-label={`Go to FAQ ${index + 1}`}
-                  />
-                ))}
-              </div>
-              
-              <p className="text-center text-sm text-muted-foreground mt-4">
-                Swipe to explore more questions
-              </p>
-            </div>
+            <FAQCollapsible 
+              items={[
+                {
+                  question: "What happens if my team can't execute what you build?",
+                  answer: "We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run."
+                },
+                {
+                  question: "Do you need to work in our industry to help us?",
+                  answer: "Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical."
+                },
+                {
+                  question: "What if the strategy doesn't work?",
+                  answer: "Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us."
+                },
+                {
+                  question: "How involved do we need to be during the sprint?",
+                  answer: "Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers."
+                },
+                {
+                  question: "What makes you different from a fractional CMO?",
+                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us."
+                },
+                {
+                  question: "Can we start right away?",
+                  answer: "If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots."
+                }
+              ]}
+              className="max-w-4xl mx-auto"
+            />
           </div>
         </section>
 
