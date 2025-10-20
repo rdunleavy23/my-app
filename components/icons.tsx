@@ -10,6 +10,8 @@ export const Icons = {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-label="Pattern Growth logo"
+      role="img"
       {...props}
     >
       <circle cx="12" cy="12" r="10" />

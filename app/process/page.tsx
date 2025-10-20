@@ -86,7 +86,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Target className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <Target className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 1: Aim</CardTitle>
@@ -113,7 +113,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Search className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <Search className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 2: Assess</CardTitle>
@@ -140,7 +140,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Users className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <Users className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 3: Target</CardTitle>
@@ -167,7 +167,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Wrench className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <Wrench className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 4: Build</CardTitle>
@@ -194,7 +194,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Megaphone className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <Megaphone className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 5: Reach</CardTitle>
@@ -221,7 +221,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <BarChart3 className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <BarChart3 className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 6: Measure</CardTitle>
@@ -248,7 +248,7 @@ export default function ProcessPage() {
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Settings className="h-8 w-8 sm:h-10 sm:w-10 text-primary" />
+                  <Settings className="h-8 w-8 sm:h-10 sm:w-10 text-primary" aria-hidden="true" />
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 7: Enable</CardTitle>

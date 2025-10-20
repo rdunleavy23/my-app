@@ -48,7 +48,7 @@ export default function AboutClient() {
           <CardContent className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
             <img
               src="/team/william.png"
-              alt="William"
+              alt="William, Partner at Pattern Growth - experienced growth strategist"
               className="aspect-square w-24 sm:w-28 rounded-full border"
             />
             <div className="space-y-2 text-muted-foreground">
@@ -67,7 +67,7 @@ export default function AboutClient() {
           <CardContent className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
             <img
               src="/team/ryan.png"
-              alt="Ryan"
+              alt="Ryan, Partner at Pattern Growth - growth strategist focused on translating complex marketing challenges"
               className="aspect-square w-24 sm:w-28 rounded-full border"
             />
             <div className="space-y-2 text-muted-foreground">

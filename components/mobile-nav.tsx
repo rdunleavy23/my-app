@@ -17,7 +17,7 @@ export function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger className="md:hidden">
-        <Menu className="h-6 w-6" />
+        <Menu className="h-6 w-6" aria-hidden="true" />
       </SheetTrigger>
       <SheetContent side="left" className="w-80 sm:w-96 p-0">
         {/* Header with logo and close button */}
@@ -28,7 +28,7 @@ export function MobileNav() {
           </Link>
           <SheetTrigger asChild>
             <button className="p-2 hover:bg-muted rounded-md">
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5" aria-hidden="true" />
               <span className="sr-only">Close menu</span>
             </button>
           </SheetTrigger>
@@ -56,7 +56,7 @@ export function MobileNav() {
                       </div>
                     )}
                   </div>
-                  <ChevronRight className="h-5 w-5 opacity-60" />
+                  <ChevronRight className="h-5 w-5 opacity-60" aria-hidden="true" />
                 </div>
               </Link>
             ))}

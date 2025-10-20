@@ -63,16 +63,16 @@ export default function Navbar() {
               href="/about"
               className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
             >
-              About
+              Our Story
             </Link>
             <Link
               href="/process"
               className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
             >
-              Our Process
+              How It Works
             </Link>
             <Button asChild className="h-9">
-              <Link href="https://cal.com/pattern-growth">Start a Conversation</Link>
+              <Link href="https://cal.com/pattern-growth">Schedule a Call →</Link>
             </Button>
             <ThemeToggle />
           </nav>
@@ -89,67 +89,61 @@ export default function Navbar() {
                   aria-expanded={open}
                   aria-controls="mobile-menu"
                 >
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-5 w-5" aria-hidden="true" />
                 </Button>
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-screen sm:w-80 h-screen rounded-none border-0 p-0"
+                className="w-screen sm:w-80 h-screen rounded-none border-0 p-0 mobile-menu-slide"
                 id="mobile-menu"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="mobile-menu-title"
               >
                 <div className="flex flex-col h-full">
+                  {/* Screen reader title */}
+                  <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
+                  
                   {/* Navigation items */}
                   <div className="flex-1 px-6 py-8">
-                    <nav className="space-y-2">
+                    <nav className="space-y-2" role="navigation" aria-label="Main navigation">
+                      {/* Primary CTA at top */}
+                      <Link
+                        href="https://cal.com/pattern-growth"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeMenu}
+                        className="mobile-menu-item mobile-menu-focus block px-4 py-4 rounded-lg text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        aria-label="Schedule a call (opens in new tab)"
+                      >
+                        Schedule a Call →
+                      </Link>
+                      
                       <Link
                         href="/about"
                         onClick={closeMenu}
-                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                        className={`mobile-menu-item mobile-menu-focus block px-4 py-3 rounded-lg text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                           pathname === '/about'
-                            ? 'bg-primary text-primary-foreground'
+                            ? 'bg-muted text-foreground'
                             : 'text-foreground hover:bg-muted'
                         }`}
+                        aria-current={pathname === '/about' ? 'page' : undefined}
                       >
-                        About
+                        Our Story
                       </Link>
                       <Link
                         href="/process"
                         onClick={closeMenu}
-                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                        className={`mobile-menu-item mobile-menu-focus block px-4 py-3 rounded-lg text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                           pathname === '/process'
-                            ? 'bg-primary text-primary-foreground'
+                            ? 'bg-muted text-foreground'
                             : 'text-foreground hover:bg-muted'
                         }`}
+                        aria-current={pathname === '/process' ? 'page' : undefined}
                       >
-                        Our Process
-                      </Link>
-                      <Link
-                        href="https://cal.com/pattern-growth/30min"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={closeMenu}
-                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                          pathname === '/book'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'text-foreground hover:bg-muted'
-                        }`}
-                      >
-                        Start a Conversation
+                        How It Works
                       </Link>
                     </nav>
-                  </div>
-
-                  {/* Bottom CTA */}
-                  <div className="px-6 py-6 border-t">
-                    <Button
-                      asChild
-                      className="w-full h-12 text-base font-semibold"
-                      onClick={closeMenu}
-                    >
-                      <Link href="https://cal.com/pattern-growth">
-                        Start a Conversation
-                      </Link>
-                    </Button>
                   </div>
                 </div>
               </SheetContent>

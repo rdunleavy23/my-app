@@ -70,7 +70,7 @@ export default function HomePage() {
                   className="flex items-center gap-2"
                 >
                   Start a Conversation
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </Button>
               <p className="text-sm text-muted-foreground">
@@ -101,7 +101,7 @@ export default function HomePage() {
               <Card className="lg:col-span-2 motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <Zap className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
+                    <Zap className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Quick Wins in 30 Days</CardTitle>
                 </CardHeader>
@@ -116,7 +116,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <Building2 className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
+                    <Building2 className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Growth Infrastructure You Own</CardTitle>
                 </CardHeader>
@@ -131,7 +131,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <TrendingUp className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
+                    <TrendingUp className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Revenue-Connected Strategy</CardTitle>
                 </CardHeader>
@@ -146,7 +146,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <Target className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
+                    <Target className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Brand Positioning That Sells</CardTitle>
                 </CardHeader>
@@ -161,7 +161,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <LinkIcon className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
+                    <LinkIcon className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Marketing & Revenue Alignment</CardTitle>
                 </CardHeader>
@@ -190,7 +190,7 @@ export default function HomePage() {
             <div className="md:hidden space-y-6">
               <div className="flex gap-3">
                 <div className="flex-shrink-0">
-                  <UserCog className="h-6 w-6 text-primary" />
+                  <UserCog className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Limited Capacity by Design</h3>
@@ -202,7 +202,7 @@ export default function HomePage() {
 
               <div className="flex gap-3">
                 <div className="flex-shrink-0">
-                  <Puzzle className="h-6 w-6 text-primary" />
+                  <Puzzle className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Strategy Built From Your Context</h3>
@@ -214,7 +214,7 @@ export default function HomePage() {
 
               <div className="flex gap-3">
                 <div className="flex-shrink-0">
-                  <Database className="h-6 w-6 text-primary" />
+                  <Database className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Data Before Assumptions</h3>
@@ -226,7 +226,7 @@ export default function HomePage() {
 
               <div className="flex gap-3">
                 <div className="flex-shrink-0">
-                  <Gift className="h-6 w-6 text-primary" />
+                  <Gift className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Built to Transfer, Not Retain</h3>
@@ -238,7 +238,7 @@ export default function HomePage() {
 
               <div className="flex gap-3">
                 <div className="flex-shrink-0">
-                  <Handshake className="h-6 w-6 text-primary" />
+                  <Handshake className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Handoff Shaped for Your Team</h3>
@@ -254,7 +254,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
-                    <UserCog className="h-8 w-8 text-primary" />
+                    <UserCog className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Limited Capacity by Design</CardTitle>
                 </CardHeader>
@@ -268,7 +268,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
-                    <Puzzle className="h-8 w-8 text-primary" />
+                    <Puzzle className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Strategy Built From Your Context</CardTitle>
                 </CardHeader>
@@ -282,7 +282,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
-                    <Database className="h-8 w-8 text-primary" />
+                    <Database className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Data Before Assumptions</CardTitle>
                 </CardHeader>
@@ -296,7 +296,7 @@ export default function HomePage() {
               <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
-                    <Gift className="h-8 w-8 text-primary" />
+                    <Gift className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Built to Transfer, Not Retain</CardTitle>
                 </CardHeader>
@@ -310,7 +310,7 @@ export default function HomePage() {
               <Card className="md:col-span-2 motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
-                    <Handshake className="h-8 w-8 text-primary" />
+                    <Handshake className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl">Handoff Shaped for Your Team</CardTitle>
                 </CardHeader>
@@ -412,7 +412,7 @@ export default function HomePage() {
                 className="flex items-center gap-2 mx-auto w-fit"
               >
                 Start a Conversation
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </Button>
           </div>

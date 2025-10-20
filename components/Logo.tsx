@@ -14,6 +14,8 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
           height="32"
           viewBox="0 0 367.97 367.97"
           className="dark:invert"
+          aria-label="Pattern Growth logo"
+          role="img"
           style={{
             width: '32px',
             height: '32px',

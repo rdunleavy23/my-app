@@ -39,7 +39,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <Zap className="h-8 w-8 text-primary" />
+                <Zap className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quick Wins in 30 Days</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -51,7 +51,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <Building2 className="h-8 w-8 text-primary" />
+                <Building2 className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Growth Infrastructure You Own</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -63,7 +63,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <TrendingUp className="h-8 w-8 text-primary" />
+                <TrendingUp className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Revenue-Connected Strategy</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -75,7 +75,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <Target className="h-8 w-8 text-primary" />
+                <Target className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Brand Positioning That Sells</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -87,7 +87,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <LinkIcon className="h-8 w-8 text-primary" />
+                <LinkIcon className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Marketing & Revenue Alignment</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">

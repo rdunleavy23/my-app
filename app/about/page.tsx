@@ -235,7 +235,7 @@ export default function AboutPage() {
               <Card key={value.title} className="text-center motion-safe:transition-shadow hover:shadow-lg border-border/50">
                 <CardHeader className="space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
-                    <value.icon className="h-6 w-6 text-primary" />
+                    <value.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl font-semibold">
                     {value.title}

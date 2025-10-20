@@ -31,7 +31,7 @@ export function SiteHeader() {
                 pathname === "/about" ? "text-foreground" : "text-foreground/60"
               )}
             >
-              About
+              Our Story
             </Link>
             <Link
               href="/process"
@@ -40,7 +40,7 @@ export function SiteHeader() {
                 pathname === "/process" ? "text-foreground" : "text-foreground/60"
               )}
             >
-              Our Process
+              How It Works
             </Link>
           </nav>
         </div>
@@ -48,7 +48,7 @@ export function SiteHeader() {
         <div className="flex items-center space-x-4">
           <nav className="flex items-center">
             <a
-              href="https://cal.com/pattern-growth/30min"
+              href="https://cal.com/pattern-growth"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
@@ -56,7 +56,7 @@ export function SiteHeader() {
                 "px-4 py-1.5"
               )}
             >
-              Start a Conversation
+              Schedule a Call →
             </a>
           </nav>
 

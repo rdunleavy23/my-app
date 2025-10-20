@@ -51,11 +51,11 @@ export default function BlogPage() {
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant="secondary">Latest</Badge>
                 <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4" aria-hidden="true" />
                   {formatDate(posts[0].publishedAt)}
                 </div>
                 <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-4 w-4" aria-hidden="true" />
                   {posts[0].readingTime} min read
                 </div>
               </div>
@@ -93,11 +93,11 @@ export default function BlogPage() {
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
+                      <Calendar className="h-4 w-4" aria-hidden="true" />
                       {formatDate(post.publishedAt)}
                     </div>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-4 w-4" aria-hidden="true" />
                       {post.readingTime} min read
                     </div>
                   </div>

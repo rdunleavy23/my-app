@@ -593,3 +593,26 @@ html:not(.dark) body { background: #f6f7f8; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }
+
+/* Mobile Menu Animations */
+@layer components {
+  /* Custom mobile menu slide animation with 250-300ms ease-out timing */
+  .mobile-menu-slide {
+    transition: transform 275ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Mobile menu backdrop animation */
+  .mobile-menu-backdrop {
+    transition: opacity 275ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Mobile menu item animations for immediate tap response */
+  .mobile-menu-item {
+    transition: background-color 75ms ease-out, color 75ms ease-out;
+  }
+  
+  /* Focus ring animation for accessibility */
+  .mobile-menu-focus {
+    transition: box-shadow 150ms ease-out;
+  }
+}
