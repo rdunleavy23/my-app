@@ -1,3 +1,5 @@
+"use client"
+
 // hooks/use-scroll-depth.ts
 import { useEffect, useRef } from 'react';
 import { trackScrollDepth } from '@/lib/analytics';
