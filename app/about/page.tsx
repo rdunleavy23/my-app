@@ -158,13 +158,13 @@ export default function AboutPage() {
           <Breadcrumbs items={[{ label: 'About' }]} />
           
           <div className="text-center space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight leading-tight">
               Meet the team behind Pattern Growth
             </h1>
             
             <div className="w-20 h-px bg-primary mx-auto" />
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Two experienced growth strategists who translate C-suite vision into executable strategy your team can actually run.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
                   </div>
                   
                   <div className="space-y-2">
-                    <CardTitle className="text-2xl md:text-3xl text-foreground">
+                    <CardTitle className="text-2xl text-foreground">
                       {member.name}
                     </CardTitle>
                     <p className="text-sm uppercase tracking-wider text-muted-foreground font-medium">
@@ -206,7 +206,7 @@ export default function AboutPage() {
                 </CardHeader>
                 
                 <CardContent>
-                  <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-center">
+                  <p className="text-base leading-relaxed text-muted-foreground text-center">
                     {member.bio}
                   </p>
                 </CardContent>
@@ -222,22 +222,22 @@ export default function AboutPage() {
       <section className="container mx-auto px-4 py-16 md:py-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h2 className="text-2xl font-bold text-foreground">
               Our Approach
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               What makes us different from traditional consulting
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {values.map((value, index) => (
-              <Card key={value.title} className="text-center hover:shadow-md transition-shadow border-border/50">
+              <Card key={value.title} className="text-center motion-safe:transition-shadow hover:shadow-lg border-border/50">
                 <CardHeader className="space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
                     <value.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-lg font-semibold">
+                  <CardTitle className="text-xl font-semibold">
                     {value.title}
                   </CardTitle>
                 </CardHeader>
@@ -261,12 +261,12 @@ export default function AboutPage() {
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <div className="w-16 h-px bg-primary mx-auto" />
               
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              <h2 className="text-2xl font-bold text-foreground">
                 Why We Built Pattern Growth
               </h2>
               
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p className="text-lg">
+                <p className="text-base sm:text-lg">
                   Together, William and Ryan built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill.
                 </p>
                 <p className="text-base">
@@ -285,10 +285,10 @@ export default function AboutPage() {
       <section className="container mx-auto px-4 py-16 md:py-20">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h2 className="text-2xl font-bold text-foreground">
               Ready to work with us?
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               Let's discuss how our 8-week growth strategy sprint can help your team build the systems and clarity you need to scale.
             </p>
           </div>
