@@ -136,3 +136,4 @@ export function getCurrentPageInfo() {
     page_title: document.title,
   };
 }
+

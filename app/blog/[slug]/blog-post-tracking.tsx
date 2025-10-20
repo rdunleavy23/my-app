@@ -22,3 +22,4 @@ export function BlogPostTracking({ postTitle, postAuthor, postSlug }: BlogPostTr
 
   return null; // This component only handles tracking
 }
+
