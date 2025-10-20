@@ -47,15 +47,17 @@ export function SiteHeader() {
 
         <div className="flex items-center space-x-4">
           <nav className="flex items-center">
-            <Link
-              href="/book"
+            <a
+              href="https://cal.com/pattern-growth/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ variant: "secondary", size: "sm" }),
                 "px-4 py-1.5"
               )}
             >
               Schedule a Call
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile nav */}

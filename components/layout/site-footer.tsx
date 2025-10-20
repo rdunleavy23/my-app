@@ -1,72 +1,77 @@
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t bg-background">
+    <footer className="border-t bg-muted/20">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="py-16">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            {/* Company Info */}
-            <div className="space-y-6 text-center lg:text-left">
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Pattern Growth</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.
-                </p>
-              </div>
-              
-            </div>
-
-            {/* Essential Links */}
-            <div className="space-y-6 text-center lg:text-left">
-              <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">Learn More</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link 
-                    href="/process" 
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center lg:justify-start"
-                  >
-                    <ArrowRight className="h-3 w-3" />
-                    Our 8-Week Process
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/about" 
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center lg:justify-start"
-                  >
-                    <ArrowRight className="h-3 w-3" />
-                    About Our Approach
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/blog" 
-                    className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 justify-center lg:justify-start"
-                  >
-                    <ArrowRight className="h-3 w-3" />
-                    Growth Insights
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="mt-12 pt-8 border-t">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Pattern Growth. All rights reserved.
-              </p>
+        <div className="py-8">
+          {/* Mobile: Vertical Stack, Left-Aligned */}
+          <div className="flex flex-col gap-2.5 text-left md:hidden">
+            <p className="text-xs text-muted-foreground/90">
+              © {new Date().getFullYear()} Pattern Growth
+            </p>
+            <nav className="flex flex-col gap-2 text-xs">
+              <Link 
+                href="/process" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+              >
+                Our Process
+              </Link>
+              <Link 
+                href="/about" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+              >
+                About
+              </Link>
+              <Link 
+                href="/blog" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+              >
+                Blog
+              </Link>
               <Link 
                 href="/privacy" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
               >
                 Privacy Policy
               </Link>
-            </div>
+            </nav>
+          </div>
+
+          {/* Desktop: Horizontal Single Row with Dot Separators */}
+          <div className="hidden md:flex md:items-center md:justify-between gap-4">
+            <p className="text-xs text-muted-foreground/90">
+              © {new Date().getFullYear()} Pattern Growth
+            </p>
+            <nav className="flex flex-wrap items-center gap-3 text-xs">
+              <Link 
+                href="/process" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors"
+              >
+                Our Process
+              </Link>
+              <span className="text-muted-foreground/50">·</span>
+              <Link 
+                href="/about" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors"
+              >
+                About
+              </Link>
+              <span className="text-muted-foreground/50">·</span>
+              <Link 
+                href="/blog" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors"
+              >
+                Blog
+              </Link>
+              <span className="text-muted-foreground/50">·</span>
+              <Link 
+                href="/privacy" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </nav>
           </div>
         </div>
       </div>
