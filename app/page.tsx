@@ -57,10 +57,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-              Complete growth strategy built from your actual data. Fixed scope, executive-level work, full ownership transfer.{" "}
-              <Link href="/blog/fractional-cmo-alternative" className="text-foreground underline hover:text-primary">
-                A project-based alternative to fractional CMO retainers
-              </Link>.
+              Complete growth strategy built from your actual data. Fixed scope, executive-level work, full ownership transfer. A project-based alternative to fractional CMO retainers.
             </p>
 
             {/* Hero CTA */}
@@ -386,7 +383,7 @@ export default function HomePage() {
                 },
                 {
                   question: "What makes you different from a fractional CMO?",
-                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us."
+                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us. <a href='/blog/fractional-cmo-alternative' class='text-primary hover:underline'>Read our detailed comparison</a>."
                 },
                 {
                   question: "Can we start right away?",
