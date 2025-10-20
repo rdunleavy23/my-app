@@ -32,7 +32,7 @@ export default function Navbar() {
     }
   }, [open])
 
-  // Handle escape key
+  // Handle escape key and focus management
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && open) {
@@ -42,6 +42,11 @@ export default function Navbar() {
     
     if (open) {
       document.addEventListener('keydown', handleEscape)
+      // Focus the first interactive element when menu opens
+      const firstButton = document.querySelector('#mobile-menu [href]') as HTMLElement
+      if (firstButton) {
+        firstButton.focus()
+      }
     }
     
     return () => {
@@ -104,21 +109,23 @@ export default function Navbar() {
                   {/* Screen reader title */}
                   <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
                   
+                  {/* Primary CTA at top - following user instruction */}
+                  <div className="px-6 py-6 border-b">
+                    <Link
+                      href="https://cal.com/pattern-growth"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeMenu}
+                      className="mobile-menu-item mobile-menu-focus block px-4 py-4 rounded-lg text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-center"
+                      aria-label="Schedule a call (opens in new tab)"
+                    >
+                      Schedule a Call →
+                    </Link>
+                  </div>
+                  
                   {/* Navigation items */}
                   <div className="flex-1 px-6 py-8">
-                    <nav className="space-y-2" role="navigation" aria-label="Main navigation">
-                      {/* Primary CTA at top */}
-                      <Link
-                        href="https://cal.com/pattern-growth"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={closeMenu}
-                        className="mobile-menu-item mobile-menu-focus block px-4 py-4 rounded-lg text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                        aria-label="Schedule a call (opens in new tab)"
-                      >
-                        Schedule a Call →
-                      </Link>
-                      
+                    <nav className="space-y-4" role="navigation" aria-label="Main navigation">
                       <Link
                         href="/about"
                         onClick={closeMenu}
