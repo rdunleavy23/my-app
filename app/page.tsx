@@ -85,14 +85,14 @@ export default function HomePage() {
 
       <div className="bg-background">
         {/* Hero Section */}
-        <section className="py-12 sm:py-20">
+        <section className="py-10 sm:py-20">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl leading-tight mb-6 text-balance">
+            <h1 className="text-[2.75rem] leading-[1.15] font-bold tracking-tight text-foreground sm:text-6xl sm:leading-tight mb-5 sm:mb-6 text-balance">
               Your Marketing Strategy, Built From Scratch in 8 Weeks
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-              We dive into your business data, build strategy tailored to your specific market position, and deliver a complete roadmap with fixed scope and executive-level direction—all in two months.
+            <p className="text-[1.125rem] sm:text-xl text-muted-foreground mb-7 sm:mb-8 leading-relaxed max-w-2xl">
+              Complete growth strategy built from your actual data. Fixed scope, executive-level work, full ownership transfer. No retainers.
             </p>
 
             {/* Hero CTA */}
@@ -534,10 +534,10 @@ export default function HomePage() {
         <section className="py-12 sm:py-16 bg-muted/30">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Let's talk about your growth strategy
+              Ready to Build Your Growth Strategy?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Book a 30-minute call to discuss where you are and where you want to be. We'll share how we approach it—no pitch, just a conversation.
+              Book a 30-minute exploration call. We'll discuss where you are, where you want to be, and if this approach is right for you—no pitch, just conversation.
             </p>
             <Button asChild size="lg" className="font-semibold">
               <a
@@ -546,7 +546,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 mx-auto w-fit"
               >
-                Schedule a 30-Minute Call
+                Start the Conversation
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>

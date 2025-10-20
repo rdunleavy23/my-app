@@ -73,20 +73,17 @@ export function Approach() {
                 {/* Step indicator and connecting line */}
                 <div className="flex items-start gap-4">
                   <div className="relative flex flex-col items-center">
-                    {/* Step circle */}
+                    {/* Step circle with number */}
                     <button
                       onClick={() => onChange(it.key)}
                       className={clsx(
-                        "w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all",
+                        "w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all font-semibold text-sm",
                         value === it.key
-                          ? "bg-background border-primary"
-                          : "bg-muted border-muted-foreground"
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-muted text-muted-foreground border-muted-foreground"
                       )}
                     >
-                      <div className={clsx(
-                        "w-3 h-3 rounded-full",
-                        value === it.key ? "bg-primary" : "bg-muted-foreground"
-                      )} />
+                      {index + 1}
                     </button>
                     
                     {/* Connecting line (except for last item) */}
@@ -167,90 +164,80 @@ export function Approach() {
           </div>
         </div>
 
-        {/* Desktop: Horizontal tabs */}
-        <TabsList
-          aria-label="Approach pillars"
-          className="hidden md:grid md:grid-cols-3 md:gap-2"
-        >
-          {APPROACH_ITEMS.map((it) => (
-            <TabsTrigger
-              key={it.key}
-              value={it.key}
-              id={`tab-${it.key}`}
-              aria-controls={`panel-${it.key}`}
-              className={clsx(
-                "text-left whitespace-nowrap",
-                "data-[state=active]:bg-muted data-[state=active]:border data-[state=active]:shadow-sm"
-              )}
-            >
-              {it.title}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-
-        {/* Desktop: Tab content */}
+        {/* Desktop: Timeline Layout */}
         <div className="hidden md:block">
-          {APPROACH_ITEMS.map((it) => (
-            <TabsContent
-              key={it.key}
-              value={it.key}
-              id={`panel-${it.key}`}
-              aria-labelledby={`tab-${it.key}`}
-            >
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium">{it.title}</h3>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border" />
+            
+            {/* Timeline items */}
+            <div className="space-y-12">
+              {APPROACH_ITEMS.map((it, index) => (
+                <div key={it.key} className="relative flex gap-8">
+                  {/* Timeline marker */}
+                  <div className="flex-shrink-0 relative z-10">
+                    <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl shadow-lg">
+                      {index + 1}
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1 pt-2 pb-4">
+                    <h3 className="text-xl font-semibold mb-3">{it.title}</h3>
+                    <div className="space-y-3">
+                      {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
+                    </div>
+                    
+                    {/* Optional detail buckets */}
+                    <div className="flex flex-wrap items-center gap-3 mt-4">
+                      {it.how && it.how.length > 0 && (
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => trackApproachHowOpen(it.title)}
+                              aria-haspopup="dialog"
+                              aria-label={`${LABELS.how}: ${it.title}`}
+                            >
+                              {LABELS.how}
+                            </Button>
+                          </PopoverTrigger>
+                          <PopoverContent className="max-w-md text-sm leading-relaxed" align="start">
+                            <VisuallyHidden><h4>{LABELS.how} — {it.title}</h4></VisuallyHidden>
+                            <div className="space-y-2">
+                              {it.how.map((h, i) => renderParagraph(h, i))}
+                            </div>
+                          </PopoverContent>
+                        </Popover>
+                      )}
 
-                {/* Render every paragraph exactly as provided */}
-                {it.body.map((paragraph, i) => renderParagraph(paragraph, i))}
-
-                {/* Optional detail buckets — render only if you provided them */}
-                <div className="flex flex-wrap items-center gap-3">
-                  {it.how && it.how.length > 0 && (
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={() => trackApproachHowOpen(it.title)}
-                          aria-haspopup="dialog"
-                          aria-label={`${LABELS.how}: ${it.title}`}
-                        >
-                          {LABELS.how}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="max-w-md text-sm leading-relaxed" align="start">
-                        <VisuallyHidden><h4>{LABELS.how} — {it.title}</h4></VisuallyHidden>
-                        <div className="space-y-2">
-                          {it.how.map((h, i) => renderParagraph(h, i))}
-                        </div>
-                      </PopoverContent>
-                    </Popover>
-                  )}
-
-                  {it.deliverables && it.deliverables.length > 0 && (
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => trackApproachDeliverablesOpen(it.title)}
-                          aria-label={`${LABELS.deliverables}: ${it.title}`}
-                        >
-                          {LABELS.deliverables}
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent>
-                        <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
-                        <ul className="list-disc pl-5 space-y-1 text-sm">
-                          {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
-                        </ul>
-                      </DialogContent>
-                    </Dialog>
-                  )}
+                      {it.deliverables && it.deliverables.length > 0 && (
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => trackApproachDeliverablesOpen(it.title)}
+                              aria-label={`${LABELS.deliverables}: ${it.title}`}
+                            >
+                              {LABELS.deliverables}
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent>
+                            <DialogHeader><DialogTitle>{LABELS.deliverables}</DialogTitle></DialogHeader>
+                            <ul className="list-disc pl-5 space-y-1 text-sm">
+                              {it.deliverables.map((d) => (<li key={d}>{d}</li>))}
+                            </ul>
+                          </DialogContent>
+                        </Dialog>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </TabsContent>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
       </Tabs>
       </div>
