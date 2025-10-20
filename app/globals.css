@@ -615,41 +615,4 @@ html:not(.dark) body { background: #f6f7f8; }
   .mobile-menu-focus {
     transition: box-shadow 150ms ease-out;
   }
-
-  /* Custom slide-down animation from underneath header */
-  @keyframes slide-down-from-header {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slide-up-to-header {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-  }
-
-  .mobile-menu-custom {
-    animation: slide-down-from-header 300ms ease-out;
-  }
-
-  .mobile-menu-custom[data-state="closed"] {
-    animation: slide-up-to-header 300ms ease-out;
-  }
-}
-
-/* Custom backdrop for mobile menu */
-[data-radix-dialog-overlay] {
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
 }

@@ -130,14 +130,12 @@ export default function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent 
-                side="right" 
-                className="w-screen rounded-none border-0 p-0 mobile-menu-custom bg-[#f5f4f0]"
+                side="top"
+                showClose={false}
+                className="w-screen rounded-none border-0 p-0 bg-[#f5f4f0]"
                 style={{
                   top: '56px',
-                  left: 0,
-                  right: 0,
                   height: 'calc(100vh - 56px)',
-                  transform: 'none',
                 }}
                 id="mobile-menu"
                 role="dialog"
@@ -157,7 +155,7 @@ export default function Navbar() {
                           closeMenu();
                           handleMobileNavClick('Our Story', '/about');
                         }}
-                        className="mobile-menu-item mobile-menu-focus block text-3xl font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
+                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
                         aria-current={pathname === '/about' ? 'page' : undefined}
                       >
                         Our Story
@@ -168,7 +166,7 @@ export default function Navbar() {
                           closeMenu();
                           handleMobileNavClick('How It Works', '/process');
                         }}
-                        className="mobile-menu-item mobile-menu-focus block text-3xl font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 text-foreground"
+                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 text-foreground"
                         aria-current={pathname === '/process' ? 'page' : undefined}
                       >
                         How It Works
