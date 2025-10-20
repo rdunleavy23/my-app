@@ -60,7 +60,7 @@ export default function AboutPage() {
   const ryanSchema = createPersonSchema({
     name: "Ryan Dunleavy",
     jobTitle: "Growth Strategist & Partner",
-    description: "Ryan is driven by curiosity. He's usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.",
+    description: "Ryan is driven by curiosity. He\'s usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.",
     image: "https://www.patterngrowth.com/team/ryan.png"
   });
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
     {
       name: "Ryan",
       role: "Partner", 
-      bio: 'Ryan is driven by curiosity. He's usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.',
+      bio: 'Ryan is driven by curiosity. He\'s usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.',
       photo: "/team/ryan.png",
     },
   ]
