@@ -34,9 +34,16 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/patterngrowth-logo.svg", type: "image/svg+xml" },
+      { url: "/patterngrowth-logo-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/patterngrowth-logo-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/patterngrowth-logo-48.png", sizes: "48x48", type: "image/png" },
       { url: "/patterngrowth-android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
       { url: "/patterngrowth-android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    shortcut: [
+      { url: "/patterngrowth-logo-48.png", sizes: "48x48", type: "image/png" },
     ],
     apple: [
       { url: "/patterngrowth-apple-touch-icon.png", sizes: "180x180", type: "image/png" },
@@ -75,7 +82,7 @@ export default function RootLayout({
               name: "Pattern Growth",
               description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
               url: "https://www.patterngrowth.com",
-              logo: "https://www.patterngrowth.com/patterngrowth-logo.svg",
+              logo: "https://www.patterngrowth.com/patterngrowth-android-chrome-512x512.png",
               sameAs: [
                 "https://twitter.com/patterngrowth"
               ],
