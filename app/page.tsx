@@ -1,5 +1,3 @@
-"use client"
-
 // app/page.tsx
 import type { Metadata } from "next"
 import Link from "next/link"
@@ -30,24 +28,11 @@ import { Suspense } from "react"
 import { FAQSchema } from "@/components/faq-schema"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { HomeCarousel } from "@/components/home-carousel"
-import { useScrollDepth } from "@/hooks/use-scroll-depth"
-import { trackCTAClick } from "@/lib/analytics"
 
 // Note: Metadata export needs to be in a separate server component or root layout
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
 
 export default function HomePage() {
-  // Enable scroll depth tracking
-  useScrollDepth();
-
-  const handleCTAClick = (location: 'hero' | 'content') => {
-    trackCTAClick({
-      cta_location: location,
-      cta_text: 'Schedule a Call',
-      cta_destination: 'https://cal.com/pattern-growth/30min',
-    });
-  };
-
   return (
     <>
 
@@ -413,7 +398,6 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 mx-auto w-fit"
-                onClick={() => handleCTAClick('content')}
               >
                 Schedule a Call
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
