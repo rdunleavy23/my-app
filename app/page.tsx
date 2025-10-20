@@ -69,12 +69,12 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
-                  Schedule a Call
+                  Start a Conversation
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
               <p className="text-sm text-muted-foreground">
-                30-minute intro call · No pressure
+                30-minute exploration call · No pitch, just conversation
               </p>
             </div>
 
@@ -411,7 +411,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 mx-auto w-fit"
               >
-                Start the Conversation
+                Start a Conversation
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
