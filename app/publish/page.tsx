@@ -12,6 +12,7 @@ export default function PublishPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [publishedUrl, setPublishedUrl] = useState('');
+  const [isLive, setIsLive] = useState(false);
   const [isFormStarted, setIsFormStarted] = useState(false);
 
   // Track form start when user begins typing
