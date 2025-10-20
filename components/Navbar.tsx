@@ -132,6 +132,10 @@ export default function Navbar() {
               <SheetContent 
                 side="top" 
                 className="w-screen h-screen rounded-none border-0 p-0 mobile-menu-slide"
+                style={{
+                  top: '56px', // Start from underneath the header (h-14 = 56px)
+                  height: 'calc(100vh - 56px)' // Adjust height to account for header
+                }}
                 id="mobile-menu"
                 role="dialog"
                 aria-modal="true"
@@ -141,27 +145,8 @@ export default function Navbar() {
                   {/* Screen reader title */}
                   <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
                   
-                  {/* Fixed header section matching desktop nav */}
-                  <div className="sticky top-0 z-10 border-b bg-background">
-                    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-                      <div className="flex h-14 items-center justify-between">
-                        <Logo />
-                        <SheetTrigger asChild>
-                          <Button 
-                            variant="ghost" 
-                            size="icon"
-                            className="text-muted-foreground"
-                            aria-label="Close menu"
-                          >
-                            <AnimatedMenuIcon isOpen={open} aria-hidden="true" />
-                          </Button>
-                        </SheetTrigger>
-                      </div>
-                    </div>
-                  </div>
-                  
                   {/* Navigation items with larger typography and spacing */}
-                  <div className="flex-1 overflow-y-auto px-6 py-12">
+                  <div className="flex-1 px-6 py-12">
                     <nav className="mb-8" role="navigation" aria-label="Main navigation">
                       <Link
                         href="/about"
