@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { AnimatedMenuIcon } from "@/components/ui/animated-menu-icon"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -126,12 +126,12 @@ export default function Navbar() {
                   aria-expanded={open}
                   aria-controls="mobile-menu"
                 >
-                  <Menu className="h-5 w-5" aria-hidden="true" />
+                  <AnimatedMenuIcon isOpen={open} aria-hidden="true" />
                 </Button>
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-screen sm:w-80 h-screen rounded-none border-0 p-0 mobile-menu-slide"
+                className="w-screen h-screen rounded-none border-0 p-0 mobile-menu-slide"
                 id="mobile-menu"
                 role="dialog"
                 aria-modal="true"
@@ -141,36 +141,37 @@ export default function Navbar() {
                   {/* Screen reader title */}
                   <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
                   
-                  {/* Primary CTA at top - following user instruction */}
-                  <div className="px-6 py-6 border-b">
-                    <Link
-                      href="https://cal.com/pattern-growth"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => {
-                        closeMenu();
-                        handleCTAClick('mobile_menu');
-                      }}
-                      className="mobile-menu-item mobile-menu-focus block px-4 py-4 rounded-lg text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-center"
-                      aria-label="Schedule a call (opens in new tab)"
-                    >
-                      Schedule a Call →
-                    </Link>
+                  {/* Fixed header section matching desktop nav */}
+                  <div className="sticky top-0 z-10 border-b bg-background">
+                    <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+                      <div className="flex h-14 items-center justify-between">
+                        <Logo />
+                        <SheetTrigger asChild>
+                          <Button 
+                            variant="ghost" 
+                            size="icon"
+                            aria-label="Close menu"
+                          >
+                            <AnimatedMenuIcon isOpen={open} aria-hidden="true" />
+                          </Button>
+                        </SheetTrigger>
+                      </div>
+                    </div>
                   </div>
                   
-                  {/* Navigation items */}
-                  <div className="flex-1 px-6 py-8">
-                    <nav className="space-y-4" role="navigation" aria-label="Main navigation">
+                  {/* Navigation items with larger typography and spacing */}
+                  <div className="flex-1 px-6 py-12">
+                    <nav className="space-y-12" role="navigation" aria-label="Main navigation">
                       <Link
                         href="/about"
                         onClick={() => {
                           closeMenu();
                           handleMobileNavClick('Our Story', '/about');
                         }}
-                        className={`mobile-menu-item mobile-menu-focus block px-4 py-3 rounded-lg text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                        className={`mobile-menu-item mobile-menu-focus block text-2xl font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                           pathname === '/about'
-                            ? 'bg-muted text-foreground'
-                            : 'text-foreground hover:bg-muted'
+                            ? 'text-primary'
+                            : 'text-foreground hover:text-primary'
                         }`}
                         aria-current={pathname === '/about' ? 'page' : undefined}
                       >
@@ -182,16 +183,34 @@ export default function Navbar() {
                           closeMenu();
                           handleMobileNavClick('How It Works', '/process');
                         }}
-                        className={`mobile-menu-item mobile-menu-focus block px-4 py-3 rounded-lg text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                        className={`mobile-menu-item mobile-menu-focus block text-2xl font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                           pathname === '/process'
-                            ? 'bg-muted text-foreground'
-                            : 'text-foreground hover:bg-muted'
+                            ? 'text-primary'
+                            : 'text-foreground hover:text-primary'
                         }`}
                         aria-current={pathname === '/process' ? 'page' : undefined}
                       >
                         How It Works
                       </Link>
                     </nav>
+                  </div>
+                  
+                  {/* Bottom CTA section */}
+                  <div className="sticky bottom-0 px-6 py-6 border-t bg-background">
+                    <Button asChild className="w-full h-12 text-base">
+                      <Link 
+                        href="https://cal.com/pattern-growth"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          closeMenu();
+                          handleCTAClick('mobile_menu');
+                        }}
+                        aria-label="Schedule a call (opens in new tab)"
+                      >
+                        Schedule a Call →
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </SheetContent>
