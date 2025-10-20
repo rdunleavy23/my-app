@@ -29,7 +29,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { HomeCarousel } from "@/components/home-carousel"
 import { useScrollDepth } from "@/hooks/use-scroll-depth"
-import { trackCTAClick } from "@/lib/analytics-events"
+import { trackCTAClick } from "@/lib/analytics"
 
 // Note: Metadata export needs to be in a separate server component or root layout
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
