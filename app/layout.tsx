@@ -7,6 +7,7 @@ import Script from "next/script"
 import Navbar from "@/components/Navbar"
 import SiteFooter from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ErrorBoundary } from "@/components/error-boundary"
 
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
@@ -67,11 +68,13 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
         <ThemeProvider>
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
+          <ErrorBoundary>
+            <Navbar />
+            <main className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+          </ErrorBoundary>
         </ThemeProvider>
       </body>
     </html>

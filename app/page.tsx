@@ -34,6 +34,7 @@ import {
 import { Approach } from "./(marketing)/_sections/approach"
 import { Suspense, useEffect, useState } from "react"
 import { FAQSchema } from "@/components/faq-schema"
+import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { cn } from "@/lib/utils"
 
 // Note: Metadata export needs to be in a separate server component or root layout
@@ -87,11 +88,11 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="py-10 sm:py-20">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
-            <h1 className="text-[2.75rem] leading-[1.15] font-bold tracking-tight text-foreground sm:text-6xl sm:leading-tight mb-5 sm:mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl leading-tight font-bold tracking-tight text-foreground mb-6 text-balance">
               Your Marketing Strategy, Built From Scratch in 8 Weeks
             </h1>
 
-            <p className="text-[1.125rem] sm:text-xl text-muted-foreground mb-7 sm:mb-8 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
               Complete growth strategy built from your actual data. Fixed scope, executive-level work, full ownership transfer. No retainers.
             </p>
 
@@ -116,14 +117,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<ApproachSkeleton />}>
           <Approach />
         </Suspense>
 
         {/* What Our Growth Strategy Sprint Includes */}
         <section className="py-12 sm:py-16 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="text-3xl font-bold tracking-tight mb-8">
+            <h2 className="text-2xl font-bold tracking-tight mb-8">
               What Our Growth Strategy Sprint Includes
             </h2>
 
@@ -139,12 +140,12 @@ export default function HomePage() {
               >
                 <CarouselContent>
                   <CarouselItem>
-                    <Card className="transition-all hover:shadow-md">
+                    <Card className="motion-safe:transition-shadow hover:shadow-lg">
                       <CardHeader>
                         <div className="mb-3">
                           <Zap className="h-8 w-8 text-primary" />
                         </div>
-                        <CardTitle className="text-lg">Quick Wins in 30 Days</CardTitle>
+                        <CardTitle className="text-xl">Quick Wins in 30 Days</CardTitle>
                       </CardHeader>
                       <CardContent className="text-muted-foreground">
                         <p className="text-sm leading-relaxed">
@@ -155,12 +156,12 @@ export default function HomePage() {
                   </CarouselItem>
 
                   <CarouselItem>
-                    <Card className="transition-all hover:shadow-md">
+                    <Card className="motion-safe:transition-shadow hover:shadow-lg">
                       <CardHeader>
                         <div className="mb-3">
                           <Building2 className="h-8 w-8 text-primary" />
                         </div>
-                        <CardTitle className="text-lg">Growth Infrastructure You Own</CardTitle>
+                        <CardTitle className="text-xl">Growth Infrastructure You Own</CardTitle>
                       </CardHeader>
                       <CardContent className="text-muted-foreground">
                         <p className="text-sm leading-relaxed">
@@ -171,12 +172,12 @@ export default function HomePage() {
                   </CarouselItem>
 
                   <CarouselItem>
-                    <Card className="transition-all hover:shadow-md">
+                    <Card className="motion-safe:transition-shadow hover:shadow-lg">
                       <CardHeader>
                         <div className="mb-3">
                           <TrendingUp className="h-8 w-8 text-primary" />
                         </div>
-                        <CardTitle className="text-lg">Revenue-Connected Strategy</CardTitle>
+                        <CardTitle className="text-xl">Revenue-Connected Strategy</CardTitle>
                       </CardHeader>
                       <CardContent className="text-muted-foreground">
                         <p className="text-sm leading-relaxed">
@@ -187,12 +188,12 @@ export default function HomePage() {
                   </CarouselItem>
 
                   <CarouselItem>
-                    <Card className="transition-all hover:shadow-md">
+                    <Card className="motion-safe:transition-shadow hover:shadow-lg">
                       <CardHeader>
                         <div className="mb-3">
                           <Target className="h-8 w-8 text-primary" />
                         </div>
-                        <CardTitle className="text-lg">Brand Positioning That Sells</CardTitle>
+                        <CardTitle className="text-xl">Brand Positioning That Sells</CardTitle>
                       </CardHeader>
                       <CardContent className="text-muted-foreground">
                         <p className="text-sm leading-relaxed">
@@ -203,12 +204,12 @@ export default function HomePage() {
                   </CarouselItem>
 
                   <CarouselItem>
-                    <Card className="transition-all hover:shadow-md">
+                    <Card className="motion-safe:transition-shadow hover:shadow-lg">
                       <CardHeader>
                         <div className="mb-3">
                           <LinkIcon className="h-8 w-8 text-primary" />
                         </div>
-                        <CardTitle className="text-lg">Marketing & Revenue Alignment</CardTitle>
+                        <CardTitle className="text-xl">Marketing & Revenue Alignment</CardTitle>
                       </CardHeader>
                       <CardContent className="text-muted-foreground">
                         <p className="text-sm leading-relaxed">
@@ -239,10 +240,10 @@ export default function HomePage() {
             {/* Desktop: Bento Grid Layout */}
             <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Quick Wins - Spans 2 columns on large screens */}
-              <Card className="lg:col-span-2 transition-all hover:-translate-y-1 hover:shadow-lg group">
+              <Card className="lg:col-span-2 motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <Zap className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+                    <Zap className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
                   </div>
                   <CardTitle className="text-xl">Quick Wins in 30 Days</CardTitle>
                 </CardHeader>
@@ -254,10 +255,10 @@ export default function HomePage() {
               </Card>
 
               {/* Growth Infrastructure */}
-              <Card className="transition-all hover:-translate-y-1 hover:shadow-lg group">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <Building2 className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+                    <Building2 className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
                   </div>
                   <CardTitle className="text-xl">Growth Infrastructure You Own</CardTitle>
                 </CardHeader>
@@ -269,10 +270,10 @@ export default function HomePage() {
               </Card>
 
               {/* Revenue-Connected Strategy */}
-              <Card className="transition-all hover:-translate-y-1 hover:shadow-lg group">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <TrendingUp className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+                    <TrendingUp className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
                   </div>
                   <CardTitle className="text-xl">Revenue-Connected Strategy</CardTitle>
                 </CardHeader>
@@ -284,10 +285,10 @@ export default function HomePage() {
               </Card>
 
               {/* Brand Positioning */}
-              <Card className="transition-all hover:-translate-y-1 hover:shadow-lg group">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <Target className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+                    <Target className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
                   </div>
                   <CardTitle className="text-xl">Brand Positioning That Sells</CardTitle>
                 </CardHeader>
@@ -299,10 +300,10 @@ export default function HomePage() {
               </Card>
 
               {/* Marketing & Revenue Alignment */}
-              <Card className="transition-all hover:-translate-y-1 hover:shadow-lg group">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
                 <CardHeader>
                   <div className="mb-3">
-                    <LinkIcon className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+                    <LinkIcon className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" />
                   </div>
                   <CardTitle className="text-xl">Marketing & Revenue Alignment</CardTitle>
                 </CardHeader>
@@ -319,7 +320,7 @@ export default function HomePage() {
         {/* How We Work Differently */}
         <section className="py-12 sm:py-16 bg-muted/30 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-8">How We Work Differently</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8">How We Work Differently</h2>
             
             {/* Mobile: Simplified List */}
             <div className="md:hidden space-y-6">
@@ -328,7 +329,7 @@ export default function HomePage() {
                   <UserCog className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold mb-1">Limited Capacity by Design</h3>
+                  <h3 className="text-xl font-semibold mb-1">Limited Capacity by Design</h3>
                   <p className="text-muted-foreground text-sm">
                     We take 2-3 clients per quarter, not 10. This ensures you get direct founder involvement instead of a junior team executing a playbook.
                   </p>
@@ -340,7 +341,7 @@ export default function HomePage() {
                   <Puzzle className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold mb-1">Strategy Built From Your Context</h3>
+                  <h3 className="text-xl font-semibold mb-1">Strategy Built From Your Context</h3>
                   <p className="text-muted-foreground text-sm">
                     We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics—then design a strategy that fits your reality.
                   </p>
@@ -352,7 +353,7 @@ export default function HomePage() {
                   <Database className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold mb-1">Data Before Assumptions</h3>
+                  <h3 className="text-xl font-semibold mb-1">Data Before Assumptions</h3>
                   <p className="text-muted-foreground text-sm">
                     If your data infrastructure is fragmented or missing, we build it first. We can't create reliable strategy from guesswork.
                   </p>
@@ -364,7 +365,7 @@ export default function HomePage() {
                   <Gift className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold mb-1">Built to Transfer, Not Retain</h3>
+                  <h3 className="text-xl font-semibold mb-1">Built to Transfer, Not Retain</h3>
                   <p className="text-muted-foreground text-sm">
                     Our success metric isn't a long-term consulting relationship—it's your team executing independently. We train as we build so knowledge transfers naturally.
                   </p>
@@ -376,7 +377,7 @@ export default function HomePage() {
                   <Handshake className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold mb-1">Handoff Shaped for Your Team</h3>
+                  <h3 className="text-xl font-semibold mb-1">Handoff Shaped for Your Team</h3>
                   <p className="text-muted-foreground text-sm">
                     Whether you're running lean, working with an agency, or building an internal team, we design the handoff for your specific situation.
                   </p>
@@ -386,12 +387,12 @@ export default function HomePage() {
 
             {/* Desktop: Card Grid */}
             <div className="hidden md:grid md:grid-cols-2 gap-6">
-              <Card className="transition-all hover:shadow-md">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
                     <UserCog className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">Limited Capacity by Design</CardTitle>
+                  <CardTitle className="text-xl">Limited Capacity by Design</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
@@ -400,12 +401,12 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="transition-all hover:shadow-md">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
                     <Puzzle className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">Strategy Built From Your Context</CardTitle>
+                  <CardTitle className="text-xl">Strategy Built From Your Context</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
@@ -414,12 +415,12 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="transition-all hover:shadow-md">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
                     <Database className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">Data Before Assumptions</CardTitle>
+                  <CardTitle className="text-xl">Data Before Assumptions</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
@@ -428,12 +429,12 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="transition-all hover:shadow-md">
+              <Card className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
                     <Gift className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">Built to Transfer, Not Retain</CardTitle>
+                  <CardTitle className="text-xl">Built to Transfer, Not Retain</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
@@ -442,12 +443,12 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="md:col-span-2 transition-all hover:shadow-md">
+              <Card className="md:col-span-2 motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="mb-3">
                     <Handshake className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">Handoff Shaped for Your Team</CardTitle>
+                  <CardTitle className="text-xl">Handoff Shaped for Your Team</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
@@ -463,7 +464,7 @@ export default function HomePage() {
         <section className="py-12 sm:py-16 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold tracking-tight mb-2">
+              <h2 className="text-2xl font-bold tracking-tight mb-2">
                 Frequently Asked Questions
               </h2>
               <p className="text-muted-foreground">
@@ -533,10 +534,10 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="py-12 sm:py-16 bg-muted/30">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4">
               Ready to Build Your Growth Strategy?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8">
               Book a 30-minute exploration call. We'll discuss where you are, where you want to be, and if this approach is right for you—no pitch, just conversation.
             </p>
             <Button asChild size="lg" className="font-semibold">

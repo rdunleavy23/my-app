@@ -36,8 +36,8 @@ export default function BlogPage() {
     <main className="container mx-auto max-w-4xl px-4 py-16">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
+        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
           Strategic insights on scaling revenue and building operational capability for growth-stage companies.
         </p>
       </div>
@@ -46,7 +46,7 @@ export default function BlogPage() {
       {posts.length > 0 && (
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Latest Insights</h2>
-          <Card className="border-2">
+          <Card className="border-2 motion-safe:transition-shadow hover:shadow-lg">
             <CardHeader>
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant="secondary">Latest</Badge>
@@ -59,10 +59,10 @@ export default function BlogPage() {
                   {posts[0].readingTime} min read
                 </div>
               </div>
-              <CardTitle className="text-2xl">
+              <CardTitle className="text-xl">
                 <Link 
                   href={`/blog/${posts[0].slug}`}
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary motion-safe:transition-colors"
                 >
                   {posts[0].title}
                 </Link>
@@ -89,7 +89,7 @@ export default function BlogPage() {
           <h2 className="text-2xl font-semibold mb-6">All Articles</h2>
           <div className="grid gap-6">
             {posts.slice(1).map((post) => (
-              <Card key={post.slug} className="hover:shadow-md transition-shadow">
+              <Card key={post.slug} className="motion-safe:transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
@@ -104,7 +104,7 @@ export default function BlogPage() {
                   <CardTitle className="text-xl">
                     <Link 
                       href={`/blog/${post.slug}`}
-                      className="hover:text-primary transition-colors"
+                      className="hover:text-primary motion-safe:transition-colors"
                     >
                       {post.title}
                     </Link>
@@ -130,7 +130,7 @@ export default function BlogPage() {
       {/* CTA Section */}
       <div className="mt-16 text-center bg-muted/50 rounded-lg p-8">
         <h3 className="text-2xl font-semibold mb-4">Ready to Scale Your Growth Strategy?</h3>
-        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+        <p className="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
           Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
