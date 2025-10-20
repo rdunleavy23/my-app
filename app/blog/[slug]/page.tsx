@@ -157,17 +157,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-                onClick={() => {
-                  // Track CTA click from blog post
-                  if (typeof window !== 'undefined' && window.gtag) {
-                    window.gtag('event', 'cta_click', {
-                      cta_location: 'content',
-                      cta_text: 'Schedule Your Call',
-                      cta_destination: 'https://cal.com/pattern-growth/30min',
-                      page_location: window.location.pathname,
-                    });
-                  }
-                }}
               >
                 Schedule Your Call
               </Link>
