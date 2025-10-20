@@ -45,7 +45,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-              Complete growth strategy built from your actual data. Fixed scope, executive-level work, full ownership transfer. A project-based alternative to fractional CMO retainers.
+              Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to fractional CMO retainers.
             </p>
 
             {/* Hero CTA */}
@@ -57,12 +57,12 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
-                  Start a Conversation
+                  Schedule a Call
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </Button>
               <p className="text-sm text-muted-foreground">
-                30-minute exploration call · No pitch, just conversation
+                30-minute call · No pitch, no pressure
               </p>
             </div>
 
@@ -91,11 +91,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <Zap className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Quick Wins in 30 Days</CardTitle>
+                  <CardTitle className="text-xl">Quick Wins Start Week One</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    We start executing in week one, not month three. While we're building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends. We work fast because you need results, not another consultant ramping up.
+                    We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends. We work fast because you need results now, not another consultant ramping up.
                   </p>
                 </CardContent>
               </Card>
@@ -110,7 +110,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    We build custom systems tailored to how your business actually operates—then transfer complete ownership to you. Everything we create becomes yours: the frameworks, the documentation, the tools, the insights. When we're done, your team runs independently with no ongoing dependency on us.
+                    We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights. When we're done, your team runs independently with no ongoing dependency on us.
                   </p>
                 </CardContent>
               </Card>
@@ -121,11 +121,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <TrendingUp className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Revenue-Connected Strategy</CardTitle>
+                  <CardTitle className="text-xl">Strategy Connected to Revenue</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    Most marketing roadmaps prioritize busy work over business impact. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual performance data.
+                    Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
                   </p>
                 </CardContent>
               </Card>
@@ -140,7 +140,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    We clarify who you serve, why you're different, and how to say it consistently across every channel. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience. One clear message that resonates wherever prospects find you.
+                    We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience. One clear message that resonates wherever prospects find you.
                   </p>
                 </CardContent>
               </Card>
@@ -151,11 +151,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <LinkIcon className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Marketing & Revenue Alignment</CardTitle>
+                  <CardTitle className="text-xl">Marketing That Drives Revenue</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    Whether you have a dedicated sales team or growth happens through product-led motion, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or metrics that don't predict growth. Just marketing that supports the way you win customers and drive results.
+                    Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics. Just marketing that drives the results that matter.
                   </p>
                 </CardContent>
               </Card>
@@ -390,7 +390,7 @@ export default function HomePage() {
               Ready to Build Your Growth Strategy?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8">
-              Book a 30-minute exploration call. We'll discuss where you are, where you want to be, and if this approach is right for you—no pitch, just conversation.
+              Book a 30-minute call. We'll discuss where you are, where you want to be, and if this approach is right for you—no pitch, just conversation.
             </p>
             <Button asChild size="lg" className="font-semibold">
               <a
@@ -399,7 +399,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 mx-auto w-fit"
               >
-                Start a Conversation
+                Schedule a Call
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </Button>

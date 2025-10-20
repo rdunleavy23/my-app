@@ -41,9 +41,9 @@ export function HomeCarousel() {
               <div className="mb-3">
                 <Zap className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Quick Wins in 30 Days</h3>
+              <h3 className="text-xl font-semibold mb-3">Quick Wins Start Week One</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We start executing in week one, not month three. While we're building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends.
+                We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends. We work fast because you need results now, not another consultant ramping up.
               </p>
             </div>
           </CarouselItem>
@@ -55,7 +55,7 @@ export function HomeCarousel() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Growth Infrastructure You Own</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We build custom systems tailored to how your business actually operates—then transfer complete ownership to you. Everything we create becomes yours: the frameworks, the documentation, the tools, the insights.
+                We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights.
               </p>
             </div>
           </CarouselItem>
@@ -65,9 +65,9 @@ export function HomeCarousel() {
               <div className="mb-3">
                 <TrendingUp className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Revenue-Connected Strategy</h3>
+              <h3 className="text-xl font-semibold mb-3">Strategy Connected to Revenue</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Most marketing roadmaps prioritize busy work over business impact. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure.
+                Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure.
               </p>
             </div>
           </CarouselItem>
@@ -79,7 +79,7 @@ export function HomeCarousel() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Brand Positioning That Sells</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We clarify who you serve, why you're different, and how to say it consistently across every channel. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
               </p>
             </div>
           </CarouselItem>
@@ -89,9 +89,9 @@ export function HomeCarousel() {
               <div className="mb-3">
                 <LinkIcon className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Marketing & Revenue Alignment</h3>
+              <h3 className="text-xl font-semibold mb-3">Marketing That Drives Revenue</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Whether you have a dedicated sales team or growth happens through product-led motion, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or metrics that don't predict growth.
+                Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
               </p>
             </div>
           </CarouselItem>
