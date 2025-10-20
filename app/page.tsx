@@ -38,7 +38,7 @@ export default function HomePage() {
   // Enable scroll depth tracking
   useScrollDepth();
 
-  const handleCTAClick = (location: 'hero' | 'cta_section') => {
+  const handleCTAClick = (location: 'hero' | 'content') => {
     trackCTAClick({
       cta_location: location,
       cta_text: 'Schedule a Call',
@@ -411,7 +411,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 mx-auto w-fit"
-                onClick={() => handleCTAClick('cta_section')}
+                onClick={() => handleCTAClick('content')}
               >
                 Schedule a Call
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
