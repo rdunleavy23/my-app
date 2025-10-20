@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { trackFormStart, trackFormSubmit, trackFormError } from '@/lib/analytics';
 
 export default function PublishPage() {
   const [password, setPassword] = useState('');
@@ -11,7 +12,17 @@ export default function PublishPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [publishedUrl, setPublishedUrl] = useState('');
-  const [isLive, setIsLive] = useState(false);
+  const [isFormStarted, setIsFormStarted] = useState(false);
+
+  // Track form start when user begins typing
+  useEffect(() => {
+    if ((password || title || description || content) && !isFormStarted) {
+      setIsFormStarted(true);
+      trackFormStart({
+        form_name: 'publish_post',
+      });
+    }
+  }, [password, title, description, content, isFormStarted]);
 
   // Poll until new page is live
   useEffect(() => {
@@ -31,10 +42,26 @@ export default function PublishPage() {
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     setError('');
+    
+    // Track validation errors
     if (!password || !title || !description || !content) {
+      const missingFields = [];
+      if (!password) missingFields.push('password');
+      if (!title) missingFields.push('title');
+      if (!description) missingFields.push('description');
+      if (!content) missingFields.push('content');
+      
+      trackFormError({
+        form_name: 'publish_post',
+        error_type: 'validation',
+        field_name: missingFields.join(', '),
+        error_message: 'All fields are required.',
+      });
+      
       setError('All fields are required.');
       return;
     }
+    
     setIsSubmitting(true);
     try {
       const res = await fetch('/api/publish-post', {
@@ -44,10 +71,31 @@ export default function PublishPage() {
       });
       const data = await res.json();
       setIsSubmitting(false);
-      if (!res.ok) { setError(data.error || 'Failed to publish.'); return; }
+      
+      if (!res.ok) {
+        trackFormError({
+          form_name: 'publish_post',
+          error_type: 'server',
+          error_message: data.error || 'Failed to publish.',
+        });
+        setError(data.error || 'Failed to publish.');
+        return;
+      }
+      
+      // Track successful submission
+      trackFormSubmit({
+        form_name: 'publish_post',
+        form_fields_count: 5,
+      });
+      
       if (data.url) setPublishedUrl(data.url);
-    } catch {
+    } catch (error) {
       setIsSubmitting(false);
+      trackFormError({
+        form_name: 'publish_post',
+        error_type: 'network',
+        error_message: 'Network error.',
+      });
       setError('Network error.');
     }
   };
@@ -56,6 +104,7 @@ export default function PublishPage() {
     setPassword(''); setTitle(''); setDescription('');
     setAuthor('Ryan'); setContent('');
     setError(''); setPublishedUrl(''); setIsLive(false);
+    setIsFormStarted(false); // Reset form start tracking
   };
 
   if (publishedUrl) {

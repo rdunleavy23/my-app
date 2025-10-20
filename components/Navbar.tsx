@@ -13,6 +13,7 @@ import {
 import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import Logo from "@/components/Logo"
+import { trackCTAClick, trackNavigationClick } from "@/lib/analytics"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -56,6 +57,30 @@ export default function Navbar() {
 
   const closeMenu = () => setOpen(false)
 
+  const handleCTAClick = (location: 'navbar' | 'mobile_menu') => {
+    trackCTAClick({
+      cta_location: location,
+      cta_text: 'Schedule a Call',
+      cta_destination: 'https://cal.com/pattern-growth',
+    });
+  };
+
+  const handleNavClick = (linkText: string, linkDestination: string) => {
+    trackNavigationClick({
+      navigation_type: 'desktop',
+      link_text: linkText,
+      link_destination: linkDestination,
+    });
+  };
+
+  const handleMobileNavClick = (linkText: string, linkDestination: string) => {
+    trackNavigationClick({
+      navigation_type: 'mobile',
+      link_text: linkText,
+      link_destination: linkDestination,
+    });
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -67,17 +92,24 @@ export default function Navbar() {
             <Link
               href="/about"
               className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
+              onClick={() => handleNavClick('Our Story', '/about')}
             >
               Our Story
             </Link>
             <Link
               href="/process"
               className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
+              onClick={() => handleNavClick('How It Works', '/process')}
             >
               How It Works
             </Link>
             <Button asChild className="h-9">
-              <Link href="https://cal.com/pattern-growth">Schedule a Call →</Link>
+              <Link 
+                href="https://cal.com/pattern-growth"
+                onClick={() => handleCTAClick('navbar')}
+              >
+                Schedule a Call →
+              </Link>
             </Button>
             <ThemeToggle />
           </nav>
@@ -115,7 +147,10 @@ export default function Navbar() {
                       href="https://cal.com/pattern-growth"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={closeMenu}
+                      onClick={() => {
+                        closeMenu();
+                        handleCTAClick('mobile_menu');
+                      }}
                       className="mobile-menu-item mobile-menu-focus block px-4 py-4 rounded-lg text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-center"
                       aria-label="Schedule a call (opens in new tab)"
                     >
@@ -128,7 +163,10 @@ export default function Navbar() {
                     <nav className="space-y-4" role="navigation" aria-label="Main navigation">
                       <Link
                         href="/about"
-                        onClick={closeMenu}
+                        onClick={() => {
+                          closeMenu();
+                          handleMobileNavClick('Our Story', '/about');
+                        }}
                         className={`mobile-menu-item mobile-menu-focus block px-4 py-3 rounded-lg text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                           pathname === '/about'
                             ? 'bg-muted text-foreground'
@@ -140,7 +178,10 @@ export default function Navbar() {
                       </Link>
                       <Link
                         href="/process"
-                        onClick={closeMenu}
+                        onClick={() => {
+                          closeMenu();
+                          handleMobileNavClick('How It Works', '/process');
+                        }}
                         className={`mobile-menu-item mobile-menu-focus block px-4 py-3 rounded-lg text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                           pathname === '/process'
                             ? 'bg-muted text-foreground'

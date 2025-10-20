@@ -33,6 +33,17 @@ import { HomeCarousel } from "@/components/home-carousel"
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
 
 export default function HomePage() {
+  // Enable scroll depth tracking
+  useScrollDepth();
+
+  const handleCTAClick = (location: 'hero' | 'cta_section') => {
+    trackCTAClick({
+      cta_location: location,
+      cta_text: 'Schedule a Call',
+      cta_destination: 'https://cal.com/pattern-growth/30min',
+    });
+  };
+
   return (
     <>
 
@@ -95,7 +106,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends. We work fast because you need results now, not another consultant ramping up.
+                    We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
                   </p>
                 </CardContent>
               </Card>
@@ -398,6 +409,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 mx-auto w-fit"
+                onClick={() => handleCTAClick('cta_section')}
               >
                 Schedule a Call
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />

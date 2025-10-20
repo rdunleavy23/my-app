@@ -43,7 +43,7 @@ export function HomeCarousel() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Quick Wins Start Week One</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements—campaign optimizations, conversion fixes, budget reallocations—that impact your pipeline before the sprint ends. We work fast because you need results now, not another consultant ramping up.
+                We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
               </p>
             </div>
           </CarouselItem>

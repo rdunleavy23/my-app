@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
+import { BlogPostTracking } from './blog-post-tracking'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -87,6 +88,12 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         }}
       />
 
+      <BlogPostTracking 
+        postTitle={post.title}
+        postAuthor={post.author.name}
+        postSlug={post.slug}
+      />
+
       <article className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-16 max-w-3xl">
           <header className="mb-12">
@@ -150,6 +157,17 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  // Track CTA click from blog post
+                  if (typeof window !== 'undefined' && window.gtag) {
+                    window.gtag('event', 'cta_click', {
+                      cta_location: 'content',
+                      cta_text: 'Schedule Your Call',
+                      cta_destination: 'https://cal.com/pattern-growth/30min',
+                      page_location: window.location.pathname,
+                    });
+                  }
+                }}
               >
                 Schedule Your Call
               </Link>

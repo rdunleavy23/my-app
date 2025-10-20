@@ -70,7 +70,11 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-DQD43BSF5Q', { anonymize_ip: true });
+            gtag('config', 'G-DQD43BSF5Q', { 
+              anonymize_ip: true,
+              send_page_view: true,
+              enhanced_measurement: true
+            });
           `}
         </Script>
         <script
