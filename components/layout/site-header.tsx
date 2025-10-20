@@ -31,7 +31,7 @@ export function SiteHeader() {
                 pathname === "/about" ? "text-foreground" : "text-foreground/60"
               )}
             >
-              Our Story
+              About Us
             </Link>
             <Link
               href="/process"

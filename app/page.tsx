@@ -181,9 +181,9 @@ export default function HomePage() {
                   <UserCog className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-1">Limited Capacity by Design</h3>
+                  <h3 className="text-xl font-semibold mb-1">We Take 2-3 Clients Per Quarter</h3>
                   <p className="text-muted-foreground text-sm">
-                    We take 2-3 clients per quarter, not 10. This ensures you get direct founder involvement instead of a junior team executing a playbook. <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">Unlike traditional fractional CMO models</Link>, when strategy requires deep understanding, scale works against quality.
+                    This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
                   </p>
                 </div>
               </div>
@@ -193,9 +193,9 @@ export default function HomePage() {
                   <Puzzle className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-1">Strategy Built From Your Context</h3>
+                  <h3 className="text-xl font-semibold mb-1">Strategy Built for Your Reality</h3>
                   <p className="text-muted-foreground text-sm">
-                    We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics—then design a strategy that fits your reality.
+                    Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
                   </p>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-1">Data Before Assumptions</h3>
                   <p className="text-muted-foreground text-sm">
-                    If your data infrastructure is fragmented or missing, we build it first. We can't create reliable strategy from guesswork.
+                    If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
                   </p>
                 </div>
               </div>
@@ -217,9 +217,9 @@ export default function HomePage() {
                   <Gift className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-1">Built to Transfer, Not Retain</h3>
+                  <h3 className="text-xl font-semibold mb-1">Built to Transfer, Not Keep You Dependent</h3>
                   <p className="text-muted-foreground text-sm">
-                    Our success metric isn't a long-term consulting relationship—it's your team executing independently. We train as we build so knowledge transfers naturally.
+                    Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
                   </p>
                 </div>
               </div>
@@ -229,9 +229,9 @@ export default function HomePage() {
                   <Handshake className="h-6 w-6 text-primary" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-1">Handoff Shaped for Your Team</h3>
+                  <h3 className="text-xl font-semibold mb-1">Handoff That Fits How You Work</h3>
                   <p className="text-muted-foreground text-sm">
-                    Whether you're running lean, working with an agency, or building an internal team, we design the handoff for your specific situation.
+                    Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
                   </p>
                 </div>
               </div>
@@ -244,11 +244,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <UserCog className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Limited Capacity by Design</CardTitle>
+                  <CardTitle className="text-xl">We Take 2-3 Clients Per Quarter</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    We take 2-3 clients per quarter, not 10. This ensures you get direct founder involvement instead of a junior team executing a playbook. When strategy requires deep understanding, scale works against quality.
+                    This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
                   </p>
                 </CardContent>
               </Card>
@@ -258,11 +258,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <Puzzle className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Strategy Built From Your Context</CardTitle>
+                  <CardTitle className="text-xl">Strategy Built for Your Reality</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    We've found that templated frameworks fail because they ignore what makes your situation unique. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics—then design a strategy that fits your reality, not someone else's.
+                    Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
                   </p>
                 </CardContent>
               </Card>
@@ -276,7 +276,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    If your data infrastructure is fragmented or missing, we build it first. We can't create reliable strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                    If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
                   </p>
                 </CardContent>
               </Card>
@@ -286,11 +286,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <Gift className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Built to Transfer, Not Retain</CardTitle>
+                  <CardTitle className="text-xl">Built to Transfer, Not Keep You Dependent</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    Our success metric isn't a long-term consulting relationship—it's your team executing independently. We train as we build so knowledge transfers naturally. When we're done, you don't need us anymore.
+                    Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
                   </p>
                 </CardContent>
               </Card>
@@ -300,11 +300,11 @@ export default function HomePage() {
                   <div className="mb-3">
                     <Handshake className="h-8 w-8 text-primary" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl">Handoff Shaped for Your Team</CardTitle>
+                  <CardTitle className="text-xl">Handoff That Fits How You Work</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
                   <p>
-                    Whether you're running lean, working with an agency, or building an internal team, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—structured so whoever takes it forward can actually use it.
+                    Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
                   </p>
                 </CardContent>
               </Card>
@@ -387,10 +387,10 @@ export default function HomePage() {
         <section className="py-12 sm:py-16 bg-muted/30">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
             <h2 className="text-2xl font-bold mb-4">
-              Ready to Build Your Growth Strategy?
+              Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8">
-              Book a 30-minute call. We'll discuss where you are, where you want to be, and if this approach is right for you—no pitch, just conversation.
+              Book a 30-minute call. We'll talk about where you are, where you need to be, and whether this makes sense for you—no pitch, no pressure.
             </p>
             <Button asChild size="lg" className="font-semibold">
               <a

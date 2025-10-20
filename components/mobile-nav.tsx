@@ -16,7 +16,7 @@ export function MobileNav() {
 
   return (
     <Sheet>
-      <SheetTrigger className="md:hidden">
+      <SheetTrigger className="md:hidden" aria-label="Main menu">
         <Menu className="h-6 w-6" aria-hidden="true" />
       </SheetTrigger>
       <SheetContent side="left" className="w-80 sm:w-96 p-0">

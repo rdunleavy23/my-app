@@ -3,18 +3,18 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-  description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $25K-50K for complete 8-week delivery.',
+  description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.',
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate',
     title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $25K-50K for complete 8-week delivery.',
+    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $25K-50K for complete 8-week delivery.'
+    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate'
@@ -209,7 +209,7 @@ export default function FractionalCMOHourlyRatePage() {
                 </tr>
                 <tr>
                   <td className="border border-border p-3 font-semibold bg-primary/5">Project-Based</td>
-                  <td className="border border-border p-3 bg-primary/5">$25K-50K one-time</td>
+                  <td className="border border-border p-3 bg-primary/5">$9,500 one-time</td>
                   <td className="border border-border p-3 bg-primary/5">Strategic architecture you own</td>
                   <td className="border border-border p-3 text-sm bg-primary/5">Contained scope, complete handoff</td>
                 </tr>
@@ -246,7 +246,7 @@ export default function FractionalCMOHourlyRatePage() {
               <div className="bg-primary/10 p-4 rounded">
                 <h3 className="font-semibold text-foreground mb-3">Growth Strategy Sprint</h3>
                 <ul className="space-y-2 text-foreground text-sm">
-                  <li>• $25K-50K one-time project fee</li>
+                  <li>• $9,500 one-time project fee</li>
                   <li>• Complete in 8 weeks</li>
                   <li>• Dashboard live week 6</li>
                   <li>• You own everything delivered</li>
@@ -328,7 +328,7 @@ export default function FractionalCMOHourlyRatePage() {
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">How much should I budget for fractional CMO services?</h3>
               <p className="text-foreground leading-relaxed">
-                Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. Alternatively, budget $25K-50K for project-based strategic architecture you own completely.
+                Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. Alternatively, budget $9,500 for project-based strategic architecture you own completely.
               </p>
             </div>
 

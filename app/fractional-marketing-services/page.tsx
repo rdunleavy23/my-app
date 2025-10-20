@@ -279,7 +279,7 @@ export default function FractionalMarketingServicesPage() {
               <div className="bg-primary/10 p-4 rounded">
                 <h3 className="font-semibold text-foreground mb-3">Growth Strategy Sprint</h3>
                 <ul className="space-y-2 text-foreground text-sm">
-                  <li>• $25K-50K one-time project</li>
+                  <li>• $9,500 one-time project</li>
                   <li>• 8 weeks to complete</li>
                   <li>• Strategic architecture delivered</li>
                   <li>• Your team executes independently</li>

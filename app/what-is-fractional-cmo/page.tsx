@@ -283,7 +283,7 @@ export default function WhatIsFractionalCMO() {
                   <p className="text-sm text-muted-foreground">Not 6-12 months</p>
                 </div>
                 <div className="text-center p-4 bg-accent/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-1">$25-50K</p>
+                  <p className="text-3xl font-bold text-primary mb-1">$9,500</p>
                   <p className="text-sm text-muted-foreground">One-time project fee</p>
                 </div>
                 <div className="text-center p-4 bg-accent/30 rounded-lg">
@@ -314,7 +314,7 @@ export default function WhatIsFractionalCMO() {
                 <tbody className="bg-background">
                   {[
                     ['Timeline', '8 weeks', '6-12+ months'],
-                    ['Investment', '$25-50K one-time', '$60-180K annually'],
+                    ['Investment', '$9,500 one-time', '$60-180K annually'],
                     ['Ownership', 'You own everything', 'Consultant-dependent'],
                     ['Deliverables', 'Strategy + dashboard + playbooks', 'Ongoing strategic guidance'],
                     ['Independence', 'Team executes independently', 'Requires continued relationship'],

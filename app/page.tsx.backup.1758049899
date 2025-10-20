@@ -82,7 +82,7 @@ export default function HomePage() {
                   },
                   {
                     title: "Ready to Invest",
-                    desc: "$25-50K for transformation",
+                    desc: "$9,500 for transformation",
                   },
                 ].map((item, idx) => (
                   <div className="flex items-start space-x-3" key={idx}>
@@ -309,7 +309,7 @@ export default function HomePage() {
             {[
               {
                 q: "Why not just hire a full-time CMO?",
-                a: "A full-time CMO costs $250K+, takes 6 months to ramp, and brings one perspective. We deliver CMO-level strategy in 8 weeks for $25-50K, with systems your existing team can run.",
+                a: "A full-time CMO costs $250K+, takes 6 months to ramp, and brings one perspective. We deliver CMO-level strategy in 8 weeks for $9,500, with systems your existing team can run.",
               },
               {
                 q: "How is this different from hiring an agency?",

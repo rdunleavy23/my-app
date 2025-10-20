@@ -62,11 +62,11 @@ export default function ProcessPage() {
       {/* Hero */}
       <header className="text-center space-y-4 sm:space-y-6">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-          Our Process
+          How It Works
         </h1>
         <div className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-4">
           <p>
-            Most growth-stage companies have tactics but not the framework connecting them. Data lives in six places. Teams execute without knowing what's working. Budget decisions happen on intuition because no one can see the full picture.
+            Most growth-stage companies have tactics but no framework connecting them. Data lives in six different places. Teams execute without knowing what's working. Budget decisions happen on gut feeling because nobody can see the full picture.
           </p>
           <p>
             We fix that in eight weeks. Seven stages, each building on the last. When we're done, you own everything—the strategy, the systems, the playbooks. No ongoing dependency.
@@ -90,7 +90,7 @@ export default function ProcessPage() {
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 1: Aim</CardTitle>
-                  <p className="text-base sm:text-lg text-muted-foreground font-medium">Define what growth actually means for your business</p>
+                  <p className="text-base sm:text-lg text-muted-foreground font-medium">Define what growth actually means</p>
                 </div>
                 <div className="hidden sm:block absolute top-6 right-8 text-6xl font-black text-primary/[0.07] select-none">01</div>
               </div>
@@ -100,7 +100,7 @@ export default function ProcessPage() {
                 We start with the math. What's your revenue target? How long can an acquisition dollar take to pay back? At what cost does your model break?
               </p>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                If you have these numbers, we validate them. If they're fuzzy, we build them from your data. You get a one-page doc that defines what you're optimizing for—and what you're not chasing. This becomes the filter for every decision after.
+                If you have these numbers, we validate them. If they're fuzzy, we build them from your data. You get a one-page doc that defines what you're optimizing for—and what you're ignoring. This becomes the filter for every decision after.
               </p>
             </CardContent>
           </Card>
@@ -198,7 +198,7 @@ export default function ProcessPage() {
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 5: Reach</CardTitle>
-                  <p className="text-base sm:text-lg text-muted-foreground font-medium">Figure out where buyers are and how to reach them profitably</p>
+                  <p className="text-base sm:text-lg text-muted-foreground font-medium">Find where buyers are and how to reach them profitably</p>
                 </div>
                 <div className="hidden sm:block absolute top-6 right-8 text-6xl font-black text-primary/[0.07] select-none">05</div>
               </div>
@@ -208,7 +208,7 @@ export default function ProcessPage() {
                 With everything else locked, we build the channel plan. Which two or three plays have the best shot at hitting your targets? Where should budget go—and where shouldn't it?
               </p>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                If you're running campaigns, we assess what's worth scaling and what's wasting money. If you're starting fresh, we prioritize the highest-probability bets. You get a roadmap with specific campaigns, realistic timelines, and clear success criteria. No testing ten things at once. Just focused plays with gates for when to scale and when to stop.
+                If you're running campaigns, we assess what's worth scaling and what's wasting money. If you're starting fresh, we prioritize the highest-probability bets. You get a roadmap with specific campaigns, realistic timelines, and clear success criteria. No testing ten things at once. Just focused plays with clear gates for when to scale and when to kill it.
               </p>
             </CardContent>
           </Card>
@@ -252,7 +252,7 @@ export default function ProcessPage() {
                 </div>
                 <div className="flex-1 space-y-2 sm:space-y-3">
                   <CardTitle className="text-xl sm:text-2xl font-semibold">Stage 7: Enable</CardTitle>
-                  <p className="text-base sm:text-lg text-muted-foreground font-medium">Transfer everything so your team runs it independently</p>
+                  <p className="text-base sm:text-lg text-muted-foreground font-medium">Transfer everything so your team runs this independently</p>
                 </div>
                 <div className="hidden sm:block absolute top-6 right-8 text-6xl font-black text-primary/[0.07] select-none">07</div>
               </div>
@@ -262,7 +262,7 @@ export default function ProcessPage() {
                 We don't hand off docs and disappear. We document who owns what, set up the weekly rhythm your team will follow, and call out where you need outside help.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Whether you're running lean, working with an agency, or building internal—we shape the handoff for your situation. You get the full operating system: how to run campaigns, who makes what decisions, when reviews happen. We don't complete handoff until you've run through it once and can operate without us. Then 30 days of support while you find your rhythm.
+                Whether you're running lean, working with an agency, or building internal—we shape the handoff for your situation. You get the full operating system: how to run campaigns, who makes what decisions, when reviews happen. We don't finish handoff until you've run through it once and can operate without us. Then 30 days of support while you find your rhythm.
               </p>
             </CardContent>
           </Card>

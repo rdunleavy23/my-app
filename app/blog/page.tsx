@@ -10,21 +10,21 @@ import { Clock, Calendar } from "lucide-react"
 export const metadata: Metadata = {
   title: "Growth Strategy Insights | Pattern Growth",
   description:
-    "Strategic insights on scaling revenue and building operational capability for growth-stage companies.",
+    "How to scale revenue and build operational capability—written for growth-stage companies.",
   alternates: { canonical: "/blog" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/blog",
     title: "Growth Strategy Insights | Pattern Growth",
     description:
-      "Strategic insights on scaling revenue and building operational capability for growth-stage companies.",
+      "How to scale revenue and build operational capability—written for growth-stage companies.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
     title: "Growth Strategy Insights | Pattern Growth",
     description:
-      "Strategic insights on scaling revenue and building operational capability for growth-stage companies.",
+      "How to scale revenue and build operational capability—written for growth-stage companies.",
   },
   robots: { index: true, follow: true },
 }
@@ -38,7 +38,7 @@ export default function BlogPage() {
       <div className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-          Strategic insights on scaling revenue and building operational capability for growth-stage companies.
+          How to scale revenue and build operational capability—written for growth-stage companies.
         </p>
       </div>
 
@@ -140,7 +140,7 @@ export default function BlogPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            Start a Conversation
+            Schedule a Call
           </Link>
           <Link 
             href="/process"

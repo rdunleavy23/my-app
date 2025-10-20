@@ -129,7 +129,7 @@ export default function HomePage() {
         {/* Investment */}
         <div className="text-center bg-muted p-8 rounded-lg">
           <h2 className="text-2xl font-bold mb-4 text-foreground">
-            $25K-50K Investment
+            $9,500 Investment
           </h2>
           <p className="text-muted-foreground mb-6">
             Includes full year of dashboard access and 30-day post-sprint support

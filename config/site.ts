@@ -9,7 +9,7 @@ export const siteConfig = {
     "We don't just design strategy. We operationalize it into systems your team can actually run.",
   mainNav: [
     {
-      title: "Our Story",
+      title: "About Us",
       href: "/about",
       description: "Meet the team behind Pattern Growth"
     },
