@@ -42,7 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/about`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog`, lastModified: new Date().toISOString(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/privacy`, lastModified: new Date().toISOString(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${SITE_URL}/styleguide`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.2 },
     { url: `${SITE_URL}/process`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },

@@ -42,25 +42,10 @@ import { cn } from "@/lib/utils"
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
   name: "Pattern Growth",
   description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
   url: "https://www.patterngrowth.com",
-  serviceType: [
-    "Growth Strategy Consulting",
-    "Marketing Strategy Sprint", 
-    "Fractional CMO Alternative",
-    "Marketing Dashboard Development",
-  ],
-  areaServed: {
-    "@type": "Country",
-    name: "United States",
-  },
-  offers: {
-    "@type": "Offer",
-    name: "Growth Strategy Sprint",
-    description: "8-week focused engagement delivering growth strategy, marketing infrastructure, and team training with complete ownership transfer",
-  },
 }
 
 export default function HomePage() {

@@ -12,6 +12,6 @@ seo:
   keywords: ["revenue", "scale debt", "operations"]
 ---
 
-# Scaling Revenue Without Scale Debt
+## Scaling Revenue Without Scale Debt
 
 **Coming soon** — practical insights from working with growth-stage teams at inflection points.

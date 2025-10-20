@@ -76,7 +76,7 @@ export default function BlogPage() {
                 href={`/blog/${posts[0].slug}`}
                 className="inline-flex items-center text-primary hover:underline font-medium"
               >
-                Read more →
+                Continue reading →
               </Link>
             </CardContent>
           </Card>
@@ -118,7 +118,7 @@ export default function BlogPage() {
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-primary hover:underline font-medium"
                   >
-                    Read more →
+                    Continue reading →
                   </Link>
                 </CardContent>
               </Card>

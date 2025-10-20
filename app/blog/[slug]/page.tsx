@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: post.seo.title,
     description: post.seo.description,
     keywords: post.seo.keywords,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.seo.title,
       description: post.seo.description,
@@ -145,7 +146,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 Schedule a 15-minute fit call. We'll discuss your situation and be direct about whether our approach makes sense for you. No pitch, just clarity.
               </p>
               <Link
-                href="/#contact"
+                href="https://cal.com/pattern-growth/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
               >
                 Schedule Your Call

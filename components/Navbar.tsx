@@ -124,7 +124,9 @@ export default function Navbar() {
                         Our Process
                       </Link>
                       <Link
-                        href="/book"
+                        href="https://cal.com/pattern-growth/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={closeMenu}
                         className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                           pathname === '/book'
