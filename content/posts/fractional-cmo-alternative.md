@@ -23,7 +23,7 @@ The fractional CMO model optimizes for the wrong thing. It's built around ongoin
 Think about what happens when you hire a fractional CMO:
 
 * 6–12 month minimum commitment
-* Monthly retainer of $4k–20k+
+* Monthly retainer of [$4k–20k+](/fractional-cmo-hourly-rate)
 * They attend your meetings
 * They "advise" on decisions
 * Six months in, you still don't have a dashboard
@@ -45,17 +45,17 @@ If you're a $1–5M revenue company and growth has stalled, you don't need someo
 
 **Messaging questions:** Is it resonating? What content moves deals? How do we build awareness that matters?
 
-> Get those answered, build a measurement system that shows what drives pipeline, create playbooks your team can execute, train them—then get out of the way.
+> Get those answered, build a measurement system that shows what drives pipeline, create playbooks your team can execute, train them—then get out of the way. That's not a 12-month engagement. That's a [2-month sprint](/process).
 
 That's not a 12-month engagement. That's a 2-month sprint.
 
 ## The Model We Built Instead
 
-| What You Need       | Fractional CMO               | Strategy Sprint                            |
+| What You Need       | [Fractional CMO](/what-is-fractional-cmo)               | Strategy Sprint                            |
 | ------------------- | ---------------------------- | ------------------------------------------ |
 | **Timeline**        | 6–12+ months                 | 2 months complete                          |
 | **You pay for**     | Ongoing presence             | Deliverable architecture                   |
-| **Investment**      | $24k–120k+ (6mo)             | Fixed project fee                          |
+| **Investment**      | [$24k–120k+ (6mo)](/fractional-cmo-hourly-rate)             | Fixed project fee                          |
 | **What you own**    | Nothing (leaves with them)   | Everything (dashboard, playbooks, systems) |
 | **Dependency**      | High (they're your strategy) | Zero (you run it)                          |
 | **Dashboard**       | Maybe, eventually            | Live week 6, yours forever                 |

@@ -38,17 +38,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getBlogPosts()
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: new Date().toISOString(), changeFrequency: 'daily', priority: 1 },
-    { url: `${SITE_URL}/about`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/blog`, lastModified: new Date().toISOString(), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${SITE_URL}/privacy`, lastModified: new Date().toISOString(), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${SITE_URL}/process`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/fractional-cmo-services`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/fractional-marketing-services`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: new Date().toISOString(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/`, lastModified: '2025-10-20', changeFrequency: 'weekly', priority: 1 },
+    { url: `${SITE_URL}/about`, lastModified: '2025-09-20', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/blog`, lastModified: '2025-10-20', changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${SITE_URL}/privacy`, lastModified: '2025-01-01', changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${SITE_URL}/process`, lastModified: '2025-10-20', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: '2025-09-15', changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: '2025-10-20', changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: '2025-09-15', changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/fractional-cmo-services`, lastModified: '2025-09-15', changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/fractional-marketing-services`, lastModified: '2025-09-15', changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: '2025-10-20', changeFrequency: 'monthly', priority: 0.7 },
   ]
 
   const blogPages: MetadataRoute.Sitemap = posts.map(post => ({

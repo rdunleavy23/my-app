@@ -341,6 +341,18 @@ export default function FractionalCMOHourlyRatePage() {
           </div>
         </section>
 
+        {/* Related Resources */}
+        <section className="py-8 border-t">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <p className="text-muted-foreground">
+              <strong>Related:</strong> Learn more about{" "}
+              <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">what fractional CMOs are</Link>,{" "}
+              <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline">project-based alternatives</Link>, or{" "}
+              <Link href="/fractional-cmo-services" className="text-primary hover:underline">typical CMO services</Link>.
+            </p>
+          </div>
+        </section>
+
       </article>
     </div>
   )

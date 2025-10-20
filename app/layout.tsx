@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" })
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.patterngrowth.com"),
   title: {
-    default: "Pattern Growth",
+    default: "Project-Based Marketing Consultant | 8-Week Growth Strategy Sprint | Pattern Growth",
     template: "%s | Pattern Growth",
   },
   description: "Growth strategy your team can actually run",
@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DQD43BSF5Q"
           strategy="afterInteractive"

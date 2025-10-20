@@ -15,7 +15,7 @@ import { createServiceSchema, createWebPageSchema } from "@/lib/schemas"
 export const metadata: Metadata = {
   title: "Growth Strategy Sprint Process | 8-Week Delivery",
   description:
-    "Our 8-week growth strategy sprint: Week 1–2 strategic foundation, Week 3–4 tactical framework, Week 5–8 dashboard creation and team handoff with full docs.",
+    "Our 8-week project-based marketing consulting sprint: Strategic foundation, tactical framework, dashboard creation, and team handoff with complete documentation.",
   alternates: { canonical: "/process" },
   openGraph: {
     type: "website",
