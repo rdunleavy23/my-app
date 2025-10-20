@@ -28,6 +28,7 @@ import { Suspense } from "react"
 import { FAQSchema } from "@/components/faq-schema"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { HomeCarousel } from "@/components/home-carousel"
+import { ComparisonTable } from "@/components/ui/comparison-table"
 
 // Note: Metadata export needs to be in a separate server component or root layout
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
@@ -309,6 +310,80 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section className="py-12 sm:py-16 border-t bg-muted/30">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
+                Pattern Growth vs. Traditional Alternatives
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4">
+                Hiring or traditional outsourcing?
+                <br />
+                <span className="italic">Neither.</span>
+              </h2>
+            </div>
+            
+            <ComparisonTable
+              columns={["Cost", "Speed", "Strategy", "Customization", "Independence"]}
+              rows={[
+                {
+                  label: "Pattern Growth",
+                  isHighlighted: true,
+                  values: {
+                    Cost: "check",
+                    Speed: "check",
+                    Strategy: "check",
+                    Customization: "check",
+                    Independence: "check",
+                  },
+                },
+                {
+                  label: "Full-time CMO",
+                  values: {
+                    Cost: "x",
+                    Speed: "x",
+                    Strategy: "check",
+                    Customization: "check",
+                    Independence: "question",
+                  },
+                },
+                {
+                  label: "Fractional CMO",
+                  values: {
+                    Cost: "x",
+                    Speed: "check",
+                    Strategy: "check",
+                    Customization: "check",
+                    Independence: "x",
+                  },
+                },
+                {
+                  label: "Marketing agency",
+                  values: {
+                    Cost: "question",
+                    Speed: "check",
+                    Strategy: "question",
+                    Customization: "question",
+                    Independence: "x",
+                  },
+                },
+                {
+                  label: "DIY tools",
+                  values: {
+                    Cost: "check",
+                    Speed: "check",
+                    Strategy: "x",
+                    Customization: "x",
+                    Independence: "check",
+                  },
+                },
+              ]}
+              className="mt-8"
+            />
           </div>
         </section>
 
