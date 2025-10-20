@@ -32,21 +32,9 @@ import { HomeCarousel } from "@/components/home-carousel"
 // Note: Metadata export needs to be in a separate server component or root layout
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Pattern Growth",
-  description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
-  url: "https://www.patterngrowth.com",
-}
-
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
 
       <div className="bg-background">
         {/* Hero Section */}

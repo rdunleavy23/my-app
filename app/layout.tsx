@@ -66,6 +66,27 @@ export default function RootLayout({
             gtag('config', 'G-DQD43BSF5Q', { anonymize_ip: true });
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Pattern Growth",
+              description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
+              url: "https://www.patterngrowth.com",
+              logo: "https://www.patterngrowth.com/patterngrowth-logo.svg",
+              sameAs: [
+                "https://twitter.com/patterngrowth"
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                email: "hello@patterngrowth.com"
+              }
+            })
+          }}
+        />
       </head>
       <body className={`${inter.className} min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
         <ThemeProvider>
