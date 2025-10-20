@@ -60,14 +60,14 @@ export default function AboutPage() {
   const ryanSchema = createPersonSchema({
     name: "Ryan Dunleavy",
     jobTitle: "Growth Strategist & Partner",
-    description: "Ryan has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.",
+    description: "Ryan is driven by curiosity. He's usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.",
     image: "https://www.patterngrowth.com/team/ryan.png"
   });
 
   const williamSchema = createPersonSchema({
     name: "William",
     jobTitle: "Growth Strategist & Partner", 
-    description: "William has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.",
+    description: "William has spent his career helping growth-stage teams find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confident your team feels once they own the plan.",
     image: "https://www.patterngrowth.com/team/william.png"
   });
 
@@ -82,13 +82,13 @@ export default function AboutPage() {
     {
       name: "William",
       role: "Partner",
-      bio: "William has spent his career helping growth-stage teams find structure in the chaos of growth. He believes strategy should be practical and usable, and he measures success by how confident teams feel once they own the plan.",
+      bio: "William has spent his career helping growth-stage teams find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confident your team feels once they own the plan.",
       photo: "/team/william.png",
     },
     {
       name: "Ryan",
       role: "Partner", 
-      bio: 'Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think. His focus is on translating complex marketing challenges into clear next steps.',
+      bio: 'Ryan is driven by curiosity. He's usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.',
       photo: "/team/ryan.png",
     },
   ]
@@ -96,18 +96,18 @@ export default function AboutPage() {
   const values = [
     {
       icon: Target,
-      title: "Practical Strategy",
-      description: "We build frameworks your team can actually execute, not theoretical plans that gather dust."
+      title: "Strategy You Can Actually Use",
+      description: "We build frameworks your team can execute, not theoretical plans that sit in a drawer."
     },
     {
       icon: Zap,
-      title: "Fast Execution", 
-      description: "8 weeks to deliver what others take 6 months to plan. We work fast because you need results."
+      title: "We Work Fast", 
+      description: "8 weeks to deliver what others take 6 months to plan. We work fast because you need results now, not next quarter."
     },
     {
       icon: Users,
-      title: "Team Ownership",
-      description: "You own the strategy, dashboards, and playbooks. No ongoing dependency on us."
+      title: "You Own Everything",
+      description: "You own the strategy, dashboards, and playbooks. No dependency on us. Ever."
     }
   ]
 
@@ -159,13 +159,13 @@ export default function AboutPage() {
           
           <div className="text-center space-y-6">
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight leading-tight">
-              Meet the team behind Pattern Growth
+              Meet the Team
             </h1>
             
             <div className="w-20 h-px bg-primary mx-auto" />
             
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Two experienced growth strategists who translate C-suite vision into executable strategy your team can actually run.
+              Two growth strategists who turn C-suite vision into strategy your team can actually execute.
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
               Our Approach
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              What makes us different from traditional consulting
+              What makes us different
             </p>
           </div>
           
@@ -267,11 +267,11 @@ export default function AboutPage() {
               
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p className="text-base sm:text-lg">
-                  Together, William and Ryan built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill.
+                  We built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill.
                 </p>
                 <p className="text-base">
-                  We saw too many growth-stage companies stuck between expensive fractional executives and templated agency work. 
-                  So we created a project-based partner for leaders who want growth strategy their teams can actually run.
+                  We saw too many growth-stage companies stuck between expensive fractional CMOs and cookie-cutter agency work. 
+                  So we created something different: a project-based partner for leaders who want strategy their team can actually execute.
                 </p>
               </div>
             </CardContent>
@@ -286,10 +286,10 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h2 className="text-2xl font-bold text-foreground">
-              Ready to work with us?
+              Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Let's discuss how our 8-week growth strategy sprint can help your team build the systems and clarity you need to scale.
+              Let's talk about whether an 8-week sprint makes sense for your team.
             </p>
           </div>
           

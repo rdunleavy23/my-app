@@ -329,10 +329,10 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold tracking-tight mb-2">
-                Frequently Asked Questions
+                Questions You Probably Have
               </h2>
               <p className="text-muted-foreground">
-                Common questions about our process
+                The things prospects actually ask us
               </p>
             </div>
 
