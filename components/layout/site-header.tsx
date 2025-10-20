@@ -56,7 +56,7 @@ export function SiteHeader() {
                 "px-4 py-1.5"
               )}
             >
-              Schedule a Call
+              Start a Conversation
             </a>
           </nav>
 

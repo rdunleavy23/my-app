@@ -19,7 +19,7 @@ export const siteConfig = {
       description: "How we build scalable marketing operations"
     },
     {
-      title: "Schedule a Call",
+      title: "Start a Conversation",
       href: "https://cal.com/pattern-growth/30min",
       description: "Free strategy consultation"
     }

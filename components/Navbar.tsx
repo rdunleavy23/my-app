@@ -72,7 +72,7 @@ export default function Navbar() {
               Our Process
             </Link>
             <Button asChild className="h-9">
-              <Link href="https://cal.com/pattern-growth">Schedule a Call</Link>
+              <Link href="https://cal.com/pattern-growth">Start a Conversation</Link>
             </Button>
             <ThemeToggle />
           </nav>
@@ -134,7 +134,7 @@ export default function Navbar() {
                             : 'text-foreground hover:bg-muted'
                         }`}
                       >
-                        Schedule a Call
+                        Start a Conversation
                       </Link>
                     </nav>
                   </div>
@@ -147,7 +147,7 @@ export default function Navbar() {
                       onClick={closeMenu}
                     >
                       <Link href="https://cal.com/pattern-growth">
-                        Schedule a Call
+                        Start a Conversation
                       </Link>
                     </Button>
                   </div>

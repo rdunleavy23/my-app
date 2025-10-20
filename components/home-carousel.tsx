@@ -3,6 +3,13 @@
 import { useEffect, useState } from "react"
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
+import { 
+  Zap, 
+  Building2, 
+  TrendingUp, 
+  Target, 
+  Link as LinkIcon
+} from "lucide-react"
 
 export function HomeCarousel() {
   const [api, setApi] = useState<CarouselApi>()
@@ -32,9 +39,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">⚡</span>
-                </div>
+                <Zap className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quick Wins in 30 Days</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -46,9 +51,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">🏢</span>
-                </div>
+                <Building2 className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Growth Infrastructure You Own</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -60,9 +63,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">📈</span>
-                </div>
+                <TrendingUp className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Revenue-Connected Strategy</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -74,9 +75,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">🎯</span>
-                </div>
+                <Target className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Brand Positioning That Sells</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -88,9 +87,7 @@ export function HomeCarousel() {
           <CarouselItem>
             <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
               <div className="mb-3">
-                <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">🔗</span>
-                </div>
+                <LinkIcon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Marketing & Revenue Alignment</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
