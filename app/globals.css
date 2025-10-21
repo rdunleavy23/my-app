@@ -591,6 +591,36 @@ html:not(.dark) body { background: #f6f7f8; }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Scroll indicators for comparison tables */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Gradient fade for scrollable content */
+.scroll-fade-right {
+  position: relative;
+}
+
+.scroll-fade-right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dark .scroll-fade-right::after {
+  background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }
 
