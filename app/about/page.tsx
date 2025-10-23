@@ -158,12 +158,12 @@ export default function AboutPage() {
       />
       <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12 md:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={[{ label: 'About' }]} />
           
           <div className="text-center space-y-6">
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight">
               Meet the Team
             </h1>
             
@@ -179,11 +179,11 @@ export default function AboutPage() {
       <Separator />
 
       {/* Team Section */}
-      <section className="container mx-auto px-4 py-16 md:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {team.map((member, index) => (
-              <Card key={member.name} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-border">
+              <Card key={member.name} className="group card-hover-lift border-border/50">
                 <CardHeader className="text-center space-y-6 pb-6">
                   <div className="relative">
                     <div className="relative size-32 md:size-36 mx-auto">
@@ -225,10 +225,10 @@ export default function AboutPage() {
       <Separator />
 
       {/* Values Section */}
-      <section className="container mx-auto px-4 py-16 md:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-2xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Our Approach
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -238,7 +238,7 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {values.map((value, index) => (
-              <Card key={value.title} className="text-center motion-safe:transition-shadow hover:shadow-lg border-border/50">
+              <Card key={value.title} className="text-center card-hover-lift border-border/50">
                 <CardHeader className="space-y-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto">
                     <value.icon className="h-6 w-6 text-primary" aria-hidden="true" />
@@ -261,13 +261,13 @@ export default function AboutPage() {
       <Separator />
 
       {/* Story Section */}
-      <section className="container mx-auto px-4 py-16 md:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-muted/20 border-border/50">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <div className="w-16 h-px bg-primary mx-auto" />
               
-              <h2 className="text-2xl font-bold text-foreground">
+              <h2 className="text-3xl font-bold text-foreground">
                 Why We Built Pattern Growth
               </h2>
               
@@ -288,10 +288,10 @@ export default function AboutPage() {
       <Separator />
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16 md:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-foreground">
+            <h2 className="text-3xl font-bold text-foreground">
               Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -299,7 +299,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <GetStartedButton />
+          <GetStartedButton className="btn-hover-lift" />
           
         </div>
       </section>

@@ -37,7 +37,7 @@ export function HomeCarousel() {
       >
         <CarouselContent>
           <CarouselItem>
-            <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
+            <div className="card-hover-lift bg-card border rounded-lg p-6">
               <div className="mb-3">
                 <Zap className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
@@ -49,7 +49,7 @@ export function HomeCarousel() {
           </CarouselItem>
 
           <CarouselItem>
-            <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
+            <div className="card-hover-lift bg-card border rounded-lg p-6">
               <div className="mb-3">
                 <Building2 className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
@@ -61,7 +61,7 @@ export function HomeCarousel() {
           </CarouselItem>
 
           <CarouselItem>
-            <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
+            <div className="card-hover-lift bg-card border rounded-lg p-6">
               <div className="mb-3">
                 <TrendingUp className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
@@ -73,7 +73,7 @@ export function HomeCarousel() {
           </CarouselItem>
 
           <CarouselItem>
-            <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
+            <div className="card-hover-lift bg-card border rounded-lg p-6">
               <div className="mb-3">
                 <Target className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
@@ -85,7 +85,7 @@ export function HomeCarousel() {
           </CarouselItem>
 
           <CarouselItem>
-            <div className="motion-safe:transition-shadow hover:shadow-lg bg-card border rounded-lg p-6">
+            <div className="card-hover-lift bg-card border rounded-lg p-6">
               <div className="mb-3">
                 <LinkIcon className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>

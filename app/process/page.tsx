@@ -59,10 +59,10 @@ export default function ProcessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <main id="main" className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-8 sm:py-16">
+      <main id="main" className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-16 sm:py-20">
       {/* Hero */}
       <header className="text-center space-y-4 sm:space-y-6">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
           How It Works
         </h1>
         <div className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-4">
@@ -79,11 +79,11 @@ export default function ProcessPage() {
 
       {/* The Momentum System */}
       <section className="space-y-6 sm:space-y-10">
-        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">The Momentum System</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">The Momentum System</h2>
 
         <div className="space-y-6 sm:space-y-10">
           {/* Stage 1: Aim */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -110,7 +110,7 @@ export default function ProcessPage() {
           <div className="h-4 sm:h-6 w-0.5 mx-auto bg-border"></div>
 
           {/* Stage 2: Assess */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -137,7 +137,7 @@ export default function ProcessPage() {
           <div className="h-4 sm:h-6 w-0.5 mx-auto bg-border"></div>
 
           {/* Stage 3: Target */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -164,7 +164,7 @@ export default function ProcessPage() {
           <div className="h-4 sm:h-6 w-0.5 mx-auto bg-border"></div>
 
           {/* Stage 4: Build */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -191,7 +191,7 @@ export default function ProcessPage() {
           <div className="h-4 sm:h-6 w-0.5 mx-auto bg-border"></div>
 
           {/* Stage 5: Reach */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -218,7 +218,7 @@ export default function ProcessPage() {
           <div className="h-4 sm:h-6 w-0.5 mx-auto bg-border"></div>
 
           {/* Stage 6: Measure */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -245,7 +245,7 @@ export default function ProcessPage() {
           <div className="h-4 sm:h-6 w-0.5 mx-auto bg-border"></div>
 
           {/* Stage 7: Enable */}
-          <Card className="group transition-all duration-300 hover:shadow-md sm:hover:-translate-y-1 sm:hover:shadow-lg">
+          <Card className="group card-hover-lift">
             <CardHeader className="relative p-6 sm:p-8">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -275,7 +275,7 @@ export default function ProcessPage() {
       {/* CTA Section */}
       <section className="text-center space-y-6 sm:space-y-8">
         <div className="space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Ready to Get Started?
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -283,7 +283,7 @@ export default function ProcessPage() {
           </p>
         </div>
         
-        <GetStartedButton />
+        <GetStartedButton className="btn-hover-lift" />
         
         <p className="text-sm text-muted-foreground">
           30-minute call · No pitch, no pressure

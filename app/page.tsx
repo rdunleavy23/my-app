@@ -40,9 +40,9 @@ export default function HomePage() {
 
       <div className="bg-background">
                 {/* Hero Section */}
-                <section className="py-10 sm:py-20">
+                <section className="py-16 sm:py-20">
                   <div className="mx-auto max-w-5xl px-6 lg:px-8">
-                    <h1 className="text-3xl sm:text-4xl leading-tight font-bold tracking-tight text-foreground mb-6 text-balance">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight text-foreground mb-6 text-balance">
                       Your Marketing Strategy, Built From Scratch in 8 Weeks
                     </h1>
 
@@ -70,7 +70,7 @@ export default function HomePage() {
                 {/* What Our Growth Strategy Sprint Includes */}
         <section className="py-16 sm:py-20 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-12">
               What Our Growth Strategy Sprint Includes
             </h2>
 
@@ -80,7 +80,7 @@ export default function HomePage() {
             {/* Desktop: Bento Grid Layout */}
             <div className="hidden md:grid md:grid-cols-3 gap-6">
               {/* Quick Wins - Featured (spans 2 columns, row 1) */}
-              <Card className="col-span-2 motion-safe:transition-shadow hover:shadow-lg group">
+              <Card className="col-span-2 card-hover-lift group">
                 <CardHeader>
                   <div className="mb-4">
                     <Zap className="h-12 w-12 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -95,12 +95,12 @@ export default function HomePage() {
               </Card>
 
               {/* Growth Infrastructure - Featured (1 column, row 1) */}
-              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+              <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-4">
                     <Building2 className="h-12 w-12 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl font-semibold">Growth Infrastructure You Own</CardTitle>
+                  <CardTitle className="text-2xl font-semibold">Growth Infrastructure You Own</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground leading-relaxed">
                   <p>
@@ -110,7 +110,7 @@ export default function HomePage() {
               </Card>
 
               {/* Row 2: Three equal cards */}
-              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+              <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-3">
                     <TrendingUp className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -124,7 +124,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+              <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-3">
                     <Target className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -138,7 +138,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+              <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-3">
                     <LinkIcon className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -158,7 +158,7 @@ export default function HomePage() {
         {/* How We Work Differently */}
         <section className="py-16 sm:py-20 bg-muted/30 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               How We Work Differently
             </h2>
             <p className="text-muted-foreground mb-12 text-lg">
@@ -238,7 +238,7 @@ export default function HomePage() {
             <div className="hidden md:block space-y-8">
               {/* Tier 1: Two Featured Differentiators */}
               <div className="grid md:grid-cols-2 gap-8">
-                <Card className="border-l-4 border-l-primary motion-safe:transition-all hover:shadow-xl">
+                <Card className="border-l-4 border-l-primary card-hover-lift">
                   <CardHeader>
                     <div className="mb-4">
                       <UserCog className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -252,7 +252,7 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-primary motion-safe:transition-all hover:shadow-xl">
+                <Card className="border-l-4 border-l-primary card-hover-lift">
                   <CardHeader>
                     <div className="mb-4">
                       <Gift className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -269,7 +269,7 @@ export default function HomePage() {
 
               {/* Tier 2: Three Supporting Points */}
               <div className="grid md:grid-cols-3 gap-6">
-                <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+                <Card className="card-hover-lift group">
                   <CardHeader>
                     <div className="mb-3">
                       <Puzzle className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -283,7 +283,7 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+                <Card className="card-hover-lift group">
                   <CardHeader>
                     <div className="mb-3">
                       <Database className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -297,7 +297,7 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="motion-safe:transition-shadow hover:shadow-lg group">
+                <Card className="card-hover-lift group">
                   <CardHeader>
                     <div className="mb-3">
                       <Handshake className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
@@ -316,13 +316,13 @@ export default function HomePage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="py-12 sm:py-16 border-t bg-muted/30">
+        <section className="py-16 sm:py-20 border-t bg-muted/30">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
                 Pattern Growth vs. Traditional Alternatives
               </p>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
                 Hiring or traditional outsourcing?
                 <br />
                 <span className="italic">Neither.</span>
@@ -390,10 +390,10 @@ export default function HomePage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-12 sm:py-16 border-t">
+        <section className="py-16 sm:py-20 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold tracking-tight mb-2">
+              <h2 className="text-3xl font-bold tracking-tight mb-2">
                 Questions You Probably Have
               </h2>
               <p className="text-muted-foreground">
@@ -461,15 +461,15 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 sm:py-16 bg-muted/30">
+        <section className="py-16 sm:py-20 bg-muted/30">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8">
               Book a 30-minute call. We'll talk about where you are, where you need to be, and whether this makes sense for you—no pitch, no pressure.
             </p>
-            <Button asChild size="lg" className="font-semibold">
+            <Button asChild size="lg" className="font-semibold btn-hover-lift">
               <a
                 href="https://cal.com/pattern-growth/30min"
                 target="_blank"

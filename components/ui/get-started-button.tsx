@@ -29,7 +29,7 @@ export function GetStartedButton({
   
   return (
     <Button 
-      className={`group relative overflow-hidden ${className}`} 
+      className={`group relative overflow-hidden btn-hover-lift ${className}`} 
       size={size}
       onClick={handleClick}
     >

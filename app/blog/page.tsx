@@ -33,10 +33,10 @@ export default function BlogPage() {
   const posts = getAllPosts()
 
   return (
-    <main className="container mx-auto max-w-4xl px-4 py-16">
+    <main className="container mx-auto max-w-4xl px-4 py-16 sm:py-20">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
           How to scale revenue and build operational capability—written for growth-stage companies.
         </p>
@@ -45,8 +45,8 @@ export default function BlogPage() {
       {/* Featured Post */}
       {posts.length > 0 && (
         <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6">Latest Insights</h2>
-          <Card className="border-2 motion-safe:transition-shadow hover:shadow-lg">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">Latest Insights</h2>
+          <Card className="border-2 card-hover-lift">
             <CardHeader>
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant="secondary">Latest</Badge>
@@ -86,10 +86,10 @@ export default function BlogPage() {
       {/* All Posts */}
       {posts.length > 1 && (
         <div>
-          <h2 className="text-2xl font-semibold mb-6">All Articles</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">All Articles</h2>
           <div className="grid gap-6">
             {posts.slice(1).map((post) => (
-              <Card key={post.slug} className="motion-safe:transition-shadow hover:shadow-lg">
+              <Card key={post.slug} className="card-hover-lift">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
@@ -129,7 +129,7 @@ export default function BlogPage() {
 
       {/* CTA Section */}
       <div className="mt-16 text-center bg-muted/50 rounded-lg p-8">
-        <h3 className="text-2xl font-semibold mb-4">Ready to Scale Your Growth Strategy?</h3>
+        <h3 className="text-3xl font-semibold mb-4">Ready to Scale Your Growth Strategy?</h3>
         <p className="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
           Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks.
         </p>
@@ -138,7 +138,7 @@ export default function BlogPage() {
             href="https://cal.com/pattern-growth/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold btn-hover-lift"
           >
             Schedule a Call
           </Link>

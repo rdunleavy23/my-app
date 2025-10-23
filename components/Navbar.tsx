@@ -105,7 +105,7 @@ export default function Navbar() {
             >
               Process
             </Link>
-            <Button asChild className="h-12">
+            <Button asChild className="h-12 btn-hover-lift">
               <Link 
                 href="https://cal.com/pattern-growth"
                 onClick={() => handleCTAClick('navbar')}
@@ -173,7 +173,7 @@ export default function Navbar() {
                     
                     {/* CTA section - part of scrollable content */}
                     <div className="pt-16 pb-8">
-                      <Button asChild className="w-full h-14 text-base rounded-full">
+                      <Button asChild className="w-full h-14 text-base rounded-full btn-hover-lift">
                         <Link 
                           href="https://cal.com/pattern-growth"
                           target="_blank"

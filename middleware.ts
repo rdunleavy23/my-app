@@ -3,23 +3,6 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
-  const hostname = request.headers.get('host') || ''
-  
-  // Handle URL canonicalization redirects
-  if (hostname === 'patterngrowth.com') {
-    const url = request.nextUrl.clone()
-    url.hostname = 'www.patterngrowth.com'
-    url.protocol = 'https:'
-    return NextResponse.redirect(url, 308)
-  }
-  
-  if (hostname === 'www.patterngrowth.com' && request.nextUrl.protocol === 'http:') {
-    const url = request.nextUrl.clone()
-    url.protocol = 'https:'
-    return NextResponse.redirect(url, 308)
-  }
-
   const response = NextResponse.next()
 
   const csp = `
