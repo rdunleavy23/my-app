@@ -1,10 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { GetStartedButton } from '@/components/ui/get-started-button'
+import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
+import RelatedContent from '@/components/ui/related-content'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Cost: Rates vs. Project Pricing',
   description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.',
+  keywords: ['fractional cmo cost', 'fractional cmo pricing', 'fractional cmo rates', 'fractional cmo hourly rate', 'how much does fractional cmo cost', 'cmo consulting rates', 'marketing consulting pricing', 'fractional cmo retainer cost', 'project-based marketing pricing', 'marketing consulting fees'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate',
@@ -29,6 +32,13 @@ export const metadata: Metadata = {
 export default function FractionalCMOHourlyRatePage() {
   return (
     <div className="bg-background">
+      {/* Breadcrumbs */}
+      <div className="border-b border-border">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <Breadcrumbs items={generateBreadcrumbs('/fractional-cmo-hourly-rate')} />
+        </div>
+      </div>
+
       <section className="border-b border-border">
         <div className="max-w-4xl mx-auto px-4 py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -344,6 +354,9 @@ export default function FractionalCMOHourlyRatePage() {
             </div>
           </div>
         </section>
+
+        {/* Related Content */}
+        <RelatedContent currentPage="/fractional-cmo-hourly-rate" className="py-8 border-t" />
 
         {/* Related Resources */}
         <section className="py-8 border-t">

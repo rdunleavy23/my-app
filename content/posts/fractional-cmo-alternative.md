@@ -10,7 +10,8 @@ author:
 seo:
   title: "Fractional CMO Alternative | Pattern Growth"
   description: "Most growth-stage companies don't need ongoing CMO leadership—they need architecture. See why 2-month strategy sprints outperform traditional fractional models."
-  keywords: ["fractional cmo alternative", "growth strategy sprint", "marketing strategy consulting"]
+  keywords: ["fractional cmo alternative", "fractional cmo", "growth strategy sprint", "project-based marketing consulting", "marketing strategy consulting", "fractional cmo vs consultant", "marketing consulting without retainer", "cmo services alternative", "fractional cmo retainer alternative"]
+priority: "blog-pillar"
 ---
 ## Why We Don't Offer Fractional CMO Services
 

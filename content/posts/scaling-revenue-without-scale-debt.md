@@ -9,7 +9,7 @@ author:
 seo:
   title: "Scaling Revenue Without Scale Debt"
   description: "Avoid the operational bottlenecks that kill growth-stage momentum."
-  keywords: ["revenue", "scale debt", "operations"]
+  keywords: ["scaling revenue", "scale debt", "growth operations", "revenue growth", "operational bottlenecks", "scaling startups", "growth-stage operations", "marketing operations", "revenue operations", "scaling without breaking"]
 ---
 
 ## Scaling Revenue Without Scale Debt

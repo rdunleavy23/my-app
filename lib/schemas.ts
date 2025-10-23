@@ -11,6 +11,13 @@ export interface Service {
   description: string;
   url: string;
   provider: string;
+  serviceType?: string;
+  areaServed?: string;
+  offers?: {
+    price: string;
+    priceCurrency: string;
+    availability: string;
+  };
 }
 
 export interface Organization {
@@ -19,6 +26,59 @@ export interface Organization {
   url: string;
   logo?: string;
   sameAs?: string[];
+  address?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  contactPoint?: {
+    contactType: string;
+    email: string;
+    telephone?: string;
+  };
+}
+
+export interface BlogPosting {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  author: {
+    name: string;
+    url?: string;
+  };
+  publisher: {
+    name: string;
+    logo: string;
+  };
+  mainEntityOfPage: {
+    "@type": string;
+    "@id": string;
+  };
+  keywords?: string[];
+}
+
+export interface FAQPage {
+  mainEntity: Array<{
+    "@type": "Question";
+    name: string;
+    acceptedAnswer: {
+      "@type": "Answer";
+      text: string;
+    };
+  }>;
+}
+
+export interface BreadcrumbList {
+  itemListElement: Array<{
+    "@type": "ListItem";
+    position: number;
+    name: string;
+    item: string;
+  }>;
 }
 
 export function createPersonSchema(person: Person) {
@@ -33,7 +93,7 @@ export function createPersonSchema(person: Person) {
 }
 
 export function createServiceSchema(service: Service) {
-  return {
+  const schema: any = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.name,
@@ -44,6 +104,12 @@ export function createServiceSchema(service: Service) {
       name: service.provider,
     },
   };
+
+  if (service.serviceType) schema.serviceType = service.serviceType;
+  if (service.areaServed) schema.areaServed = service.areaServed;
+  if (service.offers) schema.offers = service.offers;
+
+  return schema;
 }
 
 export function createOrganizationSchema(org: Organization) {
@@ -55,6 +121,8 @@ export function createOrganizationSchema(org: Organization) {
     url: org.url,
     ...(org.logo && { logo: org.logo }),
     ...(org.sameAs && { sameAs: org.sameAs }),
+    ...(org.address && { address: org.address }),
+    ...(org.contactPoint && { contactPoint: org.contactPoint }),
   };
 }
 
@@ -70,5 +138,53 @@ export function createWebPageSchema(title: string, description: string, url: str
       name: "Pattern Growth",
       url: "https://www.patterngrowth.com",
     },
+  };
+}
+
+export function createBlogPostingSchema(post: BlogPosting) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.headline,
+    description: post.description,
+    url: post.url,
+    datePublished: post.datePublished,
+    ...(post.dateModified && { dateModified: post.dateModified }),
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      ...(post.author.url && { url: post.author.url }),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: post.publisher.name,
+      logo: {
+        "@type": "ImageObject",
+        url: post.publisher.logo,
+      },
+    },
+    mainEntityOfPage: post.mainEntityOfPage,
+    ...(post.keywords && { keywords: post.keywords.join(", ") }),
+  };
+}
+
+export function createFAQSchema(faqs: FAQPage["mainEntity"]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs,
+  };
+}
+
+export function createBreadcrumbSchema(breadcrumbs: BreadcrumbList["itemListElement"]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.item,
+    })),
   };
 }

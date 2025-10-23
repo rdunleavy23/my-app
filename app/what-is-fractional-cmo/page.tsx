@@ -2,10 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, XCircle, TrendingUp, Clock, DollarSign, Users } from 'lucide-react'
 import { GetStartedButton } from '@/components/ui/get-started-button'
+import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
+import RelatedContent from '@/components/ui/related-content'
 
 export const metadata: Metadata = {
   title: 'What is a Fractional CMO? Definition & Alternatives',
   description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.',
+  keywords: ['what is fractional cmo', 'fractional cmo definition', 'fractional cmo meaning', 'fractional chief marketing officer', 'fractional cmo services', 'fractional cmo cost', 'fractional cmo alternative', 'part-time cmo', 'fractional cmo vs full-time', 'fractional marketing leadership'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/what-is-fractional-cmo',
@@ -75,14 +78,16 @@ export default function WhatIsFractionalCMO() {
       />
       
       <div className="bg-background">
+        {/* Breadcrumbs */}
+        <div className="border-b border-border">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8 py-4">
+            <Breadcrumbs items={generateBreadcrumbs('/what-is-fractional-cmo')} />
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <div className="mb-8">
-              <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-                ← Back to Home
-              </Link>
-            </div>
             
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
               What is a Fractional CMO?
@@ -388,6 +393,9 @@ export default function WhatIsFractionalCMO() {
             </div>
           </div>
         </section>
+
+        {/* Related Content */}
+        <RelatedContent currentPage="/what-is-fractional-cmo" className="py-12" />
 
         {/* Related Resources Section */}
         <section className="py-12">
