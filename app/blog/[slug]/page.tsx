@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
+import { GetStartedButton } from '@/components/ui/get-started-button'
 import { BlogPostTracking } from './blog-post-tracking'
 
 export async function generateStaticParams() {
@@ -152,14 +153,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               <p className="text-muted-foreground mb-6">
                 Schedule a 15-minute fit call. We'll discuss your situation and be direct about whether our approach makes sense for you. No pitch, just clarity.
               </p>
-              <Link
-                href="https://cal.com/pattern-growth/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
+              <GetStartedButton>
                 Schedule Your Call
-              </Link>
+              </GetStartedButton>
             </div>
           </div>
         </div>

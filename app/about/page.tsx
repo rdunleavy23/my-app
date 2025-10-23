@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { ArrowRight, Users, Target, Zap } from "lucide-react"
@@ -292,6 +293,8 @@ export default function AboutPage() {
               Let's talk about whether an 8-week sprint makes sense for your team.
             </p>
           </div>
+          
+          <GetStartedButton />
           
         </div>
       </section>

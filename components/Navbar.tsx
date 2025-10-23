@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { AnimatedMenuIcon } from "@/components/ui/animated-menu-icon"
 import { Button } from "@/components/ui/button"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 import {
   Sheet,
   SheetContent,
@@ -103,14 +104,13 @@ export default function Navbar() {
             >
               How It Works
             </Link>
-            <Button asChild className="h-9">
-              <Link 
-                href="https://cal.com/pattern-growth"
-                onClick={() => handleCTAClick('navbar')}
-              >
-                Schedule a Call →
-              </Link>
-            </Button>
+            <GetStartedButton 
+              size="sm"
+              className="h-9"
+              onClick={() => handleCTAClick('navbar')}
+            >
+              Schedule a Call →
+            </GetStartedButton>
             <ThemeToggle />
           </nav>
 

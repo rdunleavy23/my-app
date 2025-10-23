@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Target, Search, Users, Wrench, Megaphone, BarChart3, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 import { Separator } from "@/components/ui/separator"
 import {
   Card,
@@ -267,6 +268,26 @@ export default function ProcessPage() {
             </CardContent>
           </Card>
         </div>
+      </section>
+
+      <Separator className="my-8 sm:my-10" />
+
+      {/* CTA Section */}
+      <section className="text-center space-y-6 sm:space-y-8">
+        <div className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            Ready to Get Started?
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Let's talk about whether an 8-week sprint makes sense for your team. No pitch, no pressure—just clarity on what you need.
+          </p>
+        </div>
+        
+        <GetStartedButton />
+        
+        <p className="text-sm text-muted-foreground">
+          30-minute call · No pitch, no pressure
+        </p>
       </section>
 
     </main>

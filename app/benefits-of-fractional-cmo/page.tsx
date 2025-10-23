@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { GetStartedButton } from '@/components/ui/get-started-button'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
@@ -245,16 +246,18 @@ export default function BenefitsOfFractionalCMOPage() {
             </ul>
           </div>
 
-          <p className="text-lg text-foreground mb-6">
-            <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Growth strategy sprints</Link> deliver CMO-level strategic thinking in 8 weeks through a fixed-fee project model. You get the frameworks, dashboards, and playbooks—then execute independently.
-          </p>
-
-          <Link 
-            href="/#contact" 
-            className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90"
-          >
-            Schedule Fit Call
-          </Link>
+          <div className="space-y-4">
+            <p className="text-lg text-foreground">
+              <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Growth strategy sprints</Link> deliver CMO-level strategic thinking in 8 weeks through a fixed-fee project model. You get the frameworks, dashboards, and playbooks—then execute independently.
+            </p>
+            <GetStartedButton />
+            <Link 
+              href="/#contact" 
+              className="inline-block text-primary hover:underline font-medium"
+            >
+              Schedule Fit Call →
+            </Link>
+          </div>
         </section>
 
         <section className="mb-16">

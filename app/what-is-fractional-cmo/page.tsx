@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, XCircle, TrendingUp, Clock, DollarSign, Users } from 'lucide-react'
+import { GetStartedButton } from '@/components/ui/get-started-button'
 
 export const metadata: Metadata = {
   title: 'What is a Fractional CMO? Definition & Alternatives',
@@ -446,18 +447,13 @@ export default function WhatIsFractionalCMO() {
               Get CMO-level strategy delivered in 8 weeks. Own everything. Execute independently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <GetStartedButton className="bg-background text-foreground hover:bg-background/90" />
               <Link 
                 href="/process" 
-                className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 border-2 border-background text-background px-8 py-4 rounded-lg font-semibold hover:bg-background/10 transition-colors"
               >
                 See How It Works
                 <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center justify-center gap-2 border-2 border-background text-background px-8 py-4 rounded-lg font-semibold hover:bg-background/10 transition-colors"
-              >
-                Learn About Pattern Growth
               </Link>
             </div>
           </div>

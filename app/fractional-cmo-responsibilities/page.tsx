@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { GetStartedButton } from '@/components/ui/get-started-button'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Responsibilities & Deliverables',
@@ -315,9 +316,15 @@ export default function FractionalCMOResponsibilitiesPage() {
             </div>
           </div>
 
-          <p className="text-lg text-foreground mb-4">
-            8 weeks. Fixed fee. You own everything. <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Compare models</Link>
-          </p>
+          <div className="space-y-4">
+            <p className="text-lg text-foreground">
+              8 weeks. Fixed fee. You own everything.
+            </p>
+            <GetStartedButton />
+            <Link href="/fractional-cmo-services" className="inline-block text-primary hover:underline font-medium">
+              Compare models →
+            </Link>
+          </div>
         </section>
 
         <section>

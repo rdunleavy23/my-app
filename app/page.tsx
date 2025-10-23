@@ -17,6 +17,7 @@ import {
 
 import { FAQCollapsible } from "@/components/ui/faq-collapsible"
 import { Button } from "@/components/ui/button"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 import {
   Card,
   CardContent,
@@ -51,17 +52,7 @@ export default function HomePage() {
 
             {/* Hero CTA */}
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <Button asChild size="lg" className="font-semibold">
-                <a
-                  href="https://cal.com/pattern-growth/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  Schedule a Call
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
-              </Button>
+              <GetStartedButton />
               <p className="text-sm text-muted-foreground">
                 30-minute call · No pitch, no pressure
               </p>
