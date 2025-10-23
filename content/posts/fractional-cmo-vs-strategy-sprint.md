@@ -28,7 +28,7 @@ The answer depends on your timeline, budget constraints, and whether you need on
 
 ## When Fractional CMOs Make Sense
 
-**Choose fractional CMO if:**
+**Choose [fractional CMO](/what-is-fractional-cmo) if:**
 
 - You need day-to-day operational management
 - Strategy exists but execution needs supervision
@@ -36,11 +36,11 @@ The answer depends on your timeline, budget constraints, and whether you need on
 - You have budget for 6-12 months of guidance
 - Board meetings require marketing representation
 
-**Typical fractional CMO scenario:**
+**Typical [fractional CMO scenario](/fractional-cmo-services):**
 - Revenue: $3M-10M
 - Team: 5-15 people
 - Need: Ongoing strategic oversight
-- Budget: $60K-180K annually
+- Budget: [$60K-180K annually](/fractional-cmo-hourly-rate)
 
 ## When Strategy Sprints Deliver Better Results
 

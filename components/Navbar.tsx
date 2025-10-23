@@ -15,7 +15,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import Logo from "@/components/Logo"
 import { trackCTAClick, trackNavigationClick } from "@/lib/analytics"
-import { siteConfig } from "@/config/site"
+// Lean navigation: keep conversion-focused links only
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -89,24 +89,28 @@ export default function Navbar() {
         <div className="flex h-14 items-center justify-between">
           <Logo />
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav (lean) */}
           <nav className="hidden md:flex items-center space-x-6">
-            {siteConfig.mainNav.slice(0, -1).map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
-                onClick={() => handleNavClick(item.title, item.href)}
-              >
-                {item.title}
-              </Link>
-            ))}
+            <Link
+              href="/about"
+              className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
+              onClick={() => handleNavClick('About', '/about')}
+            >
+              About
+            </Link>
+            <Link
+              href="/process"
+              className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
+              onClick={() => handleNavClick('Process', '/process')}
+            >
+              Process
+            </Link>
             <Button asChild className="h-12">
-              <Link
-                href={siteConfig.mainNav[siteConfig.mainNav.length - 1].href}
+              <Link 
+                href="https://cal.com/pattern-growth"
                 onClick={() => handleCTAClick('navbar')}
               >
-                {siteConfig.mainNav[siteConfig.mainNav.length - 1].title}
+                Schedule a Call →
               </Link>
             </Button>
             <ThemeToggle />
@@ -140,23 +144,31 @@ export default function Navbar() {
                   {/* Screen reader title */}
                   <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
                   
-                  {/* Navigation items with larger typography and spacing */}
+                  {/* Navigation items with larger typography and spacing (lean) */}
                   <div className="flex-1 px-6">
                     <nav role="navigation" aria-label="Main navigation">
-                      {siteConfig.mainNav.slice(0, -1).map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => {
-                            closeMenu();
-                            handleMobileNavClick(item.title, item.href);
-                          }}
-                          className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
-                          aria-current={pathname === item.href ? 'page' : undefined}
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
+                      <Link
+                        href="/about"
+                        onClick={() => {
+                          closeMenu();
+                          handleMobileNavClick('About', '/about');
+                        }}
+                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
+                        aria-current={pathname === '/about' ? 'page' : undefined}
+                      >
+                        About
+                      </Link>
+                      <Link
+                        href="/process"
+                        onClick={() => {
+                          closeMenu();
+                          handleMobileNavClick('Process', '/process');
+                        }}
+                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
+                        aria-current={pathname === '/process' ? 'page' : undefined}
+                      >
+                        Process
+                      </Link>
                     </nav>
                     
                     {/* CTA section - part of scrollable content */}

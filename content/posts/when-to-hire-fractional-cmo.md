@@ -84,13 +84,13 @@ The answer depends on your strategic clarity, operational needs, and timeline pr
 - **You have budget** for 6-12 month commitment
 - **Operational complexity** requires ongoing management
 
-**Typical fractional CMO scenario:**
+**Typical [fractional CMO](/what-is-fractional-cmo) scenario:**
 - Revenue: $3M-10M
 - Need: Strategic leadership and operational oversight
 - Team: Needs guidance on priorities and execution
 - Timeline: 6-12 months for strategic transformation
 
-**Fractional CMO responsibilities:**
+**[Fractional CMO responsibilities](/fractional-cmo-responsibilities):**
 - Strategic planning and execution oversight
 - Team leadership and development
 - Vendor and agency management
@@ -114,7 +114,7 @@ The answer depends on your strategic clarity, operational needs, and timeline pr
 - **Dependency:** Zero (designed for independence)
 
 ### Fractional CMO
-- **Cost:** $5K-15K/month × 6-12 months
+- **Cost:** [$5K-15K/month](/fractional-cmo-hourly-rate) × 6-12 months
 - **Timeline:** 6-12+ months
 - **Deliverables:** Strategic guidance and operational oversight
 - **Ownership:** You own the strategic direction

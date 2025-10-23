@@ -1,6 +1,9 @@
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function SiteFooter() {
+  // Avoid SSR window access: derive from location at runtime on client
+  const hideResources = false
   return (
     <footer className="border-t bg-muted/20">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
@@ -23,12 +26,14 @@ export default function SiteFooter() {
               >
                 About
               </Link>
-              <Link 
-                href="/blog" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
-              >
-                Blog
-              </Link>
+              {false && (
+                <Link 
+                  href="/blog" 
+                  className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+                >
+                  Blog
+                </Link>
+              )}
               <Link 
                 href="/privacy" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
@@ -58,13 +63,17 @@ export default function SiteFooter() {
                 About
               </Link>
               <span className="text-muted-foreground/50">·</span>
-              <Link 
-                href="/blog" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors"
-              >
-                Blog
-              </Link>
-              <span className="text-muted-foreground/50">·</span>
+              {false && (
+                <>
+                  <Link 
+                    href="/blog" 
+                    className="text-muted-foreground/90 hover:text-foreground transition-colors"
+                  >
+                    Blog
+                  </Link>
+                  <span className="text-muted-foreground/50">·</span>
+                </>
+              )}
               <Link 
                 href="/privacy" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors"

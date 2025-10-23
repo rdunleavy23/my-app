@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
 import { GetStartedButton } from '@/components/ui/get-started-button'
 import RelatedContent from '@/components/ui/related-content'
+import { isProtectedRoute } from '@/components/lib/route-guards'
 import { BlogPostTracking } from './blog-post-tracking'
 
 export async function generateStaticParams() {
@@ -146,7 +147,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             dangerouslySetInnerHTML={{ __html: content }}
           />
 
-          {/* Related Content */}
+          {/* Related Content (always allowed on blog) */}
           <RelatedContent
             currentPage={`/blog/${params.slug}`}
             className="mt-12 mb-8"

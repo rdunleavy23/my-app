@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2, XCircle, TrendingUp, Clock, DollarSign, Users
 import { GetStartedButton } from '@/components/ui/get-started-button'
 import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
+import { SEOCalloutBox } from '@/components/ui/seo-callout-box'
+import { LearnMoreSection } from '@/components/ui/learn-more-section'
 
 export const metadata: Metadata = {
   title: 'What is a Fractional CMO? Definition & Alternatives',
@@ -159,7 +161,7 @@ export default function WhatIsFractionalCMO() {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Fractional CMOs provide strategic marketing leadership. Their typical responsibilities include:
+              Fractional CMOs provide strategic marketing leadership. Their <Link href="/fractional-cmo-responsibilities" className="text-primary hover:underline font-medium">typical responsibilities</Link> include:
             </p>
 
             <div className="space-y-4 mb-8">
@@ -216,10 +218,19 @@ export default function WhatIsFractionalCMO() {
             </div>
 
             <p className="text-muted-foreground">
-              <strong>Hidden costs:</strong> Most fractional CMO engagements require 6-12 month commitments. You're also dependent on their availability and continued relationship.
+              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments. You're also dependent on their availability and continued relationship.
             </p>
           </div>
         </section>
+
+        {/* SEO Callout Box */}
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <SEOCalloutBox
+            title="Why we built a project-based alternative to fractional CMO retainers"
+            description="Most growth-stage companies don't need ongoing CMO leadership—they need strategic architecture. See why 8-week strategy sprints outperform traditional fractional models."
+            href="/blog/fractional-cmo-alternative"
+          />
+        </div>
 
         {/* Benefits vs Drawbacks */}
         <section className="py-12">
@@ -429,53 +440,44 @@ export default function WhatIsFractionalCMO() {
         {/* Related Content */}
         <RelatedContent currentPage="/what-is-fractional-cmo" className="py-12" />
 
-        {/* Related Resources Section */}
-        <section className="py-12">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-6">Explore Fractional CMO Resources</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-accent/30 border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Looking for an Alternative?</h3>
-                <p className="text-muted-foreground mb-4">
-                  Discover why project-based marketing consulting often outperforms traditional fractional CMO models.
-                </p>
-                <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline font-medium">
-                  Read our comparison →
-                </Link>
-              </div>
-              
-              <div className="bg-accent/30 border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Cost & Pricing Breakdown</h3>
-                <p className="text-muted-foreground mb-4">
-                  Understand fractional CMO rates and compare investment options.
-                </p>
-                <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">
-                  See pricing guide →
-                </Link>
-              </div>
-              
-              <div className="bg-accent/30 border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Services Overview</h3>
-                <p className="text-muted-foreground mb-4">
-                  Learn what fractional CMOs typically provide and alternative service models.
-                </p>
-                <Link href="/fractional-cmo-services" className="text-primary hover:underline font-medium">
-                  View services →
-                </Link>
-              </div>
-              
-              <div className="bg-accent/30 border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Responsibilities & Benefits</h3>
-                <p className="text-muted-foreground mb-4">
-                  Explore what fractional CMOs do and the benefits of different engagement models.
-                </p>
-                <Link href="/fractional-cmo-responsibilities" className="text-primary hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Learn More Section */}
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <LearnMoreSection
+            title="Explore fractional CMO services and alternatives"
+            links={[
+              {
+                title: "Fractional CMO pricing and hourly rates",
+                description: "Understand what fractional CMOs cost and compare investment options for growth-stage companies.",
+                href: "/fractional-cmo-hourly-rate"
+              },
+              {
+                title: "Typical fractional CMO services",
+                description: "Learn what fractional CMOs provide and explore alternative service models for strategic marketing.",
+                href: "/fractional-cmo-services"
+              },
+              {
+                title: "Fractional CMO responsibilities explained",
+                description: "Explore what fractional CMOs do and the benefits of different engagement models.",
+                href: "/fractional-cmo-responsibilities"
+              },
+              {
+                title: "When to hire a fractional CMO vs consultant",
+                description: "Decision framework for choosing between fractional CMO retainers and project-based marketing consulting.",
+                href: "/blog/when-to-hire-fractional-cmo"
+              },
+              {
+                title: "Fractional CMO vs strategy sprint comparison",
+                description: "Compare fractional CMO retainers vs project-based strategy sprints to see which growth model fits your stage.",
+                href: "/blog/fractional-cmo-vs-strategy-sprint"
+              },
+              {
+                title: "Growth strategy framework and methodology",
+                description: "Strategic architecture framework for $1-5M companies. Learn how 8-week strategy sprints build scalable marketing systems.",
+                href: "/blog/growth-strategy-framework"
+              }
+            ]}
+          />
+        </div>
 
         {/* CTA Section */}
         <section className="py-16 bg-primary text-primary-foreground">

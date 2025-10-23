@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { GetStartedButton } from '@/components/ui/get-started-button'
 import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
+import { SEOCalloutBox } from '@/components/ui/seo-callout-box'
+import { LearnMoreSection } from '@/components/ui/learn-more-section'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Cost: Rates vs. Project Pricing',
@@ -56,7 +58,7 @@ export default function FractionalCMOHourlyRatePage() {
           <h2 className="text-3xl font-bold text-foreground mb-6">What is the hourly rate for a fractional CMO?</h2>
 
           <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Most fractional CMOs don't advertise hourly rates—they structure engagements as monthly retainers. But the math reveals effective hourly rates of $125-400/hour depending on experience and deliverables.
+            Most <Link href="/what-is-fractional-cmo" className="text-primary hover:underline font-medium">fractional CMOs</Link> don't advertise hourly rates—they structure engagements as monthly retainers. But the math reveals effective hourly rates of $125-400/hour depending on experience and <Link href="/fractional-cmo-responsibilities" className="text-primary hover:underline font-medium">scope of responsibilities</Link>.
           </p>
 
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
@@ -198,6 +200,13 @@ export default function FractionalCMOHourlyRatePage() {
             </div>
           </div>
         </section>
+
+        {/* SEO Callout Box */}
+        <SEOCalloutBox
+          title="When to hire a fractional CMO vs marketing consultant"
+          description="Choosing between fractional CMO retainers and project-based marketing consulting. Learn which model fits your growth stage and needs."
+          href="/blog/when-to-hire-fractional-cmo"
+        />
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-6">Hourly vs. Monthly vs. Project-Based Pricing</h2>
@@ -386,17 +395,34 @@ export default function FractionalCMOHourlyRatePage() {
         {/* Related Content */}
         <RelatedContent currentPage="/fractional-cmo-hourly-rate" className="py-8 border-t" />
 
-        {/* Related Resources */}
-        <section className="py-8 border-t">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <p className="text-muted-foreground">
-              <strong>Related:</strong> Learn more about{" "}
-              <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">what fractional CMOs are</Link>,{" "}
-              <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline">project-based alternatives</Link>, or{" "}
-              <Link href="/fractional-cmo-services" className="text-primary hover:underline">typical CMO services</Link>.
-            </p>
-          </div>
-        </section>
+        {/* Learn More Section */}
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <LearnMoreSection
+            title="Compare fractional CMO pricing and alternatives"
+            links={[
+              {
+                title: "What is a fractional CMO?",
+                description: "A fractional CMO provides part-time marketing leadership on retainer. Learn about the model and project-based alternatives.",
+                href: "/what-is-fractional-cmo"
+              },
+              {
+                title: "Fractional CMO services and deliverables",
+                description: "Learn what fractional CMOs typically provide and explore alternative service models for strategic marketing.",
+                href: "/fractional-cmo-services"
+              },
+              {
+                title: "Project-based CMO alternative",
+                description: "Why we built a project-based alternative to fractional CMO retainers. See why 8-week strategy sprints outperform traditional models.",
+                href: "/blog/fractional-cmo-alternative"
+              },
+              {
+                title: "Fractional CMO vs strategy sprint comparison",
+                description: "Compare fractional CMO retainers vs project-based strategy sprints. See which growth model fits your stage.",
+                href: "/blog/fractional-cmo-vs-strategy-sprint"
+              }
+            ]}
+          />
+        </div>
 
       </article>
     </div>
