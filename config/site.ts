@@ -9,6 +9,11 @@ export const siteConfig = {
     "We don't just design strategy. We operationalize it into systems your team can actually run.",
   mainNav: [
     {
+      title: "Services",
+      href: "/#services",
+      description: "Our growth strategy services"
+    },
+    {
       title: "About Us",
       href: "/about",
       description: "Meet the team behind Pattern Growth"
@@ -17,6 +22,11 @@ export const siteConfig = {
       title: "How It Works",
       href: "/process",
       description: "How we build scalable marketing operations"
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+      description: "Growth strategy insights and case studies"
     },
     {
       title: "Schedule a Call →",

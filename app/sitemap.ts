@@ -18,14 +18,12 @@ const PRIORITY_MAP = {
   about: 0.8,
 
   // High-value service pages
-  'what-is-fractional-cmo': 0.8,
-  'fractional-cmo-hourly-rate': 0.8,
-  'benefits-of-fractional-cmo': 0.7,
-
-  // Supporting service pages
-  'fractional-cmo-services': 0.7,
-  'fractional-cmo-responsibilities': 0.6,
-  'fractional-marketing-services': 0.6,
+  'what-is-fractional-cmo': 0.9,
+  'fractional-cmo-hourly-rate': 0.9,
+  'fractional-cmo-services': 0.8,
+  'fractional-cmo-responsibilities': 0.8,
+  'fractional-marketing-services': 0.8,
+  'benefits-of-fractional-cmo': 0.8,
 
   // Blog content (varies by pillar status)
   blog: 0.7,
@@ -116,6 +114,7 @@ function getChangeFrequencyForPage(url: string): 'always' | 'hourly' | 'daily' |
     '/fractional-cmo-services': 'monthly',
     '/fractional-cmo-responsibilities': 'monthly',
     '/fractional-marketing-services': 'monthly',
+    '/styleguide': 'yearly',
   }
 
   return frequencyMap[url.replace(SITE_URL, '')] || 'monthly'
@@ -132,7 +131,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/process`, lastModified: getLastModifiedForPage(`${SITE_URL}/process`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/process`), priority: getPriorityForPage(`${SITE_URL}/process`) },
     { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/benefits-of-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/benefits-of-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/benefits-of-fractional-cmo`) },
     { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-hourly-rate`) },
-    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-responsibilities`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-responsibilities`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-responsibilities`) },
     { url: `${SITE_URL}/fractional-cmo-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-services`) },
     { url: `${SITE_URL}/fractional-marketing-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-marketing-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-marketing-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-marketing-services`) },
     { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/what-is-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/what-is-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/what-is-fractional-cmo`) },

@@ -7,6 +7,7 @@ import Script from 'next/script'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
 import { GetStartedButton } from '@/components/ui/get-started-button'
+import RelatedContent from '@/components/ui/related-content'
 import { BlogPostTracking } from './blog-post-tracking'
 
 export async function generateStaticParams() {
@@ -143,6 +144,14 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div
             className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-primary hover:prose-a:text-primary/80 prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-code:text-foreground prose-code:bg-muted prose-pre:bg-muted"
             dangerouslySetInnerHTML={{ __html: content }}
+          />
+
+          {/* Related Content */}
+          <RelatedContent
+            currentPage={`/blog/${params.slug}`}
+            className="mt-12 mb-8"
+            variant="cards"
+            maxLinks={3}
           />
 
           <div className="mt-16 p-8 bg-muted rounded-lg">

@@ -30,6 +30,8 @@ Think about what happens when you hire a fractional CMO:
 * Six months in, you still don't have a dashboard
 * When they leave, the insights leave with them
 
+Compare this to our [8-week strategy sprint approach](/process) where you own everything from day one.
+
 > You're renting leadership when you should be building infrastructure.
 
 ## What Growth-Stage Companies Actually Need
@@ -47,6 +49,8 @@ If you're a $1–5M revenue company and growth has stalled, you don't need someo
 **Messaging questions:** Is it resonating? What content moves deals? How do we build awareness that matters?
 
 > Get those answered, build a measurement system that shows what drives pipeline, create playbooks your team can execute, train them—then get out of the way. That's not a 12-month engagement. That's a [2-month sprint](/process).
+
+If you're wondering [when to hire a fractional CMO vs a consultant](/blog/when-to-hire-fractional-cmo), the answer depends on whether you need ongoing leadership or strategic architecture you can own forever.
 
 That's not a 12-month engagement. That's a 2-month sprint.
 

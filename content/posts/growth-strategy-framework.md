@@ -134,6 +134,11 @@ As a pre-revenue company, Pattern Growth is currently building our own strategic
 
 If you're a growth-stage company ready to build strategic architecture, we're here to help. Our frameworks are battle-tested and designed specifically for companies in your stage.
 
+**Ready to get started?**
+1. **[Schedule a strategy call](/process)** - 30-minute assessment to see if we're a fit
+2. **Explore our services** - Learn about [fractional CMO alternatives](/what-is-fractional-cmo) and [pricing transparency](/fractional-cmo-hourly-rate)
+3. **Read the comparison** - See how we differ from [traditional consulting models](/blog/fractional-cmo-vs-strategy-sprint)
+
 The next step is a 30-minute assessment call to discuss your specific challenges and determine if an 8-week sprint fits your situation.
 
 ---

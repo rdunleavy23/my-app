@@ -15,6 +15,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import Logo from "@/components/Logo"
 import { trackCTAClick, trackNavigationClick } from "@/lib/analytics"
+import { siteConfig } from "@/config/site"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -90,26 +91,22 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
-            <Link
-              href="/about"
-              className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
-              onClick={() => handleNavClick('Our Story', '/about')}
-            >
-              Our Story
-            </Link>
-            <Link
-              href="/process"
-              className="text-sm text-muted-foreground hover:text-foreground h-9 flex items-center"
-              onClick={() => handleNavClick('How It Works', '/process')}
-            >
-              How It Works
-            </Link>
-            <Button asChild className="h-9">
-              <Link 
-                href="https://cal.com/pattern-growth"
+            {siteConfig.mainNav.slice(0, -1).map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
+                onClick={() => handleNavClick(item.title, item.href)}
+              >
+                {item.title}
+              </Link>
+            ))}
+            <Button asChild className="h-12">
+              <Link
+                href={siteConfig.mainNav[siteConfig.mainNav.length - 1].href}
                 onClick={() => handleCTAClick('navbar')}
               >
-                Schedule a Call →
+                {siteConfig.mainNav[siteConfig.mainNav.length - 1].title}
               </Link>
             </Button>
             <ThemeToggle />
@@ -130,14 +127,10 @@ export default function Navbar() {
                   <AnimatedMenuIcon isOpen={open} aria-hidden="true" />
                 </Button>
               </SheetTrigger>
-              <SheetContent 
+              <SheetContent
                 side="top"
                 showClose={false}
-                className="w-screen rounded-none border-0 p-0 bg-[#f5f4f0]"
-                style={{
-                  top: '56px',
-                  height: 'calc(100vh - 56px)',
-                }}
+                className="w-screen rounded-none border-0 p-0 bg-[#f5f4f0] max-h-[calc(100vh-56px)] overflow-y-auto"
                 id="mobile-menu"
                 role="dialog"
                 aria-modal="true"
@@ -150,28 +143,20 @@ export default function Navbar() {
                   {/* Navigation items with larger typography and spacing */}
                   <div className="flex-1 px-6">
                     <nav role="navigation" aria-label="Main navigation">
-                      <Link
-                        href="/about"
-                        onClick={() => {
-                          closeMenu();
-                          handleMobileNavClick('Our Story', '/about');
-                        }}
-                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
-                        aria-current={pathname === '/about' ? 'page' : undefined}
-                      >
-                        Our Story
-                      </Link>
-                      <Link
-                        href="/process"
-                        onClick={() => {
-                          closeMenu();
-                          handleMobileNavClick('How It Works', '/process');
-                        }}
-                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 text-foreground"
-                        aria-current={pathname === '/process' ? 'page' : undefined}
-                      >
-                        How It Works
-                      </Link>
+                      {siteConfig.mainNav.slice(0, -1).map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => {
+                            closeMenu();
+                            handleMobileNavClick(item.title, item.href);
+                          }}
+                          className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
+                          aria-current={pathname === item.href ? 'page' : undefined}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
                     </nav>
                     
                     {/* CTA section - part of scrollable content */}

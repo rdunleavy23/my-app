@@ -61,6 +61,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Preload critical resources for Core Web Vitals */}
+        <link rel="preload" href="/patterngrowth-logo.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/patterngrowth-android-chrome-512x512.png" as="image" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DQD43BSF5Q"
           strategy="afterInteractive"
