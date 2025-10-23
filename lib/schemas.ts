@@ -89,6 +89,11 @@ export function createPersonSchema(person: Person) {
     jobTitle: person.jobTitle,
     description: person.description,
     ...(person.image && { image: person.image }),
+    worksFor: {
+      "@type": "Organization",
+      name: "Pattern Growth",
+      url: "https://www.patterngrowth.com"
+    }
   };
 }
 

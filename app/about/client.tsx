@@ -75,7 +75,7 @@ export default function AboutClient() {
               <p>
                 Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think.
                 His focus is on translating complex marketing challenges into clear next steps, and he has a reputation
-                for calling out when “more campaigns” isn’t really the answer. His goal is always the same:
+                for calling out when "more campaigns" isn't really the answer. His goal is always the same:
                 clarity that teams can run with.
               </p>
             </div>

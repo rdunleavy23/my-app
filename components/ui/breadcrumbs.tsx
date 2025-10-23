@@ -13,6 +13,7 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items, className }: BreadcrumbsProps) {
+  if (items.length === 0) return null
   return (
     <nav
       className={cn("flex items-center space-x-1 text-sm text-muted-foreground mb-6", className)}

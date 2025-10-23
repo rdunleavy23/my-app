@@ -109,11 +109,18 @@ export default function WhatIsFractionalCMO() {
         <section className="py-12 bg-muted/30">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-6">
-              Fractional CMO Definition
+              What is a fractional CMO?
             </h2>
-            
+
+            <div className="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6">
+              <h3 className="font-semibold text-foreground mb-2">Definition</h3>
+              <p className="text-foreground">
+                A fractional CMO (Chief Marketing Officer) is an experienced marketing executive who works with multiple companies on a part-time or contract basis, providing strategic marketing leadership without the commitment or cost of a full-time CMO hire.
+              </p>
+            </div>
+
             <p className="text-lg text-foreground mb-6">
-              A fractional CMO (Chief Marketing Officer) is an experienced marketing executive who works with companies on a part-time, contract, or retainer basis. Rather than hiring a full-time CMO, companies get access to senior-level strategic expertise for a fraction of the time and cost.
+              Rather than hiring a full-time CMO, companies get access to senior-level strategic expertise for a fraction of the time and cost.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 mb-8">
@@ -178,8 +185,15 @@ export default function WhatIsFractionalCMO() {
         <section className="py-12 bg-muted/30">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-6">
-              How Much Does a Fractional CMO Cost?
+              How much does a fractional CMO cost?
             </h2>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+              <h3 className="font-semibold text-foreground mb-2">Cost Range</h3>
+              <p className="text-foreground">
+                Fractional CMOs typically cost between $5,000-$15,000 per month for 10-20 hours of work weekly. Annual costs range from $60,000-$180,000 depending on experience level and time commitment.
+              </p>
+            </div>
             
             <div className="bg-background border border-border rounded-lg p-8 mb-6">
               <div className="grid sm:grid-cols-2 gap-8">
@@ -342,9 +356,9 @@ export default function WhatIsFractionalCMO() {
         <section className="py-12">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">
-              Frequently Asked Questions
+              Frequently Asked Questions About Fractional CMOs
             </h2>
-            
+
             <div className="space-y-6">
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-3">
@@ -388,6 +402,24 @@ export default function WhatIsFractionalCMO() {
                 </h3>
                 <p className="text-muted-foreground">
                   For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, marketing dashboards, and campaign playbooks—enabling your team to execute independently instead of relying on continued consulting relationships.
+                </p>
+              </div>
+
+              <div className="border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-3">
+                  How is a fractional CMO different from a marketing consultant?
+                </h3>
+                <p className="text-muted-foreground">
+                  A fractional CMO acts as an executive leader within your organization, making strategic decisions and overseeing marketing operations. A marketing consultant typically provides advice and recommendations but doesn't take on leadership responsibility or operational oversight.
+                </p>
+              </div>
+
+              <div className="border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-3">
+                  What are the benefits of hiring a fractional CMO?
+                </h3>
+                <p className="text-muted-foreground">
+                  Benefits include lower cost than full-time hire, immediate senior expertise, no recruiting process, broader industry experience, and scalable commitment. However, drawbacks include ongoing dependency, limited availability (10-20 hours/week), long-term commitment requirements, and loss of knowledge when they leave.
                 </p>
               </div>
             </div>

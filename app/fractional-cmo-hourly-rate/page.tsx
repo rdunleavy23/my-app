@@ -53,11 +53,18 @@ export default function FractionalCMOHourlyRatePage() {
       <article className="max-w-4xl mx-auto px-4 py-12">
         
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Standard Fractional CMO Hourly Rates</h2>
-          
+          <h2 className="text-3xl font-bold text-foreground mb-6">What is the hourly rate for a fractional CMO?</h2>
+
           <p className="text-lg text-foreground mb-6 leading-relaxed">
             Most fractional CMOs don't advertise hourly rates—they structure engagements as monthly retainers. But the math reveals effective hourly rates of $125-400/hour depending on experience and deliverables.
           </p>
+
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+            <h3 className="font-semibold text-foreground mb-2">Quick Answer</h3>
+            <p className="text-foreground">
+              Fractional CMO hourly rates range from $125-400/hour, translating to $5K-20K monthly retainers for 10-20 hours weekly. Effective rates vary by experience level, industry specialization, and scope of responsibilities.
+            </p>
+          </div>
 
           <div className="bg-muted p-6 rounded-lg mb-6">
             <h3 className="text-xl font-semibold text-foreground mb-4">2025 Pricing Tiers</h3>
@@ -284,11 +291,18 @@ export default function FractionalCMOHourlyRatePage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6">How to Evaluate Fractional CMO Pricing</h2>
-          
+          <h2 className="text-3xl font-bold text-foreground mb-6">How should I evaluate fractional CMO pricing?</h2>
+
           <p className="text-lg text-foreground mb-6 leading-relaxed">
             Smart buyers look beyond hourly rates to evaluate total value delivery.
           </p>
+
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6">
+            <h3 className="font-semibold text-foreground mb-2">Evaluation Framework</h3>
+            <p className="text-foreground">
+              Ask: "What do I own after 12 months?" If the answer is strategic guidance that leaves when they do, you're buying advisory, not architecture. Demand documented frameworks, working systems, and knowledge transfer that persists beyond the consultant.
+            </p>
+          </div>
 
           <div className="space-y-4">
             <div className="border-l-4 border-primary pl-4">
@@ -322,34 +336,48 @@ export default function FractionalCMOHourlyRatePage() {
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
-          
+          <h2 className="text-3xl font-bold text-foreground mb-6">Fractional CMO Pricing: FAQ</h2>
+
           <div className="space-y-6">
-            <div>
+            <div className="bg-muted/30 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-foreground mb-2">What's a fair hourly rate for a fractional CMO?</h3>
               <p className="text-foreground leading-relaxed">
                 Fair hourly rates range from $150-300/hour for most fractional CMOs, translating to $6K-12K monthly retainers for 10-15 hours weekly. Rates above $300/hour should come with specialized expertise or exceptional track records. Below $150/hour raises questions about experience depth.
               </p>
             </div>
 
-            <div>
+            <div className="bg-muted/30 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-foreground mb-2">Is hourly or monthly pricing better for fractional CMO services?</h3>
               <p className="text-foreground leading-relaxed">
                 Monthly retainers provide cost predictability and align incentives better than hourly billing. Hourly pricing encourages time tracking over value delivery and creates unpredictable costs. However, project-based fixed fees beat both by capping total investment and forcing complete knowledge transfer.
               </p>
             </div>
 
-            <div>
+            <div className="bg-muted/30 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-foreground mb-2">How much should I budget for fractional CMO services?</h3>
               <p className="text-foreground leading-relaxed">
                 Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. Alternatively, budget $9,500 for project-based strategic architecture you own completely.
               </p>
             </div>
 
-            <div>
+            <div className="bg-muted/30 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-foreground mb-2">Why do fractional CMO rates vary so much?</h3>
               <p className="text-foreground leading-relaxed">
                 Rate variance reflects experience level, industry specialization, geographic market, scope of responsibilities, and track record. A generalist offering basic advisory charges less than a vertical specialist with proven scaling success. Rates also reflect how consultants value their time and position their services.
+              </p>
+            </div>
+
+            <div className="bg-muted/30 rounded-lg p-4">
+              <h3 className="text-xl font-semibold text-foreground mb-2">What's the minimum commitment for fractional CMO services?</h3>
+              <p className="text-foreground leading-relaxed">
+                Most fractional CMOs require 6-12 month minimum commitments. This ensures sufficient time for strategic impact and justifies their investment in understanding your business. Early termination often includes penalty clauses or requires 60-90 day notice periods.
+              </p>
+            </div>
+
+            <div className="bg-muted/30 rounded-lg p-4">
+              <h3 className="text-xl font-semibold text-foreground mb-2">How do fractional CMO costs compare to full-time CMO salary?</h3>
+              <p className="text-foreground leading-relaxed">
+                Full-time CMO salaries range from $200K-400K annually plus benefits and equity. Fractional CMOs provide similar strategic expertise at 30-60% of the cost, but with part-time commitment and ongoing dependency. The trade-off is depth of involvement versus independence.
               </p>
             </div>
           </div>
