@@ -104,13 +104,14 @@ export default function Navbar() {
             >
               How It Works
             </Link>
-            <GetStartedButton 
-              size="sm"
-              className="h-9"
-              onClick={() => handleCTAClick('navbar')}
-            >
-              Schedule a Call →
-            </GetStartedButton>
+            <Button asChild className="h-9">
+              <Link 
+                href="https://cal.com/pattern-growth"
+                onClick={() => handleCTAClick('navbar')}
+              >
+                Schedule a Call →
+              </Link>
+            </Button>
             <ThemeToggle />
           </nav>
 
