@@ -47,7 +47,7 @@ const serviceSchema = {
   "areaServed": "Worldwide",
   "offers": {
     "@type": "Offer",
-    "price": "0",
+    "price": "9500",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
     "priceValidUntil": "2026-12-31",
@@ -83,6 +83,42 @@ const serviceSchema = {
       }
     ]
   }
+}
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is a Fractional CMO? Definition & Alternatives",
+  "description": "Complete guide to fractional CMO services, costs, and alternatives for growth-stage companies. Compare traditional retainers vs project-based strategy sprints.",
+  "author": {
+    "@type": "Organization",
+    "name": "Pattern Growth"
+  },
+  "datePublished": "2025-10-23",
+  "dateModified": "2025-10-23",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pattern Growth",
+    "url": "https://www.patterngrowth.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.patterngrowth.com/what-is-fractional-cmo"
+  },
+  "articleSection": ["Marketing Strategy", "Business Growth", "Fractional Executive"],
+  "keywords": ["fractional cmo", "fractional cmo definition", "fractional cmo cost", "fractional cmo alternative", "marketing consulting"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Fractional CMO",
+      "description": "Part-time marketing executive providing strategic leadership"
+    },
+    {
+      "@type": "Thing",
+      "name": "Growth Strategy Sprint",
+      "description": "8-week project-based marketing consulting alternative"
+    }
+  ]
 }
 
 const faqSchema = {
@@ -151,6 +187,10 @@ export default function WhatIsFractionalCMO() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"
@@ -590,6 +630,9 @@ export default function WhatIsFractionalCMO() {
               </div>
               <div id="footnote-2">
                 <sup>[2]</sup> Fractional CMO market growth analysis from <a href="https://hbr.org/2023/09/the-rise-of-the-fractional-executive" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Harvard Business Review</a> and <a href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-fractional-c-suite" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">McKinsey Quarterly</a>
+              </div>
+              <div id="footnote-3">
+                <sup>[3]</sup> Strategy sprint methodology detailed in our <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline">comprehensive guide</Link> comparing traditional fractional models with project-based alternatives
               </div>
             </div>
           </div>
