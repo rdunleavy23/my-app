@@ -11,7 +11,7 @@ import { Separator } from "@/components/ui/separator"
 import { ArrowRight, Users, Target, Zap } from "lucide-react"
 import Breadcrumbs from "@/components/ui/breadcrumbs"
 import { ErrorBoundary } from "@/components/error-boundary"
-import { createPersonSchema, createOrganizationSchema } from "@/lib/schemas"
+import { createPersonSchema, createOrganizationSchema, createBreadcrumbListSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
   title: "Our Team: Two Growth Strategists | Pattern Growth",
@@ -78,6 +78,11 @@ export default function AboutPage() {
     url: "https://www.patterngrowth.com",
     sameAs: ["https://www.patterngrowth.com"]
   });
+
+  const breadcrumbSchema = createBreadcrumbListSchema([
+    { label: 'Home', href: '/', position: 1 },
+    { label: 'About', position: 2 }
+  ]);
 
   const team = [
     {
@@ -151,6 +156,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

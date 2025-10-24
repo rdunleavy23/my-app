@@ -17,19 +17,19 @@ export const metadata: Metadata = {
     default: "Project-Based Marketing Consultant | 8-Week Growth Strategy Sprint | Pattern Growth",
     template: "%s | Pattern Growth",
   },
-  description: "Growth strategy your team can actually run",
+  description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/",
     siteName: "Pattern Growth",
     title: "Pattern Growth",
-    description: "Growth strategy your team can actually run",
+    description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Pattern Growth",
-    description: "Growth strategy your team can actually run",
+    description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
   },
   robots: { index: true, follow: true },
   icons: {

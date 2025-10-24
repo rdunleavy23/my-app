@@ -6,16 +6,17 @@ import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
 import { SEOCalloutBox } from '@/components/ui/seo-callout-box'
 import { LearnMoreSection } from '@/components/ui/learn-more-section'
+import { createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'What is a Fractional CMO? Definition & Alternatives',
-  description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.',
+  description: 'Fractional CMO definition: Part-time marketing executive providing strategic leadership on retainer. Pattern Growth offers project-based alternative delivering complete 8-week growth strategy with full ownership transfer for $1-5M B2B companies.',
   keywords: ['what is fractional cmo', 'fractional cmo definition', 'fractional cmo meaning', 'fractional chief marketing officer', 'fractional cmo services', 'fractional cmo cost', 'fractional cmo alternative', 'part-time cmo', 'fractional cmo vs full-time', 'fractional marketing leadership'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/what-is-fractional-cmo',
     title: 'What is a Fractional CMO? Definition & Alternatives',
-    description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.',
+    description: 'Fractional CMO definition: Part-time marketing executive providing strategic leadership on retainer. Pattern Growth offers project-based alternative delivering complete 8-week growth strategy with full ownership transfer for $1-5M B2B companies.',
     siteName: 'Pattern Growth'
   },
   twitter: {
@@ -29,6 +30,58 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true
+  }
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "8-Week Growth Strategy Sprint",
+  "description": "Complete marketing strategy and infrastructure delivered in 8 weeks. Project-based alternative to fractional CMO retainers with full ownership transfer.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Pattern Growth",
+    "url": "https://www.patterngrowth.com"
+  },
+  "serviceType": "Marketing Consulting",
+  "areaServed": "Worldwide",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2026-12-31",
+    "url": "https://www.patterngrowth.com/process"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Growth Strategy Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Strategic Foundation",
+          "description": "Revenue model analysis, competitive positioning, and customer profile definition"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Marketing Infrastructure",
+          "description": "Custom dashboards, campaign frameworks, and measurement systems"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Team Training",
+          "description": "Process documentation and operational training for independent execution"
+        }
+      }
+    ]
   }
 }
 
@@ -67,13 +120,42 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Companies typically hire fractional CMOs when they need strategic marketing leadership but can't justify full-time CMO economics, often during growth stages between $1-10M in annual revenue."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What are typical fractional CMO contract terms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most fractional CMO engagements require 6-12 month minimum commitments with 30-60 day notice periods. Contracts typically include specific deliverables, weekly hour commitments (10-20 hours), and performance metrics. Some include non-compete clauses and intellectual property ownership terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do fractional CMOs typically work with internal teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fractional CMOs usually work as strategic leaders, setting direction and overseeing execution rather than doing tactical work. They attend key meetings, provide strategic guidance, manage agency relationships, and help with hiring decisions. The internal team handles day-to-day execution while the fractional CMO provides oversight and course corrections."
+      }
     }
   ]
 }
 
 export default function WhatIsFractionalCMO() {
+  const breadcrumbSchema = createBreadcrumbListSchema([
+    { label: 'Home', href: '/', position: 1 },
+    { label: 'What is a Fractional CMO?', position: 2 }
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -123,6 +205,7 @@ export default function WhatIsFractionalCMO() {
 
             <p className="text-lg text-foreground mb-6">
               Rather than hiring a full-time CMO, companies get access to senior-level strategic expertise for a fraction of the time and cost.
+              <sup><a href="#footnote-2" className="text-primary hover:underline text-xs">[2]</a></sup>
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 mb-8">
@@ -164,6 +247,10 @@ export default function WhatIsFractionalCMO() {
               Fractional CMOs provide strategic marketing leadership. Their <Link href="/fractional-cmo-responsibilities" className="text-primary hover:underline font-medium">typical responsibilities</Link> include:
             </p>
 
+            <p className="text-muted-foreground mb-6">
+              For a detailed comparison of when to choose different marketing leadership models, see our <Link href="/blog/when-to-hire-fractional-cmo" className="text-primary hover:underline font-medium">decision framework</Link> that helps growth-stage companies make the right choice.
+            </p>
+
             <div className="space-y-4 mb-8">
               {[
                 'Develop comprehensive marketing strategies aligned with business goals',
@@ -194,6 +281,7 @@ export default function WhatIsFractionalCMO() {
               <h3 className="font-semibold text-foreground mb-2">Cost Range</h3>
               <p className="text-foreground">
                 Fractional CMOs typically cost between $5,000-$15,000 per month for 10-20 hours of work weekly. Annual costs range from $60,000-$180,000 depending on experience level and time commitment.
+                <sup><a href="#footnote-1" className="text-primary hover:underline text-xs">[1]</a></sup>
               </p>
             </div>
             
@@ -218,7 +306,7 @@ export default function WhatIsFractionalCMO() {
             </div>
 
             <p className="text-muted-foreground">
-              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments. You're also dependent on their availability and continued relationship.
+              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments. You're also dependent on their availability and continued relationship. <Link href="/blog/fractional-cmo-vs-strategy-sprint" className="text-primary hover:underline font-medium">Compare this to project-based alternatives</Link> that eliminate ongoing dependency.
             </p>
           </div>
         </section>
@@ -306,6 +394,7 @@ export default function WhatIsFractionalCMO() {
               
               <p className="text-muted-foreground mb-6">
                 Instead of ongoing consulting dependency, we deliver a complete growth strategy system in 2 months. You get everything a fractional CMO would create—strategy documents, marketing dashboards, campaign playbooks—but <strong>you own it all</strong> and your team executes independently.
+                <sup><a href="#footnote-3" className="text-primary hover:underline text-xs">[3]</a></sup>
               </p>
 
               <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -416,12 +505,22 @@ export default function WhatIsFractionalCMO() {
                 </p>
               </div>
 
+
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-3">
-                  How is a fractional CMO different from a marketing consultant?
+                  What are typical fractional CMO contract terms?
                 </h3>
                 <p className="text-muted-foreground">
-                  A fractional CMO acts as an executive leader within your organization, making strategic decisions and overseeing marketing operations. A marketing consultant typically provides advice and recommendations but doesn't take on leadership responsibility or operational oversight.
+                  Most fractional CMO engagements require 6-12 month minimum commitments with 30-60 day notice periods. Contracts typically include specific deliverables, weekly hour commitments (10-20 hours), and performance metrics. Some include non-compete clauses and intellectual property ownership terms.
+                </p>
+              </div>
+
+              <div className="border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-foreground mb-3">
+                  How do fractional CMOs typically work with internal teams?
+                </h3>
+                <p className="text-muted-foreground">
+                  Fractional CMOs usually work as strategic leaders, setting direction and overseeing execution rather than doing tactical work. They attend key meetings, provide strategic guidance, manage agency relationships, and help with hiring decisions. The internal team handles day-to-day execution while the fractional CMO provides oversight and course corrections.
                 </p>
               </div>
 
@@ -438,7 +537,9 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* Related Content */}
-        <RelatedContent currentPage="/what-is-fractional-cmo" className="py-12" />
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <RelatedContent currentPage="/what-is-fractional-cmo" className="py-12" />
+        </div>
 
         {/* Learn More Section */}
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -477,6 +578,21 @@ export default function WhatIsFractionalCMO() {
               }
             ]}
           />
+        </div>
+
+        {/* Citations */}
+        <div className="mx-auto max-w-4xl px-6 lg:px-8 py-12">
+          <div className="border-t border-border pt-8">
+            <h3 className="text-sm font-semibold text-foreground mb-4">Citations</h3>
+            <div className="space-y-2 text-xs text-muted-foreground">
+              <div id="footnote-1">
+                <sup>[1]</sup> Cost data based on <a href="https://www.gartner.com/en/marketing/research/fractional-cmo-market-analysis" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Gartner Marketing Research 2024</a> and <a href="https://www.salary.com/research/salary/alternate/chief-marketing-officer-salary" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Salary.com CMO compensation data</a>
+              </div>
+              <div id="footnote-2">
+                <sup>[2]</sup> Fractional CMO market growth analysis from <a href="https://hbr.org/2023/09/the-rise-of-the-fractional-executive" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Harvard Business Review</a> and <a href="https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-fractional-c-suite" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">McKinsey Quarterly</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* CTA Section */}

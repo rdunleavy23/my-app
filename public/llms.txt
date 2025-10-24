@@ -1,19 +1,93 @@
-# Pattern Growth
+# Pattern Growth - Growth Strategy Sprints for $1-5M Companies
 
-> Growth strategy sprints for $1-5M companies
+## Company Overview
+Pattern Growth provides 8-week growth strategy sprints for B2B companies between $1-5M in revenue. We deliver complete marketing infrastructure, strategic frameworks, and team training with full ownership transfer. Unlike fractional CMO retainers, we focus on building systems your team can run independently.
 
-## Key Pages
-- Home: https://www.patterngrowth.com/
-- Process: https://www.patterngrowth.com/process
-- About: https://www.patterngrowth.com/about
-- Blog: https://www.patterngrowth.com/blog
+## Core Services
+- **8-Week Growth Strategy Sprints**: Complete strategic architecture delivered in 8 weeks
+- **Marketing Infrastructure Development**: Custom dashboards, campaign frameworks, and measurement systems
+- **Team Training & Knowledge Transfer**: Process documentation and operational training
+- **Revenue-Focused Strategy**: Marketing systems aligned to actual revenue generation
+- **Competitive Positioning**: Clear market positioning and ideal customer definition
 
-## Services
-8-week growth strategy sprint delivering complete marketing infrastructure with ownership transfer.
+## Key Differentiators
+- **Project-based (not retainer-based)**: Fixed scope, complete ownership transfer
+- **Data-driven approach**: Strategy built from actual company data, not templates
+- **Team capability focus**: Designed for your actual team constraints and skills
+- **Immediate execution**: Quick wins start week one, strategic foundation builds simultaneously
+- **Complete independence**: No ongoing dependency after 8-week engagement
 
-## Content Focus
-- Growth strategy consulting
-- Marketing operations
-- Fractional CMO alternative
-- Revenue scaling without scale debt
-- Marketing dashboard development
+## Target Audience
+- **Company Stage**: $1-5M revenue B2B companies
+- **Challenges Addressed**: Growth stalled, scattered marketing data, unclear positioning, attribution problems
+- **Decision Makers**: CEOs, founders, VPs of Marketing, growth leaders
+- **Industry Agnostic**: Framework works across B2B verticals where growth mechanics are similar
+
+## Key Pages & Navigation
+- **Home**: https://www.patterngrowth.com/ - Main value proposition and service overview
+- **Process**: https://www.patterngrowth.com/process - Detailed 8-week sprint methodology
+- **About**: https://www.patterngrowth.com/about - Team and company background
+- **Blog**: https://www.patterngrowth.com/blog - Growth strategy insights and case studies
+
+## Service Pages
+- **What is Fractional CMO**: https://www.patterngrowth.com/what-is-fractional-cmo - Alternative to fractional CMO retainers
+- **Fractional CMO Hourly Rate**: https://www.patterngrowth.com/fractional-cmo-hourly-rate - Cost comparison and transparency
+- **Fractional CMO Services**: https://www.patterngrowth.com/fractional-cmo-services - Service scope and deliverables
+- **Fractional Marketing Services**: https://www.patterngrowth.com/fractional-marketing-services - Marketing operations focus
+- **Benefits of Fractional CMO**: https://www.patterngrowth.com/benefits-of-fractional-cmo - Value proposition details
+
+## Blog Content Categories
+- **Growth Strategy Framework**: Strategic methodologies for scaling B2B companies
+- **Marketing Operations**: Dashboard development, attribution, and measurement systems
+- **Fractional CMO Alternatives**: Project-based vs retainer-based consulting models
+- **Revenue Scaling**: Building marketing systems that drive actual revenue growth
+- **Team Enablement**: Training and knowledge transfer for independent execution
+
+## Strategic Framework (8-Week Sprint)
+**Week 1-2: Strategic Foundation**
+- Revenue model analysis and unit economics
+- Competitive positioning and market mapping
+- Ideal customer profile definition
+- Customer journey mapping
+
+**Week 3-4: Tactical Framework**
+- Channel prioritization and budget allocation
+- Campaign templates and messaging guidelines
+- Attribution model setup
+- Measurement infrastructure
+
+**Week 5-6: Operational Systems**
+- Custom marketing dashboard development
+- Lead scoring and qualification processes
+- Campaign optimization playbooks
+- Decision-making frameworks
+
+**Week 7-8: Team Enablement**
+- Process documentation for independent execution
+- Team training on strategic systems
+- Handoff procedures for agencies/contractors
+- 30-day post-engagement support
+
+## Common Challenges Addressed
+- **Data Fragmentation**: Unifying marketing data across multiple systems
+- **Unclear Positioning**: Defining who you serve and why they choose you
+- **Tactical Without Strategic**: Providing strategic framework for focused execution
+- **Attribution Blindness**: Building measurement systems showing marketing ROI
+- **Team Capability Gaps**: Training teams to execute independently
+
+## Expected Outcomes
+**Immediate (30-60 days)**: Strategic clarity, unified dashboards, team alignment
+**Medium-term (3-6 months)**: Improved lead quality, optimized budget allocation
+**Long-term (6+ months)**: Scalable marketing infrastructure, independent execution
+
+## Contact & Engagement
+- **Consultation**: 30-minute strategy assessment calls
+- **Timeline**: 1-2 week start time if capacity available
+- **Format**: Project-based, fixed scope, complete ownership transfer
+- **Support**: 30 days post-engagement support included
+
+## Technical Implementation
+- **Structured Data**: Comprehensive schema.org markup including Organization, FAQ, BlogPosting, and Article schemas
+- **Semantic HTML**: Proper heading hierarchy and semantic content structure
+- **SEO Optimization**: Meta descriptions, Open Graph, and Twitter cards
+- **Accessibility**: ARIA labels and semantic navigation

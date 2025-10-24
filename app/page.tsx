@@ -30,13 +30,25 @@ import { FAQSchema } from "@/components/faq-schema"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { HomeCarousel } from "@/components/home-carousel"
 import { ComparisonTable } from "@/components/ui/comparison-table"
+import { createServiceSchema } from "@/lib/schemas"
 
 // Note: Metadata export needs to be in a separate server component or root layout
 // For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
 
 export default function HomePage() {
+  const serviceSchema = createServiceSchema({
+    name: "8-Week Growth Strategy Sprint",
+    description: "Complete marketing strategy and infrastructure delivered in 8 weeks. Project-based alternative to fractional CMO retainers with full ownership transfer.",
+    url: "https://www.patterngrowth.com/",
+    provider: "Pattern Growth"
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
 
       <div className="bg-background">
                 {/* Hero Section */}

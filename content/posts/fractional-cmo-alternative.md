@@ -184,18 +184,62 @@ Choose a fractional CMO if you need someone managing day-to-day operations, vend
   "headline": "Why We Don't Offer Fractional CMO Services (And What We Built Instead)",
   "description": "Fractional CMOs optimize for ongoing advisory when growth-stage companies need strategic architecture. Here's why 2-month sprints outperform traditional models.",
   "author": {
-    "@type": "Organization",
-    "name": "Pattern Growth"
+    "@type": "Person",
+    "name": "Ryan",
+    "jobTitle": "Founder",
+    "url": "https://www.patterngrowth.com/about",
+    "image": "https://www.patterngrowth.com/images/ryan.jpg",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pattern Growth",
+      "url": "https://www.patterngrowth.com"
+    }
   },
   "datePublished": "2025-10-02",
+  "dateModified": "2025-10-02",
   "publisher": {
     "@type": "Organization",
     "name": "Pattern Growth",
-    "url": "https://patterngrowth.com"
+    "url": "https://www.patterngrowth.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.patterngrowth.com/patterngrowth-logo.svg"
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://patterngrowth.com/blog/fractional-cmo-alternative"
+    "@id": "https://www.patterngrowth.com/blog/fractional-cmo-alternative"
+  },
+  "url": "https://www.patterngrowth.com/blog/fractional-cmo-alternative",
+  "articleSection": "Fractional CMO Alternative",
+  "keywords": "fractional cmo alternative, fractional cmo, growth strategy sprint, project-based marketing consulting, marketing strategy consulting, fractional cmo vs consultant, marketing consulting without retainer, cmo services alternative, fractional cmo retainer alternative",
+  "timeRequired": "PT6M",
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Pattern Growth Blog",
+    "url": "https://www.patterngrowth.com/blog"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Fractional CMO",
+      "description": "Part-time marketing executive providing strategic leadership on retainer"
+    },
+    {
+      "@type": "Thing",
+      "name": "Growth Strategy Sprint",
+      "description": "8-week project-based consulting delivering complete strategic architecture"
+    },
+    {
+      "@type": "Thing",
+      "name": "Marketing Operations",
+      "description": "Marketing systems and infrastructure development for independent execution"
+    }
+  ],
+  "mentions": {
+    "@type": "Organization",
+    "name": "Pattern Growth",
+    "description": "Growth strategy consulting company providing 8-week strategy sprints as fractional CMO alternative"
   }
 }
 </script>

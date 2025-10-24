@@ -10,21 +10,21 @@ import { Clock, Calendar } from "lucide-react"
 export const metadata: Metadata = {
   title: "Growth Strategy Insights | Pattern Growth",
   description:
-    "How to scale revenue and build operational capability—written for growth-stage companies.",
+    "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
   alternates: { canonical: "/blog" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/blog",
     title: "Growth Strategy Insights | Pattern Growth",
     description:
-      "How to scale revenue and build operational capability—written for growth-stage companies.",
+      "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
     title: "Growth Strategy Insights | Pattern Growth",
     description:
-      "How to scale revenue and build operational capability—written for growth-stage companies.",
+      "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
   },
   robots: { index: true, follow: true },
 }

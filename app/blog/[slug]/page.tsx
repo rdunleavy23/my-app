@@ -10,6 +10,7 @@ import { GetStartedButton } from '@/components/ui/get-started-button'
 import RelatedContent from '@/components/ui/related-content'
 import { isProtectedRoute } from '@/components/lib/route-guards'
 import { BlogPostTracking } from './blog-post-tracking'
+import { createBreadcrumbListSchema } from '@/lib/schemas'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -58,6 +59,12 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   const content = await markdownToHtml(post.content)
 
+  const breadcrumbSchema = createBreadcrumbListSchema([
+    { label: 'Home', href: '/', position: 1 },
+    { label: 'Blog', href: '/blog', position: 2 },
+    { label: post.title, position: 3 }
+  ]);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -67,6 +74,13 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       "@type": "Person",
       "name": post.author.name,
       "jobTitle": post.author.title,
+      "url": `https://patterngrowth.com/about`,
+      "image": post.author.image ? `https://patterngrowth.com${post.author.image}` : undefined,
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Pattern Growth",
+        "url": "https://patterngrowth.com"
+      }
     },
     "datePublished": post.publishedAt,
     "dateModified": post.publishedAt,
@@ -74,15 +88,47 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       "@type": "Organization",
       "name": "Pattern Growth",
       "url": "https://patterngrowth.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://patterngrowth.com/patterngrowth-logo.svg"
+      }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://patterngrowth.com/blog/${post.slug}`,
     },
+    "url": `https://patterngrowth.com/blog/${post.slug}`,
+    "articleSection": "Growth Strategy",
+    "keywords": post.seo.keywords?.join(", ") || "",
+    "timeRequired": `PT${post.readingTime}M`,
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Pattern Growth Blog",
+      "url": "https://patterngrowth.com/blog"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Growth Strategy",
+        "description": "Strategic frameworks for scaling B2B companies"
+      },
+      {
+        "@type": "Thing",
+        "name": "Marketing Operations",
+        "description": "Marketing systems and infrastructure development"
+      }
+    ]
   }
 
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Script
         id="structured-data"
         type="application/ld+json"

@@ -193,3 +193,16 @@ export function createBreadcrumbSchema(breadcrumbs: BreadcrumbList["itemListElem
     })),
   };
 }
+
+export function createBreadcrumbListSchema(items: Array<{ label: string; href?: string; position: number }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: item.position || index + 1,
+      name: item.label,
+      item: item.href ? `https://www.patterngrowth.com${item.href}` : undefined,
+    })),
+  };
+}

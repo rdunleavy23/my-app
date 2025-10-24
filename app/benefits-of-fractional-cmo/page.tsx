@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { GetStartedButton } from '@/components/ui/get-started-button'
+import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
@@ -26,9 +27,30 @@ export const metadata: Metadata = {
   }
 }
 
+const serviceSchema = createServiceSchema({
+  name: "Fractional CMO Benefits Analysis",
+  description: "Comprehensive analysis of fractional CMO benefits, limitations, and comparison with project-based strategy sprints for growth-stage companies.",
+  url: "https://www.patterngrowth.com/benefits-of-fractional-cmo",
+  provider: "Pattern Growth"
+});
+
+const breadcrumbSchema = createBreadcrumbListSchema([
+  { label: 'Home', href: '/', position: 1 },
+  { label: 'Benefits of Fractional CMO', position: 2 }
+]);
+
 export default function BenefitsOfFractionalCMOPage() {
   return (
-    <div className="bg-background">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="bg-background">
       <section className="border-b border-border">
         <div className="max-w-4xl mx-auto px-4 py-16">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -343,6 +365,7 @@ export default function BenefitsOfFractionalCMOPage() {
         </section>
 
       </article>
-    </div>
+      </div>
+    </>
   )
 }

@@ -171,16 +171,61 @@ The sprint delivers complete strategic architecture regardless of business outco
   "description": "Strategic architecture framework for growth-stage companies. Learn how 8-week strategy sprints build scalable marketing systems.",
   "author": {
     "@type": "Person",
-    "name": "William"
+    "name": "William",
+    "jobTitle": "Partner",
+    "url": "https://www.patterngrowth.com/about",
+    "image": "https://www.patterngrowth.com/team/william.png",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pattern Growth",
+      "url": "https://www.patterngrowth.com"
+    }
   },
   "datePublished": "2025-10-23",
+  "dateModified": "2025-10-23",
   "publisher": {
     "@type": "Organization",
-    "name": "Pattern Growth"
+    "name": "Pattern Growth",
+    "url": "https://www.patterngrowth.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.patterngrowth.com/patterngrowth-logo.svg"
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://www.patterngrowth.com/blog/growth-strategy-framework"
+  },
+  "url": "https://www.patterngrowth.com/blog/growth-strategy-framework",
+  "articleSection": "Growth Strategy Framework",
+  "keywords": "growth strategy framework, marketing strategy framework, growth consulting methodology, strategy sprint process, B2B growth framework, marketing strategy methodology, growth strategy implementation, marketing strategy process",
+  "timeRequired": "PT8M",
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Pattern Growth Blog",
+    "url": "https://www.patterngrowth.com/blog"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Growth Strategy",
+      "description": "Strategic frameworks for scaling B2B companies between $1-5M revenue"
+    },
+    {
+      "@type": "Thing",
+      "name": "Marketing Operations",
+      "description": "Marketing systems and infrastructure development"
+    },
+    {
+      "@type": "Thing",
+      "name": "Strategy Sprints",
+      "description": "8-week project-based consulting engagements"
+    }
+  ],
+  "mentions": {
+    "@type": "Organization",
+    "name": "Pattern Growth",
+    "description": "Growth strategy consulting company providing 8-week strategy sprints"
   }
 }
 </script>

@@ -5,6 +5,7 @@ import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
 import { SEOCalloutBox } from '@/components/ui/seo-callout-box'
 import { LearnMoreSection } from '@/components/ui/learn-more-section'
+import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Cost: Rates vs. Project Pricing',
@@ -31,9 +32,30 @@ export const metadata: Metadata = {
   }
 }
 
+const serviceSchema = createServiceSchema({
+  name: "Fractional CMO Pricing Analysis",
+  description: "Comprehensive analysis of fractional CMO costs, hourly rates, and comparison with project-based pricing alternatives for growth-stage companies.",
+  url: "https://www.patterngrowth.com/fractional-cmo-hourly-rate",
+  provider: "Pattern Growth"
+});
+
+const breadcrumbSchema = createBreadcrumbListSchema([
+  { label: 'Home', href: '/', position: 1 },
+  { label: 'Fractional CMO Cost', position: 2 }
+]);
+
 export default function FractionalCMOHourlyRatePage() {
   return (
-    <div className="bg-background">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="bg-background">
       {/* Breadcrumbs */}
       <div className="border-b border-border">
         <div className="max-w-4xl mx-auto px-4 py-4">
@@ -425,6 +447,7 @@ export default function FractionalCMOHourlyRatePage() {
         </div>
 
       </article>
-    </div>
+      </div>
+    </>
   )
 }

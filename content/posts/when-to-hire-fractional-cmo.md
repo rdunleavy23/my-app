@@ -250,16 +250,61 @@ Wrong choice means either paying for capabilities you don't need or missing stra
   "description": "Choosing between fractional CMO retainers and project-based marketing consulting. Learn which model fits your growth stage and needs.",
   "author": {
     "@type": "Person",
-    "name": "Ryan"
+    "name": "Ryan",
+    "jobTitle": "Founder",
+    "url": "https://www.patterngrowth.com/about",
+    "image": "https://www.patterngrowth.com/team/ryan.png",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pattern Growth",
+      "url": "https://www.patterngrowth.com"
+    }
   },
   "datePublished": "2025-10-23",
+  "dateModified": "2025-10-23",
   "publisher": {
     "@type": "Organization",
-    "name": "Pattern Growth"
+    "name": "Pattern Growth",
+    "url": "https://www.patterngrowth.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.patterngrowth.com/patterngrowth-logo.svg"
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://www.patterngrowth.com/blog/when-to-hire-fractional-cmo"
+  },
+  "url": "https://www.patterngrowth.com/blog/when-to-hire-fractional-cmo",
+  "articleSection": "Marketing Consulting",
+  "keywords": "when to hire fractional cmo, fractional cmo vs consultant, marketing consultant vs fractional cmo, hire fractional cmo timing, marketing consulting decision, fractional cmo or consultant, growth marketing help",
+  "timeRequired": "PT7M",
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Pattern Growth Blog",
+    "url": "https://www.patterngrowth.com/blog"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Fractional CMO",
+      "description": "Part-time marketing executive providing strategic leadership on retainer"
+    },
+    {
+      "@type": "Thing",
+      "name": "Marketing Consultant",
+      "description": "Marketing expert providing advisory services for specific projects"
+    },
+    {
+      "@type": "Thing",
+      "name": "Strategy Sprint",
+      "description": "8-week project-based consulting delivering complete strategic architecture"
+    }
+  ],
+  "mentions": {
+    "@type": "Organization",
+    "name": "Pattern Growth",
+    "description": "Growth strategy consulting company providing 8-week strategy sprints as fractional CMO alternative"
   }
 }
 </script>
