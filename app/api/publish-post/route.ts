@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // --- Helper: ensure unique slug if file exists ---
 function createSafeSlug(input: string, existing: string[]): string {
-  let base = input.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  const base = input.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   let slug = base;
   let count = 2;
   while (existing.includes(slug)) {

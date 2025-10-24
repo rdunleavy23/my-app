@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2, XCircle, TrendingUp, Clock, DollarSign, Users } from 'lucide-react'
+import { ArrowRight, CheckCircle2, XCircle, Clock, DollarSign, Users } from 'lucide-react'
 import { GetStartedButton } from '@/components/ui/get-started-button'
 import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
@@ -346,7 +346,7 @@ export default function WhatIsFractionalCMO() {
             </div>
 
             <p className="text-muted-foreground">
-              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments. You're also dependent on their availability and continued relationship. <Link href="/blog/fractional-cmo-vs-strategy-sprint" className="text-primary hover:underline font-medium">Compare this to project-based alternatives</Link> that eliminate ongoing dependency.
+              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments. You&apos;re also dependent on their availability and continued relationship. <Link href="/blog/fractional-cmo-vs-strategy-sprint" className="text-primary hover:underline font-medium">Compare this to project-based alternatives</Link> that eliminate ongoing dependency.
             </p>
           </div>
         </section>
@@ -420,10 +420,10 @@ export default function WhatIsFractionalCMO() {
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">
-                There's a Better Alternative
+                There&apos;s a Better Alternative
               </h2>
               <p className="text-xl text-muted-foreground">
-                What if you could get the same strategic expertise—but own everything in 8 weeks?
+                What if you could get the same strategic expertise&shy;but own everything in 8 weeks?
               </p>
             </div>
 
@@ -520,10 +520,10 @@ export default function WhatIsFractionalCMO() {
 
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-3">
-                  What's the difference between a fractional CMO and a marketing consultant?
+                  What&apos;s the difference between a fractional CMO and a marketing consultant?
                 </h3>
                 <p className="text-muted-foreground">
-                  A fractional CMO acts as an executive leader within your organization, making strategic decisions and overseeing marketing operations. A marketing consultant typically provides advice and recommendations but doesn't take on leadership responsibility.
+                  A fractional CMO acts as an executive leader within your organization, making strategic decisions and overseeing marketing operations. A marketing consultant typically provides advice and recommendations but doesn&apos;t take on leadership responsibility.
                 </p>
               </div>
 
@@ -532,13 +532,13 @@ export default function WhatIsFractionalCMO() {
                   When should a company hire a fractional CMO?
                 </h3>
                 <p className="text-muted-foreground">
-                  Companies typically hire fractional CMOs when they need strategic marketing leadership but can't justify full-time CMO economics, often during growth stages between $1-10M in annual revenue. However, consider whether you need ongoing consulting or a one-time strategic system you can own and execute yourself.
+                  Companies typically hire fractional CMOs when they need strategic marketing leadership but can&apos;t justify full-time CMO economics, often during growth stages between $1-10M in annual revenue. However, consider whether you need ongoing consulting or a one-time strategic system you can own and execute yourself.
                 </p>
               </div>
 
               <div className="border border-border rounded-lg p-6">
                 <h3 className="font-semibold text-foreground mb-3">
-                  What's better than a fractional CMO?
+                  What&apos;s better than a fractional CMO?
                 </h3>
                 <p className="text-muted-foreground">
                   For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, marketing dashboards, and campaign playbooks—enabling your team to execute independently instead of relying on continued consulting relationships.
