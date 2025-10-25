@@ -3,14 +3,6 @@ const nextConfig = {
   // Performance optimizations for Core Web Vitals
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
   },
   // Bundle optimization
   compiler: {
@@ -46,8 +38,6 @@ const nextConfig = {
   // Performance optimizations
   poweredByHeader: false,
   compress: true,
-  // Enable SWC minification
-  swcMinify: true,
 };
 
 module.exports = nextConfig;

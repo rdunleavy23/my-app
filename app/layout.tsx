@@ -77,23 +77,23 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
-        {/* Google Analytics - deferred and optimized */}
+        {/* Google Analytics - deferred loading */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DQD43BSF5Q"
           strategy="afterInteractive"
-          onLoad={() => {
-            if (typeof window !== 'undefined') {
-              (window as any).dataLayer = (window as any).dataLayer || [];
-              function gtag(...args: any[]){(window as any).dataLayer.push(args);}
-              gtag('js', new Date());
-              gtag('config', 'G-DQD43BSF5Q', {
-                anonymize_ip: true,
-                send_page_view: true,
-                enhanced_measurement: true
-              });
-            }
-          }}
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DQD43BSF5Q', {
+              anonymize_ip: true,
+              send_page_view: true,
+              enhanced_measurement: true
+            });
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
