@@ -21,17 +21,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
-  // Body scroll lock when mobile menu is open
+  // Body scroll lock when mobile menu is open - optimized to prevent reflows
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden'
+      // Use CSS class instead of inline styles to prevent reflows
+      document.body.classList.add('mobile-menu-open')
     } else {
-      document.body.style.overflow = 'unset'
+      document.body.classList.remove('mobile-menu-open')
     }
-    
+
     // Cleanup on unmount
     return () => {
-      document.body.style.overflow = 'unset'
+      document.body.classList.remove('mobile-menu-open')
     }
   }, [open])
 

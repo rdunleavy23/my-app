@@ -26,7 +26,23 @@ const LABELS = {
   ownership: "Ownership",
   kpi: "KPI",
   artifacts: "Artifacts",
-} as const
+}
+
+// Simplified for initial load
+const APPROACH_SIMPLE = [
+  {
+    title: "Shaped by Your Reality",
+    body: ["We start by understanding your specific situation—market position, team capacity, actual constraints. The strategy we build fits your business as it exists today."]
+  },
+  {
+    title: "Built for Your Future",
+    body: ["We design a roadmap for your specific goals, accounting for your timeline and resources. You'll know exactly what to prioritize and when to scale."]
+  },
+  {
+    title: "Owned by Your Team",
+    body: ["Your team gets trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just capability that stays with you."]
+  }
+] as const
 
 function renderParagraph(p: string, i: number) {
   // If the string contains HTML, render it as HTML to preserve your markup exactly.

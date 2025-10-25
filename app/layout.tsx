@@ -62,28 +62,38 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Preload critical resources for Core Web Vitals */}
+        {/* Preload critical resources */}
         <link rel="preload" href="/patterngrowth-logo.svg" as="image" type="image/svg+xml" />
         <link rel="preload" href="/patterngrowth-android-chrome-512x512.png" as="image" />
+
+        {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+        {/* Preconnect to critical external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+        {/* Google Analytics - deferred and optimized */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DQD43BSF5Q"
           strategy="afterInteractive"
+          onLoad={() => {
+            if (typeof window !== 'undefined') {
+              (window as any).dataLayer = (window as any).dataLayer || [];
+              function gtag(...args: any[]){(window as any).dataLayer.push(args);}
+              gtag('js', new Date());
+              gtag('config', 'G-DQD43BSF5Q', {
+                anonymize_ip: true,
+                send_page_view: true,
+                enhanced_measurement: true
+              });
+            }
+          }}
         />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-DQD43BSF5Q', { 
-              anonymize_ip: true,
-              send_page_view: true,
-              enhanced_measurement: true
-            });
-          `}
-        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

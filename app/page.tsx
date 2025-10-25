@@ -1,12 +1,12 @@
 // app/page.tsx
 import type { Metadata } from "next"
 import Link from "next/link"
-import { 
-  ArrowRight, 
-  Zap, 
-  Building2, 
-  TrendingUp, 
-  Target, 
+import {
+  ArrowRight,
+  Zap,
+  Building2,
+  TrendingUp,
+  Target,
   Link as LinkIcon,
   UserCog,
   Puzzle,
@@ -32,8 +32,67 @@ import { HomeCarousel } from "@/components/home-carousel"
 import { ComparisonTable } from "@/components/ui/comparison-table"
 import { createServiceSchema } from "@/lib/schemas"
 
-// Note: Metadata export needs to be in a separate server component or root layout
-// For now, we'll handle it via the layout or convert back to server component after client interactivity is confirmed
+// Server-side approach content for SEO
+function ApproachContent() {
+  const approachItems = [
+    {
+      title: "Shaped by Your Reality",
+      body: ["We start by understanding your specific situation—market position, team capacity, actual constraints. The strategy we build fits your business as it exists today, not some idealized version that ignores reality."]
+    },
+    {
+      title: "Built for Your Future",
+      body: ["We design a roadmap for your specific goals, accounting for your timeline and resources. You'll know exactly what to prioritize, what success looks like, and when to scale or adjust based on what's actually working."]
+    },
+    {
+      title: "Owned by Your Team",
+      body: ["Your team gets trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just capability that stays with you."]
+    }
+  ]
+
+  return (
+    <section className="py-12 sm:py-16 bg-muted/30" aria-labelledby="approach-heading">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">
+          Our Approach
+        </h2>
+
+        <div className="space-y-8">
+          {approachItems.map((item, index) => (
+            <div key={index} className="relative">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl shadow-lg">
+                    {index + 1}
+                  </div>
+                </div>
+
+                <div className="flex-1 pt-2 pb-4">
+                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                  <div className="space-y-3">
+                    {item.body.map((paragraph, i) => (
+                      <p key={i} className="text-muted-foreground leading-relaxed">{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export const metadata: Metadata = {
+  title: "8-Week Growth Strategy Sprint | Project-Based Marketing Consultant",
+  description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to fractional CMO retainers.",
+  keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, B2B marketing, strategy consulting",
+  openGraph: {
+    title: "8-Week Growth Strategy Sprint | Pattern Growth",
+    description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you.",
+    type: "website",
+  },
+}
 
 export default function HomePage() {
   const serviceSchema = createServiceSchema({
@@ -58,9 +117,14 @@ export default function HomePage() {
                       Your Marketing Strategy, Built From Scratch in 8 Weeks
                     </h1>
 
-                    <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                      Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">fractional CMO retainers</Link>.
-                    </p>
+                    <div className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-4">
+                      <p>
+                        Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">fractional CMO retainers</Link>.
+                      </p>
+                      <p>
+                        We don't just design strategy. We operationalize it into systems your team can actually run. 8-week sprints for $1-5M B2B companies ready to scale without the overhead of traditional consulting.
+                      </p>
+                    </div>
 
                     {/* Hero CTA */}
                     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -73,11 +137,13 @@ export default function HomePage() {
                   </div>
                 </section>
 
-        <Suspense fallback={<ApproachSkeleton />}>
+        {/* Server-side content for SEO */}
+        <ApproachContent />
+
+        {/* Interactive version loads client-side */}
+        <Suspense fallback={<div className="py-12"></div>}>
           <Approach />
         </Suspense>
-
-        {/* Services Section intentionally omitted on homepage to keep UX lean */}
 
                 {/* What Our Growth Strategy Sprint Includes */}
         <section className="py-16 sm:py-20 border-t">
@@ -86,16 +152,12 @@ export default function HomePage() {
               What Our Growth Strategy Sprint Includes
             </h2>
 
-            {/* Mobile: Swipeable Carousel */}
-            <HomeCarousel />
-
-            {/* Desktop: Bento Grid Layout */}
-            <div className="hidden md:grid md:grid-cols-3 gap-6">
-              {/* Quick Wins - Featured (spans 2 columns, row 1) */}
-              <Card className="col-span-2 card-hover-lift group">
+            {/* Server-side content for SEO */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-4">
-                    <Zap className="h-12 w-12 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
+                    <Zap className="h-12 w-12 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-2xl font-semibold">Quick Wins Start Week One</CardTitle>
                 </CardHeader>
@@ -106,11 +168,10 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              {/* Growth Infrastructure - Featured (1 column, row 1) */}
               <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-4">
-                    <Building2 className="h-12 w-12 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
+                    <Building2 className="h-12 w-12 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-2xl font-semibold">Growth Infrastructure You Own</CardTitle>
                 </CardHeader>
@@ -121,11 +182,10 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              {/* Row 2: Three equal cards */}
               <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-3">
-                    <TrendingUp className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
+                    <TrendingUp className="h-10 w-10 text-primary" aria-hidden="true" />
                   </div>
                   <CardTitle className="text-xl font-semibold">Strategy Connected to Revenue</CardTitle>
                 </CardHeader>
@@ -135,35 +195,10 @@ export default function HomePage() {
                   </p>
                 </CardContent>
               </Card>
-
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-3">
-                    <Target className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-xl font-semibold">Brand Positioning That Sells</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience. One clear message that resonates wherever prospects find you.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-3">
-                    <LinkIcon className="h-10 w-10 text-primary motion-safe:transition-transform motion-reduce:transition-none group-hover:scale-110" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-xl font-semibold">Marketing That Drives Revenue</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics. Just marketing that drives the results that matter.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
+
+            {/* Interactive Carousel for mobile */}
+            <HomeCarousel />
           </div>
         </section>
 
@@ -176,6 +211,82 @@ export default function HomePage() {
             <p className="text-muted-foreground mb-12 text-lg">
               CMO-level strategy through focused sprints, not ongoing retainers.
             </p>
+
+            {/* Server-side content for SEO */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <UserCog className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">We Take 2-3 Clients Per Quarter</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <Gift className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Built to Transfer, Not Keep You Dependent</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Additional differentiators */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card>
+                <CardHeader>
+                  <div className="mb-3">
+                    <Puzzle className="h-10 w-10 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-xl font-semibold">Strategy Built for Your Reality</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <div className="mb-3">
+                    <Database className="h-10 w-10 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-xl font-semibold">Data Before Assumptions</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <div className="mb-3">
+                    <Handshake className="h-10 w-10 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-xl font-semibold">Handoff That Fits How You Work</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
             
             {/* Mobile: Cards for key points, list for supporting */}
             <div className="md:hidden space-y-6">

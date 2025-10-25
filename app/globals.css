@@ -3,6 +3,22 @@
 @plugin "tailwindcss-animate";
 @import "tw-animate-css";
 
+/* Performance optimizations */
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Prevent layout shifts during loading */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-display: swap;
+}
+
 /* Tailwind v4 dark variant */
 @custom-variant dark (&:is(.dark *));
 
