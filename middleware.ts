@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
 
   const csp = `
     default-src 'self';
-    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' data: blob: https:;
     font-src 'self' data:;
