@@ -144,14 +144,42 @@ export default function HomePage() {
 
               <Card className="card-hover-lift group">
                 <CardHeader>
-                  <div className="mb-3">
-                    <TrendingUp className="h-10 w-10 text-primary" aria-hidden="true" />
+                  <div className="mb-4">
+                    <TrendingUp className="h-12 w-12 text-primary" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-xl font-semibold">Strategy Connected to Revenue</CardTitle>
+                  <CardTitle className="text-2xl font-semibold">Strategy Connected to Revenue</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground leading-relaxed">
                   <p>
                     Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="card-hover-lift group">
+                <CardHeader>
+                  <div className="mb-4">
+                    <Target className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Brand Positioning That Sells</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="card-hover-lift group">
+                <CardHeader>
+                  <div className="mb-4">
+                    <LinkIcon className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Marketing That Drives Revenue</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
                   </p>
                 </CardContent>
               </Card>
@@ -197,6 +225,48 @@ export default function HomePage() {
                 <CardContent className="text-muted-foreground leading-relaxed">
                   <p>
                     Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <Puzzle className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Strategy Built for Your Reality</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <Database className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Data Before Assumptions</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <Handshake className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Handoff That Fits How You Work</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
                   </p>
                 </CardContent>
               </Card>
