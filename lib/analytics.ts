@@ -168,3 +168,68 @@ export function trackApproachDeliverablesOpen(approachTitle: string) {
     event_label: 'approach_deliverables'
   });
 }
+
+// Enhanced conversion tracking for consulting business
+export function trackConsultationBooking(source: string, consultationType?: string) {
+  trackEvent('consultation_booked', {
+    event_category: 'conversion',
+    event_label: source,
+    consultation_type: consultationType || 'strategy_session',
+    value: 100 // Estimated value of consultation
+  });
+}
+
+export function trackLeadGeneration(leadType: string, source: string, value?: number) {
+  trackEvent('lead_generated', {
+    event_category: 'conversion',
+    event_label: leadType,
+    lead_source: source,
+    value: value || 25
+  });
+}
+
+export function trackContentEngagement(contentType: string, contentTitle: string, engagementType: string) {
+  trackEvent('content_engagement', {
+    event_category: 'engagement',
+    event_label: contentType,
+    content_title: contentTitle,
+    engagement_type: engagementType
+  });
+}
+
+export function trackServiceInterest(serviceType: string, interestLevel: 'low' | 'medium' | 'high') {
+  trackEvent('service_interest', {
+    event_category: 'engagement',
+    event_label: serviceType,
+    interest_level: interestLevel,
+    value: interestLevel === 'high' ? 75 : interestLevel === 'medium' ? 50 : 25
+  });
+}
+
+export function trackPricingInquiry(priceRange?: string) {
+  trackEvent('pricing_inquiry', {
+    event_category: 'conversion',
+    event_label: 'pricing_interest',
+    price_range: priceRange,
+    value: 50
+  });
+}
+
+export function trackCaseStudyView(caseStudyTitle: string) {
+  trackEvent('case_study_view', {
+    event_category: 'engagement',
+    event_label: caseStudyTitle,
+    value: 30
+  });
+}
+
+// Consulting-specific conversion funnel tracking
+export function trackConsultationFlowStep(step: string, stepNumber: number, totalSteps: number) {
+  trackEvent('consultation_flow_step', {
+    event_category: 'conversion',
+    event_label: step,
+    step_number: stepNumber,
+    total_steps: totalSteps,
+    progress_percentage: Math.round((stepNumber / totalSteps) * 100)
+  });
+}

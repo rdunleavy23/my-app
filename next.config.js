@@ -20,11 +20,16 @@ const nextConfig = {
       }
     }
 
-    // Bundle analyzer (uncomment when needed)
-    // if (process.env.ANALYZE === 'true') {
-    //   const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-    //   config.plugins.push(new BundleAnalyzerPlugin())
-    // }
+    // Bundle analyzer for development
+    if (dev && process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          openAnalyzer: true,
+        })
+      )
+    }
 
     return config
   },
