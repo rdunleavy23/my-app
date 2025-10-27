@@ -32,7 +32,6 @@ import { createServiceSchema } from "@/lib/schemas"
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach").then(mod => mod.default), {
   loading: () => <ApproachSkeleton />,
-  ssr: false,
 })
 
 const HomeCarousel = dynamic(() => import("@/components/home-carousel").then(mod => mod.HomeCarousel), {
