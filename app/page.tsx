@@ -30,19 +30,20 @@ import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { createServiceSchema } from "@/lib/schemas"
 
 // Lazy load non-critical components for better performance
-const Approach = dynamic(() => import("./(marketing)/_sections/approach"), {
-  loading: () => <ApproachSkeleton />
+const Approach = dynamic(() => import("./(marketing)/_sections/approach").then(mod => mod.default), {
+  loading: () => <ApproachSkeleton />,
+  ssr: false,
 })
 
-const HomeCarousel = dynamic(() => import("@/components/home-carousel"), {
+const HomeCarousel = dynamic(() => import("@/components/home-carousel").then(mod => mod.HomeCarousel), {
   loading: () => <div className="h-96 bg-muted animate-pulse rounded-lg mb-8" />
 })
 
-const ComparisonTable = dynamic(() => import("@/components/ui/comparison-table"), {
+const ComparisonTable = dynamic(() => import("@/components/ui/comparison-table").then(mod => mod.ComparisonTable), {
   loading: () => <div className="h-96 bg-muted animate-pulse rounded-lg mb-12" />
 })
 
-const FAQCollapsible = dynamic(() => import("@/components/ui/faq-collapsible"), {
+const FAQCollapsible = dynamic(() => import("@/components/ui/faq-collapsible").then(mod => mod.default), {
   loading: () => <div className="h-64 bg-muted animate-pulse rounded-lg mb-8" />
 })
 

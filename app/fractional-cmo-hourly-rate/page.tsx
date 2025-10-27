@@ -5,6 +5,7 @@ import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
 import { SEOCalloutBox } from '@/components/ui/seo-callout-box'
 import { LearnMoreSection } from '@/components/ui/learn-more-section'
+import { TableOfContents } from '@/components/ui/table-of-contents'
 import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
@@ -65,6 +66,14 @@ export default function FractionalCMOHourlyRatePage() {
 
       <section className="border-b border-border">
         <div className="max-w-4xl mx-auto px-4 py-16">
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">
+              Last refreshed: October 2025
+            </p>
+            <a href="#toc" className="text-sm font-medium text-primary hover:underline">
+              Jump to cost breakdown
+            </a>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Fractional CMO Hourly Rate & Pricing Guide
           </h1>
@@ -75,9 +84,26 @@ export default function FractionalCMOHourlyRatePage() {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6">What is the hourly rate for a fractional CMO?</h2>
+        <TableOfContents
+          title="Table of Contents"
+          items={[
+            { href: '#quick-answer', label: 'Quick answer' },
+            { href: '#pricing-tiers', label: '2025 pricing tiers' },
+            { href: '#pricing-drivers', label: 'What drives pricing' },
+            { href: '#hidden-costs', label: 'Hidden costs' },
+            { href: '#comparison', label: 'Retainer vs. project pricing' },
+            { href: '#faq', label: 'FAQs' }
+          ]}
+          className="mb-12"
+        />
+
+        <section className="mb-16" id="quick-answer">
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+            <h2 className="text-3xl font-bold text-foreground mb-4">What is the hourly rate for a fractional CMO?</h2>
+            <p className="text-lg text-foreground leading-relaxed">
+              Fractional CMO hourly rates typically fall between $125 and $400. Most executives package services as $5K-20K monthly retainers for 10-20 hours per week, which pencils out to the same hourly range.
+            </p>
+          </div>
 
           <p className="text-lg text-foreground mb-6 leading-relaxed">
             Most <Link href="/what-is-fractional-cmo" className="text-primary hover:underline font-medium">fractional CMOs</Link> don't advertise hourly rates—they structure engagements as monthly retainers. But the math reveals effective hourly rates of $125-400/hour depending on experience and <Link href="/fractional-cmo-responsibilities" className="text-primary hover:underline font-medium">scope of responsibilities</Link>.
@@ -132,7 +158,7 @@ export default function FractionalCMOHourlyRatePage() {
           </p>
         </section>
 
-        <section className="mb-16">
+        <section className="mb-16" id="pricing-drivers">
           <h2 className="text-3xl font-bold text-foreground mb-6">What Drives Fractional CMO Pricing</h2>
           
           <div className="space-y-6">
@@ -173,7 +199,7 @@ export default function FractionalCMOHourlyRatePage() {
           </div>
         </section>
 
-        <section className="mb-16">
+        <section className="mb-16" id="hidden-costs">
           <h2 className="text-3xl font-bold text-foreground mb-6">Hidden Costs Beyond Hourly Rates</h2>
           
           <p className="text-lg text-foreground mb-6 leading-relaxed">
@@ -230,7 +256,7 @@ export default function FractionalCMOHourlyRatePage() {
           href="/blog/when-to-hire-fractional-cmo"
         />
 
-        <section className="mb-16">
+        <section className="mb-16" id="comparison">
           <h2 className="text-3xl font-bold text-foreground mb-6">Hourly vs. Monthly vs. Project-Based Pricing</h2>
           
           <div className="overflow-x-auto mb-6">
@@ -445,6 +471,14 @@ export default function FractionalCMOHourlyRatePage() {
             ]}
           />
         </div>
+
+        <section className="mb-16">
+          <SEOCalloutBox
+            title="See how an 8-week growth strategy sprint compares"
+            description="We rebuild positioning, measurement, and go-to-market in 8 weeks—then your team runs it. Compare the cost and deliverables against traditional fractional CMOs."
+            href="/process"
+          />
+        </section>
 
       </article>
       </div>

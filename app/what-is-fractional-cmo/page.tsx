@@ -6,6 +6,7 @@ import Breadcrumbs, { generateBreadcrumbs } from '@/components/ui/breadcrumbs'
 import RelatedContent from '@/components/ui/related-content'
 import { SEOCalloutBox } from '@/components/ui/seo-callout-box'
 import { LearnMoreSection } from '@/components/ui/learn-more-section'
+import { TableOfContents } from '@/components/ui/table-of-contents'
 import { createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
@@ -212,7 +213,17 @@ export default function WhatIsFractionalCMO() {
         {/* Hero Section */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-sm uppercase tracking-wide text-muted-foreground">
+                Last refreshed: October 2025
+              </p>
+              <a
+                href="#table-of-contents"
+                className="text-sm font-medium text-primary hover:underline"
+              >
+                Jump to sections
+              </a>
+            </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
               What is a Fractional CMO?
             </h1>
@@ -230,9 +241,21 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* Definition Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-12 bg-muted/30" id="table-of-contents">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">
+            <TableOfContents
+              items={[
+                { href: '#definition', label: 'What is a fractional CMO? (Definition)' },
+                { href: '#responsibilities', label: 'Responsibilities & scope' },
+                { href: '#cost', label: 'Cost breakdown & hidden fees' },
+                { href: '#benefits', label: 'Benefits vs. reality' },
+                { href: '#alternatives', label: 'Alternatives & decision framework' },
+                { href: '#faq', label: 'Frequently asked questions' }
+              ]}
+              className="mb-10"
+            />
+
+            <h2 className="text-3xl font-bold text-foreground mb-6" id="definition">
               What is a fractional CMO?
             </h2>
 
@@ -277,7 +300,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* What They Do */}
-        <section className="py-12">
+        <section className="py-12" id="responsibilities">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-6">
               What Does a Fractional CMO Do?
@@ -311,7 +334,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* Cost Section */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-12 bg-muted/30" id="cost">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-6">
               How much does a fractional CMO cost?
@@ -361,7 +384,7 @@ export default function WhatIsFractionalCMO() {
         </div>
 
         {/* Benefits vs Drawbacks */}
-        <section className="py-12">
+        <section className="py-12" id="benefits">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">
               Benefits vs. Reality Check
@@ -415,85 +438,88 @@ export default function WhatIsFractionalCMO() {
           </div>
         </section>
 
-        {/* Alternative Section */}
-        <section className="py-16 bg-primary/5">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <div className="text-center mb-12">
+        {/* Alternatives & Decision Framework */}
+        <section className="py-12 bg-muted/30" id="alternatives">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8 space-y-8">
+            <header>
               <h2 className="text-3xl font-bold text-foreground mb-4">
-                There&apos;s a Better Alternative
+                Fractional CMO Alternatives & Decision Framework
               </h2>
-              <p className="text-xl text-muted-foreground">
-                What if you could get the same strategic expertise&shy;but own everything in 8 weeks?
+              <p className="text-lg text-muted-foreground">
+                Fractional CMOs work for companies that need executive oversight without building internal leadership. If you need strategic architecture with internal ownership, evaluate these models.
               </p>
+            </header>
+
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="rounded-lg border border-border bg-background p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Project-Based Growth Strategy Sprint
+                </h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Fixed 8-week engagement</li>
+                  <li>• Deliverables: positioning, dashboards, playbooks</li>
+                  <li>• Ownership transfers to your team</li>
+                  <li>• Cost: $9,500 flat</li>
+                </ul>
+              </div>
+              <div className="rounded-lg border border-border bg-background p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Fractional CMO Retainer
+                </h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• 6-12 month commitment</li>
+                  <li>• Deliverables vary by executive</li>
+                  <li>• Ongoing dependency on consultant</li>
+                  <li>• Cost: $5K-$20K monthly</li>
+                </ul>
+              </div>
             </div>
 
-            <div className="bg-background border-2 border-primary rounded-lg p-8 mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Growth Strategy Sprints: The Fractional CMO Alternative
+            <div className="rounded-lg border border-border bg-background p-6">
+              <h3 className="text-lg font-semibold text-foreground mb-4">
+                Decision Snapshot
               </h3>
-              
-              <p className="text-muted-foreground mb-6">
-                Instead of ongoing consulting dependency, we deliver a complete growth strategy system in 2 months. You get everything a fractional CMO would create—strategy documents, marketing dashboards, campaign playbooks—but <strong>you own it all</strong> and your team executes independently.
-                <sup><a href="#footnote-3" className="text-primary hover:underline text-xs">[3]</a></sup>
-              </p>
-
-              <div className="grid sm:grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 bg-accent/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-1">8 weeks</p>
-                  <p className="text-sm text-muted-foreground">Not 6-12 months</p>
+              <div className="grid gap-4 sm:grid-cols-3 text-sm text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground mb-2">Choose Fractional CMO when:</p>
+                  <ul className="space-y-2">
+                    <li>• You need part-time executive leadership</li>
+                    <li>• Existing team executes reliably</li>
+                    <li>• Board requires C-level presence</li>
+                  </ul>
                 </div>
-                <div className="text-center p-4 bg-accent/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-1">$9,500</p>
-                  <p className="text-sm text-muted-foreground">One-time project fee</p>
+                <div>
+                  <p className="font-semibold text-foreground mb-2">Choose Strategy Sprint when:</p>
+                  <ul className="space-y-2">
+                    <li>• You need positioning and go-to-market rebuilt</li>
+                    <li>• You want documentation and handoff</li>
+                    <li>• You need outcomes in &lt; 90 days</li>
+                  </ul>
                 </div>
-                <div className="text-center p-4 bg-accent/30 rounded-lg">
-                  <p className="text-3xl font-bold text-primary mb-1">100%</p>
-                  <p className="text-sm text-muted-foreground">You own everything</p>
+                <div>
+                  <p className="font-semibold text-foreground mb-2">Avoid both if:</p>
+                  <ul className="space-y-2">
+                    <li>• There is no execution team to activate strategy</li>
+                    <li>• Product-market fit is unresolved</li>
+                    <li>• Leadership expects pure acquisition fixes</li>
+                  </ul>
                 </div>
               </div>
-
-              <Link 
-                href="/process" 
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              >
-                See How Growth Sprints Work
-                <ArrowRight className="h-5 w-5" />
-              </Link>
             </div>
 
-            {/* Comparison Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full border border-border rounded-lg overflow-hidden">
-                <thead className="bg-muted">
-                  <tr>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-foreground">Factor</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-foreground">Growth Strategy Sprint</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-foreground">Fractional CMO</th>
-                  </tr>
-                </thead>
-                <tbody className="bg-background">
-                  {[
-                    ['Timeline', '8 weeks', '6-12+ months'],
-                    ['Investment', '$9,500 one-time', '$60-180K annually'],
-                    ['Ownership', 'You own everything', 'Consultant-dependent'],
-                    ['Deliverables', 'Strategy + dashboard + playbooks', 'Ongoing strategic guidance'],
-                    ['Independence', 'Team executes independently', 'Requires continued relationship'],
-                    ['Start Time', 'Quick start', '2-4 weeks']
-                  ].map(([factor, sprint, cmo], idx) => (
-                    <tr key={idx} className="border-t border-border">
-                      <td className="px-4 py-3 text-sm font-medium text-foreground">{factor}</td>
-                      <td className="px-4 py-3 text-sm text-foreground font-semibold text-primary">{sprint}</td>
-                      <td className="px-4 py-3 text-sm text-muted-foreground">{cmo}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="rounded-lg border border-border bg-background p-6">
+              <h3 className="text-lg font-semibold text-foreground mb-3">
+                Further Reading
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                For a narrative breakdown of why Pattern Growth built project-based alternatives, read our <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline">Fractional CMO alternative perspective</Link>. It builds on the analysis here; this pillar will remain the canonical definition and comparison resource.
+              </p>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-12">
+        <section className="py-12" id="faq">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">
               Frequently Asked Questions About Fractional CMOs

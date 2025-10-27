@@ -14,7 +14,7 @@ interface FAQCollapsibleProps {
   className?: string
 }
 
-export function FAQCollapsible({ items, className }: FAQCollapsibleProps) {
+export default function FAQCollapsible({ items, className }: FAQCollapsibleProps) {
   return (
     <div className={`w-full space-y-0 rounded-lg border bg-background ${className}`}>
       {items.map((item, index) => (

@@ -51,7 +51,7 @@ function renderParagraph(p: string, i: number) {
     : <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>
 }
 
-export function Approach() {
+export default function Approach() {
   const router = useRouter()
   const params = useSearchParams()
   const initial = params.get("approach") || (APPROACH_ITEMS[0]?.key ?? "")

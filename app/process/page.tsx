@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { TableOfContents } from "@/components/ui/table-of-contents"
 import { createServiceSchema, createWebPageSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
@@ -62,8 +63,11 @@ export default function ProcessPage() {
       <main id="main" className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-16 sm:py-20">
       {/* Hero */}
       <header className="text-center space-y-4 sm:space-y-6">
+        <p className="text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">
+          Last refreshed: October 2025
+        </p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-          How It Works
+          Growth Strategy Consulting Process (8-Week Sprint)
         </h1>
         <div className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-4">
           <p>
@@ -77,8 +81,55 @@ export default function ProcessPage() {
 
       <Separator className="my-8 sm:my-10" />
 
+      <TableOfContents
+        items={[
+          { href: '#overview', label: 'Why an 8-week growth strategy sprint' },
+          { href: '#timeline', label: 'Timeline & outputs' },
+          { href: '#momentum-system', label: 'Stage-by-stage playbook' },
+          { href: '#handoff', label: 'Handoff and enablement' },
+          { href: '#faq', label: 'Frequently asked questions' }
+        ]}
+        className="mb-12 text-left"
+      />
+
+      <section id="overview" className="space-y-4 sm:space-y-6 mb-12 text-left">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-foreground">
+          Why companies choose our growth strategy consulting process
+        </h2>
+        <p className="text-base sm:text-lg text-muted-foreground">
+          We install the strategic foundation and measurement systems your team needs—without binding retainers. Every deliverable is designed for independence: revenue architecture, dashboards, campaign playbooks, and enablement assets you own.
+        </p>
+      </section>
+
+      <section id="timeline" className="mb-14 text-left">
+        <div className="rounded-lg border border-border bg-background p-8">
+          <h2 className="text-3xl font-semibold text-foreground mb-4">8-Week Timeline at a Glance</h2>
+          <p className="text-muted-foreground mb-6">
+            Each stage ends with tangible deliverables—strategy documents, models, and operational tools—that roll into the next sprint activity.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-lg bg-primary/5 p-6">
+              <p className="text-sm font-semibold uppercase text-primary mb-2">Weeks 1-2</p>
+              <p className="text-base font-medium text-foreground">Strategic foundation & revenue model</p>
+            </div>
+            <div className="rounded-lg bg-primary/5 p-6">
+              <p className="text-sm font-semibold uppercase text-primary mb-2">Weeks 3-4</p>
+              <p className="text-base font-medium text-foreground">Positioning, offer packaging, channel strategy</p>
+            </div>
+            <div className="rounded-lg bg-primary/5 p-6">
+              <p className="text-sm font-semibold uppercase text-primary mb-2">Weeks 5-6</p>
+              <p className="text-base font-medium text-foreground">Measurement infrastructure & dashboard build</p>
+            </div>
+            <div className="rounded-lg bg-primary/5 p-6">
+              <p className="text-sm font-semibold uppercase text-primary mb-2">Weeks 7-8</p>
+              <p className="text-base font-medium text-foreground">Enablement, playbooks, leadership handoff</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The Momentum System */}
-      <section className="space-y-6 sm:space-y-10">
+      <section className="space-y-6 sm:space-y-10" id="momentum-system">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">The Momentum System</h2>
 
         <div className="space-y-6 sm:space-y-10">
@@ -267,6 +318,37 @@ export default function ProcessPage() {
               </p>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section id="handoff" className="mt-16 space-y-4 text-left">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-foreground">
+          What you leave with after 8 weeks
+        </h2>
+        <ul className="space-y-2 text-muted-foreground">
+          <li>• Revenue architecture and prioritized growth roadmap</li>
+          <li>• Operational dashboards and measurement framework</li>
+          <li>• Campaign playbooks and channel briefs ready for execution</li>
+          <li>• Team enablement sessions and documentation</li>
+          <li>• Executive summary with next-quarter recommendations</li>
+        </ul>
+      </section>
+
+      <section id="faq" className="mt-16 text-left">
+        <h2 className="text-3xl font-semibold text-foreground mb-6">Growth Strategy Sprint FAQs</h2>
+        <div className="space-y-4 text-muted-foreground">
+          <details className="rounded border border-border p-4">
+            <summary className="text-base font-medium text-foreground">Is this the same as a fractional CMO retainer?</summary>
+            <p className="mt-2 text-sm">
+              No. Retainers keep the executive in your org indefinitely. The sprint installs the strategy and systems your team runs independently.
+            </p>
+          </details>
+          <details className="rounded border border-border p-4">
+            <summary className="text-base font-medium text-foreground">What happens after week eight?</summary>
+            <p className="mt-2 text-sm">
+              We deliver all assets, conduct enablement sessions, and remain on standby for 30 days to answer implementation questions.
+            </p>
+          </details>
         </div>
       </section>
 
