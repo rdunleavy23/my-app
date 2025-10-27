@@ -151,9 +151,6 @@ export default function HomePage() {
                   </div>
                 </section>
 
-        {/* Server-side content for SEO */}
-        <ApproachContent />
-
         {/* Interactive version loads client-side */}
         <Suspense fallback={<div className="py-12"></div>}>
           <Approach />
