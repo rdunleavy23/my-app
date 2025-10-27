@@ -1,12 +1,12 @@
 // app/page.tsx
 import type { Metadata } from "next"
 import Link from "next/link"
-import {
-  ArrowRight,
-  Zap,
-  Building2,
-  TrendingUp,
-  Target,
+import { 
+  ArrowRight, 
+  Zap, 
+  Building2, 
+  TrendingUp, 
+  Target, 
   Link as LinkIcon,
   UserCog,
   Puzzle,
@@ -31,22 +31,18 @@ import { createServiceSchema } from "@/lib/schemas"
 
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach"), {
-  ssr: false,
   loading: () => <ApproachSkeleton />
 })
 
 const HomeCarousel = dynamic(() => import("@/components/home-carousel"), {
-  ssr: false,
   loading: () => <div className="h-96 bg-muted animate-pulse rounded-lg mb-8" />
 })
 
 const ComparisonTable = dynamic(() => import("@/components/ui/comparison-table"), {
-  ssr: false,
   loading: () => <div className="h-96 bg-muted animate-pulse rounded-lg mb-12" />
 })
 
 const FAQCollapsible = dynamic(() => import("@/components/ui/faq-collapsible"), {
-  ssr: false,
   loading: () => <div className="h-64 bg-muted animate-pulse rounded-lg mb-8" />
 })
 
@@ -137,8 +133,8 @@ export default function HomePage() {
 
                     <div className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-4">
                       <p>
-                        Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">fractional CMO retainers</Link>.
-                      </p>
+                      Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">fractional CMO retainers</Link>.
+                    </p>
                       <p>
                         We don't just design strategy. We operationalize it into systems your team can actually run. 8-week sprints for $1-5M B2B companies ready to scale without the overhead of traditional consulting.
                       </p>
