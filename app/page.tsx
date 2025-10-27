@@ -172,6 +172,35 @@ export default function HomePage() {
               CMO-level strategy through focused sprints, not ongoing retainers.
             </p>
 
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <UserCog className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">We Take 2-3 Clients Per Quarter</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="mb-4">
+                    <Gift className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <CardTitle className="text-2xl font-semibold">Built to Transfer, Not Keep You Dependent</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground leading-relaxed">
+                  <p>
+                    Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
