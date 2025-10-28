@@ -82,10 +82,10 @@ export default function HomePage() {
 
                     <div className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-4">
                       <p>
-                      Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to <Link href="/what-is-fractional-cmo" className="text-primary hover:underline">fractional CMO retainers</Link>.
-                    </p>
+                        Most B2B companies can't justify a $250K CMO hire. But they need more than a fractional consultant who stays on retainer indefinitely.
+                      </p>
                       <p>
-                        We don't just design strategy. We operationalize it into systems your team can actually run. 8-week sprints for $1-5M B2B companies ready to scale without the overhead of traditional consulting.
+                        We build complete growth strategies in focused 8-week sprints, then transfer everything to your team. Custom systems, clear documentation, measurable results—designed so you can run it without us.
                       </p>
                     </div>
 
