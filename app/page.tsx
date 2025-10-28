@@ -113,7 +113,7 @@ export default function HomePage() {
             </h2>
 
             {/* Server-side content for SEO */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="hidden md:grid md:grid-cols-3 gap-6 mb-12">
               <Card className="card-hover-lift group">
                 <CardHeader>
                   <div className="mb-4">
