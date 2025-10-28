@@ -78,6 +78,11 @@ export default function Approach() {
         <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">
           {LABELS.heading}
         </h2>
+        
+        <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
+          Most B2B companies can't justify a $250K CMO hire. But they need more than a fractional consultant who stays on retainer indefinitely.<br /><br />
+          We build complete growth strategies in focused 8-week sprints, then transfer everything to your team. Custom systems, clear documentation, measurable results—designed so you can run it without us.
+        </p>
 
         <Tabs value={value} onValueChange={onChange} className="grid gap-6">
         {/* Mobile: Vertical Stepper; Desktop: Horizontal tabs */}
