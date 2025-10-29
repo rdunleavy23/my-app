@@ -42,6 +42,8 @@ export default function Logo({ className = "", size }: LogoProps) {
         "flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm transition-all",
         // Ensure adequate clickable/touch target area (minimum 44x44px)
         "min-h-[44px] min-w-[44px] justify-center",
+        // Prevent flex shrinking and constrain width
+        "shrink-0 max-w-[280px] sm:max-w-[320px]",
         className
       )}
       aria-label="Pattern Growth homepage"
@@ -53,9 +55,10 @@ export default function Logo({ className = "", size }: LogoProps) {
         className={cn(
           sizeClasses,
           "w-auto transition-all duration-200",
+          // Ensure logo respects height constraints and doesn't overflow container
+          "max-w-full",
           "object-contain"
         )}
-        style={{ maxHeight: '100%' }}
       />
     </Link>
   )

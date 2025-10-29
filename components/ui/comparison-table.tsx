@@ -48,6 +48,7 @@ export function ComparisonTable({ columns, rows, className }: ComparisonTablePro
 
     // Handle scroll events
     const handleScroll = () => {
+      // Hide gradient once user starts scrolling - keep it hidden permanently
       if (container.scrollLeft > 0) {
         setHasScrolled(true)
       }
@@ -66,8 +67,9 @@ export function ComparisonTable({ columns, rows, className }: ComparisonTablePro
       <div 
         ref={scrollContainerRef}
         className={cn(
-          "overflow-x-auto scroll-fade-right",
-          "scrollbar-hide"
+          "overflow-x-auto scrollbar-hide",
+          // Only show gradient fade when user hasn't scrolled yet
+          !hasScrolled && "scroll-fade-right"
         )}
       >
         <table className="w-full border-collapse">

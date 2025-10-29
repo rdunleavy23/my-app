@@ -86,11 +86,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-[60] border-b bg-background/95 backdrop-blur">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="flex h-14 items-center justify-between gap-4">
+      <div className="mx-auto w-full max-w-6xl pl-6 pr-4 sm:pl-8 sm:pr-6">
+        <div className="flex h-14 items-center justify-between gap-6">
           {/* Logo: 44px mobile (~211px wide, accounts for 4.79:1 wordmark), 56px desktop - Pattern Growth is 4.8x wider than Superside */}
-          {/* Padding: 16px left (matches Superside), reduced margins (mr-2/4) to accommodate wide logo width */}
-          <Logo size="lg" className="mr-2 sm:mr-4" />
+          {/* Increased left padding (24px mobile, 32px desktop) to push logo right, increased gap to hamburger menu (24px) */}
+          {/* Logo container constrained to prevent overflow */}
+          <Logo size="lg" className="shrink-0" />
 
           {/* Desktop Nav (lean) */}
           <nav className="hidden md:flex items-center space-x-6" aria-label="Primary navigation">
@@ -147,13 +148,8 @@ export default function Navbar() {
                   {/* Screen reader title */}
                   <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
                   
-                  {/* Mobile menu header with logo */}
-                  <div className="px-6 pt-6 pb-4 border-b border-border">
-                    <Logo size="lg" />
-                  </div>
-                  
                   {/* Navigation items with larger typography and spacing (lean) */}
-                  <div className="flex-1 px-6">
+                  <div className="flex-1 px-6 pt-6">
                     <nav role="navigation" aria-label="Mobile navigation">
                       <Link
                         href="/about"

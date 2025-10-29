@@ -12,11 +12,18 @@ import {
   Puzzle,
   Database,
   Gift,
-  Handshake
+  Handshake,
+  ChevronDown
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { GetStartedButton } from "@/components/ui/get-started-button"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import {
   Card,
   CardContent,
@@ -200,7 +207,8 @@ export default function HomePage() {
               CMO-level strategy through focused sprints, not ongoing retainers.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* Desktop: Grid of Cards */}
+            <div className="hidden md:grid md:grid-cols-2 gap-8">
               <Card className="border-l-4 border-l-primary">
                 <CardHeader>
                   <div className="mb-4">
@@ -270,6 +278,116 @@ export default function HomePage() {
                   </p>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Mobile: Accordion (best practices: single open, first item default, large touch targets) */}
+            <div className="md:hidden">
+              <Accordion
+                type="single"
+                defaultValue="item-0"
+                collapsible
+                className="w-full space-y-0 rounded-lg border bg-card"
+              >
+                <AccordionItem value="item-0" className="border-l-4 border-l-primary border-b">
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
+                      <div className="mt-1 shrink-0">
+                        <UserCog className="h-8 w-8 text-primary" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                          We Take 2-3 Clients Per Quarter
+                        </h3>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-1" className="border-l-4 border-l-primary border-b">
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
+                      <div className="mt-1 shrink-0">
+                        <Gift className="h-8 w-8 text-primary" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                          Built to Transfer, Not Keep You Dependent
+                        </h3>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border-l-4 border-l-primary border-b">
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
+                      <div className="mt-1 shrink-0">
+                        <Puzzle className="h-8 w-8 text-primary" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                          Strategy Built for Your Reality
+                        </h3>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border-l-4 border-l-primary border-b">
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
+                      <div className="mt-1 shrink-0">
+                        <Database className="h-8 w-8 text-primary" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                          Data Before Assumptions
+                        </h3>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border-l-4 border-l-primary">
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
+                      <div className="mt-1 shrink-0">
+                        <Handshake className="h-8 w-8 text-primary" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                          Handoff That Fits How You Work
+                        </h3>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>

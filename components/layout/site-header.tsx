@@ -14,11 +14,11 @@ export function SiteHeader() {
 
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
-      <div className="container flex h-14 items-center justify-between gap-4">
+      <div className="container flex h-14 items-center justify-between gap-6">
         <div className="flex items-center gap-6">
           {/* Logo: 44px mobile (~211px wide, accounts for 4.79:1 wordmark), 56px desktop */}
-          {/* Padding: 16px left (matches Superside), reduced margins to accommodate wide logo */}
-          <Logo size="lg" className="mr-2 sm:mr-4" />
+          {/* Spacing handled at container level with gap-6 */}
+          <Logo size="lg" />
 
           <nav className="hidden gap-6 text-sm font-medium md:flex">
             <Link
