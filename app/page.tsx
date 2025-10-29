@@ -84,7 +84,9 @@ export default function HomePage() {
                 <section className="py-16 sm:py-20 bg-background">
                   <div className="mx-auto max-w-5xl px-6 lg:px-8">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-foreground">
-                      Your Marketing Strategy, Built From Scratch in 8 Weeks
+                      Your Marketing Strategy,<br />
+                      Built From Scratch<br className="lg:hidden" />
+                      <span className="text-primary font-bold">in 8 Weeks</span>
                     </h1>
 
                     <div className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-4">
