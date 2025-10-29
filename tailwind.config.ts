@@ -41,8 +41,8 @@ const config = {
         md: "8px",
       },
       boxShadow: {
-        sm: "0 1px 2px rgba(15,26,38,0.06)",
-        "hover-button": "0 4px 6px rgba(59, 130, 246, 0.3)",
+        sm: "0 1px 2px rgba(0, 0, 0, 0.06)",
+        "hover-button": "0 4px 6px color-mix(in oklch, var(--primary) 30%, transparent)",
         "hover-card": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
       },
       spacing: {

@@ -280,6 +280,14 @@ When modifying color values:
 
 ## Version History
 
+- **v1.1.0** (2025-10-29): Full site migration to token system
+  - Replaced all hardcoded colors across entire codebase with semantic tokens
+  - Updated hero section components to use brand colors
+  - Migrated features-8 component from gray/zinc utilities to semantic tokens
+  - Removed all `bg-[#...]`, `text-[rgb(...)]`, and arbitrary color classes
+  - Verified build passes with 0 color-related errors
+  - All pages now use token system exclusively
+
 - **v1.0.0** (2025-10-29): Initial color system implementation
   - Added primary, secondary, tertiary brand colors
   - Added four accent colors (deep navy, golden, warm taupe, mid blue)

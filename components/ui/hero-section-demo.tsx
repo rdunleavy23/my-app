@@ -5,7 +5,7 @@ export default function HeroSectionDemo() {
     <HeroSection 
       distortion={1.2}
       speed={0.8}
-      colors={["#3b82f6", "#8b5cf6", "#06b6d4", "#10b981", "#f59e0b", "#ef4444"]}
+      colors={["#3E5661", "#8597A1", "#95B0BA", "#02273A", "#B9A287", "#F8ECD1"]}
     />
   );
 }

@@ -30,7 +30,7 @@ export function HeroSection({
   description = "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to fractional CMO retainers.",
   buttonText = "Schedule a Call",
   onButtonClick,
-  colors = ["#3b82f6", "#8b5cf6", "#06b6d4", "#10b981", "#f59e0b", "#ef4444"],
+  colors = ["#3E5661", "#8597A1", "#95B0BA", "#02273A", "#B9A287", "#F8ECD1"],
   distortion = 0.8,
   swirl = 0.6,
   speed = 0.42,
@@ -40,7 +40,7 @@ export function HeroSection({
   descriptionClassName = "",
   buttonClassName = "",
   maxWidth = "max-w-6xl",
-  veilOpacity = "bg-white/20 dark:bg-black/25",
+  veilOpacity = "bg-background/20 dark:bg-background/25",
   fontFamily = "Satoshi, sans-serif",
   fontWeight = 500,
 }: HeroSectionProps) {
@@ -97,17 +97,17 @@ export function HeroSection({
           >
             {title} <span className="text-primary">{highlightText}</span>
           </h1>
-          <p className={`text-lg sm:text-xl text-white text-pretty max-w-2xl mx-auto leading-relaxed mb-10 px-4 ${descriptionClassName}`}>
+          <p className={`text-lg sm:text-xl text-foreground text-pretty max-w-2xl mx-auto leading-relaxed mb-10 px-4 ${descriptionClassName}`}>
             {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <button
               onClick={handleButtonClick}
-              className={`px-6 py-4 sm:px-8 sm:py-6 rounded-full border-4 bg-[rgba(63,63,63,1)] border-card text-sm sm:text-base text-white hover:bg-[rgba(63,63,63,0.9)] transition-colors ${buttonClassName}`}
+              className={`px-6 py-4 sm:px-8 sm:py-6 rounded-full border-4 bg-accent-deep-navy border-card text-sm sm:text-base text-accent-deep-navy-foreground hover:bg-accent-deep-navy/90 transition-colors ${buttonClassName}`}
             >
               {buttonText}
             </button>
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-foreground/80">
               30-minute call · No pitch, no pressure
             </p>
           </div>
