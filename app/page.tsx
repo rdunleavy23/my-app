@@ -87,7 +87,7 @@ export default function HomePage() {
                       Your Marketing Strategy,<br />
                       Built From Scratch<br className="lg:hidden" />
                       <span className="hidden lg:inline">&nbsp;</span>
-                      <span className="text-accent-deep-navy font-bold">in 8 Weeks</span>
+                      <span className="text-foreground font-bold">in 8 Weeks</span>
                     </h1>
 
                     <div className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-4">
