@@ -86,10 +86,10 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-[60] border-b bg-background/95 backdrop-blur">
-      <div className="mx-auto w-full max-w-6xl pl-6 pr-4 sm:pl-8 sm:pr-6">
+      <div className="mx-auto w-full max-w-6xl pl-3 pr-4 sm:pl-8 sm:pr-6">
         <div className="flex h-14 items-center justify-between gap-6">
           {/* Logo: 44px mobile (~211px wide, accounts for 4.79:1 wordmark), 56px desktop - Pattern Growth is 4.8x wider than Superside */}
-          {/* Increased left padding (24px mobile, 32px desktop) to push logo right, increased gap to hamburger menu (24px) */}
+          {/* Left padding: 12px mobile (closer to corner with breathing room), 32px desktop; increased gap to hamburger menu (24px) */}
           {/* Logo container constrained to prevent overflow */}
           <Logo size="lg" className="shrink-0" />
 
