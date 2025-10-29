@@ -49,13 +49,15 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   icons: {
     icon: [
+      // Primary favicon - SVG for modern browsers
       { url: "/patterngrowth-logo.svg", type: "image/svg+xml" },
-      { url: "/patterngrowth-logo-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/patterngrowth-logo-32.png", sizes: "32x32", type: "image/png" },
+      // PNG fallbacks in standard sizes - Google prefers 48x48 minimum
       { url: "/patterngrowth-logo-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/patterngrowth-logo-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/patterngrowth-logo-16.png", sizes: "16x16", type: "image/png" },
+      // Android chrome icons
       { url: "/patterngrowth-android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
       { url: "/patterngrowth-android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
-      { url: "/favicon.ico", sizes: "32x32" },
     ],
     shortcut: [
       { url: "/patterngrowth-logo-48.png", sizes: "48x48", type: "image/png" },
@@ -126,6 +128,26 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 contactType: "customer service",
                 email: "hello@patterngrowth.com"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Pattern Growth",
+              alternateName: "PatternGrowth",
+              url: "https://www.patterngrowth.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://www.patterngrowth.com/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
               }
             })
           }}
