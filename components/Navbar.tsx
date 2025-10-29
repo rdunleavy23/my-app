@@ -135,7 +135,7 @@ export default function Navbar() {
               <SheetContent
                 side="top"
                 showClose={false}
-                className="w-screen rounded-none border-0 p-0 bg-tertiary max-h-[calc(100vh-56px)] overflow-y-auto"
+                className="w-screen rounded-none border-0 p-0 bg-background max-h-[calc(100vh-56px)] overflow-y-auto"
                 id="mobile-menu"
                 role="dialog"
                 aria-modal="true"
@@ -144,6 +144,11 @@ export default function Navbar() {
                 <div className="flex flex-col h-full">
                   {/* Screen reader title */}
                   <h2 id="mobile-menu-title" className="sr-only">Mobile Navigation Menu</h2>
+                  
+                  {/* Mobile menu header with logo */}
+                  <div className="px-6 pt-6 pb-4 border-b border-border">
+                    <Logo className="h-8" />
+                  </div>
                   
                   {/* Navigation items with larger typography and spacing (lean) */}
                   <div className="flex-1 px-6">

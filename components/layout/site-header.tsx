@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
+import Logo from "@/components/Logo"
 import { MobileNav } from "@/components/mobile-nav"
 
 export function SiteHeader() {
@@ -16,12 +16,7 @@ export function SiteHeader() {
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
       <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Icons.logo className="h-6 w-6" />
-            <span className="hidden font-bold sm:inline-block">
-              {siteConfig.name}
-            </span>
-          </Link>
+          <Logo className="h-8 sm:h-9" />
 
           <nav className="hidden gap-6 text-sm font-medium md:flex">
             <Link

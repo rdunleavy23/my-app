@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
+import Logo from "@/components/Logo"
 import { Menu, X, ChevronRight } from "lucide-react"
 
 export function MobileNav() {
@@ -22,10 +22,7 @@ export function MobileNav() {
       <SheetContent side="left" className="w-80 sm:w-96 p-0">
         {/* Header with logo and close button */}
         <div className="flex items-center justify-between p-6 border-b">
-          <Link href="/" className="flex items-center space-x-2">
-            <Icons.logo className="h-6 w-6" />
-            <span className="font-bold text-lg">{siteConfig.name}</span>
-          </Link>
+          <Logo className="h-8" />
           <SheetTrigger asChild>
             <button className="p-2 hover:bg-muted rounded-md">
               <X className="h-5 w-5" aria-hidden="true" />

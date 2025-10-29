@@ -604,6 +604,14 @@ html:not(.dark) body { background: var(--background); }
 .dark .scroll-fade-right::after {
   background: linear-gradient(to left, var(--background), transparent);
 }
+
+/* Logo dark mode color adjustment - ensures brand color compliance */
+/* Logo should be dark blue (#02273A / accent-deep-navy) in light mode */
+/* In dark mode, inverted to near-white (accent-deep-navy-foreground equivalent) */
+.dark img[alt="Pattern Growth"],
+html.dark img[alt="Pattern Growth"] {
+  filter: brightness(2.5) invert(1) !important;
+}
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }
 
