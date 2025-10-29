@@ -73,7 +73,7 @@ export default function Approach() {
   }
 
   return (
-    <section className="py-12 sm:py-16 bg-tertiary text-tertiary-foreground" aria-labelledby="approach-heading">
+    <section className="py-12 sm:py-16 bg-background" aria-labelledby="approach-heading">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">
           {LABELS.heading}

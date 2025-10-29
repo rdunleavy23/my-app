@@ -74,9 +74,9 @@ export default function HomePage() {
 
       <div className="bg-background">
                 {/* Hero Section */}
-                <section className="py-16 sm:py-20 bg-tertiary text-tertiary-foreground">
+                <section className="py-16 sm:py-20 bg-background">
                   <div className="mx-auto max-w-5xl px-6 lg:px-8">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-tertiary-foreground">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-foreground">
                       Your Marketing Strategy, Built From Scratch in 8 Weeks
                     </h1>
 
@@ -394,9 +394,9 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 bg-tertiary text-tertiary-foreground">
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8">

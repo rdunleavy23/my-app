@@ -2,14 +2,29 @@
 import "./globals.css"
 
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { DM_Sans, DM_Mono, Platypi } from "next/font/google"
 import Script from "next/script"
 import Navbar from "@/components/Navbar"
 import SiteFooter from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
 
-const inter = Inter({ subsets: ["latin"], display: "swap" })
+const dmSans = DM_Sans({ 
+  subsets: ["latin"], 
+  display: "swap",
+  variable: "--font-sans",
+})
+const dmMono = DM_Mono({ 
+  subsets: ["latin"], 
+  display: "swap",
+  variable: "--font-mono",
+  weight: ["400", "500"],
+})
+const platypi = Platypi({ 
+  subsets: ["latin"], 
+  display: "swap",
+  variable: "--font-serif",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.patterngrowth.com"),
@@ -116,7 +131,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
+      <body className={`${dmSans.variable} ${dmMono.variable} ${platypi.variable} font-sans min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
         <ThemeProvider>
           <ErrorBoundary>
             <Navbar />
