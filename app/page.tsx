@@ -86,6 +86,7 @@ export default function HomePage() {
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-foreground">
                       Your Marketing Strategy,<br />
                       Built From Scratch<br className="lg:hidden" />
+                      <span className="hidden lg:inline">&nbsp;</span>
                       <span className="text-primary font-bold">in 8 Weeks</span>
                     </h1>
 
