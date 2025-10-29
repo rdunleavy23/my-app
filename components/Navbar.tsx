@@ -91,7 +91,7 @@ export default function Navbar() {
           <Logo />
 
           {/* Desktop Nav (lean) */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6" aria-label="Primary navigation">
             <Link
               href="/about"
               className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
@@ -135,7 +135,7 @@ export default function Navbar() {
               <SheetContent
                 side="top"
                 showClose={false}
-                className="w-screen rounded-none border-0 p-0 bg-[#f5f4f0] max-h-[calc(100vh-56px)] overflow-y-auto"
+                className="w-screen rounded-none border-0 p-0 bg-tertiary max-h-[calc(100vh-56px)] overflow-y-auto"
                 id="mobile-menu"
                 role="dialog"
                 aria-modal="true"
@@ -147,7 +147,7 @@ export default function Navbar() {
                   
                   {/* Navigation items with larger typography and spacing (lean) */}
                   <div className="flex-1 px-6">
-                    <nav role="navigation" aria-label="Main navigation">
+                    <nav role="navigation" aria-label="Mobile navigation">
                       <Link
                         href="/about"
                         onClick={() => {

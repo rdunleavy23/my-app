@@ -73,16 +73,15 @@ export default function Approach() {
   }
 
   return (
-    <section className="py-12 sm:py-16 bg-muted/30" aria-labelledby="approach-heading">
+    <section className="py-12 sm:py-16 bg-surface-warm text-surface-warm-foreground" aria-labelledby="approach-heading">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 id="approach-heading" className="mb-6 text-2xl font-semibold">
           {LABELS.heading}
         </h2>
 
         <Tabs value={value} onValueChange={onChange} className="grid gap-6">
-        {/* Mobile: Vertical Stepper; Desktop: Horizontal tabs */}
-        <div className="md:hidden">
-          {/* Mobile Stepper */}
+        {/* Mobile: Vertical Stepper */}
+        {isMobile && (
           <div className="space-y-8">
             {APPROACH_ITEMS.map((it, index) => (
               <div key={it.key} className="relative">
@@ -178,10 +177,10 @@ export default function Approach() {
               </div>
             ))}
           </div>
-        </div>
-
+        )}
+        
         {/* Desktop: Timeline Layout */}
-        <div className="hidden md:block">
+        {!isMobile && (
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border" />
@@ -254,7 +253,7 @@ export default function Approach() {
               ))}
             </div>
           </div>
-        </div>
+        )}
       </Tabs>
       </div>
     </section>

@@ -2,7 +2,9 @@
 "use client"
 import * as React from "react"
 export function useMediaQuery(query: string) {
-  const [matches, setMatches] = React.useState(false)
+  // Default to true to prevent SSR mismatch - mobile-first approach
+  const [matches, setMatches] = React.useState(true)
+  
   React.useEffect(() => {
     const m = window.matchMedia(query)
     const onChange = () => setMatches(m.matches)
@@ -10,5 +12,6 @@ export function useMediaQuery(query: string) {
     m.addEventListener?.("change", onChange)
     return () => m.removeEventListener?.("change", onChange)
   }, [query])
+  
   return matches
 }

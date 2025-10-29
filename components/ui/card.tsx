@@ -2,16 +2,25 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+const cardVariantClasses: Record<"default" | "warm" | "outline" | "accent", string> = {
+  default: "border border-border bg-card text-card-foreground",
+  warm: "border border-primary/40 bg-tertiary text-tertiary-foreground",
+  outline: "border-2 border-primary bg-background text-foreground",
+  accent: "border border-primary bg-primary text-primary-foreground",
+}
+
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & {
     hover?: boolean
+    variant?: "default" | "warm" | "outline" | "accent"
   }
->(({ className, hover = true, ...props }, ref) => (
+>(({ className, hover = true, variant = "default", ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "rounded-xl border bg-card text-card-foreground shadow",
+      "rounded-xl shadow-sm",
+      cardVariantClasses[variant],
       hover && "card-hover-lift",
       className
     )}

@@ -74,9 +74,9 @@ export default function HomePage() {
 
       <div className="bg-background">
                 {/* Hero Section */}
-                <section className="py-16 sm:py-20">
+                <section className="py-16 sm:py-20 bg-tertiary text-tertiary-foreground">
                   <div className="mx-auto max-w-5xl px-6 lg:px-8">
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight text-foreground mb-6 text-balance">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-tertiary-foreground">
                       Your Marketing Strategy, Built From Scratch in 8 Weeks
                     </h1>
 
@@ -114,7 +114,7 @@ export default function HomePage() {
 
             {/* Server-side content for SEO */}
             <div className="hidden md:grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="card-hover-lift group">
+              <Card className="card-hover-lift group bg-surface-warm text-surface-warm-foreground">
                 <CardHeader>
                   <div className="mb-4">
                     <Zap className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -128,7 +128,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover-lift group">
+              <Card className="card-hover-lift group bg-surface-warm text-surface-warm-foreground">
                 <CardHeader>
                   <div className="mb-4">
                     <Building2 className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -142,7 +142,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover-lift group">
+              <Card className="card-hover-lift group bg-surface-warm text-surface-warm-foreground">
                 <CardHeader>
                   <div className="mb-4">
                     <TrendingUp className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -156,7 +156,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover-lift group">
+              <Card className="card-hover-lift group bg-surface-warm text-surface-warm-foreground">
                 <CardHeader>
                   <div className="mb-4">
                     <Target className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -170,7 +170,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="card-hover-lift group">
+              <Card className="card-hover-lift group bg-surface-warm text-surface-warm-foreground">
                 <CardHeader>
                   <div className="mb-4">
                     <LinkIcon className="h-12 w-12 text-primary" aria-hidden="true" />
@@ -191,7 +191,7 @@ export default function HomePage() {
         </section>
 
         {/* How We Work Differently */}
-        <section className="py-16 sm:py-20 bg-muted/30 border-t">
+        <section className="py-16 sm:py-20 bg-surface-warm text-surface-warm-foreground border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               How We Work Differently
@@ -275,7 +275,7 @@ export default function HomePage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="py-16 sm:py-20 border-t bg-muted/30">
+        <section className="py-16 sm:py-20 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
@@ -394,7 +394,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 bg-muted/30">
+        <section className="py-16 sm:py-20 bg-tertiary text-tertiary-foreground">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Get Started?

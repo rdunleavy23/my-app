@@ -5,7 +5,7 @@ export default function SiteFooter() {
   // Avoid SSR window access: derive from location at runtime on client
   const hideResources = false
   return (
-    <footer className="border-t bg-muted/20">
+    <footer className="border-t bg-surface-warm text-surface-warm-foreground">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         <div className="py-8">
           {/* Mobile: Vertical Stack, Left-Aligned */}
@@ -13,7 +13,7 @@ export default function SiteFooter() {
             <p className="text-xs text-muted-foreground/90">
               © {new Date().getFullYear()} Pattern Growth
             </p>
-            <nav className="flex flex-col gap-2 text-xs">
+            <nav className="flex flex-col gap-2 text-xs" aria-label="Footer navigation">
               <Link 
                 href="/process" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
@@ -48,7 +48,7 @@ export default function SiteFooter() {
             <p className="text-xs text-muted-foreground/90">
               © {new Date().getFullYear()} Pattern Growth
             </p>
-            <nav className="flex flex-wrap items-center gap-3 text-xs">
+            <nav className="flex flex-wrap items-center gap-3 text-xs" aria-label="Footer navigation links">
               <Link 
                 href="/process" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors"

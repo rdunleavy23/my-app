@@ -48,12 +48,12 @@ export default function FractionalCMOServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <main className="container mx-auto max-w-4xl px-4 py-16">
-      <h1 className="text-4xl font-bold tracking-tight mb-6">Fractional CMO Services</h1>
-      <p className="text-muted-foreground">
-        This page will be restored with full content after deploy. For now, it compiles cleanly.
-      </p>
-    </main>
+      <section className="container mx-auto max-w-4xl px-4 py-16">
+        <h1 className="text-4xl font-bold tracking-tight mb-6">Fractional CMO Services</h1>
+        <p className="text-muted-foreground">
+          This page will be restored with full content after deploy. For now, it compiles cleanly.
+        </p>
+      </section>
     </>
   )
 }

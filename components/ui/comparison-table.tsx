@@ -73,11 +73,17 @@ export function ComparisonTable({ columns, rows, className }: ComparisonTablePro
         <table className="w-full border-collapse">
           <thead>
             <tr>
-              <th className="border border-border bg-muted/50 p-4 text-left font-semibold"></th>
+              <th
+                className="border border-border bg-muted/50 p-4 text-left font-semibold"
+                scope="col"
+              >
+                <span className="sr-only">Criteria</span>
+              </th>
               {columns.map((column) => (
                 <th
                   key={column}
                   className="border border-border bg-muted/50 p-4 text-center font-semibold"
+                  scope="col"
                 >
                   {column}
                 </th>

@@ -1,6 +1,35 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+const config = {
+  safelist: [
+    // Primary/Secondary/Tertiary
+    "bg-tertiary",
+    "text-tertiary-foreground",
+    "bg-surface-warm",
+    "text-surface-warm-foreground",
+    "bg-primary",
+    "text-primary-foreground",
+    "bg-secondary",
+    "text-secondary-foreground",
+    // Accent variants
+    "bg-accent",
+    "text-accent-foreground",
+    "bg-accent-deep-navy",
+    "text-accent-deep-navy-foreground",
+    "bg-accent-mid-blue",
+    "text-accent-mid-blue-foreground",
+    "bg-accent-warm-taupe",
+    "text-accent-warm-taupe-foreground",
+    "bg-accent-golden",
+    "text-accent-golden-foreground",
+    // Hover states
+    "hover:bg-primary/90",
+    "hover:bg-accent-deep-navy/90",
+    "hover:bg-accent/90",
+    // Card backgrounds
+    "bg-card",
+    "text-card-foreground",
+  ],
   content: [
     "./app/**/*.{ts,tsx,js,jsx,mdx}",
     "./components/**/*.{ts,tsx,js,jsx,mdx}",
@@ -36,6 +65,6 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+} satisfies Config & { safelist: string[] };
 
 export default config;

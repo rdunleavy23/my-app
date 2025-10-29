@@ -7,27 +7,29 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium motion-safe:transition-all motion-reduce:transition-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] focus-visible:ring-offset-2 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive active:scale-[0.97] motion-safe:active:transition-transform min-h-[44px] btn-hover-lift", // 44px minimum for better accessibility
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 motion-safe:transition-all motion-safe:active:scale-95", 
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
-          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 focus-visible:ring-destructive",
         outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border border-border bg-background hover:bg-muted hover:text-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+          "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+          "hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        accent: "bg-accent-deep-navy text-accent-deep-navy-foreground hover:bg-accent-deep-navy/90",
+        premium:
+          "bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 text-lg font-semibold px-8 py-4",
       },
       size: {
-        default: "h-12 px-4 py-3 has-[>svg]:px-3 min-h-[48px]", // 48px minimum touch target
-        sm: "h-10 px-3 py-2 has-[>svg]:px-2.5 min-h-[40px]", // 40px for compact areas
-        lg: "h-14 px-6 py-4 has-[>svg]:px-4 min-h-[56px]", // 56px for prominent CTAs
-        icon: "size-12 min-h-[48px]", // 48px minimum touch target
+        default: "h-12 px-4 py-3 min-h-[48px]",
+        sm: "h-10 px-3 py-2 min-h-[40px]",
+        lg: "h-14 px-6 py-4 min-h-[56px]",
+        icon: "size-12 min-h-[48px]",
       },
     },
     defaultVariants: {

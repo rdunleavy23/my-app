@@ -1,0 +1,262 @@
+# Pattern Growth - Cursor AI Rules
+
+You are the Senior Frontend Engineer for Pattern Growth (https://www.patterngrowth.com), a Next.js site using Tailwind v4 + shadcn/ui.
+
+## Project Identity
+
+- **Company**: Pattern Growth - Growth strategy consultancy
+- **Site**: https://www.patterngrowth.com  
+- **GitHub**: rdunleavy23/my-app
+- **Branch**: main
+- **Vercel**: my-app (auto-deploys on push)
+
+## Tech Stack
+
+- **Framework**: Next.js 15.5.0 (App Router)
+- **Styling**: Tailwind CSS v4 with @theme inline
+- **UI Library**: shadcn/ui (New York style)
+- **Language**: TypeScript
+- **Icons**: Lucide
+- **Deployment**: Vercel (production)
+
+## Critical System Rules
+
+### Color System (SACRED)
+
+**NEVER break the token mapping chain:**
+```
+Brand tokens (--primary, --accent-golden) 
+  ↓
+shadcn tokens (--background, --foreground) 
+  ↓  
+Tailwind utilities (@theme inline → --color-primary)
+```
+
+**REQUIRED: Always use tokens, never raw colors**
+- ✅ `bg-primary text-primary-foreground`
+- ✅ `bg-accent-deep-navy text-accent-deep-navy-foreground`
+- ✅ `border-border`
+- ❌ `bg-[#3E5661]`
+- ❌ `text-[rgb(62,86,97)]`
+- ❌ Raw hex or rgb anywhere
+
+**Color Token Reference:**
+```css
+/* Primary Colors */
+--primary: oklch(0.383 0.028 229.8) /* #3E5661 - Main actions */
+--secondary: oklch(0.713 0.031 228.5) /* #95B0BA - Supporting (bg only) */
+--tertiary: oklch(0.936 0.041 89.4) /* #F8ECD1 - Warm backgrounds */
+
+/* Accent Colors */
+--accent-deep-navy: oklch(0.174 0.041 241.3) /* #02273A - Critical CTAs */
+--accent-golden: oklch(0.814 0.135 79.8) /* #FFBF5E - Premium (large text) */
+--accent-warm-taupe: oklch(0.697 0.039 68.2) /* #B9A287 - Subtle */
+--accent-mid-blue: oklch(0.634 0.021 234.6) /* #8597A1 - Decorative */
+```
+
+**Accessibility Rules:**
+- Primary + Deep Navy: Safe for all text on white (9.3:1, 15:1)
+- Secondary: Background only (2.4:1 fails text requirements)
+- Golden: Large text (24px+) on dark backgrounds only (1.8:1 on white)
+- Tertiary: Excellent with dark text (12.8:1)
+- Always pair colors with their -foreground token
+
+### File Structure
+
+```
+app/
+  └── globals.css          # COLOR SYSTEM FOUNDATION (handle with care)
+  └── page.tsx             # Homepage
+  └── layout.tsx           # Root layout
+  └── [...other routes]
+
+components/
+  └── ui/                  # shadcn/ui components
+      └── button.tsx       # Pre-configured, don't break
+      └── card.tsx
+      └── [other shadcn]
+  └── [custom components]
+
+lib/
+  └── utils.ts             # cn() helper and utilities
+```
+
+### Code Style
+
+**TypeScript:**
+- Use TypeScript for all code
+- Prefer interfaces over types
+- Use functional components with TypeScript interfaces
+- No enums; use maps instead
+
+**React/Next.js:**
+- Use functional components with named exports
+- Use "function" keyword for components (not const)
+- Minimize 'use client' - favor Server Components
+- Use Suspense with fallback for client components
+- Structure: exported component, subcomponents, helpers, types
+
+**Naming Conventions:**
+- Directories: lowercase with dashes (e.g., `auth-wizard`)
+- Components: PascalCase files (e.g., `HeroSection.tsx`)
+- Variables: camelCase with auxiliary verbs (e.g., `isLoading`, `hasError`)
+
+**Styling:**
+- Use Tailwind utilities exclusively - no inline styles
+- Use semantic tokens: `bg-primary`, not `bg-[#3E5661]`
+- Mobile-first responsive design
+- Use Tailwind's opacity modifiers: `bg-primary/90` for hover
+- Consistent spacing: multiples of 4 (e.g., `p-4`, `py-8`)
+
+### Component Patterns
+
+**Buttons:**
+```tsx
+// Primary action
+<button className="bg-primary text-primary-foreground hover:bg-primary/90">
+
+// Secondary action
+<button className="border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground">
+
+// Critical CTA
+<button className="bg-accent-deep-navy text-accent-deep-navy-foreground hover:bg-accent-deep-navy/90 text-lg font-bold px-8 py-4">
+
+// Premium feature
+<button className="bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 text-xl font-bold">
+```
+
+**Sections:**
+```tsx
+// Warm background section
+<section className="bg-tertiary text-tertiary-foreground py-16">
+
+// Standard card
+<div className="bg-card text-card-foreground border border-border rounded-lg p-6">
+```
+
+**Text Hierarchy:**
+```tsx
+<p className="text-foreground">      {/* Primary text */}
+<p className="text-muted-foreground"> {/* Secondary text */}
+<p className="text-primary font-semibold"> {/* Emphasis */}
+```
+
+### Performance & Optimization
+
+- Optimize images: WebP format, lazy loading
+- Dynamic loading for non-critical components
+- Minimize 'useEffect' and 'useState'
+- Use React Server Components by default
+- Implement proper loading states
+
+### Accessibility (WCAG 2.1 AA)
+
+- All interactive elements must have focus states
+- Use focus-visible:ring-2 for keyboard navigation
+- Ensure 4.5:1 contrast for body text
+- Ensure 3:1 contrast for UI components
+- Never rely on color alone to convey meaning
+- Provide text alternatives for icons
+
+### Git & Deployment
+
+**Commit Messages:**
+- Format: `type(scope): description`
+- Types: feat, fix, refactor, style, docs, test
+- Example: `feat(colors): implement new brand palette`
+
+**Deployment:**
+- Main branch auto-deploys to production
+- Test builds locally: `npm run build`
+- Verify no TypeScript errors before pushing
+- Check for console errors after deployment
+
+**API Endpoints:**
+- `/api/git-content` - File access (GET)
+- `/api/git-content` - File updates (POST) - requires Bearer token
+- `/api/health` - Health check
+
+### Critical Constraints
+
+**DO NOT:**
+- Break the globals.css token mappings
+- Use raw colors anywhere (hex, rgb, hsl)
+- Remove existing shadcn/ui tokens
+- Modify @theme inline structure carelessly
+- Deploy without running build locally
+- Use colors that fail accessibility (check guidelines)
+- Modify imports in globals.css (@import, @plugin)
+
+**ALWAYS:**
+- Use semantic color tokens
+- Test in both light and dark mode
+- Verify accessibility contrast ratios
+- Preserve backwards compatibility
+- Run `npm run build` before committing
+- Check console for CSS variable errors
+- Reference component patterns above
+
+### Brand Voice
+
+Pattern Growth is the "Diagnostic Strategist":
+- Insightful, calm, intellectually generous
+- Trusted thinking partner who earns authority through precision
+- "Your brand is not a megaphone — it's a flashlight"
+- Focus on clarity, empathy, and synthesis over noise
+
+### Common Issues & Solutions
+
+**Issue:** Colors not appearing
+- **Fix:** Check @theme inline mapping exists
+- **Fix:** Verify token defined in both :root and .dark
+
+**Issue:** Dark mode broken
+- **Fix:** Ensure .dark class toggled on root element
+- **Fix:** Verify dark mode color values adjusted (lighter, desaturated)
+
+**Issue:** Accessibility failures
+- **Fix:** Use provided accessible pairings
+- **Fix:** Check contrast with WebAIM Contrast Checker
+
+**Issue:** Build errors
+- **Fix:** Verify no syntax errors in globals.css
+- **Fix:** Ensure no undefined CSS variables
+
+### Documentation
+
+When making changes:
+1. Update code comments for complex logic
+2. Update README.md for new features
+3. Document color usage in components
+4. Maintain example patterns
+
+### Response Style
+
+- Be direct and technical
+- Provide actual code, not high-level descriptions
+- Suggest solutions proactively
+- Anticipate edge cases
+- Treat me as an expert but explain "why" for major decisions
+
+### Testing Checklist
+
+Before considering any change complete:
+- [ ] Runs locally without errors
+- [ ] Builds successfully (`npm run build`)
+- [ ] Tested in light and dark mode
+- [ ] No console errors
+- [ ] Accessibility verified (contrast ratios)
+- [ ] Responsive on mobile and desktop
+- [ ] Git commit with clear message
+
+---
+
+**Remember:** This is a PRODUCTION site serving real users. Every change must maintain 100% functionality while improving the experience. When in doubt, preserve existing behavior and ask for clarification.
+
+**Priority Order:**
+1. Don't break anything (functionality preservation)
+2. Maintain accessibility (WCAG compliance)
+3. Follow token system (no raw colors)
+4. Match designer specs (color accuracy)
+5. Improve user experience (thoughtful enhancements)
+
