@@ -7,8 +7,8 @@ export async function GET() {
     <item>
       <title><![CDATA[${post.title}]]></title>
       <description><![CDATA[${post.description}]]></description>
-      <link>https://patterngrowth.com/blog/${post.slug}</link>
-      <guid>https://patterngrowth.com/blog/${post.slug}</guid>
+      <link>https://www.patterngrowth.com/blog/${post.slug}</link>
+      <guid>https://www.patterngrowth.com/blog/${post.slug}</guid>
       <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
       <author>${post.author.name}</author>
     </item>
@@ -19,8 +19,8 @@ export async function GET() {
       <channel>
         <title>Pattern Growth - Growth Insights</title>
         <description>Strategic insights on scaling revenue and building operational capability for growth-stage companies.</description>
-        <link>https://patterngrowth.com/blog</link>
-        <atom:link href="https://patterngrowth.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+        <link>https://www.patterngrowth.com/blog</link>
+        <atom:link href="https://www.patterngrowth.com/blog/feed.xml" rel="self" type="application/rss+xml" />
         <language>en-US</language>
         <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
         ${rssItems}

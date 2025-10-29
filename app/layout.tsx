@@ -49,12 +49,14 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   icons: {
     icon: [
-      // Primary favicon - SVG for modern browsers
-      { url: "/patterngrowth-logo.svg", type: "image/svg+xml" },
-      // PNG fallbacks in standard sizes - Google prefers 48x48 minimum
+      // Primary favicon - ICO file (multi-size: 16x16, 32x32, 48x48) for Google consistency
+      // Next.js 15 automatically serves app/favicon.ico at /favicon.ico
+      // PNG fallbacks for browsers that don't support ICO
       { url: "/patterngrowth-logo-48.png", sizes: "48x48", type: "image/png" },
       { url: "/patterngrowth-logo-32.png", sizes: "32x32", type: "image/png" },
       { url: "/patterngrowth-logo-16.png", sizes: "16x16", type: "image/png" },
+      // SVG for modern browsers (after PNG for Google compatibility)
+      { url: "/patterngrowth-logo.svg", type: "image/svg+xml" },
       // Android chrome icons
       { url: "/patterngrowth-android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
       { url: "/patterngrowth-android-chrome-512x512.png", sizes: "512x512", type: "image/png" },

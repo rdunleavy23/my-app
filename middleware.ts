@@ -3,6 +3,15 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
+  const url = request.nextUrl.clone()
+  const hostname = request.headers.get('host') || ''
+
+  // Force canonical host: redirect apex domain (patterngrowth.com) to www.patterngrowth.com
+  if (hostname === 'patterngrowth.com' || hostname === 'patterngrowth.com:3000') {
+    url.host = 'www.patterngrowth.com'
+    return NextResponse.redirect(url, 301) // Permanent redirect
+  }
+
   const response = NextResponse.next()
 
   const csp = `

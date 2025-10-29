@@ -73,7 +73,7 @@ ${content}
     // 🔍 Step 1: Try to fetch existing file to get its SHA
     let sha: string | undefined;
     try {
-      const checkRes = await fetch(`https://patterngrowth.com/api/git-content?path=${encodeURIComponent(targetPath)}`, {
+      const checkRes = await fetch(`https://www.patterngrowth.com/api/git-content?path=${encodeURIComponent(targetPath)}`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${WRITE_API_KEY}`,
@@ -91,7 +91,7 @@ ${content}
     }
 
     // 🔍 Step 2: Commit content via your git-content endpoint (include sha if present)
-    const gitResponse = await fetch("https://patterngrowth.com/api/git-content", {
+    const gitResponse = await fetch("https://www.patterngrowth.com/api/git-content", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

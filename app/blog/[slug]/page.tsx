@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: post.seo.title,
       description: post.seo.description,
-      url: `https://patterngrowth.com/blog/${post.slug}`,
+      url: `https://www.patterngrowth.com/blog/${post.slug}`,
       siteName: 'Pattern Growth',
       type: 'article',
       publishedTime: post.publishedAt,
@@ -74,12 +74,12 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       "@type": "Person",
       "name": post.author.name,
       "jobTitle": post.author.title,
-      "url": `https://patterngrowth.com/about`,
-      "image": post.author.image ? `https://patterngrowth.com${post.author.image}` : undefined,
+      "url": `https://www.patterngrowth.com/about`,
+      "image": post.author.image ? `https://www.patterngrowth.com${post.author.image}` : undefined,
       "worksFor": {
         "@type": "Organization",
         "name": "Pattern Growth",
-        "url": "https://patterngrowth.com"
+        "url": "https://www.patterngrowth.com"
       }
     },
     "datePublished": post.publishedAt,
@@ -87,24 +87,24 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     "publisher": {
       "@type": "Organization",
       "name": "Pattern Growth",
-      "url": "https://patterngrowth.com",
+      "url": "https://www.patterngrowth.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://patterngrowth.com/patterngrowth-logo.svg"
+        "url": "https://www.patterngrowth.com/patterngrowth-logo.svg"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://patterngrowth.com/blog/${post.slug}`,
+      "@id": `https://www.patterngrowth.com/blog/${post.slug}`,
     },
-    "url": `https://patterngrowth.com/blog/${post.slug}`,
+    "url": `https://www.patterngrowth.com/blog/${post.slug}`,
     "articleSection": "Growth Strategy",
     "keywords": post.seo.keywords?.join(", ") || "",
     "timeRequired": `PT${post.readingTime}M`,
     "isPartOf": {
       "@type": "Blog",
       "name": "Pattern Growth Blog",
-      "url": "https://patterngrowth.com/blog"
+      "url": "https://www.patterngrowth.com/blog"
     },
     "about": [
       {
