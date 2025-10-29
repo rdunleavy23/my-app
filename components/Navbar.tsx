@@ -87,8 +87,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-[60] border-b bg-background/95 backdrop-blur">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="flex h-14 items-center justify-between">
-          <Logo />
+        <div className="flex h-14 items-center justify-between gap-4">
+          {/* Logo: 44px mobile (~211px wide, accounts for 4.79:1 wordmark), 56px desktop - Pattern Growth is 4.8x wider than Superside */}
+          {/* Padding: 16px left (matches Superside), reduced margins (mr-2/4) to accommodate wide logo width */}
+          <Logo size="lg" className="mr-2 sm:mr-4" />
 
           {/* Desktop Nav (lean) */}
           <nav className="hidden md:flex items-center space-x-6" aria-label="Primary navigation">
@@ -147,7 +149,7 @@ export default function Navbar() {
                   
                   {/* Mobile menu header with logo */}
                   <div className="px-6 pt-6 pb-4 border-b border-border">
-                    <Logo className="h-8" />
+                    <Logo size="lg" />
                   </div>
                   
                   {/* Navigation items with larger typography and spacing (lean) */}

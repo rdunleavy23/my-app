@@ -21,8 +21,9 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="w-80 sm:w-96 p-0">
         {/* Header with logo and close button */}
-        <div className="flex items-center justify-between p-6 border-b">
-          <Logo className="h-8" />
+        <div className="flex items-center justify-between p-6 border-b gap-4">
+          {/* Logo: 44px height (accounts for 4.79:1 wide wordmark - Pattern Growth is 4.8x wider than Superside) */}
+          <Logo size="lg" />
           <SheetTrigger asChild>
             <button className="p-2 hover:bg-muted rounded-md">
               <X className="h-5 w-5" aria-hidden="true" />

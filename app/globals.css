@@ -605,12 +605,13 @@ html:not(.dark) body { background: var(--background); }
   background: linear-gradient(to left, var(--background), transparent);
 }
 
-/* Logo dark mode color adjustment - ensures brand color compliance */
-/* Logo should be dark blue (#02273A / accent-deep-navy) in light mode */
-/* In dark mode, inverted to near-white (accent-deep-navy-foreground equivalent) */
+/* Logo color adjustment - ensures brand color compliance */
+/* Light mode: dark blue (#02273A / accent-deep-navy) - logo image is already this color */
+/* Dark mode: golden (#FFBF5E / accent-golden) - converted via CSS filters */
 .dark img[alt="Pattern Growth"],
 html.dark img[alt="Pattern Growth"] {
-  filter: brightness(2.5) invert(1) !important;
+  /* Convert dark blue (#02273A) to golden (#FFBF5E): brighten, desaturate blue, shift to yellow/golden hue */
+  filter: brightness(12) saturate(0%) contrast(1.2) sepia(1) saturate(2.5) hue-rotate(15deg) brightness(0.9) !important;
 }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }
