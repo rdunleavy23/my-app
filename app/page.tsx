@@ -57,6 +57,8 @@ export const metadata: Metadata = {
   title: "8-Week Growth Strategy Sprint | Project-Based Marketing Consultant",
   description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to fractional CMO retainers.",
   keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, B2B marketing, strategy consulting",
+  alternates: { canonical: "https://www.patterngrowth.com/" },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "8-Week Growth Strategy Sprint | Pattern Growth",
     description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you.",

@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!post) {
     return {
       title: 'Post Not Found',
+      robots: { index: false, follow: false },
     }
   }
 
@@ -32,7 +33,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: post.seo.title,
     description: post.seo.description,
     keywords: post.seo.keywords,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `https://www.patterngrowth.com/blog/${post.slug}` },
+    robots: { index: true, follow: true },
     openGraph: {
       title: post.seo.title,
       description: post.seo.description,

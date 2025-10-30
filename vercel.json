@@ -25,5 +25,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "patterngrowth.com"
+        }
+      ],
+      "destination": "https://www.patterngrowth.com/:path*",
+      "permanent": true
+    }
   ]
 }

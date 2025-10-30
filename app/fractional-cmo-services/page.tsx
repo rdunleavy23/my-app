@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Fractional CMO Services | Pattern Growth",
   description:
     "Project-based growth strategy, playbooks, and KPI models—without ongoing retainers.",
-  alternates: { canonical: "/fractional-cmo-services" },
+  alternates: { canonical: "https://www.patterngrowth.com/fractional-cmo-services" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/fractional-cmo-services",

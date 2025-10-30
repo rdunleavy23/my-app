@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Pattern Growth",
   description:
     "How Pattern Growth collects, uses, and protects your information.",
-  alternates: { canonical: "/privacy" },
+  alternates: { canonical: "https://www.patterngrowth.com/privacy" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/privacy",

@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 export const metadata: Metadata = {
   title: "Styleguide — Pattern Growth",
   description: "Visual check for Tailwind tokens and shadcn/ui components.",
+  robots: { index: false, follow: false },
 };
 
 function Swatch({ name, className }: { name: string; className: string }) {

@@ -133,6 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-hourly-rate`) },
     { url: `${SITE_URL}/fractional-cmo-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-services`) },
     { url: `${SITE_URL}/fractional-marketing-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-marketing-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-marketing-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-marketing-services`) },
+    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-responsibilities`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-responsibilities`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-responsibilities`) },
     { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/what-is-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/what-is-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/what-is-fractional-cmo`) },
   ]
 

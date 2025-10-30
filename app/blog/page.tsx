@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Growth Strategy Insights | Pattern Growth",
   description:
     "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "https://www.patterngrowth.com/blog" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/blog",

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Growth Strategy Sprint Process | 8-Week Delivery",
   description:
     "Our 8-week project-based marketing consulting sprint: Strategic foundation, tactical framework, dashboard creation, and team handoff with complete documentation.",
-  alternates: { canonical: "/process" },
+  alternates: { canonical: "https://www.patterngrowth.com/process" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/process",

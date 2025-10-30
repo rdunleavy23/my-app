@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Pattern Growth" }],
   creator: "Pattern Growth",
   publisher: "Pattern Growth",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "https://www.patterngrowth.com/about" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/about",
