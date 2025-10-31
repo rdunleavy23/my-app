@@ -48,11 +48,27 @@ function getBlogPosts() {
     .map(fileName => {
       const slug = fileName.replace(/\.md$/, '')
       const fullPath = path.join(postsDirectory, fileName)
-      const { data } = matter(fs.readFileSync(fullPath, 'utf8'))
+      const fileContents = fs.readFileSync(fullPath, 'utf8')
+      const { data } = matter(fileContents)
       const stats = fs.statSync(fullPath)
+      
+      // Prefer publishedAt for SEO accuracy, fallback to file mtime
+      // publishedAt is more reliable for content freshness signals
+      let modifiedDate: string
+      if (data.publishedAt) {
+        // If publishedAt is provided, use it as both published and lastModified
+        // For blog posts, content is typically published once and may be updated
+        // Using publishedAt ensures consistent indexing signals
+        const publishedDate = new Date(data.publishedAt)
+        modifiedDate = publishedDate.toISOString()
+      } else {
+        // Fallback to file modification time if no publishedAt
+        modifiedDate = stats.mtime.toISOString()
+      }
+      
       return {
         slug,
-        modifiedDate: stats.mtime.toISOString(),
+        modifiedDate,
         published: data.published !== false,
         priority: data.priority || 'blog-cluster',
       }
@@ -60,12 +76,13 @@ function getBlogPosts() {
     .filter(post => post.published && !isTestPost(post.slug))
 }
 
-function getPriorityForPage(url: string): number {
+function getPriorityForPage(url: string, postsCache?: ReturnType<typeof getBlogPosts>): number {
   const path = url.replace(SITE_URL, '').replace(/^\//, '').split('/')[0] || 'home'
 
   // Check if it's a blog post and determine priority
   if (url.includes('/blog/')) {
-    const posts = getBlogPosts()
+    // Use cached posts if provided, otherwise fetch (for backward compatibility)
+    const posts = postsCache || getBlogPosts()
     const post = posts.find(p => url.includes(p.slug))
     if (post) {
       return post.priority === 'blog-pillar' ? PRIORITY_MAP['blog-pillar'] : PRIORITY_MAP['blog-cluster']
@@ -76,23 +93,32 @@ function getPriorityForPage(url: string): number {
   return PRIORITY_MAP[path as keyof typeof PRIORITY_MAP] || PRIORITY_MAP.default
 }
 
-function getLastModifiedForPage(url: string): string {
-  // Map of last modified dates for static pages
-  const lastModifiedMap: Record<string, string> = {
-    '/': '2025-10-23', // Updated today
-    '/about': '2025-10-20',
-    '/blog': '2025-10-23', // Updated today
-    '/privacy': '2025-01-01',
-    '/process': '2025-10-23', // Updated today
-    '/benefits-of-fractional-cmo': '2025-10-20',
-    '/fractional-cmo-hourly-rate': '2025-10-23', // Updated today
-    '/fractional-cmo-responsibilities': '2025-10-20',
-    '/fractional-cmo-services': '2025-10-20',
-    '/fractional-marketing-services': '2025-10-20',
-    '/what-is-fractional-cmo': '2025-10-23', // Updated today
+function getLastModifiedForPage(url: string): Date {
+  // Get actual file modification time for accuracy
+  // This ensures lastmod reflects real content changes
+  const urlPath = url.replace(SITE_URL, '')
+  let filePath: string
+  
+  // Map URLs to their actual page file locations
+  if (urlPath === '/' || urlPath === '') {
+    filePath = path.join(process.cwd(), 'app', 'page.tsx')
+  } else {
+    // Convert /about to app/about/page.tsx
+    const routePath = urlPath.split('/').filter(Boolean).join('/')
+    filePath = path.join(process.cwd(), 'app', routePath, 'page.tsx')
   }
-
-  return lastModifiedMap[url.replace(SITE_URL, '')] || new Date().toISOString().split('T')[0]
+  
+  try {
+    if (fs.existsSync(filePath)) {
+      const stats = fs.statSync(filePath)
+      return stats.mtime
+    }
+  } catch (error) {
+    // Fallback if file doesn't exist
+  }
+  
+  // Fallback to current time if file not found
+  return new Date()
 }
 
 function getChangeFrequencyForPage(url: string): 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' {
@@ -121,25 +147,27 @@ function getChangeFrequencyForPage(url: string): 'always' | 'hourly' | 'daily' |
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Cache blog posts to avoid multiple file system reads
+  // getBlogPosts() reads files from disk - calling it multiple times is inefficient
   const posts = getBlogPosts()
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: getLastModifiedForPage(`${SITE_URL}/`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/`), priority: getPriorityForPage(`${SITE_URL}/`) },
-    { url: `${SITE_URL}/about`, lastModified: getLastModifiedForPage(`${SITE_URL}/about`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/about`), priority: getPriorityForPage(`${SITE_URL}/about`) },
-    { url: `${SITE_URL}/blog`, lastModified: getLastModifiedForPage(`${SITE_URL}/blog`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/blog`), priority: getPriorityForPage(`${SITE_URL}/blog`) },
-    { url: `${SITE_URL}/privacy`, lastModified: getLastModifiedForPage(`${SITE_URL}/privacy`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/privacy`), priority: getPriorityForPage(`${SITE_URL}/privacy`) },
-    { url: `${SITE_URL}/process`, lastModified: getLastModifiedForPage(`${SITE_URL}/process`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/process`), priority: getPriorityForPage(`${SITE_URL}/process`) },
-    { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/benefits-of-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/benefits-of-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/benefits-of-fractional-cmo`) },
-    { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-hourly-rate`) },
-    { url: `${SITE_URL}/fractional-cmo-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-services`) },
-    { url: `${SITE_URL}/fractional-marketing-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-marketing-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-marketing-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-marketing-services`) },
-    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-responsibilities`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-responsibilities`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-responsibilities`) },
-    { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/what-is-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/what-is-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/what-is-fractional-cmo`) },
+    { url: `${SITE_URL}/`, lastModified: getLastModifiedForPage(`${SITE_URL}/`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/`), priority: getPriorityForPage(`${SITE_URL}/`, posts) },
+    { url: `${SITE_URL}/about`, lastModified: getLastModifiedForPage(`${SITE_URL}/about`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/about`), priority: getPriorityForPage(`${SITE_URL}/about`, posts) },
+    { url: `${SITE_URL}/blog`, lastModified: getLastModifiedForPage(`${SITE_URL}/blog`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/blog`), priority: getPriorityForPage(`${SITE_URL}/blog`, posts) },
+    { url: `${SITE_URL}/privacy`, lastModified: getLastModifiedForPage(`${SITE_URL}/privacy`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/privacy`), priority: getPriorityForPage(`${SITE_URL}/privacy`, posts) },
+    { url: `${SITE_URL}/process`, lastModified: getLastModifiedForPage(`${SITE_URL}/process`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/process`), priority: getPriorityForPage(`${SITE_URL}/process`, posts) },
+    { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/benefits-of-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/benefits-of-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/benefits-of-fractional-cmo`, posts) },
+    { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-hourly-rate`, posts) },
+    { url: `${SITE_URL}/fractional-cmo-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-services`, posts) },
+    { url: `${SITE_URL}/fractional-marketing-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-marketing-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-marketing-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-marketing-services`, posts) },
+    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-responsibilities`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-responsibilities`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-responsibilities`, posts) },
+    { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/what-is-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/what-is-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/what-is-fractional-cmo`, posts) },
   ]
 
   const blogPages: MetadataRoute.Sitemap = posts.map(post => ({
     url: `${SITE_URL}/blog/${post.slug}`,
-    lastModified: post.modifiedDate,
+    lastModified: new Date(post.modifiedDate), // Convert ISO string to Date for proper formatting
     changeFrequency: 'monthly' as const,
     priority: post.priority === 'blog-pillar' ? PRIORITY_MAP['blog-pillar'] : PRIORITY_MAP['blog-cluster'],
   }))
