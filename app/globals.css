@@ -606,12 +606,14 @@ html:not(.dark) body { background: var(--background); }
 }
 
 /* Logo color adjustment - ensures brand color compliance */
-/* Light mode: dark blue (#02273A / accent-deep-navy) - logo image is already this color */
-/* Dark mode: golden (#FFBF5E / accent-golden) - converted via CSS filters */
+/* ACTUAL: Logo image is dark teal (#3E5661 - Primary) */
+/* Light mode: Dark teal logo on light background - no filter needed */
+/* Dark mode: Invert and adjust to create golden appearance (#FFBF5E) for visibility on dark background */
 .dark img[alt="Pattern Growth"],
 html.dark img[alt="Pattern Growth"] {
-  /* Convert dark blue (#02273A) to golden (#FFBF5E): brighten, desaturate blue, shift to yellow/golden hue */
-  filter: brightness(12) saturate(0%) contrast(1.2) sepia(1) saturate(2.5) hue-rotate(15deg) brightness(0.9) !important;
+  /* Transform dark teal (#3E5661) to golden (#FFBF5E) for dark mode */
+  /* Strategy: Invert colors (dark teal → light orange), then adjust hue/saturation toward golden */
+  filter: invert(1) brightness(1.3) saturate(1.8) hue-rotate(25deg) !important;
 }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }
