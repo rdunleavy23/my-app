@@ -1,5 +1,6 @@
 const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
+  trailingSlash: false, // Explicitly disable trailing slashes for consistent URLs
   // Performance optimizations for Core Web Vitals
   experimental: {
     optimizePackageImports: ['lucide-react'],
