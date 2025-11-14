@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Pattern Growth",
   },
   description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "https://www.patterngrowth.com/" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/",

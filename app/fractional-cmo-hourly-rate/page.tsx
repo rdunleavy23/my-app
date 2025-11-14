@@ -10,19 +10,19 @@ import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-  description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.',
+  description: 'Fractional CMO rates: $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery with ownership.',
   keywords: ['fractional cmo cost', 'fractional cmo pricing', 'fractional cmo rates', 'fractional cmo hourly rate', 'how much does fractional cmo cost', 'cmo consulting rates', 'marketing consulting pricing', 'fractional cmo retainer cost', 'project-based marketing pricing', 'marketing consulting fees'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate',
     title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.',
+    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery with full ownership transfer.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery.'
+    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery with full ownership transfer.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate'

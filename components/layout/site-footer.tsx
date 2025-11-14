@@ -15,6 +15,12 @@ export default function SiteFooter() {
             </p>
             <nav className="flex flex-col gap-2 text-xs" aria-label="Footer navigation">
               <Link 
+                href="/" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+              >
+                Home
+              </Link>
+              <Link 
                 href="/process" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
               >
@@ -26,14 +32,12 @@ export default function SiteFooter() {
               >
                 About
               </Link>
-              {false && (
-                <Link 
-                  href="/blog" 
-                  className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
-                >
-                  Blog
-                </Link>
-              )}
+              <Link 
+                href="/blog" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+              >
+                Blog
+              </Link>
               <Link 
                 href="/privacy" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
@@ -50,6 +54,13 @@ export default function SiteFooter() {
             </p>
             <nav className="flex flex-wrap items-center gap-3 text-xs" aria-label="Footer navigation links">
               <Link 
+                href="/" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors"
+              >
+                Home
+              </Link>
+              <span className="text-muted-foreground/50">·</span>
+              <Link 
                 href="/process" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors"
               >
@@ -63,17 +74,13 @@ export default function SiteFooter() {
                 About
               </Link>
               <span className="text-muted-foreground/50">·</span>
-              {false && (
-                <>
-                  <Link 
-                    href="/blog" 
-                    className="text-muted-foreground/90 hover:text-foreground transition-colors"
-                  >
-                    Blog
-                  </Link>
-                  <span className="text-muted-foreground/50">·</span>
-                </>
-              )}
+              <Link 
+                href="/blog" 
+                className="text-muted-foreground/90 hover:text-foreground transition-colors"
+              >
+                Blog
+              </Link>
+              <span className="text-muted-foreground/50">·</span>
               <Link 
                 href="/privacy" 
                 className="text-muted-foreground/90 hover:text-foreground transition-colors"

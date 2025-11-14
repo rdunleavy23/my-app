@@ -16,6 +16,14 @@ export function middleware(request: NextRequest) {
   // Don't redirect localhost - allow local development
   const isLocalhost = hostname.includes('localhost') || hostname.includes('127.0.0.1') || hostname.includes('0.0.0.0')
   
+  // Handle trailing slash redirects (redirect /about/ to /about)
+  // next.config.js has trailingSlash: false, so we redirect trailing slash URLs to non-trailing slash
+  const pathname = url.pathname
+  if (pathname !== '/' && pathname.endsWith('/')) {
+    url.pathname = pathname.slice(0, -1)
+    return NextResponse.redirect(url, 301) // Permanent redirect
+  }
+  
   const needsRedirect = 
     !isLocalhost && (
       hostname === 'patterngrowth.com' || 

@@ -4,21 +4,21 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Privacy Policy | Pattern Growth",
   description:
-    "How Pattern Growth collects, uses, and protects your information.",
+    "Learn how Pattern Growth collects, uses, and protects your personal information. Privacy policy for growth strategy consulting services and website visitors.",
   alternates: { canonical: "https://www.patterngrowth.com/privacy" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/privacy",
     title: "Privacy Policy | Pattern Growth",
     description:
-      "How Pattern Growth collects, uses, and protects your information.",
+      "Learn how Pattern Growth collects, uses, and protects your personal information. Our privacy policy explains data practices for our growth strategy consulting services and website visitors.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Pattern Growth",
     description:
-      "How Pattern Growth collects, uses, and protects your information.",
+      "Learn how Pattern Growth collects, uses, and protects your personal information. Our privacy policy explains data practices for our growth strategy consulting services and website visitors.",
   },
   robots: { index: true, follow: true },
 }

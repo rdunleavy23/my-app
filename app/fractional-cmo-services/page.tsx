@@ -5,21 +5,21 @@ import { createServiceSchema, createWebPageSchema } from "@/lib/schemas"
 export const metadata: Metadata = {
   title: "Fractional CMO Services | Pattern Growth",
   description:
-    "Project-based growth strategy, playbooks, and KPI models—without ongoing retainers.",
+    "Project-based fractional CMO services: complete growth strategy, playbooks, and KPI models in 8 weeks. No retainers. Full ownership for $1-5M companies.",
   alternates: { canonical: "https://www.patterngrowth.com/fractional-cmo-services" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/fractional-cmo-services",
     title: "Fractional CMO Services | Pattern Growth",
     description:
-      "Project-based growth strategy, playbooks, and KPI models—without ongoing retainers.",
+      "Project-based fractional CMO services delivering complete growth strategy, marketing playbooks, and KPI models in 8 weeks—without ongoing retainers. Full ownership transfer for $1-5M B2B companies.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
     title: "Fractional CMO Services | Pattern Growth",
     description:
-      "Project-based growth strategy, playbooks, and KPI models—without ongoing retainers.",
+      "Project-based fractional CMO services delivering complete growth strategy, marketing playbooks, and KPI models in 8 weeks—without ongoing retainers. Full ownership transfer for $1-5M B2B companies.",
   },
   robots: { index: true, follow: true },
 }

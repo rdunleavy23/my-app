@@ -120,6 +120,9 @@ export default function Logo({ className = "", size }: LogoProps) {
         ref={imgRef}
         src="/patterngrowth-full-logo.png"
         alt="Pattern Growth"
+        width={280}
+        height={56}
+        fetchPriority="high"
         className={cn(
           sizeClasses,
           "w-auto transition-all duration-200",

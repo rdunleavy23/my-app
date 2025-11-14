@@ -90,7 +90,7 @@ export default function StyleguidePage() {
             <CardTitle className="text-base">Scale & Contrast</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <h1 className="text-3xl font-semibold tracking-tight">Heading H1</h1>
+            <h2 className="text-3xl font-semibold tracking-tight">Heading H1 (Example)</h2>
             <h2 className="text-2xl font-semibold tracking-tight">Heading H2</h2>
             <p className="text-muted-foreground">
               Body text using <code>text-muted-foreground</code> for secondary tone. Ensure legibility on both light and dark backgrounds.
