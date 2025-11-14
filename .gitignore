@@ -45,7 +45,6 @@ backups/
 *.bak
 *.disabled
 
-backups/
-.snapshots/
-*.bak
-*.disabled
+# Downloaded HTML files (competitor analysis, etc.)
+live-site.html
+*.html.bak
