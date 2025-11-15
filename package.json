@@ -10,7 +10,8 @@
     "deploy": "vercel --prod",
     "lhci": "lhci autorun",
     "analyze": "ANALYZE=true next build",
-    "performance": "npm run build && npm run lhci"
+    "performance": "npm run build && npm run lhci",
+    "validate:schema": "node scripts/validate-schema.mjs"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",

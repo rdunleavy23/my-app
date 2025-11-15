@@ -2,10 +2,45 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+// AI crawler user agents to monitor
+const AI_CRAWLERS = {
+  // Search & Citation bots (allowed - drive traffic)
+  'OAI-SearchBot': 'ChatGPT Search',
+  'ChatGPT-User': 'ChatGPT Browsing',
+  'PerplexityBot': 'Perplexity',
+  'anthropic-ai': 'Claude',
+  'Claude-Web': 'Claude Web',
+  'Bingbot': 'Bing/ChatGPT',
+  'Applebot-Extended': 'Apple Intelligence',
+  'Diffbot': 'Diffbot',
+  'cohere-ai': 'Cohere',
+  'FacebookBot': 'Meta AI',
+  // Training bots (blocked - but track attempts)
+  'GPTBot': 'OpenAI Training (BLOCKED)',
+  'Google-Extended': 'Google AI Training (BLOCKED)',
+  'CCBot': 'Common Crawl Training (BLOCKED)',
+}
+
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   const protocol = request.nextUrl.protocol
+  const userAgent = request.headers.get('user-agent') || ''
+
+  // Monitor AI crawler activity (Gap 2 fix)
+  const aiCrawler = Object.keys(AI_CRAWLERS).find(bot => userAgent.includes(bot))
+  if (aiCrawler) {
+    const crawlerName = AI_CRAWLERS[aiCrawler as keyof typeof AI_CRAWLERS]
+    console.log(JSON.stringify({
+      type: 'ai_crawler_visit',
+      crawler: crawlerName,
+      bot: aiCrawler,
+      url: request.nextUrl.pathname,
+      timestamp: new Date().toISOString(),
+      referrer: request.headers.get('referer'),
+      blocked: crawlerName.includes('BLOCKED'),
+    }))
+  }
 
   // Force canonical host and protocol: redirect non-www OR HTTP to https://www.patterngrowth.com
   // In production, Vercel edge redirects handle this, but we keep for:
