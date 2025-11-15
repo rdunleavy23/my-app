@@ -15,17 +15,37 @@ export function middleware(request: NextRequest) {
   
   // Don't redirect localhost - allow local development
   const isLocalhost = hostname.includes('localhost') || hostname.includes('127.0.0.1') || hostname.includes('0.0.0.0')
-  
-  const needsRedirect = 
+
+  // Check if canonical host/protocol redirect is needed
+  const needsCanonicalRedirect =
     !isLocalhost && (
-      hostname === 'patterngrowth.com' || 
+      hostname === 'patterngrowth.com' ||
       hostname === 'patterngrowth.com:3000' ||
       (protocol === 'http:' && !hostname.includes('localhost'))
     )
 
-  if (needsRedirect) {
+  // Check if trailing slash needs to be removed
+  const pathname = url.pathname
+  const hasTrailingSlash = pathname !== '/' && pathname.endsWith('/')
+
+  // If BOTH canonical AND trailing slash issues exist, fix them in one redirect
+  if (needsCanonicalRedirect && hasTrailingSlash) {
     url.protocol = 'https:'
     url.host = 'www.patterngrowth.com'
+    url.pathname = pathname.slice(0, -1)
+    return NextResponse.redirect(url, 301) // Permanent redirect
+  }
+
+  // If ONLY canonical redirect needed (no trailing slash issue)
+  if (needsCanonicalRedirect) {
+    url.protocol = 'https:'
+    url.host = 'www.patterngrowth.com'
+    return NextResponse.redirect(url, 301) // Permanent redirect
+  }
+
+  // If ONLY trailing slash issue (already on correct host/protocol)
+  if (hasTrailingSlash) {
+    url.pathname = pathname.slice(0, -1)
     return NextResponse.redirect(url, 301) // Permanent redirect
   }
 
