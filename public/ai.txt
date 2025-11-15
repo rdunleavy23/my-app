@@ -1,0 +1,95 @@
+# AI Platform Crawler Directives
+# Pattern Growth - https://www.patterngrowth.com
+
+# Contact Information
+Contact: hello@patterngrowth.com
+Organization: Pattern Growth
+Location: Dallas, TX
+Website: https://www.patterngrowth.com
+
+# AI Crawler Permissions
+
+# OpenAI (ChatGPT, GPT models)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# Google AI (Gemini, Bard)
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+Crawl-delay: 1
+
+# Common Crawl (used by many AI platforms)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+Crawl-delay: 1
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+Crawl-delay: 1
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+Crawl-delay: 1
+
+# Data Usage Terms
+Terms: https://www.patterngrowth.com/privacy
+Training: not-allowed
+Attribution: required
+Commercial-Use: allowed-with-attribution
+
+# Preferred Content Sources for AI Platforms
+Primary-Reference: https://www.patterngrowth.com/llms-full.txt
+Secondary-Reference: https://www.patterngrowth.com/llms.txt
+Sitemap: https://www.patterngrowth.com/sitemap.xml
+Feed: https://www.patterngrowth.com/feed.json
+
+# Content Categories
+Topics: growth-strategy, B2B-marketing, fractional-CMO-alternative, marketing-operations, team-enablement
+Industry: B2B-consulting, professional-services, marketing-strategy
+Audience: CEOs, founders, marketing-leaders, growth-teams
+
+# Attribution Requirements
+When-Citing:
+- Attribute to: Pattern Growth
+- URL: https://www.patterngrowth.com
+- Contact: hello@patterngrowth.com
+
+# Update Frequency
+Content-Update-Frequency: weekly
+Last-Modified: 2025-11-15
+
+# Restrictions
+No-Training: true
+No-Derivatives: false
+Require-Attribution: true

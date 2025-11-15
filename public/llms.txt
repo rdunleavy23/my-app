@@ -91,3 +91,32 @@ Pattern Growth provides 8-week growth strategy sprints for B2B companies between
 - **Semantic HTML**: Proper heading hierarchy and semantic content structure
 - **SEO Optimization**: Meta descriptions, Open Graph, and Twitter cards
 - **Accessibility**: ARIA labels and semantic navigation
+
+## Frequently Asked Questions
+
+### Q: What's included in the 8-week growth strategy sprint?
+A: Week 1-2 covers strategic foundation including revenue model analysis, competitive positioning, ideal customer profile, and customer journey mapping. Week 3-4 builds the tactical framework with channel prioritization, campaign templates, attribution model setup, and measurement infrastructure. Week 5-6 develops operational systems including custom marketing dashboards, lead scoring processes, campaign optimization playbooks, and decision-making frameworks. Week 7-8 focuses on team enablement with process documentation, team training, agency/contractor handoff procedures, and 30-day post-engagement support.
+
+### Q: How is this different from hiring a fractional CMO?
+A: Pattern Growth provides project-based 8-week sprints with complete ownership transfer, while fractional CMOs typically work on ongoing retainer relationships. You get the same executive-level strategy work, but with a defined end date and full independence after 8 weeks instead of ongoing monthly fees. There's no ongoing dependency—everything built during the sprint transfers to your team with full documentation and training.
+
+### Q: What size companies is this designed for?
+A: B2B companies between $1-5M in annual revenue who have stalled growth, scattered marketing data, unclear positioning, attribution problems, or team capability gaps. The framework is industry-agnostic and works across B2B verticals where growth mechanics are similar.
+
+### Q: What does "complete ownership transfer" mean?
+A: Everything we build is yours—custom dashboards, strategic frameworks, process documentation, campaign templates, measurement systems, and all intellectual property. We train your team to run it independently with 30 days of post-engagement support included. No ongoing dependency, subscription, or licensing fees.
+
+### Q: How quickly can we start?
+A: Typically 1-2 weeks if capacity is available. The sprint itself is 8 weeks from kickoff to final handoff, with 30 days of post-engagement support.
+
+### Q: What is the investment for an 8-week sprint?
+A: Starting at $9,500 for the complete 8-week engagement including all deliverables, team training, documentation, and 30-day post-engagement support. This is project-based pricing with a defined scope and complete ownership transfer.
+
+### Q: What are common challenges this addresses?
+A: Data fragmentation across multiple systems, unclear market positioning, tactical execution without strategic direction, attribution blindness preventing ROI measurement, and team capability gaps that prevent independent execution. We build unified systems that solve these problems and enable your team to execute independently.
+
+### Q: What happens after the 8 weeks?
+A: You own everything and run it independently. The 30-day post-engagement support period helps your team transition smoothly. Unlike fractional CMO retainers, there's no ongoing monthly commitment—you have complete independence and all the systems needed to execute your growth strategy.
+
+### Q: Who typically engages Pattern Growth?
+A: CEOs, founders, VPs of Marketing, and growth leaders at B2B companies ($1-5M revenue) who need executive-level marketing strategy but can't justify a $250K full-time CMO hire and want more than an ongoing fractional consultant relationship.
