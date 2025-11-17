@@ -2,21 +2,34 @@
 
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { trackGenerateLead } from "@/lib/analytics";
 
 interface GetStartedButtonProps {
   onClick?: () => void;
   className?: string;
   children?: React.ReactNode;
   size?: "sm" | "lg";
+  location?: 'hero' | 'content' | 'footer'; // Where the button appears
 }
 
-export function GetStartedButton({ 
-  onClick, 
+export function GetStartedButton({
+  onClick,
   className = "",
   children = "Schedule a Call",
-  size = "lg"
+  size = "lg",
+  location = "content"
 }: GetStartedButtonProps) {
   const handleClick = () => {
+    // Track lead generation intent with GA4 recommended event
+    trackGenerateLead({
+      currency: 'USD',
+      value: 500, // Estimated value of B2B consulting lead
+      method: 'schedule_call_button',
+      button_location: location,
+      button_text: typeof children === 'string' ? children : 'Schedule a Call',
+      destination_url: 'https://cal.com/pattern-growth/30min',
+    });
+
     if (onClick) {
       onClick();
     } else {

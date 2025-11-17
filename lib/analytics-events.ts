@@ -1,43 +1,57 @@
 // lib/analytics-events.ts
 // Type-safe event definitions for GA4 tracking
+// Following GA4 best practices: https://developers.google.com/analytics/devguides/collection/ga4
 
 export type CTALocation = 'navbar' | 'hero' | 'footer' | 'content' | 'mobile_menu';
 export type FormName = 'publish_post' | 'contact' | 'newsletter';
 export type ErrorType = 'validation' | 'network' | 'server' | 'unknown';
 export type NavigationType = 'desktop' | 'mobile' | 'footer';
+export type LeadMethod = 'schedule_call_button' | 'contact_form' | 'newsletter_signup';
 
 // Event name constants following GA4 naming conventions
+// Recommended events are marked with [GA4 RECOMMENDED]
 export const GA4_EVENTS = {
-  // CTA and conversion events
-  CTA_CLICK: 'cta_click',
+  // === GA4 RECOMMENDED EVENTS ===
+  // These unlock predictive metrics and pre-built reports
+  GENERATE_LEAD: 'generate_lead', // [GA4 RECOMMENDED] For lead generation
+
+  // === CUSTOM EVENTS ===
+  // Used when recommended events don't fit the use case
+
+  // Form events (funnel tracking)
   FORM_START: 'form_start',
   FORM_SUBMIT: 'form_submit',
   FORM_ERROR: 'form_error',
-  
+
   // Engagement events
   SCROLL_DEPTH: 'scroll_depth',
   SECTION_VIEW: 'section_view',
-  OUTBOUND_CLICK: 'outbound_click',
-  
+
   // Navigation events
   NAVIGATION_CLICK: 'navigation_click',
-  
+
   // Content events
   BLOG_POST_VIEW: 'blog_post_view',
   FAQ_EXPAND: 'faq_expand',
-  
-  // Existing events (keeping current naming)
+
+  // Approach section events (legacy - keeping for continuity)
   APPROACH_TAB_CLICK: 'approach_tab_click',
   APPROACH_HOW_OPEN: 'approach_how_open',
   APPROACH_DELIVERABLES_OPEN: 'approach_deliverables_open',
 } as const;
 
 // Event parameter interfaces
-export interface CTAClickParams {
-  cta_location: CTALocation;
-  cta_text: string;
-  cta_destination: string;
-  page_location: string;
+
+// GA4 Recommended Event: generate_lead
+// Used for all lead generation CTAs (Schedule Call, Contact, etc.)
+export interface GenerateLeadParams {
+  currency: string; // ISO 4217 format (e.g., 'USD')
+  value: number; // Estimated lead value in specified currency
+  method: LeadMethod; // How the lead was generated
+  button_location?: CTALocation; // Where the CTA button was located
+  button_text?: string; // CTA button text (max 100 chars)
+  destination_url?: string; // Where CTA leads (max 100 chars)
+  page_location: string; // Current page path
 }
 
 export interface FormStartParams {
@@ -71,12 +85,6 @@ export interface SectionViewParams {
   page_title: string;
 }
 
-export interface OutboundClickParams {
-  link_url: string;
-  link_text: string;
-  page_location: string;
-}
-
 export interface NavigationClickParams {
   navigation_type: NavigationType;
   link_text: string;
@@ -98,19 +106,18 @@ export interface FAQExpandParams {
 }
 
 // Union type for all event parameters
-export type GA4EventParams = 
-  | CTAClickParams
+export type GA4EventParams =
+  | GenerateLeadParams
   | FormStartParams
   | FormSubmitParams
   | FormErrorParams
   | ScrollDepthParams
   | SectionViewParams
-  | OutboundClickParams
   | NavigationClickParams
   | BlogPostViewParams
   | FAQExpandParams
-  | { tab_name: string; event_category: string; event_label: string } // Existing approach events
-  | { approach_title: string; event_category: string; event_label: string }; // Existing approach events
+  | { tab_name: string; engagement_type: string } // Approach tab events
+  | { approach_title: string; interaction_type: string }; // Approach modal events
 
 // Event validation helpers
 export function validateEventName(eventName: string): boolean {

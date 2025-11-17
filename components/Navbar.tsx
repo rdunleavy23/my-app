@@ -14,7 +14,7 @@ import {
 import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import Logo from "@/components/Logo"
-import { trackCTAClick, trackNavigationClick } from "@/lib/analytics"
+import { trackGenerateLead, trackNavigationClick } from "@/lib/analytics"
 // Lean navigation: keep conversion-focused links only
 
 export default function Navbar() {
@@ -61,10 +61,14 @@ export default function Navbar() {
   const closeMenu = () => setOpen(false)
 
   const handleCTAClick = (location: 'navbar' | 'mobile_menu') => {
-    trackCTAClick({
-      cta_location: location,
-      cta_text: 'Schedule a Call',
-      cta_destination: 'https://cal.com/pattern-growth',
+    // Use GA4 recommended event for lead generation
+    trackGenerateLead({
+      currency: 'USD',
+      value: 500, // Estimated B2B consulting lead value
+      method: 'schedule_call_button',
+      button_location: location,
+      button_text: 'Schedule a Call',
+      destination_url: 'https://cal.com/pattern-growth',
     });
   };
 
