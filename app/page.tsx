@@ -33,7 +33,7 @@ import {
 import dynamic from "next/dynamic"
 import { Suspense } from "react"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
-import { createServiceSchema } from "@/lib/schemas"
+import { createServiceSchema, createFAQSchema } from "@/lib/schemas"
 
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach").then(mod => mod.default), {
@@ -74,11 +74,66 @@ export default function HomePage() {
     provider: "Pattern Growth"
   });
 
+  const faqSchema = createFAQSchema([
+    {
+      "@type": "Question",
+      name: "What happens if my team can't execute what you build?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We design for your actual team capability, not an ideal scenario. During handoff, if we identify skill gaps, we document them clearly and suggest solutions—whether that's training, hiring, or outsourcing specific pieces. You won't be handed a plan you can't run."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do you need to work in our industry to help us?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Not necessarily. We've found that growth mechanics are more similar across industries than different. What matters more is stage—if you're between $1-5M revenue with investor pressure and scattered data, we've likely solved your exact problem before, regardless of vertical."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What if the strategy doesn't work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Strategy isn't a light switch. We build measurement into the plan so you'll know within 60-90 days if initiatives are on track. If something isn't working, the system we built lets you diagnose why and adjust. That's the point of owning the infrastructure—you can iterate without us."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How involved do we need to be during the sprint?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What makes you different from a fractional CMO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Can we start right away?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots."
+      }
+    }
+  ]);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="bg-background">

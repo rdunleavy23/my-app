@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { TableOfContents } from "@/components/ui/table-of-contents"
-import { createServiceSchema, createWebPageSchema } from "@/lib/schemas"
+import { createServiceSchema, createWebPageSchema, createFAQSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
   title: "Growth Strategy Sprint Process | 8-Week Delivery",
@@ -50,6 +50,25 @@ export default function ProcessPage() {
     "https://www.patterngrowth.com/process"
   );
 
+  const faqSchema = createFAQSchema([
+    {
+      "@type": "Question",
+      name: "Is this the same as a fractional CMO retainer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Retainers keep the executive in your org indefinitely. The sprint installs the strategy and systems your team runs independently."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What happens after week eight?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We deliver all assets, conduct enablement sessions, and remain on standby for 30 days to answer implementation questions."
+      }
+    }
+  ]);
+
   return (
     <>
       <script
@@ -59,6 +78,10 @@ export default function ProcessPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main id="main" className="mx-auto w-full max-w-4xl px-4 sm:px-6 py-16 sm:py-20">
       {/* Hero */}
