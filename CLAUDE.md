@@ -294,8 +294,7 @@ Write as **the calm strategist at the whiteboard** who walked in mid-meeting, li
 - "We'll skip the 47-slide deck. Two pages will do."
 - "Yes, we'll name the metrics before we chase them."
 
-### Brand Tagline
-**"Your brand is not a megaphone — it's a flashlight"**
+### Brand Personality
 
 Focus on clarity, empathy, and synthesis over noise. Trusted thinking partner who earns authority through precision and insight.
 
