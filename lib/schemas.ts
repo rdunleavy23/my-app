@@ -206,3 +206,30 @@ export function createBreadcrumbListSchema(items: Array<{ label: string; href?: 
     })),
   };
 }
+
+export function createComparisonPageSchema(title: string, description: string, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description: description,
+    url: url,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Pattern Growth",
+      url: "https://www.patterngrowth.com",
+    },
+    about: [
+      {
+        "@type": "Service",
+        name: "Strategy Sprint",
+        description: "8-week growth strategy sprint delivering complete strategic architecture"
+      },
+      {
+        "@type": "Service",
+        name: "Fractional CMO",
+        description: "Part-time CMO providing ongoing strategic leadership and oversight"
+      }
+    ]
+  };
+}
