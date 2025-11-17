@@ -173,11 +173,19 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               </p>
 
               <div className="flex items-center gap-4 pt-4">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                  <span className="text-accent-foreground font-medium">
-                    {post.author.name.charAt(0)}
-                  </span>
-                </div>
+                {post.author.image ? (
+                  <img
+                    src={post.author.image}
+                    alt={post.author.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <span className="text-accent-foreground font-medium">
+                      {post.author.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <p className="font-medium text-foreground">
                     {post.author.name}
