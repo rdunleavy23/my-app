@@ -430,28 +430,19 @@ This is exactly what we do at Pattern Growth. Our 8-week strategy sprints follow
 
 We start by analyzing your current state using diagnostic questions and industry best practices. Not generic questionnaires—specific questions that reveal whether you need strategic architecture, execution capability, or leadership.
 
-**Real example from our work**: We analyzed a SaaS company's marketing spend and discovered they were investing 60% of their budget on a single keyword that was driving high traffic but connecting them with the entirely wrong audience. Their sales team was spending hours qualifying out leads that would never convert. The keyword had great search volume, but the searcher intent didn't match their ICP.
-
-This came out in the Analyze phase—within the first week. Neither a fractional CMO (working 10-20 hours/month across multiple clients) nor an agency (focused on execution) would have caught this so quickly. The cost? $30K-$50K in wasted ad spend if it had gone undetected for months.
+**Real example from our work**: We analyzed a product's marketing spend and discovered they were spending the majority of their budget on a keyword that was connecting them with the entirely wrong audience. This came out in the Analyze phase.
 
 ### Aspire: Define Where You Want to Go
 
 Based on your past experience, current circumstances, and future goals, we work together to define where you want to go. This isn't a consultant telling you what to do—it's collaborative goal-setting that accounts for your specific constraints, opportunities, and ambitions.
 
-For the SaaS company above, the aspiration was clear: reduce CAC by 40% while improving lead quality, allowing sales to focus on qualified opportunities instead of burning time on mismatched leads.
+We document the gap between current state and desired state, then prioritize based on what will move the needle most.
 
 ### Action: Build the Bridge
 
 We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
 
-For the SaaS company, the action phase included: reallocating budget from the wrong keyword to 3 better-matched channels, building an attribution dashboard showing lead quality by source, creating qualification criteria for their sales team, and documenting playbooks for each viable channel.
-
-**The result**: After 8 weeks, they had complete strategic architecture that was theirs forever. They could execute independently or bring in an agency for specific channels. The choice was theirs.
-
-**Compare the models**:
-- **Pattern Growth sprint**: $9,500-$12,500 one-time, complete ownership
-- **Fractional CMO**: $60K-$120K over 6-12 months, partial knowledge transfer
-- **Agency**: $60K-$144K over 6-12 months, execution-focused with dependency
+**The result**: After 8 weeks, you have complete strategic architecture that's yours forever. You can execute independently or bring in an agency for specific channels. The choice is yours.
 
 **Best for**: Companies that need strategic clarity fast and want to own everything completely.
 

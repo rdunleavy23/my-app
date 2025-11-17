@@ -503,29 +503,19 @@ That's why we created the **3 A's Framework**—a systematic 8-week sprint that 
 
 We start by analyzing your current state using diagnostic questions and industry best practices. Not generic questionnaires—specific questions that reveal your actual bottleneck.
 
-**Real example from our work**: We analyzed a SaaS company's marketing spend and discovered they were investing 60% of their budget on a single keyword that was driving high traffic but connecting them with the entirely wrong audience. Their sales team was spending hours qualifying out leads that would never convert.
-
-This came out in the Analyze phase—within the first week. If they had hired a fractional CMO instead, working 10-20 hours/month across multiple clients, this might not have been discovered for months. Cost: $30K-$50K in wasted ad spend during that time.
+**Real example from our work**: We analyzed a product's marketing spend and discovered they were spending the majority of their budget on a keyword that was connecting them with the entirely wrong audience. This came out in the Analyze phase.
 
 ### Aspire: Define Where You Want to Go
 
-Based on your past experience, current circumstances, and future goals, we work together to define where you want to go. This isn't a consultant telling you what to do—it's collaborative goal-setting.
+Based on your past experience, current circumstances, and future goals, we work together to define where you want to go. This isn't a consultant telling you what to do—it's collaborative goal-setting that accounts for your specific constraints, opportunities, and ambitions.
 
-For the SaaS company above: reduce CAC by 40% while improving lead quality, allowing sales to focus on qualified opportunities.
+We document the gap between current state and desired state, then prioritize based on what will move the needle most.
 
 ### Action: Build the Bridge
 
 We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything.
 
-For the SaaS company: reallocated budget to 3 better-matched channels, built an attribution dashboard showing lead quality by source, created qualification criteria for sales, and documented playbooks for each channel.
-
-**After 8 weeks**: Complete strategic architecture. Theirs forever. No monthly retainer. No dependency.
-
-**Total investment**: $9,500-$12,500 vs $60K-$120K for fractional CMO
-
-**Timeline**: 8 weeks vs 6-12 months to full value
-
-**Ownership**: 100% vs partial knowledge transfer
+**After 8 weeks**: Complete strategic architecture. Yours forever. No monthly retainer. No dependency.
 
 **Best for**: Companies in situations #1-7 above who need strategic architecture, not ongoing advisory.
 
