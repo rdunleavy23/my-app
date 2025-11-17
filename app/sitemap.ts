@@ -24,6 +24,7 @@ const PRIORITY_MAP = {
   'fractional-cmo-responsibilities': 0.8,
   'fractional-marketing-services': 0.8,
   'benefits-of-fractional-cmo': 0.8,
+  'sprint-vs-fractional-cmo': 0.9, // Comparison page - high value
 
   // Blog content (varies by pillar status)
   blog: 0.7,
@@ -34,6 +35,13 @@ const PRIORITY_MAP = {
   privacy: 0.3,
   default: 0.5,
 }
+
+// Pages to exclude from sitemap
+const EXCLUDED_ROUTES = [
+  'styleguide',
+  'publish',
+  '(marketing)', // Next.js route groups
+]
 
 function isTestPost(slug: string): boolean {
   return TEST_POST_PATTERNS.some(pattern => pattern.test(slug))
@@ -140,10 +148,56 @@ function getChangeFrequencyForPage(url: string): 'always' | 'hourly' | 'daily' |
     '/fractional-cmo-services': 'monthly',
     '/fractional-cmo-responsibilities': 'monthly',
     '/fractional-marketing-services': 'monthly',
+    '/sprint-vs-fractional-cmo': 'monthly',
     '/styleguide': 'yearly',
   }
 
   return frequencyMap[url.replace(SITE_URL, '')] || 'monthly'
+}
+
+/**
+ * Automatically discover all page routes in the app directory
+ * This ensures the sitemap stays up to date as new pages are added
+ */
+function discoverAppRoutes(dir: string = path.join(process.cwd(), 'app'), baseRoute: string = ''): string[] {
+  const routes: string[] = []
+
+  if (!fs.existsSync(dir)) return routes
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true })
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name)
+
+    // Skip excluded routes, api routes, and Next.js special files
+    if (EXCLUDED_ROUTES.includes(entry.name) ||
+        entry.name === 'api' ||
+        entry.name.startsWith('_') ||
+        entry.name.startsWith('.')) {
+      continue
+    }
+
+    if (entry.isDirectory()) {
+      // Check if this directory contains a page.tsx
+      const pagePath = path.join(fullPath, 'page.tsx')
+      if (fs.existsSync(pagePath)) {
+        // Convert directory name to route
+        // Skip route groups like (marketing)
+        if (!entry.name.startsWith('(') && !entry.name.startsWith('[')) {
+          const route = baseRoute ? `${baseRoute}/${entry.name}` : `/${entry.name}`
+          routes.push(route)
+        }
+      }
+
+      // Recursively search subdirectories, but skip dynamic routes
+      if (!entry.name.startsWith('[')) {
+        const newBaseRoute = entry.name.startsWith('(') ? baseRoute : (baseRoute ? `${baseRoute}/${entry.name}` : `/${entry.name}`)
+        routes.push(...discoverAppRoutes(fullPath, newBaseRoute))
+      }
+    }
+  }
+
+  return routes
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -151,19 +205,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // getBlogPosts() reads files from disk - calling it multiple times is inefficient
   const posts = getBlogPosts()
 
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: getLastModifiedForPage(`${SITE_URL}/`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/`), priority: getPriorityForPage(`${SITE_URL}/`, posts) },
-    { url: `${SITE_URL}/about`, lastModified: getLastModifiedForPage(`${SITE_URL}/about`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/about`), priority: getPriorityForPage(`${SITE_URL}/about`, posts) },
-    { url: `${SITE_URL}/blog`, lastModified: getLastModifiedForPage(`${SITE_URL}/blog`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/blog`), priority: getPriorityForPage(`${SITE_URL}/blog`, posts) },
-    { url: `${SITE_URL}/privacy`, lastModified: getLastModifiedForPage(`${SITE_URL}/privacy`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/privacy`), priority: getPriorityForPage(`${SITE_URL}/privacy`, posts) },
-    { url: `${SITE_URL}/process`, lastModified: getLastModifiedForPage(`${SITE_URL}/process`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/process`), priority: getPriorityForPage(`${SITE_URL}/process`, posts) },
-    { url: `${SITE_URL}/benefits-of-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/benefits-of-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/benefits-of-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/benefits-of-fractional-cmo`, posts) },
-    { url: `${SITE_URL}/fractional-cmo-hourly-rate`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-hourly-rate`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-hourly-rate`, posts) },
-    { url: `${SITE_URL}/fractional-cmo-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-services`, posts) },
-    { url: `${SITE_URL}/fractional-marketing-services`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-marketing-services`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-marketing-services`), priority: getPriorityForPage(`${SITE_URL}/fractional-marketing-services`, posts) },
-    { url: `${SITE_URL}/fractional-cmo-responsibilities`, lastModified: getLastModifiedForPage(`${SITE_URL}/fractional-cmo-responsibilities`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/fractional-cmo-responsibilities`), priority: getPriorityForPage(`${SITE_URL}/fractional-cmo-responsibilities`, posts) },
-    { url: `${SITE_URL}/what-is-fractional-cmo`, lastModified: getLastModifiedForPage(`${SITE_URL}/what-is-fractional-cmo`), changeFrequency: getChangeFrequencyForPage(`${SITE_URL}/what-is-fractional-cmo`), priority: getPriorityForPage(`${SITE_URL}/what-is-fractional-cmo`, posts) },
-  ]
+  // Auto-discover all app routes
+  const discoveredRoutes = discoverAppRoutes()
+
+  // Add homepage (which doesn't have a folder)
+  const allRoutes = ['/', ...discoveredRoutes]
+
+  // Build static pages from discovered routes
+  const staticPages: MetadataRoute.Sitemap = allRoutes.map(route => {
+    const url = route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`
+    return {
+      url,
+      lastModified: getLastModifiedForPage(url),
+      changeFrequency: getChangeFrequencyForPage(url),
+      priority: getPriorityForPage(url, posts),
+    }
+  })
 
   const blogPages: MetadataRoute.Sitemap = posts.map(post => ({
     url: `${SITE_URL}/blog/${post.slug}`,
