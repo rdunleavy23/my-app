@@ -1,0 +1,52 @@
+# humanstxt.org/
+# The humans responsible for building this site
+
+# TEAM
+
+Growth Strategist: Ryan
+Contact: hello@patterngrowth.com
+Location: Dallas, TX
+
+Growth Strategist: William
+Contact: hello@patterngrowth.com
+Location: Dallas, TX
+
+# COMPANY
+
+Company: Pattern Growth
+Website: https://www.patterngrowth.com
+Location: Dallas, TX
+Email: hello@patterngrowth.com
+
+# SERVICE
+
+Service: 8-Week Growth Strategy Sprints
+Target Market: B2B Companies ($1-5M revenue)
+Approach: Project-based, not retainer-based
+Investment: Starting at $9,500
+
+# SITE
+
+Last update: 2025-11-15
+Standards: HTML5, CSS3, ES2024
+Framework: Next.js 15
+Components: React 19, TypeScript 5
+Styling: Tailwind CSS 4
+Fonts: Inter, System Fonts
+Analytics: Google Analytics 4
+Deployment: Vercel
+Build Tools: Turbopack, PostCSS
+Version Control: Git
+
+# TECHNOLOGY STACK
+
+Frontend: Next.js, React, TypeScript
+Styling: Tailwind CSS, PostCSS
+Content: Markdown (gray-matter)
+SEO: Next.js Metadata API, Schema.org JSON-LD
+Performance: Image optimization, code splitting, lazy loading
+Accessibility: Semantic HTML, ARIA labels
+
+# THANKS
+
+Built with care for B2B companies who need strategic clarity without ongoing dependency.
