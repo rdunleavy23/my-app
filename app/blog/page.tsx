@@ -32,8 +32,51 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = getAllPosts()
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Pattern Growth Blog",
+    description: "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
+    url: "https://www.patterngrowth.com/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "Pattern Growth",
+      url: "https://www.patterngrowth.com"
+    }
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: posts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "BlogPosting",
+        "@id": `https://www.patterngrowth.com/blog/${post.slug}`,
+        headline: post.title,
+        description: post.description,
+        url: `https://www.patterngrowth.com/blog/${post.slug}`,
+        datePublished: post.publishedAt,
+        author: {
+          "@type": "Person",
+          name: post.author.name
+        }
+      }
+    }))
+  };
+
   return (
-    <main className="container mx-auto max-w-4xl px-4 py-16 sm:py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <main className="container mx-auto max-w-4xl px-4 py-16 sm:py-20">
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
