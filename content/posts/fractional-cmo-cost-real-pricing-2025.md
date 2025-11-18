@@ -268,7 +268,7 @@ Let me show you how the math actually works:
 
 **Actual hourly cost**: $1,069/hour (vs $542/hour quoted)
 
-**Pattern across examples**: Actual hourly cost is **50-80% higher** than quoted monthly rate divided by hours.
+> **Hidden Cost Impact:** Actual hourly cost is **50-80% higher** than quoted monthly rate divided by hours when you include onboarding, overhead, and operational costs.
 
 📊 **Want to calculate your specific situation?** Download our [Fractional CMO Cost Calculator](/lead-magnets/fractional-cmo-cost-calculator) (free Google Sheet) to model total costs including hidden expenses.
 
@@ -560,7 +560,7 @@ Removes commitment risk while giving fractional CMO a foot in the door.
 - Marketing-attributed revenue up 35%
 - Strategic clarity and unified team direction
 
-**ROI**: Positive (approximately 3:1)
+> **Positive ROI Example:** Approximately **3:1 return** when the company has execution capability and needs strategic leadership, prioritization, and vendor oversight.
 
 **Why it worked**: Team had execution capability but needed strategic leadership, prioritization, and vendor oversight.
 

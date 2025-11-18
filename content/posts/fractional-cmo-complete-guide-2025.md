@@ -56,7 +56,11 @@ The fractional leadership model has gained traction for several interconnected r
 
 [McKinsey research shows a growing disconnect between CEOs and CMOs](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-cmos-comeback-aligning-the-c-suite-to-drive-customer-centric-growth), with the gap increasing by 20%. Currently, only 50% of CMOs are involved in strategic planning alongside the CEO—a troubling statistic given the impact of marketing leadership on growth.
 
-The data makes the case for stronger marketing involvement compelling. When companies do involve marketing executives in strategic planning, they see [1.4 times higher top line](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-cmos-comeback-aligning-the-c-suite-to-drive-customer-centric-growth). Companies with a single, integrated customer-centric executive in the top team see [2.3 times the growth](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-cmos-comeback-aligning-the-c-suite-to-drive-customer-centric-growth). This performance gap is driving companies to find ways to bring marketing expertise to strategic conversations, even when they can't justify a full-time executive.
+The data makes the case for stronger marketing involvement compelling.
+
+> **Growth Impact:** When companies involve marketing executives in strategic planning, they see [**1.4x higher top line**](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-cmos-comeback-aligning-the-c-suite-to-drive-customer-centric-growth). Companies with a single, integrated customer-centric executive in the top team see [**2.3x the growth**](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-cmos-comeback-aligning-the-c-suite-to-drive-customer-centric-growth).
+
+This performance gap is driving companies to find ways to bring marketing expertise to strategic conversations, even when they can't justify a full-time executive.
 
 **Cost-Effectiveness Meets Experience**
 
@@ -64,7 +68,9 @@ The data makes the case for stronger marketing involvement compelling. When comp
 
 ### Real Performance Data
 
-The performance data on fractional CMOs shows both promise and warning signs. [MarketingProfs' fractional CMO consulting has returned](https://www.marketingprofs.com/cmp/dna/cmo/sa/) anywhere from **3x to 10x ROI** for every dollar spent when engagements are properly structured.
+The performance data on fractional CMOs shows both promise and warning signs.
+
+> **ROI Data:** [MarketingProfs' fractional CMO consulting has returned](https://www.marketingprofs.com/cmp/dna/cmo/sa/) anywhere from **3x to 10x ROI** for every dollar spent when engagements are properly structured.
 
 However, [HBR notes](https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business) that the model doesn't always work. One business owner hired a fractional marketing executive, but the engagement failed when the executive applied generic solutions from past experiences rather than solving specific problems. This failure mode appears consistently across fractional engagements: success depends heavily on customization rather than template application.
 
@@ -104,7 +110,7 @@ Monthly operational overhead continues throughout the engagement. Leadership mee
 
 Knowledge transfer gaps create perhaps the most expensive hidden cost. Strategic knowledge may leave with the consultant when the engagement ends, incomplete documentation is a common issue, and vendor relationships are often tied to the fractional CMO rather than your company. This means you may be starting over when the engagement ends, creating a hidden cost that's difficult to quantify but very real.
 
-The reality? Your true cost is typically 25-40% higher than the quoted retainer once you account for these hidden factors.
+> **True Cost Reality:** Your actual investment is typically **25-40% higher** than the quoted retainer once you account for onboarding, operational overhead, and knowledge transfer gaps.
 
 [See detailed cost breakdown →](/blog/fractional-cmo-cost-real-pricing-2025)
 
