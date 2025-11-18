@@ -27,6 +27,14 @@ You're still running ads. Publishing content. Sending emails. But growth flatlin
 
 So you start looking for help. A fractional CMO. An agency. A consultant. Someone who can "fix marketing."
 
+**TL;DR:**
+- Before hiring help, diagnose what's actually broken with 8 questions
+- Question 1-3: Strategic foundation (ICP, unit economics, positioning)
+- Question 4-6: Execution capability (team, systems, measurement)
+- Question 7-8: Readiness assessment (budget, timeline)
+- Most companies need strategic architecture first, then decide on fractional CMO vs agency vs other help
+- 68% higher win rates with clear ICP | 25% lower CAC with documented positioning
+
 **Here's the problem**: Most companies hire based on what someone's *selling*, not what they actually *need*.
 
 A fractional CMO won't fix a broken positioning strategy. An agency can't execute when your ICP is unclear. A consultant can't install systems your team won't use.

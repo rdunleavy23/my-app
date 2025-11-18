@@ -23,6 +23,15 @@ Most articles about fractional CMOs tell you when TO hire one.
 
 This article tells you when NOT to.
 
+**TL;DR - Don't hire a fractional CMO if you:**
+- Lack documented strategy (they optimize, they don't build from scratch)
+- Have no one to execute (they lead people, they don't "do marketing")
+- Budget is under $60K total (need 6-12 months minimum for ROI)
+- Need results in under 3 months (2-3 month ramp-up before value)
+- Have unclear positioning (needs focused work, not 10-20 hrs/month spread thin)
+- Want "marketing handled" (they're leaders, not practitioners)
+- Haven't validated product-market fit (need discovery, not optimization)
+
 Because hiring a fractional CMO when you're not ready costs $60K-$120K and wastes 6-12 months. And according to research, most companies aren't ready.
 
 Here are 7 situations where hiring a fractional CMO is the wrong move—backed by data, with what to do instead.

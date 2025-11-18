@@ -25,6 +25,13 @@ This is the wrong question.
 
 The right question is: **"Do we need strategic leadership or execution bandwidth?"**
 
+**TL;DR:**
+- Fractional CMO = strategic leadership ($10K-$15K/month) | Agency = execution + some strategy ($10K-$20K/month)
+- Choose fractional CMO when you have execution capability and need strategic guidance
+- Choose agency when you need hands-on work done and have clear direction
+- Most $1M-$5M revenue companies need strategic architecture first, then decide
+- McKinsey data: 1.4x-2.3x growth when marketing is involved in strategic planning
+
 Most companies get this backwards. They hire a fractional CMO when they need hands-on execution. Or they hire an agency when they need strategic architecture.
 
 The result? $50K-100K+ wasted and 6-12 months lost.

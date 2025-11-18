@@ -25,6 +25,13 @@ Most fractional CMO pricing guides give you ranges so wide they're useless: "$3K
 
 That's like saying "a car costs between $15K and $150K." Technically true. Completely unhelpful.
 
+**TL;DR:**
+- Real market average: $10K-$12K/month with 6-12 month minimums
+- True total cost is 25-40% higher than quoted (onboarding, overhead, knowledge gaps)
+- Entry-level: $3K-$6K/month | Mid-level: $6K-$12K/month | Senior: $12K-$20K+/month
+- Hidden costs add $5K-$10K onboarding + $1.2K-$3.9K/month in team overhead
+- Budget reality check: Need $60K-$120K total for 6-12 month engagement to see ROI
+
 Here's what the actual 2024-2025 market data shows: what fractional CMOs really charge, what drives pricing up or down, and the hidden costs nobody mentions until you're six months deep in an engagement.
 
 ---

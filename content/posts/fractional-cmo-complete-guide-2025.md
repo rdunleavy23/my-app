@@ -23,6 +23,13 @@ priority: "blog-pillar"
 
 [Fractional leadership](https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business) is spreading rapidly beyond startups to established businesses and nonprofits, according to Harvard Business Review. But here's what nobody tells you: most companies hiring fractional CMOs are solving the wrong problem.
 
+**TL;DR:**
+- Fractional CMOs provide strategic leadership (not execution) at $10K-$12K/month average
+- They work when you have execution capability and need ongoing guidance (6-12 months)
+- Real cost is 25-40% higher than quoted rates due to hidden costs
+- Most companies need strategic architecture first, then decide if ongoing leadership is needed
+- ROI data shows 3x-10x returns when properly matched to company needs
+
 This guide covers everything: what fractional CMOs actually do, real market pricing, when you need one vs alternatives, and how to evaluate providers without getting burned.
 
 ---
