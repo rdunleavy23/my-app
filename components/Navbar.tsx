@@ -15,10 +15,12 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import Logo from "@/components/Logo"
 import { trackGenerateLead, trackNavigationClick } from "@/lib/analytics"
+import { CalBookingModal } from "@/components/cal-booking-modal"
 // Lean navigation: keep conversion-focused links only
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
   const pathname = usePathname()
 
   // Body scroll lock when mobile menu is open - optimized to prevent reflows
@@ -70,6 +72,14 @@ export default function Navbar() {
       button_text: 'Schedule a Call',
       destination_url: 'https://cal.com/pattern-growth',
     });
+
+    // Open booking modal
+    setIsBookingModalOpen(true);
+
+    // Close mobile menu if open
+    if (open) {
+      setOpen(false);
+    }
   };
 
   const handleNavClick = (linkText: string, linkDestination: string) => {
@@ -113,13 +123,11 @@ export default function Navbar() {
             >
               Process
             </Link>
-            <Button asChild className="h-12 btn-hover-lift">
-              <Link 
-                href="https://cal.com/pattern-growth"
-                onClick={() => handleCTAClick('navbar')}
-              >
-                Schedule a Call →
-              </Link>
+            <Button
+              className="h-12 btn-hover-lift"
+              onClick={() => handleCTAClick('navbar')}
+            >
+              Schedule a Call →
             </Button>
             <ThemeToggle />
           </nav>
@@ -181,19 +189,12 @@ export default function Navbar() {
                     
                     {/* CTA section - part of scrollable content */}
                     <div className="pt-16 pb-8">
-                      <Button asChild className="w-full h-14 text-base rounded-full btn-hover-lift">
-                        <Link 
-                          href="https://cal.com/pattern-growth"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => {
-                            closeMenu();
-                            handleCTAClick('mobile_menu');
-                          }}
-                          aria-label="Schedule a call (opens in new tab)"
-                        >
-                          Schedule a Call →
-                        </Link>
+                      <Button
+                        className="w-full h-14 text-base rounded-full btn-hover-lift"
+                        onClick={() => handleCTAClick('mobile_menu')}
+                        aria-label="Schedule a call"
+                      >
+                        Schedule a Call →
                       </Button>
                     </div>
                   </div>
@@ -203,6 +204,15 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* Cal.com booking modal */}
+      <CalBookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        onBookingSuccess={(bookingId) => {
+          console.log('Booking successful from navbar:', bookingId);
+        }}
+      />
     </header>
   )
 }
