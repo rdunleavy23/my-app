@@ -27,7 +27,7 @@ export function CalBookingModal({
       cal("on", {
         action: "bookingSuccessful",
         callback: (e) => {
-          const bookingId = e.detail?.booking?.uid || e.detail?.booking?.id || 'unknown';
+          const bookingId = (e.detail?.data?.booking as any)?.uid || (e.detail?.data?.booking as any)?.id || 'unknown';
 
           // Track completed booking with GA4 recommended 'purchase' event
           if (typeof window !== 'undefined' && window.gtag) {
