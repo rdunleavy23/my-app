@@ -1,14 +1,14 @@
 ---
-title: "25 Questions to Ask Fractional CMO Before Hiring (+ Red Flags)"
-description: "The interview questions that separate real fractional CMOs from imposters. Strategic thinking, process clarity, results proof, cultural fit—what to ask and what answers reveal."
+title: "25 Fractional CMO Interview Questions (Separate Real CMOs from $200/hr Imposters)"
+description: "Most companies ask 'tell me about yourself' and hire wrong. Ask these 25 instead: Process clarity (repeatable or ad-hoc?), proof of results (numbers required), CEO references (not marketers)."
 publishedAt: "2025-01-27"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO Interview Questions 2025: 25 Essential Questions"
-  description: "25 fractional CMO interview questions to ask: Strategic approach, process clarity, past results, industry experience, cultural fit. What good answers look like + red flags."
+  title: "Fractional CMO Interview Questions 2025: 25 Questions (Avoid Imposters)"
+  description: "25 fractional CMO interview questions by category: Experience (5), strategy (5), process (4), industry (3), culture (4), logistics (4). What good vs bad answers reveal. Spot imposters."
   keywords:
     - "fractional cmo interview questions"
     - "questions to ask fractional cmo"

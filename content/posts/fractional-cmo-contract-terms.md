@@ -1,14 +1,14 @@
 ---
-title: "Fractional CMO Contract: What to Negotiate (& 7 Red Flags)"
-description: "The contract terms that cost companies $50K+ when things go wrong. Exit clauses, ownership transfer, scope definitions, and what to negotiate before you sign."
+title: "Fractional CMO Contract: 7 Red Flags That Cost Companies $50K+"
+description: "No exit clause? They retain IP rights? Vague scope? These contract mistakes lock you into bad engagements. What to negotiate before signing a fractional CMO contract."
 publishedAt: "2024-12-09"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO Contract 2025: Terms, Negotiation & Red Flags"
-  description: "Essential fractional CMO contract terms: exit clauses (30-60 days), IP ownership, scope definition, payment terms. What to negotiate and 7 red flags to avoid."
+  title: "Fractional CMO Contract 2025: 7 Red Flags & Negotiation Guide"
+  description: "7 fractional CMO contract red flags: No exit clause, IP retained by consultant, vague scope, auto-renewal. What to negotiate for 30-60 day exits and 100% IP ownership."
   keywords:
     - "fractional cmo contract"
     - "fractional cmo agreement"

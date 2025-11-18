@@ -1,14 +1,14 @@
 ---
-title: "Marketing Leadership Options: Complete Comparison (CMO, VP, Agency, Advisor)"
-description: "Every marketing leadership option compared: Full-time CMO ($470K-$676K), VP Marketing ($200K-$280K), fractional CMO ($144K-$180K/year), agency, advisor, strategy sprint. When to choose each."
+title: "9 Marketing Leadership Options: $9.5K to $676K/Year (Which Fits Your Revenue?)"
+description: "Full-time CMO ($676K, $50M+), VP Marketing ($280K, $10M+), fractional CMO ($180K, $2M-$50M), agency, advisor, strategy sprint. Wrong choice wastes $50K-$200K+ and 6-12 months."
 publishedAt: "2025-02-03"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Marketing Leadership Options 2025: Complete Comparison Guide"
-  description: "Compare all marketing leadership options: Full-time CMO, VP Marketing, fractional CMO, growth advisor, marketing agency, strategy sprint. Cost, fit, and timing for each."
+  title: "Marketing Leadership Options 2025: 9 Options Compared (Revenue Guide)"
+  description: "9 marketing leadership options by revenue stage: Strategy sprint ($9.5K, $1M-$25M), Fractional CMO ($144K-$180K, $2M-$50M), Full-time CMO ($470K-$676K, $50M+). Complete comparison table."
   keywords:
     - "marketing leadership options"
     - "cmo vs vp marketing"

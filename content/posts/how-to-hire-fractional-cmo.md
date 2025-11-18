@@ -1,14 +1,14 @@
 ---
-title: "How to Hire a Fractional CMO: 7-Step Vetting Process (+ Red Flags)"
-description: "The process that separates executive-level fractional CMOs from overpriced consultants. Portfolio evaluation, interview questions, reference checks, and contract terms that matter."
+title: "How to Hire a Fractional CMO: 7-Step Process to Avoid $60K-$100K Mistakes"
+description: "Separate real fractional CMOs from marketing generalists rebranding themselves. Portfolio evaluation (need 3+ case studies with numbers), CEO references (not just marketers), trial periods."
 publishedAt: "2024-12-30"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "How to Hire Fractional CMO 2025: Vetting Process & Interview Questions"
-  description: "Complete fractional CMO hiring guide: 7-step vetting process, 15 interview questions, red flags to avoid, portfolio evaluation. Distinguish real CMOs from imposters."
+  title: "How to Hire Fractional CMO 2025: 7-Step Vetting Guide (Avoid Imposters)"
+  description: "How to hire fractional CMO: Define needs, source candidates, review portfolio (3+ case studies), interview (15 questions), check CEO references, run trial, negotiate contract. Avoid bad hires."
   keywords:
     - "how to hire fractional cmo"
     - "fractional cmo interview questions"

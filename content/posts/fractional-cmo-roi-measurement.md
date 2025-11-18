@@ -1,14 +1,14 @@
 ---
-title: "Fractional CMO ROI: How to Measure & What to Expect (2025 Benchmarks)"
-description: "Real ROI data: 50% ROI standard, 35% MQL increase typical, CAC reduction 20-30%. How to measure fractional CMO success with business KPIs, not vanity metrics."
+title: "Fractional CMO ROI: Expect 50% Returns, 35% MQL Lift, 20-30% CAC Drop"
+description: "Real fractional CMO ROI data: $1.50 return per $1 invested (50% ROI), 35% MQL increase, 20-30% CAC reduction in 6-12 months. How to measure with revenue KPIs, not vanity metrics."
 publishedAt: "2025-01-06"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO ROI 2025: Benchmarks, KPIs & Measurement Guide"
-  description: "Fractional CMO ROI benchmarks: 50% ROI standard ($1.50 return per $1), 35% MQL lift, 20-30% CAC reduction. How to measure success with revenue-aligned KPIs."
+  title: "Fractional CMO ROI 2025: Benchmarks (50% ROI, 35% MQL Lift, CAC -20-30%)"
+  description: "Fractional CMO ROI benchmarks from industry data: 50% ROI standard, 35% MQL increase, 20-30% CAC reduction. Timeline: 6 weeks for signals, 6-12 months for full ROI. Measurement guide."
   keywords:
     - "fractional cmo roi"
     - "fractional cmo return on investment"

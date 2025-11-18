@@ -1,14 +1,14 @@
 ---
-title: "Fractional vs Full-Time CMO: The Real Cost Comparison (2025 Data)"
-description: "The math that decides: fractional CMO at $10K-$15K/month or full-time at $280K-$400K+ total comp. Revenue thresholds, team size requirements, and transition timing."
+title: "Fractional vs Full-Time CMO: The $400K Decision (2025 Cost Breakdown)"
+description: "Fractional at $144K/year or full-time at $676K/year? Here's the revenue threshold ($50M), team size (10+ people), and complexity that decides which CMO model you actually need."
 publishedAt: "2024-12-23"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional vs Full-Time CMO 2025: Cost, Revenue & Timing Guide"
-  description: "Fractional vs full-time CMO comparison: Fractional at $120K-$180K/year for $2M-$50M revenue companies. Full-time at $280K-$400K+ for $50M+ revenue. Real cost data."
+  title: "Fractional vs Full-Time CMO 2025: Cost Analysis & Decision Framework"
+  description: "Fractional CMO ($144K-$180K/year, $2M-$50M revenue) vs full-time ($470K-$676K/year, $50M+ revenue). When to transition, cost breakeven analysis, and decision criteria."
   keywords:
     - "fractional vs full time cmo"
     - "fractional cmo vs full time"

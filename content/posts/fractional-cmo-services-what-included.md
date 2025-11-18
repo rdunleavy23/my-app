@@ -1,14 +1,14 @@
 ---
-title: "Fractional CMO Services: What's Actually Included (& What's Not)"
-description: "Most 'fractional CMO services' descriptions are vague. Here's exactly what you get—strategic leadership, oversight, and planning—and what you don't: execution, content, or hands-on work."
+title: "Fractional CMO Services: What's Included vs NOT Included (The $60K Mistake)"
+description: "Paying $12K/month but NOT getting execution? Here's exactly what fractional CMO services include (strategy, oversight) vs what they don't (content, ads, daily work). Avoid costly surprises."
 publishedAt: "2024-11-18"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO Services 2025: What's Included vs NOT Included"
-  description: "Clear breakdown of fractional CMO services: strategic leadership, vendor oversight, board reporting included. Execution, content creation, ads NOT included. Real scope data."
+  title: "Fractional CMO Services 2025: What's Included vs NOT (Scope Guide)"
+  description: "Fractional CMO scope breakdown: Strategy, oversight, board reporting INCLUDED. Content, ads, execution NOT INCLUDED. Know exactly what $10K-$15K/month buys before you hire."
   keywords:
     - "fractional cmo services"
     - "what does fractional cmo do"

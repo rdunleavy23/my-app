@@ -1,14 +1,14 @@
 ---
-title: "Fractional CMO for Startups: When You're Ready (& When You're Not)"
-description: "Most startups hire fractional CMOs too early and waste $60K. Here's the revenue stage, team size, and PMF requirements that signal you're actually ready."
+title: "Fractional CMO for Startups: Don't Hire Until You Hit These 5 Thresholds"
+description: "$2M+ revenue? 3-person team? 80%+ retention? Most startups hire fractional CMOs too early and waste $60K+. Here's exactly when you're ready (and cheaper alternatives before then)."
 publishedAt: "2024-12-16"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO for Startups 2025: When to Hire (Revenue & Team Guide)"
-  description: "Startup fractional CMO readiness guide: Wait until $2M+ revenue, 3+ person team, clear PMF. Earlier? Consider growth advisor or strategy sprint instead."
+  title: "Fractional CMO for Startups 2025: 5 Readiness Thresholds (Revenue, PMF, Team)"
+  description: "When should startups hire fractional CMO? 5 readiness signals: $2M+ revenue, 3+ team, 80%+ retention, stable ICP, $60K+ budget. Too early? Try these alternatives instead."
   keywords:
     - "fractional cmo for startups"
     - "startup fractional cmo"

@@ -1,14 +1,14 @@
 ---
-title: "Fractional CMO Mistakes: 9 Ways Companies Waste $60K-$150K"
-description: "The mistakes that kill fractional CMO engagements: no execution budget ($0 beyond CMO fee), expecting tactical work, hiring pre-PMF, unrealistic timelines. How to avoid wasting $60K+."
+title: "9 Fractional CMO Mistakes That Waste $60K-$150K (Most Companies Make #1)"
+description: "Mistake #1: $0 execution budget beyond CMO fee. Strategy sits in docs, nothing launches. Plus: expecting tactics, hiring pre-PMF, no clear goals. How to avoid all 9."
 publishedAt: "2025-01-20"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO Mistakes 2025: 9 Costly Errors & How to Avoid Them"
-  description: "Common fractional CMO mistakes that waste $60K-$150K: No execution budget, expecting tactics, hiring too early, unrealistic expectations, poor alignment. How to avoid each."
+  title: "Fractional CMO Mistakes 2025: 9 Errors That Waste $60K-$150K (Avoid These)"
+  description: "9 fractional CMO mistakes: #1 No execution budget, #2 Expecting strategy+tactics, #3 Hiring pre-PMF, #4 Unrealistic timelines, #5 No goals. Cost: $60K-$150K wasted + 6-12 months lost."
   keywords:
     - "fractional cmo mistakes"
     - "fractional cmo failures"

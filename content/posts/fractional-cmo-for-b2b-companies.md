@@ -1,14 +1,14 @@
 ---
-title: "Fractional CMO for B2B: What's Different (Sales Cycles, ABM & Enterprise)"
-description: "B2B sales cycles change everything: 120-180 day cycles, multi-stakeholder decisions, ABM requirements. What B2B fractional CMOs must understand that B2C doesn't require."
+title: "Fractional CMO for B2B: Why B2C Experience Fails (120-Day Sales Cycles, ABM, 6-8 Stakeholders)"
+description: "Hiring a B2C fractional CMO for B2B? They'll optimize for 3-day conversion, not 120-180 day enterprise sales. What B2B CMOs MUST know: ABM, multi-stakeholder buying, sales alignment."
 publishedAt: "2025-01-13"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
   image: "/team/ryan.png"
 seo:
-  title: "Fractional CMO for B2B 2025: Sales Cycles, ABM & Enterprise Guide"
-  description: "B2B fractional CMO requirements: Enterprise sales cycle expertise (120-180 days), ABM program management, multi-stakeholder buying, sales-marketing alignment. What's different from B2C."
+  title: "Fractional CMO for B2B 2025: Why B2C Experience Fails (Sales Cycle Guide)"
+  description: "B2B fractional CMO requirements: 120-180 day sales cycle expertise, ABM program management (Tier 1/2/3), 6-8 stakeholder buying process, sales-marketing alignment. Why B2C doesn't translate."
   keywords:
     - "fractional cmo for b2b"
     - "b2b fractional cmo"
