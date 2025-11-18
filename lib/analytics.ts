@@ -1,18 +1,21 @@
 // lib/analytics.ts
-import { 
-  GA4_EVENTS, 
-  validateEventName, 
-  validateParameterName, 
-  sanitizeString, 
+// GA4 tracking implementation following best practices
+// Reference: https://developers.google.com/analytics/devguides/collection/ga4
+import {
+  GA4_EVENTS,
+  validateEventName,
+  validateParameterName,
+  sanitizeString,
   getCurrentPageInfo,
   type GA4EventParams,
-  type CTAClickParams,
+  type GenerateLeadParams,
+  type LeadMethod,
+  type CTALocation,
   type FormStartParams,
   type FormSubmitParams,
   type FormErrorParams,
   type ScrollDepthParams,
   type SectionViewParams,
-  type OutboundClickParams,
   type NavigationClickParams,
   type BlogPostViewParams,
   type FAQExpandParams,
@@ -57,12 +60,33 @@ export function trackEvent(eventName: string, parameters?: Record<string, any>) 
   window.gtag('event', eventName, sanitizedParams);
 }
 
-// CTA tracking
-export function trackCTAClick(params: Omit<CTAClickParams, 'page_location'>) {
+// === GA4 RECOMMENDED EVENT: generate_lead ===
+// Use this for all lead generation CTAs (Schedule Call, Contact forms, etc.)
+// Benefits: Unlocks predictive lead scoring, pre-built conversion reports, Google Ads optimization
+export function trackGenerateLead(params: Omit<GenerateLeadParams, 'page_location'>) {
   const pageInfo = getCurrentPageInfo();
-  trackEvent(GA4_EVENTS.CTA_CLICK, {
+  trackEvent(GA4_EVENTS.GENERATE_LEAD, {
     ...params,
     page_location: pageInfo.page_location,
+  });
+}
+
+// Legacy CTA tracking - DEPRECATED, use trackGenerateLead instead
+// Keeping for backward compatibility temporarily
+export function trackCTAClick(params: {
+  cta_location: CTALocation;
+  cta_text: string;
+  cta_destination: string;
+}) {
+  console.warn('trackCTAClick is deprecated. Use trackGenerateLead for lead generation CTAs.');
+  const pageInfo = getCurrentPageInfo();
+  trackGenerateLead({
+    currency: 'USD',
+    value: 500, // Estimated lead value for B2B consulting
+    method: 'schedule_call_button',
+    button_location: params.cta_location,
+    button_text: params.cta_text,
+    destination_url: params.cta_destination,
   });
 }
 
@@ -110,14 +134,6 @@ export function trackSectionView(params: Omit<SectionViewParams, 'page_location'
   });
 }
 
-export function trackOutboundClick(params: Omit<OutboundClickParams, 'page_location'>) {
-  const pageInfo = getCurrentPageInfo();
-  trackEvent(GA4_EVENTS.OUTBOUND_CLICK, {
-    ...params,
-    page_location: pageInfo.page_location,
-  });
-}
-
 // Navigation tracking
 export function trackNavigationClick(params: Omit<NavigationClickParams, 'page_location'>) {
   const pageInfo = getCurrentPageInfo();
@@ -144,92 +160,100 @@ export function trackFAQExpand(params: Omit<FAQExpandParams, 'page_location'>) {
   });
 }
 
-// Legacy functions (keeping existing approach tracking)
+// Approach section tracking (legacy events - kept for data continuity)
+// Updated to remove UA patterns (event_category, event_label)
 export function trackApproachTab(tab: string) {
   trackEvent(GA4_EVENTS.APPROACH_TAB_CLICK, {
     tab_name: tab,
-    event_category: 'engagement',
-    event_label: `approach_${tab}`
+    engagement_type: 'tab_navigation'
   });
 }
 
 export function trackApproachHowOpen(approachTitle: string) {
   trackEvent(GA4_EVENTS.APPROACH_HOW_OPEN, {
     approach_title: approachTitle,
-    event_category: 'engagement',
-    event_label: 'approach_details'
+    interaction_type: 'how_modal_open'
   });
 }
 
 export function trackApproachDeliverablesOpen(approachTitle: string) {
   trackEvent(GA4_EVENTS.APPROACH_DELIVERABLES_OPEN, {
     approach_title: approachTitle,
-    event_category: 'engagement',
-    event_label: 'approach_deliverables'
+    interaction_type: 'deliverables_modal_open'
   });
 }
 
-// Enhanced conversion tracking for consulting business
+// === CONSULTING BUSINESS TRACKING ===
+// Following GA4 best practices: use recommended events + meaningful parameters
+
+// Consultation booking - use generate_lead (GA4 recommended)
 export function trackConsultationBooking(source: string, consultationType?: string) {
-  trackEvent('consultation_booked', {
-    event_category: 'conversion',
-    event_label: source,
-    consultation_type: consultationType || 'strategy_session',
-    value: 100 // Estimated value of consultation
+  trackGenerateLead({
+    currency: 'USD',
+    value: 500, // Realistic B2B consulting lead value
+    method: 'schedule_call_button',
+    button_text: consultationType || 'strategy_session',
+    destination_url: source,
   });
 }
 
+// Lead generation - use generate_lead (GA4 recommended)
 export function trackLeadGeneration(leadType: string, source: string, value?: number) {
-  trackEvent('lead_generated', {
-    event_category: 'conversion',
-    event_label: leadType,
-    lead_source: source,
-    value: value || 25
+  trackGenerateLead({
+    currency: 'USD',
+    value: value || 500,
+    method: leadType as LeadMethod,
+    button_location: 'content',
+    destination_url: source,
   });
 }
 
+// Content engagement - custom event with GA4-style parameters
 export function trackContentEngagement(contentType: string, contentTitle: string, engagementType: string) {
   trackEvent('content_engagement', {
-    event_category: 'engagement',
-    event_label: contentType,
+    content_type: contentType,
     content_title: contentTitle,
-    engagement_type: engagementType
+    engagement_action: engagementType,
   });
 }
 
+// Service interest - custom event with value
 export function trackServiceInterest(serviceType: string, interestLevel: 'low' | 'medium' | 'high') {
   trackEvent('service_interest', {
-    event_category: 'engagement',
-    event_label: serviceType,
+    service_type: serviceType,
     interest_level: interestLevel,
-    value: interestLevel === 'high' ? 75 : interestLevel === 'medium' ? 50 : 25
+    currency: 'USD',
+    value: interestLevel === 'high' ? 300 : interestLevel === 'medium' ? 150 : 50
   });
 }
 
+// Pricing inquiry - use generate_lead since it shows purchase intent
 export function trackPricingInquiry(priceRange?: string) {
-  trackEvent('pricing_inquiry', {
-    event_category: 'conversion',
-    event_label: 'pricing_interest',
-    price_range: priceRange,
-    value: 50
+  trackGenerateLead({
+    currency: 'USD',
+    value: 400,
+    method: 'contact_form',
+    button_location: 'content',
+    button_text: `pricing_${priceRange || 'inquiry'}`,
   });
 }
 
+// Case study view - content engagement
 export function trackCaseStudyView(caseStudyTitle: string) {
   trackEvent('case_study_view', {
-    event_category: 'engagement',
-    event_label: caseStudyTitle,
-    value: 30
+    case_study_title: caseStudyTitle,
+    content_type: 'case_study',
+    currency: 'USD',
+    value: 100, // Engagement value
   });
 }
 
-// Consulting-specific conversion funnel tracking
+// Consultation funnel tracking
 export function trackConsultationFlowStep(step: string, stepNumber: number, totalSteps: number) {
   trackEvent('consultation_flow_step', {
-    event_category: 'conversion',
-    event_label: step,
+    step_name: step,
     step_number: stepNumber,
     total_steps: totalSteps,
-    progress_percentage: Math.round((stepNumber / totalSteps) * 100)
+    progress_percent: Math.round((stepNumber / totalSteps) * 100)
   });
 }
