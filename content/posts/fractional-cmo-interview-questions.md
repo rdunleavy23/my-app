@@ -1,6 +1,6 @@
 ---
 title: "25 Questions to Ask Fractional CMO Before Hiring (+ Red Flags)"
-description: "The interview questions that separate real fractional CMOs from impost imposters. Strategic thinking, process clarity, results proof, cultural fit—what to ask and what answers reveal."
+description: "The interview questions that separate real fractional CMOs from imposters. Strategic thinking, process clarity, results proof, cultural fit—what to ask and what answers reveal."
 publishedAt: "2025-01-27"
 author:
   name: "Ryan"
