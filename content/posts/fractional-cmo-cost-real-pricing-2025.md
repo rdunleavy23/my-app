@@ -25,6 +25,13 @@ Most fractional CMO pricing guides give you ranges so wide they're useless: "$3K
 
 That's like saying "a car costs between $15K and $150K." Technically true. Completely unhelpful.
 
+**TL;DR:**
+- Real market average: $10K-$12K/month with 6-12 month minimums
+- True total cost is 25-40% higher than quoted (onboarding, overhead, knowledge gaps)
+- Entry-level: $3K-$6K/month | Mid-level: $6K-$12K/month | Senior: $12K-$20K+/month
+- Hidden costs add $5K-$10K onboarding + $1.2K-$3.9K/month in team overhead
+- Budget reality check: Need $60K-$120K total for 6-12 month engagement to see ROI
+
 Here's what the actual 2024-2025 market data shows: what fractional CMOs really charge, what drives pricing up or down, and the hidden costs nobody mentions until you're six months deep in an engagement.
 
 ---
@@ -261,7 +268,7 @@ Let me show you how the math actually works:
 
 **Actual hourly cost**: $1,069/hour (vs $542/hour quoted)
 
-**Pattern across examples**: Actual hourly cost is **50-80% higher** than quoted monthly rate divided by hours.
+> **Hidden Cost Impact:** Actual hourly cost is **50-80% higher** than quoted monthly rate divided by hours when you include onboarding, overhead, and operational costs.
 
 📊 **Want to calculate your specific situation?** Download our [Fractional CMO Cost Calculator](/lead-magnets/fractional-cmo-cost-calculator) (free Google Sheet) to model total costs including hidden expenses.
 
@@ -553,7 +560,7 @@ Removes commitment risk while giving fractional CMO a foot in the door.
 - Marketing-attributed revenue up 35%
 - Strategic clarity and unified team direction
 
-**ROI**: Positive (approximately 3:1)
+> **Positive ROI Example:** Approximately **3:1 return** when the company has execution capability and needs strategic leadership, prioritization, and vendor oversight.
 
 **Why it worked**: Team had execution capability but needed strategic leadership, prioritization, and vendor oversight.
 
@@ -600,6 +607,32 @@ They have execution capability—they're missing frameworks, measurement systems
 - General strategic direction
 
 **Both have value. But one builds an asset you own. The other rents expertise.**
+
+---
+
+## The Pattern Growth Alternative: The 3 A's Framework
+
+We built Pattern Growth around a different model than ongoing fractional leadership. Our 8-week strategy sprints follow what we call the **3 A's Framework**—a systematic approach to building strategic architecture you own completely.
+
+### Analyze: Understand Where You Are
+
+We start by analyzing your current state using diagnostic questions and industry best practices. Not generic questionnaires—specific questions that reveal whether you need strategic architecture, execution capability, or leadership.
+
+**Real example from our work**: We analyzed a product's marketing spend and discovered they were spending the majority of their budget on a keyword that was connecting them with the entirely wrong audience. This came out in the Analyze phase.
+
+### Aspire: Define Where You Want to Go
+
+Based on your past experience, current circumstances, and future goals, we work together to define where you want to go. This isn't a consultant telling you what to do—it's collaborative goal-setting that accounts for your specific constraints, opportunities, and ambitions.
+
+We document the gap between current state and desired state, then prioritize based on what will move the needle most.
+
+### Action: Build the Bridge
+
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
+
+**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. You own the frameworks. You own the dashboards. You own the playbooks. No monthly retainer. No dependency.
+
+[See how the 3 A's Framework works →](/process)
 
 ---
 

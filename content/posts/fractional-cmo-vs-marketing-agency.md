@@ -25,6 +25,13 @@ This is the wrong question.
 
 The right question is: **"Do we need strategic leadership or execution bandwidth?"**
 
+**TL;DR:**
+- Fractional CMO = strategic leadership ($10K-$15K/month) | Agency = execution + some strategy ($10K-$20K/month)
+- Choose fractional CMO when you have execution capability and need strategic guidance
+- Choose agency when you need hands-on work done and have clear direction
+- Most $1M-$5M revenue companies need strategic architecture first, then decide
+- McKinsey data: 1.4x-2.3x growth when marketing is involved in strategic planning
+
 Most companies get this backwards. They hire a fractional CMO when they need hands-on execution. Or they hire an agency when they need strategic architecture.
 
 The result? $50K-100K+ wasted and 6-12 months lost.
@@ -419,6 +426,34 @@ They need **strategic architecture built once and owned completely**:
 - Businesses needing clarity in under 3 months
 
 [Compare strategy sprint vs fractional CMO →](/sprint-vs-fractional-cmo)
+
+---
+
+## The Pattern Growth Approach: The 3 A's Framework
+
+This is exactly what we do at Pattern Growth. Our 8-week strategy sprints follow the **3 A's Framework**—a systematic approach to building strategic architecture you own completely.
+
+### Analyze: Understand Where You Are
+
+We start by analyzing your current state using diagnostic questions and industry best practices. Not generic questionnaires—specific questions that reveal whether you need strategic architecture, execution capability, or leadership.
+
+**Real example from our work**: We analyzed a product's marketing spend and discovered they were spending the majority of their budget on a keyword that was connecting them with the entirely wrong audience. This came out in the Analyze phase.
+
+### Aspire: Define Where You Want to Go
+
+Based on your past experience, current circumstances, and future goals, we work together to define where you want to go. This isn't a consultant telling you what to do—it's collaborative goal-setting that accounts for your specific constraints, opportunities, and ambitions.
+
+We document the gap between current state and desired state, then prioritize based on what will move the needle most.
+
+### Action: Build the Bridge
+
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
+
+**The result**: After 8 weeks, you have complete strategic architecture that's yours forever. You can execute independently or bring in an agency for specific channels. The choice is yours.
+
+**Best for**: Companies that need strategic clarity fast and want to own everything completely.
+
+[See how the 3 A's Framework works →](/process)
 
 ---
 

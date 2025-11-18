@@ -23,6 +23,15 @@ Most articles about fractional CMOs tell you when TO hire one.
 
 This article tells you when NOT to.
 
+**TL;DR - Don't hire a fractional CMO if you:**
+- Lack documented strategy (they optimize, they don't build from scratch)
+- Have no one to execute (they lead people, they don't "do marketing")
+- Budget is under $60K total (need 6-12 months minimum for ROI)
+- Need results in under 3 months (2-3 month ramp-up before value)
+- Have unclear positioning (needs focused work, not 10-20 hrs/month spread thin)
+- Want "marketing handled" (they're leaders, not practitioners)
+- Haven't validated product-market fit (need discovery, not optimization)
+
 Because hiring a fractional CMO when you're not ready costs $60K-$120K and wastes 6-12 months. And according to research, most companies aren't ready.
 
 Here are 7 situations where hiring a fractional CMO is the wrong move—backed by data, with what to do instead.
@@ -490,6 +499,36 @@ Then match the solution to the problem:
 | Want "marketing handled" | Agency or manager | Fractional CMO |
 | Pre-product-market fit | Founder-led or advisor | Fractional CMO |
 | Need strategic leadership | **Fractional CMO** | Agency or sprint |
+
+---
+
+## The Pattern Growth Alternative: The 3 A's Framework
+
+Most companies in the 7 situations above don't need a fractional CMO. They need strategic architecture built once and owned completely.
+
+That's why we created the **3 A's Framework**—a systematic 8-week sprint that builds everything you need without ongoing dependency.
+
+### Analyze: Understand Where You Are
+
+We start by analyzing your current state using diagnostic questions and industry best practices. Not generic questionnaires—specific questions that reveal your actual bottleneck.
+
+**Real example from our work**: We analyzed a product's marketing spend and discovered they were spending the majority of their budget on a keyword that was connecting them with the entirely wrong audience. This came out in the Analyze phase.
+
+### Aspire: Define Where You Want to Go
+
+Based on your past experience, current circumstances, and future goals, we work together to define where you want to go. This isn't a consultant telling you what to do—it's collaborative goal-setting that accounts for your specific constraints, opportunities, and ambitions.
+
+We document the gap between current state and desired state, then prioritize based on what will move the needle most.
+
+### Action: Build the Bridge
+
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything.
+
+**After 8 weeks**: Complete strategic architecture. Yours forever. No monthly retainer. No dependency.
+
+**Best for**: Companies in situations #1-7 above who need strategic architecture, not ongoing advisory.
+
+[See how the 3 A's Framework works →](/process)
 
 ---
 
