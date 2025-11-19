@@ -45,6 +45,8 @@
     "node_modules",
     "validator.ts",
     "backups",
-    ".snapshots"
+    ".snapshots",
+    "vitest.config.ts",
+    "vitest.setup.ts"
   ]
 }
