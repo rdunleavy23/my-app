@@ -37,6 +37,6 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/patterngrowth",
     github: "https://github.com/rdunleavy",
-    docs: "https://patterngrowth.com",
+    docs: "https://www.patterngrowth.com",
   },
 }
