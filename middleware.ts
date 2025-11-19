@@ -88,11 +88,12 @@ export function middleware(request: NextRequest) {
 
   const csp = `
     default-src 'self';
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://app.cal.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' data: blob: https:;
     font-src 'self' data:;
-    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://app.cal.com;
+    frame-src https://app.cal.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
