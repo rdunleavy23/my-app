@@ -15,7 +15,14 @@
     "lhci": "lhci autorun",
     "analyze": "ANALYZE=true next build",
     "performance": "npm run build && npm run lhci",
-    "validate:schema": "node scripts/validate-schema.mjs"
+    "validate:schema": "node scripts/validate-schema.mjs",
+    "seo:audit": "node scripts/run-complete-seo-audit.js",
+    "seo:links": "node scripts/check-broken-links.js",
+    "seo:sitemap": "node scripts/generate-advanced-sitemap.js",
+    "seo:optimize": "node scripts/auto-seo-optimizer.js",
+    "seo:webvitals": "node scripts/optimize-core-web-vitals.js",
+    "seo:validate": "node scripts/verify-all-10-checks.js",
+    "seo:all": "npm run seo:audit && npm run build && npm run seo:validate"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
