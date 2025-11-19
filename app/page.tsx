@@ -232,8 +232,58 @@ export default function HomePage() {
               </Card>
             </div>
 
-            {/* Interactive Carousel for mobile */}
-            <HomeCarousel />
+            {/* Mobile: Vertical card stack - all content visible, no carousel friction */}
+            <div className="md:hidden space-y-3">
+              <Card className="p-4 border-l-4 border-l-primary">
+                <div className="flex items-start gap-2.5 mb-2">
+                  <Zap className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-base font-semibold leading-snug">Quick Wins Start Week One</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
+                </p>
+              </Card>
+
+              <Card className="p-4 border-l-4 border-l-primary">
+                <div className="flex items-start gap-2.5 mb-2">
+                  <Building2 className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-base font-semibold leading-snug">Growth Infrastructure You Own</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights. When we're done, your team runs independently with no ongoing dependency on us.
+                </p>
+              </Card>
+
+              <Card className="p-4 border-l-4 border-l-primary">
+                <div className="flex items-start gap-2.5 mb-2">
+                  <TrendingUp className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-base font-semibold leading-snug">Strategy Connected to Revenue</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
+                </p>
+              </Card>
+
+              <Card className="p-4 border-l-4 border-l-primary">
+                <div className="flex items-start gap-2.5 mb-2">
+                  <Target className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-base font-semibold leading-snug">Brand Positioning That Sells</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                </p>
+              </Card>
+
+              <Card className="p-4 border-l-4 border-l-primary">
+                <div className="flex items-start gap-2.5 mb-2">
+                  <LinkIcon className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-base font-semibold leading-snug">Marketing That Drives Revenue</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
+                </p>
+              </Card>
+            </div>
           </div>
         </section>
 
@@ -300,109 +350,108 @@ export default function HomePage() {
               </Card>
             </div>
 
-            {/* Mobile: Accordion (best practices: single open, first item default, large touch targets) */}
+            {/* Mobile: Optimized accordion - tighter spacing, smaller icons, multiple items open */}
             <div className="md:hidden">
               <Accordion
-                type="single"
-                defaultValue="item-0"
-                collapsible
-                className="w-full space-y-0 rounded-lg border bg-card"
+                type="multiple"
+                defaultValue={["item-0", "item-1"]}
+                className="w-full space-y-2"
               >
-                <AccordionItem value="item-0" className="border-l-4 border-l-primary border-b">
-                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
-                      <div className="mt-1 shrink-0">
-                        <UserCog className="h-8 w-8 text-primary" aria-hidden="true" />
+                <AccordionItem value="item-0" className="border-l-4 border-l-primary rounded-lg border bg-card">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
+                      <div className="mt-0.5 shrink-0">
+                        <UserCog className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        <h3 className="text-base font-semibold text-foreground leading-snug">
                           We Take 2-3 Clients Per Quarter
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-4 pb-4 pl-[52px]">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-1" className="border-l-4 border-l-primary border-b">
-                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
-                      <div className="mt-1 shrink-0">
-                        <Gift className="h-8 w-8 text-primary" aria-hidden="true" />
+                <AccordionItem value="item-1" className="border-l-4 border-l-primary rounded-lg border bg-card">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
+                      <div className="mt-0.5 shrink-0">
+                        <Gift className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        <h3 className="text-base font-semibold text-foreground leading-snug">
                           Built to Transfer, Not Keep You Dependent
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-4 pb-4 pl-[52px]">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-2" className="border-l-4 border-l-primary border-b">
-                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
-                      <div className="mt-1 shrink-0">
-                        <Puzzle className="h-8 w-8 text-primary" aria-hidden="true" />
+                <AccordionItem value="item-2" className="border-l-4 border-l-primary rounded-lg border bg-card">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
+                      <div className="mt-0.5 shrink-0">
+                        <Puzzle className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        <h3 className="text-base font-semibold text-foreground leading-snug">
                           Strategy Built for Your Reality
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-4 pb-4 pl-[52px]">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-3" className="border-l-4 border-l-primary border-b">
-                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
-                      <div className="mt-1 shrink-0">
-                        <Database className="h-8 w-8 text-primary" aria-hidden="true" />
+                <AccordionItem value="item-3" className="border-l-4 border-l-primary rounded-lg border bg-card">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
+                      <div className="mt-0.5 shrink-0">
+                        <Database className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        <h3 className="text-base font-semibold text-foreground leading-snug">
                           Data Before Assumptions
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-4 pb-4 pl-[52px]">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-4" className="border-l-4 border-l-primary">
-                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-4 flex-1 min-h-[44px]">
-                      <div className="mt-1 shrink-0">
-                        <Handshake className="h-8 w-8 text-primary" aria-hidden="true" />
+                <AccordionItem value="item-4" className="border-l-4 border-l-primary rounded-lg border bg-card">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
+                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
+                      <div className="mt-0.5 shrink-0">
+                        <Handshake className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        <h3 className="text-base font-semibold text-foreground leading-snug">
                           Handoff That Fits How You Work
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-base text-muted-foreground leading-relaxed">
+                  <AccordionContent className="px-4 pb-4 pl-[52px]">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
                     </p>
                   </AccordionContent>
