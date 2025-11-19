@@ -3,8 +3,8 @@ import { NavItem } from "@/lib/types"
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "PatternGrowth",
-  url: "https://www.patterngrowth.com",
+  name: "Pattern Growth",
+  url: "https://www.patterngrowth.com/",
   description:
     "We don't just design strategy. We operationalize it into systems your team can actually run.",
   mainNav: [

@@ -121,7 +121,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Pattern Growth",
               description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
-              url: "https://www.patterngrowth.com",
+              url: "https://www.patterngrowth.com/",
               logo: "https://www.patterngrowth.com/patterngrowth-android-chrome-512x512.png",
               sameAs: [
                 "https://twitter.com/patterngrowth"
@@ -141,16 +141,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Pattern Growth",
-              alternateName: "PatternGrowth",
-              url: "https://www.patterngrowth.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://www.patterngrowth.com/search?q={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
-              }
+              alternateName: ["Pattern", "PatternGrowth"],
+              url: "https://www.patterngrowth.com/"
             })
           }}
         />
