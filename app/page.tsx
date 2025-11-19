@@ -180,75 +180,55 @@ export default function HomePage() {
             </h2>
 
             {/* Server-side content for SEO */}
-            <div className="hidden md:grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Zap className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Quick Wins Start Week One</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
-                  </p>
-                </CardContent>
+            <div className="hidden md:grid md:grid-cols-3 gap-5 mb-12">
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Zap className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Quick Wins Start Week One</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
+                </p>
               </Card>
 
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Building2 className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Growth Infrastructure You Own</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights. When we're done, your team runs independently with no ongoing dependency on us.
-                  </p>
-                </CardContent>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Building2 className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Growth Infrastructure You Own</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights. When we're done, your team runs independently with no ongoing dependency on us.
+                </p>
               </Card>
 
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-4">
-                    <TrendingUp className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Strategy Connected to Revenue</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
-                  </p>
-                </CardContent>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <TrendingUp className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Strategy Connected to Revenue</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
+                </p>
               </Card>
 
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Target className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Brand Positioning That Sells</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
-                  </p>
-                </CardContent>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Target className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Brand Positioning That Sells</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                </p>
               </Card>
 
-              <Card className="card-hover-lift group">
-                <CardHeader>
-                  <div className="mb-4">
-                    <LinkIcon className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Marketing That Drives Revenue</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
-                  </p>
-                </CardContent>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <LinkIcon className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Marketing That Drives Revenue</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
+                </p>
               </Card>
             </div>
 
@@ -268,75 +248,55 @@ export default function HomePage() {
             </p>
 
             {/* Desktop: Grid of Cards */}
-            <div className="hidden md:grid md:grid-cols-2 gap-8">
-              <Card className="border-l-4 border-l-primary">
-                <CardHeader>
-                  <div className="mb-4">
-                    <UserCog className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">We Take 2-3 Clients Per Quarter</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
-                  </p>
-                </CardContent>
+            <div className="hidden md:grid md:grid-cols-2 gap-5">
+              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <UserCog className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">We Take 2-3 Clients Per Quarter</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
+                </p>
               </Card>
 
-              <Card className="border-l-4 border-l-primary">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Gift className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Built to Transfer, Not Keep You Dependent</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
-                  </p>
-                </CardContent>
+              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Gift className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Built to Transfer, Not Keep You Dependent</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                </p>
               </Card>
 
-              <Card className="border-l-4 border-l-primary">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Puzzle className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Strategy Built for Your Reality</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
-                  </p>
-                </CardContent>
+              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Puzzle className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Strategy Built for Your Reality</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
+                </p>
               </Card>
 
-              <Card className="border-l-4 border-l-primary">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Database className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Data Before Assumptions</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
-                  </p>
-                </CardContent>
+              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Database className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Data Before Assumptions</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                </p>
               </Card>
 
-              <Card className="border-l-4 border-l-primary">
-                <CardHeader>
-                  <div className="mb-4">
-                    <Handshake className="h-12 w-12 text-primary" aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-2xl font-semibold">Handoff That Fits How You Work</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground leading-relaxed">
-                  <p>
-                    Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
-                  </p>
-                </CardContent>
+              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 mb-3">
+                  <Handshake className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Handoff That Fits How You Work</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
+                </p>
               </Card>
             </div>
 
