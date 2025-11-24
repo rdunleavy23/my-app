@@ -92,7 +92,7 @@ export function createPersonSchema(person: Person) {
     worksFor: {
       "@type": "Organization",
       name: "Pattern Growth",
-      url: "https://www.patterngrowth.com"
+      url: "https://www.patterngrowth.com/"
     }
   };
 }
@@ -141,7 +141,7 @@ export function createWebPageSchema(title: string, description: string, url: str
     isPartOf: {
       "@type": "WebSite",
       name: "Pattern Growth",
-      url: "https://www.patterngrowth.com",
+      url: "https://www.patterngrowth.com/",
     },
   };
 }
@@ -217,7 +217,7 @@ export function createComparisonPageSchema(title: string, description: string, u
     isPartOf: {
       "@type": "WebSite",
       name: "Pattern Growth",
-      url: "https://www.patterngrowth.com",
+      url: "https://www.patterngrowth.com/",
     },
     about: [
       {

@@ -12,7 +12,7 @@ export async function GET() {
   const feed = {
     version: "https://jsonfeed.org/version/1.1",
     title: "Pattern Growth - Growth Strategy Insights",
-    home_page_url: siteConfig.url,
+    home_page_url: `${siteConfig.url}/`,
     feed_url: `${siteConfig.url}/feed.json`,
     description: "8-week growth strategy sprints for B2B companies ($1-5M revenue). Strategic frameworks, marketing operations, and team enablement insights.",
     icon: `${siteConfig.url}/patterngrowth-logo.svg`,
