@@ -71,7 +71,7 @@ const serviceSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Marketing Infrastructure",
-          "description": "Custom dashboards, campaign frameworks, and measurement systems"
+          "description": "Custom measurement systems, campaign frameworks, and operational tools"
         }
       },
       {
@@ -321,7 +321,7 @@ export default function WhatIsFractionalCMO() {
                 'Oversee marketing budget allocation and ROI measurement',
                 'Define brand positioning and messaging frameworks',
                 'Create go-to-market strategies for new products or markets',
-                'Implement marketing technology stack and dashboards',
+                'Implement marketing technology stack and measurement systems',
                 'Report marketing performance to executive team and board'
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-3 items-start">
@@ -457,7 +457,7 @@ export default function WhatIsFractionalCMO() {
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• Fixed 8-week engagement</li>
-                  <li>• Deliverables: positioning, dashboards, playbooks</li>
+                  <li>• Deliverables: positioning, measurement systems, playbooks</li>
                   <li>• Ownership transfers to your team</li>
                   <li>• Cost: $9,500 flat</li>
                 </ul>
@@ -567,7 +567,7 @@ export default function WhatIsFractionalCMO() {
                   What&apos;s better than a fractional CMO?
                 </h3>
                 <p className="text-muted-foreground">
-                  For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, marketing dashboards, and campaign playbooks—enabling your team to execute independently instead of relying on continued consulting relationships.
+                  For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, measurement systems, and campaign playbooks—enabling your team to execute independently instead of relying on continued consulting relationships.
                 </p>
               </div>
 

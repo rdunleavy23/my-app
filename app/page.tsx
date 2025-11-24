@@ -315,7 +315,7 @@ export default function HomePage() {
                   <h3 className="text-lg font-semibold leading-tight">Built to Transfer, Not Keep You Dependent</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                  Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, your team runs independently. We're optional support after that, not a permanent fixture.
                 </p>
               </Card>
 
@@ -345,7 +345,7 @@ export default function HomePage() {
                   <h3 className="text-lg font-semibold leading-tight">Handoff That Fits How You Work</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
+                  Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, unified measurement systems—built so your team (or agency) can actually use it.
                 </p>
               </Card>
             </div>
@@ -392,7 +392,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.
+                      Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, your team runs independently. We're optional support after that, not a permanent fixture.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -452,7 +452,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, ongoing dashboard access—built so your team (or agency) can actually use it.
+                      Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, unified measurement systems—built so your team (or agency) can actually use it.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -568,7 +568,7 @@ export default function HomePage() {
                 },
                 {
                   question: "What makes you different from a fractional CMO?",
-                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us. <a href='/blog/fractional-cmo-alternative' class='text-primary hover:underline'>Read our detailed comparison</a>."
+                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us. <a href='/blog/fractional-cmo-alternative' class='text-primary hover:underline'>Read our detailed comparison</a>."
                 },
                 {
                   question: "Can we start right away?",

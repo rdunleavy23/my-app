@@ -14,6 +14,7 @@ import {
   additionalSubsections,
   ownershipCategories,
   faqs,
+  afterSprintContent,
   ctaContent,
   processMetadata
 } from "@/config/process"
@@ -97,9 +98,15 @@ export default function ProcessPage() {
             ))}
           </div>
 
-          <p className="text-xl md:text-2xl font-semibold text-foreground mb-8">
+          <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
             {heroContent.tagline}
           </p>
+
+          {heroContent.clarifier && (
+            <p className="text-sm md:text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
+              {heroContent.clarifier}
+            </p>
+          )}
 
           <GetStartedButton size="lg" />
         </div>
@@ -327,6 +334,36 @@ export default function ProcessPage() {
                   ))}
                 </div>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* After the Sprint Section */}
+      <section className="py-16 md:py-24 bg-background border-t">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+            {afterSprintContent.heading}
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground mb-8">
+            {afterSprintContent.intro}
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground mb-8">
+            After eight weeks, most clients choose one of three paths:
+          </p>
+
+          <div className="space-y-4">
+            {afterSprintContent.paths.map((path, idx) => (
+              <Card key={idx} className="bg-tertiary/30 border-border">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    {path.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {path.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

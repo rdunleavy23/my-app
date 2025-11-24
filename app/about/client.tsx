@@ -20,7 +20,7 @@ export default function AboutClient() {
         </p>
         <p>
           Pattern Growth was created to close that gap. We don’t just design strategy.
-          We build frameworks, dashboards, and processes your team can own long after we’ve stepped out.
+          We build frameworks, measurement systems, and processes your team can own long after we've stepped out.
         </p>
       </section>
 

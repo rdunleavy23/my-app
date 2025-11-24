@@ -174,7 +174,7 @@ export default function BlogPage() {
       <div className="mt-16 text-center bg-muted/50 rounded-lg p-8">
         <h3 className="text-3xl font-semibold mb-4">Ready to Scale Your Growth Strategy?</h3>
         <p className="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, dashboards, and playbooks.
+          Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, measurement systems, and playbooks.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 

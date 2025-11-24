@@ -33,7 +33,7 @@ export function HomePage() {
               You have vision. Your team has horsepower. What’s missing is the mechanism that turns ambition into repeatable outcomes.
             </p>
             <p>
-              We translate executive goals into measurable strategy, then operationalize it into dashboards and playbooks your team can use. The result? A growth system that outlives us — not another dependency.
+              We translate executive goals into measurable strategy, then operationalize it into measurement systems and playbooks your team can use. The result? A growth system that outlives us — not another dependency.
             </p>
           </CardContent>
         </Card>

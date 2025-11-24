@@ -113,7 +113,7 @@ export default function AboutPage() {
     {
       icon: Users,
       title: "You Own Everything",
-      description: "You own the strategy, dashboards, and playbooks. No dependency on us. Ever."
+      description: "You own the strategy, measurement systems, and playbooks. No dependency required—though we're available if you want support."
     }
   ]
 
@@ -180,6 +180,10 @@ export default function AboutPage() {
             
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Two growth strategists who turn C-suite vision into strategy your team can actually execute.
+            </p>
+            
+            <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium mt-6">
+              Unlike fractional CMOs juggling multiple clients or agencies pushing pre-packaged solutions, we commit our full attention to one thing: understanding your business deeply enough to chart the right path forward.
             </p>
           </div>
         </div>

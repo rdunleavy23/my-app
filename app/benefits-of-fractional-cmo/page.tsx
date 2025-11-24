@@ -223,7 +223,7 @@ export default function BenefitsOfFractionalCMOPage() {
                 The first 2-3 months go to assessment and framework development. Measurable results typically appear 4-6 months into engagements. This timeline works for companies with 12-18 month planning horizons but not for businesses needing strategic clarity immediately.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                Consider: If you need a dashboard and executable strategy in 6 weeks, fractional CMO timelines don't align.
+                Consider: If you need a measurement system and executable strategy in 6 weeks, fractional CMO timelines don't align.
               </p>
             </div>
 
@@ -270,7 +270,7 @@ export default function BenefitsOfFractionalCMOPage() {
 
           <div className="space-y-4">
             <p className="text-lg text-foreground">
-              <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Growth strategy sprints</Link> deliver CMO-level strategic thinking in 8 weeks through a fixed-fee project model. You get the frameworks, dashboards, and playbooks—then execute independently.
+              <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Growth strategy sprints</Link> deliver CMO-level strategic thinking in 8 weeks through a fixed-fee project model. You get the frameworks, measurement systems, and playbooks—then execute independently.
             </p>
             <GetStartedButton />
             <Link 
@@ -303,7 +303,7 @@ export default function BenefitsOfFractionalCMOPage() {
                 <tr>
                   <td className="border border-border p-3 font-semibold">Speed to Value</td>
                   <td className="border border-border p-3">4-6 months</td>
-                  <td className="border border-border p-3 bg-primary/5">6 weeks (dashboard live)</td>
+                  <td className="border border-border p-3 bg-primary/5">6 weeks (measurement system live)</td>
                 </tr>
                 <tr>
                   <td className="border border-border p-3 font-semibold">Ownership</td>

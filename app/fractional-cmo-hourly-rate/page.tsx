@@ -378,7 +378,7 @@ export default function FractionalCMOHourlyRatePage() {
                 <ul className="space-y-2 text-foreground text-sm">
                   <li>• $9,500 one-time project fee</li>
                   <li>• Complete in 8 weeks</li>
-                  <li>• Dashboard live week 6</li>
+                  <li>• Measurement system live week 6</li>
                   <li>• You own everything delivered</li>
                   <li>• Team executes independently</li>
                   <li>• Full documentation handoff</li>

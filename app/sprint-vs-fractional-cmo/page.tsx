@@ -245,7 +245,7 @@ export default function SprintVsFractionalCMOPage() {
                   <tr className="border-b border-border">
                     <td className="p-4 font-medium">What You Own</td>
                     <td className="p-4 bg-primary/5">
-                      <strong>Everything:</strong> strategy docs, dashboard (1yr access), playbooks, systems
+                      <strong>Everything:</strong> strategy docs, measurement system (yours forever), playbooks, systems
                     </td>
                     <td className="p-4">Strategic direction (knowledge leaves with them)</td>
                   </tr>
@@ -255,8 +255,8 @@ export default function SprintVsFractionalCMOPage() {
                     <td className="p-4">High (they are your strategy)</td>
                   </tr>
                   <tr className="border-b border-border">
-                    <td className="p-4 font-medium">Dashboard/Analytics</td>
-                    <td className="p-4 bg-primary/5"><strong>Custom built, live week 6</strong>, yours forever</td>
+                    <td className="p-4 font-medium">Measurement System</td>
+                    <td className="p-4 bg-primary/5"><strong>Custom measurement system, live week 6</strong>, yours forever</td>
                     <td className="p-4">Maybe built eventually, leaves with consultant</td>
                   </tr>
                   <tr className="border-b border-border">
@@ -331,7 +331,7 @@ export default function SprintVsFractionalCMOPage() {
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                          <span>Custom analytics dashboard (1yr access)</span>
+                          <span>Custom measurement system (yours forever)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
@@ -479,7 +479,7 @@ export default function SprintVsFractionalCMOPage() {
                     </div>
                     <div className="flex gap-4">
                       <div className="flex-shrink-0 w-20 font-semibold text-sm text-primary">Week 5-6</div>
-                      <div className="text-sm">Dashboard live, connecting all marketing data</div>
+                      <div className="text-sm">Measurement system live, connecting all marketing data</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="flex-shrink-0 w-20 font-semibold text-sm text-primary">Week 7-8</div>
@@ -515,7 +515,7 @@ export default function SprintVsFractionalCMOPage() {
                     </div>
                     <div className="flex gap-4">
                       <div className="flex-shrink-0 w-20 font-semibold text-sm text-muted-foreground">Month 5-6</div>
-                      <div className="text-sm">Implementation oversight, maybe dashboard starts</div>
+                      <div className="text-sm">Implementation oversight, maybe measurement system starts</div>
                     </div>
                     <div className="flex gap-4">
                       <div className="flex-shrink-0 w-20 font-semibold text-sm text-muted-foreground">Month 7+</div>
@@ -654,7 +654,7 @@ export default function SprintVsFractionalCMOPage() {
                     <div className="space-y-2">
                       <Badge variant="default" className="mb-2">Best Fit: Strategy Sprint</Badge>
                       <p className="text-sm text-muted-foreground">
-                        <strong>Why:</strong> 8 weeks gets you complete strategic documentation, live dashboard,
+                        <strong>Why:</strong> 8 weeks gets you complete strategic documentation, live measurement system,
                         and measurement framework ready for board presentation. Clear deliverables on a fixed timeline.
                       </p>
                       <p className="text-sm font-semibold text-primary mt-2">
@@ -665,7 +665,7 @@ export default function SprintVsFractionalCMOPage() {
                       <Badge variant="outline" className="mb-2">Fractional CMO</Badge>
                       <p className="text-sm text-muted-foreground">
                         <strong>Why not:</strong> Timeline uncertainty. Most fractional CMOs take 3-6 months to
-                        deliver complete strategic documentation and dashboards. May miss your Q1 deadline.
+                        deliver complete strategic documentation and measurement systems. May miss your Q1 deadline.
                       </p>
                     </div>
                   </div>
@@ -712,9 +712,9 @@ export default function SprintVsFractionalCMOPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <div className="font-semibold">Custom Analytics Dashboard</div>
+                        <div className="font-semibold">Custom Measurement System</div>
                         <div className="text-sm text-muted-foreground">
-                          Live metrics, 1 year access, connects all your marketing data
+                          Live metrics, connects all your marketing data
                         </div>
                       </div>
                     </li>
@@ -812,9 +812,9 @@ export default function SprintVsFractionalCMOPage() {
                     <li className="flex items-start gap-2">
                       <X className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                       <div>
-                        <div className="font-semibold">Dashboard Access Ends</div>
+                        <div className="font-semibold">Measurement System Access Ends</div>
                         <div className="text-sm text-muted-foreground">
-                          If built, dashboard often belongs to consultant or expires
+                          If built, measurement system often belongs to consultant or expires
                         </div>
                       </div>
                     </li>

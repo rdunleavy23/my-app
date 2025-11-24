@@ -73,7 +73,8 @@ export const heroContent = {
     "Most companies have scattered data, ambitious goals, and no clear path between them. We solve that in eight weeks.",
     "We don't create new strategies out of thin air. We map what's already working, identify what's blocking growth, and build the system that bridges the gap."
   ],
-  tagline: "Three sections. Full ownership transfer. No dependency."
+  tagline: "We build the system. You choose how much we stay involved.",
+  clarifier: "Some teams run it fully in-house. Others ask us to help vet agencies, sit in on key hires, or train their team. The sprint sets you up for all three."
 }
 
 // ============================================================================
@@ -104,16 +105,16 @@ export const processSections: ProcessSection[] = [
         ]
       },
       {
-        heading: "Apply the 5Cs framework",
+        heading: "Examine your complete market position",
         paragraphs: [
-          "We examine five dimensions of your market position:"
+          "We use familiar frameworks like 5Cs to structure the analysis, but the outputs are bespoke to your situation. We examine five dimensions of your market position:"
         ]
       }
     ],
     framework: {
       id: "5cs",
-      title: "The 5Cs Framework",
-      description: "Five dimensions of your market position",
+      title: "Five Dimensions We Analyze",
+      description: "We structure market analysis across these areas to build your bespoke positioning",
       items: [
         {
           title: "Customer",
@@ -146,7 +147,7 @@ export const processSections: ProcessSection[] = [
       "Current state audit (market + funnel analysis)",
       "Revenue model validation",
       "Competitive positioning baseline",
-      "5Cs market framework",
+      "Market position analysis",
       "Measurement gap analysis"
     ]
   },
@@ -167,16 +168,16 @@ export const processSections: ProcessSection[] = [
         ]
       },
       {
-        heading: "Use STP to crystallize positioning",
+        heading: "Crystallize your positioning",
         paragraphs: [
-          "We apply the Segmentation, Targeting, Positioning framework to clarify your strategic focus."
+          "We use familiar frameworks like STP (Segmentation, Targeting, Positioning) to structure the work, but the positioning we develop is unique to your situation. This clarifies your strategic focus."
         ]
       }
     ],
     framework: {
       id: "stp",
-      title: "STP Framework",
-      description: "Three-step positioning process",
+      title: "How We Structure Positioning Work",
+      description: "We use this three-step approach to build your unique positioning",
       items: [
         {
           title: "Segmentation",
@@ -200,7 +201,7 @@ export const processSections: ProcessSection[] = [
       ]
     },
     deliverables: [
-      "STP positioning framework",
+      "Positioning strategy",
       "Competitive differentiation strategy",
       "Brand positioning guidelines",
       "Aspirational customer journey map",
@@ -225,16 +226,16 @@ export const processSections: ProcessSection[] = [
         ]
       },
       {
-        heading: "Use the 4Ps framework",
+        heading: "Optimize your complete marketing mix",
         paragraphs: [
-          "We optimize your complete marketing mix across four dimensions:"
+          "We use familiar frameworks like 4Ps to structure the optimization, but the strategy we build is tailored to your business. We optimize across four dimensions:"
         ]
       }
     ],
     framework: {
       id: "4ps",
-      title: "4Ps Framework",
-      description: "Marketing mix optimization",
+      title: "Four Areas We Optimize",
+      description: "We structure marketing mix work across these dimensions to build your custom strategy",
       items: [
         {
           title: "Product",
@@ -260,9 +261,9 @@ export const processSections: ProcessSection[] = [
     },
     deliverables: [
       "90-day strategic action plan",
-      "4Ps marketing mix optimization",
+      "Marketing mix strategy",
       "Campaign playbooks and execution roadmaps",
-      "Operational dashboards and measurement framework",
+      "Measurement systems and operational framework",
       "Scaling gates for each channel",
       "Team enablement documentation",
       "Weekly operating rhythm",
@@ -280,7 +281,7 @@ export const additionalSubsections = {
     heading: "Solve the infrastructure problem",
     paragraphs: [
       "Your data is scattered across tools, making it impossible to see the complete picture. We connect your systems into one view that shows what actually matters.",
-      "You get a dashboard that tracks the five numbers you need to check weekly. Decisions get made on data, not opinions."
+      "You get a measurement system that tracks the five numbers you need to check weekly. Decisions get made on data, not opinions."
     ]
   },
   transfer: {
@@ -310,7 +311,7 @@ export const ownershipCategories: OwnershipCategory[] = [
     title: "Operational Systems",
     icon: Settings,
     items: [
-      "Dashboards connecting all your data sources",
+      "Measurement systems connecting all your data sources",
       "Campaign playbooks and channel execution briefs",
       "Team enablement documentation",
       "Weekly decision framework"
@@ -348,6 +349,14 @@ export const faqs: FAQ[] = [
     ]
   },
   {
+    question: "Do we have to keep working together after the sprint?",
+    answer: [
+      "No. The sprint is designed so you're not dependent on us.",
+      "If we do our job, you'll outgrow us. You'll leave the sprint with a clear strategy, operating rhythm, and plan your team can run. Some teams take it fully in-house. Others ask us to help with a specific phase — vetting an agency, sitting in on key interviews, or training their team.",
+      "Our goal is to build a growth system you own. After that, we're optional support, not a permanent fixture."
+    ]
+  },
+  {
     question: "Can you customize the timeline?",
     answer: [
       "The core structure—Reality, Aspiration, Action Plan—stays consistent. We adjust how much time we spend in each phase based on what clarity already exists.",
@@ -362,6 +371,29 @@ export const faqs: FAQ[] = [
     ]
   }
 ]
+
+// ============================================================================
+// AFTER THE SPRINT
+// ============================================================================
+
+export const afterSprintContent = {
+  heading: "After the sprint: how we stay involved (if you want)",
+  intro: "The core sprint is designed so you're not locked into a long-term retainer.",
+  paths: [
+    {
+      title: "Run it in-house",
+      description: "Your team owns the strategy, operating rhythm, and measurement systems."
+    },
+    {
+      title: "Run it with partners",
+      description: "We help you brief or select an agency to execute."
+    },
+    {
+      title: "Run it with support",
+      description: "We stay involved for a defined period to sit in on interviews, train your team, or pressure-test big decisions."
+    }
+  ]
+}
 
 // ============================================================================
 // CTA CONTENT

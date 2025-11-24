@@ -234,19 +234,19 @@ export default function FractionalCMOResponsibilitiesPage() {
                 <ul className="text-sm text-foreground space-y-1">
                   <li>• North star metrics tied to revenue</li>
                   <li>• Leading and lagging indicator identification</li>
-                  <li>• Dashboard specifications and data sources</li>
+                  <li>• Measurement system specifications and data sources</li>
                   <li>• Weekly, monthly, quarterly reporting templates</li>
                 </ul>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">Dashboard Implementation and Data Integration</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Measurement System Implementation and Data Integration</h3>
               <p className="text-foreground mb-4 leading-relaxed">
-                Marketing data scattered across platforms prevents good decisions. Fractional CMOs specify dashboard requirements, identify data sources to connect, and design views that surface insights executives need.
+                Marketing data scattered across platforms prevents good decisions. Fractional CMOs specify measurement system requirements, identify data sources to connect, and design views that surface insights executives need.
               </p>
               <p className="text-foreground text-sm italic">
-                Important distinction: They specify what dashboards should show, but typically don't build them. Implementation falls to marketing ops, agencies, or consultants with technical skills.
+                Important distinction: They specify what measurement systems should show, but typically don't build them. Implementation falls to marketing ops, agencies, or consultants with technical skills.
               </p>
             </div>
 
@@ -329,7 +329,7 @@ export default function FractionalCMOResponsibilitiesPage() {
                 <li>• Campaign templates and playbooks</li>
               </ul>
               <ul className="space-y-2 text-foreground">
-                <li>• Working dashboard with data integration</li>
+                <li>• Working measurement system with data integration</li>
                 <li>• KPI frameworks and reporting templates</li>
                 <li>• Process documentation for scale</li>
                 <li>• Team training for independent execution</li>
