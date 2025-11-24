@@ -115,9 +115,8 @@ export default function ProcessPage() {
           {/* Desktop: Horizontal flow */}
           <div className="hidden md:flex items-start gap-4">
             {processSections.map((section, idx) => (
-              <div key={`desktop-${section.id}`} className="flex items-start gap-4 flex-1">
-                {idx > 0 && <ArrowRight className="flex-shrink-0 mt-12 text-primary" />}
-                <Card className="flex-1 bg-background border-primary/20">
+              <>
+                <Card key={section.id} className="flex-1 bg-background border-primary/20">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -141,15 +140,18 @@ export default function ProcessPage() {
                     </p>
                   </CardContent>
                 </Card>
-              </div>
+                {idx < processSections.length - 1 && (
+                  <ArrowRight key={`arrow-${idx}`} className="flex-shrink-0 mt-12 text-primary" />
+                )}
+              </>
             ))}
           </div>
 
           {/* Mobile: Vertical stack */}
           <div className="md:hidden space-y-6">
             {processSections.map((section, idx) => (
-              <div key={`mobile-${section.id}`}>
-                <Card className="bg-background border-primary/20">
+              <>
+                <Card key={section.id} className="bg-background border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3 mb-3">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -173,11 +175,11 @@ export default function ProcessPage() {
                 </Card>
 
                 {idx < processSections.length - 1 && (
-                  <div className="flex justify-center">
+                  <div key={`arrow-mobile-${idx}`} className="flex justify-center">
                     <ArrowDown className="h-6 w-6 text-primary" />
                   </div>
                 )}
-              </div>
+              </>
             ))}
           </div>
         </div>
