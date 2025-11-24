@@ -115,7 +115,8 @@ export default function ProcessPage() {
           {/* Desktop: Horizontal flow */}
           <div className="hidden md:flex items-start gap-4">
             {processSections.map((section, idx) => (
-              <React.Fragment key={section.id}>
+              <div key={`desktop-${section.id}`} className="flex items-start gap-4 flex-1">
+                {idx > 0 && <ArrowRight className="flex-shrink-0 mt-12 text-primary" />}
                 <Card className="flex-1 bg-background border-primary/20">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
@@ -140,18 +141,14 @@ export default function ProcessPage() {
                     </p>
                   </CardContent>
                 </Card>
-
-                {idx < processSections.length - 1 && (
-                  <ArrowRight className="flex-shrink-0 mt-12 text-primary" />
-                )}
-              </React.Fragment>
+              </div>
             ))}
           </div>
 
           {/* Mobile: Vertical stack */}
           <div className="md:hidden space-y-6">
             {processSections.map((section, idx) => (
-              <React.Fragment key={section.id}>
+              <div key={`mobile-${section.id}`}>
                 <Card className="bg-background border-primary/20">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3 mb-3">
@@ -180,7 +177,7 @@ export default function ProcessPage() {
                     <ArrowDown className="h-6 w-6 text-primary" />
                   </div>
                 )}
-              </React.Fragment>
+              </div>
             ))}
           </div>
         </div>
