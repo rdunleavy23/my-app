@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar"
 import SiteFooter from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"], 
@@ -157,6 +158,7 @@ export default function RootLayout({
             <SiteFooter />
           </ErrorBoundary>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
