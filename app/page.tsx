@@ -147,22 +147,33 @@ export default function HomePage() {
                       <span className="text-foreground font-bold">in 8 Weeks</span>
                     </h1>
 
-                    <div className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl space-y-4">
-                      <p>
+                    <div className="text-base sm:text-lg text-muted-foreground mb-10 leading-relaxed max-w-2xl">
+                      <p className="mb-3">
                         Most B2B companies can't justify a $250K CMO hire. But they need more than a fractional consultant who stays on retainer indefinitely.
                       </p>
                       <p>
-                        We build complete growth strategies in focused 8-week sprints, then transfer everything to your team. Custom systems, clear documentation, measurable results—designed so you can run it without us.
+                        We build complete growth strategies in focused 8-week sprints, then transfer everything to your team.
                       </p>
                     </div>
 
                     {/* Hero CTA */}
-                    <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
                       <GetStartedButton />
-                      <p className="text-sm text-muted-foreground">
-                        30-minute call · No pitch, no pressure
-                      </p>
+                      <Button 
+                        asChild 
+                        variant="outline" 
+                        size="lg"
+                        className="font-semibold"
+                      >
+                        <Link href="/process" className="flex items-center gap-2">
+                          See our 8-week process
+                          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                      </Button>
                     </div>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      30-minute call · No pitch, no pressure
+                    </p>
 
                   </div>
                 </section>
@@ -180,107 +191,107 @@ export default function HomePage() {
             </h2>
 
             {/* Server-side content for SEO */}
-            <div className="hidden md:grid md:grid-cols-3 gap-5 mb-12">
+            <div className="hidden md:grid md:grid-cols-3 gap-6 mb-12">
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Zap className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Quick Wins Start Week One</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
                 </p>
               </Card>
 
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Building2 className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Growth Infrastructure You Own</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights. When we're done, your team runs independently with no ongoing dependency on us.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Custom systems, frameworks, documentation, tools—everything transfers to you. Your team runs independently with no ongoing dependency.
                 </p>
               </Card>
 
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <TrendingUp className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Strategy Connected to Revenue</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Every initiative connects directly to revenue. You'll know exactly what to scale and what to stop, based on your actual data.
                 </p>
               </Card>
 
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Target className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Brand Positioning That Sells</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Clear positioning that works in outreach, sales calls, investor conversations, and throughout your customer experience.
                 </p>
               </Card>
 
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <LinkIcon className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Marketing That Drives Revenue</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Aligned to how revenue actually happens in your business—whether sales-led or product-led. No disconnected campaigns or vanity metrics.
                 </p>
               </Card>
             </div>
 
             {/* Mobile: Vertical card stack - all content visible, no carousel friction */}
-            <div className="md:hidden space-y-3">
-              <Card className="p-4 border-l-4 border-l-primary">
-                <div className="flex items-start gap-2.5 mb-2">
+            <div className="md:hidden space-y-4">
+              <Card className="p-5 border-l-4 border-l-primary">
+                <div className="flex items-start gap-3 mb-3">
                   <Zap className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-base font-semibold leading-snug">Quick Wins Start Week One</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
+                  Immediate improvements that impact your pipeline before the sprint ends. We work fast because you need results now.
                 </p>
               </Card>
 
-              <Card className="p-4 border-l-4 border-l-primary">
-                <div className="flex items-start gap-2.5 mb-2">
+              <Card className="p-5 border-l-4 border-l-primary">
+                <div className="flex items-start gap-3 mb-3">
                   <Building2 className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-base font-semibold leading-snug">Growth Infrastructure You Own</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights. When we're done, your team runs independently with no ongoing dependency on us.
+                  Custom systems, frameworks, documentation, tools—everything transfers to you. Your team runs independently with no ongoing dependency.
                 </p>
               </Card>
 
-              <Card className="p-4 border-l-4 border-l-primary">
-                <div className="flex items-start gap-2.5 mb-2">
+              <Card className="p-5 border-l-4 border-l-primary">
+                <div className="flex items-start gap-3 mb-3">
                   <TrendingUp className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-base font-semibold leading-snug">Strategy Connected to Revenue</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Most marketing roadmaps prioritize busy work over revenue. We connect every initiative directly to revenue: what generates pipeline, what converts prospects, what drives growth you can measure. You'll know exactly what to scale and what to stop, based on your actual data.
+                  Every initiative connects directly to revenue. You'll know exactly what to scale and what to stop, based on your actual data.
                 </p>
               </Card>
 
-              <Card className="p-4 border-l-4 border-l-primary">
-                <div className="flex items-start gap-2.5 mb-2">
+              <Card className="p-5 border-l-4 border-l-primary">
+                <div className="flex items-start gap-3 mb-3">
                   <Target className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-base font-semibold leading-snug">Brand Positioning That Sells</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We clarify who you serve, why they'd choose you, and how to say it everywhere. Your positioning will work in outreach, on sales calls, in investor conversations, and throughout your customer experience.
+                  Clear positioning that works in outreach, sales calls, investor conversations, and throughout your customer experience.
                 </p>
               </Card>
 
-              <Card className="p-4 border-l-4 border-l-primary">
-                <div className="flex items-start gap-2.5 mb-2">
+              <Card className="p-5 border-l-4 border-l-primary">
+                <div className="flex items-start gap-3 mb-3">
                   <LinkIcon className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-base font-semibold leading-snug">Marketing That Drives Revenue</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Whether you have a sales team or growth happens product-led, we align your marketing to how revenue actually happens in your business. No more disconnected campaigns or vanity metrics.
+                  Aligned to how revenue actually happens in your business—whether sales-led or product-led. No disconnected campaigns or vanity metrics.
                 </p>
               </Card>
             </div>
@@ -298,54 +309,54 @@ export default function HomePage() {
             </p>
 
             {/* Desktop: Grid of Cards */}
-            <div className="hidden md:grid md:grid-cols-2 gap-5">
+            <div className="hidden md:grid md:grid-cols-2 gap-6">
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <UserCog className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">We Take 2-3 Clients Per Quarter</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
                 </p>
               </Card>
 
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Gift className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Built to Transfer, Not Keep You Dependent</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, your team runs independently. We're optional support after that, not a permanent fixture.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Our success metric is your team running this without us. We train as we build. When we're done, you run independently. We're optional support after that.
                 </p>
               </Card>
 
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Puzzle className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Strategy Built for Your Reality</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  We map your competitive position, team capacity, and stakeholder dynamics first. Then we design a strategy that fits your reality—not someone else's playbook.
                 </p>
               </Card>
 
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Database className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Data Before Assumptions</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  If your data is fragmented, we fix that first. No strategy from guesswork. Clear visibility into what's working before we recommend changes.
                 </p>
               </Card>
 
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Handshake className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                   <h3 className="text-lg font-semibold leading-tight">Handoff That Fits How You Work</h3>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, unified measurement systems—built so your team (or agency) can actually use it.
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[65ch]">
+                  Complete documentation, clear processes, unified measurement systems—built so your team (or agency) can actually use it.
                 </p>
               </Card>
             </div>
@@ -372,7 +383,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      This ensures you get direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
+                      Direct founder involvement, not a junior team executing a playbook. When strategy needs deep understanding, scale kills quality.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -392,7 +403,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, your team runs independently. We're optional support after that, not a permanent fixture.
+                      Our success metric is your team running this without us. We train as we build. When we're done, you run independently. We're optional support after that.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -412,7 +423,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Templated frameworks fail because they ignore what makes you different. We spend the first two weeks mapping your competitive position, team capacity, and stakeholder dynamics. Then we design a strategy that fits your reality—not someone else's playbook.
+                      We map your competitive position, team capacity, and stakeholder dynamics first. Then we design a strategy that fits your reality—not someone else's playbook.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -432,7 +443,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      If your data is fragmented or missing, we fix that first. We don't create strategy from guesswork. You'll get clear visibility into what's working before we recommend what to change.
+                      If your data is fragmented, we fix that first. No strategy from guesswork. Clear visibility into what's working before we recommend changes.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -452,7 +463,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Whether you're running lean, working with an agency, or building internal, we design the handoff for your specific situation. Complete documentation, clear processes, unified measurement systems—built so your team (or agency) can actually use it.
+                      Complete documentation, clear processes, unified measurement systems—built so your team (or agency) can actually use it.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -582,24 +593,29 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <section className="py-16 sm:py-20 bg-muted">
-          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground mb-8">
-              Book a 30-minute call. We'll talk about where you are, where you need to be, and whether this makes sense for you—no pitch, no pressure.
-            </p>
-            <Button asChild size="lg" className="font-semibold btn-hover-lift">
-              <a
-                href="https://cal.com/pattern-growth/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 mx-auto w-fit"
-              >
-                Schedule a Call
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
-            </Button>
+          <div className="mx-auto max-w-3xl px-6 lg:px-8">
+            <Card className="p-8 sm:p-10 text-center border-2 border-primary/20">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-[65ch] mx-auto">
+                Book a 30-minute call. We'll talk about where you are, where you need to be, and whether this makes sense for you—no pitch, no pressure.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
+                <GetStartedButton />
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg"
+                  className="font-semibold"
+                >
+                  <Link href="/process" className="flex items-center gap-2">
+                    See our process
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+              </div>
+            </Card>
           </div>
         </section>
 
