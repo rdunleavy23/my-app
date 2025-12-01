@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
@@ -20,7 +19,7 @@ interface LogoProps {
 }
 
 export default function Logo({ className = "", size }: LogoProps) {
-  const imgRef = useRef<HTMLImageElement | null>(null)
+  const imgRef = useRef<HTMLImageElement>(null)
   const { theme, resolvedTheme } = useTheme()
   // Size mappings following best practices:
   // - Logo should be 70-85% of navbar height for optimal visibility
@@ -44,10 +43,9 @@ export default function Logo({ className = "", size }: LogoProps) {
 
   // Diagnostic logging for logo color debugging
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined' || !imgRef.current) return
 
-    const img = document.querySelector('img[alt="Pattern Growth"]') as HTMLImageElement | null
-    if (!img) return
+    const img = imgRef.current
     const html = document.documentElement
     
     // Log 1: Image properties
@@ -118,12 +116,13 @@ export default function Logo({ className = "", size }: LogoProps) {
       aria-label="Pattern Growth homepage"
     >
       {/* Logo is dark teal (#3E5661 - Primary). Dark mode uses CSS filter to invert and adjust to golden (#FFBF5E) for visibility. */}
-      <Image
+      <img
+        ref={imgRef}
         src="/patterngrowth-full-logo.png"
         alt="Pattern Growth"
         width={280}
         height={56}
-        priority
+        fetchPriority="high"
         className={cn(
           sizeClasses,
           "w-auto transition-all duration-200",
@@ -131,10 +130,6 @@ export default function Logo({ className = "", size }: LogoProps) {
           "max-w-full",
           "object-contain"
         )}
-        onError={(e) => {
-          console.error('[Logo] Failed to load PNG, trying SVG fallback')
-          // Fallback handled via Next.js Image component - will try SVG if PNG fails
-        }}
       />
     </Link>
   )
