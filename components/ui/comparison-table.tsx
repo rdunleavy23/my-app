@@ -68,7 +68,7 @@ export function ComparisonTable({ columns, rows, className }: ComparisonTablePro
         ref={scrollContainerRef}
         className={cn(
           "overflow-x-auto scrollbar-hide",
-          // Only show gradient fade when user hasn't scrolled yet
+          // Show gradient fade hint when user hasn't scrolled yet (mobile only via CSS)
           !hasScrolled && "scroll-fade-right"
         )}
       >

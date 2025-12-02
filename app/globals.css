@@ -584,7 +584,7 @@ html:not(.dark) body { background: var(--background); }
   display: none;
 }
 
-/* Gradient fade for scrollable content */
+/* Gradient fade for scrollable content - mobile only */
 .scroll-fade-right {
   position: relative;
 }
@@ -599,6 +599,13 @@ html:not(.dark) body { background: var(--background); }
   background: linear-gradient(to left, var(--background), transparent);
   pointer-events: none;
   z-index: 1;
+}
+
+/* Hide gradient on desktop (md: 768px+) */
+@media (min-width: 768px) {
+  .scroll-fade-right::after {
+    display: none;
+  }
 }
 
 .dark .scroll-fade-right::after {
