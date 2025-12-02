@@ -1,13 +1,11 @@
 // app/process/page.tsx
 import type { Metadata } from "next"
-import { ArrowRight, ArrowDown, FileText, Settings, Rocket } from "lucide-react"
+import { FileText, Settings, Rocket, Search, Compass, MessageSquare, BarChart3, BookOpen, Route } from "lucide-react"
 import { GetStartedButton } from "@/components/ui/get-started-button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { createServiceSchema, createWebPageSchema, createFAQSchema } from "@/lib/schemas"
-import { Framework5Cs } from "@/components/process/framework-5cs"
-import { STPFramework } from "@/components/process/framework-stp"
-import { FourPsGrid } from "@/components/process/framework-4ps"
-import { DeliverablesList } from "@/components/process/deliverables-list"
+import { ProcessPhasesMobile } from "@/components/process/process-phases-mobile"
+import { ProcessPhasesDesktop } from "@/components/process/process-phases-desktop"
 import {
   heroContent,
   processSections,
@@ -39,10 +37,20 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
-const frameworkComponents = {
-  "5cs": Framework5Cs,
-  "stp": STPFramework,
-  "4ps": FourPsGrid
+// Create serializable version of sections for client components
+const serializableSections = processSections.map(section => ({
+  id: section.id,
+  number: section.number,
+  title: section.title,
+  timeline: section.timeline,
+  intro: section.intro,
+  subsections: section.subsections,
+  deliverables: section.deliverables
+}))
+
+const serializableAdditionalSubsections = {
+  infrastructure: additionalSubsections.infrastructure,
+  transfer: additionalSubsections.transfer
 }
 
 export default function ProcessPage() {
@@ -112,174 +120,91 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* Section Overview */}
-      <section className="py-12 md:py-16 bg-tertiary/30">
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12">
-            Our Three-Section Process
+      {/* What We Deliver */}
+      <section className="py-12 md:py-16 bg-background border-t">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4">
+            What We Deliver
           </h2>
+          <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Every engagement is custom, but these are the core elements we build together.
+          </p>
 
-          {/* Desktop: Horizontal flow */}
-          <div className="hidden md:flex items-start gap-4">
-            {processSections.map((section, idx) => (
-              <>
-                <Card key={section.id} className="flex-1 bg-background border-primary/20">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-lg font-bold text-primary">
-                          {section.number}
-                        </span>
-                      </div>
-                      <div>
-                        <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                          {section.timeline}
-                        </p>
-                        <h3 className="text-lg font-semibold">
-                          {section.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      {section.framework?.description || section.intro.slice(0, 100) + "..."}
-                    </p>
-                  </CardContent>
-                </Card>
-                {idx < processSections.length - 1 && (
-                  <ArrowRight key={`arrow-${idx}`} className="flex-shrink-0 mt-12 text-primary" />
-                )}
-              </>
-            ))}
-          </div>
-
-          {/* Mobile: Vertical stack */}
-          <div className="md:hidden space-y-6">
-            {processSections.map((section, idx) => (
-              <>
-                <Card key={section.id} className="bg-background border-primary/20">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <span className="text-lg font-bold text-primary">
-                          {section.number}
-                        </span>
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                          {section.timeline}
-                        </p>
-                        <h3 className="text-lg font-semibold mb-2">
-                          {section.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {section.framework?.description || section.intro.slice(0, 100) + "..."}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {idx < processSections.length - 1 && (
-                  <div key={`arrow-mobile-${idx}`} className="flex justify-center">
-                    <ArrowDown className="h-6 w-6 text-primary" />
-                  </div>
-                )}
-              </>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Search,
+                title: "Funnel Analysis",
+                description: "We analyze your existing data to understand what's working, what's not, and where the real opportunities are."
+              },
+              {
+                icon: Compass,
+                title: "Custom Growth Strategy",
+                description: "A data-driven plan tailored to your business, capacity, and long-term goals. No borrowed templates."
+              },
+              {
+                icon: MessageSquare,
+                title: "Positioning & Messaging",
+                description: "Clarity on who you serve, why they choose you, and how to communicate it everywhere."
+              },
+              {
+                icon: BarChart3,
+                title: "Measurement Framework",
+                description: "The metrics that matter and a system for tracking what's driving revenue."
+              },
+              {
+                icon: BookOpen,
+                title: "Playbooks & Documentation",
+                description: "Everything gets documented so you can execute independently after the sprint."
+              },
+              {
+                icon: Route,
+                title: "Implementation Plan",
+                description: "A realistic plan for putting strategy into action, based on your capacity."
+              }
+            ].map((service, idx) => (
+              <div 
+                key={idx} 
+                className="flex gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-muted/30 transition-all"
+              >
+                <div className="flex-shrink-0">
+                  <service.icon className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section Details */}
-      {processSections.map((section) => {
-        const FrameworkComponent = section.framework
-          ? frameworkComponents[section.framework.id]
-          : null
+      {/* Phase Details Section */}
+      <section className="bg-tertiary/30">
+        <div className="py-8 md:py-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2">
+            Our Three-Phase Process
+          </h2>
+          <p className="text-center text-muted-foreground text-sm md:text-base max-w-xl mx-auto px-4">
+            Eight weeks from kickoff to ownership transfer
+          </p>
+        </div>
 
-        return (
-          <section key={section.id} className="py-16 md:py-24 bg-background">
-            <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-              {/* Section Header */}
-              <div className="mb-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">
-                      {section.number}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-sm uppercase tracking-wide text-muted-foreground">
-                      Section {section.number} · {section.timeline}
-                    </p>
-                    <h2 className="text-3xl md:text-4xl font-semibold">
-                      {section.title}
-                    </h2>
-                  </div>
-                </div>
+        {/* Mobile: Swipeable stepper experience */}
+        <ProcessPhasesMobile 
+          sections={serializableSections}
+          additionalSubsections={serializableAdditionalSubsections}
+        />
 
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  {section.intro}
-                </p>
-              </div>
-
-              {/* Subsections */}
-              <div className="space-y-12">
-                {section.subsections.map((subsection, idx) => (
-                  <div key={idx}>
-                    <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                      {subsection.heading}
-                    </h3>
-                    <div className="space-y-4 text-muted-foreground">
-                      {subsection.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx}>{p}</p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-
-                {/* Framework Visualization */}
-                {FrameworkComponent && (
-                  <div className="mt-12">
-                    <FrameworkComponent />
-                  </div>
-                )}
-
-                {/* Additional subsections for Section 3 */}
-                {section.id === "build-the-bridge" && (
-                  <>
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                        {additionalSubsections.infrastructure.heading}
-                      </h3>
-                      <div className="space-y-4 text-muted-foreground">
-                        {additionalSubsections.infrastructure.paragraphs.map((p, idx) => (
-                          <p key={idx}>{p}</p>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                        {additionalSubsections.transfer.heading}
-                      </h3>
-                      <div className="space-y-4 text-muted-foreground">
-                        {additionalSubsections.transfer.paragraphs.map((p, idx) => (
-                          <p key={idx}>{p}</p>
-                        ))}
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-
-              {/* Deliverables */}
-              <DeliverablesList items={section.deliverables} />
-            </div>
-          </section>
-        )
-      })}
+        {/* Desktop: Scroll-linked sidebar with full content */}
+        <div className="pb-16">
+          <ProcessPhasesDesktop 
+            sections={serializableSections}
+            additionalSubsections={serializableAdditionalSubsections}
+          />
+        </div>
+      </section>
 
       {/* What You Own Section */}
       <section className="py-16 md:py-24 bg-tertiary/30">

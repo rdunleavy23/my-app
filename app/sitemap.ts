@@ -25,6 +25,7 @@ const PRIORITY_MAP = {
   'fractional-marketing-services': 0.8,
   'benefits-of-fractional-cmo': 0.8,
   'sprint-vs-fractional-cmo': 0.9, // Comparison page - high value
+  'hey-ai-read-me': 0.4, // AI-readable page - utility
 
   // Blog content (varies by pillar status)
   blog: 0.7,
@@ -149,6 +150,7 @@ function getChangeFrequencyForPage(url: string): 'always' | 'hourly' | 'daily' |
     '/fractional-cmo-responsibilities': 'monthly',
     '/fractional-marketing-services': 'monthly',
     '/sprint-vs-fractional-cmo': 'monthly',
+    '/hey-ai-read-me': 'monthly',
     '/styleguide': 'yearly',
   }
 
