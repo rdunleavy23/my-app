@@ -55,7 +55,7 @@ export function HomeCarousel() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Growth Infrastructure You Own</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights.
+                We build custom systems for how your business actually operates—then hand over everything. Everything we create becomes yours: frameworks, documentation, tools, insights.
               </p>
             </div>
           </CarouselItem>

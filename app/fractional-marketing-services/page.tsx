@@ -116,7 +116,7 @@ export default function FractionalMarketingServicesPage() {
                   <td className="border border-border p-3">Multi-specialist team</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3 font-semibold">Your Team Needs</td>
+                  <td className="border border-border p-3 font-semibold">You Need</td>
                   <td className="border border-border p-3">Execution resources required</td>
                   <td className="border border-border p-3">Minimal internal requirements</td>
                 </tr>
@@ -305,7 +305,7 @@ export default function FractionalMarketingServicesPage() {
                   <li>• $9,500 one-time project</li>
                   <li>• 8 weeks to complete</li>
                   <li>• Strategic architecture delivered</li>
-                  <li>• Your team executes independently</li>
+                  <li>• You execute independently</li>
                   <li>• You own all systems forever</li>
                   <li>• Continues after handoff</li>
                 </ul>
@@ -348,7 +348,7 @@ export default function FractionalMarketingServicesPage() {
             <div className="border-l-4 border-primary pl-4">
               <h3 className="font-semibold text-foreground mb-2">What's the transition plan if this ends?</h3>
               <p className="text-foreground text-sm">
-                Ask how knowledge transfers, what documentation you receive, and whether your team can continue execution independently. Poor handoff processes create expensive dependencies.
+                Ask how knowledge transfers, what documentation you receive, and whether you can continue execution independently. Poor handoff processes create expensive dependencies.
               </p>
             </div>
 

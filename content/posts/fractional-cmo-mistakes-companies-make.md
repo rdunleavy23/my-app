@@ -566,7 +566,7 @@ Based on your past experience, current circumstances, and future goals, we work 
 We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything.
 
 **Mistakes avoided:**
-- Execution by your team (no dependency)
+- Execution by you (no dependency)
 - Complete ownership (no ongoing fees)
 - Fixed scope and timeline (no scope creep)
 

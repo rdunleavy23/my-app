@@ -61,7 +61,7 @@ export default function FractionalCMOServicesPage() {
       name: "What do you get from Pattern Growth's fractional CMO service alternative?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You receive complete growth strategy built from your data, marketing playbooks your team can execute, custom measurement systems, channel frameworks, positioning documents, and full operational training. Everything transfers to you with complete ownership after 8 weeks."
+        text: "You receive complete growth strategy built from your data, marketing playbooks you can execute, custom measurement systems, channel frameworks, positioning documents, and full operational training. Everything transfers to you with complete ownership after 8 weeks."
       }
     }
   ]);

@@ -21,7 +21,7 @@ export function FeaturesSectionWithHoverEffects() {
     {
       title: "Growth Infrastructure You Own",
       description:
-        "We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights.",
+        "We build custom systems for how your business actually operates—then hand over everything. Everything we create becomes yours: frameworks, documentation, tools, insights.",
       icon: <IconEaseInOut />,
     },
     {
@@ -49,7 +49,7 @@ export function FeaturesSectionWithHoverEffects() {
     {
       title: "Built to Transfer, Not Keep You Dependent",
       description:
-        "Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.",
+        "Our success metric isn't keeping you on retainer—it's you running this without us. We build custom systems and train as we go so knowledge transfers naturally. When we're done, you don't need us. Period.",
       icon: <IconAdjustmentsBolt />,
     },
     {

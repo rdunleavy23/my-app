@@ -451,7 +451,7 @@ Example: At [Company], we inherited a paid ads agency delivering $2,400 CAC vs $
 
 **Good answer:**
 
-"AI and martech should amplify your team, not replace strategy. Within typical budgets, I focus on:
+"AI and martech should amplify your efforts, not replace strategy. Within typical budgets, I focus on:
 
 **AI for efficiency:**
 - ChatGPT/Claude for content briefs and research (saves 5-10 hours/week)
@@ -711,7 +711,7 @@ Misaligned communication styles cause friction.
 **Detailed updates:** Email (creates record)
 **Brainstorming:** Whiteboard sessions (in-person or virtual)
 
-I'm not a 24/7 Slack person—I batch communications twice daily to protect deep work time. For urgent items, text me. I prefer fewer, focused meetings over constant check-ins. What's your team's communication culture?"
+I'm not a 24/7 Slack person—I batch communications twice daily to protect deep work time. For urgent items, text me. I prefer fewer, focused meetings over constant check-ins. What's your communication culture?"
 
 **Red flags:**
 
@@ -842,7 +842,7 @@ You should own everything when they leave.
 
 **30-day transition period:**
 - Complete documentation handover
-- Two training sessions with your team
+- Training sessions included
 - Vendor introductions and relationship transfer
 - Access to all strategic files and frameworks
 
@@ -911,8 +911,8 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - Communication style impressions
 - Cultural fit observations
 
-**Involve your team:**
-- Include marketing team members
+**Involve key stakeholders:**
+- Include anyone who will execute
 - Get their feedback on collaboration fit
 - Assess communication style match
 
@@ -961,7 +961,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 
 **Interview goal:** Distinguish executive-level fractional CMOs from marketing generalists rebranding themselves with inflated titles.
 
-Take 60-90 minutes. Ask follow-ups. Involve your team. Check references.
+Take 60-90 minutes. Ask follow-ups. Involve key stakeholders. Check references.
 
 A $120K-$180K investment deserves thorough vetting.
 

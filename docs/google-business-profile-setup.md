@@ -69,7 +69,7 @@ Additional Areas: Bay Area, Silicon Valley, Remote Services
 ```
 "Pattern Growth delivers CMO-level marketing strategy through focused 8-week sprints. We help growth-stage companies ($1-5M revenue) build complete marketing infrastructure—strategic positioning, measurement systems, and executable playbooks—without ongoing consulting dependency.
 
-Our project-based approach means you own everything we create: dashboards, frameworks, and processes your team can run independently. No monthly retainers, no long-term commitments, just strategic clarity delivered fast.
+Our project-based approach means you own everything we create: dashboards, frameworks, and processes you can run independently. No monthly retainers, no long-term commitments, just strategic clarity delivered fast.
 
 Services include:
 • Growth strategy development
@@ -92,7 +92,7 @@ Fractional CMO Alternative
 "Project-based strategic consulting without ongoing retainers. Get CMO-level thinking delivered as a fixed-scope engagement."
 
 Marketing Strategy Consulting
-"Build marketing infrastructure your team can actually run. Strategic frameworks, dashboards, and processes designed for independence."
+"Build marketing infrastructure you can actually run. Strategic frameworks, dashboards, and processes designed for independence."
 ```
 
 #### **2. Request Reviews**
@@ -124,7 +124,7 @@ Founder, Pattern Growth
 #### **3. Respond to All Reviews**
 - **Positive reviews**: Thank them and mention something specific
 - **Negative reviews**: Apologize and offer to make it right
-- **Response template**: "Thank you for your feedback. We're glad the [specific outcome] helped your team achieve [specific goal]."
+- **Response template**: "Thank you for your feedback. We're glad the [specific outcome] helped you achieve [specific goal]."
 
 ---
 

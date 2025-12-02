@@ -87,7 +87,7 @@ export function Features() {
                                     </div>
                                     <div className="space-y-2">
                                         <h2 className="text-lg font-medium text-foreground transition">Growth Infrastructure You Own</h2>
-                                        <p className="text-foreground">We build custom systems for how your business actually operates—then transfer everything to you. Everything we create becomes yours: frameworks, documentation, tools, insights.</p>
+                                        <p className="text-foreground">We build custom systems for how your business actually operates—then hand over everything. Everything we create becomes yours: frameworks, documentation, tools, insights.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -127,7 +127,7 @@ export function Features() {
                                     </div>
                                     <div className="space-y-2">
                                         <h2 className="text-lg font-medium transition">Built to Transfer, Not Keep You Dependent</h2>
-                                        <p className="text-foreground">Our success metric isn't keeping you on retainer—it's your team running this without us. We train as we build so knowledge transfers naturally. When we're done, you don't need us. Period.</p>
+                                        <p className="text-foreground">Our success metric isn't keeping you on retainer—it's you running this without us. We build custom systems and train as we go so knowledge transfers naturally. When we're done, you don't need us. Period.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">

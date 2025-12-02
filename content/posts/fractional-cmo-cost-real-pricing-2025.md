@@ -170,7 +170,7 @@ Here's what shocked us when analyzing the true total cost of fractional CMO enga
 
 ### Ongoing Operational Overhead
 
-**Monthly time investment from your team**:
+**Monthly time investment from you**:
 - Leadership team meetings: 4-6 hours/month
 - Agency briefings and coordination: 2-4 hours/month
 - Report reviews and strategic discussions: 2-3 hours/month
@@ -594,7 +594,7 @@ They have execution capability—they're missing frameworks, measurement systems
 
 - Clear positioning and ICP definition
 - Unified measurement dashboard with real-time visibility
-- Campaign playbooks your team can run
+- Campaign playbooks you can run
 - Attribution models showing what drives revenue
 - Complete process documentation
 
@@ -727,7 +727,7 @@ Strategy sprints (project-based strategic consulting) typically cost $9,500-$25K
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
 
 **Ready to understand what you actually need?**
 

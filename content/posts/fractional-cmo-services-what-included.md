@@ -124,7 +124,7 @@ Fractional CMOs install the measurement and operational infrastructure.
 - Attribution modeling
 
 **What this looks like:**
-They don't build the dashboard themselves—they define what metrics matter, how to track them, and then oversee the implementation (often by your team or a contractor).
+They don't build the dashboard themselves—they define what metrics matter, how to track them, and then oversee the implementation (often by you or a contractor).
 
 ---
 
@@ -202,7 +202,7 @@ Fractional CMOs work 10-20 hours/month. They can't be hands-on with daily operat
 - Handle urgent tactical requests
 
 **What they DO:**
-- Set up processes so your team can handle daily operations
+- Set up processes so you can handle daily operations
 - Provide strategic guidance at weekly or biweekly meetings
 - Step in for major decisions or course corrections
 
@@ -322,7 +322,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - Measurement dashboard template
 - Campaign playbooks for your top channels
 
-**After 8 weeks:** Everything a fractional CMO would create in months 1-4, but you own it completely. No monthly retainer. Your team can execute independently or bring in agencies for specific channels.
+**After 8 weeks:** Everything a fractional CMO would create in months 1-4, but you own it completely. No monthly retainer. You can execute independently or bring in agencies for specific channels.
 
 **Compare the models:**
 - **Pattern Growth sprint**: $9,500-$12,500 one-time, complete ownership
@@ -342,7 +342,7 @@ If a fractional CMO says they handle both strategy AND execution, they're either
 - Not actually providing executive-level strategic work
 - Charging you executive rates for tactical work
 
-**Good service description:** "I provide strategic leadership and oversee your team/agencies who handle execution."
+**Good service description:** "I provide strategic leadership and oversee you/your agencies who handle execution."
 
 **Red flag:** "I'll handle your entire marketing operation."
 
@@ -360,7 +360,7 @@ If a fractional CMO says they handle both strategy AND execution, they're either
 
 If they're selling you strategic services without asking who will execute, they're setting you up for failure.
 
-**Good fractional CMO:** "Who's on your team? Do you have agencies? If not, we'll need to address execution capability."
+**Good fractional CMO:** "What's your execution capacity? Do you have agencies? If not, we'll need to address that."
 
 **Red flag:** "I'll create the strategy and you'll figure out execution."
 
@@ -392,9 +392,9 @@ Understand the gap between strategy and execution.
 
 Critical question. You need explicit documentation transfer.
 
-**5. "Who will be doing the actual work? Your team or mine?"**
+**5. "Who will be doing the actual work?"**
 
-If they say "your team or agencies," make sure you have that capability before signing.
+If they say "you or agencies," make sure you have that capability before signing.
 
 **6. "What's NOT included in your services?"**
 
@@ -412,7 +412,7 @@ The "not included" list should be longer than the "included" list. If everything
 
 ✅ Your budget supports $60K-$120K for 6-12 months
 
-✅ You want someone to lead your team/agencies but not do the work
+✅ You want someone to lead you/your agencies but not do the work
 
 ### You DON'T need fractional CMO services if:
 
@@ -472,7 +472,7 @@ If you need execution, hire an agency. If you need strategic architecture you ow
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
 
 **Get clarity on what services you actually need:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

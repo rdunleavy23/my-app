@@ -28,9 +28,9 @@ export const APPROACH_ITEMS: ApproachItem[] = [
   },
   {
     key: "ownership",
-    title: "Owned by Your Team",
+    title: "Owned by You",
     body: [
-      "Your team gets trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just capability that stays with you."
+      "You get trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just custom systems that stay with you."
     ],
     how: [],
     deliverables: [],

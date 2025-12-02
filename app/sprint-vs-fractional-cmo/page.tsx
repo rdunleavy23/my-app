@@ -353,7 +353,7 @@ export default function SprintVsFractionalCMOPage() {
                     <div>
                       <div className="font-semibold mb-2">Months 3-12:</div>
                       <div className="text-sm text-muted-foreground">
-                        $0/month — Your team runs it independently
+                        $0/month — You run it independently
                       </div>
                     </div>
 
@@ -563,7 +563,7 @@ export default function SprintVsFractionalCMOPage() {
                       <p className="text-sm text-muted-foreground">
                         <strong>Why:</strong> You need diagnostic work and strategic architecture, not ongoing
                         management. The sprint builds a measurement system to identify bottlenecks, clarifies
-                        positioning, and creates executable playbooks. Your team can execute once they have direction.
+                        positioning, and creates custom playbooks. You can execute once you have direction.
                       </p>
                       <p className="text-sm font-semibold text-primary mt-2">
                         Result: Strategic clarity in 8 weeks, complete ownership forever
@@ -574,7 +574,7 @@ export default function SprintVsFractionalCMOPage() {
                       <p className="text-sm text-muted-foreground">
                         <strong>Why not:</strong> You'll pay for 6 months of advisory before getting the same
                         diagnostic insights. The strategic architecture might never be fully documented or
-                        transferred to your team.
+                        transferred to you.
                       </p>
                     </div>
                   </div>
@@ -593,8 +593,8 @@ export default function SprintVsFractionalCMOPage() {
                     <div className="space-y-2">
                       <Badge variant="default" className="mb-2">Best Fit: Strategy Sprint</Badge>
                       <p className="text-sm text-muted-foreground">
-                        <strong>Why:</strong> Your team doesn't need management—they need frameworks, playbooks,
-                        and measurement systems. The sprint delivers the strategic foundation that empowers them
+                        <strong>Why:</strong> You don't need management—you need custom frameworks, playbooks,
+                        and measurement systems. The sprint delivers the strategic foundation that empowers you
                         to execute confidently and independently.
                       </p>
                       <p className="text-sm font-semibold text-primary mt-2">
@@ -723,7 +723,7 @@ export default function SprintVsFractionalCMOPage() {
                       <div>
                         <div className="font-semibold">Campaign Playbooks</div>
                         <div className="text-sm text-muted-foreground">
-                          Step-by-step templates your team or agencies can execute
+                          Step-by-step templates you or your agencies can execute
                         </div>
                       </div>
                     </li>
@@ -748,9 +748,9 @@ export default function SprintVsFractionalCMOPage() {
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                       <div>
-                        <div className="font-semibold">Team Training</div>
+                        <div className="font-semibold">Training Included</div>
                         <div className="text-sm text-muted-foreground">
-                          Your team knows how to use everything independently
+                          You know how to use everything independently
                         </div>
                       </div>
                     </li>

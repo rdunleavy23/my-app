@@ -68,7 +68,7 @@ export default function AboutPage() {
   const williamSchema = createPersonSchema({
     name: "William",
     jobTitle: "Growth Strategist & Partner", 
-    description: "William has spent his career helping growth-stage teams find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confident your team feels once they own the plan.",
+    description: "William has spent his career helping growth-stage companies find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confidently you can run the plan once you own it.",
     image: "https://www.patterngrowth.com/team/william.png"
   });
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
     {
       name: "William",
       role: "Partner",
-      bio: "William has spent his career helping growth-stage teams find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confident your team feels once they own the plan.",
+      bio: "William has spent his career helping growth-stage companies find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confidently you can run the plan once you own it.",
       photo: "/team/william.png",
     },
     {
@@ -103,7 +103,7 @@ export default function AboutPage() {
     {
       icon: Target,
       title: "Strategy You Can Actually Use",
-      description: "We build frameworks your team can execute, not theoretical plans that sit in a drawer."
+      description: "We build custom frameworks you can execute, not theoretical plans that sit in a drawer."
     },
     {
       icon: Zap,
@@ -179,7 +179,7 @@ export default function AboutPage() {
             <div className="w-20 h-px bg-primary mx-auto" />
             
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Two growth strategists who turn C-suite vision into strategy your team can actually execute.
+              Two growth strategists who turn C-suite vision into custom strategy you can actually execute.
             </p>
             
             <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium mt-6">
@@ -309,7 +309,7 @@ export default function AboutPage() {
               Ready to Get Started?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Let's talk about whether an 8-week sprint makes sense for your team.
+              Let's talk about whether an 8-week sprint makes sense for you.
             </p>
           </div>
           

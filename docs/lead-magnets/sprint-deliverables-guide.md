@@ -22,7 +22,7 @@ This document shows you exactly what gets built during an 8-week strategy sprint
 - Documents live in your Google Drive
 - Dashboard deployed to your account (1 year access)
 - Templates you can reuse forever
-- Training so your team runs it independently
+- Training so you run it independently
 
 No mystery. No "it depends." This is what happens.
 
@@ -41,7 +41,7 @@ No mystery. No "it depends." This is what happens.
 
 **Format**: Google Doc, editable
 **Example output**: 8-12 pages
-**Your team uses this for**: Sales enablement, website copy, campaign targeting
+**You use this for**: Sales enablement, website copy, campaign targeting
 
 ---
 
@@ -55,7 +55,7 @@ No mystery. No "it depends." This is what happens.
 - Drop-off analysis
 
 **Format**: Miro board + Google Doc
-**Your team uses this for**: Content planning, campaign sequencing, conversion optimization
+**You use this for**: Content planning, campaign sequencing, conversion optimization
 
 ---
 
@@ -69,7 +69,7 @@ No mystery. No "it depends." This is what happens.
 - Pipeline velocity analysis
 
 **Format**: Google Sheets + Diagram
-**Your team uses this for**: Forecasting, budget allocation, team alignment
+**You use this for**: Forecasting, budget allocation, team alignment
 
 ---
 
@@ -85,7 +85,7 @@ No mystery. No "it depends." This is what happens.
 - Quick-win opportunities (what to test first)
 
 **Format**: Google Sheets, interactive
-**Your team uses this for**: Budget decisions, campaign planning, growth experiments
+**You use this for**: Budget decisions, campaign planning, growth experiments
 
 ---
 
@@ -107,7 +107,7 @@ No mystery. No "it depends." This is what happens.
 - Conversion tracking
 
 **Format**: Google Docs, copy-paste ready
-**Your team uses this for**: Campaign execution, agency briefing, consistent output
+**You use this for**: Campaign execution, agency briefing, consistent output
 
 ---
 
@@ -121,7 +121,7 @@ No mystery. No "it depends." This is what happens.
 - SEO keyword map
 
 **Format**: Google Sheets + Docs
-**Your team uses this for**: Content creation, sales conversations, website updates
+**You use this for**: Content creation, sales conversations, website updates
 
 ---
 
@@ -138,7 +138,7 @@ No mystery. No "it depends." This is what happens.
 
 **Platform**: Looker Studio (free) or Mode/Tableau (if you have it)
 **Access**: Deployed to your account, yours forever (we maintain for 1 year)
-**Your team uses this for**: Weekly standups, board reporting, decision-making
+**You use this for**: Weekly standups, board reporting, decision-making
 
 **Note**: This is the most valuable deliverable. You'll use it weekly.
 
@@ -153,7 +153,7 @@ No mystery. No "it depends." This is what happens.
 - Data governance guide (who tracks what, where)
 
 **Format**: Google Sheets + Implementation doc
-**Your team uses this for**: Performance tracking, team accountability, optimization
+**You use this for**: Performance tracking, team accountability, optimization
 
 ---
 
@@ -167,7 +167,7 @@ No mystery. No "it depends." This is what happens.
 - Implementation roadmap (if changes needed)
 
 **Format**: Google Sheets with vendor comparisons
-**Your team uses this for**: Budget planning, tool decisions, vendor negotiations
+**You use this for**: Budget planning, tool decisions, vendor negotiations
 
 ---
 
@@ -194,7 +194,7 @@ No mystery. No "it depends." This is what happens.
 - What execs care about
 
 **Format**: Google Docs, video walkthroughs
-**Your team uses this for**: Onboarding, training, maintaining quality
+**You use this for**: Onboarding, training, maintaining quality
 
 ---
 
@@ -208,7 +208,7 @@ No mystery. No "it depends." This is what happens.
 - Quick wins flagged
 
 **Format**: Google Sheets, project plan
-**Your team uses this for**: Immediate next steps after sprint ends
+**You use this for**: Immediate next steps after sprint ends
 
 ---
 
@@ -221,20 +221,20 @@ No mystery. No "it depends." This is what happens.
 - Q&A and troubleshooting (1+ hour)
 
 **Format**: Live sessions + recordings
-**Your team uses this for**: Capability building, confidence, independence
+**You use this for**: Capability building, confidence, independence
 
 ---
 
 ## What You DON'T Get (Be Real)
 
 We're not building:
-- ❌ Fully executed campaigns (we build the playbooks, you/your team execute)
+- ❌ Fully executed campaigns (we build the playbooks, you execute)
 - ❌ A redesigned website (we provide messaging/content strategy)
 - ❌ Ongoing management (that's what fractional CMOs do)
 - ❌ Graphic design or video production
 - ❌ Salesforce/HubSpot buildouts (we design the logic, you/your ops person implements)
 
-**Why**: You want strategic architecture, not execution. We build the system so your team or agency can run it.
+**Why**: You want strategic architecture, not execution. We build the system so you or your agency can run it.
 
 ---
 

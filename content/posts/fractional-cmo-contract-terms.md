@@ -464,7 +464,7 @@ Don't sign until the terms are right.
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No complex contracts, no ongoing retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No complex contracts, no ongoing retainers, no dependency.*
 
 **Get clarity before you sign:**
 [Download our checklist](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

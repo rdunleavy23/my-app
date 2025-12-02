@@ -37,7 +37,7 @@ So you start looking for help. A fractional CMO. An agency. A consultant. Someon
 
 **Here's the problem**: Most companies hire based on what someone's *selling*, not what they actually *need*.
 
-A fractional CMO won't fix a broken positioning strategy. An agency can't execute when your ICP is unclear. A consultant can't install systems your team won't use.
+A fractional CMO won't fix a broken positioning strategy. An agency can't execute when your ICP is unclear. A consultant can't install systems you won't use.
 
 Before you spend $50K+ on the wrong solution, ask yourself these 8 diagnostic questions. They'll tell you what's *actually* broken—and what type of help will fix it.
 
@@ -141,7 +141,7 @@ This is the question most companies skip—and it costs them 6+ months and $50K+
 ### You Have an Execution Problem If:
 - You have clear strategy docs but they're not being implemented
 - Campaigns get started but never finished
-- Your team knows *what* to do but can't keep up
+- You know *what* to do but can't keep up
 - You're missing tactical skills (paid ads, SEO, content)
 - Projects sit in "in progress" for months
 
@@ -173,11 +173,11 @@ If it's **executional**: Hiring a strategist without hands-on help will just cre
 
 ---
 
-## Question 4: Does Your Team Execute Well When Given Clear Direction?
+## Question 4: Do You Execute Well When Given Clear Direction?
 
 Be honest.
 
-When you set a clear goal ("Launch this campaign by Friday"), does your team:
+When you set a clear goal ("Launch this campaign by Friday"), do you:
 - ✅ Execute independently and hit deadlines?
 - ⚠️ Need constant oversight and reminders?
 - ❌ Start strong but never finish?
@@ -328,7 +328,7 @@ Most companies don't ask this question until it's too late.
 - ✅ Complete ownership transfer
 - ✅ Documentation, playbooks, systems are yours
 - ✅ No ongoing dependency
-- ❌ Your team needs to execute independently
+- ❌ You need to execute independently
 
 **Model 2: Shared Ownership** (fractional CMO, advisor)
 - ⚠️ Strategy lives partially in their head
@@ -346,7 +346,7 @@ Most companies don't ask this question until it's too late.
 
 Do you have:
 - Complete documentation of strategic frameworks?
-- Playbooks your team can run independently?
+- Playbooks you can run independently?
 - Access to dashboards and systems?
 - Training on how to maintain and evolve the strategy?
 
@@ -580,7 +580,7 @@ Sometimes that's a $9,500 strategy sprint. Sometimes that's a $150K fractional C
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
 
 **Ready to diagnose what you actually need?**
 [Download our complete 15-question diagnostic](/lead-magnets/growth-diagnostic) or [schedule a 15-min call](https://cal.com/pattern-growth/30min).

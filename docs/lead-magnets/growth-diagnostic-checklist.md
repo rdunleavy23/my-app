@@ -76,7 +76,7 @@
 
 ## Section 3: Team & Execution Capability (20 points possible)
 
-**8. Does your team execute well when given clear direction?**
+**8. Do you execute well when given clear direction?**
 □ Yes, consistently (5)
 □ Hit or miss (3)
 □ Need constant oversight (1)
@@ -91,7 +91,7 @@
 □ Some skills, gaps exist (3)
 □ No, need everything outsourced (1)
 
-**11. Does your team understand the "why" behind campaigns?**
+**11. Do you understand the "why" behind campaigns?**
 □ Yes, strategic thinking exists (5)
 □ Sometimes (3)
 □ Just following orders (1)
@@ -153,7 +153,7 @@ Check all that apply (5 points each):
 **What you need:**
 - Strategic architecture (positioning, ICP, frameworks)
 - Unified measurement system (dashboard, attribution)
-- Executable playbooks for your team
+- Executable playbooks you can run
 - Complete ownership transfer
 
 **Best fit**: 8-week strategy sprint with full deliverables
@@ -222,4 +222,4 @@ This diagnostic helps you figure out what you actually need—even if that's not
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*

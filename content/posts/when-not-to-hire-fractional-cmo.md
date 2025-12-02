@@ -74,7 +74,7 @@ Fractional CMOs **optimize and lead** existing strategy. They don't build strate
 3. Go-to-market frameworks
 4. Measurement infrastructure
 
-**Then decide** if you need ongoing strategic leadership or if your team can execute independently.
+**Then decide** if you need ongoing strategic leadership or if you can execute independently.
 
 **Better approach**: 6-8 week [strategy sprint](/sprint-vs-fractional-cmo) → reassess whether you need fractional CMO
 
@@ -220,7 +220,7 @@ If you need results in 8-12 weeks, you'll hit month 3 right when they're just st
 - Week 1-2: Discovery and framework development
 - Week 3-5: Systems build
 - Week 6-7: Playbook creation
-- Week 8: Ownership transfer + your team executes immediately
+- Week 8: Ownership transfer + you execute immediately
 
 [Compare sprint vs fractional CMO →](/sprint-vs-fractional-cmo)
 
@@ -545,7 +545,7 @@ Use this checklist. If you can't check all boxes, you're not ready:
 ### Execution Capability
 - [ ] You have 3+ person marketing team OR work with agencies
 - [ ] Someone will execute the fractional CMO's strategic direction
-- [ ] Your team can operate without constant oversight
+- [ ] You can operate without constant oversight
 
 ### Budget & Timeline Reality
 - [ ] Budget approved for $60K-$120K over 6-12 months
@@ -676,7 +676,7 @@ Most companies aren't ready. They have strategic gaps, execution gaps, budget co
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
 
 **Get honest guidance on whether you're ready for a fractional CMO:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

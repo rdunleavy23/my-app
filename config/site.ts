@@ -6,7 +6,7 @@ export const siteConfig = {
   name: "Pattern Growth",
   url: "https://www.patterngrowth.com",
   description:
-    "We don't just design strategy. We operationalize it into systems your team can actually run.",
+    "We don't just design strategy. We operationalize it into custom systems you can actually run.",
   mainNav: [
     {
       title: "Services",

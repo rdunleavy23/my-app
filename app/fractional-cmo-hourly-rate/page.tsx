@@ -295,7 +295,7 @@ export default function FractionalCMOHourlyRatePage() {
             <div className="bg-muted p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-foreground mb-3">Internal Coordination Overhead</h3>
               <p className="text-foreground mb-3">
-                Part-time CMOs require your team to prepare materials, schedule meetings, brief them on context, and translate strategic guidance into execution. This coordination tax consumes 3-5 hours weekly of your internal team's time.
+                Part-time CMOs require you to prepare materials, schedule meetings, brief them on context, and translate strategic guidance into execution. This coordination tax consumes 3-5 hours weekly of your time.
               </p>
               <p className="text-sm text-muted-foreground italic">
                 Real cost: 150-250 hours annually of internal team time
@@ -441,7 +441,7 @@ export default function FractionalCMOHourlyRatePage() {
             <div className="border-l-4 border-primary pl-4">
               <h3 className="font-semibold text-foreground mb-2">Can my team execute independently after?</h3>
               <p className="text-foreground text-sm">
-                The true test: if the consultant disappeared tomorrow, could your team continue executing the strategy? If no, you're building dependency, not capability. Price that risk accordingly.
+                The true test: if the consultant disappeared tomorrow, could you continue executing the strategy? If no, you're building dependency, not capability. Price that risk accordingly.
               </p>
             </div>
           </div>
@@ -530,7 +530,7 @@ export default function FractionalCMOHourlyRatePage() {
         <section className="mb-16">
           <SEOCalloutBox
             title="See how an 8-week growth strategy sprint compares"
-            description="We rebuild positioning, measurement, and go-to-market in 8 weeks—then your team runs it. Compare the cost and deliverables against traditional fractional CMOs."
+            description="We rebuild positioning, measurement, and go-to-market in 8 weeks—then you run it. Compare the cost and deliverables against traditional fractional CMOs."
             href="/process"
           />
         </section>

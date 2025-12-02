@@ -104,7 +104,7 @@ Some fractional CMOs work on hourly rates instead of retainers, typically rangin
 
 ### Hidden Costs Nobody Mentions
 
-The monthly retainer is just the start of the true financial commitment. During the first one to two months, you'll face an onboarding period with a 2-4 week learning curve, requiring 8-12 hours of your team's time for systems access setup and knowledge transfer. This hidden cost typically represents $5,000-$10,000 in internal time that doesn't appear in the quoted retainer.
+The monthly retainer is just the start of the true financial commitment. During the first one to two months, you'll face an onboarding period with a 2-4 week learning curve, requiring 8-12 hours of your time for systems access setup and knowledge transfer. This hidden cost typically represents $5,000-$10,000 in internal time that doesn't appear in the quoted retainer.
 
 Monthly operational overhead continues throughout the engagement. Leadership meetings consume 4-6 hours per month, agency coordination requires 2-4 hours monthly, and report reviews take 2-3 hours each month. At executive rates, this hidden cost adds $1,200-$3,900 per month to your actual investment.
 
@@ -184,7 +184,7 @@ The model fails when companies want "marketing handled"—meaning they expect ex
 
 [Harvard Business Review warns](https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business) that generic solutions from past experiences often don't transfer well. You need explicit documentation of strategic frameworks, decision-making processes, vendor relationships, and campaign playbooks.
 
-A good answer sounds like: "All strategy frameworks, documentation, and dashboards become yours. I'll train your team to maintain them." A red flag sounds like: "You'll have access while we're working together..." This suggests you're renting access rather than building owned capability.
+A good answer sounds like: "All strategy frameworks, documentation, and dashboards become yours. I'll provide training so you can maintain them." A red flag sounds like: "You'll have access while we're working together..." This suggests you're renting access rather than building owned capability.
 
 **"What are your first 90 days vs months 6-12?"**
 
@@ -192,7 +192,7 @@ You want to see a clear ramp-up plan with specific deliverables. Month 1-2 shoul
 
 **"Who does the actual execution work?"**
 
-They should be crystal clear that fractional CMOs lead rather than execute. A good answer: "Your team or agencies execute. I lead, prioritize, and manage them." A red flag: "I can help with some content and campaigns..." This signals confusion about the strategic role versus tactical work.
+They should be crystal clear that fractional CMOs lead rather than execute. A good answer: "You or your agencies execute. I lead, prioritize, and manage." A red flag: "I can help with some content and campaigns..." This signals confusion about the strategic role versus tactical work.
 
 **"How do you measure success?"**
 
@@ -228,7 +228,7 @@ We document the gap between current state and desired state, then prioritize bas
 
 We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
 
-**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. No monthly retainer. No wondering what you'll own when the engagement ends. Everything documented, your team trained, ready to execute independently.
+**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. No monthly retainer. No wondering what you'll own when the engagement ends. Everything documented, training included, ready to execute independently.
 
 [See how the 3 A's Framework works →](/process)
 
@@ -282,7 +282,7 @@ The minimum viable budget is $60,000 for 6 months as a bare minimum, with $120,0
 
 [MarketingProfs reports](https://www.marketingprofs.com/cmp/dna/cmo/sa/) 3x-10x ROI for their fractional CMO engagements, but these results appear under specific conditions. Strong execution capability must exist, typically meaning a 3-5 person marketing team, established agencies for specialized work, and internal capacity to implement recommendations quickly.
 
-Strategic direction needs to be the primary need rather than foundational work. This means your team knows how to execute but lacks prioritization, multiple initiatives need coordination, and the board needs professional marketing representation.
+Strategic direction needs to be the primary need rather than foundational work. This means you know how to execute but lack prioritization, multiple initiatives need coordination, and the board needs professional marketing representation.
 
 Budget and timeline expectations must be realistic. Success requires $60,000-$120,000 over 6-12 months, accepting 3-4 month ramp-up time before seeing results, and aligning expectations with the fractional model's limitations.
 
@@ -406,7 +406,7 @@ Before hiring, take the diagnostic to understand what type of help you actually 
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
 
 **Get honest guidance on whether you need a fractional CMO or strategic architecture:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

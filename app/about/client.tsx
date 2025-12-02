@@ -19,8 +19,8 @@ export default function AboutClient() {
           Leaders set bold goals. Teams hustle to execute. Somewhere in between, momentum breaks.
         </p>
         <p>
-          Pattern Growth was created to close that gap. We don’t just design strategy.
-          We build frameworks, measurement systems, and processes your team can own long after we've stepped out.
+          Pattern Growth was created to close that gap. We don't just design strategy.
+          We build custom frameworks, measurement systems, and processes you can own long after we've stepped out.
         </p>
       </section>
 
@@ -32,8 +32,8 @@ export default function AboutClient() {
         </CardHeader>
         <CardContent className="text-muted-foreground">
           <ol className="list-decimal pl-5 space-y-2">
-            <li>Strategy should be usable. If it doesn’t fit into your team’s daily work, it won’t matter.</li>
-            <li>Growth should outlive consultants. Success means your team can keep moving without us.</li>
+            <li>Strategy should be usable. If it doesn't fit into your daily work, it won't matter.</li>
+            <li>Growth should outlive consultants. Success means you can keep moving without us.</li>
             <li>Clarity beats noise. The right decisions come from seeing the whole picture, not chasing every signal.</li>
           </ol>
         </CardContent>
@@ -54,9 +54,9 @@ export default function AboutClient() {
             <div className="space-y-2 text-muted-foreground">
               <h3 className="text-lg font-semibold text-foreground">William — Partner</h3>
               <p>
-                William has spent his career helping growth-stage teams find structure in the chaos of growth.
-                He believes strategy should be practical and usable, and he measures success by how confident
-                teams feel once they own the plan. Clients know him for turning ambitious goals into frameworks
+                William has spent his career helping growth-stage companies find structure in the chaos of growth.
+                He believes strategy should be practical and usable, and he measures success by how confidently
+                you can run the plan once you own it. Clients know him for turning ambitious goals into frameworks
                 that actually make sense.
               </p>
             </div>
@@ -76,7 +76,7 @@ export default function AboutClient() {
                 Ryan is driven by curiosity. He is usually the one asking the question that makes everyone pause and think.
                 His focus is on translating complex marketing challenges into clear next steps, and he has a reputation
                 for calling out when "more campaigns" isn't really the answer. His goal is always the same:
-                clarity that teams can run with.
+                clarity you can run with.
               </p>
             </div>
           </CardContent>
@@ -84,7 +84,7 @@ export default function AboutClient() {
 
         <p className="text-muted-foreground mt-4">
           Together, William and Ryan built Pattern Growth as the alternative to the CMO-for-hire model
-          and the agency treadmill: a project-based partner for leaders who want growth strategy their teams can actually run.
+          and the agency treadmill: a project-based partner for leaders who want growth strategy they can actually run.
         </p>
       </section>
     </main>

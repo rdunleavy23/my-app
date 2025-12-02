@@ -203,7 +203,7 @@ export default function BenefitsOfFractionalCMOPage() {
                 Fractional CMOs work with 3-5 companies simultaneously. When your competitor launches, your product breaks, or your campaign fails—they're not immediately available. You get scheduled time, not reactive support.
               </p>
               <p className="text-sm text-muted-foreground italic">
-                This works if your team handles execution and crisis management. It doesn't work if you need hands-on operational leadership.
+                This works if you handle execution and crisis management. It doesn't work if you need hands-on operational leadership.
               </p>
             </div>
 
@@ -230,7 +230,7 @@ export default function BenefitsOfFractionalCMOPage() {
             <div className="border-l-4 border-border pl-6">
               <h3 className="text-xl font-semibold text-foreground mb-3">Coordination Overhead</h3>
               <p className="text-foreground leading-relaxed mb-2">
-                Part-time consultants require your team to prepare materials, schedule meetings, brief on context, and translate strategic recommendations into tactical execution. This coordination tax consumes 3-5 hours weekly of internal bandwidth.
+                Part-time consultants require you to prepare materials, schedule meetings, brief on context, and translate strategic recommendations into tactical execution. This coordination tax consumes 3-5 hours weekly of internal bandwidth.
               </p>
               <p className="text-sm text-muted-foreground italic">
                 Factor this hidden cost: 150-250 internal hours annually supporting the fractional CMO relationship.
@@ -259,7 +259,7 @@ export default function BenefitsOfFractionalCMOPage() {
           <div className="bg-background p-6 rounded-lg mb-6">
             <p className="font-semibold text-foreground mb-4">You probably need architecture, not advisory, if:</p>
             <ul className="space-y-3 text-foreground">
-              <li>• Your team executes well but lacks strategic direction</li>
+              <li>• You execute well but lack strategic direction</li>
               <li>• Marketing data is scattered across platforms preventing decisions</li>
               <li>• Board asks questions you can't confidently answer</li>
               <li>• You need clarity in weeks, not quarters</li>

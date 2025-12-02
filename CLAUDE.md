@@ -860,7 +860,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Pattern Growth - Growth Strategy Consultancy",
-  description: "We operationalize marketing strategy into systems your team can run.",
+  description: "We operationalize marketing strategy into custom systems you can run.",
   keywords: ["growth strategy", "marketing operations", "B2B marketing"],
   authors: [{ name: "Pattern Growth" }],
   openGraph: {

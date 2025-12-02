@@ -458,7 +458,7 @@ export default function WhatIsFractionalCMO() {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• Fixed 8-week engagement</li>
                   <li>• Deliverables: positioning, measurement systems, playbooks</li>
-                  <li>• Ownership transfers to your team</li>
+                  <li>• Full ownership transfers to you</li>
                   <li>• Cost: $9,500 flat</li>
                 </ul>
               </div>
@@ -567,7 +567,7 @@ export default function WhatIsFractionalCMO() {
                   What&apos;s better than a fractional CMO?
                 </h3>
                 <p className="text-muted-foreground">
-                  For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, measurement systems, and campaign playbooks—enabling your team to execute independently instead of relying on continued consulting relationships.
+                  For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, measurement systems, and campaign playbooks—enabling you to execute independently instead of relying on continued consulting relationships.
                 </p>
               </div>
 

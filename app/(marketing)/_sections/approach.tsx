@@ -39,8 +39,8 @@ const APPROACH_SIMPLE = [
     body: ["We design a roadmap for your specific goals, accounting for your timeline and resources. You'll know exactly what to prioritize and when to scale."]
   },
   {
-    title: "Owned by Your Team",
-    body: ["Your team gets trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just capability that stays with you."]
+    title: "Owned by You",
+    body: ["You get trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just custom systems that stay with you."]
   }
 ] as const
 

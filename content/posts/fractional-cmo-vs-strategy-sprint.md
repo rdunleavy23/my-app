@@ -126,7 +126,7 @@ The answer depends on your timeline, budget constraints, and whether you need on
 
 3. **Ownership priority:** Do you want to own strategic infrastructure or rent ongoing advice?
 
-4. **Team capability:** Does your team need strategic direction or operational management?
+4. **Capability:** Do you need strategic direction or operational management?
 
 5. **Risk tolerance:** Can you afford 6-12 month commitment or prefer contained 8-week scope?
 
@@ -159,11 +159,11 @@ Fractional CMOs provide ongoing strategic advisory on monthly retainers (6-12+ m
 
 ### When would I choose fractional CMO over strategy sprint?
 
-Choose fractional CMO if you need ongoing operational management, vendor oversight, or executive representation in board meetings. Choose strategy sprint if you need strategic clarity fast and want your team to execute independently without continued consulting dependency.
+Choose fractional CMO if you need ongoing operational management, vendor oversight, or executive representation in board meetings. Choose strategy sprint if you need strategic clarity fast and want to execute independently without continued consulting dependency.
 
 ### How do I know if my company needs strategic architecture or ongoing advisory?
 
-If growth has stalled but you're unclear why, or if your team executes tactics well but lacks strategic direction, you need architecture. If you have clear strategy but need operational management and vendor coordination, fractional CMO advisory makes more sense.
+If growth has stalled but you're unclear why, or if you execute tactics well but lack strategic direction, you need architecture. If you have clear strategy but need operational management and vendor coordination, fractional CMO advisory makes more sense.
 
 ### What's the risk if I choose the wrong model?
 

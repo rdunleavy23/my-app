@@ -64,7 +64,7 @@ function getAllPageMetadata(): PageMetadata[] {
     {
       path: '/fractional-cmo-responsibilities',
       title: 'Fractional CMO Responsibilities',
-      description: 'What fractional CMOs do and how they work with your team',
+      description: 'What fractional CMOs do and how they work with companies',
       keywords: ['fractional cmo responsibilities', 'fractional cmo', 'cmo duties', 'marketing leadership', 'what does fractional cmo do', 'cmo role', 'fractional cmo job description'],
       category: 'service',
       priority: 7

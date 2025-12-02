@@ -54,7 +54,7 @@ const homepageFAQs = [
   },
   {
     question: "What makes your marketing consulting unique?",
-    answer: "We focus on building systems your team can run independently. No monthly retainers, no long-term commitments—just strategic clarity delivered through focused sprints."
+    answer: "We focus on building systems you can run independently. No monthly retainers, no long-term commitments—just strategic clarity delivered through focused sprints."
   }
 ]
 ```
@@ -100,7 +100,7 @@ const faqSchema = {
       "name": "What are the best fractional CMO alternatives?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Project-based marketing strategy sprints deliver the same strategic expertise in 8 weeks without ongoing retainers. You get complete ownership of strategy documents, dashboards, and playbooks your team can execute independently."
+        "text": "Project-based marketing strategy sprints deliver the same strategic expertise in 8 weeks without ongoing retainers. You get complete ownership of strategy documents, dashboards, and playbooks you can execute independently."
       }
     }
   ]
@@ -158,7 +158,7 @@ const faqSchema = {
 // Update description
 <div className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-4">
   <p>
-    Our proven growth strategy consulting process delivers complete marketing strategy development in 8 weeks. From strategic positioning to executable playbooks, we build marketing infrastructure your team can actually run.
+    Our proven growth strategy consulting process delivers complete marketing strategy development in 8 weeks. From strategic positioning to executable playbooks, we build custom marketing infrastructure you can actually run.
   </p>
   <p>
     Unlike traditional marketing strategy consulting retainers, our project-based approach means you own everything—dashboards, frameworks, processes. No ongoing dependency, just strategic clarity delivered fast.
@@ -177,7 +177,7 @@ const processBenefits = [
   },
   {
     title: "Complete Ownership",
-    description: "Get marketing strategy documents, dashboards, and playbooks your team owns forever",
+    description: "Get marketing strategy documents, dashboards, and playbooks you own forever",
     icon: <Users className="h-6 w-6" />
   },
   {

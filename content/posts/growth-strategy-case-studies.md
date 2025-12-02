@@ -138,7 +138,7 @@ The next step is a 30-minute assessment call to discuss your specific challenges
 
 ---
 
-*Pattern Growth delivers strategic architecture for $1-5M companies in 8-week sprints. We build the systems and train your team so you can scale independently.*
+*Pattern Growth delivers strategic architecture for $1-5M companies in 8-week sprints. We build custom systems and provide training so you can scale independently.*
 
 ## Frequently Asked Questions
 
@@ -148,7 +148,7 @@ Strategy sprints deliver strategic architecture in 8 weeks. Initial improvements
 
 ### What's the difference between strategy sprint and traditional marketing consulting?
 
-Strategy sprints deliver complete strategic architecture in 8 weeks with full ownership transfer and team training. Traditional consulting provides ongoing advisory over 6-12 months. The sprint model focuses on building your team's capability; traditional consulting focuses on providing guidance and oversight.
+Strategy sprints deliver complete strategic architecture in 8 weeks with full ownership transfer and training included. Traditional consulting provides ongoing advisory over 6-12 months. The sprint model focuses on building your capability; traditional consulting focuses on providing guidance and oversight.
 
 ### Can strategy sprints work for companies outside $1-5M revenue range?
 

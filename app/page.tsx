@@ -50,13 +50,13 @@ const FAQCollapsible = dynamic(() => import("@/components/ui/faq-collapsible").t
 
 export const metadata: Metadata = {
   title: "8-Week Growth Strategy Sprint | Project-Based Marketing Consultant",
-  description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to fractional CMO retainers.",
+  description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, full ownership. A project-based alternative to fractional CMO retainers.",
   keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, B2B marketing, strategy consulting",
   alternates: { canonical: "https://www.patterngrowth.com/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "8-Week Growth Strategy Sprint | Pattern Growth",
-    description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you.",
+    description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, full ownership.",
     type: "website",
   },
 }
@@ -147,7 +147,7 @@ export default function HomePage() {
                         Most B2B companies can't justify a $250K CMO hire. But they need more than a fractional consultant who stays on retainer indefinitely.
                       </p>
                       <p>
-                        We build complete growth strategies in focused 8-week sprints, then transfer everything to your team. Custom systems, clear documentation, measurable results—designed so you can run it without us.
+                        We build complete growth strategies in focused 8-week sprints, then hand over everything. Custom systems, clear documentation, measurable results—designed so you can run it without us.
                       </p>
                     </div>
 
@@ -205,7 +205,7 @@ export default function HomePage() {
                   <h3 className="text-lg font-semibold leading-tight">Built to Transfer</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our success metric is your team running this without us. We train as we build so knowledge transfers naturally. Optional support after, not dependency.
+                  Our success metric is you running this without us. Custom systems, clear documentation, training built in. Optional support after, not dependency.
                 </p>
               </Card>
 
@@ -302,7 +302,7 @@ export default function HomePage() {
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Our success metric is your team running this without us. We train as we build so knowledge transfers naturally. Optional support after, not dependency.
+                      Our success metric is you running this without us. Custom systems, clear documentation, training built in. Optional support after, not dependency.
                     </p>
                   </AccordionContent>
                 </AccordionItem>

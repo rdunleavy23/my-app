@@ -48,7 +48,7 @@ If you're a $1–5M revenue company and growth has stalled, you don't need someo
 
 **Messaging questions:** Is it resonating? What content moves deals? How do we build awareness that matters?
 
-> Get those answered, build a measurement system that shows what drives pipeline, create playbooks your team can execute, train them—then get out of the way. That's not a 12-month engagement. That's a [2-month sprint](/process).
+> Get those answered, build a measurement system that shows what drives pipeline, create custom playbooks you can execute, provide training—then get out of the way. That's not a 12-month engagement. That's a [2-month sprint](/process).
 
 If you're wondering [when to hire a fractional CMO vs a consultant](/blog/when-to-hire-fractional-cmo), the answer depends on whether you need ongoing leadership or strategic architecture you can own forever.
 
@@ -82,7 +82,7 @@ Dashboard connecting your data. Process docs. Team training. Playbooks agencies 
 
 **What you own after:**
 
-* Strategy docs your team uses daily
+* Strategy docs you use daily
 * Dashboard with year of access
 * Playbooks anyone can execute
 * Measurement showing what drives pipeline
@@ -175,7 +175,7 @@ You own everything: strategy documents, competitive frameworks, messaging guides
 
 ### When would I actually want a fractional CMO instead?
 
-Choose a fractional CMO if you need someone managing day-to-day operations, vendor relationships, team politics, and tactical execution for an extended period. Choose a sprint if you need strategic clarity fast—positioning, measurement, playbooks—then want your team to execute independently without ongoing consulting fees.
+Choose a fractional CMO if you need someone managing day-to-day operations, vendor relationships, and tactical execution for an extended period. Choose a sprint if you need strategic clarity fast—positioning, measurement, custom playbooks—then want to execute independently without ongoing consulting fees.
 
 <script type="application/ld+json">
 {

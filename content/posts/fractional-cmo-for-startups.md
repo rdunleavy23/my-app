@@ -248,7 +248,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - **Cost**: $9,500-$12,500 vs. $60K-$144K
 - **Ownership**: 100% yours forever vs. partial knowledge transfer
 - **Flexibility**: Adapt quickly as you learn vs. locked into consultant's cadence
-- **Team building**: Your team owns and evolves the strategy vs. dependency on external expert
+- **Ownership**: You own and evolve the strategy vs. dependency on external expert
 
 [See how the 3 A's Framework works →](/process)
 

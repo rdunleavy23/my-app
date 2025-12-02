@@ -275,7 +275,7 @@ If you lack strategic direction, an agency will just execute bad tactics efficie
 
 ✅ **You need board-level reporting** and investor communication
 
-✅ **Your team can execute** but struggles with prioritization and strategy
+✅ **You can execute** but struggle with prioritization and strategy
 
 ✅ **You're scaling quickly** and need executive-level guidance without full-time cost
 
@@ -465,13 +465,13 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 
 [HBR warns](https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business) that generic solutions from past experiences often don't transfer well.
 
-Good answer: "All strategy frameworks, documentation, and dashboards are yours. I'll train your team to maintain and evolve them."
+Good answer: "All strategy frameworks, documentation, and dashboards are yours. I'll provide training so you can maintain and evolve them."
 
 Red flag: "Well, you'll have access while we're working together..."
 
 **2. "How much hands-on execution do you do?"**
 
-Good answer: "Minimal to none—I lead and direct, your team or agencies execute."
+Good answer: "Minimal to none—I lead and direct, you or your agencies execute."
 
 Red flag: "I can help with some content and campaign work..." (this isn't a strategic role)
 
@@ -485,7 +485,7 @@ Red flag: Vague answers about "strategic alignment" and "better marketing"
 
 **4. "Who does the actual work?"**
 
-Good answer: "Your team, or I can help source and manage agencies for execution."
+Good answer: "You, or I can help source and manage agencies for execution."
 
 Red flag: "I'll figure it out as we go..."
 
@@ -511,7 +511,7 @@ Red flag: "We maintain the systems..." or vague ownership language
 
 **3. "What happens if we bring marketing in-house in 12 months?"**
 
-Good answer: "Complete handoff—we'll train your team, transfer all assets and documentation."
+Good answer: "Complete handoff—we'll provide training, transfer all assets and documentation."
 
 Red flag: "That would be difficult because..." (creates dependency)
 
@@ -628,7 +628,7 @@ Before you sign with a fractional CMO or agency, confirm:
 
 ### Execution Capability
 - [ ] You know who will do the hands-on work
-- [ ] Your team has capacity or you're hiring agency for execution
+- [ ] You have capacity or you're hiring an agency for execution
 - [ ] Timeline is realistic (agencies: 1-2 months, fractional CMO: 3-4 months to value)
 
 ### Budget Reality
@@ -678,7 +678,7 @@ Before you sign with a fractional CMO or agency, confirm:
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build the systems, train your team, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
 
 **Get honest guidance on what you actually need—fractional CMO, agency, or strategic architecture:**
 [Download the comparison calculator](/lead-magnets/fractional-cmo-cost-calculator) or [book a 15-min call](https://cal.com/pattern-growth/30min).

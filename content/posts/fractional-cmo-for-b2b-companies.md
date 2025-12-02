@@ -382,7 +382,7 @@ We create your complete B2B marketing architecture:
 - Sales enablement playbook
 - Attribution and pipeline tracking system
 
-**You own everything.** Your team executes. No ongoing retainer needed.
+**You own everything.** You execute. No ongoing retainer needed.
 
 **Compare B2B marketing support models:**
 

@@ -195,7 +195,7 @@ export const processSections: ProcessSection[] = [
           description: "In your target customer's mind, what should you own? Not every positive attribute—the specific claim you want them to believe about you.",
           subItems: [
             "For [target customer], [Company] is the [category] that [key benefit], unlike [alternative], because [proof point].",
-            "This isn't marketing copy. It's strategic clarity that guides every resource decision your team makes."
+            "This isn't marketing copy. It's strategic clarity that guides every resource decision you make."
           ]
         }
       ]
@@ -285,9 +285,9 @@ export const additionalSubsections = {
     ]
   },
   transfer: {
-    heading: "Transfer ownership to your team",
+    heading: "Transfer complete ownership",
     paragraphs: [
-      "We document who owns what, establish the weekly rhythm your team will follow, and identify where you need outside help.",
+      "We document who owns what, establish the weekly rhythm you'll follow, and identify where you need outside help.",
       "Handoff isn't complete until you've run through the system once and can operate independently. Then 30 days of support while you find your rhythm."
     ]
   }
@@ -337,14 +337,14 @@ export const faqs: FAQ[] = [
   {
     question: "Is this the same as a fractional CMO retainer?",
     answer: [
-      "No. Retainers keep an executive embedded in your org indefinitely. Our sprint installs the strategy and systems your team operates independently.",
-      "After eight weeks, you own the complete system. Your team knows how to execute it."
+      "No. Retainers keep an executive embedded in your org indefinitely. Our sprint installs custom strategy and systems you operate independently.",
+      "After eight weeks, you own the complete system and know how to execute it."
     ]
   },
   {
     question: "What happens after week eight?",
     answer: [
-      "We deliver all assets, conduct enablement sessions with your team, and remain available for 30 days to answer implementation questions.",
+      "We deliver all assets, conduct enablement sessions, and remain available for 30 days to answer implementation questions.",
       "After that, you're running it on your own."
     ]
   },
@@ -352,7 +352,7 @@ export const faqs: FAQ[] = [
     question: "Do we have to keep working together after the sprint?",
     answer: [
       "No. The sprint is designed so you're not dependent on us.",
-      "If we do our job, you'll outgrow us. You'll leave the sprint with a clear strategy, operating rhythm, and plan your team can run. Some teams take it fully in-house. Others ask us to help with a specific phase — vetting an agency, sitting in on key interviews, or training their team.",
+      "If we do our job, you'll outgrow us. You'll leave the sprint with a clear strategy, operating rhythm, and custom plan you can run. Some take it fully in-house. Others ask us to help with a specific phase—vetting an agency, sitting in on key interviews, or additional training.",
       "Our goal is to build a growth system you own. After that, we're optional support, not a permanent fixture."
     ]
   },
@@ -382,7 +382,7 @@ export const afterSprintContent = {
   paths: [
     {
       title: "Run it in-house",
-      description: "Your team owns the strategy, operating rhythm, and measurement systems."
+      description: "You own the strategy, operating rhythm, and measurement systems."
     },
     {
       title: "Run it with partners",
@@ -390,7 +390,7 @@ export const afterSprintContent = {
     },
     {
       title: "Run it with support",
-      description: "We stay involved for a defined period to sit in on interviews, train your team, or pressure-test big decisions."
+      description: "We stay involved for a defined period to sit in on interviews, provide additional training, or pressure-test big decisions."
     }
   ]
 }

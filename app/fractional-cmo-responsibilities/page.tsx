@@ -157,7 +157,7 @@ export default function FractionalCMOResponsibilitiesPage() {
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Campaign Architecture and Messaging</h3>
               <p className="text-foreground mb-4 leading-relaxed">
-                While fractional CMOs don't execute campaigns, they design campaign architecture—the strategic framework your team executes against. This includes messaging pillars, campaign themes, and creative direction.
+                While fractional CMOs don't execute campaigns, they design campaign architecture—the strategic framework you execute against. This includes messaging pillars, campaign themes, and creative direction.
               </p>
               <div className="bg-muted p-4 rounded-lg">
                 <p className="text-sm font-semibold text-foreground mb-2">Typical deliverables:</p>
@@ -277,7 +277,7 @@ export default function FractionalCMOResponsibilitiesPage() {
             <div className="border-l-4 border-border pl-4">
               <h3 className="font-semibold text-foreground mb-2">Tactical Campaign Execution</h3>
               <p className="text-foreground text-sm">
-                Fractional CMOs don't write copy, design graphics, build landing pages, or manage ad accounts. They provide strategic direction; your team or agencies execute.
+                Fractional CMOs don't write copy, design graphics, build landing pages, or manage ad accounts. They provide strategic direction; you or your agencies execute.
               </p>
             </div>
 

@@ -26,14 +26,14 @@ export function HomePage() {
             <span className="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium bg-secondary text-secondary-foreground mx-auto w-fit">
               Our Philosophy
             </span>
-            <CardTitle className="text-2xl">Clarity your team can actually run</CardTitle>
+            <CardTitle className="text-2xl">Clarity you can actually run</CardTitle>
           </CardHeader>
           <CardContent className="text-center text-muted-foreground space-y-4">
             <p>
-              You have vision. Your team has horsepower. What’s missing is the mechanism that turns ambition into repeatable outcomes.
+              You have vision. You have horsepower. What's missing is the mechanism that turns ambition into repeatable outcomes.
             </p>
             <p>
-              We translate executive goals into measurable strategy, then operationalize it into measurement systems and playbooks your team can use. The result? A growth system that outlives us — not another dependency.
+              We translate executive goals into measurable strategy, then operationalize it into custom measurement systems and playbooks you can use. The result? A growth system that outlives us — not another dependency.
             </p>
           </CardContent>
         </Card>
