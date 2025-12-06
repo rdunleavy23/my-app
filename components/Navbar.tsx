@@ -70,7 +70,7 @@ export default function Navbar() {
       method: 'schedule_call_button',
       button_location: location,
       button_text: 'Schedule a Call',
-      destination_url: 'https://cal.com/pattern-growth',
+      destination_url: 'https://cal.com/pattern-growth/30min',
     });
 
     // Open booking modal

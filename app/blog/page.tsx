@@ -1,6 +1,7 @@
 // app/blog/page.tsx
 import type { Metadata } from "next"
 import Link from "next/link"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 import { getAllPosts } from "@/lib/blog"
 import { formatDate } from "@/lib/utils"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -121,6 +122,15 @@ export default function BlogPage() {
               >
                 Continue reading →
               </Link>
+              <div className="mt-4">
+                <GetStartedButton
+                  size="sm"
+                  className="w-full sm:w-auto"
+                  location="blog_featured"
+                >
+                  Book a 30-min call
+                </GetStartedButton>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -131,7 +141,7 @@ export default function BlogPage() {
         <div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">All Articles</h2>
           <div className="grid gap-6">
-            {posts.slice(1).map((post) => (
+            {posts.slice(1).map((post, index) => (
               <Card key={post.slug} className="card-hover-lift">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
@@ -163,6 +173,17 @@ export default function BlogPage() {
                   >
                     Continue reading →
                   </Link>
+                  {index < 2 && (
+                    <div className="mt-3">
+                      <GetStartedButton
+                        size="sm"
+                        className="w-full sm:w-auto"
+                        location={`blog_post_${index + 1}`}
+                      >
+                        Book a 30-min call
+                      </GetStartedButton>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -177,14 +198,9 @@ export default function BlogPage() {
           Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, measurement systems, and playbooks.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="https://cal.com/pattern-growth/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold btn-hover-lift"
-          >
+          <GetStartedButton className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold btn-hover-lift sm:min-w-[200px]" size="lg" location="content">
             Schedule a Call
-          </Link>
+          </GetStartedButton>
           <Link 
             href="/process"
             className="inline-flex items-center justify-center border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors"

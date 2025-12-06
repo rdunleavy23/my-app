@@ -167,7 +167,7 @@ export default function AboutPage() {
       />
       <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 sm:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20 bg-tertiary rounded-3xl">
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={[{ label: 'About' }]} />
           
@@ -178,11 +178,7 @@ export default function AboutPage() {
             
             <div className="w-20 h-px bg-primary mx-auto" />
             
-            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Two growth strategists who turn C-suite vision into custom strategy you can actually execute.
-            </p>
-            
-            <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium mt-6">
+            <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium">
               Unlike fractional CMOs juggling multiple clients or agencies pushing pre-packaged solutions, we commit our full attention to one thing: understanding your business deeply enough to chart the right path forward.
             </p>
           </div>
@@ -226,7 +222,7 @@ export default function AboutPage() {
                 </CardHeader>
                 
                 <CardContent>
-                  <p className="text-base leading-relaxed text-muted-foreground text-center">
+                  <p className="text-base leading-relaxed text-foreground text-center">
                     {member.bio}
                   </p>
                 </CardContent>
@@ -239,7 +235,7 @@ export default function AboutPage() {
       <Separator />
 
       {/* Values Section */}
-      <section className="container mx-auto px-4 py-16 sm:py-20">
+      <section className="container mx-auto px-4 py-16 sm:py-20 bg-primary/5 rounded-3xl">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -262,7 +258,7 @@ export default function AboutPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-foreground leading-relaxed">
                     {value.description}
                   </p>
                 </CardContent>
@@ -277,7 +273,7 @@ export default function AboutPage() {
       {/* Story Section */}
       <section className="container mx-auto px-4 py-16 sm:py-20">
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-muted/20 border-border/50">
+          <Card className="bg-secondary text-secondary-foreground border-0">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <div className="w-16 h-px bg-primary mx-auto" />
               
@@ -285,7 +281,7 @@ export default function AboutPage() {
                 Why We Built Pattern Growth
               </h2>
               
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-secondary-foreground leading-relaxed">
                 <p className="text-base sm:text-lg">
                   We built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill.
                 </p>
@@ -303,7 +299,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 sm:py-20">
-        <div className="max-w-3xl mx-auto text-center space-y-8">
+        <div className="max-w-3xl mx-auto text-center space-y-8 bg-accent-deep-navy text-accent-deep-navy-foreground rounded-3xl px-8 py-10">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold text-foreground">
               Ready to Get Started?
@@ -313,7 +309,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <GetStartedButton className="btn-hover-lift" />
+          <GetStartedButton className="btn-hover-lift bg-primary text-primary-foreground hover:bg-primary/90" />
           
         </div>
       </section>

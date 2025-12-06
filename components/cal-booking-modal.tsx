@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useCallback } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 
 interface CalBookingModalProps {
@@ -14,49 +14,68 @@ export function CalBookingModal({
   isOpen,
   onClose,
   calLink = "pattern-growth/30min",
-  onBookingSuccess
+  onBookingSuccess,
 }: CalBookingModalProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  const lockBodyScroll = useCallback((lock: boolean) => {
+    if (typeof document === "undefined") return;
+    if (lock) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, []);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      lockBodyScroll(false);
+      return;
+    }
+
+    lockBodyScroll(true);
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+    }
 
     (async function () {
       const cal = await getCalApi();
 
-      // Track booking completion
       cal("on", {
         action: "bookingSuccessful",
         callback: (e) => {
-          const bookingId = (e.detail?.data?.booking as any)?.uid || (e.detail?.data?.booking as any)?.id || 'unknown';
+          const bookingId =
+            (e.detail?.data?.booking as any)?.uid ||
+            (e.detail?.data?.booking as any)?.id ||
+            "unknown";
 
-          // Track completed booking with GA4 recommended 'purchase' event
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'purchase', {
-              currency: 'USD',
-              value: 500, // Actual booking completed
+          if (typeof window !== "undefined" && window.gtag) {
+            window.gtag("event", "purchase", {
+              currency: "USD",
+              value: 500,
               transaction_id: bookingId,
-              items: [{
-                item_id: 'consultation',
-                item_name: '30min Strategy Call',
-                price: 500,
-                quantity: 1,
-              }]
+              items: [
+                {
+                  item_id: "consultation",
+                  item_name: "30min Strategy Call",
+                  price: 500,
+                  quantity: 1,
+                },
+              ],
             });
           }
 
-          // Callback for parent component
           if (onBookingSuccess) {
             onBookingSuccess(bookingId);
           }
 
-          // Close modal after successful booking
           setTimeout(() => {
             onClose();
-          }, 2000); // Give user time to see confirmation
+          }, 2000);
         },
       });
 
-      // Track modal close
       cal("on", {
         action: "__closeIframe",
         callback: () => {
@@ -64,32 +83,62 @@ export function CalBookingModal({
         },
       });
     })();
-  }, [isOpen, onClose, onBookingSuccess]);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+
+      if (event.key === "Tab" && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        const active = document.activeElement as HTMLElement;
+
+        if (event.shiftKey && active === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && active === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      lockBodyScroll(false);
+    };
+  }, [isOpen, onClose, onBookingSuccess, lockBodyScroll]);
 
   if (!isOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/80 backdrop-blur-sm overflow-y-auto py-8 px-4 sm:px-6"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="booking-modal-title"
     >
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-background rounded-lg shadow-2xl overflow-hidden"
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+        ref={dialogRef}
+        className="relative w-full max-w-4xl bg-background rounded-lg shadow-2xl my-auto"
+        onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 hover:bg-background text-foreground hover:text-primary transition-colors backdrop-blur-sm"
+          className="absolute top-3 right-3 z-[110] p-2 rounded-full bg-muted hover:bg-muted/80 text-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           aria-label="Close booking modal"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -102,19 +151,21 @@ export function CalBookingModal({
           </svg>
         </button>
 
-        {/* Screen reader title */}
         <h2 id="booking-modal-title" className="sr-only">
           Schedule a Call with Pattern Growth
         </h2>
 
-        {/* Cal.com embed */}
-        <div className="w-full h-[80vh] overflow-auto">
+        <div ref={containerRef}>
           <Cal
             calLink={calLink}
-            style={{ width: "100%", height: "100%", overflow: "scroll" }}
+            style={{
+              width: "100%",
+              height: "min(80vh, 700px)",
+              minHeight: "520px",
+            }}
             config={{
-              layout: 'month_view',
-              theme: 'auto',
+              layout: "month_view",
+              theme: "auto",
             }}
           />
         </div>

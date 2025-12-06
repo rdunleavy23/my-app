@@ -177,7 +177,7 @@ export default function HeyAIReadMePage() {
           <h2>External Resources</h2>
           <ul>
             <li>Website: <a href="https://www.patterngrowth.com">https://www.patterngrowth.com</a></li>
-            <li>Book a call: <a href="https://cal.com/pattern-growth">https://cal.com/pattern-growth</a></li>
+            <li>Book a call: <a href="https://cal.com/pattern-growth/30min">https://cal.com/pattern-growth/30min</a></li>
           </ul>
 
         </article>

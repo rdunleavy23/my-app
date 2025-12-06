@@ -30,7 +30,7 @@ export default function StyleguidePage() {
             <Link href="/">Back to site</Link>
           </Button>
           <Button asChild>
-            <Link href="https://cal.com/pattern-growth" target="_blank" rel="noreferrer">
+            <Link href="https://cal.com/pattern-growth/30min" target="_blank" rel="noreferrer">
               Primary CTA
             </Link>
           </Button>

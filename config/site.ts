@@ -30,7 +30,7 @@ export const siteConfig = {
     },
     {
       title: "Schedule a Call →",
-      href: "https://cal.com/pattern-growth",
+      href: "https://cal.com/pattern-growth/30min",
       description: "Free strategy consultation"
     }
   ],

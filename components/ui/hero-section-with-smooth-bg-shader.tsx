@@ -2,6 +2,7 @@
 
 import { MeshGradient } from "@paper-design/shaders-react"
 import { useEffect, useState } from "react"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 
 interface HeroSectionProps {
   title?: string
@@ -30,7 +31,14 @@ export function HeroSection({
   description = "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, everything transfers to you. A project-based alternative to fractional CMO retainers.",
   buttonText = "Schedule a Call",
   onButtonClick,
-  colors = ["#3E5661", "#8597A1", "#95B0BA", "#02273A", "#B9A287", "#F8ECD1"],
+  colors = [
+    "var(--primary)",
+    "var(--accent-mid-blue)",
+    "var(--secondary)",
+    "var(--accent-deep-navy)",
+    "var(--accent-warm-taupe)",
+    "var(--tertiary)",
+  ],
   distortion = 0.8,
   swirl = 0.6,
   speed = 0.42,
@@ -101,12 +109,14 @@ export function HeroSection({
             {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button
-              onClick={handleButtonClick}
+            <GetStartedButton
               className={`px-6 py-4 sm:px-8 sm:py-6 rounded-full border-4 bg-accent-deep-navy border-card text-sm sm:text-base text-accent-deep-navy-foreground hover:bg-accent-deep-navy/90 transition-colors ${buttonClassName}`}
+              size="lg"
+              location="hero"
+              onClick={onButtonClick}
             >
               {buttonText}
-            </button>
+            </GetStartedButton>
             <p className="text-sm text-foreground/80">
               30-minute call · No pitch, no pressure
             </p>

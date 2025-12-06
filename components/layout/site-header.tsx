@@ -45,7 +45,7 @@ export function SiteHeader() {
         <div className="flex items-center space-x-4">
           <nav className="flex items-center">
             <a
-              href="https://cal.com/pattern-growth"
+              href="https://cal.com/pattern-growth/30min"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

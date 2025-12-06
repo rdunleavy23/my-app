@@ -2,7 +2,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { 
-  ArrowRight, 
   Zap, 
   UserCog,
   Puzzle,
@@ -156,6 +155,22 @@ export default function HomePage() {
                       <GetStartedButton />
                       <div className="text-sm text-muted-foreground">
                         <p>$9,500 · 8 weeks · Full ownership</p>
+                      </div>
+                    </div>
+
+                    {/* Credibility row */}
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-muted-foreground">
+                      <div className="rounded-lg border border-border/60 bg-card p-4">
+                        <p className="text-foreground font-semibold">2–3 clients per quarter</p>
+                        <p>Hands-on founder involvement for depth and speed.</p>
+                      </div>
+                      <div className="rounded-lg border border-border/60 bg-card p-4">
+                        <p className="text-foreground font-semibold">8-week build</p>
+                        <p>Strategy, measurement, and enablement done end-to-end.</p>
+                      </div>
+                      <div className="rounded-lg border border-border/60 bg-card p-4">
+                        <p className="text-foreground font-semibold">Full transfer</p>
+                        <p>You own playbooks, dashboards, and training—no retainer.</p>
                       </div>
                     </div>
 
@@ -502,17 +517,9 @@ export default function HomePage() {
             <p className="text-sm text-muted-foreground mb-8">
               $9,500 · 8 weeks · Everything transfers to you
             </p>
-            <Button asChild size="lg" className="font-semibold btn-hover-lift">
-              <a
-                href="https://cal.com/pattern-growth/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 mx-auto w-fit"
-              >
-                Schedule a Call
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
-            </Button>
+            <GetStartedButton size="lg" className="font-semibold btn-hover-lift" location="hero">
+              Schedule a Call
+            </GetStartedButton>
           </div>
         </section>
 
