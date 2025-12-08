@@ -40,48 +40,52 @@ export function CalBookingModal({
     }
 
     (async function () {
-      const cal = await getCalApi();
+      try {
+        const cal = await getCalApi();
 
-      cal("on", {
-        action: "bookingSuccessful",
-        callback: (e) => {
-          const bookingId =
-            (e.detail?.data?.booking as any)?.uid ||
-            (e.detail?.data?.booking as any)?.id ||
-            "unknown";
+        cal("on", {
+          action: "bookingSuccessful",
+          callback: (e) => {
+            const bookingId =
+              (e.detail?.data?.booking as any)?.uid ||
+              (e.detail?.data?.booking as any)?.id ||
+              "unknown";
 
-          if (typeof window !== "undefined" && window.gtag) {
-            window.gtag("event", "purchase", {
-              currency: "USD",
-              value: 500,
-              transaction_id: bookingId,
-              items: [
-                {
-                  item_id: "consultation",
-                  item_name: "30min Strategy Call",
-                  price: 500,
-                  quantity: 1,
-                },
-              ],
-            });
-          }
+            if (typeof window !== "undefined" && window.gtag) {
+              window.gtag("event", "purchase", {
+                currency: "USD",
+                value: 500,
+                transaction_id: bookingId,
+                items: [
+                  {
+                    item_id: "consultation",
+                    item_name: "30min Strategy Call",
+                    price: 500,
+                    quantity: 1,
+                  },
+                ],
+              });
+            }
 
-          if (onBookingSuccess) {
-            onBookingSuccess(bookingId);
-          }
+            if (onBookingSuccess) {
+              onBookingSuccess(bookingId);
+            }
 
-          setTimeout(() => {
+            setTimeout(() => {
+              onClose();
+            }, 2000);
+          },
+        });
+
+        cal("on", {
+          action: "__closeIframe",
+          callback: () => {
             onClose();
-          }, 2000);
-        },
-      });
-
-      cal("on", {
-        action: "__closeIframe",
-        callback: () => {
-          onClose();
-        },
-      });
+          },
+        });
+      } catch (error) {
+        console.error("Error loading Cal.com API:", error);
+      }
     })();
 
     const handleKeyDown = (event: KeyboardEvent) => {

@@ -75,6 +75,7 @@ export default function Navbar() {
 
     // Open booking modal
     setIsBookingModalOpen(true);
+    console.log('Opening Cal.com modal from:', location);
 
     // Close mobile menu if open
     if (open) {
@@ -124,6 +125,7 @@ export default function Navbar() {
               Process
             </Link>
             <Button
+              type="button"
               className="h-12 btn-hover-lift"
               onClick={() => handleCTAClick('navbar')}
             >
@@ -190,6 +192,7 @@ export default function Navbar() {
                     {/* CTA section - part of scrollable content */}
                     <div className="pt-16 pb-8">
                       <Button
+                        type="button"
                         className="w-full h-14 text-base rounded-full btn-hover-lift"
                         onClick={() => handleCTAClick('mobile_menu')}
                         aria-label="Schedule a call"
