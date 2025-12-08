@@ -1,9 +1,6 @@
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 
 export default function SiteFooter() {
-  // Avoid SSR window access: derive from location at runtime on client
-  const hideResources = false
   return (
     <footer className="border-t bg-muted/20">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">

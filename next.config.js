@@ -1,5 +1,4 @@
 const nextConfig = {
-  eslint: { ignoreDuringBuilds: true },
   trailingSlash: false, // Explicitly disable trailing slashes for consistent URLs
   // Performance optimizations for Core Web Vitals
   experimental: {
@@ -9,7 +8,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Optimize for performance
+  // Turbopack config (Next.js 16+)
+  turbopack: {},
+  // Optimize for performance (webpack fallback for compatibility)
   webpack: (config, { dev, isServer }) => {
     // Remove unnecessary polyfills in production
     if (!dev && !isServer) {
