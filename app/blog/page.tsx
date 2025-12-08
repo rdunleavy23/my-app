@@ -126,7 +126,7 @@ export default function BlogPage() {
                 <GetStartedButton
                   size="sm"
                   className="w-full sm:w-auto"
-                  location="blog_featured"
+                  location="content"
                 >
                   Book a 30-min call
                 </GetStartedButton>
