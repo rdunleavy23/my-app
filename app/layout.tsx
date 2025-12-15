@@ -127,7 +127,10 @@ export default function RootLayout({
               url: "https://www.patterngrowth.com/",
               logo: "https://www.patterngrowth.com/patterngrowth-android-chrome-512x512.png",
               sameAs: [
-                "https://twitter.com/patterngrowth"
+                "https://x.com/patterngrowth",
+                "https://twitter.com/patterngrowth",
+                "https://instagram.com/patterngrowth",
+                "https://linkedin.com/company/patterngrowth"
               ],
               contactPoint: {
                 "@type": "ContactPoint",
