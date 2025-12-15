@@ -1,7 +1,7 @@
 ---
 title: "Fractional CMO Cost: Real Pricing Data You Can Trust [2025]"
 description: "Actual fractional CMO pricing from industry research: $3K-$15K/month ranges, what drives costs up or down, hidden expenses most companies miss, and how to calculate true total cost."
-publishedAt: "2024-11-21"
+publishedAt: "2025-10-08"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

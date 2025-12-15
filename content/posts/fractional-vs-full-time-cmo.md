@@ -1,7 +1,7 @@
 ---
 title: "Fractional vs Full-Time CMO: The $400K Decision (2025 Cost Breakdown)"
 description: "Fractional at $144K/year or full-time at $676K/year? Here's the revenue threshold ($50M), team size (10+ people), and complexity that decides which CMO model you actually need."
-publishedAt: "2024-12-23"
+publishedAt: "2025-11-26"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

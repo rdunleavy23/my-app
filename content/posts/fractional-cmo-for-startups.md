@@ -1,7 +1,7 @@
 ---
 title: "Fractional CMO for Startups: Don't Hire Until You Hit These 5 Thresholds"
 description: "$2M+ revenue? 3-person team? 80%+ retention? Most startups hire fractional CMOs too early and waste $60K+. Here's exactly when you're ready (and cheaper alternatives before then)."
-publishedAt: "2024-12-16"
+publishedAt: "2025-11-19"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

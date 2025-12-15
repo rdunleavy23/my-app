@@ -1,7 +1,7 @@
 ---
 title: "Growth Stalled? 8 Diagnostic Questions Before Hiring Anyone"
 description: "Your growth plateaued and you're not sure why. Before spending $50K+ on help, ask these 8 questions to diagnose what's actually broken—not what someone's trying to sell you."
-publishedAt: "2024-11-25"
+publishedAt: "2025-10-12"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

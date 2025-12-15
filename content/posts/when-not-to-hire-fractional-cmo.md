@@ -1,7 +1,7 @@
 ---
 title: "When NOT to Hire a Fractional CMO: 7 Situations Where You'll Waste $60K+"
 description: "Fractional CMOs don't fix broken strategy, missing execution, or unclear positioning. Research-backed guide on 7 situations where hiring one wastes $60K-$120K."
-publishedAt: "2024-12-02"
+publishedAt: "2025-11-05"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

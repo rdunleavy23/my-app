@@ -1,7 +1,7 @@
 ---
 title: "Fractional CMO: Complete Guide [2025]"
 description: "Everything you need to know about fractional CMOs: what they actually do, real pricing data, market trends, when to hire vs alternatives, and how to evaluate providers."
-publishedAt: "2024-11-17"
+publishedAt: "2025-10-01"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

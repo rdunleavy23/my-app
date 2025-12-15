@@ -1,7 +1,7 @@
 ---
 title: "Fractional CMO Contract: 7 Red Flags That Cost Companies $50K+"
 description: "No exit clause? They retain IP rights? Vague scope? These contract mistakes lock you into bad engagements. What to negotiate before signing a fractional CMO contract."
-publishedAt: "2024-12-09"
+publishedAt: "2025-11-12"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

@@ -1,7 +1,7 @@
 ---
 title: "Fractional CMO Services: What's Included vs NOT Included (The $60K Mistake)"
 description: "Paying $12K/month but NOT getting execution? Here's exactly what fractional CMO services include (strategy, oversight) vs what they don't (content, ads, daily work). Avoid costly surprises."
-publishedAt: "2024-11-18"
+publishedAt: "2025-10-05"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

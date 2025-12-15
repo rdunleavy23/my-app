@@ -1,7 +1,7 @@
 ---
 title: "Fractional CMO vs Marketing Agency: Which One Actually Solves Your Problem?"
 description: "Fractional CMO or marketing agency? Most companies choose wrong and waste $50K+. Here's how to decide based on your actual bottleneck, backed by research data."
-publishedAt: "2024-11-28"
+publishedAt: "2025-10-15"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"

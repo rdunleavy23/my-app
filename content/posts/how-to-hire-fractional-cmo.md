@@ -1,7 +1,7 @@
 ---
 title: "How to Hire a Fractional CMO: 7-Step Process to Avoid $60K-$100K Mistakes"
 description: "Separate real fractional CMOs from marketing generalists rebranding themselves. Portfolio evaluation (need 3+ case studies with numbers), CEO references (not just marketers), trial periods."
-publishedAt: "2024-12-30"
+publishedAt: "2025-12-03"
 author:
   name: "Ryan"
   title: "Founder, Pattern Growth"
