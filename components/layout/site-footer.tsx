@@ -62,7 +62,7 @@ export default function SiteFooter() {
                   className="text-muted-foreground/70 hover:text-foreground transition-colors"
                   aria-label={label}
                 >
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-5 w-5" />
                 </a>
               ))}
             </nav>
@@ -120,7 +120,7 @@ export default function SiteFooter() {
                     className="text-muted-foreground/70 hover:text-foreground transition-colors"
                     aria-label={label}
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-6 w-6" />
                   </a>
                 ))}
               </nav>
