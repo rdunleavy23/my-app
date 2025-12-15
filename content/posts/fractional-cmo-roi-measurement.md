@@ -4,7 +4,7 @@ description: "Real fractional CMO ROI data: $1.50 return per $1 invested (50% RO
 publishedAt: "2025-01-06"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO ROI 2025: Benchmarks (50% ROI, 35% MQL Lift, CAC -20-30%)"

@@ -4,7 +4,7 @@ description: "Everything you need to know about fractional CMOs: what they actua
 publishedAt: "2025-10-01"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO Guide 2025: Pricing, Market Data & When to Hire"

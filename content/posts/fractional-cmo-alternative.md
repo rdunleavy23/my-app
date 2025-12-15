@@ -5,7 +5,7 @@ description: "Fractional CMOs solve the wrong problem for growth-stage companies
 publishedAt: "2025-10-02"
 author:
   name: "Ryan"
-  title: "Founder"
+  title: "Partner"
   image: "/images/ryan.jpg"
 seo:
   title: "Fractional CMO Alternative | Pattern Growth"
@@ -186,7 +186,7 @@ Choose a fractional CMO if you need someone managing day-to-day operations, vend
   "author": {
     "@type": "Person",
     "name": "Ryan",
-    "jobTitle": "Founder",
+    "jobTitle": "Partner",
     "url": "https://www.patterngrowth.com/about",
     "image": "https://www.patterngrowth.com/images/ryan.jpg",
     "worksFor": {

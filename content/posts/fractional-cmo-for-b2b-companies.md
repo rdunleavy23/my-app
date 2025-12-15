@@ -4,7 +4,7 @@ description: "Hiring a B2C fractional CMO for B2B? They'll optimize for 3-day co
 publishedAt: "2025-01-13"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO for B2B 2025: Why B2C Experience Fails (Sales Cycle Guide)"

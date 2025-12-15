@@ -4,7 +4,7 @@ description: "Fractional CMOs don't fix broken strategy, missing execution, or u
 publishedAt: "2025-11-05"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "When NOT to Hire a Fractional CMO [7 Warning Signs You'll Waste $60K+]"

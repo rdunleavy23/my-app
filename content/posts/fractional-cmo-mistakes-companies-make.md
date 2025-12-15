@@ -4,7 +4,7 @@ description: "Mistake #1: $0 execution budget beyond CMO fee. Strategy sits in d
 publishedAt: "2025-01-20"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO Mistakes 2025: 9 Errors That Waste $60K-$150K (Avoid These)"

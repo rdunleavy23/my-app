@@ -4,7 +4,7 @@ description: "Most companies ask 'tell me about yourself' and hire wrong. Ask th
 publishedAt: "2025-01-27"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO Interview Questions 2025: 25 Questions (Avoid Imposters)"

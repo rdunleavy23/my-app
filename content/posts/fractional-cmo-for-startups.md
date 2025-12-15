@@ -4,7 +4,7 @@ description: "$2M+ revenue? 3-person team? 80%+ retention? Most startups hire fr
 publishedAt: "2025-11-19"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO for Startups 2025: 5 Readiness Thresholds (Revenue, PMF, Team)"

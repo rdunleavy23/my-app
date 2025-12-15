@@ -4,7 +4,7 @@ description: "No exit clause? They retain IP rights? Vague scope? These contract
 publishedAt: "2025-11-12"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO Contract 2025: 7 Red Flags & Negotiation Guide"

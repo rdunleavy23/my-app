@@ -4,7 +4,7 @@ description: "Separate real fractional CMOs from marketing generalists rebrandin
 publishedAt: "2025-12-03"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "How to Hire Fractional CMO 2025: 7-Step Vetting Guide (Avoid Imposters)"

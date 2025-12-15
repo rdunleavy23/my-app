@@ -4,7 +4,7 @@ description: "Full-time CMO ($676K, $50M+), VP Marketing ($280K, $10M+), fractio
 publishedAt: "2025-02-03"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Marketing Leadership Options 2025: 9 Options Compared (Revenue Guide)"

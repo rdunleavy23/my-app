@@ -4,7 +4,7 @@ description: "Fractional at $144K/year or full-time at $676K/year? Here's the re
 publishedAt: "2025-11-26"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional vs Full-Time CMO 2025: Cost Analysis & Decision Framework"

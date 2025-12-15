@@ -4,7 +4,7 @@ description: "Fractional CMO or marketing agency? Most companies choose wrong an
 publishedAt: "2025-10-15"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO vs Marketing Agency: The Real Difference [2025]"

@@ -4,7 +4,7 @@ description: "Choosing between fractional CMO retainers and project-based market
 publishedAt: "2025-10-23"
 author:
   name: "Ryan"
-  title: "Founder"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "When to Hire Fractional CMO vs Consultant | Pattern Growth"
@@ -251,7 +251,7 @@ Wrong choice means either paying for capabilities you don't need or missing stra
   "author": {
     "@type": "Person",
     "name": "Ryan",
-    "jobTitle": "Founder",
+    "jobTitle": "Partner",
     "url": "https://www.patterngrowth.com/about",
     "image": "https://www.patterngrowth.com/team/ryan.png",
     "worksFor": {

@@ -4,7 +4,7 @@ description: "How to grow fast without paying for it later."
 publishedAt: "2025-09-10"
 author:
   name: "Ryan"
-  title: "Founder"
+  title: "Partner"
   image: "/images/ryan.jpg"
 seo:
   title: "Scaling Revenue Without Scale Debt"

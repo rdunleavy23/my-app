@@ -4,7 +4,7 @@ description: "Paying $12K/month but NOT getting execution? Here's exactly what f
 publishedAt: "2025-10-05"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO Services 2025: What's Included vs NOT (Scope Guide)"

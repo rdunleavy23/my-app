@@ -4,7 +4,7 @@ description: "Your growth plateaued and you're not sure why. Before spending $50
 publishedAt: "2025-10-12"
 author:
   name: "Ryan"
-  title: "Founder, Pattern Growth"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Growth Stalled? 8 Questions to Ask Before Hiring Help [2025]"

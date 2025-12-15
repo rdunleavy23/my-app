@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Our Team: Two Growth Strategists | Pattern Growth",
   description:
     "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
-  keywords: ["growth strategists", "fractional CMO alternative", "growth strategy sprint", "Ryan Dunleavy", "William", "Pattern Growth team"],
+  keywords: ["growth strategists", "fractional CMO alternative", "growth strategy sprint", "Ryan", "William", "Pattern Growth team"],
   authors: [{ name: "Pattern Growth" }],
   creator: "Pattern Growth",
   publisher: "Pattern Growth",
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const ryanSchema = createPersonSchema({
-    name: "Ryan Dunleavy",
-    jobTitle: "Growth Strategist & Partner",
+    name: "Ryan",
+    jobTitle: "Partner",
     description: "Ryan is driven by curiosity. He\'s usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.",
     image: "https://www.patterngrowth.com/team/ryan.png"
   });

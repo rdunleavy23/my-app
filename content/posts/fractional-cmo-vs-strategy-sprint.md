@@ -4,7 +4,7 @@ description: "Compare fractional CMO retainers vs project-based strategy sprints
 publishedAt: "2025-10-23"
 author:
   name: "Ryan"
-  title: "Founder"
+  title: "Partner"
   image: "/team/ryan.png"
 seo:
   title: "Fractional CMO vs Strategy Sprint | Pattern Growth"
