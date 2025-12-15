@@ -36,9 +36,9 @@ export const siteConfig = {
   ],
   links: {
     email: "mailto:hello@patterngrowth.com",
-    phone: "tel:+1-555-000-0000",
-    x: "https://x.com/patterngrowth",
-    instagram: "https://instagram.com/patterngrowth",
+    phone: "tel:+14697089802",
+    x: "https://x.com/patterngrowthco",
+    instagram: "https://instagram.com/patterngrowthco",
     linkedin: "https://linkedin.com/company/patterngrowth",
     twitter: "https://twitter.com/patterngrowth",
     github: "https://github.com/rdunleavy",
