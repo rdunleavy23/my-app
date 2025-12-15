@@ -58,7 +58,7 @@ export default function SiteFooter() {
                   key={label}
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
-                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
                   className="text-muted-foreground/70 hover:text-foreground transition-colors"
                   aria-label={label}
                 >
@@ -116,7 +116,7 @@ export default function SiteFooter() {
                     key={label}
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
-                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
                     className="text-muted-foreground/70 hover:text-foreground transition-colors"
                     aria-label={label}
                   >

@@ -135,7 +135,8 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer service",
-                email: "hello@patterngrowth.com"
+                email: "hello@patterngrowth.com",
+                telephone: "+1-469-708-9802"
               }
             })
           }}
