@@ -9,6 +9,7 @@ import SiteFooter from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { AlertBanner } from "@/components/AlertBanner"
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"], 
@@ -157,6 +158,7 @@ export default function RootLayout({
       <body className={`${dmSans.variable} ${dmMono.variable} ${platypi.variable} font-sans min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
         <ThemeProvider>
           <ErrorBoundary>
+            <AlertBanner />
             <Navbar />
             <main className="flex-1">
               {children}

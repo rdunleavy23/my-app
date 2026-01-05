@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useCallback } from "react";
+import { createPortal } from "react-dom";
 import Cal, { getCalApi } from "@calcom/embed-react";
 
 interface CalBookingModalProps {
@@ -121,9 +122,12 @@ export function CalBookingModal({
 
   if (!isOpen) return null;
 
-  return (
+  // Render modal in a portal at document root to escape stacking contexts
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(
     <div
-      className="fixed inset-0 z-[100] flex items-start justify-center bg-black/80 backdrop-blur-sm overflow-y-auto py-8 px-4 sm:px-6"
+      className="fixed inset-0 z-[200] flex items-start justify-center bg-black/95 backdrop-blur-md overflow-y-auto py-8 px-4 sm:px-6"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -136,7 +140,7 @@ export function CalBookingModal({
       >
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-[110] p-2 rounded-full bg-muted hover:bg-muted/80 text-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="absolute top-3 right-3 z-[210] p-2 rounded-full bg-muted hover:bg-muted/80 text-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           aria-label="Close booking modal"
         >
           <svg
@@ -174,6 +178,7 @@ export function CalBookingModal({
           />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

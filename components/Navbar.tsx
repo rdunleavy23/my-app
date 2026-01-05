@@ -63,6 +63,11 @@ export default function Navbar() {
   const closeMenu = () => setOpen(false)
 
   const handleCTAClick = (location: 'navbar' | 'mobile_menu') => {
+    // Close mobile menu first if open
+    if (open) {
+      setOpen(false);
+    }
+
     // Use GA4 recommended event for lead generation
     trackGenerateLead({
       currency: 'USD',
@@ -73,13 +78,15 @@ export default function Navbar() {
       destination_url: 'https://cal.com/pattern-growth/30min',
     });
 
-    // Open booking modal
-    setIsBookingModalOpen(true);
-    console.log('Opening Cal.com modal from:', location);
-
-    // Close mobile menu if open
-    if (open) {
-      setOpen(false);
+    // Open booking modal with slight delay if coming from mobile menu
+    if (location === 'mobile_menu') {
+      setTimeout(() => {
+        setIsBookingModalOpen(true);
+        console.log('Opening Cal.com modal from:', location);
+      }, 300); // Wait for sheet animation to complete
+    } else {
+      setIsBookingModalOpen(true);
+      console.log('Opening Cal.com modal from:', location);
     }
   };
 
@@ -126,6 +133,7 @@ export default function Navbar() {
             </Link>
             <Button
               type="button"
+              variant="accent"
               className="h-12 btn-hover-lift"
               onClick={() => handleCTAClick('navbar')}
             >
@@ -193,6 +201,7 @@ export default function Navbar() {
                     <div className="pt-16 pb-8">
                       <Button
                         type="button"
+                        variant="accent"
                         className="w-full h-14 text-base rounded-full btn-hover-lift"
                         onClick={() => handleCTAClick('mobile_menu')}
                         aria-label="Schedule a call"

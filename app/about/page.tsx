@@ -195,18 +195,15 @@ export default function AboutPage() {
               <Card key={member.name} className="group card-hover-lift border-border/50">
                 <CardHeader className="text-center space-y-6 pb-6">
                   <div className="relative">
-                    <div className="relative size-32 md:size-36 mx-auto">
+                    <div className="relative size-32 md:size-36 mx-auto bg-tertiary rounded-full p-1">
                       <Image
                         src={member.photo}
                         alt={`${member.name}, ${member.role} at Pattern Growth`}
                         width={144}
                         height={144}
-                        className="rounded-full object-cover ring-4 ring-muted/50 group-hover:ring-primary/20 transition-all duration-300"
+                        className="rounded-full object-cover ring-2 ring-primary/30 group-hover:ring-primary/50 transition-all duration-300"
+                        unoptimized
                         priority={index === 0}
-                        fetchPriority={index === 0 ? "high" : "auto"}
-                        loading={index === 0 ? "eager" : "lazy"}
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                       />
                     </div>
                   </div>
