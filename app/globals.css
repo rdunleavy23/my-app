@@ -285,6 +285,28 @@ img {
   --shadow-2xl: 0 0.5rem 1rem 0 hsl(0 0 0 / 1.25);
 }
 
+:root.pg-theme-trial:not(.dark) {
+  /* shadcn/ui standard tokens - trial light mode only */
+  --background: 42 74% 90%;
+  --foreground: 200 93% 12%;
+  --card: 42 74% 90%;
+  --card-foreground: 200 93% 12%;
+  --popover: 42 74% 90%;
+  --popover-foreground: 200 93% 12%;
+  --primary: 200 93% 12%;
+  --primary-foreground: 42 74% 90%;
+  --secondary: 196 21% 66%;
+  --secondary-foreground: 200 93% 12%;
+  --muted: 196 21% 66%;
+  --muted-foreground: 199 22% 31%;
+  --accent: 32 26% 63%;
+  --accent-foreground: 200 93% 12%;
+  --border: 201 13% 58%;
+  --input: 201 13% 58%;
+  --ring: 36 100% 68%;
+  /* Do NOT override destructive, radius, or other tokens */
+}
+
 /* Base */
 @layer base {
   * { @apply border-border outline-ring/50; }

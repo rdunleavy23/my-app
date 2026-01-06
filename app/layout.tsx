@@ -79,7 +79,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={process.env.NEXT_PUBLIC_PG_THEME_TRIAL === "1" ? "pg-theme-trial" : undefined}
+    >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Preload critical resources for Core Web Vitals */}

@@ -147,10 +147,10 @@ export default function ApproachEnhanced() {
               onDragEnd={handleSwipe}
               className="touch-pan-y"
             >
-              <Card className="border-primary/20 overflow-hidden">
+              <Card className="bg-card border-primary/20 overflow-hidden">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{currentItem?.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <h3 className="text-xl font-semibold mb-2 text-primary">{currentItem?.title}</h3>
+                  <p className="text-primary mb-6 leading-relaxed">
                     {currentItem?.body}
                   </p>
 
@@ -159,7 +159,7 @@ export default function ApproachEnhanced() {
                     {currentItem?.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{highlight}</span>
+                        <span className="text-sm text-primary">{highlight}</span>
                       </div>
                     ))}
                   </div>
@@ -231,23 +231,23 @@ export default function ApproachEnhanced() {
             {APPROACH_ITEMS.map((item) => (
               <Card 
                 key={item.key}
-                className="h-full border-primary/10 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                className="h-full bg-card border-primary/10 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
               >
                 <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold mb-3 text-primary group-hover:text-primary transition-colors">
                     {item.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
+                  <p className="text-primary mb-6 leading-relaxed flex-grow">
                     {item.body}
                   </p>
 
                   {/* Highlights */}
-                  <div className="space-y-2 pt-4 border-t border-border">
+                  <div className="space-y-2 pt-4 border-t border-primary/20">
                     {item.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{highlight}</span>
+                        <span className="text-sm text-primary">{highlight}</span>
                       </div>
                     ))}
                   </div>

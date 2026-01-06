@@ -28,6 +28,7 @@ import dynamic from "next/dynamic"
 import { Suspense } from "react"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
 import { createServiceSchema, createFAQSchema } from "@/lib/schemas"
+import { MarketingSection } from "@/components/marketing/MarketingSection"
 
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach-enhanced").then(mod => mod.default), {
@@ -132,7 +133,7 @@ export default function HomePage() {
 
       <div className="bg-background">
                 {/* Hero Section */}
-                <section className="py-16 sm:py-20 bg-background">
+                <MarketingSection variant="default" className="py-16 sm:py-20">
                   <div className="mx-auto max-w-5xl px-6 lg:px-8">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-foreground">
                       Your Marketing Strategy,<br />
@@ -159,23 +160,23 @@ export default function HomePage() {
                     </div>
 
                     {/* Credibility row */}
-                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-muted-foreground">
-                      <div className="rounded-lg border border-border/60 bg-card p-4">
-                        <p className="text-foreground font-semibold">2–3 clients per quarter</p>
-                        <p>Hands-on founder involvement for depth and speed.</p>
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                      <div className="rounded-lg border border-border/60 bg-white p-4">
+                        <p className="text-primary font-semibold">2–3 clients per quarter</p>
+                        <p className="text-primary">Hands-on founder involvement for depth and speed.</p>
                       </div>
-                      <div className="rounded-lg border border-border/60 bg-card p-4">
-                        <p className="text-foreground font-semibold">8-week build</p>
-                        <p>Strategy, measurement, and enablement done end-to-end.</p>
+                      <div className="rounded-lg border border-border/60 bg-white p-4">
+                        <p className="text-primary font-semibold">8-week build</p>
+                        <p className="text-primary">Strategy, measurement, and enablement done end-to-end.</p>
                       </div>
-                      <div className="rounded-lg border border-border/60 bg-card p-4">
-                        <p className="text-foreground font-semibold">Full transfer</p>
-                        <p>You own playbooks, dashboards, and training—no retainer.</p>
+                      <div className="rounded-lg border border-border/60 bg-white p-4">
+                        <p className="text-primary font-semibold">Full transfer</p>
+                        <p className="text-primary">You own playbooks, dashboards, and training—no retainer.</p>
                       </div>
                     </div>
 
                   </div>
-                </section>
+                </MarketingSection>
 
         {/* Interactive version loads client-side */}
         <Suspense fallback={<div className="py-12"></div>}>
@@ -183,7 +184,7 @@ export default function HomePage() {
         </Suspense>
 
         {/* How We Work Differently */}
-        <section className="py-16 sm:py-20 bg-muted/50">
+        <MarketingSection variant="chapter" className="py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               How We Work Differently
@@ -289,14 +290,14 @@ export default function HomePage() {
                         <UserCog className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-foreground leading-snug">
+                        <h3 className="text-base font-semibold text-primary leading-snug">
                           2-3 Clients Per Quarter
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-primary leading-relaxed">
                       Direct founder involvement on every engagement. When strategy needs deep understanding, scale kills quality.
                     </p>
                   </AccordionContent>
@@ -309,14 +310,14 @@ export default function HomePage() {
                         <Gift className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-foreground leading-snug">
+                        <h3 className="text-base font-semibold text-primary leading-snug">
                           Built to Transfer
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-primary leading-relaxed">
                       Our success metric is you running this without us. Custom systems, clear documentation, training built in. Optional support after, not dependency.
                     </p>
                   </AccordionContent>
@@ -329,14 +330,14 @@ export default function HomePage() {
                         <Puzzle className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-foreground leading-snug">
+                        <h3 className="text-base font-semibold text-primary leading-snug">
                           Strategy for Your Reality
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-primary leading-relaxed">
                       Templated frameworks fail because they ignore what makes you different. We map your position, capacity, and dynamics—then design strategy that fits.
                     </p>
                   </AccordionContent>
@@ -349,14 +350,14 @@ export default function HomePage() {
                         <Database className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-foreground leading-snug">
+                        <h3 className="text-base font-semibold text-primary leading-snug">
                           Data Before Assumptions
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-primary leading-relaxed">
                       If your data is fragmented or missing, we fix that first. Clear visibility into what's working before we recommend what to change.
                     </p>
                   </AccordionContent>
@@ -369,14 +370,14 @@ export default function HomePage() {
                         <Handshake className="h-6 w-6 text-primary" aria-hidden="true" />
                       </div>
                       <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-foreground leading-snug">
+                        <h3 className="text-base font-semibold text-primary leading-snug">
                           Handoff That Fits You
                         </h3>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-primary leading-relaxed">
                       Running lean, working with an agency, or building internal—we design handoff for your situation. Complete documentation, clear processes.
                     </p>
                   </AccordionContent>
@@ -384,10 +385,10 @@ export default function HomePage() {
               </Accordion>
             </div>
           </div>
-        </section>
+        </MarketingSection>
 
         {/* Comparison Table */}
-        <section className="py-16 sm:py-20 border-t">
+        <MarketingSection variant="default" className="py-16 sm:py-20 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
@@ -458,10 +459,10 @@ export default function HomePage() {
               className="mt-8"
             />
           </div>
-        </section>
+        </MarketingSection>
 
         {/* FAQ */}
-        <section className="py-16 sm:py-20 border-t">
+        <MarketingSection variant="default" className="py-16 sm:py-20 border-t">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold tracking-tight mb-2">
@@ -503,10 +504,10 @@ export default function HomePage() {
               className="max-w-4xl mx-auto"
             />
           </div>
-        </section>
+        </MarketingSection>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 bg-muted">
+        <MarketingSection variant="decision" className="py-16 sm:py-20">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-foreground mb-4">
               See If We're a Fit
@@ -521,7 +522,7 @@ export default function HomePage() {
               Schedule a Call
             </GetStartedButton>
           </div>
-        </section>
+        </MarketingSection>
 
       </div>
     </>

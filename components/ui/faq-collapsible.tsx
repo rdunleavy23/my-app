@@ -28,9 +28,10 @@ export default function FAQCollapsible({ items, className }: FAQCollapsibleProps
             </CollapsibleTrigger>
             <CollapsibleContent className="px-6 pb-6">
               <div className="pt-2">
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {item.answer}
-                </p>
+                <div 
+                  className="text-base text-muted-foreground leading-relaxed prose prose-sm max-w-none"
+                  dangerouslySetInnerHTML={{ __html: item.answer }}
+                />
               </div>
             </CollapsibleContent>
           </Collapsible>
