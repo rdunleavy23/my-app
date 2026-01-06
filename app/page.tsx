@@ -507,7 +507,7 @@ export default function HomePage() {
         </MarketingSection>
 
         {/* CTA Section */}
-        <MarketingSection variant="decision" className="py-16 sm:py-20">
+        <section className="py-16 sm:py-20 bg-muted">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-foreground mb-4">
               See If We're a Fit
@@ -522,7 +522,7 @@ export default function HomePage() {
               Schedule a Call
             </GetStartedButton>
           </div>
-        </MarketingSection>
+        </section>
 
       </div>
     </>
