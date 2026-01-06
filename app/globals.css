@@ -648,9 +648,9 @@ html.dark img[alt="Pattern Growth"] {
 /* Header logo: Transform dark teal (#3E5661) to warm beige (#F8ECD1) for #3E5661 header background */
 header.header-navy img[alt="Pattern Growth"] {
   /* Transform dark teal to warm beige using CSS filters */
-  /* Strategy: Convert to black, invert to white, then apply warm sepia tone to achieve #F8ECD1 */
-  /* Using higher sepia and specific hue-rotate to match warm beige #F8ECD1 */
-  filter: brightness(0) saturate(100%) invert(100%) sepia(20%) saturate(200%) hue-rotate(30deg) brightness(104%) !important;
+  /* Strategy: Desaturate, rotate hue toward yellow, and significantly brighten for #F8ECD1 */
+  /* This produces a light warm beige color that contrasts well with the navy background */
+  filter: saturate(0.3) hue-rotate(-160deg) brightness(2.9) !important;
 }
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }

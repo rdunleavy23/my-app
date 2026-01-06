@@ -41,66 +41,6 @@ export default function Logo({ className = "", size }: LogoProps) {
     ? 'h-14' // 56px - large desktop
     : 'h-11 sm:h-14' // Responsive: 44px mobile (accounts for width), 56px desktop
 
-  // Diagnostic logging for logo color debugging
-  useEffect(() => {
-    if (typeof window === 'undefined' || !imgRef.current) return
-
-    const img = imgRef.current
-    const html = document.documentElement
-    
-    // Log 1: Image properties
-    console.log('[Logo Debug] Image Properties:', {
-      src: img.src,
-      alt: img.alt,
-      altExact: `"${img.alt}"`,
-      width: img.width,
-      height: img.height,
-      naturalWidth: img.naturalWidth,
-      naturalHeight: img.naturalHeight,
-    })
-
-    // Log 2: Theme state
-    const hasDarkClass = html.classList.contains('dark')
-    console.log('[Logo Debug] Theme State:', {
-      theme,
-      resolvedTheme,
-      htmlHasDarkClass: hasDarkClass,
-      htmlClasses: Array.from(html.classList),
-    })
-
-    // Log 3: CSS Selector matching
-    const selector1 = html.querySelector('.dark img[alt="Pattern Growth"]')
-    const selector2 = html.querySelector('html.dark img[alt="Pattern Growth"]')
-    const selector3 = document.querySelector('.dark img[alt="Pattern Growth"]')
-    console.log('[Logo Debug] Selector Matching:', {
-      'html.querySelector(.dark img[alt="Pattern Growth"])': selector1 !== null,
-      'html.querySelector(html.dark img[alt="Pattern Growth"])': selector2 !== null,
-      'document.querySelector(.dark img[alt="Pattern Growth"])': selector3 !== null,
-      'img matches selector': selector1 === img || selector2 === img || selector3 === img,
-    })
-
-    // Log 4: Computed filter value
-    const computedStyle = window.getComputedStyle(img)
-    const filterValue = computedStyle.filter
-    const filterApplied = filterValue !== 'none' && filterValue !== ''
-    console.log('[Logo Debug] CSS Filter:', {
-      filterValue,
-      filterApplied,
-      allComputedStyles: {
-        filter: computedStyle.filter,
-        brightness: computedStyle.filter.includes('brightness'),
-        saturate: computedStyle.filter.includes('saturate'),
-        hueRotate: computedStyle.filter.includes('hue-rotate'),
-      },
-    })
-
-    // Log 5: Check if image is loaded
-    if (img.complete) {
-      console.log('[Logo Debug] Image Status: Loaded')
-    } else {
-      img.onload = () => console.log('[Logo Debug] Image Status: Loaded (after delay)')
-    }
-  }, [theme, resolvedTheme])
 
   return (
     <Link 
