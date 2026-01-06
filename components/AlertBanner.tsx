@@ -1,6 +1,6 @@
 "use client"
 
-import { X } from "lucide-react"
+import { X, ArrowRight } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function AlertBanner() {
@@ -27,13 +27,14 @@ export function AlertBanner() {
       href="https://form.typeform.com/to/vBlOOrU4"
       target="_blank"
       rel="noopener noreferrer"
-      className="block bg-accent-deep-navy text-accent-deep-navy-foreground hover:bg-accent-deep-navy-hover transition-colors duration-200"
+      className="block bg-accent-deep-navy text-accent-deep-navy-foreground hover:bg-accent-deep-navy/90 hover:underline transition-colors duration-200"
     >
       <div className="container mx-auto px-4 py-3 relative">
         <div className="flex items-center justify-center gap-2 pr-8">
           <span className="text-sm md:text-base font-medium text-center">
             Apply for a Free 8-Week Growth Sprint
           </span>
+          <ArrowRight className="h-4 w-4 flex-shrink-0" />
         </div>
         <button
           onClick={handleDismiss}

@@ -494,7 +494,7 @@ export default function HomePage() {
                 },
                 {
                   question: "What makes you different from a fractional CMO?",
-                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us. <a href='/blog/fractional-cmo-alternative' class='text-primary hover:underline'>Read our detailed comparison</a>."
+                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us. <a href='/sprint-vs-fractional-cmo' class='text-primary hover:underline'>Read our detailed comparison</a>."
                 },
                 {
                   question: "Can we start right away?",
@@ -507,18 +507,16 @@ export default function HomePage() {
         </MarketingSection>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 bg-muted">
+        <section className="py-16 sm:py-20 bg-[#3E5661]">
           <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[#F8ECD1] mb-4">
               See If We're a Fit
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground mb-6">
-              30-minute call. We'll talk about where you are, where you need to be, and whether this makes sense—no pitch, no pressure.
+            <p className="text-base sm:text-lg text-[#F8ECD1] mb-8">
+              We'll talk about where you are, where you need to be, and whether this makes sense.<br />
+              If we're not the right fit, we'll point you towards someone who can help.
             </p>
-            <p className="text-sm text-muted-foreground mb-8">
-              $9,500 · 8 weeks · Everything transfers to you
-            </p>
-            <GetStartedButton size="lg" className="font-semibold btn-hover-lift" location="hero">
+            <GetStartedButton size="lg" className="font-semibold btn-hover-lift bg-[#FFBF5E] text-[#02273A] hover:bg-[#FFBF5E]/90 shadow-md shadow-[#FFBF5E]/20 hover:shadow-lg hover:shadow-[#FFBF5E]/30 [&_i]:bg-[#02273A]/10 [&_i]:text-[#02273A]" location="hero">
               Schedule a Call
             </GetStartedButton>
           </div>

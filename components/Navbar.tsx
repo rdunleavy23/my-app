@@ -11,7 +11,6 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
 import Logo from "@/components/Logo"
 import { trackGenerateLead, trackNavigationClick } from "@/lib/analytics"
@@ -139,7 +138,6 @@ export default function Navbar() {
             >
               Schedule a Call →
             </Button>
-            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu */}
