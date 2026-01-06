@@ -644,6 +644,14 @@ html.dark img[alt="Pattern Growth"] {
   /* Strategy: Invert colors (dark teal → light orange), then adjust hue/saturation toward golden */
   filter: invert(1) brightness(1.3) saturate(1.8) hue-rotate(25deg) !important;
 }
+
+/* Header logo: Transform dark teal (#3E5661) to warm beige (#F8ECD1) for #3E5661 header background */
+header.header-navy img[alt="Pattern Growth"] {
+  /* Transform dark teal to warm beige using CSS filters */
+  /* Strategy: Convert to black, invert to white, then apply warm sepia tone to achieve #F8ECD1 */
+  /* Using higher sepia and specific hue-rotate to match warm beige #F8ECD1 */
+  filter: brightness(0) saturate(100%) invert(100%) sepia(20%) saturate(200%) hue-rotate(30deg) brightness(104%) !important;
+}
 .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .hyphens-auto { hyphens: auto; }
 

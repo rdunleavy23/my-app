@@ -106,7 +106,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-[60] border-b bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-[60] border-b bg-[#3E5661] backdrop-blur header-navy">
       <div className="mx-auto w-full max-w-6xl pl-3 pr-4 sm:pl-8 sm:pr-6">
         <div className="flex h-14 items-center justify-between gap-6">
           {/* Logo: 44px mobile (~211px wide, accounts for 4.79:1 wordmark), 56px desktop - Pattern Growth is 4.8x wider than Superside */}
@@ -118,22 +118,21 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center space-x-6" aria-label="Primary navigation">
             <Link
               href="/about"
-              className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
+              className="text-sm text-[#F8ECD1] hover:text-[#F8ECD1]/80 h-12 flex items-center px-3 py-2 rounded-md hover:bg-[#3E5661]/80 transition-colors"
               onClick={() => handleNavClick('About', '/about')}
             >
               About
             </Link>
             <Link
               href="/process"
-              className="text-sm text-muted-foreground hover:text-foreground h-12 flex items-center px-3 py-2 rounded-md hover:bg-accent/50 transition-colors"
+              className="text-sm text-[#F8ECD1] hover:text-[#F8ECD1]/80 h-12 flex items-center px-3 py-2 rounded-md hover:bg-[#3E5661]/80 transition-colors"
               onClick={() => handleNavClick('Process', '/process')}
             >
               Process
             </Link>
             <Button
               type="button"
-              variant="accent"
-              className="h-12 btn-hover-lift"
+              className="h-12 btn-hover-lift bg-[#FFBF5E] text-[#02273A] hover:bg-[#FFBF5E]/90"
               onClick={() => handleCTAClick('navbar')}
             >
               Schedule a Call →
@@ -147,7 +146,7 @@ export default function Navbar() {
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="text-muted-foreground"
+                  className="text-[#F8ECD1]"
                   aria-label="Open menu"
                   aria-expanded={open}
                   aria-controls="mobile-menu"
@@ -158,7 +157,7 @@ export default function Navbar() {
               <SheetContent
                 side="top"
                 showClose={false}
-                className="w-screen rounded-none border-0 p-0 bg-background max-h-[calc(100vh-56px)] overflow-y-auto"
+                className="w-screen rounded-none border-0 p-0 bg-[#3E5661] max-h-[calc(100vh-56px)] overflow-y-auto"
                 id="mobile-menu"
                 role="dialog"
                 aria-modal="true"
@@ -177,7 +176,7 @@ export default function Navbar() {
                           closeMenu();
                           handleMobileNavClick('About', '/about');
                         }}
-                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
+                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#F8ECD1] focus:ring-offset-2 py-14 border-b border-[#3E5661]/50 text-[#F8ECD1]"
                         aria-current={pathname === '/about' ? 'page' : undefined}
                       >
                         About
@@ -188,7 +187,7 @@ export default function Navbar() {
                           closeMenu();
                           handleMobileNavClick('Process', '/process');
                         }}
-                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 py-14 border-b border-border text-foreground"
+                        className="mobile-menu-item mobile-menu-focus block text-[26px] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#F8ECD1] focus:ring-offset-2 py-14 border-b border-[#3E5661]/50 text-[#F8ECD1]"
                         aria-current={pathname === '/process' ? 'page' : undefined}
                       >
                         Process
@@ -199,8 +198,7 @@ export default function Navbar() {
                     <div className="pt-16 pb-8">
                       <Button
                         type="button"
-                        variant="accent"
-                        className="w-full h-14 text-base rounded-full btn-hover-lift"
+                        className="w-full h-14 text-base rounded-full btn-hover-lift bg-[#FFBF5E] text-[#02273A] hover:bg-[#FFBF5E]/90"
                         onClick={() => handleCTAClick('mobile_menu')}
                         aria-label="Schedule a call"
                       >

@@ -17,37 +17,37 @@ export default function SiteFooter() {
         <div className="py-8">
           {/* Mobile: Vertical Stack, Left-Aligned */}
           <div className="flex flex-col gap-2.5 text-left md:hidden">
-            <p className="text-xs text-muted-foreground/90">
+            <p className="text-xs text-[#3E5661]">
               © {new Date().getFullYear()} Pattern Growth
             </p>
             <nav className="flex flex-col gap-2 text-xs" aria-label="Footer navigation">
               <Link 
                 href="/" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+                className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 Home
               </Link>
               <Link 
                 href="/process" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+                className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 Our Process
               </Link>
               <Link 
                 href="/about" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+                className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 About
               </Link>
               <Link 
                 href="/blog" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+                className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 Blog
               </Link>
               <Link 
                 href="/privacy" 
-                className="text-muted-foreground/90 hover:text-foreground transition-colors w-fit"
+                className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 Privacy Policy
               </Link>
@@ -59,7 +59,7 @@ export default function SiteFooter() {
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={href.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
-                  className="text-muted-foreground/70 hover:text-foreground transition-colors"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                   aria-label={label}
                 >
                   <Icon className="h-5 w-5" />
@@ -70,54 +70,54 @@ export default function SiteFooter() {
 
           {/* Desktop: Horizontal Single Row with Dot Separators */}
           <div className="hidden md:flex md:items-center md:justify-between gap-4">
-            <p className="text-xs text-muted-foreground/90">
+            <p className="text-xs text-[#3E5661]">
               © {new Date().getFullYear()} Pattern Growth
             </p>
             <div className="flex items-center gap-4">
               <nav className="flex flex-wrap items-center gap-3 text-xs" aria-label="Footer navigation links">
                 <Link 
                   href="/" 
-                  className="text-muted-foreground/90 hover:text-foreground transition-colors"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   Home
                 </Link>
-                <span className="text-muted-foreground/50">·</span>
+                <span className="text-[#3E5661]/50">·</span>
                 <Link 
                   href="/process" 
-                  className="text-muted-foreground/90 hover:text-foreground transition-colors"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   Our Process
                 </Link>
-                <span className="text-muted-foreground/50">·</span>
+                <span className="text-[#3E5661]/50">·</span>
                 <Link 
                   href="/about" 
-                  className="text-muted-foreground/90 hover:text-foreground transition-colors"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   About
                 </Link>
-                <span className="text-muted-foreground/50">·</span>
+                <span className="text-[#3E5661]/50">·</span>
                 <Link 
                   href="/blog" 
-                  className="text-muted-foreground/90 hover:text-foreground transition-colors"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   Blog
                 </Link>
-                <span className="text-muted-foreground/50">·</span>
+                <span className="text-[#3E5661]/50">·</span>
                 <Link 
                   href="/privacy" 
-                  className="text-muted-foreground/90 hover:text-foreground transition-colors"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   Privacy Policy
                 </Link>
               </nav>
-              <nav className="flex items-center gap-3 ml-4 pl-4 border-l border-border" aria-label="Social links">
+              <nav className="flex items-center gap-3 ml-4 pl-4 border-l border-[#3E5661]/20" aria-label="Social links">
                 {socialLinks.map(({ href, icon: Icon, label }) => (
                   <a
                     key={label}
                     href={href}
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel={href.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
-                    className="text-muted-foreground/70 hover:text-foreground transition-colors"
+                    className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                     aria-label={label}
                   >
                     <Icon className="h-6 w-6" />
