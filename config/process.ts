@@ -342,13 +342,6 @@ export const faqs: FAQ[] = [
     ]
   },
   {
-    question: "What happens after week eight?",
-    answer: [
-      "We deliver all assets, conduct enablement sessions, and remain available for 30 days to answer implementation questions.",
-      "After that, you're running it on your own."
-    ]
-  },
-  {
     question: "Do we have to keep working together after the sprint?",
     answer: [
       "No. The sprint is designed so you're not dependent on us.",
@@ -369,31 +362,17 @@ export const faqs: FAQ[] = [
       "We work with $1-5M revenue companies across industries that have traction and are ready to systematize growth. Whether B2B, B2C, SaaS, or services—the diagnostic process is the same.",
       "We map reality, define aspiration, build the bridge."
     ]
+  },
+  {
+    question: "What are my options after the 8-week sprint?",
+    answer: [
+      "The core sprint is designed so you're not locked into a long-term retainer. After eight weeks, most clients choose one of three paths:",
+      "Run it in-house: You own the strategy, operating rhythm, and measurement systems.",
+      "Run it with partners: We help you brief or select an agency to execute.",
+      "Run it with support: We stay involved for a defined period to sit in on interviews, provide additional training, or pressure-test big decisions."
+    ]
   }
 ]
-
-// ============================================================================
-// AFTER THE SPRINT
-// ============================================================================
-
-export const afterSprintContent = {
-  heading: "After the sprint: how we stay involved (if you want)",
-  intro: "The core sprint is designed so you're not locked into a long-term retainer.",
-  paths: [
-    {
-      title: "Run it in-house",
-      description: "You own the strategy, operating rhythm, and measurement systems."
-    },
-    {
-      title: "Run it with partners",
-      description: "We help you brief or select an agency to execute."
-    },
-    {
-      title: "Run it with support",
-      description: "We stay involved for a defined period to sit in on interviews, provide additional training, or pressure-test big decisions."
-    }
-  ]
-}
 
 // ============================================================================
 // CTA CONTENT

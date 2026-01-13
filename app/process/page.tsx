@@ -12,7 +12,6 @@ import {
   additionalSubsections,
   ownershipCategories,
   faqs,
-  afterSprintContent,
   ctaContent,
   processMetadata
 } from "@/config/process"
@@ -121,9 +120,9 @@ export default function ProcessPage() {
       </section>
 
       {/* What We Deliver */}
-      <section className="py-12 md:py-16 bg-background border-t">
+      <section className="py-12 md:py-16 bg-secondary/30">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-foreground">
             What We Deliver
           </h2>
           <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
@@ -165,10 +164,12 @@ export default function ProcessPage() {
             ].map((service, idx) => (
               <div 
                 key={idx} 
-                className="flex gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-muted/30 transition-all"
+                className="flex gap-4 p-5 rounded-lg bg-background border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all"
               >
                 <div className="flex-shrink-0">
-                  <service.icon className="h-6 w-6 text-primary" />
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <service.icon className="h-5 w-5 text-primary" />
+                  </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
@@ -181,7 +182,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Phase Details Section */}
-      <section className="bg-tertiary/30">
+      <section className="bg-tertiary">
         <div className="py-8 md:py-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2">
             Our Three-Phase Process
@@ -207,20 +208,25 @@ export default function ProcessPage() {
       </section>
 
       {/* What You Own Section */}
-      <section className="py-16 md:py-24 bg-tertiary/30">
+      <section className="py-16 md:py-24 bg-tertiary">
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-tertiary-foreground">
             What You Own After Eight Weeks
           </h2>
+          <p className="text-center text-tertiary-foreground/70 mb-12 max-w-2xl mx-auto">
+            Everything transfers to you. No ongoing dependencies.
+          </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {ownershipCategories.map((category, idx) => {
               const Icon = category.icon
               return (
-                <Card key={idx} className="bg-background border-border">
+                <Card key={idx} className="bg-background border-border shadow-sm hover:shadow-md transition-shadow">
                   <CardHeader>
-                    <Icon className="h-12 w-12 text-primary mb-4" />
-                    <CardTitle className="text-xl">{category.title}</CardTitle>
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl text-foreground">{category.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3 text-sm text-muted-foreground">
@@ -242,18 +248,19 @@ export default function ProcessPage() {
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <h2 className="text-3xl font-semibold mb-8">Common Questions</h2>
+          <h2 className="text-3xl font-semibold mb-2 text-foreground">Common Questions</h2>
+          <p className="text-muted-foreground mb-8">Everything you need to know about working with us.</p>
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <details key={idx} className="rounded border border-border p-6 group">
+              <details key={idx} className="rounded-lg border border-border bg-card p-6 group hover:border-primary/30 transition-colors">
                 <summary className="text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between">
                   {faq.question}
-                  <span className="text-muted-foreground group-open:rotate-180 transition-transform">
+                  <span className="text-primary group-open:rotate-180 transition-transform">
                     ▼
                   </span>
                 </summary>
-                <div className="mt-4 space-y-3 text-muted-foreground">
+                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed">
                   {faq.answer.map((paragraph, pIdx) => (
                     <p key={pIdx}>{paragraph}</p>
                   ))}
@@ -264,52 +271,27 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* After the Sprint Section */}
-      <section className="py-16 md:py-24 bg-background border-t">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-            {afterSprintContent.heading}
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-8">
-            {afterSprintContent.intro}
-          </p>
-          <p className="text-sm md:text-base text-muted-foreground mb-8">
-            After eight weeks, most clients choose one of three paths:
-          </p>
-
-          <div className="space-y-4">
-            {afterSprintContent.paths.map((path, idx) => (
-              <Card key={idx} className="bg-tertiary/30 border-border">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    {path.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {path.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-tertiary/30">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {ctaContent.heading}
-          </h2>
+      <section className="py-16 md:py-24 bg-tertiary">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+          <div className="bg-primary text-primary-foreground rounded-3xl px-8 py-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
+              {ctaContent.heading}
+            </h2>
 
-          <p className="text-lg text-muted-foreground mb-8">
-            {ctaContent.body}
-          </p>
+            <p className="text-lg text-primary-foreground/80 mb-8">
+              {ctaContent.body}
+            </p>
 
-          <GetStartedButton size="lg" />
+            <GetStartedButton 
+              size="lg" 
+              className="bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold"
+            />
 
-          <p className="text-sm text-muted-foreground mt-6">
-            {ctaContent.subtext}
-          </p>
+            <p className="text-sm text-primary-foreground/70 mt-6">
+              {ctaContent.subtext}
+            </p>
+          </div>
         </div>
       </section>
     </>

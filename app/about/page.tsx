@@ -296,17 +296,17 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 sm:py-20">
-        <div className="max-w-3xl mx-auto text-center space-y-8 bg-accent-deep-navy text-accent-deep-navy-foreground rounded-3xl px-8 py-10">
+        <div className="max-w-3xl mx-auto text-center space-y-8 bg-primary text-primary-foreground rounded-3xl px-8 py-12">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">
+            <h2 className="text-3xl font-bold text-primary-foreground">
               Ready to Get Started?
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
               Let's talk about whether an 8-week sprint makes sense for you.
             </p>
           </div>
           
-          <GetStartedButton className="btn-hover-lift bg-primary text-primary-foreground hover:bg-primary/90" />
+          <GetStartedButton className="btn-hover-lift bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold" />
           
         </div>
       </section>
