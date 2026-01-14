@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-01-06T23:57:47.653Z",
+  "summary": {
+    "totalLinks": 67,
+    "internalLinks": 23,
+    "externalLinks": 44,
+    "brokenLinks": 4
+  },
+  "brokenLinks": [
+    {
+      "link": "/fractional-cmo-alternative",
+      "type": "internal",
+      "foundIn": [
+        "app/page.backup-20251016-164026.tsx"
+      ]
+    },
+    {
+      "link": "/blog/when-to-hire-fractional-cmo",
+      "type": "internal",
+      "foundIn": [
+        "app/sprint-vs-fractional-cmo/page.tsx",
+        "app/what-is-fractional-cmo/page.tsx",
+        "app/fractional-cmo-hourly-rate/page.tsx"
+      ]
+    },
+    {
+      "link": "/blog/fractional-cmo-vs-strategy-sprint",
+      "type": "internal",
+      "foundIn": [
+        "app/what-is-fractional-cmo/page.tsx"
+      ]
+    },
+    {
+      "link": "/blog/fractional-cmo-alternative",
+      "type": "internal",
+      "foundIn": [
+        "app/what-is-fractional-cmo/page.tsx"
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "from": "/services",
+      "to": "/process",
+      "permanent": true
+    },
+    {
+      "from": "/contact",
+      "to": "/#get-started",
+      "permanent": false
+    },
+    {
+      "from": "/pricing",
+      "to": "/fractional-cmo-hourly-rate",
+      "permanent": false
+    },
+    {
+      "from": "/cmo",
+      "to": "/what-is-fractional-cmo",
+      "permanent": false
+    },
+    {
+      "from": "/fractional-cmo",
+      "to": "/what-is-fractional-cmo",
+      "permanent": false
+    },
+    {
+      "from": "/hire-fractional-cmo",
+      "to": "/what-is-fractional-cmo",
+      "permanent": false
+    },
+    {
+      "from": "/marketing-consultant",
+      "to": "/",
+      "permanent": false
+    },
+    {
+      "from": "/growth-marketing",
+      "to": "/",
+      "permanent": false
+    }
+  ]
+}

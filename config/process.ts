@@ -3,15 +3,6 @@
 // Separates copy from component presentation logic
 
 import {
-  Users,
-  Building2,
-  Handshake,
-  Target,
-  TrendingUp,
-  Package,
-  Megaphone,
-  MapPin,
-  DollarSign,
   FileText,
   Settings,
   Rocket,
@@ -29,27 +20,12 @@ export interface ProcessSection {
   timeline: string
   intro: string
   subsections: Subsection[]
-  framework?: Framework
   deliverables: string[]
 }
 
 export interface Subsection {
   heading: string
   paragraphs: string[]
-}
-
-export interface Framework {
-  id: "5cs" | "stp" | "4ps"
-  title: string
-  description: string
-  items: FrameworkItem[]
-}
-
-export interface FrameworkItem {
-  title: string
-  icon: LucideIcon
-  description: string
-  subItems?: string[]
 }
 
 export interface FAQ {
@@ -70,11 +46,10 @@ export interface OwnershipCategory {
 export const heroContent = {
   title: "How We Work",
   paragraphs: [
-    "Most companies have scattered data, ambitious goals, and no clear path between them. We solve that in eight weeks.",
-    "We don't create new strategies out of thin air. We map what's already working, identify what's blocking growth, and build the system that bridges the gap."
+    "Most companies have scattered data, ambitious goals, and no clear path between them. We solve that in eight weeks."
   ],
-  tagline: "We build the system. You choose how much we stay involved.",
-  clarifier: "Some teams run it fully in-house. Others ask us to help vet agencies, sit in on key hires, or train their team. The sprint sets you up for all three."
+  tagline: "",
+  clarifier: ""
 }
 
 // ============================================================================
@@ -107,42 +82,10 @@ export const processSections: ProcessSection[] = [
       {
         heading: "Examine your complete market position",
         paragraphs: [
-          "We use familiar frameworks like 5Cs to structure the analysis, but the outputs are bespoke to your situation. We examine five dimensions of your market position:"
+          "We examine five dimensions of your market position: Customer, Company, Collaborators, Competition, and Context. The outputs are bespoke to your situation—not generic templates."
         ]
       }
     ],
-    framework: {
-      id: "5cs",
-      title: "Five Dimensions We Analyze",
-      description: "We structure market analysis across these areas to build your bespoke positioning",
-      items: [
-        {
-          title: "Customer",
-          icon: Users,
-          description: "How do buyers actually make decisions? Who's involved? What criteria drive the choice? What outcomes do they need?"
-        },
-        {
-          title: "Company",
-          icon: Building2,
-          description: "What are your genuine strengths? Which capabilities create measurable customer value? Where are you realistically constrained?"
-        },
-        {
-          title: "Collaborators",
-          icon: Handshake,
-          description: "Who supplies your product? Who helps you reach customers? Where do partnerships unlock scale?"
-        },
-        {
-          title: "Competition",
-          icon: Target,
-          description: "Who competes for these same customers? What's their approach? Where do you have advantage? Where are you vulnerable?"
-        },
-        {
-          title: "Context",
-          icon: TrendingUp,
-          description: "What trends help you? What regulatory, technological, or market forces create headwinds? What's changing in your customer's world?"
-        }
-      ]
-    },
     deliverables: [
       "Current state audit (market + funnel analysis)",
       "Revenue model validation",
@@ -170,36 +113,10 @@ export const processSections: ProcessSection[] = [
       {
         heading: "Crystallize your positioning",
         paragraphs: [
-          "We use familiar frameworks like STP (Segmentation, Targeting, Positioning) to structure the work, but the positioning we develop is unique to your situation. This clarifies your strategic focus."
+          "We use Segmentation, Targeting, and Positioning to structure the work, but the positioning we develop is unique to your situation. This clarifies your strategic focus."
         ]
       }
     ],
-    framework: {
-      id: "stp",
-      title: "How We Structure Positioning Work",
-      description: "We use this three-step approach to build your unique positioning",
-      items: [
-        {
-          title: "Segmentation",
-          icon: Users,
-          description: "Which customer groups exist? How do you divide them—by company size, industry, use case, buying behavior? Which segments can you actually reach?"
-        },
-        {
-          title: "Targeting",
-          icon: Target,
-          description: "Of those segments, which can you win? Which delivers the highest lifetime value? Which faces the lowest competitive intensity?"
-        },
-        {
-          title: "Positioning",
-          icon: Building2,
-          description: "In your target customer's mind, what should you own? Not every positive attribute—the specific claim you want them to believe about you.",
-          subItems: [
-            "For [target customer], [Company] is the [category] that [key benefit], unlike [alternative], because [proof point].",
-            "This isn't marketing copy. It's strategic clarity that guides every resource decision you make."
-          ]
-        }
-      ]
-    },
     deliverables: [
       "Positioning strategy",
       "Competitive differentiation strategy",
@@ -228,37 +145,24 @@ export const processSections: ProcessSection[] = [
       {
         heading: "Optimize your complete marketing mix",
         paragraphs: [
-          "We use familiar frameworks like 4Ps to structure the optimization, but the strategy we build is tailored to your business. We optimize across four dimensions:"
+          "We optimize across Product, Promotion, Place, and Price—tailored to your business. You get messaging guidelines, channel plans with specific campaigns, and clear success criteria."
+        ]
+      },
+      {
+        heading: "Solve the infrastructure problem",
+        paragraphs: [
+          "Your data is scattered across tools, making it impossible to see the complete picture. We connect your systems into one view that shows what actually matters.",
+          "You get a measurement system that tracks the five numbers you need to check weekly. Decisions get made on data, not opinions."
+        ]
+      },
+      {
+        heading: "Transfer complete ownership",
+        paragraphs: [
+          "We document who owns what, establish the weekly rhythm you'll follow, and identify where you need outside help.",
+          "Handoff isn't complete until you've run through the system once and can operate independently. Then 30 days of support while you find your rhythm."
         ]
       }
     ],
-    framework: {
-      id: "4ps",
-      title: "Four Areas We Optimize",
-      description: "We structure marketing mix work across these dimensions to build your custom strategy",
-      items: [
-        {
-          title: "Product",
-          icon: Package,
-          description: "Beyond features—what's the complete customer experience? How is it packaged? What objections does it create? You get messaging guidelines and a list of what to stop saying."
-        },
-        {
-          title: "Promotion",
-          icon: Megaphone,
-          description: "How do you communicate your positioning? Through which channels? With what message? We build the channel plan with specific campaigns, realistic timelines, and clear success criteria."
-        },
-        {
-          title: "Place",
-          icon: MapPin,
-          description: "Where do your customers expect to find you? Direct sales? Self-serve? Marketplace? What's your distribution strategy?"
-        },
-        {
-          title: "Price",
-          icon: DollarSign,
-          description: "Does your pricing reflect what buyers value? Are you capturing the right share of value created? How does pricing reinforce positioning?"
-        }
-      ]
-    },
     deliverables: [
       "90-day strategic action plan",
       "Marketing mix strategy",
@@ -271,27 +175,6 @@ export const processSections: ProcessSection[] = [
     ]
   }
 ]
-
-// ============================================================================
-// ADDITIONAL SUBSECTIONS (for Section 3)
-// ============================================================================
-
-export const additionalSubsections = {
-  infrastructure: {
-    heading: "Solve the infrastructure problem",
-    paragraphs: [
-      "Your data is scattered across tools, making it impossible to see the complete picture. We connect your systems into one view that shows what actually matters.",
-      "You get a measurement system that tracks the five numbers you need to check weekly. Decisions get made on data, not opinions."
-    ]
-  },
-  transfer: {
-    heading: "Transfer complete ownership",
-    paragraphs: [
-      "We document who owns what, establish the weekly rhythm you'll follow, and identify where you need outside help.",
-      "Handoff isn't complete until you've run through the system once and can operate independently. Then 30 days of support while you find your rhythm."
-    ]
-  }
-}
 
 // ============================================================================
 // WHAT YOU OWN

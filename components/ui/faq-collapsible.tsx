@@ -29,13 +29,17 @@ export default function FAQCollapsible({ items, className }: FAQCollapsibleProps
             <CollapsibleContent className="px-6 pb-6">
               <div className="pt-2">
                 <div 
-                  className="text-base text-muted-foreground leading-relaxed prose prose-sm max-w-none"
+                  className="text-base text-muted-foreground leading-relaxed max-w-prose"
                   dangerouslySetInnerHTML={{ __html: item.answer }}
                 />
               </div>
             </CollapsibleContent>
           </Collapsible>
-          {index < items.length - 1 && <Separator className="mx-6" />}
+          {index < items.length - 1 && (
+            <div className="px-6">
+              <Separator />
+            </div>
+          )}
         </div>
       ))}
     </div>

@@ -958,21 +958,27 @@ export default function SprintVsFractionalCMOPage() {
         <Separator />
 
         {/* Final CTA */}
-        <section className="container mx-auto px-4 py-16 bg-primary/5">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Ready to Build Your Strategy?
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                If strategic architecture, complete ownership, and rapid delivery sound right for your
-                company, let's talk about whether an 8-week sprint fits your situation.
-              </p>
-            </div>
+        <section className="py-16 sm:py-20 bg-primary">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-tertiary mb-4">
+              Ready to Build Your Strategy?
+            </h2>
+            <p className="text-lg text-tertiary/80 leading-relaxed mb-8">
+              If strategic architecture, complete ownership, and rapid delivery sound right for your
+              company, let's talk about whether an 8-week sprint fits your situation.
+            </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <GetStartedButton size="lg" className="btn-hover-lift" />
-              <Button variant="outline" size="lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <GetStartedButton 
+                size="lg" 
+                className="font-semibold bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 shadow-md shadow-accent-golden/20 hover:shadow-lg hover:shadow-accent-golden/30" 
+              />
+              <Button 
+                variant="outline" 
+                size="lg" 
+                asChild
+                className="border-tertiary bg-tertiary text-accent-deep-navy hover:bg-tertiary/90"
+              >
                 <Link href="/process">
                   View Sprint Process
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -980,15 +986,13 @@ export default function SprintVsFractionalCMOPage() {
               </Button>
             </div>
 
-            <div className="pt-8 text-sm text-muted-foreground">
-              <p>
-                <strong>Not sure which model fits?</strong> Read our detailed guide on{" "}
-                <Link href="/blog/when-to-hire-fractional-cmo" className="text-primary hover:underline">
-                  when to hire a fractional CMO vs strategy consultant
-                </Link>
-                .
-              </p>
-            </div>
+            <p className="text-sm text-tertiary/70">
+              <strong className="text-tertiary/90">Not sure which model fits?</strong> Read our detailed guide on{" "}
+              <Link href="/blog/when-to-hire-fractional-cmo" className="text-accent-golden hover:underline">
+                when to hire a fractional CMO vs strategy consultant
+              </Link>
+              .
+            </p>
           </div>
         </section>
       </div>

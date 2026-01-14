@@ -1,16 +1,34 @@
 // app/process/page.tsx
 import type { Metadata } from "next"
-import { FileText, Settings, Rocket, Search, Compass, MessageSquare, BarChart3, BookOpen, Route } from "lucide-react"
+import { 
+  Search, 
+  Compass, 
+  MessageSquare, 
+  BarChart3, 
+  BookOpen, 
+  Route, 
+  ChevronDown,
+  DollarSign,
+  Map,
+  Users,
+  Target,
+  Lightbulb,
+  GitBranch,
+  Settings,
+  Wrench,
+  Handshake
+} from "lucide-react"
 import { GetStartedButton } from "@/components/ui/get-started-button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { createServiceSchema, createWebPageSchema, createFAQSchema } from "@/lib/schemas"
-import { ProcessPhasesMobile } from "@/components/process/process-phases-mobile"
-import { ProcessPhasesDesktop } from "@/components/process/process-phases-desktop"
 import {
   heroContent,
   processSections,
-  additionalSubsections,
-  ownershipCategories,
   faqs,
   ctaContent,
   processMetadata
@@ -36,20 +54,38 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
-// Create serializable version of sections for client components
-const serializableSections = processSections.map(section => ({
-  id: section.id,
-  number: section.number,
-  title: section.title,
-  timeline: section.timeline,
-  intro: section.intro,
-  subsections: section.subsections,
-  deliverables: section.deliverables
-}))
-
-const serializableAdditionalSubsections = {
-  infrastructure: additionalSubsections.infrastructure,
-  transfer: additionalSubsections.transfer
+// Helper to italicize questions in text
+function formatWithItalicQuestions(text: string): React.ReactNode {
+  // Split by sentences that end with ?
+  const parts = text.split(/(\?)/g)
+  const result: React.ReactNode[] = []
+  
+  for (let i = 0; i < parts.length; i++) {
+    if (parts[i] === '?') {
+      // Find the start of this question (look back for previous sentence end or start)
+      continue
+    }
+    
+    // Check if this part contains a question
+    if (i + 1 < parts.length && parts[i + 1] === '?') {
+      // This part ends with a question mark
+      // Find where the question starts (after last period or at beginning)
+      const lastPeriodIndex = parts[i].lastIndexOf('. ')
+      if (lastPeriodIndex !== -1) {
+        // There's a statement before the question
+        result.push(parts[i].substring(0, lastPeriodIndex + 2))
+        result.push(<em key={i} className="text-foreground/80">{parts[i].substring(lastPeriodIndex + 2)}?</em>)
+      } else {
+        // Whole thing is the question
+        result.push(<em key={i} className="text-foreground/80">{parts[i]}?</em>)
+      }
+      i++ // Skip the ? part
+    } else {
+      result.push(parts[i])
+    }
+  }
+  
+  return result
 }
 
 export default function ProcessPage() {
@@ -99,33 +135,238 @@ export default function ProcessPage() {
             {heroContent.title}
           </h1>
 
-          <div className="text-base md:text-lg text-muted-foreground space-y-4 mb-8">
+          <div className="text-base md:text-lg text-muted-foreground space-y-4">
             {heroContent.paragraphs.map((p, idx) => (
               <p key={idx}>{p}</p>
             ))}
           </div>
+        </div>
+      </section>
 
-          <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
-            {heroContent.tagline}
+      {/* Three-Phase Process Header */}
+      <section className="py-16 md:py-20 bg-primary">
+        <div className="container mx-auto px-4 md:px-6 max-w-5xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            Our Three-Phase Process
+          </h2>
+          <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
+            Eight weeks from kickoff to ownership transfer
           </p>
+          
+          {/* Phase overview cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {processSections.map((phase) => (
+              <div 
+                key={phase.id}
+                className="bg-background rounded-xl p-6 text-left shadow-lg"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
+                    {phase.number}
+                  </span>
+                  <span className="text-sm font-medium text-primary">{phase.timeline}</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">{phase.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{phase.intro}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          {heroContent.clarifier && (
-            <p className="text-sm md:text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
-              {heroContent.clarifier}
-            </p>
-          )}
+      {/* Phase 1 - White background */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground text-lg font-bold shrink-0">
+              1
+            </span>
+            <div>
+              <span className="text-sm font-medium text-primary">{processSections[0].timeline}</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{processSections[0].title}</h2>
+            </div>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+            {processSections[0].intro}
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <Accordion type="multiple" className="space-y-3">
+              {[
+                { icon: DollarSign, ...processSections[0].subsections[0] },
+                { icon: Map, ...processSections[0].subsections[1] },
+                { icon: Users, ...processSections[0].subsections[2] }
+              ].map((sub, subIdx) => (
+                <AccordionItem 
+                  key={subIdx} 
+                  value={`phase1-${subIdx}`}
+                  className="border border-border/50 rounded-lg bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
+                >
+                  <AccordionTrigger className="px-4 py-3 hover:no-underline">
+                    <div className="flex items-center gap-3">
+                      <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <sub.icon className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-base font-semibold text-foreground text-left">{sub.heading}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div className="pl-4 sm:pl-12 space-y-2">
+                      {sub.paragraphs.map((p, pIdx) => (
+                        <p key={pIdx} className="text-muted-foreground leading-relaxed">
+                          {formatWithItalicQuestions(p)}
+                        </p>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <div className="pt-6 border-t border-border/50 md:pt-0 md:border-t-0 md:pl-8 md:border-l">
+              <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-4">What You Get</h4>
+              <ul className="space-y-2.5">
+                {processSections[0].deliverables.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <GetStartedButton size="lg" />
+      {/* Phase 2 - Cream background */}
+      <section className="py-16 md:py-20 bg-tertiary">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground text-lg font-bold shrink-0">
+              2
+            </span>
+            <div>
+              <span className="text-sm font-medium text-primary">{processSections[1].timeline}</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{processSections[1].title}</h2>
+            </div>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+            {processSections[1].intro}
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <Accordion type="multiple" className="space-y-3">
+              {[
+                { icon: Target, ...processSections[1].subsections[0] },
+                { icon: Lightbulb, ...processSections[1].subsections[1] }
+              ].map((sub, subIdx) => (
+                <AccordionItem 
+                  key={subIdx} 
+                  value={`phase2-${subIdx}`}
+                  className="border border-border/30 rounded-lg bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
+                >
+                  <AccordionTrigger className="px-4 py-3 hover:no-underline">
+                    <div className="flex items-center gap-3">
+                      <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <sub.icon className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-base font-semibold text-foreground text-left">{sub.heading}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div className="pl-4 sm:pl-12 space-y-2">
+                      {sub.paragraphs.map((p, pIdx) => (
+                        <p key={pIdx} className="text-muted-foreground leading-relaxed">
+                          {formatWithItalicQuestions(p)}
+                        </p>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <div className="pt-6 border-t border-primary/20 md:pt-0 md:border-t-0 md:pl-8 md:border-l">
+              <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-4">What You Get</h4>
+              <ul className="space-y-2.5">
+                {processSections[1].deliverables.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Phase 3 - White background */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground text-lg font-bold shrink-0">
+              3
+            </span>
+            <div>
+              <span className="text-sm font-medium text-primary">{processSections[2].timeline}</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{processSections[2].title}</h2>
+            </div>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+            {processSections[2].intro}
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <Accordion type="multiple" className="space-y-3">
+              {[
+                { icon: GitBranch, ...processSections[2].subsections[0] },
+                { icon: Settings, ...processSections[2].subsections[1] },
+                { icon: Wrench, ...processSections[2].subsections[2] },
+                { icon: Handshake, ...processSections[2].subsections[3] }
+              ].map((sub, subIdx) => (
+                <AccordionItem 
+                  key={subIdx} 
+                  value={`phase3-${subIdx}`}
+                  className="border border-border/50 rounded-lg bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
+                >
+                  <AccordionTrigger className="px-4 py-3 hover:no-underline">
+                    <div className="flex items-center gap-3">
+                      <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <sub.icon className="h-4 w-4 text-primary" />
+                      </div>
+                      <span className="text-base font-semibold text-foreground text-left">{sub.heading}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <div className="pl-4 sm:pl-12 space-y-2">
+                      {sub.paragraphs.map((p, pIdx) => (
+                        <p key={pIdx} className="text-muted-foreground leading-relaxed">
+                          {formatWithItalicQuestions(p)}
+                        </p>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <div className="pt-6 border-t border-border/50 md:pt-0 md:border-t-0 md:pl-8 md:border-l">
+              <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-4">What You Get</h4>
+              <ul className="space-y-2.5">
+                {processSections[2].deliverables.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* What We Deliver */}
-      <section className="py-12 md:py-16 bg-secondary/30">
+      <section className="py-16 md:py-24 bg-primary">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-primary-foreground">
             What We Deliver
           </h2>
-          <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+          <p className="text-center text-primary-foreground/70 mb-12 max-w-2xl mx-auto">
             Every engagement is custom, but these are the core elements we build together.
           </p>
 
@@ -164,7 +405,7 @@ export default function ProcessPage() {
             ].map((service, idx) => (
               <div 
                 key={idx} 
-                className="flex gap-4 p-5 rounded-lg bg-background border border-border/50 hover:border-primary/30 hover:shadow-sm transition-all"
+                className="flex gap-4 p-5 rounded-xl bg-card border-none shadow-lg"
               >
                 <div className="flex-shrink-0">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -181,86 +422,22 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* Phase Details Section */}
-      <section className="bg-tertiary">
-        <div className="py-8 md:py-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-2">
-            Our Three-Phase Process
-          </h2>
-          <p className="text-center text-muted-foreground text-sm md:text-base max-w-xl mx-auto px-4">
-            Eight weeks from kickoff to ownership transfer
-          </p>
-        </div>
-
-        {/* Mobile: Swipeable stepper experience */}
-        <ProcessPhasesMobile 
-          sections={serializableSections}
-          additionalSubsections={serializableAdditionalSubsections}
-        />
-
-        {/* Desktop: Scroll-linked sidebar with full content */}
-        <div className="pb-16">
-          <ProcessPhasesDesktop 
-            sections={serializableSections}
-            additionalSubsections={serializableAdditionalSubsections}
-          />
-        </div>
-      </section>
-
-      {/* What You Own Section */}
-      <section className="py-16 md:py-24 bg-tertiary">
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-tertiary-foreground">
-            What You Own After Eight Weeks
-          </h2>
-          <p className="text-center text-tertiary-foreground/70 mb-12 max-w-2xl mx-auto">
-            Everything transfers to you. No ongoing dependencies.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {ownershipCategories.map((category, idx) => {
-              const Icon = category.icon
-              return (
-                <Card key={idx} className="bg-background border-border shadow-sm hover:shadow-md transition-shadow">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl text-foreground">{category.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3 text-sm text-muted-foreground">
-                      {category.items.map((item, itemIdx) => (
-                        <li key={itemIdx} className="flex items-start gap-2">
-                          <span className="text-primary mt-0.5">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-tertiary">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           <h2 className="text-3xl font-semibold mb-2 text-foreground">Common Questions</h2>
           <p className="text-muted-foreground mb-8">Everything you need to know about working with us.</p>
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <details key={idx} className="rounded-lg border border-border bg-card p-6 group hover:border-primary/30 transition-colors">
+              <details key={idx} className="rounded-lg border border-border/30 bg-card p-6 group hover:border-primary/30 transition-colors shadow-sm">
                 <summary className="text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between">
                   {faq.question}
                   <span className="text-primary group-open:rotate-180 transition-transform">
-                    ▼
+                    <ChevronDown className="h-5 w-5" />
                   </span>
                 </summary>
-                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed">
+                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed max-w-prose">
                   {faq.answer.map((paragraph, pIdx) => (
                     <p key={pIdx}>{paragraph}</p>
                   ))}
@@ -272,26 +449,24 @@ export default function ProcessPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-tertiary">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-          <div className="bg-primary text-primary-foreground rounded-3xl px-8 py-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
-              {ctaContent.heading}
-            </h2>
+      <section className="py-16 md:py-24 bg-primary">
+        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
+            {ctaContent.heading}
+          </h2>
 
-            <p className="text-lg text-primary-foreground/80 mb-8">
-              {ctaContent.body}
-            </p>
+          <p className="text-lg text-primary-foreground/80 mb-8">
+            {ctaContent.body}
+          </p>
 
-            <GetStartedButton 
-              size="lg" 
-              className="bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold"
-            />
+          <GetStartedButton 
+            size="lg" 
+            className="bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold"
+          />
 
-            <p className="text-sm text-primary-foreground/70 mt-6">
-              {ctaContent.subtext}
-            </p>
-          </div>
+          <p className="text-sm text-primary-foreground/70 mt-6">
+            {ctaContent.subtext}
+          </p>
         </div>
       </section>
     </>
