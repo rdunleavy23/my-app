@@ -129,13 +129,16 @@ export default function ProcessPage() {
       />
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-tertiary">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
             {heroContent.title}
           </h1>
+          
+          {/* Separator line */}
+          <div className="w-16 h-px bg-primary mx-auto mb-6"></div>
 
-          <div className="text-base md:text-lg text-muted-foreground space-y-4">
+          <div className="text-base md:text-lg text-primary space-y-4">
             {heroContent.paragraphs.map((p, idx) => (
               <p key={idx}>{p}</p>
             ))}
