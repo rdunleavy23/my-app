@@ -83,7 +83,7 @@ export default function HomePage() {
       name: "What makes you different from a fractional CMO?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us."
+        text: "We're project-based, not retainer-based. Think of us as the construction crew that builds the house; a fractional CMO is the property manager who runs it afterward. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us."
       }
     },
     {
@@ -444,7 +444,7 @@ export default function HomePage() {
                 },
                 {
                   question: "What makes you different from a fractional CMO?",
-                  answer: "We're project-based, not retainer-based. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us. <a href='/sprint-vs-fractional-cmo' class='text-primary hover:underline'>Read our detailed comparison</a>."
+                  answer: "We're project-based, not retainer-based. Think of us as the construction crew that builds the house; a fractional CMO is the property manager who runs it afterward. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us. <a href='/sprint-vs-fractional-cmo' class='text-primary hover:underline'>Read our detailed comparison</a>."
                 },
                 {
                   question: "Can we start right away?",
