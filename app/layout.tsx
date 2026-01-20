@@ -119,6 +119,7 @@ export default function RootLayout({
               send_page_view: true,
               enhanced_measurement: true
             });
+            gtag('config', 'AW-17619996764');
           `}
         </Script>
         <script

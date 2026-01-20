@@ -53,6 +53,7 @@ export function CalBookingModal({
               "unknown";
 
             if (typeof window !== "undefined" && window.gtag) {
+              // GA4 purchase event
               window.gtag("event", "purchase", {
                 currency: "USD",
                 value: 500,
@@ -65,6 +66,13 @@ export function CalBookingModal({
                     quantity: 1,
                   },
                 ],
+              });
+              // Google Ads conversion tracking
+              window.gtag("event", "conversion", {
+                send_to: "AW-17619996764/LE1eCMyD7tkbENyg79FB",
+                value: 500,
+                currency: "USD",
+                transaction_id: bookingId,
               });
             }
 
