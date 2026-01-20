@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   title: "Pattern Growth | 8-Week Growth Strategy Sprints",
   description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
   keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, marketing strategy, strategy consulting",
-  alternates: { canonical: "https://www.patterngrowth.com/" },
+  alternates: { canonical: "https://www.patterngrowth.com" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Pattern Growth | 8-Week Growth Strategy Sprints",

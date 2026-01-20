@@ -217,7 +217,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Build static pages from discovered routes
   const staticPages: MetadataRoute.Sitemap = allRoutes.map(route => {
-    const url = route === '/' ? `${SITE_URL}/` : `${SITE_URL}${route}`
+    // Homepage: use SITE_URL without trailing slash to match canonical
+    // Other pages: append route directly (no trailing slash per site standard)
+    const url = route === '/' ? SITE_URL : `${SITE_URL}${route}`
     return {
       url,
       lastModified: getLastModifiedForPage(url),
