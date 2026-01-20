@@ -134,7 +134,7 @@ export default function RootLayout({
               "@id": "https://www.patterngrowth.com/#organization",
               name: "Pattern Growth",
               description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
-              url: "https://www.patterngrowth.com/",
+              url: "https://www.patterngrowth.com",
               logo: "https://www.patterngrowth.com/patterngrowth-android-chrome-512x512.png",
               sameAs: [
                 "https://x.com/patterngrowthco",

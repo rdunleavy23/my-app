@@ -71,7 +71,7 @@ export default function HomePage() {
     "@id": "https://www.patterngrowth.com/#website",
     name: "Pattern Growth",
     alternateName: ["Pattern", "PatternGrowth"],
-    url: "https://www.patterngrowth.com/",
+    url: "https://www.patterngrowth.com",
     publisher: {
       "@id": "https://www.patterngrowth.com/#organization"
     },
