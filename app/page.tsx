@@ -462,8 +462,11 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-[#F8ECD1] mb-4">
               See If We're a Fit
             </h2>
-            <p className="text-base sm:text-lg text-[#F8ECD1] mb-8">
-              We'll talk about where you are, where you need to be, and whether this makes sense. If we're not the right fit, we'll point you toward someone who can help.
+            <p className="text-base sm:text-lg text-[#F8ECD1] mb-2">
+              We'll talk about where you are, where you need to be, and whether this makes sense.
+            </p>
+            <p className="text-sm sm:text-base text-[#F8ECD1]/80 italic mb-8">
+              If we're not the right fit, we'll point you toward someone who can help.
             </p>
             <GetStartedButton size="lg" className="font-semibold btn-hover-lift bg-[#FFBF5E] text-[#02273A] hover:bg-[#FFBF5E]/90 shadow-md shadow-[#FFBF5E]/20 hover:shadow-lg hover:shadow-[#FFBF5E]/30 [&_i]:bg-[#02273A]/10 [&_i]:text-[#02273A]" location="hero">
               Schedule a Call
