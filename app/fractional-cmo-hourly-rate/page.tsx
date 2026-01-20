@@ -9,20 +9,20 @@ import { TableOfContents } from '@/components/ui/table-of-contents'
 import { createServiceSchema, createBreadcrumbListSchema, createFAQSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-  description: 'Fractional CMO rates: $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery with ownership.',
+  title: 'Fractional CMO Cost: Hourly Rates vs Fixed-Price Sprints',
+  description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. Compare with fixed $9,500 sprints delivering complete strategy + full ownership.',
   keywords: ['fractional cmo cost', 'fractional cmo pricing', 'fractional cmo rates', 'fractional cmo hourly rate', 'how much does fractional cmo cost', 'cmo consulting rates', 'marketing consulting pricing', 'fractional cmo retainer cost', 'project-based marketing pricing', 'marketing consulting fees'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate',
-    title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery with full ownership transfer.',
+    title: 'Fractional CMO Cost: Hourly Rates vs Fixed-Price Sprints',
+    description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. Compare with fixed $9,500 sprints delivering complete strategy + full ownership.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fractional CMO Cost: Rates vs. Project Pricing',
-    description: 'Fractional CMO rates typically $200-500/hour or $5K-15K/month on retainer. Pattern Growth offers fixed-price sprints: $9,500 for complete 8-week delivery with full ownership transfer.'
+    title: 'Fractional CMO Cost: Hourly Rates vs Fixed-Price Sprints',
+    description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. Compare with fixed $9,500 sprints delivering complete strategy + full ownership.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate'

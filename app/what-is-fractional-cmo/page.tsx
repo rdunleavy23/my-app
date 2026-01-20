@@ -11,19 +11,19 @@ import { createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'What is a Fractional CMO? Definition & Alternatives',
-  description: 'Fractional CMO definition: Part-time marketing executive on retainer. Pattern Growth offers project-based: complete 8-week growth strategy with ownership.',
+  description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.',
   keywords: ['what is fractional cmo', 'fractional cmo definition', 'fractional cmo meaning', 'fractional chief marketing officer', 'fractional cmo services', 'fractional cmo cost', 'fractional cmo alternative', 'part-time cmo', 'fractional cmo vs full-time', 'fractional marketing leadership'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/what-is-fractional-cmo',
     title: 'What is a Fractional CMO? Definition & Alternatives',
-    description: 'Fractional CMO definition: Part-time marketing executive providing strategic leadership on retainer. Pattern Growth offers project-based alternative delivering complete 8-week growth strategy with full ownership transfer.',
+    description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'What is a Fractional CMO? Definition & Alternatives',
-    description: 'A fractional CMO provides part-time marketing leadership on retainer. Pattern Growth offers a project-based alternative: complete strategy in 8 weeks, no dependency.'
+    description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/what-is-fractional-cmo'

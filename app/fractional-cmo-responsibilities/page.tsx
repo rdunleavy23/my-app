@@ -4,19 +4,19 @@ import { GetStartedButton } from '@/components/ui/get-started-button'
 import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Responsibilities & Deliverables',
-  description: 'What does a fractional CMO do? Compare traditional fractional CMO responsibilities with Pattern Growth\'s focused sprint deliverables and complete system ownership.',
+  title: 'Fractional CMO Responsibilities: What They Do & Deliver',
+  description: 'What does a fractional CMO do? Strategy, team oversight, measurement. Compare with sprint deliverables that transfer complete ownership in 8 weeks.',
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-cmo-responsibilities',
-    title: 'Fractional CMO Responsibilities & Deliverables',
-    description: 'What does a fractional CMO do? Compare traditional fractional CMO responsibilities with Pattern Growth\'s focused sprint deliverables and complete system ownership.',
+    title: 'Fractional CMO Responsibilities: What They Do & Deliver',
+    description: 'What does a fractional CMO do? Strategy, team oversight, measurement. Compare with sprint deliverables that transfer complete ownership in 8 weeks.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fractional CMO Responsibilities & Deliverables',
-    description: 'What does a fractional CMO do? Compare traditional fractional CMO responsibilities with Pattern Growth\'s focused sprint deliverables and complete system ownership.'
+    title: 'Fractional CMO Responsibilities: What They Do & Deliver',
+    description: 'What does a fractional CMO do? Strategy, team oversight, measurement. Compare with sprint deliverables that transfer complete ownership in 8 weeks.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/fractional-cmo-responsibilities'

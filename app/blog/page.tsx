@@ -9,23 +9,23 @@ import { Badge } from "@/components/ui/badge"
 import { Clock, Calendar } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Growth Strategy Insights | Pattern Growth",
+  title: "Growth Strategy Insights | Pattern Growth Blog",
   description:
-    "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
+    "Growth strategy insights for scaling companies. Practical guides on fractional CMO alternatives, marketing ops, and building without overhead.",
   alternates: { canonical: "https://www.patterngrowth.com/blog" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/blog",
-    title: "Growth Strategy Insights | Pattern Growth",
+    title: "Growth Strategy Insights | Pattern Growth Blog",
     description:
-      "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
+      "Growth strategy insights for scaling companies. Practical guides on fractional CMO alternatives, marketing ops, and building without overhead.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growth Strategy Insights | Pattern Growth",
+    title: "Growth Strategy Insights | Pattern Growth Blog",
     description:
-      "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
+      "Growth strategy insights for scaling companies. Practical guides on fractional CMO alternatives, marketing ops, and building without overhead.",
   },
   robots: { index: true, follow: true },
 }
@@ -37,7 +37,7 @@ export default function BlogPage() {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: "Pattern Growth Blog",
-    description: "Growth strategy insights and case studies for $1-5M B2B companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
+    description: "Growth strategy insights and case studies for $1-5M companies. Learn how to build marketing infrastructure, implement strategic frameworks, and scale revenue without scale debt.",
     url: "https://www.patterngrowth.com/blog",
     publisher: {
       "@type": "Organization",

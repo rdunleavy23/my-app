@@ -4,23 +4,23 @@ import { createServiceSchema, createWebPageSchema, createFAQSchema, createBreadc
 import Breadcrumbs from "@/components/ui/breadcrumbs"
 
 export const metadata: Metadata = {
-  title: "Fractional CMO Services | Pattern Growth",
+  title: "Fractional CMO Services: Retainers vs 8-Week Sprints",
   description:
-    "Project-based fractional CMO services: complete growth strategy, playbooks, and KPI models in 8 weeks. No retainers. Full ownership for $1-5M companies.",
+    "Fractional CMO services compared: retainers vs 8-week sprints. Get strategy + execution with complete ownership transfer. No ongoing fees.",
   alternates: { canonical: "https://www.patterngrowth.com/fractional-cmo-services" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/fractional-cmo-services",
-    title: "Fractional CMO Services | Pattern Growth",
+    title: "Fractional CMO Services: Retainers vs 8-Week Sprints",
     description:
-      "Project-based fractional CMO services delivering complete growth strategy, marketing playbooks, and KPI models in 8 weeks—without ongoing retainers. Full ownership transfer for $1-5M B2B companies.",
+      "Fractional CMO services compared: retainers vs 8-week sprints. Get strategy + execution with complete ownership transfer. No ongoing fees.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fractional CMO Services | Pattern Growth",
+    title: "Fractional CMO Services: Retainers vs 8-Week Sprints",
     description:
-      "Project-based fractional CMO services delivering complete growth strategy, marketing playbooks, and KPI models in 8 weeks—without ongoing retainers. Full ownership transfer for $1-5M B2B companies.",
+      "Fractional CMO services compared: retainers vs 8-week sprints. Get strategy + execution with complete ownership transfer. No ongoing fees.",
   },
   robots: { index: true, follow: true },
 }

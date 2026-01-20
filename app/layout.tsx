@@ -30,23 +30,24 @@ const platypi = Platypi({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.patterngrowth.com"),
+  applicationName: "Pattern Growth",
   title: {
-    default: "Project-Based Marketing Consultant | 8-Week Growth Strategy Sprint | Pattern Growth",
+    default: "Pattern Growth | 8-Week Growth Strategy Sprints",
     template: "%s | Pattern Growth",
   },
-  description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
+  description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
   alternates: { canonical: "https://www.patterngrowth.com/" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/",
     siteName: "Pattern Growth",
     title: "Pattern Growth",
-    description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
+    description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Pattern Growth",
-    description: "8-week growth strategy sprints for $1-5M B2B companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
+    description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
   },
   robots: { index: true, follow: true },
   icons: {
@@ -122,21 +123,22 @@ export default function RootLayout({
             gtag('config', 'AW-17619996764');
           `}
         </Script>
+        {/* Organization Schema - kept global for brand identity */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://www.patterngrowth.com/#organization",
               name: "Pattern Growth",
               description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
               url: "https://www.patterngrowth.com/",
               logo: "https://www.patterngrowth.com/patterngrowth-android-chrome-512x512.png",
               sameAs: [
                 "https://x.com/patterngrowthco",
-                "https://twitter.com/patterngrowth",
-                "https://instagram.com/patterngrowthco",
-                "https://linkedin.com/company/patterngrowth"
+                "https://linkedin.com/company/patterngrowth",
+                "https://instagram.com/patterngrowthco"
               ],
               contactPoint: {
                 "@type": "ContactPoint",
@@ -147,18 +149,7 @@ export default function RootLayout({
             })
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Pattern Growth",
-              alternateName: ["Pattern", "PatternGrowth"],
-              url: "https://www.patterngrowth.com/"
-            })
-          }}
-        />
+        {/* WebSite schema moved to homepage only (app/page.tsx) */}
       </head>
       <body className={`${dmSans.variable} ${dmMono.variable} ${platypi.variable} font-sans min-h-dvh bg-background text-foreground antialiased`} suppressHydrationWarning>
         <ThemeProvider>

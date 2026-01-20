@@ -14,9 +14,9 @@ import { ErrorBoundary } from "@/components/error-boundary"
 import { createPersonSchema, createOrganizationSchema, createBreadcrumbListSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
-  title: "Our Team: Two Growth Strategists | Pattern Growth",
+  title: "Meet Our Growth Strategists | Pattern Growth Team",
   description:
-    "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
+    "Meet the growth strategists behind Pattern Growth. Ryan and William deliver executive-level strategy in focused 8-week sprints with complete ownership.",
   keywords: ["growth strategists", "fractional CMO alternative", "growth strategy sprint", "Ryan", "William", "Pattern Growth team"],
   authors: [{ name: "Pattern Growth" }],
   creator: "Pattern Growth",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/about",
-    title: "Our Team: Two Growth Strategists | Pattern Growth",
+    title: "Meet Our Growth Strategists | Pattern Growth Team",
     description:
-      "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
+      "Meet the growth strategists behind Pattern Growth. Ryan and William deliver executive-level strategy in focused 8-week sprints with complete ownership.",
     siteName: "Pattern Growth",
     images: [
       {

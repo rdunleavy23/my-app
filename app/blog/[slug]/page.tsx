@@ -112,7 +112,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       {
         "@type": "Thing",
         "name": "Growth Strategy",
-        "description": "Strategic frameworks for scaling B2B companies"
+        "description": "Strategic frameworks for scaling companies"
       },
       {
         "@type": "Thing",

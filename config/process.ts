@@ -272,8 +272,8 @@ export const ctaContent = {
 // ============================================================================
 
 export const processMetadata = {
-  title: "How We Work | Pattern Growth",
-  description: "Our three-section process: Map your reality (weeks 1-2), define where you're headed (weeks 3-4), and build the bridge (weeks 5-8). Full ownership transfer, no dependency.",
+  title: "Our 8-Week Process: Discovery to Full Ownership | Pattern Growth",
+  description: "Our 8-week process: from discovery to full ownership. See exactly how we build your marketing strategy and hand it over. No retainers.",
   keywords: [
     "growth strategy process",
     "marketing consulting methodology",

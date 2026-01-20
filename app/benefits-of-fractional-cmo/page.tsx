@@ -4,19 +4,19 @@ import { GetStartedButton } from '@/components/ui/get-started-button'
 import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
-  title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
-  description: 'Explore fractional CMO benefits and compare with Pattern Growth: complete ownership, faster delivery, no ongoing dependency. Why 8-week sprints beat retainers.',
+  title: 'Fractional CMO Benefits vs Sprint Advantages',
+  description: 'Fractional CMO benefits: flexibility, cost savings, expertise. Sprint advantages: complete ownership, faster delivery, no dependency. Compare both.',
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/benefits-of-fractional-cmo',
-    title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
-    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Learn why 8-week strategy sprints outperform traditional retainer models.',
+    title: 'Fractional CMO Benefits vs Sprint Advantages',
+    description: 'Fractional CMO benefits: flexibility, cost savings, expertise. Sprint advantages: complete ownership, faster delivery, no dependency. Compare both.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fractional CMO Benefits & Strategy Sprint Comparison',
-    description: 'Explore fractional CMO benefits and compare with Pattern Growth\'s alternative: complete ownership, faster delivery, no ongoing dependency. Learn why 8-week strategy sprints outperform traditional retainer models.'
+    title: 'Fractional CMO Benefits vs Sprint Advantages',
+    description: 'Fractional CMO benefits: flexibility, cost savings, expertise. Sprint advantages: complete ownership, faster delivery, no dependency. Compare both.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/benefits-of-fractional-cmo'

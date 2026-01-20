@@ -50,19 +50,41 @@ const FAQCollapsible = dynamic(() => import("@/components/ui/faq-collapsible").t
 
 
 export const metadata: Metadata = {
-  title: "8-Week Growth Strategy Sprint | Project-Based Marketing Consultant",
-  description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, full ownership. A project-based alternative to fractional CMO retainers.",
-  keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, B2B marketing, strategy consulting",
+  title: "Pattern Growth | 8-Week Growth Strategy Sprints",
+  description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
+  keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, marketing strategy, strategy consulting",
   alternates: { canonical: "https://www.patterngrowth.com/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "8-Week Growth Strategy Sprint | Pattern Growth",
-    description: "Complete growth strategy built from your actual data—not templates. Executive-level work, fixed scope, full ownership.",
+    title: "Pattern Growth | 8-Week Growth Strategy Sprints",
+    description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
     type: "website",
+    siteName: "Pattern Growth",
   },
 }
 
 export default function HomePage() {
+  // WebSite schema - homepage only for site name display in SERPs
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.patterngrowth.com/#website",
+    name: "Pattern Growth",
+    alternateName: ["Pattern", "PatternGrowth"],
+    url: "https://www.patterngrowth.com/",
+    publisher: {
+      "@id": "https://www.patterngrowth.com/#organization"
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.patterngrowth.com/blog?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   const serviceSchema = createServiceSchema({
     name: "8-Week Growth Strategy Sprint",
     description: "Complete marketing strategy and infrastructure delivered in 8 weeks. Project-based alternative to fractional CMO retainers with full ownership transfer.",
@@ -99,6 +121,11 @@ export default function HomePage() {
 
   return (
     <>
+      {/* WebSite schema for site name display in SERPs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

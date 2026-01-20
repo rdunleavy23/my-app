@@ -23,9 +23,9 @@ import Breadcrumbs from "@/components/ui/breadcrumbs"
 import { createBreadcrumbListSchema, createComparisonPageSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
-  title: "Strategy Sprint vs Fractional CMO: Complete Comparison | Pattern Growth",
+  title: "Strategy Sprint vs Fractional CMO: Side-by-Side Comparison",
   description:
-    "Detailed comparison of 8-week strategy sprints vs fractional CMO retainers. Compare cost, timeline, deliverables, and ownership to choose the right model for your company.",
+    "8-week sprint vs fractional CMO retainer: cost, timeline, ownership compared. See which model fits your company's growth stage.",
   keywords: [
     "strategy sprint vs fractional cmo",
     "fractional cmo comparison",
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/sprint-vs-fractional-cmo",
-    title: "Strategy Sprint vs Fractional CMO: Complete Comparison",
+    title: "Strategy Sprint vs Fractional CMO: Side-by-Side Comparison",
     description:
-      "Compare 8-week strategy sprints vs fractional CMO retainers. See cost, timeline, deliverables, and ownership differences to make the right decision.",
+      "8-week sprint vs fractional CMO retainer: cost, timeline, ownership compared. See which model fits your company's growth stage.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Strategy Sprint vs Fractional CMO: Complete Comparison",
+    title: "Strategy Sprint vs Fractional CMO: Side-by-Side Comparison",
     description:
-      "Compare 8-week strategy sprints vs fractional CMO retainers. See cost, timeline, deliverables, and ownership differences.",
+      "8-week sprint vs fractional CMO retainer: cost, timeline, ownership compared. See which model fits your company's growth stage.",
   },
   robots: { index: true, follow: true },
 }

@@ -4,19 +4,19 @@ import { GetStartedButton } from '@/components/ui/get-started-button'
 import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
-  title: 'Fractional Marketing Services & Growth Strategy Sprints',
-  description: 'Fractional marketing services provide part-time expertise on retainer. Pattern Growth delivers complete strategy systems in 8 weeks with full ownership and no dependency.',
+  title: 'Fractional Marketing Services: Retainers vs Complete Sprints',
+  description: 'Fractional marketing services: part-time expertise on retainer. Compare with 8-week sprints delivering complete systems with full ownership transfer.',
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-marketing-services',
-    title: 'Fractional Marketing Services & Growth Strategy Sprints',
-    description: 'Fractional marketing services provide part-time expertise on retainer. Pattern Growth delivers complete strategy systems in 8 weeks with full ownership and no dependency.',
+    title: 'Fractional Marketing Services: Retainers vs Complete Sprints',
+    description: 'Fractional marketing services: part-time expertise on retainer. Compare with 8-week sprints delivering complete systems with full ownership transfer.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fractional Marketing Services & Growth Strategy Sprints',
-    description: 'Fractional marketing services provide part-time expertise on retainer. Pattern Growth delivers complete strategy systems in 8 weeks with full ownership and no dependency.'
+    title: 'Fractional Marketing Services: Retainers vs Complete Sprints',
+    description: 'Fractional marketing services: part-time expertise on retainer. Compare with 8-week sprints delivering complete systems with full ownership transfer.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/fractional-marketing-services'

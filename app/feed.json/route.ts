@@ -14,7 +14,7 @@ export async function GET() {
     title: "Pattern Growth - Growth Strategy Insights",
     home_page_url: `${siteConfig.url}/`,
     feed_url: `${siteConfig.url}/feed.json`,
-    description: "8-week growth strategy sprints for B2B companies ($1-5M revenue). Strategic frameworks, marketing operations, and team enablement insights.",
+    description: "8-week growth strategy sprints for $1-5M companies. Strategic frameworks, marketing operations, and team enablement insights.",
     icon: `${siteConfig.url}/patterngrowth-logo.svg`,
     favicon: `${siteConfig.url}/favicon.ico`,
     language: "en-US",
