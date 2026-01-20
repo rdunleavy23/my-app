@@ -463,8 +463,7 @@ export default function HomePage() {
               See If We're a Fit
             </h2>
             <p className="text-base sm:text-lg text-[#F8ECD1] mb-8">
-              We'll talk about where you are, where you need to be, and whether this makes sense.<br />
-              If we're not the right fit, we'll point you towards someone who can help.
+              We'll talk about where you are, where you need to be, and whether this makes sense. If we're not the right fit, we'll point you toward someone who can help.
             </p>
             <GetStartedButton size="lg" className="font-semibold btn-hover-lift bg-[#FFBF5E] text-[#02273A] hover:bg-[#FFBF5E]/90 shadow-md shadow-[#FFBF5E]/20 hover:shadow-lg hover:shadow-[#FFBF5E]/30 [&_i]:bg-[#02273A]/10 [&_i]:text-[#02273A]" location="hero">
               Schedule a Call
