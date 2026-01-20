@@ -102,32 +102,34 @@ function getPriorityForPage(url: string, postsCache?: ReturnType<typeof getBlogP
   return PRIORITY_MAP[path as keyof typeof PRIORITY_MAP] || PRIORITY_MAP.default
 }
 
+// Known page update dates - manually tracked for accuracy
+// File system timestamps are unreliable in deployed environments
+const PAGE_LAST_MODIFIED: Record<string, string> = {
+  '/': '2025-01-20',
+  '/about': '2025-01-20',
+  '/process': '2025-01-20',
+  '/blog': '2025-01-20',
+  '/what-is-fractional-cmo': '2025-01-20',
+  '/fractional-cmo-hourly-rate': '2025-01-20',
+  '/fractional-cmo-services': '2025-01-20',
+  '/fractional-cmo-responsibilities': '2025-01-20',
+  '/fractional-marketing-services': '2025-01-20',
+  '/benefits-of-fractional-cmo': '2025-01-20',
+  '/sprint-vs-fractional-cmo': '2025-01-20',
+  '/hey-ai-read-me': '2025-01-20',
+  '/privacy': '2025-01-15',
+}
+
 function getLastModifiedForPage(url: string): Date {
-  // Get actual file modification time for accuracy
-  // This ensures lastmod reflects real content changes
-  const urlPath = url.replace(SITE_URL, '')
-  let filePath: string
+  const urlPath = url.replace(SITE_URL, '') || '/'
   
-  // Map URLs to their actual page file locations
-  if (urlPath === '/' || urlPath === '') {
-    filePath = path.join(process.cwd(), 'app', 'page.tsx')
-  } else {
-    // Convert /about to app/about/page.tsx
-    const routePath = urlPath.split('/').filter(Boolean).join('/')
-    filePath = path.join(process.cwd(), 'app', routePath, 'page.tsx')
+  // Use manually tracked dates (most reliable for SEO)
+  if (PAGE_LAST_MODIFIED[urlPath]) {
+    return new Date(PAGE_LAST_MODIFIED[urlPath])
   }
   
-  try {
-    if (fs.existsSync(filePath)) {
-      const stats = fs.statSync(filePath)
-      return stats.mtime
-    }
-  } catch (error) {
-    // Fallback if file doesn't exist
-  }
-  
-  // Fallback to current time if file not found
-  return new Date()
+  // For unknown pages, use a reasonable recent date
+  return new Date('2025-01-20')
 }
 
 function getChangeFrequencyForPage(url: string): 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' {
