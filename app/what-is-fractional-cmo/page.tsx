@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     url: 'https://www.patterngrowth.com/what-is-fractional-cmo',
     title: 'What is a Fractional CMO? Definition & Alternatives',
     description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.',
-    siteName: 'Pattern Growth'
+    siteName: 'Pattern Growth',
+    modifiedTime: '2025-01-20'
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,6 +32,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true
+  },
+  other: {
+    'article:modified_time': '2025-01-20'
   }
 }
 

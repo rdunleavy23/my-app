@@ -7,6 +7,7 @@ import { formatDate } from "@/lib/utils"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Calendar } from "lucide-react"
+import { MarketingSection } from "@/components/marketing/MarketingSection"
 
 export const metadata: Metadata = {
   title: "Growth Strategy Insights | Pattern Growth Blog",
@@ -77,19 +78,20 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
-      <main className="container mx-auto max-w-4xl px-4 py-16 sm:py-20">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Growth Strategy Insights</h1>
-        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-          How to scale revenue and build operational capability—written for growth-stage companies.
-        </p>
-      </div>
+      <MarketingSection variant="default" className="py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-balance">Growth Strategy Insights</h1>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              How to scale revenue and build operational capability—written for growth-stage companies.
+            </p>
+          </div>
 
-      {/* Featured Post */}
-      {posts.length > 0 && (
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">Latest Insights</h2>
+          {/* Featured Post */}
+          {posts.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Latest Insights</h2>
           <Card className="border-2 card-hover-lift">
             <CardHeader>
               <div className="flex items-center gap-2 mb-2">
@@ -136,10 +138,10 @@ export default function BlogPage() {
         </div>
       )}
 
-      {/* All Posts */}
-      {posts.length > 1 && (
-        <div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">All Articles</h2>
+              {/* All Posts */}
+              {posts.length > 1 && (
+                <div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">All Articles</h2>
           <div className="grid gap-6">
             {posts.slice(1).map((post, index) => (
               <Card key={post.slug} className="card-hover-lift">
@@ -186,30 +188,36 @@ export default function BlogPage() {
                   )}
                 </CardContent>
               </Card>
-            ))}
-          </div>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
-      )}
+      </MarketingSection>
 
       {/* CTA Section */}
-      <div className="mt-16 text-center bg-muted/50 rounded-lg p-8">
-        <h3 className="text-3xl font-semibold mb-4">Ready to Scale Your Growth Strategy?</h3>
-        <p className="text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
-          Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, measurement systems, and playbooks.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <GetStartedButton className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold btn-hover-lift sm:min-w-[200px]" size="lg" location="content">
-            Schedule a Call
-          </GetStartedButton>
-          <Link 
-            href="/process"
-            className="inline-flex items-center justify-center border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors"
-          >
-            See Our Process
-          </Link>
+      <MarketingSection variant="chapter" className="py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Ready to Scale Your Growth Strategy?</h2>
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, measurement systems, and playbooks.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <GetStartedButton className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold btn-hover-lift sm:min-w-[200px]" size="lg" location="content">
+                Schedule a Call
+              </GetStartedButton>
+              <Link
+                href="/process"
+                className="inline-flex items-center justify-center border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors"
+              >
+                See Our Process
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </MarketingSection>
     </>
   )
 }

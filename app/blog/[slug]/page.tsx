@@ -11,6 +11,7 @@ import RelatedContent from '@/components/ui/related-content'
 import { isProtectedRoute } from '@/components/lib/route-guards'
 import { BlogPostTracking } from './blog-post-tracking'
 import { createBreadcrumbListSchema } from '@/lib/schemas'
+import { MarketingSection } from '@/components/marketing/MarketingSection'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -147,8 +148,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         postSlug={post.slug}
       />
 
-      <article className="min-h-screen bg-background">
-        <div className="container mx-auto px-4 py-16 max-w-3xl">
+      <MarketingSection variant="default" className="py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <header className="mb-12">
             <div className="mb-8">
               <Link
@@ -227,7 +228,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </div>
           </div>
         </div>
-      </article>
+      </MarketingSection>
     </>
   )
 }

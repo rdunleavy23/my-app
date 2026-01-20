@@ -34,6 +34,7 @@ import { MarketingSection } from "@/components/marketing/MarketingSection"
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach-enhanced").then(mod => mod.default), {
   loading: () => <ApproachSkeleton />,
+  ssr: false, // Explicitly disable SSR for this component
 })
 
 const HomeCarousel = dynamic(() => import("@/components/home-carousel").then(mod => mod.HomeCarousel), {
@@ -55,11 +56,15 @@ export const metadata: Metadata = {
   keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, marketing strategy, strategy consulting",
   alternates: { canonical: "https://www.patterngrowth.com" },
   robots: { index: true, follow: true },
+  other: {
+    'article:modified_time': '2025-01-20',
+  },
   openGraph: {
     title: "Pattern Growth | 8-Week Growth Strategy Sprints",
     description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
     type: "website",
     siteName: "Pattern Growth",
+    modifiedTime: "2025-01-20",
   },
 }
 
@@ -173,7 +178,47 @@ export default function HomePage() {
                 </MarketingSection>
 
         {/* Interactive version loads client-side */}
-        <Suspense fallback={<div className="py-12"></div>}>
+        <Suspense fallback={
+          <MarketingSection variant="chapter" className="py-16 sm:py-20">
+            <div className="mx-auto max-w-6xl px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
+                Our 8-Week Process
+              </h2>
+              <p className="text-muted-foreground mb-12 text-lg">
+                Strategy built from your reality, designed for your future, owned by you.
+              </p>
+              <div className="grid md:grid-cols-3 gap-5">
+                <div className="p-6 border-l-4 border-l-primary bg-card">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="h-6 w-6 text-primary shrink-0 mt-0.5">1</div>
+                    <h3 className="text-lg font-semibold leading-tight">Weeks 1-2: Shaped by Your Reality</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    We understand your specific situation—market position, team capacity, actual constraints. Strategy fits your business as it exists today.
+                  </p>
+                </div>
+                <div className="p-6 border-l-4 border-l-primary bg-card">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="h-6 w-6 text-primary shrink-0 mt-0.5">2</div>
+                    <h3 className="text-lg font-semibold leading-tight">Weeks 3-6: Built for Your Future</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Custom roadmap for your goals, accounting for timeline and resources. Clear priorities, success metrics, and scaling plans.
+                  </p>
+                </div>
+                <div className="p-6 border-l-4 border-l-primary bg-card">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="h-6 w-6 text-primary shrink-0 mt-0.5">3</div>
+                    <h3 className="text-lg font-semibold leading-tight">Weeks 7-8: Owned by You</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Complete training and documentation. You execute independently—no retainer, no ongoing fees, just your custom systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </MarketingSection>
+        }>
           <Approach />
         </Suspense>
 
@@ -452,6 +497,56 @@ export default function HomePage() {
               ]}
               className="mt-8"
             />
+          </div>
+        </MarketingSection>
+
+        {/* Service Pages */}
+        <MarketingSection variant="default" className="py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                Understand Your Options
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Compare fractional CMO services with our project-based approach.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl mb-2">Fractional CMO Services Guide</CardTitle>
+                  <CardDescription>
+                    Compare retainers vs 8-week sprints. Understand cost, ownership, and speed to value.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link
+                    href="/fractional-cmo-services"
+                    className="inline-flex items-center text-primary hover:underline font-medium"
+                  >
+                    View Service Comparison →
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl mb-2">What is a Fractional CMO?</CardTitle>
+                  <CardDescription>
+                    Complete definition, responsibilities, and alternatives for growth-stage companies.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link
+                    href="/what-is-fractional-cmo"
+                    className="inline-flex items-center text-primary hover:underline font-medium"
+                  >
+                    Read the Complete Guide →
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </MarketingSection>
 

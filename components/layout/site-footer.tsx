@@ -39,14 +39,20 @@ export default function SiteFooter() {
               >
                 About
               </Link>
-              <Link 
-                href="/blog" 
+              <Link
+                href="/blog"
                 className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 Blog
               </Link>
-              <Link 
-                href="/privacy" 
+              <Link
+                href="/fractional-cmo-services"
+                className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
+              >
+                Fractional CMO Services
+              </Link>
+              <Link
+                href="/privacy"
                 className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors w-fit"
               >
                 Privacy Policy
@@ -96,15 +102,22 @@ export default function SiteFooter() {
                   About
                 </Link>
                 <span className="text-[#3E5661]/50">·</span>
-                <Link 
-                  href="/blog" 
+                <Link
+                  href="/blog"
                   className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   Blog
                 </Link>
                 <span className="text-[#3E5661]/50">·</span>
-                <Link 
-                  href="/privacy" 
+                <Link
+                  href="/fractional-cmo-services"
+                  className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
+                >
+                  Fractional CMO Services
+                </Link>
+                <span className="text-[#3E5661]/50">·</span>
+                <Link
+                  href="/privacy"
                   className="text-[#3E5661] hover:text-[#3E5661]/80 transition-colors"
                 >
                   Privacy Policy
