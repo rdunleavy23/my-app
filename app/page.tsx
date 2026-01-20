@@ -7,7 +7,8 @@ import {
   Puzzle,
   Database,
   Gift,
-  Handshake
+  Handshake,
+  ChevronDown
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -428,33 +429,52 @@ export default function HomePage() {
         </MarketingSection>
 
         {/* FAQ */}
-        <MarketingSection variant="default" className="py-16 sm:py-20 border-t">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold tracking-tight">
-                Frequently Asked Questions
-              </h2>
-            </div>
+        <section className="py-16 sm:py-20 bg-tertiary">
+          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+            <h2 className="text-3xl font-semibold mb-2 text-foreground">Common Questions</h2>
+            <p className="text-muted-foreground mb-8">Everything you need to know about working with us.</p>
 
-            <FAQCollapsible 
-              items={[
-                {
-                  question: "How involved do we need to be during the sprint?",
-                  answer: "Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers."
-                },
-                {
-                  question: "What makes you different from a fractional CMO?",
-                  answer: "We're project-based, not retainer-based. Think of us as the construction crew that builds the house; a fractional CMO is the property manager who runs it afterward. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us. <a href='/sprint-vs-fractional-cmo' class='text-primary hover:underline'>Read our detailed comparison</a>."
-                },
-                {
-                  question: "Can we start right away?",
-                  answer: "If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots."
-                }
-              ]}
-              className="max-w-2xl mx-auto"
-            />
+            <div className="space-y-4">
+              <details className="rounded-lg border border-border/30 bg-card p-6 group hover:border-primary/30 transition-colors shadow-sm">
+                <summary className="text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between">
+                  How involved do we need to be during the sprint?
+                  <span className="text-primary group-open:rotate-180 transition-transform">
+                    <ChevronDown className="h-5 w-5" />
+                  </span>
+                </summary>
+                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed max-w-prose">
+                  <p>Weeks 1-2 require significant time (5-10 hours) for context building. Weeks 3-6 are lighter—mostly reviews and feedback. Week 7-8 ramps back up for training and handoff. We're not asking you to clear your calendar, but this doesn't work if we can't access decision-makers.</p>
+                </div>
+              </details>
+
+              <details className="rounded-lg border border-border/30 bg-card p-6 group hover:border-primary/30 transition-colors shadow-sm">
+                <summary className="text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between">
+                  What makes you different from a fractional CMO?
+                  <span className="text-primary group-open:rotate-180 transition-transform">
+                    <ChevronDown className="h-5 w-5" />
+                  </span>
+                </summary>
+                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed max-w-prose">
+                  <p>We're project-based, not retainer-based. Think of us as the construction crew that builds the house; a fractional CMO is the property manager who runs it afterward.</p>
+                  <p>You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us.</p>
+                  <p><Link href="/sprint-vs-fractional-cmo" className="text-primary hover:underline">Read our detailed comparison</Link>.</p>
+                </div>
+              </details>
+
+              <details className="rounded-lg border border-border/30 bg-card p-6 group hover:border-primary/30 transition-colors shadow-sm">
+                <summary className="text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between">
+                  Can we start right away?
+                  <span className="text-primary group-open:rotate-180 transition-transform">
+                    <ChevronDown className="h-5 w-5" />
+                  </span>
+                </summary>
+                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed max-w-prose">
+                  <p>If we have capacity, yes—usually within 1-2 weeks of signing. If we're at capacity, we'll tell you our next availability rather than rushing your engagement. Quality matters more than filling slots.</p>
+                </div>
+              </details>
+            </div>
           </div>
-        </MarketingSection>
+        </section>
 
         {/* CTA Section */}
         <section className="py-16 sm:py-20 bg-[#3E5661]">
