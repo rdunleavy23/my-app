@@ -22,6 +22,7 @@ import {
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -63,7 +64,6 @@ export const metadata: Metadata = {
     description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
     type: "website",
     siteName: "Pattern Growth",
-    modifiedTime: "2025-01-20",
   },
 }
 

@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     description:
       "Not all companies need ongoing CMO services. Learn which businesses benefit most from an 8-week marketing sprint vs traditional fractional CMO retainers.",
     siteName: "Pattern Growth",
-    modifiedTime: "2025-01-20",
   },
   twitter: {
     card: "summary_large_image",
