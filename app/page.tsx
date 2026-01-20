@@ -34,7 +34,6 @@ import { MarketingSection } from "@/components/marketing/MarketingSection"
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach-enhanced").then(mod => mod.default), {
   loading: () => <ApproachSkeleton />,
-  ssr: false, // Explicitly disable SSR for this component
 })
 
 const HomeCarousel = dynamic(() => import("@/components/home-carousel").then(mod => mod.HomeCarousel), {
