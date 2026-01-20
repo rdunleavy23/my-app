@@ -282,10 +282,10 @@ export default function AboutPage() {
                 <p className="text-base sm:text-lg">
                   We built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill.
                 </p>
-                <p className="text-base">
+                <p className="text-base sm:text-lg">
                   We saw too many growth-stage companies stuck between expensive fractional CMOs and cookie-cutter agency work.
                 </p>
-                <p className="text-base">
+                <p className="text-base sm:text-lg">
                   The name comes from what we kept seeing: the companies that win at growth marketing aren't doing wildly different things industry to industry. They're running the same patterns—just adapted to their context. Once you see it, you can't unsee it.
                 </p>
               </div>
