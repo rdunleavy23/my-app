@@ -36,7 +36,8 @@ export const metadata: Metadata = {
     template: "%s | Pattern Growth",
   },
   description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
-  alternates: { canonical: "https://www.patterngrowth.com/" },
+  // NOTE: Do NOT set canonical here - each page defines its own canonical
+  // Setting a layout-level canonical overrides page-level canonicals in Next.js
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/",
