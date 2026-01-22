@@ -499,56 +499,6 @@ export default function HomePage() {
           </div>
         </MarketingSection>
 
-        {/* Service Pages */}
-        <MarketingSection variant="default" className="py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-                Understand Your Options
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Compare fractional CMO services with our project-based approach.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-xl mb-2">Fractional CMO Services Guide</CardTitle>
-                  <CardDescription>
-                    Compare retainers vs 8-week sprints. Understand cost, ownership, and speed to value.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link
-                    href="/fractional-cmo-services"
-                    className="inline-flex items-center text-primary hover:underline font-medium"
-                  >
-                    View Service Comparison →
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-xl mb-2">What is a Fractional CMO?</CardTitle>
-                  <CardDescription>
-                    Complete definition, responsibilities, and alternatives for growth-stage companies.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Link
-                    href="/what-is-fractional-cmo"
-                    className="inline-flex items-center text-primary hover:underline font-medium"
-                  >
-                    Read the Complete Guide →
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </MarketingSection>
-
         {/* FAQ */}
         <section className="py-16 sm:py-20 bg-tertiary">
           <div className="container mx-auto px-4 md:px-6 max-w-4xl">
