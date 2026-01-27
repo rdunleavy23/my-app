@@ -11,7 +11,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet"
-import { usePathname } from "next/navigation"
+import { usePathname, useSearchParams } from "next/navigation"
 import Logo from "@/components/Logo"
 import { trackGenerateLead, trackNavigationClick } from "@/lib/analytics"
 import { CalBookingModal } from "@/components/cal-booking-modal"
@@ -21,6 +21,16 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
   const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  // Auto-open modal if ?schedule=true is in URL
+  useEffect(() => {
+    if (searchParams.get('schedule') === 'true') {
+      setIsBookingModalOpen(true)
+      // Clean URL without reload for cleaner appearance
+      window.history.replaceState({}, '', pathname)
+    }
+  }, [searchParams, pathname])
 
   // Body scroll lock when mobile menu is open - optimized to prevent reflows
   useEffect(() => {
