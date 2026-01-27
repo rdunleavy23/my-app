@@ -9,6 +9,7 @@ import SiteFooter from "@/components/layout/site-footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import { AlertBanner } from "@/components/AlertBanner"
 import { GrowthSprintPopup } from "@/components/GrowthSprintPopup"
 
@@ -166,6 +167,7 @@ export default function RootLayout({
           </ErrorBoundary>
         </ThemeProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
