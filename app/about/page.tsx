@@ -61,14 +61,14 @@ export default function AboutPage() {
   const ryanSchema = createPersonSchema({
     name: "Ryan",
     jobTitle: "Partner",
-    description: "Ryan is driven by curiosity. He\'s usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.",
+    description: "Ryan led a full marketing transformation—brand, demand gen, sales enablement, operations—that drove 51% revenue growth and 57% more products sold in one year. Then he took on an 8-figure company across 20+ locations and rebuilt it from the ground up.",
     image: "https://www.patterngrowth.com/team/ryan.png"
   });
 
   const williamSchema = createPersonSchema({
     name: "William",
     jobTitle: "Growth Strategist & Partner", 
-    description: "William has spent his career helping growth-stage companies find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confidently you can run the plan once you own it.",
+    description: "William was the first operational hire at a growing education company—built the systems that scaled it past seven figures. Then he did it again: a transportation company doing nearly $500K a year, managed entirely remotely.",
     image: "https://www.patterngrowth.com/team/william.png"
   });
 
@@ -88,13 +88,13 @@ export default function AboutPage() {
     {
       name: "William",
       role: "Partner",
-      bio: "William has spent his career helping growth-stage companies find structure in the chaos. He thinks strategy should be practical and usable—not theoretical. He measures success by how confidently you can run the plan once you own it.",
+      bio: "William was the first operational hire at a growing education company—built the systems that scaled it past seven figures. Then he did it again: a transportation company doing nearly $500K a year, managed entirely remotely.",
       photo: "/team/william.png",
     },
     {
       name: "Ryan",
       role: "Partner", 
-      bio: 'Ryan is driven by curiosity. He\'s usually the one asking the question that makes everyone pause. He focuses on turning complex marketing challenges into clear next steps.',
+      bio: "Ryan led a full marketing transformation—brand, demand gen, sales enablement, operations—that drove 51% revenue growth and 57% more products sold in one year. Then he took on an 8-figure company across 20+ locations and rebuilt it from the ground up.",
       photo: "/team/ryan.png",
     },
   ]

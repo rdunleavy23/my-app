@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AlertBanner } from "@/components/AlertBanner"
+import { GrowthSprintPopup } from "@/components/GrowthSprintPopup"
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"], 
@@ -161,6 +162,7 @@ export default function RootLayout({
               {children}
             </main>
             <SiteFooter />
+            <GrowthSprintPopup />
           </ErrorBoundary>
         </ThemeProvider>
         <SpeedInsights />
