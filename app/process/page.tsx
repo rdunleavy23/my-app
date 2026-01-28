@@ -1,36 +1,34 @@
 // app/process/page.tsx
 import type { Metadata } from "next"
 import { 
-  Search, 
-  Compass, 
-  MessageSquare, 
-  BarChart3, 
-  BookOpen, 
-  Route, 
   ChevronDown,
-  DollarSign,
-  Map,
-  Users,
+  Search,
   Target,
-  Lightbulb,
-  GitBranch,
-  Settings,
-  Wrench,
+  FileText,
+  BarChart3,
+  Users,
+  Calendar,
+  Mic,
+  PieChart,
+  Hammer,
+  BookOpen,
   Handshake
 } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
 import { GetStartedButton } from "@/components/ui/get-started-button"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
-import { createServiceSchema, createWebPageSchema, createFAQSchema } from "@/lib/schemas"
+import Breadcrumbs from "@/components/ui/breadcrumbs"
+import { ErrorBoundary } from "@/components/error-boundary"
+import { createServiceSchema, createWebPageSchema, createFAQSchema, createBreadcrumbListSchema } from "@/lib/schemas"
 import {
   heroContent,
-  processSections,
-  faqs,
+  startHereContent,
+  processWeeks,
+  capabilities,
+  requirements,
   ctaContent,
+  valuesContent,
+  faqs,
   processMetadata
 } from "@/config/process"
 
@@ -54,43 +52,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
-// Helper to italicize questions in text
-function formatWithItalicQuestions(text: string): React.ReactNode {
-  // Split by sentences that end with ?
-  const parts = text.split(/(\?)/g)
-  const result: React.ReactNode[] = []
-  
-  for (let i = 0; i < parts.length; i++) {
-    if (parts[i] === '?') {
-      // Find the start of this question (look back for previous sentence end or start)
-      continue
-    }
-    
-    // Check if this part contains a question
-    if (i + 1 < parts.length && parts[i + 1] === '?') {
-      // This part ends with a question mark
-      // Find where the question starts (after last period or at beginning)
-      const lastPeriodIndex = parts[i].lastIndexOf('. ')
-      if (lastPeriodIndex !== -1) {
-        // There's a statement before the question
-        result.push(parts[i].substring(0, lastPeriodIndex + 2))
-        result.push(<em key={i} className="text-foreground/80">{parts[i].substring(lastPeriodIndex + 2)}?</em>)
-      } else {
-        // Whole thing is the question
-        result.push(<em key={i} className="text-foreground/80">{parts[i]}?</em>)
-      }
-      i++ // Skip the ? part
-    } else {
-      result.push(parts[i])
-    }
-  }
-  
-  return result
-}
+// Week icons mapping
+const weekIcons = [Mic, PieChart, Hammer, BookOpen, Handshake]
 
 export default function ProcessPage() {
   const serviceSchema = createServiceSchema({
-    name: "8-Week Growth Strategy Process",
+    name: "8-Week Growth Strategy Sprint",
     description: processMetadata.description,
     url: "https://www.patterngrowth.com/process",
     provider: "Pattern Growth"
@@ -113,8 +80,13 @@ export default function ProcessPage() {
     }))
   )
 
+  const breadcrumbSchema = createBreadcrumbListSchema([
+    { label: 'Home', href: '/', position: 1 },
+    { label: 'How We Work', position: 2 }
+  ])
+
   return (
-    <>
+    <ErrorBoundary>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -127,351 +99,273 @@ export default function ProcessPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
-      {/* Hero Section */}
-      <section className="py-16 sm:py-20 bg-tertiary">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-4">
-            {heroContent.title}
-          </h1>
-          
-          {/* Separator line */}
-          <div className="w-20 h-px bg-primary mx-auto mb-6"></div>
-
-          <div className="text-base sm:text-lg text-primary space-y-4">
-            {heroContent.paragraphs.map((p, idx) => (
-              <p key={idx}>{p}</p>
-            ))}
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 bg-tertiary rounded-3xl">
+          <div className="max-w-4xl mx-auto">
+            <Breadcrumbs items={[{ label: 'How We Work' }]} />
+            
+            <div className="text-center space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight leading-tight">
+                {heroContent.headline}
+              </h1>
+              
+              <div className="w-20 h-px bg-primary mx-auto" />
+              
+              <p className="text-base sm:text-lg lg:text-xl text-foreground max-w-3xl mx-auto leading-relaxed font-medium">
+                {heroContent.subheadline}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Three-Phase Process Header */}
-      <section className="py-16 md:py-20 bg-primary">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Our Three-Phase Process
-          </h2>
-          <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
-            Eight weeks from kickoff to ownership transfer
-          </p>
-          
-          {/* Phase overview cards */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {processSections.map((phase) => (
-              <div 
-                key={phase.id}
-                className="bg-background rounded-xl p-6 text-left shadow-lg"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-primary-foreground font-bold">
-                    {phase.number}
-                  </span>
-                  <span className="text-sm font-medium text-primary">{phase.timeline}</span>
+        <Separator />
+
+        {/* Start Here Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-secondary text-secondary-foreground border-0">
+              <CardContent className="p-6 sm:p-8 md:p-12 space-y-6">
+                <div className="w-16 h-px bg-primary mx-auto sm:mx-0" />
+                
+                <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center sm:text-left">
+                  {startHereContent.heading}
+                </h2>
+                
+                <p className="text-base sm:text-lg text-secondary-foreground leading-relaxed text-center sm:text-left">
+                  {startHereContent.body}
+                </p>
+                
+                <div className="flex justify-center sm:justify-start pt-2">
+                  <GetStartedButton 
+                    className="btn-hover-lift bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold min-h-[48px]"
+                  >
+                    {startHereContent.ctaText}
+                  </GetStartedButton>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{phase.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{phase.intro}</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <Separator />
+
+        {/* The Process Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 bg-primary/5 rounded-3xl">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center space-y-4 mb-10 sm:mb-12 lg:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                Eight weeks. A foundation for the next eight years.
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground italic">
+                We sprint so you don't have to guess for years.
+              </p>
+            </div>
+            
+            {/* Timeline - Mobile: Vertical, Desktop: Enhanced vertical with better spacing */}
+            <div className="relative">
+              {/* Vertical line for timeline */}
+              <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-primary/20" aria-hidden="true" />
+              
+              <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+                {processWeeks.map((week, index) => {
+                  const Icon = weekIcons[index]
+                  return (
+                    <div key={week.id} className="relative pl-12 sm:pl-16 lg:pl-20">
+                      {/* Timeline dot */}
+                      <div className="absolute left-0 sm:left-2 top-0 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary text-primary-foreground font-bold text-sm sm:text-base shadow-md">
+                        {index + 1}
+                      </div>
+                      
+                      <Card className="card-hover-lift border-border/50">
+                        <CardHeader className="pb-2 sm:pb-4">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                                <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" aria-hidden="true" />
+                              </div>
+                              <div>
+                                <p className="text-xs sm:text-sm font-medium text-primary uppercase tracking-wide">
+                                  {week.week}
+                                </p>
+                                <CardTitle className="text-lg sm:text-xl lg:text-2xl text-foreground">
+                                  {week.title}
+                                </CardTitle>
+                              </div>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                            {week.content}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  )
+                })}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Phase 1 - White background */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <div className="flex items-center gap-4 mb-6">
-            <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground text-lg font-bold shrink-0">
-              1
-            </span>
-            <div>
-              <span className="text-sm font-medium text-primary">{processSections[0].timeline}</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{processSections[0].title}</h2>
             </div>
           </div>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-            {processSections[0].intro}
-          </p>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <Accordion type="multiple" className="space-y-3">
-              {[
-                { icon: DollarSign, ...processSections[0].subsections[0] },
-                { icon: Map, ...processSections[0].subsections[1] },
-                { icon: Users, ...processSections[0].subsections[2] }
-              ].map((sub, subIdx) => (
-                <AccordionItem 
-                  key={subIdx} 
-                  value={`phase1-${subIdx}`}
-                  className="border border-border/50 rounded-lg bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
-                >
-                  <AccordionTrigger className="px-4 py-3 hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <sub.icon className="h-4 w-4 text-primary" />
+        </section>
+
+        <Separator />
+
+        {/* What You'll Have Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center space-y-4 mb-10 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                What you'll be able to do:
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {capabilities.map((capability, index) => {
+                const icons = [Search, Target, FileText, BarChart3, Users]
+                const Icon = icons[index % icons.length]
+                return (
+                  <Card key={capability.id} className="card-hover-lift border-border/50">
+                    <CardHeader className="space-y-3 pb-2">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" aria-hidden="true" />
                       </div>
-                      <span className="text-base font-semibold text-foreground text-left">{sub.heading}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4">
-                    <div className="pl-4 sm:pl-12 space-y-2">
-                      {sub.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx} className="text-muted-foreground leading-relaxed">
-                          {formatWithItalicQuestions(p)}
-                        </p>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-            <div className="pt-6 border-t border-border/50 md:pt-0 md:border-t-0 md:pl-8 md:border-l">
-              <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-4">What You Get</h4>
-              <ul className="space-y-2.5">
-                {processSections[0].deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+                      <CardTitle className="text-base sm:text-lg font-semibold text-foreground">
+                        {capability.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-foreground leading-relaxed">
+                        {capability.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )
+              })}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Phase 2 - Cream background */}
-      <section className="py-16 md:py-20 bg-tertiary">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <div className="flex items-center gap-4 mb-6">
-            <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground text-lg font-bold shrink-0">
-              2
-            </span>
-            <div>
-              <span className="text-sm font-medium text-primary">{processSections[1].timeline}</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{processSections[1].title}</h2>
-            </div>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-            {processSections[1].intro}
-          </p>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <Accordion type="multiple" className="space-y-3">
-              {[
-                { icon: Target, ...processSections[1].subsections[0] },
-                { icon: Lightbulb, ...processSections[1].subsections[1] }
-              ].map((sub, subIdx) => (
-                <AccordionItem 
-                  key={subIdx} 
-                  value={`phase2-${subIdx}`}
-                  className="border border-border/30 rounded-lg bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
-                >
-                  <AccordionTrigger className="px-4 py-3 hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <sub.icon className="h-4 w-4 text-primary" />
-                      </div>
-                      <span className="text-base font-semibold text-foreground text-left">{sub.heading}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4">
-                    <div className="pl-4 sm:pl-12 space-y-2">
-                      {sub.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx} className="text-muted-foreground leading-relaxed">
-                          {formatWithItalicQuestions(p)}
-                        </p>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-            <div className="pt-6 border-t border-primary/20 md:pt-0 md:border-t-0 md:pl-8 md:border-l">
-              <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-4">What You Get</h4>
-              <ul className="space-y-2.5">
-                {processSections[1].deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+        <Separator />
 
-      {/* Phase 3 - White background */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <div className="flex items-center gap-4 mb-6">
-            <span className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground text-lg font-bold shrink-0">
-              3
-            </span>
-            <div>
-              <span className="text-sm font-medium text-primary">{processSections[2].timeline}</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{processSections[2].title}</h2>
-            </div>
-          </div>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-            {processSections[2].intro}
-          </p>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <Accordion type="multiple" className="space-y-3">
-              {[
-                { icon: GitBranch, ...processSections[2].subsections[0] },
-                { icon: Settings, ...processSections[2].subsections[1] },
-                { icon: Wrench, ...processSections[2].subsections[2] },
-                { icon: Handshake, ...processSections[2].subsections[3] }
-              ].map((sub, subIdx) => (
-                <AccordionItem 
-                  key={subIdx} 
-                  value={`phase3-${subIdx}`}
-                  className="border border-border/50 rounded-lg bg-card shadow-sm data-[state=open]:shadow-md transition-shadow"
-                >
-                  <AccordionTrigger className="px-4 py-3 hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <sub.icon className="h-4 w-4 text-primary" />
-                      </div>
-                      <span className="text-base font-semibold text-foreground text-left">{sub.heading}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4">
-                    <div className="pl-4 sm:pl-12 space-y-2">
-                      {sub.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx} className="text-muted-foreground leading-relaxed">
-                          {formatWithItalicQuestions(p)}
-                        </p>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-            <div className="pt-6 border-t border-border/50 md:pt-0 md:border-t-0 md:pl-8 md:border-l">
-              <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-4">What You Get</h4>
-              <ul className="space-y-2.5">
-                {processSections[2].deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Deliver */}
-      <section className="py-16 md:py-24 bg-primary">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-primary-foreground">
-            What We Deliver
-          </h2>
-          <p className="text-center text-primary-foreground/70 mb-12 max-w-2xl mx-auto">
-            Every engagement is custom, but these are the core elements we build together.
-          </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: Search,
-                title: "Funnel Analysis",
-                description: "We analyze your existing data to understand what's working, what's not, and where the real opportunities are."
-              },
-              {
-                icon: Compass,
-                title: "Custom Growth Strategy",
-                description: "A data-driven plan tailored to your business, capacity, and long-term goals. No borrowed templates."
-              },
-              {
-                icon: MessageSquare,
-                title: "Positioning & Messaging",
-                description: "Clarity on who you serve, why they choose you, and how to communicate it everywhere."
-              },
-              {
-                icon: BarChart3,
-                title: "Measurement Framework",
-                description: "The metrics that matter and a system for tracking what's driving revenue."
-              },
-              {
-                icon: BookOpen,
-                title: "Playbooks & Documentation",
-                description: "Everything gets documented so you can execute independently after the sprint."
-              },
-              {
-                icon: Route,
-                title: "Implementation Plan",
-                description: "A realistic plan for putting strategy into action, based on your capacity."
-              }
-            ].map((service, idx) => (
-              <div 
-                key={idx} 
-                className="flex gap-4 p-5 rounded-xl bg-card border-none shadow-lg"
-              >
-                <div className="flex-shrink-0">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <service.icon className="h-5 w-5 text-primary" />
-                  </div>
+        {/* What We Need Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-secondary text-secondary-foreground border-0">
+              <CardContent className="p-6 sm:p-8 md:p-12 space-y-6">
+                <div className="text-center sm:text-left space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                    What we'll need from you:
+                  </h2>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-tertiary">
-        <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-          <h2 className="text-3xl font-semibold mb-2 text-foreground">Common Questions</h2>
-          <p className="text-muted-foreground mb-8">Everything you need to know about working with us.</p>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <details key={idx} className="rounded-lg border border-border/30 bg-card p-6 group hover:border-primary/30 transition-colors shadow-sm">
-                <summary className="text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between">
-                  {faq.question}
-                  <span className="text-primary group-open:rotate-180 transition-transform">
-                    <ChevronDown className="h-5 w-5" />
-                  </span>
-                </summary>
-                <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed max-w-prose">
-                  {faq.answer.map((paragraph, pIdx) => (
-                    <p key={pIdx}>{paragraph}</p>
+                
+                <ul className="space-y-4 sm:space-y-5">
+                  {requirements.map((requirement) => (
+                    <li key={requirement.id} className="flex items-start gap-3 sm:gap-4">
+                      <span className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                        <span className="w-2 h-2 rounded-full bg-primary" />
+                      </span>
+                      <span className="text-sm sm:text-base text-secondary-foreground leading-relaxed">
+                        {requirement.text}
+                      </span>
+                    </li>
                   ))}
-                </div>
-              </details>
-            ))}
+                </ul>
+              </CardContent>
+            </Card>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary">
-        <div className="container mx-auto px-4 md:px-6 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
-            {ctaContent.heading}
-          </h2>
+        <Separator />
 
-          <p className="text-lg text-primary-foreground/80 mb-8">
-            {ctaContent.body}
-          </p>
+        {/* Values Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 bg-tertiary rounded-3xl">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-card border-0 shadow-sm">
+              <CardContent className="p-6 sm:p-8 md:p-12 text-center space-y-6">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">
+                  {valuesContent.heading}
+                </h2>
+                
+                <div className="w-16 h-px bg-primary mx-auto" />
+                
+                <p className="text-sm sm:text-base lg:text-lg text-foreground leading-relaxed max-w-3xl mx-auto">
+                  {valuesContent.body}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
-          <GetStartedButton 
-            size="lg" 
-            className="bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold"
-          />
+        <Separator />
 
-          <p className="text-sm text-primary-foreground/70 mt-6">
-            {ctaContent.subtext}
-          </p>
-        </div>
-      </section>
-    </>
+        {/* FAQ Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-24">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-8 sm:mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Common Questions</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">Everything you need to know about working with us.</p>
+            </div>
+
+            <div className="space-y-3 sm:space-y-4">
+              {faqs.map((faq, idx) => (
+                <details 
+                  key={idx} 
+                  className="rounded-lg border border-border/30 bg-card p-4 sm:p-6 group hover:border-primary/30 transition-colors shadow-sm"
+                >
+                  <summary className="text-base sm:text-lg font-medium text-foreground cursor-pointer list-none flex items-center justify-between gap-4 min-h-[44px]">
+                    <span className="pr-4">{faq.question}</span>
+                    <span className="text-primary group-open:rotate-180 transition-transform flex-shrink-0">
+                      <ChevronDown className="h-5 w-5" />
+                    </span>
+                  </summary>
+                  <div className="mt-4 space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
+                    {faq.answer.map((paragraph, pIdx) => (
+                      <p key={pIdx}>{paragraph}</p>
+                    ))}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Separator />
+
+        {/* CTA Section */}
+        <section className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8 bg-primary text-primary-foreground rounded-3xl px-6 sm:px-8 py-10 sm:py-12 lg:py-16">
+            <div className="space-y-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground">
+                {ctaContent.heading}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-primary-foreground/80 leading-relaxed max-w-2xl mx-auto">
+                {ctaContent.body}
+              </p>
+            </div>
+            
+            <GetStartedButton 
+              size="lg"
+              className="btn-hover-lift bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90 font-semibold min-h-[48px] sm:min-h-[52px]"
+            >
+              {ctaContent.ctaText}
+            </GetStartedButton>
+            
+            <p className="text-xs sm:text-sm text-primary-foreground/70">
+              {ctaContent.subtext}
+            </p>
+            
+            <p className="text-xs sm:text-sm text-primary-foreground/60 italic pt-2">
+              {ctaContent.postscript}
+            </p>
+          </div>
+        </section>
+      </div>
+    </ErrorBoundary>
   )
 }

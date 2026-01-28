@@ -2,30 +2,28 @@
 // Process page content configuration
 // Separates copy from component presentation logic
 
-import {
-  FileText,
-  Settings,
-  Rocket,
-  LucideIcon
-} from "lucide-react"
+import { LucideIcon } from "lucide-react"
 
 // ============================================================================
 // TYPES
 // ============================================================================
 
-export interface ProcessSection {
+export interface ProcessWeek {
   id: string
-  number: number
+  week: string
   title: string
-  timeline: string
-  intro: string
-  subsections: Subsection[]
-  deliverables: string[]
+  content: string
 }
 
-export interface Subsection {
-  heading: string
-  paragraphs: string[]
+export interface Capability {
+  id: string
+  title: string
+  description: string
+}
+
+export interface Requirement {
+  id: string
+  text: string
 }
 
 export interface FAQ {
@@ -33,187 +31,136 @@ export interface FAQ {
   answer: string[]
 }
 
-export interface OwnershipCategory {
-  title: string
-  icon: LucideIcon
-  items: string[]
-}
-
 // ============================================================================
 // HERO CONTENT
 // ============================================================================
 
 export const heroContent = {
-  title: "How We Work",
-  paragraphs: [
-    "Most companies have scattered data, ambitious goals, and no clear path between them. We solve that in eight weeks."
-  ],
-  tagline: "",
-  clarifier: ""
+  headline: "Clarity you can build on for years.",
+  subheadline: "Most marketing advice treats symptoms. We spend eight weeks finding the root issue—so you have a strategy that still works three years from now, not just three months. No retainers. No ongoing fees. Just a foundation you actually own."
 }
 
 // ============================================================================
-// PROCESS SECTIONS
+// START HERE SECTION
 // ============================================================================
 
-export const processSections: ProcessSection[] = [
-  // SECTION 1: Map Your Reality
-  {
-    id: "map-your-reality",
-    number: 1,
-    title: "Map Your Reality",
-    timeline: "Weeks 1-2",
-    intro: "Before we can chart a path forward, we need to understand exactly where you are. Not where you think you are—where the data says you are.",
-    subsections: [
-      {
-        heading: "Start with the economics",
-        paragraphs: [
-          "What revenue target are you working toward? How long can you wait for an acquisition dollar to pay back? At what customer acquisition cost does your model break?",
-          "If these numbers exist, we stress-test them. If they're assumptions, we build them from your actual data. You get a one-page framework that defines what you're optimizing for—and what you can ignore."
-        ]
-      },
-      {
-        heading: "Map the competitive landscape",
-        paragraphs: [
-          "Who are customers choosing between when they consider you? Where does your pricing power come from versus where is it wishful thinking? What category forces work in your favor, and which ones work against you?",
-          "We're specific about what matters: this gap is costing you deals, this friction is slowing conversions, this concern doesn't move the needle yet."
-        ]
-      },
-      {
-        heading: "Examine your complete market position",
-        paragraphs: [
-          "We examine five dimensions of your market position: Customer, Company, Collaborators, Competition, and Context. The outputs are bespoke to your situation—not generic templates."
-        ]
-      }
-    ],
-    deliverables: [
-      "Current state audit (market + funnel analysis)",
-      "Revenue model validation",
-      "Competitive positioning baseline",
-      "Market position analysis",
-      "Measurement gap analysis"
-    ]
-  },
+export const startHereContent = {
+  heading: "Start with a conversation, not a pitch.",
+  body: "Before we talk channels or budgets, we listen. You'll tell us what's actually happening in your business—the wins, the waste, the worries. We'll share how we think about sustainable growth, and we'll both decide if we're aligned.",
+  ctaText: "Schedule an intro call"
+}
 
-  // SECTION 2: Define Where You're Headed
-  {
-    id: "define-where-youre-headed",
-    number: 2,
-    title: "Define Where You're Headed",
-    timeline: "Weeks 3-4",
-    intro: "Strategy is choosing what not to do. Based on your actual position, we identify the most defensible aspiration.",
-    subsections: [
-      {
-        heading: "Clarify who you serve",
-        paragraphs: [
-          "Which segment can you realistically win? What specific problem do you solve that they'll pay for? Why would they choose you over what they're using today?",
-          "You get a framework that explicitly defines who you're for—and who you're not. Resource allocation becomes impossible when you're trying to serve everyone. Saying no is strategic."
-        ]
-      },
-      {
-        heading: "Crystallize your positioning",
-        paragraphs: [
-          "We use Segmentation, Targeting, and Positioning to structure the work, but the positioning we develop is unique to your situation. This clarifies your strategic focus."
-        ]
-      }
-    ],
-    deliverables: [
-      "Positioning strategy",
-      "Competitive differentiation strategy",
-      "Brand positioning guidelines",
-      "Aspirational customer journey map",
-      "Year 1 success metrics",
-      "Messaging guidelines"
-    ]
-  },
+// ============================================================================
+// PROCESS WEEKS
+// ============================================================================
 
-  // SECTION 3: Build the Bridge
+export const processWeeks: ProcessWeek[] = [
   {
-    id: "build-the-bridge",
-    number: 3,
-    title: "Build the Bridge",
-    timeline: "Weeks 5-8",
-    intro: "The specific, sequenced initiatives that take you from current state to target state.",
-    subsections: [
-      {
-        heading: "Connect current and aspirational states",
-        paragraphs: [
-          "We deliver a 90-day roadmap with clear gates, dependencies, and decision points.",
-          "What's working now that you scale? What's creating friction that you fix? What's missing entirely that you build?"
-        ]
-      },
-      {
-        heading: "Optimize your complete marketing mix",
-        paragraphs: [
-          "We optimize across Product, Promotion, Place, and Price—tailored to your business. You get messaging guidelines, channel plans with specific campaigns, and clear success criteria."
-        ]
-      },
-      {
-        heading: "Solve the infrastructure problem",
-        paragraphs: [
-          "Your data is scattered across tools, making it impossible to see the complete picture. We connect your systems into one view that shows what actually matters.",
-          "You get a measurement system that tracks the five numbers you need to check weekly. Decisions get made on data, not opinions."
-        ]
-      },
-      {
-        heading: "Transfer complete ownership",
-        paragraphs: [
-          "We document who owns what, establish the weekly rhythm you'll follow, and identify where you need outside help.",
-          "Handoff isn't complete until you've run through the system once and can operate independently. Then 30 days of support while you find your rhythm."
-        ]
-      }
-    ],
-    deliverables: [
-      "90-day strategic action plan",
-      "Marketing mix strategy",
-      "Campaign playbooks and execution roadmaps",
-      "Measurement systems and operational framework",
-      "Scaling gates for each channel",
-      "Team enablement documentation",
-      "Weekly operating rhythm",
-      "30-day post-launch support"
-    ]
+    id: "week-1",
+    week: "Week 1",
+    title: "Listen.",
+    content: "We review your last 12 months of data—ad spend, site analytics, CRM, every channel you've tried. We interview you and anyone on your team. We ask questions that might feel uncomfortable because we're looking for the gap between what you think is working and what the numbers actually say. You'll see every finding, even the ugly ones."
+  },
+  {
+    id: "weeks-2-3",
+    week: "Weeks 2–3",
+    title: "Diagnose.",
+    content: "We build you a private dashboard showing exactly where your time and money are going vs. where your customers are actually coming from. We'll show you the $18K you spent on that channel that generated $2K in real revenue. We'll map the customer journey and find the drop-off points. You'll get the raw data, not just our conclusions."
+  },
+  {
+    id: "weeks-4-5",
+    week: "Weeks 4–5",
+    title: "Build.",
+    content: "We create a strategy with specific channels, budget allocation, and a 12-month timeline. But here's the key: we build it with you, not for you. You'll understand why we're recommending SEO over paid ads, or email over social. You'll be able to explain the strategy clearly because you helped build the logic."
+  },
+  {
+    id: "weeks-6-7",
+    week: "Weeks 6–7",
+    title: "Document.",
+    content: "We document everything in SOPs and templates you can run without us. Prioritization frameworks, creative briefs in your brand voice, and a measurement system focused on the metrics that actually matter. Everything lives in tools you already use—no proprietary software you'll lose access to."
+  },
+  {
+    id: "week-8",
+    week: "Week 8",
+    title: "Hand off—and stay connected.",
+    content: "We spend a full day walking through everything, answering every question. Then we schedule a 30-day check-in (free) and a 90-day review (free). You'll have our emails. We don't disappear because your success is how we measure ours."
   }
 ]
 
 // ============================================================================
-// WHAT YOU OWN
+// CAPABILITIES (What You'll Have)
 // ============================================================================
 
-export const ownershipCategories: OwnershipCategory[] = [
+export const capabilities: Capability[] = [
   {
-    title: "Strategic Foundation",
-    icon: FileText,
-    items: [
-      "Revenue architecture and growth model",
-      "Market positioning and competitive strategy",
-      "Brand positioning guidelines and messaging framework"
-    ]
+    id: "audit",
+    title: "Audit your own marketing",
+    description: "You'll know how to spot waste and opportunity without us"
   },
   {
-    title: "Operational Systems",
-    icon: Settings,
-    items: [
-      "Measurement systems connecting all your data sources",
-      "Campaign playbooks and channel execution briefs",
-      "Team enablement documentation",
-      "Weekly decision framework"
-    ]
+    id: "prioritize",
+    title: "Prioritize channels confidently",
+    description: "You'll have a framework for saying \"not now\" to shiny objects"
   },
   {
-    title: "Execution Readiness",
-    icon: Rocket,
-    items: [
-      "90-day roadmap with prioritized initiatives",
-      "Success metrics and scaling gates",
-      "Role clarity and accountability structure",
-      "30 days of implementation support"
-    ]
+    id: "execute",
+    title: "Execute from documented SOPs",
+    description: "Run campaigns without starting from scratch"
+  },
+  {
+    id: "measure",
+    title: "Measure what matters",
+    description: "You'll ignore vanity metrics and focus on the 3 numbers that drive growth"
+  },
+  {
+    id: "vendors",
+    title: "Make smart vendor decisions",
+    description: "You'll know which tools are worth paying for and which are hype"
   }
 ]
 
 // ============================================================================
-// FAQ
+// REQUIREMENTS (What We Need)
+// ============================================================================
+
+export const requirements: Requirement[] = [
+  {
+    id: "access",
+    text: "Access to everything: analytics, ad accounts, CRM, even the tools you're embarrassed about"
+  },
+  {
+    id: "time",
+    text: "3 hours per week, minimum"
+  },
+  {
+    id: "openness",
+    text: "Willingness to hear that your favorite channel might be the problem"
+  }
+]
+
+// ============================================================================
+// CTA CONTENT
+// ============================================================================
+
+export const ctaContent = {
+  heading: "Ready to build your foundation?",
+  body: "The first step is a conversation where we'll both decide if we're aligned for the long haul. We'll talk about your business, your goals, and whether an 8-week sprint makes sense for your next decade of growth.",
+  ctaText: "Schedule your intro call",
+  subtext: "Free. No obligation. No pitch.",
+  postscript: "P.S. If we're not the right fit, we'll recommend someone who is. Because the wrong fit wastes everyone's time."
+}
+
+// ============================================================================
+// VALUES FOOTER
+// ============================================================================
+
+export const valuesContent = {
+  heading: "How we think about this work:",
+  body: "We believe small businesses grow best when they own their strategy, not rent it. We believe transparency builds better relationships than persuasive sales. We believe in teaching, not telling. And we believe that when you succeed, our community of independent businesses gets stronger."
+}
+
+// ============================================================================
+// FAQ (keeping existing)
 // ============================================================================
 
 export const faqs: FAQ[] = [
@@ -235,15 +182,14 @@ export const faqs: FAQ[] = [
   {
     question: "Can you customize the timeline?",
     answer: [
-      "The core structure—Reality, Aspiration, Action Plan—stays consistent. We adjust how much time we spend in each phase based on what clarity already exists.",
+      "We adjust how much time we spend in each phase based on what clarity already exists.",
       "If you have strong positioning, we move faster. If you're starting from scratch, we go deeper."
     ]
   },
   {
     question: "Do you work with my industry?",
     answer: [
-      "We work with $1-5M revenue companies across industries that have traction and are ready to systematize growth. Whether B2B, B2C, SaaS, or services—the diagnostic process is the same.",
-      "We map reality, define aspiration, build the bridge."
+      "We work with growth companies across industries that have traction and are ready to systematize growth. Whether B2B, B2C, SaaS, or services—the diagnostic process is the same."
     ]
   },
   {
@@ -258,27 +204,18 @@ export const faqs: FAQ[] = [
 ]
 
 // ============================================================================
-// FAQ
-// ============================================================================
-
-export const ctaContent = {
-  heading: "Ready to Start?",
-  body: "Let's discuss whether this eight-week process makes sense for your situation. We'll review where you are, what clarity already exists, and what would shift if we worked together.",
-  subtext: "30-minute call. No pitch, no pressure."
-}
-
-// ============================================================================
 // METADATA
 // ============================================================================
 
 export const processMetadata = {
-  title: "Our 8-Week Process: Discovery to Full Ownership | Pattern Growth",
-  description: "Our 8-week process: from discovery to full ownership. See exactly how we build your marketing strategy and hand it over. No retainers.",
+  title: "How We Work: 8-Week Growth Strategy Sprint | Pattern Growth",
+  description: "Clarity you can build on for years. Our 8-week process delivers a marketing strategy that still works three years from now. No retainers. No ongoing fees. Just a foundation you own.",
   keywords: [
     "growth strategy process",
     "marketing consulting methodology",
     "8-week sprint",
     "strategic planning",
-    "marketing operations"
+    "marketing operations",
+    "fractional CMO alternative"
   ]
 }
