@@ -151,7 +151,7 @@ export default function HomePage() {
                     </h1>
 
                     <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                      We craft complete growth strategies in focused 8-week sprints, then hand over everything so you can run it without us.
+                      We work with business leaders to build marketing foundations — the strategy, structure, and priorities that make growth possible.
                     </p>
 
                     {/* Hero CTA */}

@@ -72,7 +72,7 @@ export function ComparisonTable({ columns, rows, className }: ComparisonTablePro
           !hasScrolled && "scroll-fade-right"
         )}
       >
-        <table className="w-full border-collapse">
+        <table className="w-full border-collapse bg-card">
           <thead>
             <tr>
               <th
@@ -97,6 +97,7 @@ export function ComparisonTable({ columns, rows, className }: ComparisonTablePro
               <tr
                 key={index}
                 className={cn(
+                  "bg-card",
                   row.isHighlighted && "bg-primary/10 dark:bg-primary/20"
                 )}
               >

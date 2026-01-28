@@ -20,6 +20,23 @@ export function AlertBanner() {
     setIsVisible(false)
   }
 
+  const handleTypeformClick = () => {
+    if (typeof window !== "undefined" && window.gtag) {
+      // GA4 event for form open
+      window.gtag("event", "generate_lead", {
+        currency: "USD",
+        value: 100,
+        lead_source: "growth_sprint_banner",
+      });
+      // Google Ads conversion for Typeform click (secondary conversion)
+      window.gtag("event", "conversion", {
+        send_to: "AW-17619996764/typeform_click",
+        value: 100,
+        currency: "USD",
+      });
+    }
+  }
+
   if (!isVisible) return null
 
   return (
@@ -27,6 +44,7 @@ export function AlertBanner() {
       href="https://form.typeform.com/to/vBlOOrU4"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleTypeformClick}
       className="block bg-accent-deep-navy text-accent-deep-navy-foreground hover:bg-accent-deep-navy/90 hover:underline transition-colors duration-200"
     >
       <div className="container mx-auto px-4 py-3 relative">
