@@ -81,6 +81,15 @@ export interface BreadcrumbList {
   }>;
 }
 
+export interface Review {
+  reviewBody: string;
+  author: {
+    name: string;
+    jobTitle: string;
+    worksFor: string;
+  };
+}
+
 export function createPersonSchema(person: Person) {
   return {
     "@context": "https://schema.org",
@@ -204,6 +213,28 @@ export function createBreadcrumbListSchema(items: Array<{ label: string; href?: 
       name: item.label,
       item: item.href ? `https://www.patterngrowth.com${item.href}` : undefined,
     })),
+  };
+}
+
+export function createReviewSchema(review: Review) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewBody: review.reviewBody,
+    author: {
+      "@type": "Person",
+      name: review.author.name,
+      jobTitle: review.author.jobTitle,
+      worksFor: {
+        "@type": "Organization",
+        name: review.author.worksFor,
+      },
+    },
+    itemReviewed: {
+      "@type": "Organization",
+      name: "Pattern Growth",
+      url: "https://www.patterngrowth.com/",
+    },
   };
 }
 

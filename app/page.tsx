@@ -29,8 +29,9 @@ import {
 import dynamic from "next/dynamic"
 import { Suspense } from "react"
 import { ApproachSkeleton } from "@/components/skeletons/approach-skeleton"
-import { createServiceSchema, createFAQSchema } from "@/lib/schemas"
+import { createServiceSchema, createFAQSchema, createReviewSchema } from "@/lib/schemas"
 import { MarketingSection } from "@/components/marketing/MarketingSection"
+import { Testimonials, testimonials } from "@/components/Testimonials"
 
 // Lazy load non-critical components for better performance
 const Approach = dynamic(() => import("./(marketing)/_sections/approach-enhanced").then(mod => mod.default), {
@@ -96,6 +97,17 @@ export default function HomePage() {
     provider: "Pattern Growth"
   });
 
+  const reviewSchemas = testimonials.map((t) =>
+    createReviewSchema({
+      reviewBody: t.quote,
+      author: {
+        name: t.name,
+        jobTitle: t.title,
+        worksFor: t.company,
+      },
+    })
+  );
+
   const faqSchema = createFAQSchema([
     {
       "@type": "Question",
@@ -138,6 +150,13 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      {reviewSchemas.map((schema, i) => (
+        <script
+          key={`review-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       <div className="bg-background">
                 {/* Hero Section */}
@@ -220,6 +239,8 @@ export default function HomePage() {
         }>
           <Approach />
         </Suspense>
+
+        <Testimonials />
 
         {/* How We Work Differently */}
         <MarketingSection variant="chapter" className="py-16 sm:py-20">
