@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
     title: "Director of Marketing",
     company: "Pursuit Sales Solutions",
     initials: "KM",
-    highlightClass: "bg-accent-golden/30",
+    highlightClass: "bg-accent-golden text-accent-golden-foreground",
   },
   {
     quote:
@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     title: "Director",
     company: "Camp Huawni",
     initials: "LB",
-    highlightClass: "bg-accent-golden/30",
+    highlightClass: "bg-accent-golden text-accent-golden-foreground",
   },
   {
     quote:
@@ -41,7 +41,7 @@ export const testimonials: Testimonial[] = [
     title: "Owner",
     company: "Magician Grant Price",
     initials: "GP",
-    highlightClass: "bg-accent-golden/30",
+    highlightClass: "bg-accent-golden text-accent-golden-foreground",
   },
 ]
 
@@ -78,7 +78,7 @@ function TestimonialCard({
         {parts.matched ? (
           <>
             &ldquo;{parts.before}
-            <mark className={cn("rounded px-1 text-foreground", highlightClass)}>
+            <mark className={cn("rounded px-1 font-medium", highlightClass)}>
               {highlight}
             </mark>
             {parts.after}&rdquo;
