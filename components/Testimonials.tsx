@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     title: "Director",
     company: "Camp Huawni",
     initials: "LB",
-    highlightClass: "bg-secondary/40",
+    highlightClass: "bg-accent-golden/30",
   },
   {
     quote:
@@ -41,7 +41,7 @@ export const testimonials: Testimonial[] = [
     title: "Owner",
     company: "Magician Grant Price",
     initials: "GP",
-    highlightClass: "bg-accent-warm-taupe/30",
+    highlightClass: "bg-accent-golden/30",
   },
 ]
 
@@ -96,8 +96,9 @@ function TestimonialCard({
         </div>
         <div className="flex flex-col text-left">
           <span className="text-sm font-semibold text-foreground">
-            {name}, {title}
+            {name}
           </span>
+          <span className="text-xs text-muted-foreground">{title}</span>
           <span className="text-xs text-muted-foreground">{company}</span>
         </div>
       </footer>
