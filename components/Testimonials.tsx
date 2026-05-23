@@ -67,7 +67,6 @@ function TestimonialCard({
   name,
   title,
   company,
-  initials,
   highlightClass,
 }: Testimonial) {
   const parts = splitOnce(quote, highlight)
@@ -87,20 +86,13 @@ function TestimonialCard({
           <>&ldquo;{quote}&rdquo;</>
         )}
       </blockquote>
-      <footer className="flex items-center gap-3 mt-auto not-italic">
-        <div
-          aria-hidden="true"
-          className="flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary/40 text-secondary-foreground text-sm font-medium"
-        >
-          {initials}
-        </div>
-        <div className="flex flex-col text-left">
-          <span className="text-sm font-semibold text-foreground">
-            {name}
-          </span>
-          <span className="text-xs text-muted-foreground">{title}</span>
-          <span className="text-xs text-muted-foreground">{company}</span>
-        </div>
+      <footer className="mt-auto not-italic border-t border-border/50 pt-5">
+        <p className="text-base font-semibold text-foreground leading-tight">
+          {name}
+        </p>
+        <p className="text-sm text-muted-foreground mt-1">
+          {title}, {company}
+        </p>
       </footer>
     </Card>
   )
