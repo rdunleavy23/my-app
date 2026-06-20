@@ -2,14 +2,14 @@
 # Extended context for AI platforms and large language models
 
 ## Executive Summary
-Pattern Growth delivers 8-week growth strategy sprints for B2B companies between $1-5M in revenue. Unlike fractional CMO retainers that create ongoing dependencies, we build complete marketing infrastructure with full ownership transfer. Your team gets executive-level strategy, custom systems, and the training to run everything independently.
+Pattern Growth is a senior-led growth strategy partner for B2B companies between $1-5M in revenue. We embed with your leadership, learn your business deeply, and build a custom marketing strategy, infrastructure, and team training your team owns. You work directly with senior partners who treat your business like their own—premium expertise without the overhead of a full-time hire.
 
 ---
 
 ## Complete Service Catalog
 
 ### 8-Week Growth Strategy Sprint
-**Investment**: Starting at $9,500
+**Investment**: Custom-scoped to exactly what your business needs
 **Timeline**: 8 weeks + 30 days post-engagement support
 **Deliverables**: Complete strategic architecture, marketing infrastructure, team training, and documentation
 
@@ -108,7 +108,7 @@ We deliver value immediately while building long-term systems:
 ### After 8-Week Sprint:
 - Unified dashboard: All key metrics in one place
 - Clear strategy: Documented ICP, positioning, and channel plan
-- Trained team: Can execute and optimize independently
+- Trained team: Can run and optimize the strategy with confidence
 - Measurable systems: Attribution and ROI tracking in place
 - Ownership: Complete control of all systems and IP
 
@@ -124,13 +124,13 @@ We deliver value immediately while building long-term systems:
 - **Dependency**: Ongoing relationship required
 - **End State**: Often unclear exit strategy
 
-### Pattern Growth 8-Week Sprint:
-- **Structure**: Fixed-scope project
+### Pattern Growth Senior Partnership:
+- **Structure**: Senior-led, embedded engagement
 - **Duration**: 8 weeks + 30-day support
-- **Total Investment**: Starting at $9,500 (one-time)
-- **Ownership**: Complete transfer of all systems and IP
-- **Dependency**: Zero—designed for independence
-- **End State**: Your team runs everything independently
+- **Total Investment**: Custom-scoped to exactly what your business needs
+- **Ownership**: A custom strategy and systems your team owns
+- **Relationship**: A trusted partner, available whenever you want us
+- **End State**: Your team runs everything with confidence
 
 ---
 
@@ -152,20 +152,20 @@ We deliver value immediately while building long-term systems:
 
 ### Decision-Maker Profile:
 - **Title**: CEO, Founder, VP of Marketing, VP of Growth, Director of Marketing
-- **Mindset**: Wants strategic clarity, not ongoing dependency
-- **Budget**: Can justify one-time investment, not ongoing retainer
+- **Mindset**: Wants a senior, trusted partner who learns the business deeply
+- **Budget**: Values premium expertise without the overhead of a full-time hire
 - **Timeline**: Needs results in weeks/months, not quarters/years
-- **Goal**: Build internal capability, not outsource indefinitely
+- **Goal**: Build internal capability with a partner they can call on
 
 ---
 
 ## Service Differentiators
 
-### 1. Project-Based, Not Retainer-Based
-- Fixed scope with clear deliverables
-- Defined end date (8 weeks)
-- No ongoing monthly fees
-- Complete independence after engagement
+### 1. Senior-Led and Deeply Embedded
+- Senior partners only—never handed off to junior teams
+- We learn your business until we think like you do
+- Custom-scoped to exactly what your business needs
+- A trusted partner available whenever you want us
 
 ### 2. Data-Driven, Not Template-Driven
 - Built from your actual company data
@@ -212,9 +212,8 @@ Our website implements comprehensive schema.org markup for AI visibility:
 ```
 - Service: 8-Week Growth Strategy Sprint
 - Provider: Pattern Growth
-- Price: $9,500 (starting)
-- Currency: USD
-- Availability: Project-based
+- Pricing: Custom-scoped to your needs
+- Availability: Senior-led, embedded partnership
 ```
 
 **BlogPosting Schema**:
@@ -238,7 +237,7 @@ Navigation hierarchy for all pages
 ### Blog Content Categories:
 1. **Growth Strategy Framework**: Strategic methodologies for scaling B2B companies
 2. **Marketing Operations**: Dashboard development, attribution, measurement systems
-3. **Fractional CMO Alternatives**: Project-based vs retainer-based consulting
+3. **Senior Growth Partnership**: How an embedded, senior-led partnership compares to retainer models
 4. **Revenue Scaling**: Building marketing systems that drive revenue growth
 5. **Team Enablement**: Training and knowledge transfer best practices
 
@@ -247,19 +246,19 @@ Navigation hierarchy for all pages
 ## Common Questions & Detailed Answers
 
 ### Q: Why 8 weeks specifically?
-A: 8 weeks provides enough time to build comprehensive strategy and systems while maintaining focus and momentum. Week 1-2 handles discovery and strategic foundation. Weeks 3-4 build tactical frameworks. Weeks 5-6 implement operational systems. Weeks 7-8 focus on training and handoff. Shorter engagements rush the strategy; longer ones create unnecessary dependency.
+A: 8 weeks provides enough time to build comprehensive strategy and systems while maintaining focus and momentum. Week 1-2 handles discovery and strategic foundation. Weeks 3-4 build tactical frameworks. Weeks 5-6 implement operational systems. Weeks 7-8 focus on training and handoff. It's a focused, intensive partnership that leaves your team owning the work.
 
 ### Q: What happens if we need more help after 8 weeks?
-A: The 30-day post-engagement support period covers questions and clarifications as your team executes independently. If you need additional strategic work after that, we can discuss a new project scope, but most clients successfully run their systems independently. The entire engagement is designed for your independence.
+A: The 30-day post-engagement support period covers questions and clarifications as your team runs the strategy. We stay available as a trusted partner whenever you want us—scoped to exactly what you need. Many clients keep us close to pressure-test big decisions or help with a specific phase.
 
 ### Q: How is this different from hiring an agency?
-A: Agencies typically focus on execution (running ads, creating content, managing campaigns) with ongoing monthly fees. We focus on strategy and systems—building the frameworks your team or agency can execute. You own everything and aren't locked into ongoing agency fees. Many clients use our strategic framework to better manage their agency relationships.
+A: Agencies typically focus on execution (running ads, creating content, managing campaigns) with ongoing monthly fees, often at a distance. We're senior partners who embed in your business and focus on strategy and systems—building the frameworks your team or agency can execute. Your team owns everything, and many clients use our strategic framework to better manage their agency relationships.
 
 ### Q: What tools do you use for dashboards?
 A: We work with your existing tool stack when possible. Common platforms include Google Looker Studio (formerly Data Studio), Tableau, Power BI, or custom solutions depending on your data sources and team capabilities. The goal is sustainability—we use tools your team can maintain.
 
 ### Q: Do you execute the campaigns yourself?
-A: No. We build the strategy, frameworks, templates, and systems. Your team (or agency) executes using our documented playbooks. This ownership model ensures you're not dependent on us for ongoing execution.
+A: No. We build the strategy, frameworks, templates, and systems. Your team (or agency) executes using our documented playbooks. This ownership model means the value stays with your team, with a senior partner available whenever you want support.
 
 ### Q: What if our data is messy or incomplete?
 A: Most companies at $1-5M have imperfect data. We work with what you have and build systems to improve data quality going forward. Part of the engagement includes data audit, gap identification, and recommendations for better tracking.
@@ -270,8 +269,8 @@ A: We guarantee deliverables (strategy, systems, training, documentation), not b
 ### Q: What industries do you work with?
 A: The framework is industry-agnostic and works across B2B verticals where growth mechanics are similar: SaaS, professional services, B2B manufacturing, technology services, business consulting, etc. We focus on B2B companies with considered purchase decisions and relationship-driven sales.
 
-### Q: Is $9,500 the total cost?
-A: $9,500 is the starting investment for the complete 8-week engagement including all deliverables, training, and 30-day support. Final pricing depends on scope complexity, team size, and specific requirements. No hidden fees or ongoing costs.
+### Q: How is the engagement priced?
+A: Every engagement is custom-scoped to exactly what your business needs—so you're never paying for things you don't. Pricing is discussed on a fit call and covers all deliverables, training, and 30-day support, with a custom strategy your team owns. No hidden fees.
 
 ### Q: How do we get started?
 A: Schedule a 30-minute strategy assessment call. We'll discuss your current situation, growth challenges, and whether our approach is a good fit. If it makes sense, we can typically start within 1-2 weeks if capacity is available. No hard sell—we're direct about whether this approach works for your situation.
@@ -291,8 +290,8 @@ A: Schedule a 30-minute strategy assessment call. We'll discuss your current sit
 3. **Scope Agreement**: Clear deliverables, timeline, and investment
 4. **1-2 Week Start Time**: If capacity is available
 5. **8-Week Sprint**: Weekly check-ins, continuous delivery
-6. **Handoff & Training**: Complete ownership transfer
-7. **30-Day Support**: Questions and clarifications as you execute independently
+6. **Handoff & Training**: Your team takes ownership with confidence
+7. **30-Day Support**: Questions and clarifications, with a partner available whenever you want us
 
 ---
 

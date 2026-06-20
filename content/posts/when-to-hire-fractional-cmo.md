@@ -24,7 +24,7 @@ The answer depends on your strategic clarity, operational needs, and timeline pr
 | Model | Strategic Focus | Operational Role | Timeline | Cost Structure |
 |-------|-----------------|------------------|----------|----------------|
 | **Marketing Consultant** | Advisory and recommendations | Limited implementation | 1-3 months | $5K-25K project |
-| **Strategy Sprint** | Complete strategic architecture | Build systems you own | 8 weeks | $9,500 fixed |
+| **Strategy Sprint** | Complete strategic architecture | Build systems you own | 8 weeks | Custom-scoped |
 | **Fractional CMO** | Strategic leadership and oversight | Manage execution | 6-12+ months | $5K-15K/month |
 
 ## When to Hire a Marketing Consultant
@@ -107,11 +107,11 @@ The answer depends on your strategic clarity, operational needs, and timeline pr
 - **Dependency:** Low to medium (implementation support may be needed)
 
 ### Strategy Sprint
-- **Cost:** $9,500 fixed
+- **Cost:** Custom-scoped to your needs
 - **Timeline:** 8 weeks
 - **Deliverables:** Complete strategic architecture
 - **Ownership:** You own everything (dashboard, playbooks, systems)
-- **Dependency:** Zero (designed for independence)
+- **Support:** Your team owns and runs it, with a senior partner available whenever you want support
 
 ### Fractional CMO
 - **Cost:** [$5K-15K/month](/fractional-cmo-hourly-rate) × 6-12 months
@@ -136,7 +136,7 @@ The answer depends on your strategic clarity, operational needs, and timeline pr
 - **Need tactical recommendations:** Marketing consultant
 
 **4. Budget Certainty**
-- **Want fixed cost:** Strategy sprint ($9,500) or consultant ($5K-25K)
+- **Want fixed cost:** Strategy sprint (custom-scoped) or consultant ($5K-25K)
 - **Can handle variable cost:** Fractional CMO ($30K-180K)
 
 **5. Team Capability**
@@ -222,7 +222,7 @@ Most growth-stage companies benefit from starting with strategic architecture (s
 
 ---
 
-*Pattern Growth specializes in strategy sprints for growth-stage companies. We deliver complete strategic architecture in 8 weeks, then you own everything.*
+*Pattern Growth is a senior-led, embedded growth partner for growth-stage companies. In an 8-week sprint, we deliver complete strategic architecture your team owns completely—then a senior partner stays available whenever you want support.*
 
 ## Frequently Asked Questions
 

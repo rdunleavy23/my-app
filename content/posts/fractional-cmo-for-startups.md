@@ -30,7 +30,7 @@ Six months later: $60K spent, minimal progress, back to square one.
 **TL;DR:**
 - **You're ready at**: $2M+ revenue, 3+ person marketing team, clear PMF, $60K+ budget
 - **You're NOT ready at**: Under $1M revenue, no team, unclear ICP, pre-PMF
-- **Alternative for early-stage**: Growth advisor ($2K-$5K/month), strategy sprint ($9.5K-$12.5K one-time)
+- **Alternative for early-stage**: Growth advisor ($2K-$5K/month), strategy sprint (custom-scoped, one-time)
 - **Transition point**: When revenue hits $5M-$10M and team is 5+, consider full-time CMO
 - **Success rate**: Startups with marketing leadership see 30% faster revenue growth (when timing is right)
 
@@ -143,7 +143,7 @@ You need $60K-$120K minimum for 6-12 months to see ROI.
 
 > **Budget Reality:** [Gartner reports](https://www.gartner.com/en/newsroom/press-releases/2024-05-13-gartner-cmo-survey-reveals-marketing-budgets-have-dropped-to-seven-point-seven-percent-of-overall-company-revenue-in-2024) that 64% of CMOs lack sufficient budget to execute their strategy. Don't compound this by underfunding the engagement.
 
-**What to do instead:** Strategy sprint ($9.5K-$12.5K one-time) to build owned strategic architecture.
+**What to do instead:** Strategy sprint (custom-scoped to your needs) to build owned strategic architecture.
 
 ### Founder Still Doing All Marketing
 
@@ -245,7 +245,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 
 **Why this works better for startups:**
 - **Timeline**: 8 weeks vs. 6-12 months
-- **Cost**: $9,500-$12,500 vs. $60K-$144K
+- **Cost**: Custom-scoped to your needs vs. $60K-$144K
 - **Ownership**: 100% yours forever vs. partial knowledge transfer
 - **Flexibility**: Adapt quickly as you learn vs. locked into consultant's cadence
 - **Ownership**: You own and evolve the strategy vs. dependency on external expert
@@ -271,7 +271,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - Yes → Continue to Q4
 
 **Question 4:** Do you have $60K+ budget for 6-12 months?
-- No → Strategy sprint is better fit ($9.5K-$12.5K)
+- No → Strategy sprint is better fit (custom-scoped to your needs)
 - Yes → Continue to Q5
 
 **Question 5:** Do you need ongoing leadership or one-time architecture?
@@ -340,9 +340,9 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - Team management
 - Board-level representation
 
-### Strategy Sprint ($9.5K-$12.5K one-time)
+### Strategy Sprint (custom-scoped, one-time)
 
-**Best for:** $1M-$5M revenue, need strategic architecture to execute independently
+**Best for:** $1M-$5M revenue, need strategic architecture your team can run with confidence
 
 **What you get:**
 - Complete strategic frameworks
@@ -429,7 +429,7 @@ Build the foundation first. Add strategic leadership when it amplifies existing 
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. Built for startups that need strategic clarity fast, with complete ownership and no ongoing dependency.*
+*Pattern Growth is a senior-led, embedded growth partner for startups. In an 8-week sprint, we build CMO-level strategic architecture your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get honest guidance on timing:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

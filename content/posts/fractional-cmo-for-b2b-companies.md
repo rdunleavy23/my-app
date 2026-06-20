@@ -382,7 +382,7 @@ We create your complete B2B marketing architecture:
 - Sales enablement playbook
 - Attribution and pipeline tracking system
 
-**You own everything.** You execute. No ongoing retainer needed.
+**You own everything.** Your team runs it with confidence, with a senior partner available whenever you want support.
 
 **Compare B2B marketing support models:**
 
@@ -391,7 +391,7 @@ We create your complete B2B marketing architecture:
 | **B2B expertise** | Built-in methodology | Depends on individual | Depends on hire |
 | **ABM program** | Framework + playbook | Ongoing management | Ongoing management |
 | **Sales alignment** | Defined in frameworks | Weekly collaboration | Daily collaboration |
-| **Total cost** | $9.5K-$12.5K | $144K-$180K/year | $470K-$676K+/year |
+| **Total cost** | Custom-scoped | $144K-$180K/year | $470K-$676K+/year |
 | **Best for** | $1M-$25M B2B | $2M-$50M B2B | $50M+ B2B |
 
 [See how the 3 A's Framework works →](/process)
@@ -479,7 +479,7 @@ We create your complete B2B marketing architecture:
 - 45% higher deal values
 
 **Investment decision:**
-- Strategy sprint: $9.5K-$12.5K (own B2B frameworks forever)
+- Strategy sprint: custom-scoped (own B2B frameworks forever)
 - Fractional CMO: $144K-$180K/year (ongoing B2B leadership)
 - Full-time CMO: $470K-$676K+/year (dedicated B2B organization building)
 
@@ -509,7 +509,7 @@ Don't hire a B2C marketer for a B2B role. The sales cycle complexity alone will 
 
 ---
 
-*Pattern Growth delivers B2B marketing architecture in 8-week sprints. Built for complex sales cycles, ABM programs, and sales-marketing alignment. Complete ownership, no ongoing dependency.*
+*Pattern Growth is a senior-led, embedded growth partner for B2B companies. In an 8-week sprint, we build marketing architecture your team owns completely—built for complex sales cycles, ABM programs, and sales-marketing alignment—then a senior partner stays available whenever you want support.*
 
 **Get clarity on B2B marketing strategy:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

@@ -1,5 +1,5 @@
 ---
-title: "9 Marketing Leadership Options: $9.5K to $676K/Year (Which Fits Your Revenue?)"
+title: "9 Marketing Leadership Options: From Custom-Scoped Sprints to $676K/Year (Which Fits Your Revenue?)"
 description: "Full-time CMO ($676K, $50M+), VP Marketing ($280K, $10M+), fractional CMO ($180K, $2M-$50M), agency, advisor, strategy sprint. Wrong choice wastes $50K-$200K+ and 6-12 months."
 publishedAt: "2025-02-03"
 author:
@@ -8,7 +8,7 @@ author:
   image: "/team/ryan.png"
 seo:
   title: "Marketing Leadership Options 2025: 9 Options Compared (Revenue Guide)"
-  description: "9 marketing leadership options by revenue stage: Strategy sprint ($9.5K, $1M-$25M), Fractional CMO ($144K-$180K, $2M-$50M), Full-time CMO ($470K-$676K, $50M+). Complete comparison table."
+  description: "9 marketing leadership options by revenue stage: Strategy sprint (custom-scoped, $1M-$25M), Fractional CMO ($144K-$180K, $2M-$50M), Full-time CMO ($470K-$676K, $50M+). Complete comparison table."
   keywords:
     - "marketing leadership options"
     - "cmo vs vp marketing"
@@ -27,13 +27,13 @@ That single statement leads companies down wildly different paths:
 - Fractional CMO at $144K-$180K/year
 - Marketing agency at $96K-$180K/year
 - Growth advisor at $24K-$60K/year
-- Strategy sprint at $9.5K-$12.5K one-time
+- Strategy sprint, custom-scoped to your needs
 
 **The wrong choice wastes 6-12 months and $50K-$200K+.**
 
 **TL;DR:**
 - **9 marketing leadership options** compared: Full-time CMO, VP Marketing, Marketing Director, Fractional CMO, Growth Advisor, Marketing Agency, In-House Generalist, Marketing Consultant, Strategy Sprint
-- **Cost range**: $9.5K one-time (strategy sprint) to $676K+/year (full-time CMO)
+- **Cost range**: From a custom-scoped strategy sprint to $676K+/year (full-time CMO)
 - **Revenue fit**: Each option has optimal revenue range (strategy sprint for $1M-$25M, fractional for $2M-$50M, full-time CMO for $50M+)
 - **Key decision factors**: Revenue, team size, budget, need (strategy vs leadership vs execution), timeline
 - **Comparison tables**: Side-by-side cost, scope, timing, and fit analysis
@@ -402,8 +402,8 @@ Project-based expert brought in for specific initiative or problem.
 **What it is:**
 8-week intensive engagement to build complete strategic marketing architecture you own forever.
 
-**Total cost:** $9,500-$12,500 (one-time)
-- Fixed project fee
+**Total cost:** Custom-scoped to your needs (one-time)
+- Scoped to exactly what your business needs
 - 8-week timeline
 - Complete deliverables with 100% ownership
 
@@ -413,7 +413,7 @@ Project-based expert brought in for specific initiative or problem.
 - Channel prioritization playbook
 - Measurement dashboard and KPIs
 - Campaign playbooks for top channels
-- 100% ownership (no ongoing dependency)
+- 100% ownership, with a senior partner available whenever you want support
 - Implementation-ready frameworks
 
 **What you DON'T get:**
@@ -426,8 +426,8 @@ Project-based expert brought in for specific initiative or problem.
 - Revenue: $1M-$25M
 - Team: 1-5 people who can execute
 - Need: Strategic architecture, not ongoing leadership
-- Budget: Can't afford fractional CMO ongoing cost
-- Situation: Want to own strategy completely, execute independently
+- Budget: Prefer a custom-scoped engagement over ongoing retainers
+- Situation: Want to own strategy completely and run it with confidence
 
 **Why this exists:**
 
@@ -472,7 +472,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 | **Marketing Agency** | $96K-$240K | Varies | ✅✅ | ✅✅✅ | ❌ | $1M-$10M |
 | **In-House Generalist** | $80K-$140K | 40 hrs | ✅ | ✅✅ | ❌ | $1M-$5M |
 | **Consultant (project)** | $15K-$50K | Project | ✅✅ | Varies | ❌ | Any |
-| **Strategy Sprint** | $9.5K-$12.5K | 8 weeks | ✅✅✅ | ❌ | ❌ | $1M-$25M |
+| **Strategy Sprint** | Custom-scoped | 8 weeks | ✅✅✅ | ❌ | ❌ | $1M-$25M |
 
 ---
 
@@ -538,7 +538,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 **Marketing budget under $200K/year:**
 - **Options**: Growth Advisor, Strategy Sprint, In-House Generalist
 - **Why**: Can't afford CMO + execution resources
-- **Best**: Strategy Sprint ($9.5K-$12.5K) + founder execution
+- **Best**: Strategy Sprint (custom-scoped) + founder execution
 
 **Marketing budget $200K-$1M/year:**
 - **Options**: Fractional CMO + agencies, In-House team, Marketing Agency
@@ -562,7 +562,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 **Need: Strategic architecture (build once, own forever)**
 - **Best option**: Strategy Sprint
 - **Alternative**: Marketing Consultant (project-based)
-- **Cost**: $9.5K-$50K one-time
+- **Cost**: Custom-scoped (strategy sprint) to $50K one-time (consultant)
 
 **Need: Ongoing strategic leadership**
 - **Best option**: Fractional CMO (if $2M-$50M revenue)
@@ -658,7 +658,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 6. **Marketing Agency** ($96K-$240K/year) - For $1M-$10M, strategy + execution
 7. **In-House Generalist** ($80K-$140K/year) - For $1M-$5M, execution + some strategy
 8. **Marketing Consultant** ($15K-$50K project) - For specific projects, any stage
-9. **Strategy Sprint** ($9.5K-$12.5K one-time) - For $1M-$25M, owned architecture
+9. **Strategy Sprint** (custom-scoped, one-time) - For $1M-$25M, owned architecture
 
 **Key decision factors:**
 - Revenue stage determines affordability
@@ -703,7 +703,7 @@ Don't hire the option that sounds most impressive. Hire the option that fits you
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture through 8-week strategy sprints. Built for $1M-$25M companies that need strategic clarity without the ongoing cost of fractional or full-time executives. Complete ownership, implementation-ready frameworks, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner for $1M-$25M companies. In an 8-week strategy sprint, we build CMO-level strategic architecture your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get clarity on your marketing leadership needs:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

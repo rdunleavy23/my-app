@@ -2,23 +2,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { 
-  Zap, 
   UserCog,
   Puzzle,
-  Database,
-  Gift,
   Handshake,
   ChevronDown
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { GetStartedButton } from "@/components/ui/get-started-button"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import {
   Card,
   CardContent,
@@ -52,17 +43,17 @@ const FAQCollapsible = dynamic(() => import("@/components/ui/faq-collapsible").t
 
 
 export const metadata: Metadata = {
-  title: "Pattern Growth | 8-Week Growth Strategy Sprints",
-  description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
-  keywords: "growth strategy, marketing consultant, fractional CMO alternative, 8-week sprint, marketing strategy, strategy consulting",
+  title: "Pattern Growth | Senior-Led Growth Strategy Partner",
+  description: "Premium marketing strategy without the overhead of a full-time hire. Pattern Growth embeds with your leadership, learns your business deeply, and builds a custom growth strategy your team owns.",
+  keywords: "growth strategy, marketing strategy, senior marketing partner, embedded marketing strategy, custom growth strategy, strategy consulting",
   alternates: { canonical: "https://www.patterngrowth.com" },
   robots: { index: true, follow: true },
   other: {
     'article:modified_time': '2025-01-20',
   },
   openGraph: {
-    title: "Pattern Growth | 8-Week Growth Strategy Sprints",
-    description: "Skip the $200k CMO salary. Get a complete growth strategy in 8 weeks. Fixed-scope, zero retainers, 100% ownership transfer.",
+    title: "Pattern Growth | Senior-Led Growth Strategy Partner",
+    description: "Premium marketing strategy without the overhead of a full-time hire. We embed with your leadership and build a custom growth strategy your team owns.",
     type: "website",
     siteName: "Pattern Growth",
   },
@@ -91,8 +82,8 @@ export default function HomePage() {
   };
 
   const serviceSchema = createServiceSchema({
-    name: "8-Week Growth Strategy Sprint",
-    description: "Complete marketing strategy and infrastructure delivered in 8 weeks. Project-based alternative to fractional CMO retainers with full ownership transfer.",
+    name: "Senior-Led Growth Strategy",
+    description: "A senior-led, embedded growth strategy partnership. We learn your business deeply and build a custom marketing strategy your team owns — premium expertise without the overhead of a full-time hire.",
     url: "https://www.patterngrowth.com/",
     provider: "Pattern Growth"
   });
@@ -122,7 +113,7 @@ export default function HomePage() {
       name: "What makes you different from a fractional CMO?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're project-based, not retainer-based. Think of us as the construction crew that builds the house; a fractional CMO is the property manager who runs it afterward. You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever, that's us."
+        text: "You work directly with senior strategists who embed in your business and treat it like their own — no junior teams, no vendor distance. We learn your market and goals deeply, then build a custom growth strategy your team owns. It's a true partnership focused on fit and trust, scoped to exactly what your business needs."
       }
     },
     {
@@ -163,14 +154,12 @@ export default function HomePage() {
                 <MarketingSection variant="default" className="py-16 sm:py-20">
                   <div className="mx-auto max-w-5xl px-6 lg:px-8">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-foreground">
-                      Your Marketing Strategy,<br />
-                      Built From Scratch<br className="lg:hidden" />
-                      <span className="hidden lg:inline">&nbsp;</span>
-                      <span className="text-foreground font-bold">in 8 Weeks</span>
+                      Marketing strategy<br />
+                      without the overhead
                     </h1>
 
                     <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                      We work with business leaders to build marketing foundations — the strategy, structure, and priorities that make growth possible.
+                      Pattern Growth delivers premium marketing expertise without the overhead of a full-time hire. We build lasting partnerships with clients who demand excellence and understand the value of strategic thinking.
                     </p>
 
                     {/* Hero CTA */}
@@ -179,16 +168,16 @@ export default function HomePage() {
                     {/* Credibility row */}
                     <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                       <div className="rounded-lg border border-border/60 bg-white p-4">
-                        <p className="text-primary font-semibold">2–3 clients per quarter</p>
-                        <p className="text-primary">Hands-on founder involvement for depth and speed.</p>
+                        <p className="text-primary font-semibold">Senior partners only</p>
+                        <p className="text-primary">You work directly with senior strategists—never handed off.</p>
                       </div>
                       <div className="rounded-lg border border-border/60 bg-white p-4">
-                        <p className="text-primary font-semibold">8-week build</p>
-                        <p className="text-primary">Strategy, measurement, and enablement done end-to-end.</p>
+                        <p className="text-primary font-semibold">Deeply embedded</p>
+                        <p className="text-primary">We learn your business until we think like you do.</p>
                       </div>
                       <div className="rounded-lg border border-border/60 bg-white p-4">
-                        <p className="text-primary font-semibold">Full transfer</p>
-                        <p className="text-primary">You own playbooks, dashboards, and training—no retainer.</p>
+                        <p className="text-primary font-semibold">Yours to keep</p>
+                        <p className="text-primary">A custom strategy, playbooks, and dashboards your team owns.</p>
                       </div>
                     </div>
 
@@ -230,7 +219,7 @@ export default function HomePage() {
                     <h3 className="text-lg font-semibold leading-tight">Weeks 7-8: Owned by You</h3>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Complete training and documentation. You execute independently—no retainer, no ongoing fees, just your custom systems.
+                    Complete training and documentation. Your team owns the custom systems we build together and can run them with confidence.
                   </p>
                 </div>
               </div>
@@ -242,206 +231,46 @@ export default function HomePage() {
 
         <Testimonials />
 
-        {/* How We Work Differently */}
+        {/* What sets Pattern Growth apart */}
         <MarketingSection variant="chapter" className="py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-              How We Work Differently
+              What sets Pattern Growth apart
             </h2>
-            <p className="text-muted-foreground mb-12 text-lg">
-              CMO-level strategy through focused sprints, not ongoing retainers.
+            <p className="text-muted-foreground mb-12 text-lg max-w-3xl">
+              We embed ourselves in your business, learning your market and your goals until we think like you do. Pattern Growth becomes an extension of your team, not a vendor checking boxes.
             </p>
 
-            {/* Desktop: Grid of Cards - 6 items in 3x2 grid */}
-            <div className="hidden md:grid md:grid-cols-3 gap-5">
+            <div className="grid gap-5 md:grid-cols-3">
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-start gap-3 mb-3">
-                  <Zap className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <h3 className="text-lg font-semibold leading-tight">Quick Wins Start Week One</h3>
+                  <Handshake className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
+                  <h3 className="text-lg font-semibold leading-tight">Strategic partnership</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends.
+                  Deep integration means we understand your business as well as you do. That allows us to provide thoughtful guidance that fits your reality and drives the right priorities.
                 </p>
               </Card>
 
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-start gap-3 mb-3">
                   <UserCog className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <h3 className="text-lg font-semibold leading-tight">2-3 Clients Per Quarter</h3>
+                  <h3 className="text-lg font-semibold leading-tight">Senior leadership only</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Direct founder involvement on every engagement. When strategy needs deep understanding, scale kills quality.
-                </p>
-              </Card>
-
-              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                <div className="flex items-start gap-3 mb-3">
-                  <Gift className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <h3 className="text-lg font-semibold leading-tight">Built to Transfer</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our success metric is you running this without us. Custom systems, clear documentation, training built in. Optional support after, not dependency.
+                  You work directly with senior strategists who own your strategy, without the overhead. That keeps the work focused, accountable, and aligned with your leadership team.
                 </p>
               </Card>
 
               <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg hover:-translate-y-0.5 transition-all">
                 <div className="flex items-start gap-3 mb-3">
                   <Puzzle className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <h3 className="text-lg font-semibold leading-tight">Strategy for Your Reality</h3>
+                  <h3 className="text-lg font-semibold leading-tight">Custom growth frameworks</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Templated frameworks fail because they ignore what makes you different. We map your position, capacity, and dynamics—then design strategy that fits.
+                  Every business is different, so we build strategies that fit your specific situation. The result is a custom framework designed around your goals, not a one-size-fits-all playbook.
                 </p>
               </Card>
-
-              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                <div className="flex items-start gap-3 mb-3">
-                  <Database className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <h3 className="text-lg font-semibold leading-tight">Data Before Assumptions</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  If your data is fragmented or missing, we fix that first. Clear visibility into what's working before we recommend what to change.
-                </p>
-              </Card>
-
-              <Card className="p-6 border-l-4 border-l-primary hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                <div className="flex items-start gap-3 mb-3">
-                  <Handshake className="h-6 w-6 text-primary shrink-0 mt-0.5" aria-hidden="true" />
-                  <h3 className="text-lg font-semibold leading-tight">Handoff That Fits You</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Running lean, working with an agency, or building internal—we design handoff for your situation. Complete documentation, clear processes.
-                </p>
-              </Card>
-            </div>
-
-            {/* Mobile: Optimized accordion */}
-            <div className="md:hidden">
-              <Accordion
-                type="multiple"
-                defaultValue={["item-0", "item-1"]}
-                className="w-full space-y-2"
-              >
-                <AccordionItem value="item-0" className="border-l-4 border-l-primary rounded-lg border bg-card">
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
-                      <div className="mt-0.5 shrink-0">
-                        <Zap className="h-6 w-6 text-primary" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-foreground leading-snug">
-                          Quick Wins Start Week One
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      We start executing week one, not month three. While building your strategic foundation, you'll see immediate improvements that impact your pipeline before the sprint ends.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-1" className="border-l-4 border-l-primary rounded-lg border bg-card">
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
-                      <div className="mt-0.5 shrink-0">
-                        <UserCog className="h-6 w-6 text-primary" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-primary leading-snug">
-                          2-3 Clients Per Quarter
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-primary leading-relaxed">
-                      Direct founder involvement on every engagement. When strategy needs deep understanding, scale kills quality.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2" className="border-l-4 border-l-primary rounded-lg border bg-card">
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
-                      <div className="mt-0.5 shrink-0">
-                        <Gift className="h-6 w-6 text-primary" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-primary leading-snug">
-                          Built to Transfer
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-primary leading-relaxed">
-                      Our success metric is you running this without us. Custom systems, clear documentation, training built in. Optional support after, not dependency.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3" className="border-l-4 border-l-primary rounded-lg border bg-card">
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
-                      <div className="mt-0.5 shrink-0">
-                        <Puzzle className="h-6 w-6 text-primary" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-primary leading-snug">
-                          Strategy for Your Reality
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-primary leading-relaxed">
-                      Templated frameworks fail because they ignore what makes you different. We map your position, capacity, and dynamics—then design strategy that fits.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4" className="border-l-4 border-l-primary rounded-lg border bg-card">
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
-                      <div className="mt-0.5 shrink-0">
-                        <Database className="h-6 w-6 text-primary" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-primary leading-snug">
-                          Data Before Assumptions
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-primary leading-relaxed">
-                      If your data is fragmented or missing, we fix that first. Clear visibility into what's working before we recommend what to change.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5" className="border-l-4 border-l-primary rounded-lg border bg-card">
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline [&>svg:last-child]:shrink-0 [&>svg:last-child]:ml-2">
-                    <div className="flex items-start gap-3 flex-1 min-h-[44px]">
-                      <div className="mt-0.5 shrink-0">
-                        <Handshake className="h-6 w-6 text-primary" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-base font-semibold text-primary leading-snug">
-                          Handoff That Fits You
-                        </h3>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4 pl-[52px]">
-                    <p className="text-sm text-primary leading-relaxed">
-                      Running lean, working with an agency, or building internal—we design handoff for your situation. Complete documentation, clear processes.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
             </div>
           </div>
         </MarketingSection>
@@ -451,17 +280,17 @@ export default function HomePage() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="text-center mb-8">
               <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-                Pattern Growth vs. Traditional Alternatives
+                How Pattern Growth compares
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-                Hiring or traditional outsourcing?
+                A senior partner,
                 <br />
-                <span className="italic">Neither.</span>
+                <span className="italic">not another vendor.</span>
               </h2>
             </div>
             
             <ComparisonTable
-              columns={["Cost", "Speed", "Strategy", "Customization", "Independence"]}
+              columns={["Strategy", "Customization", "Speed", "Independence", "Cost"]}
               rows={[
                 {
                   label: "Pattern Growth",
@@ -547,8 +376,8 @@ export default function HomePage() {
                   </span>
                 </summary>
                 <div className="mt-4 space-y-3 text-muted-foreground leading-relaxed max-w-prose">
-                  <p>We're project-based, not retainer-based. Think of us as the construction crew that builds the house; a fractional CMO is the property manager who runs it afterward.</p>
-                  <p>You get complete ownership of deliverables in 8 weeks instead of paying monthly for ongoing advisory. If you need strategic guidance long-term, hire a CMO. If you need infrastructure built once and owned forever—with optional support if you want it—that's us.</p>
+                  <p>You work directly with senior strategists who embed in your business and treat it like their own—no junior teams, no vendor distance. We learn your market and goals deeply, then build a custom growth strategy your team owns.</p>
+                  <p>It's a true partnership built on trust and fit, scoped to exactly what your business needs—so you're never paying for things you don't.</p>
                   <p><Link href="/sprint-vs-fractional-cmo" className="text-primary hover:underline">Read our detailed comparison</Link>.</p>
                 </div>
               </details>

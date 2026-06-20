@@ -414,15 +414,15 @@ They need **strategic architecture built once and owned completely**:
 - Systems their team can run
 
 **The math**:
-- Strategy sprint: $9,500 one-time
+- Strategy sprint: custom-scoped to your needs
 - Fractional CMO: $60K-$120K (6-12 months)
 - Marketing agency: $60K-$144K (6-12 months)
 
-**Potential savings**: $50K-$134K while owning all systems completely.
+**The savings can be substantial** while owning all systems completely.
 
 **Best for**:
 - Teams that can execute with clear direction
-- Companies that want ownership, not dependency
+- Companies that want to own their strategy
 - Businesses needing clarity in under 3 months
 
 [Compare strategy sprint vs fractional CMO →](/sprint-vs-fractional-cmo)
@@ -447,9 +447,9 @@ We document the gap between current state and desired state, then prioritize bas
 
 ### Action: Build the Bridge
 
-We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—your team can run it with confidence, with a senior partner available whenever you want support, and no knowledge transfer gaps.
 
-**The result**: After 8 weeks, you have complete strategic architecture that's yours forever. You can execute independently or bring in an agency for specific channels. The choice is yours.
+**The result**: After 8 weeks, you have complete strategic architecture that's yours forever. Your team can run it with confidence or bring in an agency for specific channels—the choice is yours, with a senior partner available whenever you want support.
 
 **Best for**: Companies that need strategic clarity fast and want to own everything completely.
 
@@ -595,7 +595,7 @@ Red flag: Vague scope or "everything's included" (until it isn't)
 
 **Best fit**: Strategy sprint (one-time architecture)
 **Why**: Team can execute with clear frameworks
-**Budget**: $9,500-$25K one-time
+**Budget**: Custom-scoped to your needs
 
 ### Situation 4: Strong team, need ongoing strategic leadership
 
@@ -678,7 +678,7 @@ Before you sign with a fractional CMO or agency, confirm:
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get honest guidance on what you actually need—fractional CMO, agency, or strategic architecture:**
 [Download the comparison calculator](/lead-magnets/fractional-cmo-cost-calculator) or [book a 15-min call](https://cal.com/pattern-growth/30min).

@@ -149,7 +149,7 @@ The next step is a 30-minute assessment call to discuss your specific challenges
 
 ### How long does it take to see results from a strategy sprint?
 
-Strategy sprints deliver strategic architecture in 8 weeks. Initial improvements in strategic clarity and team alignment happen immediately. Measurable business impact typically shows within 90-120 days as the strategic framework takes effect and teams execute independently.
+Strategy sprints deliver strategic architecture in 8 weeks. Initial improvements in strategic clarity and team alignment happen immediately. Measurable business impact typically shows within 90-120 days as the strategic framework takes effect and teams run it with confidence.
 
 ### What's the difference between strategy sprint and traditional marketing consulting?
 

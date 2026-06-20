@@ -11,19 +11,19 @@ import { createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'What is a Fractional CMO? Definition & Alternatives',
-  description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.',
-  keywords: ['what is fractional cmo', 'fractional cmo definition', 'fractional cmo meaning', 'fractional chief marketing officer', 'fractional cmo services', 'fractional cmo cost', 'fractional cmo alternative', 'part-time cmo', 'fractional cmo vs full-time', 'fractional marketing leadership'],
+  description: 'What is a Fractional CMO? A part-time marketing exec on retainer. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.',
+  keywords: ['what is fractional cmo', 'fractional cmo definition', 'fractional cmo meaning', 'fractional chief marketing officer', 'fractional cmo services', 'fractional cmo cost', 'senior growth partner', 'part-time cmo', 'fractional cmo vs full-time', 'fractional marketing leadership'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/what-is-fractional-cmo',
     title: 'What is a Fractional CMO? Definition & Alternatives',
-    description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.',
+    description: 'What is a Fractional CMO? A part-time marketing exec on retainer. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'What is a Fractional CMO? Definition & Alternatives',
-    description: 'What is a Fractional CMO? Part-time marketing exec on retainer. See why project-based sprints deliver faster results with full ownership.'
+    description: 'What is a Fractional CMO? A part-time marketing exec on retainer. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/what-is-fractional-cmo'
@@ -41,7 +41,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "8-Week Growth Strategy Sprint",
-  "description": "Complete marketing strategy and infrastructure delivered in 8 weeks. Project-based alternative to fractional CMO retainers with full ownership transfer.",
+  "description": "A senior-led, embedded growth strategy engagement. We learn your business deeply and build a complete, custom marketing strategy your team owns.",
   "provider": {
     "@type": "Organization",
     "name": "Pattern Growth",
@@ -51,10 +51,7 @@ const serviceSchema = {
   "areaServed": "Worldwide",
   "offers": {
     "@type": "Offer",
-    "price": "9500",
-    "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "priceValidUntil": "2026-12-31",
     "url": "https://www.patterngrowth.com/process"
   },
   "hasOfferCatalog": {
@@ -93,7 +90,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What is a Fractional CMO? Definition & Alternatives",
-  "description": "Complete guide to fractional CMO services, costs, and alternatives for growth-stage companies. Compare traditional retainers vs project-based strategy sprints.",
+  "description": "Complete guide to fractional CMO services and costs for growth-stage companies. Compare traditional retainers with a senior-led, embedded growth strategy partnership.",
   "author": {
     "@type": "Organization",
     "name": "Pattern Growth"
@@ -120,7 +117,7 @@ const articleSchema = {
     {
       "@type": "Thing",
       "name": "Growth Strategy Sprint",
-      "description": "8-week project-based marketing consulting alternative"
+      "description": "Senior-led, embedded growth strategy engagement that builds a custom strategy your team owns"
     }
   ]
 }
@@ -237,7 +234,7 @@ export default function WhatIsFractionalCMO() {
 
             <div className="bg-accent/50 border border-border rounded-lg p-6 mb-12">
               <p className="text-foreground font-medium mb-2">
-                <strong>TL;DR:</strong> Fractional CMOs offer executive expertise without full-time costs, but they create ongoing dependency. Growth strategy sprints deliver the same strategic value in 8 weeks—then you own everything and run it yourself.
+                <strong>TL;DR:</strong> A fractional CMO offers part-time executive expertise across several companies. Pattern Growth takes a different approach: senior partners embed in your business, learn it deeply, and build a custom strategy your team owns—a true partnership, scoped to exactly what you need.
               </p>
             </div>
           </div>
@@ -372,7 +369,7 @@ export default function WhatIsFractionalCMO() {
             </div>
 
             <p className="text-muted-foreground">
-              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments. You&apos;re also dependent on their availability and continued relationship. <Link href="/blog/fractional-cmo-vs-strategy-sprint" className="text-primary hover:underline font-medium">Compare this to project-based alternatives</Link> that eliminate ongoing dependency.
+              <strong>Hidden costs:</strong> Most <Link href="/fractional-cmo-hourly-rate" className="text-primary hover:underline font-medium">fractional CMO engagements</Link> require 6-12 month commitments, and their time is often split across several companies. <Link href="/blog/fractional-cmo-vs-strategy-sprint" className="text-primary hover:underline font-medium">Compare this to a senior-led, embedded partnership</Link> that builds a custom strategy your team owns.
             </p>
           </div>
         </section>
@@ -380,8 +377,8 @@ export default function WhatIsFractionalCMO() {
         {/* SEO Callout Box */}
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <SEOCalloutBox
-            title="Why we built a project-based alternative to fractional CMO retainers"
-            description="Most growth-stage companies don't need ongoing CMO leadership—they need strategic architecture. See why 8-week strategy sprints outperform traditional fractional models."
+            title="Why we built a senior-led, embedded growth partnership"
+            description="Many growth-stage companies want a senior partner who learns the business deeply and builds a custom strategy their team owns. See how this compares to traditional fractional models."
             href="/blog/fractional-cmo-alternative"
           />
         </div>
@@ -456,13 +453,13 @@ export default function WhatIsFractionalCMO() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-lg border border-border bg-background p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Project-Based Growth Strategy Sprint
+                  Senior-Led Growth Strategy Partner
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Fixed 8-week engagement</li>
+                  <li>• Senior partners embedded in your business</li>
                   <li>• Deliverables: positioning, measurement systems, playbooks</li>
-                  <li>• Full ownership transfers to you</li>
-                  <li>• Cost: $9,500 flat</li>
+                  <li>• Custom strategy your team owns</li>
+                  <li>• Scoped to exactly what you need</li>
                 </ul>
               </div>
               <div className="rounded-lg border border-border bg-background p-6">
@@ -515,7 +512,7 @@ export default function WhatIsFractionalCMO() {
                 Further Reading
               </h3>
               <p className="text-sm text-muted-foreground">
-                For a narrative breakdown of why Pattern Growth built project-based alternatives, read our <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline">Fractional CMO alternative perspective</Link>. It builds on the analysis here; this pillar will remain the canonical definition and comparison resource.
+                For a narrative breakdown of why Pattern Growth built a senior-led, embedded partnership, read our <Link href="/blog/fractional-cmo-alternative" className="text-primary hover:underline">perspective on the model</Link>. It builds on the analysis here; this pillar will remain the canonical definition and comparison resource.
               </p>
             </div>
           </div>
@@ -570,7 +567,7 @@ export default function WhatIsFractionalCMO() {
                   What&apos;s better than a fractional CMO?
                 </h3>
                 <p className="text-muted-foreground">
-                  For growth-stage companies who want strategic expertise without ongoing dependency, growth strategy sprints deliver the same strategic frameworks in 8 weeks. You get complete ownership of strategy documents, measurement systems, and campaign playbooks—enabling you to execute independently instead of relying on continued consulting relationships.
+                  For growth-stage companies who want a senior, trusted partner, an embedded growth strategy engagement builds your strategic frameworks in 8 weeks. You get a custom strategy, measurement systems, and campaign playbooks your team owns—so you can run them with confidence, with a partner available whenever you want support.
                 </p>
               </div>
 
@@ -671,10 +668,10 @@ export default function WhatIsFractionalCMO() {
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Ready for Strategic Marketing Without the Dependency?
+              Ready for a Senior Marketing Partner You Can Trust?
             </h2>
             <p className="text-xl opacity-90 mb-8">
-              Get CMO-level strategy delivered in 8 weeks. Own everything. Execute independently.
+              Senior partners embed in your business and build a custom strategy your team owns. Let's talk about fit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GetStartedButton className="bg-background text-foreground hover:bg-background/90" />

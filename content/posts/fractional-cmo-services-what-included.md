@@ -220,7 +220,7 @@ Fractional CMOs work 10-20 hours/month. They can't be hands-on with daily operat
 
 **Best for:**
 - Companies needing occasional strategic input
-- Teams that can execute independently
+- Teams that can run day-to-day marketing on their own
 - Businesses wanting to "test" the fractional model
 
 **What's usually NOT included:**
@@ -313,7 +313,7 @@ We document the gap between current state and desired state, then prioritize bas
 
 ### Action: Build the Bridge
 
-We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—your team can run it with confidence, with a senior partner available whenever you want support, and no knowledge transfer gaps.
 
 **What you get:**
 - Complete marketing strategy document
@@ -322,10 +322,10 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - Measurement dashboard template
 - Campaign playbooks for your top channels
 
-**After 8 weeks:** Everything a fractional CMO would create in months 1-4, but you own it completely. No monthly retainer. You can execute independently or bring in agencies for specific channels.
+**After 8 weeks:** Everything a fractional CMO would create in months 1-4, but you own it completely. Your team can run it with confidence, with a senior partner available whenever you want support—or bring in agencies for specific channels.
 
 **Compare the models:**
-- **Pattern Growth sprint**: $9,500-$12,500 one-time, complete ownership
+- **Pattern Growth sprint**: custom-scoped to your needs, complete ownership
 - **Fractional CMO (6 months)**: $60K-$72K, partial knowledge transfer
 - **Fractional CMO (12 months)**: $120K-$144K, ongoing advisory
 
@@ -472,7 +472,7 @@ If you need execution, hire an agency. If you need strategic architecture you ow
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get clarity on what services you actually need:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

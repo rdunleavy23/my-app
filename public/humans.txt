@@ -22,8 +22,8 @@ Email: hello@patterngrowth.com
 
 Service: 8-Week Growth Strategy Sprints
 Target Market: B2B Companies ($1-5M revenue)
-Approach: Project-based, not retainer-based
-Investment: Starting at $9,500
+Approach: Senior-led, embedded partnership
+Investment: Custom-scoped to your needs
 
 # SITE
 
@@ -49,4 +49,4 @@ Accessibility: Semantic HTML, ARIA labels
 
 # THANKS
 
-Built with care for B2B companies who need strategic clarity without ongoing dependency.
+Built with care for B2B companies who want a senior, trusted partner and a strategy their team owns.

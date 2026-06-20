@@ -64,7 +64,7 @@ Fractional CMOs **optimize and lead** existing strategy. They don't build strate
 
 **Total cost**: $60K-$120K over 6-12 months
 
-**The problem**: You paid fractional CMO rates ([$10K-$15K/month](https://www.entrepreneur.com/growing-a-business/a-comprehensive-guide-to-fractional-leadership/452299)) for work that should be done in a focused strategic engagement ($9,500-$25K one-time).
+**The problem**: You paid fractional CMO rates ([$10K-$15K/month](https://www.entrepreneur.com/growing-a-business/a-comprehensive-guide-to-fractional-leadership/452299)) for work that should be done in a focused, custom-scoped strategic engagement.
 
 ### What to Do Instead
 
@@ -74,7 +74,7 @@ Fractional CMOs **optimize and lead** existing strategy. They don't build strate
 3. Go-to-market frameworks
 4. Measurement infrastructure
 
-**Then decide** if you need ongoing strategic leadership or if you can execute independently.
+**Then decide** if you need ongoing strategic leadership or if your team can run it with confidence.
 
 **Better approach**: 6-8 week [strategy sprint](/sprint-vs-fractional-cmo) → reassess whether you need fractional CMO
 
@@ -127,7 +127,7 @@ Fractional CMOs don't "do" marketing. They lead people who do marketing.
 - More cost-effective than fractional CMO + agency
 - Direct execution without middle layer
 
-**Option B: Build strategic architecture, hire execution help** ($9,500 + $5K-$10K/month for contractors)
+**Option B: Build strategic architecture, hire execution help** (custom-scoped strategy + $5K-$10K/month for contractors)
 - Get strategic frameworks built once
 - Hire specialized contractors for execution
 - Much more cost-effective
@@ -175,7 +175,7 @@ If you quit at 3-4 months, you've paid for strategy development but haven't seen
 Don't stretch it over 3-6 months of fractional help. Make a one-time investment in strategic architecture that you own forever.
 
 **Better options:**
-- Strategy sprint: $9,500-$25K (complete strategic architecture)
+- Strategy sprint: custom-scoped (complete strategic architecture)
 - Marketing agency: $8K-$12K/month for 3-6 months (execution + results)
 - Specialized consultants: Project-based work on specific gaps
 - Internal hire: Junior marketer ($60K-$80K/year)
@@ -279,7 +279,7 @@ This is **intensive, focused work** that takes 20-40 hours over 2-4 weeks.
 - Complete positioning framework delivered
 - Battle-tested messaging
 
-**Or**: [Strategy sprint](/sprint-vs-fractional-cmo) that includes positioning as core component ($9,500-$15K)
+**Or**: [Strategy sprint](/sprint-vs-fractional-cmo) that includes positioning as a core component (custom-scoped to your needs)
 
 **Then**: Decide if you need fractional CMO to lead execution of that positioning
 
@@ -427,7 +427,7 @@ Notice the pattern in when NOT to hire?
 
 → [Build strategic architecture first](/sprint-vs-fractional-cmo)
 
-→ Then decide if you need fractional CMO or can execute independently
+→ Then decide if you need a fractional CMO or your team can run it with confidence
 
 ### If you have no execution capability:
 
@@ -524,7 +524,7 @@ We document the gap between current state and desired state, then prioritize bas
 
 We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything.
 
-**After 8 weeks**: Complete strategic architecture. Yours forever. No monthly retainer. No dependency.
+**After 8 weeks**: Complete strategic architecture. Yours forever. Your team runs it with confidence, with a senior partner available whenever you want support.
 
 **Best for**: Companies in situations #1-7 above who need strategic architecture, not ongoing advisory.
 
@@ -616,7 +616,7 @@ Use this checklist. If you can't check all boxes, you're not ready:
 
 **What they should have done**: Strategy sprint ($12K) → evaluate if ongoing leadership needed
 
-**If team could execute independently with frameworks**: Saved $95K
+**If the team could run it with confidence using the frameworks**: Saved $95K
 
 **Cost of wrong decision**: Potentially $95K if ongoing leadership wasn't needed
 
@@ -676,7 +676,7 @@ Most companies aren't ready. They have strategic gaps, execution gaps, budget co
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get honest guidance on whether you're ready for a fractional CMO:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

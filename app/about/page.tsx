@@ -14,10 +14,10 @@ import { ErrorBoundary } from "@/components/error-boundary"
 import { createPersonSchema, createOrganizationSchema, createBreadcrumbListSchema } from "@/lib/schemas"
 
 export const metadata: Metadata = {
-  title: "Meet Our Growth Strategists | Pattern Growth Team",
+  title: "Meet Our Senior Growth Strategists | Pattern Growth Team",
   description:
-    "Meet the growth strategists behind Pattern Growth. Ryan and William deliver executive-level strategy in focused 8-week sprints with complete ownership.",
-  keywords: ["growth strategists", "fractional CMO alternative", "growth strategy sprint", "Ryan", "William", "Pattern Growth team"],
+    "Meet the senior partners behind Pattern Growth. Ryan and William embed with your leadership and treat your business like their own, building a custom growth strategy your team owns.",
+  keywords: ["senior growth strategists", "embedded marketing partner", "custom growth strategy", "Ryan", "William", "Pattern Growth team"],
   authors: [{ name: "Pattern Growth" }],
   creator: "Pattern Growth",
   publisher: "Pattern Growth",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/about",
-    title: "Meet Our Growth Strategists | Pattern Growth Team",
+    title: "Meet Our Senior Growth Strategists | Pattern Growth Team",
     description:
-      "Meet the growth strategists behind Pattern Growth. Ryan and William deliver executive-level strategy in focused 8-week sprints with complete ownership.",
+      "Meet the senior partners behind Pattern Growth. Ryan and William embed with your leadership and treat your business like their own, building a custom growth strategy your team owns.",
     siteName: "Pattern Growth",
     images: [
       {
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Team: Two Growth Strategists | Pattern Growth",
+    title: "Our Team: Two Senior Growth Strategists | Pattern Growth",
     description:
-      "Meet Ryan & William: two experienced growth strategists who have built their careers scaling companies. We translate C-suite vision into executable strategy.",
+      "Meet Ryan & William: two senior strategists who embed with your leadership, learn your business deeply, and build a custom growth strategy your team owns.",
     images: ["https://www.patterngrowth.com/team/ryan.png"],
   },
   robots: { index: true, follow: true },
@@ -74,7 +74,7 @@ export default function AboutPage() {
 
   const organizationSchema = createOrganizationSchema({
     name: "Pattern Growth",
-    description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
+    description: "A senior-led growth strategy partner. We embed with your leadership, learn your business deeply, and build a custom marketing strategy your team owns.",
     url: "https://www.patterngrowth.com",
     sameAs: ["https://www.patterngrowth.com"]
   });
@@ -106,14 +106,14 @@ export default function AboutPage() {
       description: "We build custom frameworks you can execute, not theoretical plans that sit in a drawer."
     },
     {
-      icon: Zap,
-      title: "We Work Fast", 
-      description: "8 weeks to deliver what others take 6 months to plan. We work fast because you need results now, not next quarter."
+      icon: Users,
+      title: "Embedded, Senior, and Trusted", 
+      description: "You work directly with senior partners who learn your business until we think like you do—an extension of your leadership, not an outside vendor."
     },
     {
-      icon: Users,
-      title: "You Own Everything",
-      description: "You own the strategy, measurement systems, and playbooks. No dependency required—though we're available if you want support."
+      icon: Zap,
+      title: "Built Around You",
+      description: "Every engagement is scoped to what your business actually needs, and the custom strategy, systems, and playbooks we build are yours to keep."
     }
   ]
 
@@ -122,7 +122,7 @@ export default function AboutPage() {
     "@type": "Organization",
     name: "Pattern Growth",
     url: "https://www.patterngrowth.com",
-    description: "Growth strategy sprints and fractional CMO alternative for growth-stage companies",
+    description: "Senior-led, embedded growth strategy partner for growth-stage companies",
     founder: team.map(member => ({
       "@type": "Person",
       name: member.name,
@@ -179,7 +179,7 @@ export default function AboutPage() {
             <div className="w-20 h-px bg-primary mx-auto" />
             
             <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-              Unlike fractional CMOs juggling multiple clients or agencies pushing pre-packaged solutions, we commit our full attention to one thing: understanding your business deeply enough to chart the right path forward.
+              We're two senior partners who embed in your business and treat it like our own. We commit our full attention to one thing: understanding your company deeply enough to build the strategy that fits your reality and earns your trust.
             </p>
           </div>
         </div>
@@ -280,10 +280,10 @@ export default function AboutPage() {
               
               <div className="space-y-4 text-secondary-foreground leading-relaxed">
                 <p className="text-base sm:text-lg">
-                  We built Pattern Growth as the alternative to the CMO-for-hire model and the agency treadmill.
+                  We built Pattern Growth for leaders who want a trusted partner—someone senior who learns the business deeply and treats it like their own.
                 </p>
                 <p className="text-base sm:text-lg">
-                  We saw too many growth-stage companies stuck between expensive fractional CMOs and cookie-cutter agency work.
+                  We saw too many growth-stage companies handed junior teams and pre-packaged playbooks, when what they needed was real strategic partnership and senior judgment they could rely on.
                 </p>
                 <p className="text-base sm:text-lg">
                   The name comes from what we kept seeing: the companies that win at growth marketing aren't doing wildly different things industry to industry. They're running the same patterns—just adapted to their context. Once you see it, you can't unsee it.

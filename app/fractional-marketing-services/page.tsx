@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 const serviceSchema = createServiceSchema({
   name: "Fractional Marketing Services Analysis",
-  description: "Comprehensive analysis of fractional marketing services, pricing, and comparison with project-based alternatives for companies needing strategic and tactical marketing support.",
+  description: "A clear analysis of fractional marketing services and pricing, and how a senior-led, embedded growth strategy partnership compares for companies needing strategic marketing support.",
   url: "https://www.patterngrowth.com/fractional-marketing-services",
   provider: "Pattern Growth"
 });
@@ -265,24 +265,24 @@ export default function FractionalMarketingServicesPage() {
             </div>
 
             <div className="bg-muted p-6 rounded-lg border-l-4 border-border">
-              <h3 className="font-semibold text-foreground mb-4">Consider alternatives if:</h3>
+              <h3 className="font-semibold text-foreground mb-4">Consider a senior partnership if:</h3>
               <ul className="space-y-2 text-foreground text-sm">
-                <li>• You have strong execution team, need strategy</li>
-                <li>• You want to own systems, not rent them</li>
-                <li>• Budget doesn't support ongoing retainers</li>
-                <li>• You need working infrastructure in 6-8 weeks</li>
-                <li>• Team independence is priority</li>
-                <li>• You prefer fixed-fee projects to monthly costs</li>
+                <li>• You have a strong execution team and need strategy</li>
+                <li>• You want a custom strategy your team owns</li>
+                <li>• You want a senior, embedded partner—not a vendor</li>
+                <li>• You need a working foundation in 6-8 weeks</li>
+                <li>• Deep understanding of your business matters</li>
+                <li>• You want an engagement scoped to your needs</li>
               </ul>
             </div>
           </div>
         </section>
 
         <section className="mb-16 bg-primary/10 border-2 border-primary p-8 rounded-lg">
-          <h2 className="text-3xl font-bold text-foreground mb-6">The Project-Based Alternative</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-6">The Pattern Growth Partnership</h2>
           
           <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Fractional marketing services solve the resource problem but create dependency. You're renting a marketing function that disappears when contracts end. What if you could get the strategic architecture to run marketing independently?
+            Fractional marketing services solve the resource problem, but they often work at a distance. Pattern Growth takes a different approach: senior partners embed in your business, learn it deeply, and build a custom strategy your team owns—so the value stays with you.
           </p>
 
           <div className="bg-background p-6 rounded-lg mb-6">
@@ -300,14 +300,14 @@ export default function FractionalMarketingServicesPage() {
               </div>
               
               <div className="bg-primary/10 p-4 rounded">
-                <h3 className="font-semibold text-foreground mb-3">Growth Strategy Sprint</h3>
+                <h3 className="font-semibold text-foreground mb-3">Pattern Growth Partnership</h3>
                 <ul className="space-y-2 text-foreground text-sm">
-                  <li>• $9,500 one-time project</li>
+                  <li>• Custom-scoped to your needs</li>
                   <li>• 8 weeks to complete</li>
-                  <li>• Strategic architecture delivered</li>
-                  <li>• You execute independently</li>
-                  <li>• You own all systems forever</li>
-                  <li>• Continues after handoff</li>
+                  <li>• Senior partners, deeply embedded</li>
+                  <li>• A custom strategy your team owns</li>
+                  <li>• Systems that stay with you</li>
+                  <li>• A partner you can call on</li>
                 </ul>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function FractionalMarketingServicesPage() {
 
           <div className="space-y-4">
             <p className="text-lg text-foreground">
-              Same strategic value. Faster delivery. Complete ownership. No ongoing dependency.
+              Senior expertise. Deep understanding. A custom strategy your team owns—and a partner you can call on.
             </p>
             <GetStartedButton />
             <Link 

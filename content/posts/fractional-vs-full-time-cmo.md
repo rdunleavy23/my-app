@@ -285,7 +285,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 
 | Factor | Strategy Sprint | Fractional CMO | Full-Time CMO |
 |--------|----------------|----------------|---------------|
-| **Total cost** | $9.5K-$12.5K one-time | $130K-$185K/year | $470K-$676K+/year |
+| **Total cost** | Custom-scoped one-time | $130K-$185K/year | $470K-$676K+/year |
 | **Timeline** | 8 weeks | 6-12 months minimum | Permanent hire |
 | **Ownership** | 100% yours forever | Partial transfer | Stays with employee |
 | **Best for revenue** | $1M-$25M | $2M-$50M | $50M+ |
@@ -444,8 +444,8 @@ Let's model a $20M revenue B2B SaaS company:
 **Choose strategy sprint when:**
 - Revenue $1M-$25M
 - Need strategic architecture built once
-- Budget $9.5K-$12.5K one-time
-- Want complete ownership, no dependency
+- Want a custom-scoped engagement rather than ongoing retainers
+- Want complete ownership of your strategy, with a senior partner available whenever you want support
 
 The transition point for most companies: $25M-$50M revenue, 8-10 person team, marketing complexity exceeding 20 hours/week executive attention.
 
@@ -471,7 +471,7 @@ The transition point for most companies: $25M-$50M revenue, 8-10 person team, ma
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. Built for companies that need strategic clarity without the ongoing cost of fractional or full-time executives. Complete ownership, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build CMO-level strategic architecture your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get clarity on your marketing leadership needs:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

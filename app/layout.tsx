@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.patterngrowth.com"),
   applicationName: "Pattern Growth",
   title: {
-    default: "Pattern Growth | 8-Week Growth Strategy Sprints",
+    default: "Pattern Growth | Senior-Led Growth Strategy Partner",
     template: "%s | Pattern Growth",
   },
-  description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
+  description: "Pattern Growth is a senior-led growth strategy partner. We embed with your leadership, learn your business deeply, and build a custom marketing strategy your team owns — premium expertise without the overhead of a full-time hire.",
   // NOTE: Do NOT set canonical here - each page defines its own canonical
   // Setting a layout-level canonical overrides page-level canonicals in Next.js
   openGraph: {
@@ -43,12 +43,12 @@ export const metadata: Metadata = {
     url: "https://www.patterngrowth.com/",
     siteName: "Pattern Growth",
     title: "Pattern Growth",
-    description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
+    description: "A senior-led growth strategy partner that embeds with your leadership to build a custom marketing strategy your team owns — premium expertise without the overhead of a full-time hire.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Pattern Growth",
-    description: "8-week growth strategy sprints for $1-5M companies. Project-based alternative to fractional CMO retainers delivering complete marketing infrastructure with full ownership transfer.",
+    description: "A senior-led growth strategy partner that embeds with your leadership to build a custom marketing strategy your team owns — premium expertise without the overhead of a full-time hire.",
   },
   robots: { index: true, follow: true },
   icons: {
@@ -133,7 +133,7 @@ export default function RootLayout({
               "@type": "Organization",
               "@id": "https://www.patterngrowth.com/#organization",
               name: "Pattern Growth",
-              description: "Growth strategy sprints for $1-5M companies. We build your marketing strategy from scratch in 8 weeks with complete ownership transfer.",
+              description: "A senior-led growth strategy partner. We embed with your leadership and treat your company like our own, building a custom marketing strategy your team owns — premium expertise without the overhead of a full-time hire.",
               url: "https://www.patterngrowth.com",
               logo: "https://www.patterngrowth.com/patterngrowth-android-chrome-512x512.png",
               sameAs: [

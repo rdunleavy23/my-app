@@ -12,21 +12,21 @@ import { MarketingSection } from "@/components/marketing/MarketingSection"
 export const metadata: Metadata = {
   title: "Growth Strategy Insights | Pattern Growth Blog",
   description:
-    "Growth strategy insights for scaling companies. Practical guides on fractional CMO alternatives, marketing ops, and building without overhead.",
+    "Growth strategy insights for scaling companies. Practical guides on marketing strategy, marketing ops, and building a foundation your team owns.",
   alternates: { canonical: "https://www.patterngrowth.com/blog" },
   openGraph: {
     type: "website",
     url: "https://www.patterngrowth.com/blog",
     title: "Growth Strategy Insights | Pattern Growth Blog",
     description:
-      "Growth strategy insights for scaling companies. Practical guides on fractional CMO alternatives, marketing ops, and building without overhead.",
+      "Growth strategy insights for scaling companies. Practical guides on marketing strategy, marketing ops, and building a foundation your team owns.",
     siteName: "Pattern Growth",
   },
   twitter: {
     card: "summary_large_image",
     title: "Growth Strategy Insights | Pattern Growth Blog",
     description:
-      "Growth strategy insights for scaling companies. Practical guides on fractional CMO alternatives, marketing ops, and building without overhead.",
+      "Growth strategy insights for scaling companies. Practical guides on marketing strategy, marketing ops, and building a foundation your team owns.",
   },
   robots: { index: true, follow: true },
 }
@@ -202,7 +202,7 @@ export default function BlogPage() {
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Ready to Scale Your Growth Strategy?</h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Get CMO-level strategy delivered in 8 weeks. No retainers, no dependency. You own the strategy, measurement systems, and playbooks.
+              Work with senior partners who embed in your business and build a custom strategy your team owns—the strategy, measurement systems, and playbooks, scoped to exactly what you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GetStartedButton className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold btn-hover-lift sm:min-w-[200px]" size="lg" location="content">

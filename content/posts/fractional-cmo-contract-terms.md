@@ -242,7 +242,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 - **Term**: 8 weeks (no long-term lock-in)
 - **Exit**: N/A (project completes in 8 weeks)
 - **IP**: Everything delivered is yours forever
-- **Price**: Fixed ($9,500-$12,500), no monthly retainer uncertainty
+- **Price**: Custom-scoped to exactly what you need
 
 [See how the 3 A's Framework works →](/process)
 
@@ -464,7 +464,7 @@ Don't sign until the terms are right.
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No complex contracts, no ongoing retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get clarity before you sign:**
 [Download our checklist](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

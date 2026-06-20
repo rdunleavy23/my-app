@@ -210,7 +210,7 @@ When you set a clear goal ("Launch this campaign by Friday"), do you:
 - Unified messaging framework
 - Campaign playbooks
 
-**The outcome**: After 6 months and $72K, they had great strategic docs... that their team could have executed with an 8-week strategy engagement for $9,500.
+**The outcome**: After 6 months and $72K, they had great strategic docs... that their team could have run with confidence after a custom-scoped 8-week strategy engagement.
 
 **The lesson**: Don't pay for ongoing operational oversight when you just need strategic architecture.
 
@@ -327,8 +327,8 @@ Most companies don't ask this question until it's too late.
 **Model 1: You Own It** (strategy sprint, consultant deliverables)
 - ✅ Complete ownership transfer
 - ✅ Documentation, playbooks, systems are yours
-- ✅ No ongoing dependency
-- ❌ You need to execute independently
+- ✅ Owned by your team, with a senior partner available whenever you want support
+- ❌ Your team handles execution (though a senior partner stays available)
 
 **Model 2: Shared Ownership** (fractional CMO, advisor)
 - ⚠️ Strategy lives partially in their head
@@ -346,7 +346,7 @@ Most companies don't ask this question until it's too late.
 
 Do you have:
 - Complete documentation of strategic frameworks?
-- Playbooks you can run independently?
+- Playbooks your team can run with confidence?
 - Access to dashboards and systems?
 - Training on how to maintain and evolve the strategy?
 
@@ -414,7 +414,7 @@ Add up how many of each you have:
 - Campaign playbooks
 - Complete ownership transfer
 
-**Best fit**: 6-10 week strategy sprint ($9,500-25K one-time)
+**Best fit**: 6-10 week strategy sprint (custom-scoped to your needs)
 
 **Not a fit**: Fractional CMO (you don't need ongoing operational oversight)
 
@@ -506,7 +506,7 @@ Takes 10 minutes. Might save you $50K and 6 months.
 - Month 7-12: Ongoing optimization (didn't need executive oversight)
 - **Total cost**: $144K over 12 months
 
-**What they actually needed**: Strategic architecture ($15K strategy sprint)
+**What they actually needed**: Strategic architecture (a custom-scoped strategy sprint)
 
 **Cost of getting it wrong**: $129K and 12 months
 
@@ -523,18 +523,18 @@ Takes 10 minutes. Might save you $50K and 6 months.
 - But had strong execution team
 - Needed architecture, not ongoing oversight
 
-**What they hired**: 8-week strategy sprint ($9,500)
+**What they hired**: 8-week strategy sprint (custom-scoped to their needs)
 
 **The outcome**:
 - Week 1-2: ICP and positioning framework
 - Week 3-5: Measurement systems and dashboard
 - Week 6-7: Campaign playbooks
 - Week 8: Complete ownership transfer
-- Their team executed independently after
+- Their team ran it with confidence after, with a senior partner available whenever they wanted support
 
-**Total cost**: $9,500
+**Total cost**: Custom-scoped to their needs
 
-**Result**: Same strategic clarity in 8 weeks vs. 4 months, saved $134K
+**Result**: Same strategic clarity in 8 weeks vs. 4 months, at a fraction of the cost
 
 ---
 
@@ -574,13 +574,13 @@ These 8 questions help you diagnose the actual problem—so you can hire the rig
 
 **Key insight**: The best marketing help isn't the most expensive. It's the type that matches your specific bottleneck.
 
-Sometimes that's a $9,500 strategy sprint. Sometimes that's a $150K fractional CMO. Sometimes it's a $5K/month agency.
+Sometimes that's a custom-scoped strategy sprint. Sometimes that's a $150K fractional CMO. Sometimes it's a $5K/month agency.
 
 **The only wrong answer is hiring before you diagnose.**
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Ready to diagnose what you actually need?**
 [Download our complete 15-question diagnostic](/lead-magnets/growth-diagnostic) or [schedule a 15-min call](https://cal.com/pattern-growth/30min).

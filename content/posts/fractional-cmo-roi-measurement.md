@@ -486,7 +486,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 
 | Factor | Strategy Sprint | Fractional CMO (12 months) |
 |--------|----------------|---------------------------|
-| **Total investment** | $9,500-$12,500 | $144K-$180K |
+| **Total investment** | Custom-scoped | $144K-$180K |
 | **ROI timeline** | Immediate (own forever) | 6-12 months |
 | **Ongoing cost** | $0 | $12K-$15K/month |
 | **ROI calculation** | Simple (one-time investment) | Complex (ongoing cost) |
@@ -581,7 +581,7 @@ Set clear ROI expectations upfront. Measure what matters. Give it 6-12 months to
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. One-time investment, complete ownership, measure ROI as long as you want. No ongoing retainers, no complex ROI tracking across 12 months.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build CMO-level strategic architecture your team owns completely and can measure as long as you want—then a senior partner stays available whenever you want support.*
 
 **Get clarity on expected ROI:**
 [Download calculator](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

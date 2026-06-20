@@ -539,7 +539,7 @@ Cultural misalignment creates:
 
 Many fractional CMO mistakes stem from misaligned expectations and ongoing dependencies.
 
-Our 8-week strategy sprints follow the **3 A's Framework**—complete strategic architecture built once, owned forever, no ongoing relationship to mismanage.
+Our 8-week strategy sprints follow the **3 A's Framework**—complete strategic architecture built once, owned by your team, with a senior partner available whenever you want support.
 
 ### Analyze: Understand Where You Are
 
@@ -549,7 +549,7 @@ We start by analyzing your current state using diagnostic questions and industry
 
 **Mistakes avoided:**
 - Clear goals defined upfront
-- No ongoing engagement to drift
+- Focused 8-week scope, no drift
 - Cultural fit less critical (8-week project)
 
 ### Aspire: Define Where You Want to Go
@@ -566,9 +566,9 @@ Based on your past experience, current circumstances, and future goals, we work 
 We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything.
 
 **Mistakes avoided:**
-- Execution by you (no dependency)
-- Complete ownership (no ongoing fees)
-- Fixed scope and timeline (no scope creep)
+- Execution by your team, run with confidence
+- Complete ownership (your team owns the strategy)
+- Defined scope and timeline (no scope creep)
 
 **Compare mistake risk:**
 
@@ -649,7 +649,7 @@ Before hiring fractional CMO, verify:
 
 → [Take the readiness diagnostic](/lead-magnets/growth-diagnostic)
 
-**Want alternative to fractional CMO with less mistake risk?**
+**Want a senior-led growth partner instead of a fractional CMO hire?**
 
 → [See strategy sprint comparison](/sprint-vs-fractional-cmo)
 
@@ -659,7 +659,7 @@ Before hiring fractional CMO, verify:
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. Fixed scope, clear deliverables, complete ownership. Avoid the 9 mistakes that kill fractional CMO engagements.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Assess your readiness:**
 [Download diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

@@ -1,7 +1,7 @@
 # Pattern Growth - Growth Strategy Sprints for $1-5M Companies
 
 ## Company Overview
-Pattern Growth provides 8-week growth strategy sprints for B2B companies between $1-5M in revenue. We deliver complete marketing infrastructure, strategic frameworks, and team training with full ownership transfer. Unlike fractional CMO retainers, we focus on building systems your team can run independently.
+Pattern Growth is a senior-led growth strategy partner for B2B companies between $1-5M in revenue. We embed with your leadership, learn your business deeply, and build a custom marketing strategy, infrastructure, and team training your team owns. You work directly with senior partners who treat your business like their own—premium expertise without the overhead of a full-time hire.
 
 ## Core Services
 - **8-Week Growth Strategy Sprints**: Complete strategic architecture delivered in 8 weeks
@@ -11,11 +11,12 @@ Pattern Growth provides 8-week growth strategy sprints for B2B companies between
 - **Competitive Positioning**: Clear market positioning and ideal customer definition
 
 ## Key Differentiators
-- **Project-based (not retainer-based)**: Fixed scope, complete ownership transfer
+- **Senior partners only**: You work directly with senior strategists, never handed off to junior teams
+- **Deeply embedded**: We learn your business until we think like you do, then build strategy that fits your reality
 - **Data-driven approach**: Strategy built from actual company data, not templates
-- **Team capability focus**: Designed for your actual team constraints and skills
-- **Immediate execution**: Quick wins start week one, strategic foundation builds simultaneously
-- **Complete independence**: No ongoing dependency after 8-week engagement
+- **A strategy your team owns**: Everything we build becomes yours to keep and run with confidence
+- **Custom-scoped**: Engagements are scoped to exactly what your business needs, so you don't pay for things you don't
+- **A lasting partnership**: We stay available as a trusted partner whenever you want us
 
 ## Target Audience
 - **Company Stage**: $1-5M revenue B2B companies
@@ -30,7 +31,7 @@ Pattern Growth provides 8-week growth strategy sprints for B2B companies between
 - **Blog**: https://www.patterngrowth.com/blog - Growth strategy insights and case studies
 
 ## Service Pages
-- **What is Fractional CMO**: https://www.patterngrowth.com/what-is-fractional-cmo - Alternative to fractional CMO retainers
+- **What is Fractional CMO**: https://www.patterngrowth.com/what-is-fractional-cmo - How a senior-led, embedded partnership compares to fractional CMO retainers
 - **Fractional CMO Hourly Rate**: https://www.patterngrowth.com/fractional-cmo-hourly-rate - Cost comparison and transparency
 - **Fractional CMO Services**: https://www.patterngrowth.com/fractional-cmo-services - Service scope and deliverables
 - **Fractional Marketing Services**: https://www.patterngrowth.com/fractional-marketing-services - Marketing operations focus
@@ -39,7 +40,7 @@ Pattern Growth provides 8-week growth strategy sprints for B2B companies between
 ## Blog Content Categories
 - **Growth Strategy Framework**: Strategic methodologies for scaling B2B companies
 - **Marketing Operations**: Dashboard development, attribution, and measurement systems
-- **Fractional CMO Alternatives**: Project-based vs retainer-based consulting models
+- **Senior Growth Partnership**: How an embedded, senior-led partnership compares to retainer models
 - **Revenue Scaling**: Building marketing systems that drive actual revenue growth
 - **Team Enablement**: Training and knowledge transfer for independent execution
 
@@ -83,7 +84,7 @@ Pattern Growth provides 8-week growth strategy sprints for B2B companies between
 ## Contact & Engagement
 - **Consultation**: 30-minute strategy assessment calls
 - **Timeline**: 1-2 week start time if capacity available
-- **Format**: Project-based, fixed scope, complete ownership transfer
+- **Format**: Senior-led, embedded partnership, custom-scoped to your needs, with a strategy your team owns
 - **Support**: 30 days post-engagement support included
 
 ## Technical Implementation
@@ -98,7 +99,7 @@ Pattern Growth provides 8-week growth strategy sprints for B2B companies between
 A: Week 1-2 covers strategic foundation including revenue model analysis, competitive positioning, ideal customer profile, and customer journey mapping. Week 3-4 builds the tactical framework with channel prioritization, campaign templates, attribution model setup, and measurement infrastructure. Week 5-6 develops operational systems including custom marketing dashboards, lead scoring processes, campaign optimization playbooks, and decision-making frameworks. Week 7-8 focuses on team enablement with process documentation, team training, agency/contractor handoff procedures, and 30-day post-engagement support.
 
 ### Q: How is this different from hiring a fractional CMO?
-A: Pattern Growth provides project-based 8-week sprints with complete ownership transfer, while fractional CMOs typically work on ongoing retainer relationships. You get the same executive-level strategy work, but with a defined end date and full independence after 8 weeks instead of ongoing monthly fees. There's no ongoing dependency—everything built during the sprint transfers to your team with full documentation and training.
+A: You work directly with senior partners who embed in your business and treat it like their own—learning your market and goals until we think like you do. Fractional CMOs typically split their time across several companies on ongoing retainers. Together we build a custom strategy and systems your team owns, and we stay available as a trusted partner whenever you want us.
 
 ### Q: What size companies is this designed for?
 A: B2B companies between $1-5M in annual revenue who have stalled growth, scattered marketing data, unclear positioning, attribution problems, or team capability gaps. The framework is industry-agnostic and works across B2B verticals where growth mechanics are similar.
@@ -110,13 +111,13 @@ A: Everything we build is yours—custom dashboards, strategic frameworks, proce
 A: Typically 1-2 weeks if capacity is available. The sprint itself is 8 weeks from kickoff to final handoff, with 30 days of post-engagement support.
 
 ### Q: What is the investment for an 8-week sprint?
-A: Starting at $9,500 for the complete 8-week engagement including all deliverables, team training, documentation, and 30-day post-engagement support. This is project-based pricing with a defined scope and complete ownership transfer.
+A: Every engagement is custom-scoped to exactly what your business needs—so you're never paying for things you don't. Pricing is discussed on a fit call and includes all deliverables, team training, documentation, and 30-day post-engagement support, with a custom strategy your team owns.
 
 ### Q: What are common challenges this addresses?
 A: Data fragmentation across multiple systems, unclear market positioning, tactical execution without strategic direction, attribution blindness preventing ROI measurement, and team capability gaps that prevent independent execution. We build unified systems that solve these problems and enable your team to execute independently.
 
 ### Q: What happens after the 8 weeks?
-A: You own everything and run it independently. The 30-day post-engagement support period helps your team transition smoothly. Unlike fractional CMO retainers, there's no ongoing monthly commitment—you have complete independence and all the systems needed to execute your growth strategy.
+A: Your team owns the strategy and systems we build together and can run them with confidence. The 30-day post-engagement support period helps your team transition smoothly, and we stay available as a trusted partner whenever you want us—scoped to exactly what you need.
 
 ### Q: Who typically engages Pattern Growth?
-A: CEOs, founders, VPs of Marketing, and growth leaders at B2B companies ($1-5M revenue) who need executive-level marketing strategy but can't justify a $250K full-time CMO hire and want more than an ongoing fractional consultant relationship.
+A: CEOs, founders, VPs of Marketing, and growth leaders at B2B companies ($1-5M revenue) who want a senior, trusted partner for their marketing—someone who learns the business deeply and builds a strategy the team owns—without the overhead of a full-time hire.

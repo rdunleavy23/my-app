@@ -253,8 +253,8 @@ export function createComparisonPageSchema(title: string, description: string, u
     about: [
       {
         "@type": "Service",
-        name: "Strategy Sprint",
-        description: "8-week growth strategy sprint delivering complete strategic architecture"
+        name: "Pattern Growth",
+        description: "Senior-led, embedded growth strategy partner that builds a custom marketing strategy your team owns"
       },
       {
         "@type": "Service",

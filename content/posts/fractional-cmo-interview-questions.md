@@ -827,14 +827,14 @@ Practical logistics and current capacity.
 
 **Why this matters:**
 
-You should own everything when they leave.
+You should own everything, and a strong partner stays available to you after the engagement.
 
 **What you're looking for:**
 
 - **Complete knowledge transfer** plan
 - **Documentation ownership**
 - **Transition support**
-- **No ongoing dependency**
+- **Ownership of the strategy, with continued access to support**
 
 **Good answer:**
 
@@ -846,7 +846,7 @@ You should own everything when they leave.
 - Vendor introductions and relationship transfer
 - Access to all strategic files and frameworks
 
-You own everything. No ongoing dependency. My goal is to make you increasingly independent, not dependent. You can re-engage in the future if needed, but you're not stuck without me."
+You own everything—strategic documents, playbooks, dashboards. My goal is to give your team the confidence to run it, while I stay available whenever you want support. You own the strategy, and you have a partner you can call on."
 
 **Red flags:**
 
@@ -983,7 +983,7 @@ A $120K-$180K investment deserves thorough vetting.
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. Skip the interview complexity—get complete strategic frameworks you own forever. No ongoing dependency, no cultural fit concerns, no hiring risk.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, you work directly with senior partners to build complete strategic frameworks you own forever—then a senior partner stays available whenever you want support.*
 
 **Get started:**
 [Download diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

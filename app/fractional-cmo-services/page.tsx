@@ -2,6 +2,7 @@
 import type { Metadata } from "next"
 import { createServiceSchema, createWebPageSchema, createFAQSchema, createBreadcrumbListSchema } from "@/lib/schemas"
 import Breadcrumbs from "@/components/ui/breadcrumbs"
+import { GetStartedButton } from "@/components/ui/get-started-button"
 
 export const metadata: Metadata = {
   title: "Which Businesses Should Choose an 8-Week Marketing Sprint",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 export default function FractionalCMOServicesPage() {
   const serviceSchema = createServiceSchema({
     name: "Fractional CMO Services",
-    description: "Project-based growth strategy, playbooks, and KPI models—without ongoing retainers.",
+    description: "Senior-led, embedded growth strategy, playbooks, and KPI models—built with you and owned by your team.",
     url: "https://www.patterngrowth.com/fractional-cmo-services",
     provider: "Pattern Growth"
   });
@@ -48,7 +49,7 @@ export default function FractionalCMOServicesPage() {
       name: "What services does a fractional CMO provide?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A fractional CMO provides strategic marketing leadership including: marketing strategy development, team oversight, budget management, channel selection, and performance tracking. Pattern Growth delivers all this infrastructure in an 8-week sprint with full ownership transfer instead of ongoing retainers."
+        text: "A fractional CMO provides strategic marketing leadership including: marketing strategy development, team oversight, budget management, channel selection, and performance tracking. Pattern Growth delivers all this as a senior partner embedded in your business, building a custom strategy and systems your team owns."
       }
     },
     {
@@ -56,7 +57,7 @@ export default function FractionalCMOServicesPage() {
       name: "How is Pattern Growth's model different from traditional fractional CMO services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Traditional fractional CMOs work on ongoing retainers (typically $5K-15K/month) providing strategic oversight. Pattern Growth delivers a complete 8-week project-based sprint that builds your entire marketing infrastructure with full ownership transfer—no ongoing dependency or recurring costs."
+        text: "Traditional fractional CMOs work on ongoing retainers (typically $5K-15K/month), often splitting time across several companies. Pattern Growth embeds senior partners who learn your business deeply and build your complete marketing strategy with you—a true partnership, and systems your team owns."
       }
     },
     {
@@ -88,7 +89,7 @@ export default function FractionalCMOServicesPage() {
       {
         "@type": "Service",
         "name": "8-Week Growth Strategy Sprint",
-        "description": "Project-based marketing infrastructure delivery"
+        "description": "Senior-led, embedded growth strategy partnership"
       }
     ]
   };
@@ -99,7 +100,7 @@ export default function FractionalCMOServicesPage() {
       "name": "What size companies should choose an 8-week sprint over fractional CMO retainers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "$1M-$5M B2B companies that need marketing infrastructure built without permanent executive overhead. These businesses have stalled growth, fragmented data, or unclear positioning where traditional retainers create ongoing dependency."
+        "text": "$1M-$5M B2B companies that want a senior, embedded partner without the overhead of a full-time hire. These businesses have stalled growth, fragmented data, or unclear positioning and want a trusted partner who learns the business deeply and builds a strategy they own."
       }
     },
     {
@@ -107,7 +108,7 @@ export default function FractionalCMOServicesPage() {
       "name": "How does the 8-week sprint compare to fractional CMO pricing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Fractional CMOs typically cost $5k-$15k/month on open-ended retainers ($60k-$180k annually). Our sprint starts at $9,500 as a one-time fixed-fee project with complete ownership transfer and 30 days of post-engagement support."
+        "text": "Fractional CMOs typically cost $5k-$15k/month on open-ended retainers ($60k-$180k annually). Our engagement is custom-scoped to exactly what your business needs—so you're never paying for things you don't—and includes 30 days of post-engagement support, with the systems we build owned by your team."
       }
     },
     {
@@ -187,19 +188,19 @@ export default function FractionalCMOServicesPage() {
           </div>
 
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-8">
-            <h3 className="text-xl font-semibold text-foreground mb-4">Pattern Growth Sprint Model</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Pattern Growth Partnership Model</h3>
             <ul className="space-y-3 text-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary font-bold">•</span>
-                <span>Fixed-fee project model with dashboard live by week 6</span>
+                <span>Senior partners embedded in your business, with a dashboard live by week 6</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary font-bold">•</span>
-                <span>You own frameworks, dashboards, and playbooks with complete independence</span>
+                <span>Your team owns the frameworks, dashboards, and playbooks and can run them with confidence</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary font-bold">•</span>
-                <span>Complete marketing system delivered in 8 weeks, no ongoing coordination</span>
+                <span>A complete, custom marketing strategy in 8 weeks, scoped to exactly what you need</span>
               </li>
             </ul>
           </div>
@@ -227,14 +228,14 @@ export default function FractionalCMOServicesPage() {
                   <td className="border border-border p-4 text-primary font-medium">You own frameworks, dashboards, playbooks</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-4 font-medium">Cost Predictability</td>
+                  <td className="border border-border p-4 font-medium">Pricing Approach</td>
                   <td className="border border-border p-4 text-muted-foreground">$5k-$15k/month, open-ended</td>
-                  <td className="border border-border p-4 text-primary font-medium">Fixed-fee project model</td>
+                  <td className="border border-border p-4 text-primary font-medium">Custom-scoped to your needs</td>
                 </tr>
                 <tr className="bg-muted/20">
                   <td className="border border-border p-4 font-medium">Documentation Handoff</td>
                   <td className="border border-border p-4 text-muted-foreground">Knowledge leaves with consultant</td>
-                  <td className="border border-border p-4 text-primary font-medium">Complete system you execute independently</td>
+                  <td className="border border-border p-4 text-primary font-medium">Complete system your team owns and runs</td>
                 </tr>
               </tbody>
             </table>
@@ -242,8 +243,16 @@ export default function FractionalCMOServicesPage() {
 
           <div className="mt-8 p-6 bg-tertiary/50 border border-tertiary rounded-lg">
             <p className="text-foreground font-medium mb-2">
-              <strong>The Pattern Breaker Difference:</strong> We deliver a complete marketing system in 8 weeks. You get the keys to run it yourself—no permanent executive overhead, no ongoing coordination tax.
+              <strong>The Pattern Growth Difference:</strong> Senior partners embed in your business and treat it like their own, then leave your team with a custom system you own—a lasting partnership, scoped to exactly what you need.
             </p>
+          </div>
+
+          <div className="mt-12 text-center">
+            <h2 className="text-2xl font-bold text-foreground mb-3">See if we&apos;re a fit</h2>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Let&apos;s talk about where you are, where you need to be, and whether a senior, embedded partnership makes sense for your business.
+            </p>
+            <GetStartedButton />
           </div>
         </div>
       </section>

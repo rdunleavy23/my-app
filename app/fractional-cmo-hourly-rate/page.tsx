@@ -10,19 +10,19 @@ import { createServiceSchema, createBreadcrumbListSchema, createFAQSchema } from
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Cost: Hourly Rates vs Fixed-Price Sprints',
-  description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. Compare with fixed $9,500 sprints delivering complete strategy + full ownership.',
+  description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.',
   keywords: ['fractional cmo cost', 'fractional cmo pricing', 'fractional cmo rates', 'fractional cmo hourly rate', 'how much does fractional cmo cost', 'cmo consulting rates', 'marketing consulting pricing', 'fractional cmo retainer cost', 'project-based marketing pricing', 'marketing consulting fees'],
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate',
     title: 'Fractional CMO Cost: Hourly Rates vs Fixed-Price Sprints',
-    description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. Compare with fixed $9,500 sprints delivering complete strategy + full ownership.',
+    description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fractional CMO Cost: Hourly Rates vs Fixed-Price Sprints',
-    description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. Compare with fixed $9,500 sprints delivering complete strategy + full ownership.'
+    description: 'Fractional CMO cost: $200-500/hr or $5K-15K/month retainer. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/fractional-cmo-hourly-rate'
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 const serviceSchema = createServiceSchema({
   name: "Fractional CMO Pricing Analysis",
-  description: "Comprehensive analysis of fractional CMO costs, hourly rates, and comparison with project-based pricing alternatives for growth-stage companies.",
+  description: "A clear analysis of fractional CMO costs and hourly rates, and how a senior-led, embedded, custom-scoped growth partnership compares for growth-stage companies.",
   url: "https://www.patterngrowth.com/fractional-cmo-hourly-rate",
   provider: "Pattern Growth"
 });
@@ -59,7 +59,7 @@ const faqSchema = createFAQSchema([
     name: "Is hourly or monthly pricing better for fractional CMO services?",
     acceptedAnswer: {
       "@type": "Answer",
-      text: "Monthly retainers provide cost predictability and align incentives better than hourly billing. Hourly pricing encourages time tracking over value delivery and creates unpredictable costs. However, project-based fixed fees beat both by capping total investment and forcing complete knowledge transfer."
+      text: "Monthly retainers provide cost predictability and align incentives better than hourly billing. Hourly pricing encourages time tracking over value delivery and creates unpredictable costs. A senior-led, embedded partnership scoped to your needs offers another path—aligning the work to outcomes and transferring complete ownership to your team."
     }
   },
   {
@@ -67,7 +67,7 @@ const faqSchema = createFAQSchema([
     name: "How much should I budget for fractional CMO services?",
     acceptedAnswer: {
       "@type": "Answer",
-      text: "Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. Alternatively, budget $9,500 for project-based strategic architecture you own completely."
+      text: "Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. A senior-led, embedded engagement is a different model—custom-scoped to exactly what your business needs, with a strategy your team owns."
     }
   },
   {
@@ -338,10 +338,10 @@ export default function FractionalCMOHourlyRatePage() {
                   <td className="border border-border p-3 text-sm">Long commitment, consultant dependency</td>
                 </tr>
                 <tr>
-                  <td className="border border-border p-3 font-semibold bg-primary/5">Project-Based</td>
-                  <td className="border border-border p-3 bg-primary/5">$9,500 one-time</td>
-                  <td className="border border-border p-3 bg-primary/5">Strategic architecture you own</td>
-                  <td className="border border-border p-3 text-sm bg-primary/5">Contained scope, complete handoff</td>
+                  <td className="border border-border p-3 font-semibold bg-primary/5">Embedded Partnership</td>
+                  <td className="border border-border p-3 bg-primary/5">Custom-scoped to your needs</td>
+                  <td className="border border-border p-3 bg-primary/5">Custom strategy your team owns</td>
+                  <td className="border border-border p-3 text-sm bg-primary/5">Senior partners, complete handoff</td>
                 </tr>
               </tbody>
             </table>
@@ -353,10 +353,10 @@ export default function FractionalCMOHourlyRatePage() {
         </section>
 
         <section className="mb-16 bg-primary/10 border-2 border-primary p-8 rounded-lg">
-          <h2 className="text-3xl font-bold text-foreground mb-6">The Project-Based Alternative</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-6">The Pattern Growth Partnership</h2>
           
           <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Pattern Growth delivers CMO-level strategic architecture through fixed-fee projects, not hourly billing or open-ended retainers.
+            Pattern Growth delivers CMO-level strategy as a senior partner embedded in your business—scoped to exactly what you need, not billed by the hour or stretched across open-ended retainers.
           </p>
 
           <div className="bg-background p-6 rounded-lg mb-6">
@@ -374,13 +374,13 @@ export default function FractionalCMOHourlyRatePage() {
               </div>
               
               <div className="bg-primary/10 p-4 rounded">
-                <h3 className="font-semibold text-foreground mb-3">Growth Strategy Sprint</h3>
+                <h3 className="font-semibold text-foreground mb-3">Pattern Growth Partnership</h3>
                 <ul className="space-y-2 text-foreground text-sm">
-                  <li>• $9,500 one-time project fee</li>
+                  <li>• Custom-scoped to your needs</li>
                   <li>• Complete in 8 weeks</li>
                   <li>• Measurement system live week 6</li>
-                  <li>• You own everything delivered</li>
-                  <li>• Team executes independently</li>
+                  <li>• Senior partners, deeply embedded</li>
+                  <li>• A custom strategy your team owns</li>
                   <li>• Full documentation handoff</li>
                 </ul>
               </div>
@@ -388,7 +388,7 @@ export default function FractionalCMOHourlyRatePage() {
           </div>
 
           <p className="text-lg text-foreground mb-6">
-            Same strategic value. Faster delivery. Complete ownership. No dependency.
+            Senior expertise. Deep understanding. A custom strategy your team owns—and a partner you can call on.
           </p>
 
           <div className="space-y-4">
@@ -461,14 +461,14 @@ export default function FractionalCMOHourlyRatePage() {
             <div className="bg-muted/30 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-foreground mb-2">Is hourly or monthly pricing better for fractional CMO services?</h3>
               <p className="text-foreground leading-relaxed">
-                Monthly retainers provide cost predictability and align incentives better than hourly billing. Hourly pricing encourages time tracking over value delivery and creates unpredictable costs. However, project-based fixed fees beat both by capping total investment and forcing complete knowledge transfer.
+                Monthly retainers provide cost predictability and align incentives better than hourly billing. Hourly pricing encourages time tracking over value delivery and creates unpredictable costs. A senior-led, embedded partnership scoped to your needs offers another path—aligning the work to outcomes and transferring complete ownership to your team.
               </p>
             </div>
 
             <div className="bg-muted/30 rounded-lg p-4">
               <h3 className="text-xl font-semibold text-foreground mb-2">How much should I budget for fractional CMO services?</h3>
               <p className="text-foreground leading-relaxed">
-                Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. Alternatively, budget $9,500 for project-based strategic architecture you own completely.
+                Budget $60K-120K minimum for 6-12 month fractional CMO engagements. This covers monthly retainers plus ramp time. Add 20-30% for coordination overhead and potential extension costs. A senior-led, embedded engagement is a different model—custom-scoped to exactly what your business needs, with a strategy your team owns.
               </p>
             </div>
 
@@ -505,22 +505,22 @@ export default function FractionalCMOHourlyRatePage() {
             links={[
               {
                 title: "What is a fractional CMO?",
-                description: "A fractional CMO provides part-time marketing leadership on retainer. Learn about the model and project-based alternatives.",
+                description: "A fractional CMO provides part-time marketing leadership on retainer. Learn about the model and how a senior-led, embedded partnership compares.",
                 href: "/what-is-fractional-cmo"
               },
               {
                 title: "Fractional CMO services and deliverables",
-                description: "Learn what fractional CMOs typically provide and explore alternative service models for strategic marketing.",
+                description: "Learn what fractional CMOs typically provide and how a senior-led, embedded partnership delivers it as systems your team owns.",
                 href: "/fractional-cmo-services"
               },
               {
-                title: "Project-based CMO alternative",
-                description: "Why we built a project-based alternative to fractional CMO retainers. See why 8-week strategy sprints outperform traditional models.",
+                title: "A senior partner, not another vendor",
+                description: "Why we built a senior-led, embedded growth partnership. See how it compares to traditional fractional CMO retainers.",
                 href: "/blog/fractional-cmo-alternative"
               },
               {
                 title: "Fractional CMO vs strategy sprint comparison",
-                description: "Compare fractional CMO retainers vs project-based strategy sprints. See which growth model fits your stage.",
+                description: "Compare fractional CMO retainers with a senior-led, embedded strategy partnership. See which growth model fits your stage.",
                 href: "/blog/fractional-cmo-vs-strategy-sprint"
               }
             ]}

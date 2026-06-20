@@ -24,7 +24,7 @@ The answer depends on your timeline, budget constraints, and whether you need on
 | Model | What You Get | Timeline | Cost Structure |
 |-------|--------------|----------|----------------|
 | **Fractional CMO** | Ongoing strategic guidance and operational oversight | 6-12+ months | $5K-15K/month retainer |
-| **Strategy Sprint** | Complete strategic architecture you own | 8 weeks | $9,500 one-time project |
+| **Strategy Sprint** | Complete strategic architecture you own | 8 weeks | Custom-scoped one-time project |
 
 ## When Fractional CMOs Make Sense
 
@@ -57,7 +57,7 @@ The answer depends on your timeline, budget constraints, and whether you need on
 - Revenue: $1M-5M
 - Team: 3-10 people
 - Need: Strategic architecture and measurement systems
-- Budget: $9,500 one-time
+- Budget: custom-scoped to exactly what you need
 
 ## Cost Comparison: Total Investment Reality
 
@@ -68,10 +68,10 @@ The answer depends on your timeline, budget constraints, and whether you need on
 - **Real investment: $80K-90K**
 
 ### Strategy Sprint Total Cost
-- Project fee: $9,500
+- Project fee: custom-scoped to exactly what you need
 - Internal time: 20-30 hours over 8 weeks
 - No ramp time or coordination overhead
-- **Real investment: $9,500**
+- **Real investment: scoped to your needs, with minimal internal overhead**
 
 ## Timeline to Value: When Results Actually Happen
 
@@ -100,7 +100,7 @@ The answer depends on your timeline, budget constraints, and whether you need on
 - Custom marketing dashboard (1 year access)
 - Campaign playbooks and templates
 - Team training documentation
-- **You own:** Everything (systems run independently)
+- **You own:** Everything (systems your team runs with confidence)
 
 ## Risk Assessment: What Happens If It Doesn't Work?
 
@@ -122,7 +122,7 @@ The answer depends on your timeline, budget constraints, and whether you need on
 
 1. **Timeline pressure:** Do you need strategic clarity in 8 weeks or can you wait 6 months?
 
-2. **Budget certainty:** Do you prefer fixed $9,500 cost or $60K+ variable investment?
+2. **Budget certainty:** Do you prefer a custom-scoped, fixed-scope cost or $60K+ variable investment?
 
 3. **Ownership priority:** Do you want to own strategic infrastructure or rent ongoing advice?
 
@@ -136,7 +136,7 @@ Most $1-5M companies fall into the strategy sprint category:
 
 - **They think they need fractional CMO** because that's what everyone offers
 - **What they actually need** is strategic architecture they can own and execute
-- **The fractional model** optimizes for consultant revenue, not client independence
+- **The fractional model** optimizes for consultant revenue, not what your team owns and can run
 - **The sprint model** optimizes for client capability and measurable outcomes
 
 ## Next Steps: How to Choose
@@ -145,11 +145,11 @@ Most $1-5M companies fall into the strategy sprint category:
 2. **If you're leaning toward strategy sprint:** Schedule a 30-minute call to discuss your specific situation
 3. **If you're unsure:** Start with the contained 8-week engagement—it's lower risk and delivers complete ownership
 
-The key insight: most growth-stage companies don't need 12 months of advisory. They need 8 weeks of architecture that lets their team execute independently.
+The key insight: most growth-stage companies don't need 12 months of advisory. They need 8 weeks of architecture their team can run with confidence.
 
 ---
 
-*Pattern Growth specializes in strategy sprints for $1-5M companies. We deliver CMO-level strategic architecture in 8 weeks, then you own everything. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner for $1-5M companies. In an 8-week sprint we deliver CMO-level strategic architecture your team owns completely—then a senior partner stays available whenever you want support.*
 
 ## Frequently Asked Questions
 
@@ -159,7 +159,7 @@ Fractional CMOs provide ongoing strategic advisory on monthly retainers (6-12+ m
 
 ### When would I choose fractional CMO over strategy sprint?
 
-Choose fractional CMO if you need ongoing operational management, vendor oversight, or executive representation in board meetings. Choose strategy sprint if you need strategic clarity fast and want to execute independently without continued consulting dependency.
+Choose fractional CMO if you need ongoing operational management, vendor oversight, or executive representation in board meetings. Choose strategy sprint if you need strategic clarity fast and want to own a system your team runs with confidence, with a senior partner available whenever you want support.
 
 ### How do I know if my company needs strategic architecture or ongoing advisory?
 

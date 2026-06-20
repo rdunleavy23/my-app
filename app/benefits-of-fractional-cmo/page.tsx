@@ -5,18 +5,18 @@ import { createServiceSchema, createBreadcrumbListSchema } from '@/lib/schemas'
 
 export const metadata: Metadata = {
   title: 'Fractional CMO Benefits vs Sprint Advantages',
-  description: 'Fractional CMO benefits: flexibility, cost savings, expertise. Sprint advantages: complete ownership, faster delivery, no dependency. Compare both.',
+  description: 'Fractional CMO benefits: flexibility, cost savings, expertise. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.',
   openGraph: {
     type: 'website',
     url: 'https://www.patterngrowth.com/benefits-of-fractional-cmo',
     title: 'Fractional CMO Benefits vs Sprint Advantages',
-    description: 'Fractional CMO benefits: flexibility, cost savings, expertise. Sprint advantages: complete ownership, faster delivery, no dependency. Compare both.',
+    description: 'Fractional CMO benefits: flexibility, cost savings, expertise. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.',
     siteName: 'Pattern Growth'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fractional CMO Benefits vs Sprint Advantages',
-    description: 'Fractional CMO benefits: flexibility, cost savings, expertise. Sprint advantages: complete ownership, faster delivery, no dependency. Compare both.'
+    description: 'Fractional CMO benefits: flexibility, cost savings, expertise. See how a senior-led, embedded growth partnership compares for growth-stage B2B companies.'
   },
   alternates: {
     canonical: 'https://www.patterngrowth.com/benefits-of-fractional-cmo'
@@ -250,10 +250,10 @@ export default function BenefitsOfFractionalCMOPage() {
         </section>
 
         <section className="mb-16 bg-primary/10 border-2 border-primary p-8 rounded-lg">
-          <h2 className="text-3xl font-bold text-foreground mb-6">When You Need Architecture, Not Advisory</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-6">When You Want a Senior Partner Who Builds With You</h2>
           
           <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Most growth-stage companies don't need ongoing consulting relationships. They need strategic architecture they own—positioning, measurement systems, campaign playbooks—then the freedom to execute independently.
+            Many growth-stage companies want a senior partner who learns the business deeply and builds the strategic foundation with them—positioning, measurement systems, campaign playbooks—then leaves the team owning it, with a partner to call on.
           </p>
 
           <div className="bg-background p-6 rounded-lg mb-6">
@@ -270,7 +270,7 @@ export default function BenefitsOfFractionalCMOPage() {
 
           <div className="space-y-4">
             <p className="text-lg text-foreground">
-              <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Growth strategy sprints</Link> deliver CMO-level strategic thinking in 8 weeks through a fixed-fee project model. You get the frameworks, measurement systems, and playbooks—then execute independently.
+              <Link href="/fractional-cmo-services" className="text-primary hover:underline font-semibold">Our embedded partnership</Link> delivers CMO-level strategic thinking in 8 weeks, scoped to exactly what you need. You get the frameworks, measurement systems, and playbooks—built with you and owned by your team.
             </p>
             <GetStartedButton />
             <Link 
@@ -358,7 +358,7 @@ export default function BenefitsOfFractionalCMOPage() {
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">When should you not hire a fractional CMO?</h3>
               <p className="text-foreground leading-relaxed">
-                Don't hire fractional CMO when you need strategic architecture you own, immediate results (within 6 weeks), complete team independence post-engagement, fixed budget with no ongoing costs, or working systems rather than consulting relationships. In these cases, project-based strategic architecture delivers better outcomes than ongoing advisory.
+                A fractional CMO may not be the right fit when you want a senior partner who embeds in your business, a custom strategy your team owns, results within weeks, or an engagement scoped to exactly what you need. In these cases, a senior-led, embedded partnership often delivers better outcomes than part-time advisory split across several companies.
               </p>
             </div>
           </div>

@@ -37,7 +37,7 @@ export interface FAQ {
 
 export const heroContent = {
   headline: "Clarity you can build on for years.",
-  subheadline: "Most marketing advice treats symptoms. We spend eight weeks finding the root issue—so you have a strategy that still works three years from now, not just three months. No retainers. No ongoing fees. Just a foundation you actually own."
+  subheadline: "Most marketing advice treats symptoms. As senior partners, we embed in your business to find the root issue—so you have a strategy that still works three years from now, not just three months. A partnership built on trust, and a foundation your team owns."
 }
 
 // ============================================================================
@@ -156,7 +156,7 @@ export const ctaContent = {
 
 export const valuesContent = {
   heading: "How we think about this work:",
-  body: "We believe small businesses grow best when they own their strategy, not rent it. We believe transparency builds better relationships than persuasive sales. We believe in teaching, not telling. And we believe that when you succeed, our community of independent businesses gets stronger."
+  body: "We believe companies grow best with a trusted partner who treats the business like their own. We believe transparency builds better relationships than persuasive sales. We believe in teaching, not telling. And we believe that when you succeed, our community of independent businesses gets stronger."
 }
 
 // ============================================================================
@@ -165,18 +165,18 @@ export const valuesContent = {
 
 export const faqs: FAQ[] = [
   {
-    question: "Is this the same as a fractional CMO retainer?",
+    question: "How is working with you different from a fractional CMO?",
     answer: [
-      "No. Retainers keep an executive embedded in your org indefinitely. Our sprint installs custom strategy and systems you operate independently.",
-      "After eight weeks, you own the complete system and know how to execute it."
+      "You work directly with senior partners who embed in your business and treat it like their own—learning your market and goals until we think like you do.",
+      "Together we build a custom strategy and systems your team owns. After our eight weeks, you have the complete system and know how to run it—and we stay available as a trusted partner whenever you want us."
     ]
   },
   {
-    question: "Do we have to keep working together after the sprint?",
+    question: "What does the relationship look like after the engagement?",
     answer: [
-      "No. The sprint is designed so you're not dependent on us.",
-      "If we do our job, you'll outgrow us. You'll leave the sprint with a clear strategy, operating rhythm, and custom plan you can run. Some take it fully in-house. Others ask us to help with a specific phase—vetting an agency, sitting in on key interviews, or additional training.",
-      "Our goal is to build a growth system you own. After that, we're optional support, not a permanent fixture."
+      "Your team owns the strategy, operating rhythm, and custom systems we build together, so you can keep moving with confidence.",
+      "Many clients keep us close as a trusted partner—pressure-testing big decisions, sitting in on key interviews, or helping brief and select partners. We scope that to exactly what you need.",
+      "It's a lasting partnership, not a transaction. We're here when you want us."
     ]
   },
   {
@@ -195,7 +195,7 @@ export const faqs: FAQ[] = [
   {
     question: "What are my options after the 8-week sprint?",
     answer: [
-      "The core sprint is designed so you're not locked into a long-term retainer. After eight weeks, most clients choose one of three paths:",
+      "After our eight weeks together, most clients choose one of three paths:",
       "Run it in-house: You own the strategy, operating rhythm, and measurement systems.",
       "Run it with partners: We help you brief or select an agency to execute.",
       "Run it with support: We stay involved for a defined period to sit in on interviews, provide additional training, or pressure-test big decisions."
@@ -209,13 +209,13 @@ export const faqs: FAQ[] = [
 
 export const processMetadata = {
   title: "How We Work: 8-Week Growth Strategy Sprint | Pattern Growth",
-  description: "Clarity you can build on for years. Our 8-week process delivers a marketing strategy that still works three years from now. No retainers. No ongoing fees. Just a foundation you own.",
+  description: "Clarity you can build on for years. Senior partners embed with your team and build a custom marketing strategy that still works three years from now—a true partnership, and a foundation your team owns.",
   keywords: [
     "growth strategy process",
-    "marketing consulting methodology",
+    "senior growth partner",
     "8-week sprint",
     "strategic planning",
     "marketing operations",
-    "fractional CMO alternative"
+    "embedded marketing strategy"
   ]
 }

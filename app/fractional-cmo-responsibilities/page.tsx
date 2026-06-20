@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 const serviceSchema = createServiceSchema({
   name: "Fractional CMO Responsibilities Analysis",
-  description: "Comprehensive analysis of fractional CMO responsibilities, deliverables, and comparison with project-based alternatives for strategic marketing leadership.",
+  description: "A clear look at fractional CMO responsibilities and deliverables, and how a senior-led, embedded growth strategy partnership delivers them as systems your team owns.",
   url: "https://www.patterngrowth.com/fractional-cmo-responsibilities",
   provider: "Pattern Growth"
 });
@@ -312,14 +312,14 @@ export default function FractionalCMOResponsibilitiesPage() {
         </section>
 
         <section className="mb-16 bg-primary/10 border-2 border-primary p-8 rounded-lg">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Alternative: Getting Deliverables You Own</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-6">How Pattern Growth Delivers These Responsibilities</h2>
           
           <p className="text-lg text-foreground mb-6 leading-relaxed">
-            Fractional CMO responsibilities produce valuable strategic guidance—but that guidance often remains consultant-dependent. What if you could get the same deliverables as documented architecture you own?
+            We deliver this strategic leadership as a senior partner who embeds in your business and treats it like our own—then leaves you with documented systems your team owns, not guidance that lives only in someone else's head.
           </p>
 
           <div className="bg-background p-6 rounded-lg mb-6">
-            <p className="font-semibold text-foreground mb-4">Growth Strategy Sprints deliver all core CMO responsibilities as permanent deliverables:</p>
+            <p className="font-semibold text-foreground mb-4">As your embedded partner, we deliver all core CMO responsibilities as systems your team keeps:</p>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <ul className="space-y-2 text-foreground">
                 <li>• Strategy docs (not meeting notes)</li>
@@ -332,15 +332,15 @@ export default function FractionalCMOResponsibilitiesPage() {
                 <li>• Working measurement system with data integration</li>
                 <li>• KPI frameworks and reporting templates</li>
                 <li>• Process documentation for scale</li>
-                <li>• Team training for independent execution</li>
-                <li>• Complete knowledge transfer, no dependency</li>
+                <li>• Team training for confident execution</li>
+                <li>• Complete knowledge transfer your team keeps</li>
               </ul>
             </div>
           </div>
 
           <div className="space-y-4">
             <p className="text-lg text-foreground">
-              8 weeks. Fixed fee. You own everything.
+              Senior partners, deeply embedded, scoped to exactly what your business needs.
             </p>
             <GetStartedButton />
             <Link href="/fractional-cmo-services" className="inline-block text-primary hover:underline font-medium">

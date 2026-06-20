@@ -84,13 +84,18 @@ if (fs.existsSync(sitemapPath)) {
 }
 
 // Check 4: Canonical URLs Return 200 Status
+// NOTE: Canonicals are defined per-page via each route's metadata `alternates.canonical`,
+// not at the layout level. Setting a layout-level canonical in Next.js would override every
+// page's own canonical, so app/layout.tsx intentionally omits it. The homepage canonical
+// therefore lives in app/page.tsx.
 console.log('\nCHECK 4: Canonical URLs Return 200 Status');
+const homepagePath = path.join(process.cwd(), 'app/page.tsx');
 const layoutPath = path.join(process.cwd(), 'app/layout.tsx');
 const servicesPath = path.join(process.cwd(), 'app/fractional-cmo-services/page.tsx');
 
-if (fs.existsSync(layoutPath)) {
-  const layoutContent = fs.readFileSync(layoutPath, 'utf-8');
-  const canonicalMatch = layoutContent.match(/canonical:\s*["']([^"']+)["']/);
+if (fs.existsSync(homepagePath)) {
+  const homepageContent = fs.readFileSync(homepagePath, 'utf-8');
+  const canonicalMatch = homepageContent.match(/canonical:\s*["']([^"']+)["']/);
   if (canonicalMatch) {
     const homepageCanonical = canonicalMatch[1];
     console.log(`  Homepage canonical: ${homepageCanonical}`);
@@ -98,7 +103,16 @@ if (fs.existsSync(layoutPath)) {
     const hasTrailingSlash = homepageCanonical.endsWith('/');
     console.log(`    Format: ${isAbsolute ? '✓ absolute URL' : '✗ relative URL'}`);
     console.log(`    Trailing slash: ${hasTrailingSlash ? 'Has /' : 'No / (correct)'}`);
+  } else {
+    console.log('  Homepage canonical: ✗ not found in app/page.tsx');
   }
+}
+
+// Confirm the layout intentionally has no canonical (so it doesn't override page-level ones)
+if (fs.existsSync(layoutPath)) {
+  const layoutContent = fs.readFileSync(layoutPath, 'utf-8');
+  const layoutHasCanonical = /canonical:\s*["']/.test(layoutContent);
+  console.log(`  Layout canonical: ${layoutHasCanonical ? '⚠ present (overrides page-level canonicals)' : '✓ omitted (page-level canonicals win)'}`);
 }
 
 if (fs.existsSync(servicesPath)) {
@@ -114,13 +128,20 @@ if (fs.existsSync(servicesPath)) {
   }
 }
 
-// Check if canonical URLs are absolute (homepage can have trailing slash, others should not)
-let layoutCanonical = false;
+// Check that canonical URLs are absolute (homepage may have a trailing slash, others should not).
+// The homepage canonical is read from app/page.tsx; the layout must NOT define a canonical.
+let homepageCanonicalOk = false;
+let layoutCanonicalOmitted = true;
 let servicesCanonical = false;
+
+if (fs.existsSync(homepagePath)) {
+  const homepageContent = fs.readFileSync(homepagePath, 'utf-8');
+  homepageCanonicalOk = homepageContent.includes('canonical: "https://www.patterngrowth.com') || homepageContent.includes("canonical: 'https://www.patterngrowth.com");
+}
 
 if (fs.existsSync(layoutPath)) {
   const layoutContent = fs.readFileSync(layoutPath, 'utf-8');
-  layoutCanonical = layoutContent.includes('canonical: "https://www.patterngrowth.com') || layoutContent.includes("canonical: 'https://www.patterngrowth.com");
+  layoutCanonicalOmitted = !/canonical:\s*["']/.test(layoutContent);
 }
 
 if (fs.existsSync(servicesPath)) {
@@ -130,7 +151,7 @@ if (fs.existsSync(servicesPath)) {
                      !servicesContent.includes('canonical: "https://www.patterngrowth.com/fractional-cmo-services/"');
 }
 
-const allCanonicalsCorrect = layoutCanonical && servicesCanonical;
+const allCanonicalsCorrect = homepageCanonicalOk && layoutCanonicalOmitted && servicesCanonical;
 console.log(`  Format check: ${allCanonicalsCorrect ? '✓ absolute URLs, correct format' : '✗ issues found'}`);
 results.push({ check: 4, name: 'Canonical URLs', pass: allCanonicalsCorrect });
 

@@ -604,7 +604,7 @@ We create a concrete plan to bridge the gap, then build the strategic frameworks
 
 **Compare the approaches:**
 - **Hiring fractional CMO**: 4-8 weeks of sourcing, vetting, interviewing → 3-6 month onboarding → $60K-$90K before real value
-- **Strategy sprint**: 8 weeks total → Complete strategic architecture → $9.5K-$12.5K → 100% ownership
+- **Strategy sprint**: 8 weeks total → Complete strategic architecture → Custom-scoped to your needs → 100% ownership
 
 [See how the 3 A's Framework works →](/process)
 
@@ -694,7 +694,7 @@ Take the time to vet properly.
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. Skip the months-long hiring process and get complete strategic frameworks you own forever. No ongoing retainers, no hiring risk, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, you work directly with senior partners to build complete strategic frameworks you own forever—then a senior partner stays available whenever you want support.*
 
 **Get clarity on your marketing leadership needs:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a call](https://cal.com/pattern-growth/30min).

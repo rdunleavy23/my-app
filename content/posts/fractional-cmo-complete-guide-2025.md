@@ -166,7 +166,7 @@ The model fails when companies want "marketing handled"—meaning they expect ex
 
 | Factor | Fractional CMO | Strategy Sprint |
 |--------|----------------|-----------------|
-| **Total cost** | $60K-$120K (6-12 mo) | $9,500-$25K (one-time) |
+| **Total cost** | $60K-$120K (6-12 mo) | Custom-scoped (one-time) |
 | **Timeline** | 6-12+ months | 6-8 weeks |
 | **Ownership** | Partial (leaves with consultant) | Complete (yours forever) |
 | **Ongoing** | Yes (monthly retainer) | No (build once, own forever) |
@@ -226,9 +226,9 @@ We document the gap between current state and desired state, then prioritize bas
 
 ### Action: Build the Bridge
 
-We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—your team can run it with confidence, with a senior partner available whenever you want support, and no knowledge transfer gaps.
 
-**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. No monthly retainer. No wondering what you'll own when the engagement ends. Everything documented, training included, ready to execute independently.
+**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. No wondering what you'll own when the engagement ends. Everything documented, training included, and your team ready to run it with confidence—with a senior partner available whenever you want support.
 
 [See how the 3 A's Framework works →](/process)
 
@@ -296,7 +296,7 @@ Budget and timeline expectations must be realistic. Success requires $60,000-$12
 
 ### If You Need Strategic Architecture (Not Ongoing Leadership)
 
-Strategy sprints run 6-10 weeks with costs of $9,500-$25,000 one-time. You receive complete strategic frameworks, measurement systems, and playbooks with 100% ownership that's yours forever. There's no ongoing retainer—you build once and own forever. This model works best for teams that can execute with clear direction but don't need ongoing oversight.
+Strategy sprints run 6-10 weeks and are custom-scoped to exactly what your business needs. You receive complete strategic frameworks, measurement systems, and playbooks with 100% ownership that's yours forever. You build once and own forever, with a senior partner available whenever you want support. This model works best for teams that can run their strategy with clear direction.
 
 [Learn more about strategy sprints →](/sprint-vs-fractional-cmo)
 
@@ -368,7 +368,7 @@ No. Fractional CMOs focus on strategic leadership, not hands-on execution. They 
 
 ### What's a better alternative to hiring a fractional CMO?
 
-If you need strategic architecture (not ongoing leadership), a strategy sprint costs $9,500-$25K one-time vs $60K-$120K for fractional CMO over 6-12 months. You get complete ownership of frameworks, measurement systems, and playbooks. Best for teams that can execute with clear direction. If you need execution (not just strategy), hire a marketing agency. [Compare all options](/sprint-vs-fractional-cmo).
+If you need strategic architecture (not ongoing leadership), a strategy sprint is custom-scoped to exactly what you need, versus $60K-$120K for fractional CMO over 6-12 months. You get complete ownership of frameworks, measurement systems, and playbooks. Best for teams that can run their strategy with clear direction. If you need execution (not just strategy), hire a marketing agency. [Compare all options](/sprint-vs-fractional-cmo).
 
 ---
 
@@ -406,7 +406,7 @@ Before hiring, take the diagnostic to understand what type of help you actually 
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Get honest guidance on whether you need a fractional CMO or strategic architecture:**
 [Download the diagnostic](/lead-magnets/growth-diagnostic) or [book a 15-min call](https://cal.com/pattern-growth/30min).

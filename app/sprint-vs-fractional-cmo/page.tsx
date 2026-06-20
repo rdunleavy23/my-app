@@ -73,12 +73,12 @@ export default function SprintVsFractionalCMOPage() {
     {
       icon: Package,
       title: "You Own Everything",
-      description: "Strategy docs, playbooks, roadmap—it's all yours. No dependency, no retainer, no ongoing fees."
+      description: "Strategy docs, playbooks, roadmap—it's all yours to keep, built with you so your team can run it with confidence."
     },
     {
       icon: FileText,
-      title: "Built for Your Reality",
-      description: "Whether you're a founder doing it yourself or working with agencies, the plan fits your actual capacity."
+      title: "Senior Partners, Deeply Embedded",
+      description: "You work directly with senior strategists who learn your business and treat it like their own—an extension of your leadership, not an outside vendor."
     }
   ]
 
@@ -106,7 +106,7 @@ export default function SprintVsFractionalCMOPage() {
               <div className="w-20 h-px bg-primary mx-auto" />
 
               <p className="text-base sm:text-lg text-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-                You need strategic marketing help but can't justify a full-time CMO. Here's an honest look at both models—including the limitations—so you can decide what fits.
+                You want a senior, trusted partner for your marketing—without the overhead of a full-time hire. Here's an honest look at both models, including the limitations, so you can decide what fits.
               </p>
             </div>
           </div>
@@ -271,10 +271,10 @@ export default function SprintVsFractionalCMOPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                The Real Cost Comparison
+                How the Investment Compares
               </h2>
               <p className="text-lg text-muted-foreground">
-                Total investment over 12 months
+                Two very different models over 12 months
               </p>
             </div>
 
@@ -282,8 +282,8 @@ export default function SprintVsFractionalCMOPage() {
               <Card className="border-2 border-primary">
                 <CardHeader className="text-center pb-4">
                   <Badge variant="default" className="w-fit mx-auto mb-2">Strategy Sprint</Badge>
-                  <div className="text-5xl font-bold text-foreground">$9,500</div>
-                  <CardDescription>One-time investment</CardDescription>
+                  <div className="text-4xl font-bold text-foreground">Custom-scoped</div>
+                  <CardDescription>Priced to exactly what you need</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <ul className="space-y-2 text-sm">
@@ -306,7 +306,7 @@ export default function SprintVsFractionalCMOPage() {
                   </ul>
                   <div className="pt-4 border-t border-border">
                     <p className="text-sm text-muted-foreground">
-                      <strong className="text-foreground">Months 3-12:</strong> $0/month
+                      <strong className="text-foreground">After handoff:</strong> the systems are yours, with optional partnership when you want it
                     </p>
                   </div>
                 </CardContent>
@@ -551,9 +551,9 @@ export default function SprintVsFractionalCMOPage() {
                   What happens after the 8 weeks if we have questions?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  The sprint includes comprehensive documentation designed for independent execution. 
+                  The sprint includes comprehensive documentation designed so your team can run it with confidence. 
                   The engagement includes 30 days of post-sprint support for clarification questions. 
-                  After that, you run it independently—which is the point.
+                  After that, the systems are yours—and we stay available as a trusted partner whenever you want us.
                 </AccordionContent>
               </AccordionItem>
 

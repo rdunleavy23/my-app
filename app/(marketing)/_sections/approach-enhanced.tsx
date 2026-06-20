@@ -40,11 +40,11 @@ const APPROACH_ITEMS = [
     number: 3,
     title: "Owned by You",
     subtitle: "Weeks 7-8",
-    body: "You get trained to execute independently, so you're not stuck in a consulting relationship. No retainer, no ongoing fees, just custom systems that stay with you.",
+    body: "We train your team to run the strategy with confidence. The custom systems we build together are yours to keep, so your momentum continues long after our work is done.",
     highlights: [
       "Complete documentation & playbooks",
       "Hands-on training included",
-      "Optional support, not required"
+      "A partner you can call on when you need us"
     ]
   }
 ]

@@ -40,7 +40,7 @@ function getAllPageMetadata(): PageMetadata[] {
     {
       path: '/what-is-fractional-cmo',
       title: 'What is a Fractional CMO?',
-      description: 'Complete guide to fractional CMO services, costs, and alternatives',
+      description: 'A clear guide to what a fractional CMO is, what they cost, and how senior-led, embedded strategy compares',
       keywords: ['what is fractional cmo', 'fractional cmo', 'fractional cmo definition', 'fractional cmo meaning', 'fractional chief marketing officer', 'fractional cmo services', 'fractional cmo cost', 'fractional cmo alternative', 'part-time cmo', 'fractional cmo vs full-time', 'fractional marketing leadership'],
       category: 'service',
       priority: 10
@@ -48,7 +48,7 @@ function getAllPageMetadata(): PageMetadata[] {
     {
       path: '/fractional-cmo-hourly-rate',
       title: 'Fractional CMO Cost & Pricing',
-      description: 'Understand fractional CMO pricing and compare alternatives',
+      description: 'Understand fractional CMO pricing and how custom-scoped, senior-led engagements compare',
       keywords: ['fractional cmo cost', 'fractional cmo pricing', 'fractional cmo rates', 'fractional cmo hourly rate', 'how much does fractional cmo cost', 'cmo consulting rates', 'marketing consulting pricing', 'fractional cmo retainer cost', 'project-based marketing pricing', 'marketing consulting fees'],
       category: 'service',
       priority: 9
@@ -88,7 +88,7 @@ function getAllPageMetadata(): PageMetadata[] {
     {
       path: '/process',
       title: 'Growth Strategy Sprint Process',
-      description: 'Our 8-week project-based marketing consulting methodology',
+      description: 'How we embed with your team and build your custom growth strategy in 8 weeks',
       keywords: ['growth strategy', 'marketing strategy process', 'project-based consulting', 'strategy sprint', 'growth strategy consulting', 'marketing strategy development', '8-week strategy sprint', 'marketing consulting process'],
       category: 'process',
       priority: 9
@@ -96,7 +96,7 @@ function getAllPageMetadata(): PageMetadata[] {
     {
       path: '/about',
       title: 'About Pattern Growth',
-      description: 'Meet the team behind Pattern Growth',
+      description: 'Meet the senior partners behind Pattern Growth',
       keywords: ['about', 'team', 'company'],
       category: 'about',
       priority: 5

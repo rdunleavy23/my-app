@@ -334,7 +334,7 @@ Let me show you how the math actually works:
 - Scope must be very well defined upfront
 - May not fit open-ended strategic work
 
-**This is the model we use at Pattern Growth**: [8-week strategy sprint at fixed $9,500](/sprint-vs-fractional-cmo) with complete ownership transfer.
+**This is the model we use at Pattern Growth**: a senior-led [8-week strategy sprint](/sprint-vs-fractional-cmo), custom-scoped to exactly what you need, with complete ownership transfer.
 
 ### 4. Equity + Cash Hybrid
 
@@ -449,7 +449,7 @@ Removes commitment risk while giving fractional CMO a foot in the door.
 | Solution | Upfront | Monthly | 12-Month Total | What You Get |
 |----------|---------|---------|----------------|--------------|
 | **Fractional CMO** | $0-$5K | $10K avg | **$120K** | Ongoing strategic guidance |
-| **[Strategy Sprint](/sprint-vs-fractional-cmo)** | $9,500 | $0 | **$9,500** | Complete strategic systems (yours forever) |
+| **[Strategy Sprint](/sprint-vs-fractional-cmo)** | Custom-scoped | $0 | **Custom-scoped** | Complete strategic systems (yours forever) |
 | **Full-Time CMO** | $50K+ | $21K+ | **$250K+** | Full-time leadership |
 | **Marketing Agency** | $5K-$10K | $10K-$20K | **$125K-$245K** | Execution + some strategy |
 | **DIY (Do nothing)** | $0 | $0 | **$0** | Status quo + opportunity cost |
@@ -466,7 +466,7 @@ Removes commitment risk while giving fractional CMO a foot in the door.
 **Choose Strategy Sprint if:**
 - Budget is $10K-$30K one-time
 - Need strategic architecture built once, owned completely
-- Want full ownership without ongoing dependency
+- Want full ownership your team can run with confidence
 - Timeline pressure requires fast results (under 3 months)
 - Team can execute with clear playbooks and systems
 
@@ -576,7 +576,7 @@ Removes commitment risk while giving fractional CMO a foot in the door.
 
 **Why it didn't work**: Needed execution bandwidth PLUS strategic architecture, not just advisory.
 
-**What would have worked better**: [Strategy sprint at $9,500](/sprint-vs-fractional-cmo) to build complete playbooks the founder could execute independently. Savings: $38,500.
+**What would have worked better**: a custom-scoped [strategy sprint](/sprint-vs-fractional-cmo) to build complete playbooks the founder's team could run with confidence—for a fraction of the ongoing cost.
 
 ---
 
@@ -584,7 +584,7 @@ Removes commitment risk while giving fractional CMO a foot in the door.
 
 Don't ask: *"Can I afford $10K/month?"*
 
-Ask: *"Can I afford $60K-120K for strategic guidance vs $9,500 to own strategic architecture?"*
+Ask: *"Can I afford $60K-120K for ongoing strategic guidance, or would a custom-scoped engagement to own strategic architecture serve me better?"*
 
 Most growth-stage companies ($1-5M revenue) need **strategic architecture** more than ongoing advisory.
 
@@ -628,9 +628,9 @@ We document the gap between current state and desired state, then prioritize bas
 
 ### Action: Build the Bridge
 
-We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—no ongoing retainer, no dependency, no knowledge transfer gaps.
+We create a concrete plan to bridge the gap, then build the strategic frameworks, measurement systems, and playbooks you need. You own everything—your team can run it with confidence, with a senior partner available whenever you want support, and no knowledge transfer gaps.
 
-**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. You own the frameworks. You own the dashboards. You own the playbooks. No monthly retainer. No dependency.
+**The difference from fractional CMO**: After 8 weeks, you have complete strategic architecture that's yours forever. You own the frameworks. You own the dashboards. You own the playbooks. Your team can run it with confidence, and a senior partner stays available whenever you want support.
 
 [See how the 3 A's Framework works →](/process)
 
@@ -685,7 +685,7 @@ But **cost isn't the right question**.
 
 If the answer is **ongoing strategic guidance, team development, and operational oversight**—and you have budget for 6-12 months—fractional CMO pricing can absolutely make sense.
 
-If the answer is **strategic architecture you own completely, built once and executed independently**—[there's a better model](/sprint-vs-fractional-cmo) that costs 90% less.
+If the answer is **strategic architecture you own completely, built once and run with confidence**—[there's a better model](/sprint-vs-fractional-cmo).
 
 Either way, make an informed decision based on real market data and your specific needs—not marketing copy or vague ranges.
 
@@ -723,11 +723,11 @@ Fractional CMOs cost $10K/month average for strategic leadership without hands-o
 
 ### What's a cheaper alternative to hiring a fractional CMO?
 
-Strategy sprints (project-based strategic consulting) typically cost $9,500-$25K fixed price for complete strategic architecture vs $60K-$120K for a 6-12 month fractional CMO engagement. Potential savings: 75-90% while owning all frameworks, systems, and documentation forever. Best for companies that need strategic infrastructure built once rather than ongoing advisory relationship. See our [sprint vs fractional CMO comparison](/sprint-vs-fractional-cmo) for detailed breakdown.
+Strategy sprints (project-based strategic consulting) are custom-scoped to exactly what your business needs for complete strategic architecture, versus $60K-$120K for a 6-12 month fractional CMO engagement. The savings can be substantial while you own all frameworks, systems, and documentation forever. Best for companies that need strategic infrastructure built once rather than ongoing advisory relationship. See our [sprint vs fractional CMO comparison](/sprint-vs-fractional-cmo) for detailed breakdown.
 
 ---
 
-*Pattern Growth delivers CMO-level strategic architecture in 8-week sprints. We build custom systems, provide training, and transfer complete ownership. No retainers, no dependency.*
+*Pattern Growth is a senior-led, embedded growth partner. In an 8-week sprint, we build custom strategy and systems your team owns completely—then a senior partner stays available whenever you want support.*
 
 **Ready to understand what you actually need?**
 

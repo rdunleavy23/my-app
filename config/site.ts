@@ -6,22 +6,22 @@ export const siteConfig = {
   name: "Pattern Growth",
   url: "https://www.patterngrowth.com",
   description:
-    "We don't just design strategy. We operationalize it into custom systems you can actually run.",
+    "A senior-led growth strategy partner. We embed with your leadership and build a custom marketing strategy your team owns.",
   mainNav: [
     {
       title: "Services",
       href: "/#services",
-      description: "Our growth strategy services"
+      description: "How we partner with you on growth strategy"
     },
     {
       title: "About Us",
       href: "/about",
-      description: "Meet the team behind Pattern Growth"
+      description: "Meet the senior partners behind Pattern Growth"
     },
     {
       title: "How It Works",
       href: "/process",
-      description: "How we build scalable marketing operations"
+      description: "How we embed and build your custom strategy"
     },
     {
       title: "Blog",
@@ -31,7 +31,7 @@ export const siteConfig = {
     {
       title: "Schedule a Call →",
       href: "https://cal.com/pattern-growth/30min",
-      description: "Free strategy consultation"
+      description: "Talk with a senior partner about fit"
     }
   ],
   links: {
