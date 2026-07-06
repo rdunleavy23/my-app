@@ -78,7 +78,7 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
-      <MarketingSection variant="default" className="py-16 sm:py-20">
+      <MarketingSection variant="default">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
@@ -197,7 +197,7 @@ export default function BlogPage() {
       </MarketingSection>
 
       {/* CTA Section */}
-      <MarketingSection variant="chapter" className="py-16 sm:py-20">
+      <MarketingSection variant="chapter">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Ready to Scale Your Growth Strategy?</h2>

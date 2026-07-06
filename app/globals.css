@@ -34,7 +34,7 @@ img {
   --tertiary: oklch(0.936 0.041 89.4);
   --tertiary-foreground: oklch(0.145 0.006 89.4);
 
-  --accent-deep-navy: #02273A;
+  --accent-deep-navy: oklch(0.174 0.041 241.3);
   --accent-deep-navy-foreground: oklch(0.985 0.001 241.3);
   --accent-warm-taupe: oklch(0.697 0.039 68.2);
   --accent-warm-taupe-foreground: oklch(0.145 0.006 68.2);

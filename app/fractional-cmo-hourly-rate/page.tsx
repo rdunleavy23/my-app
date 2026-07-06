@@ -120,7 +120,7 @@ export default function FractionalCMOHourlyRatePage() {
       </div>
 
       <section className="border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto px-4 py-16 sm:py-20 lg:py-24">
           <div className="flex items-center justify-between mb-4">
             <p className="text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">
               Last refreshed: October 2025
@@ -138,7 +138,7 @@ export default function FractionalCMOHourlyRatePage() {
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
+      <article className="max-w-4xl mx-auto px-4 py-12 sm:py-16">
         <TableOfContents
           title="Table of Contents"
           items={[
@@ -496,7 +496,7 @@ export default function FractionalCMOHourlyRatePage() {
         </section>
 
         {/* Related Content */}
-        <RelatedContent currentPage="/fractional-cmo-hourly-rate" className="py-8 border-t" />
+        <RelatedContent currentPage="/fractional-cmo-hourly-rate" className="py-12 sm:py-16 border-t" />
 
         {/* Learn More Section */}
         <div className="mx-auto max-w-4xl px-6 lg:px-8">

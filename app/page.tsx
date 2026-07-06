@@ -121,7 +121,7 @@ export default function HomePage() {
       <div className="bg-background">
 
         {/* Hero */}
-        <MarketingSection variant="default" className="py-16 sm:py-20">
+        <MarketingSection variant="default">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight font-bold tracking-tight mb-6 text-balance text-foreground">
               A marketing partner who works like part of your team.
@@ -134,15 +134,15 @@ export default function HomePage() {
             <GetStartedButton />
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-              <div className="rounded-lg border border-border/60 bg-white p-4">
+              <div className="rounded-lg border border-border/60 bg-card p-4">
                 <p className="text-primary font-semibold">Senior partners only</p>
                 <p className="text-primary">The person you meet on the first call is the person doing the work. No handoffs, no junior teams.</p>
               </div>
-              <div className="rounded-lg border border-border/60 bg-white p-4">
+              <div className="rounded-lg border border-border/60 bg-card p-4">
                 <p className="text-primary font-semibold">Deeply embedded</p>
                 <p className="text-primary">We learn your business&nbsp;&mdash; your product, your customers, your numbers&nbsp;&mdash; until we think like you do.</p>
               </div>
-              <div className="rounded-lg border border-border/60 bg-white p-4">
+              <div className="rounded-lg border border-border/60 bg-card p-4">
                 <p className="text-primary font-semibold">Yours, always</p>
                 <p className="text-primary">The strategy, playbooks, and systems: built in your voice, living in your tools, yours to keep.</p>
               </div>
@@ -151,7 +151,7 @@ export default function HomePage() {
         </MarketingSection>
 
         {/* Their Situation */}
-        <MarketingSection variant="chapter" className="py-16 sm:py-20">
+        <MarketingSection variant="chapter">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               You shouldn&rsquo;t have to carry marketing alone.
@@ -169,7 +169,7 @@ export default function HomePage() {
 
         {/* The Partnership */}
         <Suspense fallback={
-          <MarketingSection variant="default" className="py-16 sm:py-20">
+          <MarketingSection variant="default">
             <div className="mx-auto max-w-6xl px-6 lg:px-8">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
                 What working together looks like
@@ -216,7 +216,7 @@ export default function HomePage() {
         <Testimonials />
 
         {/* Honest Counsel */}
-        <MarketingSection variant="chapter" className="py-16 sm:py-20">
+        <MarketingSection variant="chapter">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               A senior partner, not another vendor.

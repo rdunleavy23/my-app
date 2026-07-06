@@ -52,7 +52,7 @@ export default function BenefitsOfFractionalCMOPage() {
       />
       <div className="bg-background">
       <section className="border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto px-4 py-16 sm:py-20 lg:py-24">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Benefits of Fractional CMO (And When You Need Something Else)
           </h1>
@@ -62,7 +62,7 @@ export default function BenefitsOfFractionalCMOPage() {
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
+      <article className="max-w-4xl mx-auto px-4 py-12 sm:py-16">
         
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-6">Primary Benefits of Fractional CMO Engagement</h2>

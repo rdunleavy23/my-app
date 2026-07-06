@@ -574,7 +574,7 @@ export default function SprintVsFractionalCMOPage() {
         <Separator />
 
         {/* Further Reading */}
-        <section className="container mx-auto px-4 py-12">
+        <section className="container mx-auto px-4 py-12 sm:py-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h3 className="text-xl font-semibold text-foreground mb-2">

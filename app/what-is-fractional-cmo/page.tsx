@@ -211,7 +211,7 @@ export default function WhatIsFractionalCMO() {
         </div>
 
         {/* Hero Section */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <div className="flex items-center justify-between mb-4">
               <p className="text-sm uppercase tracking-wide text-muted-foreground">
@@ -241,7 +241,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* Definition Section */}
-        <section className="py-12 bg-muted/30" id="table-of-contents">
+        <section className="py-12 sm:py-16 bg-muted/30" id="table-of-contents">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <TableOfContents
               items={[
@@ -300,7 +300,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* What They Do */}
-        <section className="py-12" id="responsibilities">
+        <section className="py-12 sm:py-16" id="responsibilities">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-6">
               What Does a Fractional CMO Do?
@@ -334,7 +334,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* Cost Section */}
-        <section className="py-12 bg-muted/30" id="cost">
+        <section className="py-12 sm:py-16 bg-muted/30" id="cost">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-6">
               How much does a fractional CMO cost?
@@ -384,7 +384,7 @@ export default function WhatIsFractionalCMO() {
         </div>
 
         {/* Benefits vs Drawbacks */}
-        <section className="py-12" id="benefits">
+        <section className="py-12 sm:py-16" id="benefits">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">
               Benefits vs. Reality Check
@@ -439,7 +439,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* Alternatives & Decision Framework */}
-        <section className="py-12 bg-muted/30" id="alternatives">
+        <section className="py-12 sm:py-16 bg-muted/30" id="alternatives">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 space-y-8">
             <header>
               <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -519,7 +519,7 @@ export default function WhatIsFractionalCMO() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-12" id="faq">
+        <section className="py-12 sm:py-16" id="faq">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8">
               Frequently Asked Questions About Fractional CMOs
@@ -604,7 +604,7 @@ export default function WhatIsFractionalCMO() {
 
         {/* Related Content */}
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <RelatedContent currentPage="/what-is-fractional-cmo" className="py-12" />
+          <RelatedContent currentPage="/what-is-fractional-cmo" className="py-12 sm:py-16" />
         </div>
 
         {/* Learn More Section */}
@@ -665,7 +665,7 @@ export default function WhatIsFractionalCMO() {
         </div>
 
         {/* CTA Section */}
-        <section className="py-16 bg-primary text-primary-foreground">
+        <section className="py-16 sm:py-20 bg-primary text-primary-foreground">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ready for a Senior Marketing Partner You Can Trust?

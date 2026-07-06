@@ -18,7 +18,7 @@ export function MarketingSection({
   }
 
   return (
-    <section className={cn(variantClasses[variant], className)}>
+    <section className={cn("py-16 sm:py-20", variantClasses[variant], className)}>
       {children}
     </section>
   )

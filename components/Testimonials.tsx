@@ -100,7 +100,7 @@ function TestimonialCard({
 
 export function Testimonials() {
   return (
-    <MarketingSection variant="default" className="py-20 md:py-24">
+    <MarketingSection variant="default">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 text-left">
           What clients say

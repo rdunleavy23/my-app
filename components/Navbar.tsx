@@ -118,7 +118,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-[60] border-b bg-[#3E5661] backdrop-blur header-navy">
+    <header className="sticky top-0 z-[60] border-b bg-primary dark:bg-accent-deep-navy backdrop-blur header-navy">
       <div className="mx-auto w-full max-w-6xl pl-3 pr-4 sm:pl-8 sm:pr-6">
         <div className="flex h-14 items-center justify-between gap-6">
           {/* Logo: 44px mobile (~211px wide, accounts for 4.79:1 wordmark), 56px desktop - Pattern Growth is 4.8x wider than Superside */}
@@ -130,21 +130,21 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center space-x-6" aria-label="Primary navigation">
             <Link
               href="/about"
-              className="text-sm text-[#F8ECD1] hover:text-[#F8ECD1]/80 h-12 flex items-center px-3 py-2 rounded-md hover:bg-[#3E5661]/80 transition-colors"
+              className="text-sm text-tertiary hover:text-tertiary/80 h-12 flex items-center px-3 py-2 rounded-md hover:bg-primary-foreground/10 transition-colors"
               onClick={() => handleNavClick('About', '/about')}
             >
               About
             </Link>
             <Link
               href="/process"
-              className="text-sm text-[#F8ECD1] hover:text-[#F8ECD1]/80 h-12 flex items-center px-3 py-2 rounded-md hover:bg-[#3E5661]/80 transition-colors"
+              className="text-sm text-tertiary hover:text-tertiary/80 h-12 flex items-center px-3 py-2 rounded-md hover:bg-primary-foreground/10 transition-colors"
               onClick={() => handleNavClick('Process', '/process')}
             >
               Process
             </Link>
             <Button
               type="button"
-              className="h-12 btn-hover-lift bg-[#FFBF5E] text-[#02273A] hover:bg-[#FFBF5E]/90"
+              className="h-12 btn-hover-lift bg-accent-golden text-accent-golden-foreground hover:bg-accent-golden/90"
               onClick={() => handleCTAClick('navbar')}
             >
               Schedule a Call →

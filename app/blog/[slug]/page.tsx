@@ -148,7 +148,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         postSlug={post.slug}
       />
 
-      <MarketingSection variant="default" className="py-16 sm:py-20">
+      <MarketingSection variant="default">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <header className="mb-12">
             <div className="mb-8">

@@ -155,7 +155,7 @@ export default function FractionalCMOServicesPage() {
         ]}
       />
 
-      <section className="container mx-auto max-w-4xl px-4 py-16">
+      <section className="container mx-auto max-w-4xl px-4 py-16 sm:py-20">
         <h1 className="text-4xl font-bold tracking-tight mb-6">Which Businesses Should Choose an 8-Week Marketing Sprint</h1>
 
         <div className="prose prose-lg max-w-none">
