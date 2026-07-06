@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import { ChevronDown } from "lucide-react"
 import { GetStartedButton } from "@/components/ui/get-started-button"
 import Breadcrumbs from "@/components/ui/breadcrumbs"
@@ -15,6 +16,10 @@ import {
   faqs,
   processMetadata
 } from "@/config/process"
+
+const ComparisonTable = dynamic(() => import("@/components/ui/comparison-table").then(mod => mod.ComparisonTable), {
+  loading: () => <div className="h-96 bg-muted animate-pulse rounded-lg mb-12" />
+})
 
 export const metadata: Metadata = {
   title: processMetadata.title,
@@ -126,7 +131,7 @@ export default function ProcessPage() {
         </section>
 
         {/* The Shift */}
-        <MarketingSection variant="default" className="py-16 sm:py-20">
+        <MarketingSection variant="default">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               You&rsquo;ve had two options. Neither felt right.
@@ -142,8 +147,82 @@ export default function ProcessPage() {
           </div>
         </MarketingSection>
 
+        {/* Comparison Table */}
+        <MarketingSection variant="default" className="border-t">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
+                How Pattern Growth compares
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                A senior partner,
+                <br />
+                <span className="italic">not another vendor.</span>
+              </h2>
+            </div>
+
+            <ComparisonTable
+              columns={["Strategy", "Customization", "Speed", "Independence", "Cost"]}
+              rows={[
+                {
+                  label: "Pattern Growth",
+                  isHighlighted: true,
+                  values: {
+                    Cost: "check",
+                    Speed: "check",
+                    Strategy: "check",
+                    Customization: "check",
+                    Independence: "check",
+                  },
+                },
+                {
+                  label: "Full-time CMO",
+                  values: {
+                    Cost: "x",
+                    Speed: "x",
+                    Strategy: "check",
+                    Customization: "check",
+                    Independence: "question",
+                  },
+                },
+                {
+                  label: "Fractional CMO",
+                  values: {
+                    Cost: "x",
+                    Speed: "check",
+                    Strategy: "check",
+                    Customization: "check",
+                    Independence: "x",
+                  },
+                },
+                {
+                  label: "Marketing agency",
+                  values: {
+                    Cost: "question",
+                    Speed: "check",
+                    Strategy: "question",
+                    Customization: "question",
+                    Independence: "x",
+                  },
+                },
+                {
+                  label: "DIY tools",
+                  values: {
+                    Cost: "check",
+                    Speed: "check",
+                    Strategy: "x",
+                    Customization: "x",
+                    Independence: "check",
+                  },
+                },
+              ]}
+              className="mt-8"
+            />
+          </div>
+        </MarketingSection>
+
         {/* How the Partnership Works */}
-        <MarketingSection variant="chapter" className="py-16 sm:py-20">
+        <MarketingSection variant="chapter">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               How the partnership works
@@ -184,7 +263,7 @@ export default function ProcessPage() {
         </MarketingSection>
 
         {/* What You Can Expect / What We'll Ask */}
-        <MarketingSection variant="default" className="py-16 sm:py-20">
+        <MarketingSection variant="default">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">
               What you can expect&nbsp;&mdash; and what we&rsquo;ll ask of you
@@ -239,7 +318,7 @@ export default function ProcessPage() {
         </MarketingSection>
 
         {/* What It Feels Like */}
-        <MarketingSection variant="chapter" className="py-16 sm:py-20">
+        <MarketingSection variant="chapter">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               What it feels like
