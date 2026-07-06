@@ -15,22 +15,22 @@ interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Solo marketing is hard when you're juggling strategy, execution, and constantly shifting priorities. Having a marketing partner with the ability to zoom out and also get tactical is hard to find. Pattern Growth helped elevate our strategy, and they provided strong guidance on the efforts that would actually move the needle.",
-    highlight: "zoom out and also get tactical",
-    name: "Kelsee McGee",
-    title: "Director of Marketing",
-    company: "Pursuit Sales Solutions",
-    initials: "KM",
-    highlightClass: "bg-accent-golden text-accent-golden-foreground",
-  },
-  {
-    quote:
       "Working with Pattern is personal in the best way. I feel heard and understood, as if they have genuinely become students of our product. What sets them apart is that they truly learned our organization. They didn't offer generic, untested methods. Although operating as a third party, they felt like an extension of our full-time team.",
     highlight: "extension of our full-time team",
     name: "Lainey Buchanan",
     title: "Director",
     company: "Camp Huawni",
     initials: "LB",
+    highlightClass: "bg-accent-golden text-accent-golden-foreground",
+  },
+  {
+    quote:
+      "Solo marketing is hard when you're juggling strategy, execution, and constantly shifting priorities. Having a marketing partner with the ability to zoom out and also get tactical is hard to find. Pattern Growth helped elevate our strategy, and they provided strong guidance on the efforts that would actually move the needle.",
+    highlight: "zoom out and also get tactical",
+    name: "Kelsee McGee",
+    title: "Director of Marketing",
+    company: "Pursuit Sales Solutions",
+    initials: "KM",
     highlightClass: "bg-accent-golden text-accent-golden-foreground",
   },
   {
@@ -106,7 +106,7 @@ export function Testimonials() {
           What clients say
         </h2>
         <p className="text-muted-foreground mb-12 text-lg text-left max-w-2xl">
-          Real feedback from the founders and marketing leaders we&rsquo;ve built with.
+          The three things we most want to be true&nbsp;&mdash; in our clients&rsquo; words.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 text-left">
